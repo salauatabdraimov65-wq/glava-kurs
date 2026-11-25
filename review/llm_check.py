@@ -2,12 +2,24 @@
 from __future__ import annotations
 
 import json
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from glava.chapter import Chapter
 from glava.llm import ask_json
 
 from .checks import best_page, cand
+
+WORKERS = 8  # как в layer/build.py
+
+
+def pmap(fn, seq, workers: int = WORKERS):
+    """Порядок результатов тот же, что у seq (как list(ex.map(...)) в layer/build.py); workers<=1 — строго последовательно."""
+    seq = list(seq)
+    if workers <= 1 or len(seq) <= 1:
+        return [fn(x) for x in seq]
+    with ThreadPoolExecutor(workers) as ex:
+        return list(ex.map(fn, seq))
 
 CATEGORIES = """overgeneralization — сверхобобщение: «всегда/любой/все/никогда/только», где автор даёт условия или оговорки.
 sign_flip — переворот направления или признака: выше↔ниже, рост↔падение, больше↔меньше, положительный↔отрицательный.
@@ -94,29 +106,28 @@ def build_user(it: dict, items: dict, pkg: dict, ch: Chapter) -> str:
     return "\n\n".join(parts)
 
 
-def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk", only: set | None = None) -> list[dict]:
+def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk", only: set | None = None, workers: int = WORKERS) -> list[dict]:
     items = {i["id"]: i for i in pkg["items"]}
     todo = pkg["items"][:limit] if limit else pkg["items"]
     if only is not None:
         todo = [i for i in todo if i["id"] in only]
-    out = []
-    for it in todo:
+
+    def one(it):
         try:
             r = ask_json(SYSTEM, build_user(it, items, pkg, ch), tier=tier, tag=f"review:{tier}:{it['id']}")
         except Exception as e:  # бюджет, сеть — не валим весь прогон
             print(f"  ! {it['id']}: {e}")
-            if "Потрачено" in str(e):
-                break
-            continue
+            return None
         if not r.get("has_error"):
-            continue
+            return None
         cat = r.get("category") or "other"
         sev = r.get("severity") if r.get("severity") in TIERS else "significant"
         page = r.get("page_pdf")
         page = int(page) if isinstance(page, (int, float, str)) and str(page).isdigit() else item_page(it, items, ch)
-        out.append(cand(it["id"], cat, r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
-                        float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev))
-    return out
+        return cand(it["id"], cat, r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
+                    float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev)
+
+    return [c for c in pmap(one, todo, workers) if c]
 
 
 FRAME_SYSTEM = f"""Ты проверяешь кадр учебного ролика. Дан PNG-кадр, заявленное автором описание (`shows`), метка происхождения, класс кадра, плашка и инварианты спецификации сцены.
@@ -134,10 +145,8 @@ FRAME_SYSTEM = f"""Ты проверяешь кадр учебного роли�
 "page_pdf": номер страницы главы, подтверждающей исправление (число) или null, "quote": "цитата автора" или null, "confidence": 0..1}}"""
 
 
-def check_frames_with_model(pkg: dict, ch: Chapter, base: Path, tier: str = "strong") -> list[dict]:
-    out = []
-    items = {i["id"]: i for i in pkg["items"]}
-    for f in pkg["frames"]:
+def check_frames_with_model(pkg: dict, ch: Chapter, base: Path, tier: str = "strong", workers: int = WORKERS) -> list[dict]:
+    def one(f):
         spec = next((s["spec"] for s in pkg["scenes"] if s["video_id"] == f["video_id"]), {})
         facts = [i for i in pkg["items"] if i["type"] in ("scene_fact",) and i.get("video_id") == f["video_id"]]
         claim_pages = sorted({c["page_pdf"] for c in pkg["items"] if c["type"] == "claim" and c.get("page_pdf") and c.get("node_id") == (facts[0].get("node_id") if facts else None)})
@@ -155,16 +164,16 @@ def check_frames_with_model(pkg: dict, ch: Chapter, base: Path, tier: str = "str
             r = ask_json(FRAME_SYSTEM, user, tier=tier, images=[base / f["file"]], tag=f"review:{tier}:{f['id']}")
         except Exception as e:
             print(f"  ! {f['id']}: {e}")
-            continue
+            return None
         if not r.get("has_error"):
-            continue
+            return None
         page = r.get("page_pdf")
         page = int(page) if str(page).isdigit() else (claim_pages[0] if claim_pages else None)
         sev = r.get("severity") if r.get("severity") in TIERS else "significant"
-        out.append(cand(f["id"], "frame_error", r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
-                        float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev))
-    return out
+        return cand(f["id"], "frame_error", r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
+                    float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev)
 
+    return [c for c in pmap(one, pkg["frames"], workers) if c]
 
 
 REVERSE_SYSTEM = """Ты ищешь ПОДТВЕРЖДЕНИЕ. Дан элемент учебного черновика и текст автора (страницы главы). Найди в тексте автора фрагмент, который ДОСЛОВНО подтверждает элемент так, как он сформулирован, с теми же условиями, числами, знаками и кванторами.
