@@ -51,7 +51,8 @@ action (в beat, всё необязательно):
   show_mud_cake: true; show_invasion: true;  show_curves: [id...] — какие кривые видны и пишутся;
   callout: [{target: "tool"|"cake"|"invasion"|"bore"|"curve:<id>"|{"depth": м}|{"layer": индекс}, text}] — выноска 1–3 слова;
   readout: "<id кривой>" — плашка «≈ значение» на конце кривой (значение считает код).
-Числа свойств условные — перечисли их в assumptions; важно соотношение, которое следует из главы."""
+Числа свойств условные — перечисли их в assumptions; важно соотношение, которое следует из главы.
+Ствол в кадре всегда шире реального: не пиши «в масштабе»; во сколько раз — код допишет на плашку сам."""
 
 
 def ease(u: float) -> float:
@@ -279,6 +280,17 @@ class WellToolCurve:
 
     def lith_color(self, lith):
         return hex_rgb(self.style.get("lithology", {}).get(lith, {}).get("color", self.style["panel"]))
+
+    def scale_note(self, L) -> str:
+        """«ствол шире реального в N раз» — по реальному диаметру (params.bore_diameter_m, по умолчанию 0,2 м)
+        и масштабу глубин этого кадра."""
+        px_per_m = (L["plot"][1] - L["plot"][0]) / (self.bottom - self.top)
+        real = float(self.p.get("bore_diameter_m") or 0.2) * px_per_m
+        k = (L["bore"][1] - L["bore"][0]) / max(real, 1e-6)
+        if k < 1.5:
+            return ""
+        n = int(round(k)) if k < 20 else int(round(k, -1))
+        return f"ствол шире реального ≈ в {n} раз"
 
     def focus(self, L, s) -> tuple[float, float]:
         """Точка интереса для камеры: прибор."""

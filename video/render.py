@@ -195,7 +195,7 @@ class Layout:
     """Геометрия кадра. 9:16: тег → крупный заголовок → сцена → плашка → субтитры (всё в безопасной зоне).
     16:9: сцена слева, справа тег, заголовок, плашка; субтитры внизу."""
 
-    def __init__(self, kind: str, spec: Spec, style: dict, beats):
+    def __init__(self, kind: str, spec: Spec, style: dict, beats, extra_plaque: str = ""):
         self.kind = kind
         sz = style.get("safe_zone", {"top": 220, "bottom": 380, "side": 70})
         if kind == "9x16":
@@ -208,6 +208,8 @@ class Layout:
         self.f_tag = font(36, True)
         self.f_sub = font(44, True)
         plaque = visible(" ".join(spec.get("plaque") or []) or "схема, не в масштабе", "плашка")
+        if extra_plaque:
+            plaque = plaque.rstrip(" .;") + "; " + extra_plaque
         self.tag_h = line_h(self.f_tag) + 14
         if kind == "9x16":
             w = x1 - x0
@@ -215,7 +217,7 @@ class Layout:
             self.head_size, self.head_lines = 92, 2
             self.head_y = y0 + self.tag_h + 18
             hh = int(line_h(display_font(self.head_size)) * 1.02) * 2
-            self.f_plaque, self.plaque_lines = fit(plaque, w, 38, 34, 2)
+            self.f_plaque, self.plaque_lines = fit(plaque, w, 38, 32, 3)
             self.sub_h = line_h(self.f_sub) * 2 + 22
             self.sub_box = (x0, y1 - self.sub_h, x1, y1)
             pl_h = len(self.plaque_lines) * line_h(self.f_plaque)
@@ -243,6 +245,12 @@ class Renderer:
         self.spec, self.tpl, self.style, self.kind, self.segs = spec, template, style, kind, segs
         self.L = Layout(kind, spec, style, [s.beat for s in segs])
         self.T = template.layout(self.L.scene_box, compact=(kind == "9x16"))
+        # преувеличение подписывается числом (ТЗ): шаблон сам считает, во сколько раз объект крупнее реального
+        self.scale_note = template.scale_note(self.T) if hasattr(template, "scale_note") else ""
+        if self.scale_note:
+            self.L = Layout(kind, spec, style, [s.beat for s in segs], self.scale_note)
+            self.T = template.layout(self.L.scene_box, compact=(kind == "9x16"))
+            self.scale_note = template.scale_note(self.T)
         rs = load_settings()["render"]
         self.fade = rs["fade_s"]
         self.k = int(rs.get("ssaa", 2))
