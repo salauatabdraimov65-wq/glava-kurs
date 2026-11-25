@@ -46,6 +46,7 @@ def main(argv=None):
     ap.add_argument("-o", "--out", required=True)
     ap.add_argument("--llm", default="0", help="0 = без модели; N = первые N целей; all = все")
     ap.add_argument("--frames", action="store_true", help="проверять кадры моделью (tier strong)")
+    ap.add_argument("--verify", action="store_true", help="второй скептический проход сильной моделью по кандидатам")
     ap.add_argument("--max", type=int, default=MAX_REMARKS)
     ap.add_argument("--min-conf", type=float, default=0.5)
     ap.add_argument("--dump", help="сохранить всех кандидатов (до отсева) в этот json")
@@ -63,6 +64,9 @@ def main(argv=None):
         if a.frames:
             cands += check_frames_with_model(pkg, ch, pkg_path.parent)
 
+    if a.verify:
+        from .llm_check import verify
+        cands = verify(pkg, ch, [c for c in cands if c["confidence"] >= 0.3])
     if a.dump:
         Path(a.dump).write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
     chosen = select(cands, a.min_conf, a.max)
