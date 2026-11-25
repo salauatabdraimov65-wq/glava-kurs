@@ -248,11 +248,12 @@ def theme(domain_data: dict[str, Any]) -> dict[str, Any]:
 ART_TYPES = {".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml"}
 
 
-def art_css(domain_name: str) -> tuple[str, list[str]]:
+def art_css(domain_name: str, *, slots: tuple[str, ...] | None = None) -> tuple[str, list[str]]:
     """Illustrations of the domain as CSS variables (--art-<file name>: url(data:…)).
 
     Looked up in domain/<name>/art/ first, then in course/art-staging/<name>/ (until the domain
-    package gets the files). No files = no variables: the course falls back to plain paper.
+    package gets the files). Only requested slots are embedded when specified.
+    Missing images leave plain paper. Generated rasters must already contain their AI label.
     """
     import base64
 
@@ -272,7 +273,7 @@ def art_css(domain_name: str) -> tuple[str, list[str]]:
     variables, names = [], []
     for stem, path in found.items():
         safe = re.sub(r"[^a-z0-9-]+", "-", stem).strip("-")
-        if not safe:
+        if not safe or (slots is not None and safe not in slots):
             continue
         data = base64.b64encode(path.read_bytes()).decode("ascii")
         variables.append(f'--art-{safe}:url("data:{ART_TYPES[path.suffix.lower()]};base64,{data}")')

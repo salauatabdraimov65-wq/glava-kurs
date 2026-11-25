@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-26",
+  "views": [
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "emptyScene": 0,
+      "art": "hills-mobile hills"
+    }
+  ],
+  "labelFontPixels": {
+    "mobile": 18,
+    "desktop": 24.5016475
+  },
+  "consoleErrors": 0,
+  "consoleWarnings": 0
+}

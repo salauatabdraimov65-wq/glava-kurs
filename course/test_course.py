@@ -49,6 +49,21 @@ class CourseBlocksTest(unittest.TestCase):
             for background in (paper, *panels):
                 self.assertGreaterEqual(contrast(color, background), 4.6)
 
+    def test_only_used_decorative_images_are_embedded(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            (folder / "art").mkdir()
+            for name in ("hills.svg", "unused.svg"):
+                (folder / "art" / name).write_text('<svg xmlns="http://www.w3.org/2000/svg"/>', encoding="utf-8")
+            css, names = art_css(str(folder), slots=("hills", "hills-mobile"))
+            self.assertEqual(names, ["hills"])
+            self.assertNotIn("--art-unused:", css)
+            page = html_page({"nodes": [{"id": "new", "title": "Тема"}]}, {}, {}, {}, folder, domain=str(folder))
+            self.assertIn('data-art="hills"', page)
+            self.assertNotIn("--art-unused:", page)
+            self.assertNotIn('class="strata-scene"', page)
+            self.assertNotIn('class="section-svg"', page)
+
     def test_incomplete_ocr_formula_remains_readable(self) -> None:
         self.assertEqual(inline_text("$p_{0}"), "$p_{0}")
         self.assertIn("p<sub>0</sub>", inline_text("$p_{0}$ и $"))

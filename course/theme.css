@@ -175,18 +175,6 @@ button:disabled { cursor: default; opacity: .55; transform: none; box-shadow: no
 .stat:nth-child(even) { transform: rotate(1.2deg); border-radius: var(--wobble-2); }
 .stat b { font-family: var(--font-display); font-size: 1.9rem; line-height: 1; }
 .stat span { font-family: var(--font-type); font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
-.strata-scene { position: relative; min-height: 340px; border-left: var(--line-bold) solid var(--edge); background: color-mix(in srgb, var(--accent-2) 30%, var(--paper)); overflow: hidden; }
-.strata-scene::before { content: ""; position: absolute; inset: 0 0 auto; height: 22%; background: radial-gradient(ellipse at 30% 60%, color-mix(in srgb, var(--accent-2) 55%, transparent), transparent 60%), radial-gradient(ellipse at 80% 30%, color-mix(in srgb, var(--accent-2) 45%, transparent), transparent 55%); }
-.section-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.section-layers path { stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
-.section-layers path:nth-child(even) { stroke: none; }
-.section-outline { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
-.section-fault { fill: none; stroke: var(--ink); stroke-width: 4; stroke-dasharray: 14 8; }
-.section-tick { stroke: var(--ink); stroke-width: 3; }
-.probe-casing { stroke: var(--ink); stroke-width: 3; stroke-dasharray: 3 6; }
-.probe-bore { fill: var(--ink); stroke: var(--paper); stroke-width: 2; transform-box: fill-box; transform-origin: top; transform: scaleY(max(.04, var(--progress, 0))); transition: transform 1s var(--ease); }
-.probe-rig { fill: var(--accent); stroke: var(--ink); stroke-width: 3; }
-.scene-caption { position: absolute; left: 14px; bottom: 14px; max-width: 70%; padding: .3rem .65rem; font-family: var(--font-type); font-size: .82rem; color: var(--ink); background: var(--paper); border: var(--line) solid var(--edge); border-radius: 6px; transform: rotate(-1deg); }
 .hero-completion { grid-column: 1 / -1; padding: 1rem clamp(24px, 3.4vw, 48px) 1.3rem; border-top: var(--line-bold) solid var(--edge); background: var(--paper); font-size: .97rem; }
 .hero-completion > div:first-child { display: flex; justify-content: space-between; gap: .7rem; margin-bottom: .45rem; font-family: var(--font-type); }
 .hero-completion b { font-family: var(--font-mono); }
@@ -510,7 +498,6 @@ figcaption { color: var(--muted); font-size: .92rem; padding-top: .6rem; font-fa
   :root { font-size: 16px; }
   .layout { padding: 18px 14px 28px; }
   .hero { grid-template-columns: minmax(0, 1fr); box-shadow: var(--shadow-sm); }
-  .strata-scene { min-height: 190px; border-left: 0; border-top: var(--line-bold) solid var(--edge); }
   .hero-copy { padding: 24px 20px 20px; }
   .stat { min-width: 0; flex: 1 1 40%; }
   .resume-card { flex-direction: column; align-items: stretch; gap: 1rem; transform: none; }
@@ -566,7 +553,8 @@ button:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(
 button:active { transform: translateY(1px); box-shadow: none; }
 .hero, .step-plate, .resume-card, .practice-column, .lesson-results, .legend-panel, .claim, .review-card, .option, .link-map { box-shadow: var(--shadow); }
 .legend-panel { border: 1px solid var(--edge); outline: 0; }
-.hero { border: 1px solid var(--edge); border-radius: 22px; }
+.hero { grid-template-columns: minmax(0, 1fr); border: 1px solid var(--edge); border-radius: 22px; }
+.hero-copy { max-width: 78ch; }
 .hero::after { display: none; }
 .hero-copy h1 { text-shadow: none; font-weight: 700; }
 .stat { color: var(--ink); background: transparent; border: 0; box-shadow: none; transform: none !important; border-radius: 0; padding: .2rem 1.2rem .2rem 0; margin-right: .6rem; border-right: 1px solid var(--edge); }
@@ -599,20 +587,6 @@ body:not([data-view="overview"]) .header-core,
 body:not([data-view="overview"]) #header-progress,
 body:not([data-view="overview"]) .sidebar-progress { visibility: hidden; }
 body:not([data-view="overview"]) .masthead { grid-template-columns: auto minmax(0, 1fr) auto; }
-
-/* Иллюстрации домена (course/art-staging/<домен>/ или domain/<домен>/art/) */
-html[data-art~="hero"] .hero { background: linear-gradient(90deg, var(--paper-2) 0 38%, transparent 66%), var(--art-hero) right bottom / auto 100% no-repeat, var(--paper-2); }
-html[data-art~="hero"] .strata-scene { display: none; }
-html[data-art~="hero"] .hero-copy { grid-column: 1 / 2; padding-block: clamp(28px, 4vw, 56px); }
-html[data-art~="hero"] .hero-copy h1 { max-width: 17ch; font-size: clamp(1.6rem, 2.3vw, 2.2rem); hyphens: manual; }
-html[data-art~="hero"] .hero-note { max-width: 44ch; }
-html[data-art~="hero"] .hero { min-height: 480px; }
-html[data-art~="strata"] .hero-completion { background: linear-gradient(90deg, var(--paper) 0 55%, transparent), var(--art-strata) right center / cover no-repeat; }
-@media (max-width: 760px) {
-  html[data-art~="hero"] .hero { background: linear-gradient(180deg, var(--paper-2) 0 52%, transparent 78%), var(--art-hero) center bottom / cover no-repeat, var(--paper-2); min-height: 640px; }
-  html[data-art~="hero"] .hero-copy { grid-column: 1; }
-  html[data-art~="hero"] .hero-copy h1 { max-width: none; }
-}
 
 /* Единая спокойная отделка всех экранов. Смысловые цвета остаются у результатов. */
 :root { --font-display: var(--font-read); --font-type: var(--font-ui); }
@@ -659,7 +633,6 @@ blockquote { box-shadow: none; border: 0; border-left: 2px solid var(--rule); bo
 .link-map { max-height: none; }
 .summary-step { max-width: 72ch; }
 .resume-card { transform: none; }
-
 /* Подписи и второстепенные элементы также читаются без увеличения. */
 :is(.page, .badge, .claim-label, .nav-kicker, .hero-kicker, .exercise-kicker,
     .block-kicker, .view-kicker, .legend-caption, .sidebar-section-label,
@@ -669,7 +642,7 @@ blockquote { box-shadow: none; border: 0; border-left: 2px solid var(--rule); bo
     .reader-progress, .step-time, .step-reward, .task-instructions, .hint-toggle,
     .reading-state, .mode-count, .card-actions button, .notes-status,
     .notes-content label, .nav-footnote, .site-footer, .offline-label,
-    .legend-list.small li, .scene-caption, figcaption, summary, .table-note,
+    .legend-list.small li, figcaption, summary, .table-note,
     .book-table, .simulation-caption, .range-limits) { font-size: 1rem; }
 .page, .badge { white-space: normal; overflow-wrap: anywhere; }
 button, .reader-topbar button, button.page.scan-link, .hint-toggle, summary { min-height: 44px; }
@@ -682,24 +655,20 @@ button { min-width: 44px; }
 .app-view, .step, .hero-copy, .practice-column, .lesson-results { min-width: 0; }
 .prequestion-text, .task-prompt, .claim, .summary-step, .review-card, .completion-checklist { overflow-wrap: anywhere; }
 
-/* Иллюстрация декоративна: при отсутствии файла остаётся нейтральная бумага. */
-html[data-art~="hills"] .step-plate {
-  padding-top: clamp(60px, 9vw, 110px);
-  background: linear-gradient(0deg, var(--paper) 0 46%, transparent 96%),
-    var(--art-hills) center top / 100% auto no-repeat, var(--paper);
+/* Декоративный пейзаж со встроенной в файл меткой. Полоса не обрезается и не затемняется. */
+html[data-art~="hills"] .step-plate { padding-top: 0; background: var(--paper); }
+html[data-art~="hills"] .step-plate::before {
+  content: "";
+  display: block;
+  aspect-ratio: 4 / 1;
+  margin: 0 calc(-1 * clamp(18px, 3vw, 34px)) 1.1rem;
+  background: var(--art-hills) center / 100% 100% no-repeat;
 }
 html[data-art~="hills"] .plate-band { display: none; }
-:root[data-theme="dark"][data-art~="hills"] .step-plate {
-  background: linear-gradient(0deg, var(--paper) 0 46%, color-mix(in srgb, var(--paper) 80%, transparent) 100%),
-    var(--art-hills) center top / 100% auto no-repeat, var(--paper);
-}
-:root[data-theme="dark"][data-art~="hero"] .hero {
-  background: linear-gradient(90deg, var(--paper-2) 0 38%, color-mix(in srgb, var(--paper) 70%, transparent)),
-    var(--art-hero) right bottom / auto 100% no-repeat, var(--paper-2);
-}
-:root[data-theme="dark"][data-art~="strata"] .hero-completion {
-  background: linear-gradient(90deg, var(--paper) 0 55%, color-mix(in srgb, var(--paper) 85%, transparent)),
-    var(--art-strata) right center / cover no-repeat, var(--paper);
+@media (max-width: 760px) {
+  html[data-art~="hills-mobile"] .step-plate::before {
+    background-image: var(--art-hills-mobile);
+  }
 }
 @media (max-width: 1000px) {
   /* Меню должно перекрывать текст непрозрачной бумагой. */
@@ -714,10 +683,6 @@ html[data-art~="hills"] .plate-band { display: none; }
   .plate-meta, .reader-progress { gap: .6rem; }
   .reader-progress .progress { min-width: 40px; }
   .map-label { font-size: 19px; }
-  :root[data-theme="dark"][data-art~="hero"] .hero {
-    background: linear-gradient(180deg, var(--paper-2) 0 52%, color-mix(in srgb, var(--paper) 75%, transparent) 100%),
-      var(--art-hero) center bottom / cover no-repeat, var(--paper-2);
-  }
 }
 @media print {
   .hero, .step-plate, .claim, .review-card, .option, .link-map, .block-figure { box-shadow: none; }
@@ -729,7 +694,6 @@ html[data-art~="hills"] .plate-band { display: none; }
 .edge-label { font-size: 16px; }
 @media (max-width: 760px) {
   .hero .stat { flex: 1 1 0; }
-  html[data-art~="hero"] .hero-copy { padding-inline: 20px; }
 }
 
 /* Вложенные правила базы не должны уменьшать подписи. */
@@ -744,9 +708,6 @@ html[data-art~="hills"] .plate-band { display: none; }
 
 .phase-number { font-size: 1rem; }
 .step-link[aria-current="step"] :is(.lesson-status, .step-marker) { color: var(--ink); }
-html:not([data-art~="hero"]) .hero { grid-template-columns: minmax(0, 1fr); }
-html:not([data-art~="hero"]) .hero-copy { max-width: 78ch; }
-.strata-scene { display: none; }
 /* Оси графиков и индексы формул сохраняют читаемый размер на телефоне. */
 .pressure-chart text { font: 17px var(--font-ui); }
 sub, sup { font-size: 1rem; }

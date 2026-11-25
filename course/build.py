@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from course.domain_theme import art_css, chapter_domain, load_domain, pattern_body
+from course.domain_theme import art_css, chapter_domain, load_domain
 from course.domain_theme import theme as domain_tokens
 from course.interactives import render_book_tables, render_decision, render_pressure
 
@@ -596,47 +596,6 @@ def ordered_nodes(raw_nodes: list[Any]) -> list[dict[str, Any]]:
     return [by_id[node_id] for node_id in result]
 
 
-def section_svg(tokens: dict[str, Any], prefix: str = "hero") -> str:
-    """Layered cross-section drawn from the domain palette; the probe depth shows progress."""
-    import math
-    count = max(1, int(tokens.get("count") or 1))
-    colors, ons, patterns = tokens["colors"], tokens["ons"], tokens["patterns"]
-    width, top, bottom = 1200, 70, 420
-    thickness = (bottom - top) / count
-
-    def boundary(level: int) -> list[tuple[float, float]]:
-        points = []
-        for x in range(0, width + 1, 30):
-            fold = 46 * math.exp(-((x - 560) / 260) ** 2)
-            wave = 7 * math.sin(x / 95 + level * 1.7)
-            shift = 22 if x > 860 else 0  # a small offset, like a displacement on a map
-            points.append((x, top + level * thickness - fold + wave + shift * (level > 0)))
-        return points
-
-    defs = []
-    shapes = []
-    for level in range(count):
-        upper, lower = boundary(level), boundary(level + 1)
-        if level == count - 1:
-            lower = [(x, bottom + 80) for x, _ in lower]
-        d = "M" + " L".join(f"{x:.0f} {y:.1f}" for x, y in upper)
-        d += " L" + " L".join(f"{x:.0f} {y:.1f}" for x, y in reversed(lower)) + " Z"
-        pid = f"{prefix}-p{level}"
-        defs.append(f'<pattern id="{pid}" width="16" height="16" patternUnits="userSpaceOnUse">{pattern_body(patterns[level], ons[level])}</pattern>')
-        shapes.append(f'<path d="{d}" style="fill:var(--s{level})"/><path d="{d}" fill="url(#{pid})"/>')
-    ground = boundary(0)
-    outline = "M" + " L".join(f"{x:.0f} {y:.1f}" for x, y in ground)
-    fault = '<path class="section-fault" d="M872 20 L846 480"/>'
-    ticks = "".join(f'<path class="section-tick" d="M24 {top + i * thickness:.0f}h18"/>' for i in range(count + 1))
-    return (
-        f'<svg class="section-svg" viewBox="0 0 {width} 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">'
-        f'<defs>{"".join(defs)}</defs><g class="section-layers">{"".join(shapes)}</g>'
-        f'<path class="section-outline" d="{outline}"/>{fault}<g>{ticks}</g>'
-        '<g class="section-probe"><path class="probe-casing" d="M560 0V460"/><rect class="probe-bore" x="555" y="24" width="10" height="436"/>'
-        '<path class="probe-rig" d="M540 30 560 0 580 30Z"/></g></svg>'
-    )
-
-
 def step_kinds(nodes: list[dict[str, Any]], routes: Any) -> tuple[list[int], dict[str, int]]:
     """Each step format gets its own legend swatch, in order of first appearance."""
     order: dict[str, int] = {}
@@ -671,7 +630,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 
     domain_data = load_domain(chapter_domain(str(layer.get("chapter", "")), domain))
     tokens = domain_tokens(domain_data)
-    art_style, art_names = art_css(domain_data["folder"])
+    art_style, art_names = art_css(domain_data["folder"], slots=("hills", "hills-mobile"))
     _SCANS.clear()
     _SCANS.update(find_scans(base))
     videos = find_videos(base)
@@ -787,7 +746,6 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
         <p class="hero-note">Короткие шаги по одной идее: вопрос до чтения, суть, мысли автора со страницами книги, затем практика с мгновенной проверкой. Прогресс сохраняется на этом устройстве.</p>
         <div class="hero-stats">{stats_markup}</div>
       </div>
-      <div class="strata-scene" aria-hidden="true">{section_svg(tokens)}<div class="scene-caption">Отметка уходит вглубь по мере прохождения курса</div></div>
       <div class="hero-completion"><div><span>Пройдено уроков</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные уроки" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
     </header>
     <div class="resume-card"><div><div class="nav-kicker" id="resume-label">СЛЕДУЮЩИЙ УРОК</div><h2 id="resume-title"></h2><p id="resume-description" class="muted"></p></div><button class="button-primary" type="button" data-show-view="course" data-resume>Начать обучение →</button></div>

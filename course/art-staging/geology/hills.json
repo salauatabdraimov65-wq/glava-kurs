@@ -7,5 +7,47 @@
     1600,
     400
   ],
-  "prompt": "Create a subtle watercolor banner illustration for an educational field atlas. Very wide landscape aspect ratio 4:1 (e.g. 1600 x 400). Pale distant mountains and soft clouds, delicate pen contour lines, warm cream paper grain. Muted ochre, burnt orange, grey-blue and sandy tones, tiny amber accents. Low contrast, lots of breathing room. Mountains and clouds only in the upper half, fading down into completely clean blank cream paper across the bottom half, suitable for overlaid lesson title text. No text, no letters, no labels, no border, no people."
+  "prompt": "Create a subtle watercolor banner illustration for an educational field atlas. Very wide landscape aspect ratio 4:1 (e.g. 1600 x 400). Pale distant mountains and soft clouds, delicate pen contour lines, warm cream paper grain. Muted ochre, burnt orange, grey-blue and sandy tones, tiny amber accents. Low contrast, lots of breathing room. Mountains and clouds only in the upper half, fading down into completely clean blank cream paper across the bottom half, suitable for overlaid lesson title text. No text, no letters, no labels, no border, no people.",
+  "label": {
+    "text": "иллюстрация ИИ",
+    "embedded": true,
+    "method": "Pillow ImageDraw; label is baked into the WebP pixels",
+    "font": "Arial",
+    "corner": "top right",
+    "fill": "#FFF9ED",
+    "text_fill": "#30291F"
+  },
+  "variants": [
+    {
+      "file": "hills.webp",
+      "size": [
+        1600,
+        400
+      ],
+      "label_font_pixels": 44,
+      "label_box": [
+        1194,
+        24,
+        1576,
+        97
+      ],
+      "bytes": 48970
+    },
+    {
+      "file": "hills-mobile.webp",
+      "size": [
+        640,
+        160
+      ],
+      "label_font_pixels": 32,
+      "label_box": [
+        353,
+        12,
+        628,
+        61
+      ],
+      "bytes": 10740
+    }
+  ],
+  "usage": "Decorative surface landscape only; no scientific claim, cutaway, data, or subsurface interpretation."
 }
