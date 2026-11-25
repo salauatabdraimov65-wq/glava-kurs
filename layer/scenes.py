@@ -33,6 +33,8 @@ params: {"geometry": "radial"|"linear", "solution": "ei"|"erfc"|"pssss", "p0_MPa
 action в beat: {"time_to": секунды модели к концу фразы} | {"show_curve_at": t} | {"mark_x": м} | {"show_view": "..."} | {}""",
 }
 
+COMPUTED_TEMPLATES = {"well_tool_curve", "pressure_diffusion"}  # кадр считается из модели
+
 FORMATS = {
     "short": {"aspect": "9:16", "words": (90, 160), "seconds": "40–75", "focus": "один механизм"},
     "long": {"aspect": "16:9", "words": (200, 380), "seconds": "90–180",
@@ -91,8 +93,12 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
         if b.get("claim_id") and b["claim_id"] not in ids:
             problems.append(f"неизвестный claim_id {b['claim_id']}")
             b["claim_id"] = None
-        if b.get("label") not in ("симуляция", "схема", "реальные данные"):
-            b["label"] = "симуляция"
+        # метка происхождения определяется тем, КАК сделан кадр, а не текстом фразы:
+        # расчётные шаблоны рисуют каждый кадр из модели → «симуляция», класс B
+        if template in COMPUTED_TEMPLATES:
+            b["label"], b["frame_class"] = "симуляция", "B"
+        elif b.get("label") not in ("симуляция", "схема", "реальные данные"):
+            b["label"] = "схема"
         if b.get("frame_class") not in ("A", "B", "C", "D"):
             b["frame_class"] = "B"
         if len((b.get("say") or "").split()) > 20:

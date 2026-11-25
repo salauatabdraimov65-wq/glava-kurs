@@ -66,8 +66,8 @@
    "say": "Если разницы сопротивлений не видно, можно ли исключить коллектор?",
    "claim_id": "latyshova.radial_resistance_gradient#c5",
    "on_screen": "Коллектора точно нет?",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -76,8 +76,8 @@
    "say": "Как вы думаете?",
    "claim_id": null,
    "on_screen": "Ваш прогноз",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 3
@@ -110,7 +110,7 @@
    "say": "Фильтрат проникает в пласт, а на стенке может образоваться глинистая корка.",
    "claim_id": "latyshova.radial_resistance_gradient#c1",
    "on_screen": "Фильтрат и корка",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {
     "show_mud_cake": true
@@ -122,7 +122,7 @@
    "say": "Сопротивление может меняться от зоны проникновения к неизменённой части пласта.",
    "claim_id": "latyshova.radial_resistance_gradient#c6",
    "on_screen": "Изменение по радиусу",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {
     "show_invasion": true
@@ -150,8 +150,8 @@
    "say": "Если МБК ниже БК-три, проникновение называют понижающим.",
    "claim_id": "latyshova.radial_resistance_gradient#c4",
    "on_screen": "МБК ниже БК-3",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -200,8 +200,8 @@
    "say": "Что вы заключите о коллекторе в другой скважине, если разницы показаний тоже нет?",
    "claim_id": "latyshova.radial_resistance_gradient#c5",
    "on_screen": "А в другой скважине?",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0

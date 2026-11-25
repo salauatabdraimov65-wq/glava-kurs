@@ -32,7 +32,7 @@
    "claim_id": "basniev.near_well_profiles#c6",
    "on_screen": "Уклон и давление",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -41,8 +41,8 @@
    "say": "Предскажите ответ, прежде чем смотреть на кривые.",
    "claim_id": null,
    "on_screen": "Ваш прогноз",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 3
@@ -52,7 +52,7 @@
    "claim_id": "basniev.near_well_profiles#c3",
    "on_screen": "Пуск при постоянном дебите",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "show_view": "map"
    },
@@ -63,8 +63,8 @@
    "say": "На карте расстояние отсчитывается от центра скважины.",
    "claim_id": "basniev.near_well_profiles#c1",
    "on_screen": "Расстояние от скважины",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -74,7 +74,7 @@
    "claim_id": "basniev.near_well_profiles#c3",
    "on_screen": "Давление и расстояние",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "show_view": "profile"
    },
@@ -86,7 +86,7 @@
    "claim_id": "basniev.near_well_profiles#c6",
    "on_screen": "Давление на забое",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "show_view": "bottomhole_vs_log_t"
    },
@@ -98,7 +98,7 @@
    "claim_id": "basniev.near_well_profiles#c3",
    "on_screen": "Первая тысяча секунд",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "show_curve_at": 1000
    },
@@ -110,7 +110,7 @@
    "claim_id": "basniev.near_well_profiles#c3",
    "on_screen": "Три момента времени",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "time_to": 16000
    },
@@ -122,7 +122,7 @@
    "claim_id": "basniev.near_well_profiles#c3",
    "on_screen": "Дебит не меняется",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -131,7 +131,7 @@
    "say": "Автор исследует эти профили, дифференцируя давление по расстоянию.",
    "claim_id": "basniev.near_well_profiles#c1",
    "on_screen": "Градиент по расстоянию",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -141,7 +141,7 @@
    "say": "Полученная производная показывает градиент: изменение давления с расстоянием.",
    "claim_id": "basniev.near_well_profiles#c2",
    "on_screen": "Градиент давления",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -151,7 +151,7 @@
    "say": "Вблизи скважины градиент обратно пропорционален расстоянию до неё.",
    "claim_id": "basniev.near_well_profiles#c2",
    "on_screen": "Градиент и расстояние",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -161,7 +161,7 @@
    "say": "В формуле также присутствуют дебит, вязкость и проницаемость.",
    "claim_id": "basniev.near_well_profiles#c2",
    "on_screen": "Параметры в формуле",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -171,7 +171,7 @@
    "say": "Но почти постоянный во времени градиент требует отдельного условия.",
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Проверим условие",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -181,7 +181,7 @@
    "say": "Квадрат расстояния должен быть не больше трёх сотых от произведения четырёх, пьезопроводности и времени.",
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Условие для расстояния",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -192,7 +192,7 @@
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Два метра: условие выполнено",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "mark_x": 2
    },
@@ -204,7 +204,7 @@
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Наклоны почти одинаковы",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -213,7 +213,7 @@
    "say": "При выполнении условия профили вблизи скважины являются логарифмическими.",
    "claim_id": "basniev.near_well_profiles#c5",
    "on_screen": "Логарифмические профили",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -224,7 +224,7 @@
    "claim_id": "basniev.near_well_profiles#c6",
    "on_screen": "Касательные на забое",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "mark_x": 0.1
    },
@@ -236,7 +236,7 @@
    "claim_id": "basniev.near_well_profiles#c6",
    "on_screen": "Одинаковый наклон касательных",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -246,7 +246,7 @@
    "claim_id": "basniev.near_well_profiles#c6",
    "on_screen": "Забойное давление падает",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "show_view": "bottomhole_vs_log_t"
    },
@@ -257,7 +257,7 @@
    "say": "Это ответ на вопрос: одинаковый наклон не означает одинакового давления.",
    "claim_id": "basniev.near_well_profiles#c6",
    "on_screen": "Наклон не равен давлению",
-   "label": "схема",
+   "label": "симуляция",
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
@@ -268,7 +268,7 @@
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Проверка на удалении",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {
     "mark_x": 20
    },
@@ -280,7 +280,7 @@
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Условие не выполнено",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -290,7 +290,7 @@
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Правило имеет границы",
    "label": "симуляция",
-   "frame_class": "A",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
@@ -299,8 +299,8 @@
    "say": "Как вы проверите условие для другого расстояния и другого момента?",
    "claim_id": "basniev.near_well_profiles#c4",
    "on_screen": "Проверьте новую точку",
-   "label": "схема",
-   "frame_class": "A",
+   "label": "симуляция",
+   "frame_class": "B",
    "action": {},
    "is_analogy": false,
    "pause_s": 0
