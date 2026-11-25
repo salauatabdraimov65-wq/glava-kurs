@@ -485,6 +485,12 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     summary_markup = render_summary(nodes)
     map_content = render_map(nodes)
     chapter_name = html.escape(str(layer.get("chapter", "Курс")))
+    hero_title = text_of(layer.get("title"))
+    if not hero_title and nodes:
+        hero_title = text_of((nodes[0].get("layers") or {}).get("topic")) or str(nodes[0].get("title", ""))
+    hero_title = html.escape(hero_title or str(layer.get("chapter", "Полевой маршрут")))
+    step_count = len(nodes)
+    task_count = len(tasks)
     task_json = json.dumps(tasks, ensure_ascii=False, separators=(",", ":"))
     task_json = task_json.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     geology_vars = geology_theme_vars()
@@ -514,6 +520,59 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     .view-switcher,.theme-controls,.card-actions {{ display:flex; flex-wrap:wrap; gap:.45rem; }} .view-switcher {{ margin:1rem 0 0; padding:.35rem; background:color-mix(in srgb,var(--accent) 8%,var(--paper)); border:1px solid var(--line); border-radius:1rem; }} .view-switcher button[aria-pressed="true"],.card-actions button[aria-pressed="true"] {{ background:linear-gradient(120deg,var(--soft),var(--paper)); border-color:var(--accent); color:var(--accent); font-weight:700; }} .app-view[hidden] {{ display:none !important; }}
     .cards-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:.75rem; }} .review-card {{ min-width:0; background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--soft) 48%,var(--paper))); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} .review-card:nth-child(3n+2) {{ border-top-color:var(--teal); }} .review-card:nth-child(3n) {{ border-top-color:var(--warm); }} .review-card h2 {{ overflow-wrap:anywhere; }} .review-card .book-title {{ margin:.2rem 0 .7rem; }} .card-actions {{ margin-top:.6rem; }} .review-card .card-actions button {{ flex:1 1 auto; }} .task-source {{ margin:.1rem 0 .45rem; }} .xp-chip {{ padding:.35rem .75rem; border-radius:99px; background:linear-gradient(110deg,var(--sun),var(--warm)); color:#352342; font-weight:800; box-shadow:0 3px 12px color-mix(in srgb,var(--warm) 26%,transparent); }}
     .link-map {{ display:block; width:100%; height:auto; max-height:75vh; color:var(--accent); }} .map-edge {{ fill:none; stroke:currentColor; stroke-width:2.5; }} .map-node {{ fill:var(--soft); stroke:var(--line); stroke-width:2; }} .map-label {{ fill:var(--ink); font:600 17px system-ui,sans-serif; }} .map-number {{ fill:var(--accent); font:700 18px system-ui,sans-serif; }} .edge-label {{ fill:var(--muted); font:12px system-ui,sans-serif; }} .relation-list {{ padding-left:1.4rem; overflow-wrap:anywhere; }} .relation-list li {{ margin:.5rem 0; }}
+    /* Immersive field-guide styling: a dark expedition surface with visible rock strata. */
+    .shell {{ max-width:1440px; padding:1.25rem; }}
+    header.hero {{ position:relative; isolation:isolate; overflow:hidden; min-height:350px; margin-bottom:1.2rem; padding:clamp(1.35rem,4vw,3.5rem); align-items:flex-end; border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 35%,var(--line)); border-radius:1.5rem; background:radial-gradient(ellipse at 72% 4%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 22%,transparent),transparent 32rem),linear-gradient(120deg,#0F1419 5%,#17211e 54%,#1A2129 100%); box-shadow:0 24px 70px rgba(0,0,0,.3); }}
+    header.hero > div {{ position:relative; z-index:1; }}
+    header.hero > div:first-child::before {{ content:none; }}
+    .hero-copy {{ max-width:830px; }}
+    .hero-kicker,.nav-kicker {{ color:var(--geo-sand,#E8C872); font-size:.72rem; font-weight:800; letter-spacing:.16em; }}
+    .status-dot {{ display:inline-block; width:.55rem; height:.55rem; margin-right:.4rem; border-radius:50%; background:var(--geo-shale,#6B8E5A); box-shadow:0 0 14px color-mix(in srgb,var(--geo-shale,#6B8E5A) 75%,transparent); }}
+    .hero h1 {{ max-width:900px; margin:.9rem 0 .4rem; color:#ECEFF4; font-size:clamp(2.2rem,6vw,5.3rem); line-height:1.02; letter-spacing:-.045em; text-shadow:0 3px 24px rgba(0,0,0,.38); }}
+    .hero h1::after {{ width:7rem; height:.32rem; margin-top:.85rem; background:linear-gradient(90deg,var(--geo-sand,#E8C872),var(--geo-shale,#6B8E5A),var(--geo-limestone,#7FB3D5)); }}
+    .hero-note {{ max-width:620px; color:#C2C9C8; font-size:1.08rem; }}
+    .hero-stats {{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.2rem; }}
+    .hero-stats span {{ padding:.4rem .8rem; border:1px solid rgba(236,239,244,.17); border-radius:99px; background:rgba(15,20,25,.64); color:#C2C9C8; font-size:.88rem; }}
+    .hero-stats b {{ color:var(--geo-sand,#E8C872); }}
+    header.hero::after {{ position:absolute; z-index:0; right:-1rem; bottom:0; width:min(45%,560px); height:88%; border-radius:0; opacity:.68; clip-path:polygon(0 60%,12% 49%,25% 53%,39% 23%,53% 41%,65% 19%,78% 37%,90% 24%,100% 31%,100% 100%,0 100%); background:repeating-linear-gradient(176deg,var(--geo-sand,#E8C872) 0 9px,var(--geo-shale,#6B8E5A) 9px 17px,var(--geo-limestone,#7FB3D5) 17px 25px,var(--geo-dense,#8C7B6B) 25px 33px,var(--geo-dolomite,#A98FD1) 33px 39px); filter:saturate(.9); }}
+    .theme-controls {{ align-items:center; justify-content:flex-end; }}
+    .theme-controls button,.view-switcher button {{ border-color:rgba(236,239,244,.18); background:#202923; color:#ECEFF4; }}
+    .theme-controls button:hover,.view-switcher button:hover {{ background:#2b382f; border-color:var(--geo-sand,#E8C872); }}
+    .xp-chip {{ border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 58%,transparent); background:linear-gradient(130deg,var(--geo-sand,#E8C872),#A6793D); color:#1b201b; }}
+    .layout {{ gap:1.15rem; }}
+    #course-nav {{ overflow:hidden; border:1px solid color-mix(in srgb,var(--geo-shale,#6B8E5A) 48%,var(--line)); border-top:3px solid var(--geo-shale,#6B8E5A); background:linear-gradient(155deg,#1A2129,#19211f); }}
+    .nav-kicker {{ margin-bottom:.2rem; color:var(--geo-shale,#6B8E5A); }}
+    .nav-footnote {{ margin-top:1rem; padding-top:.7rem; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }}
+    .step-list {{ gap:.5rem; }}
+    .step-link {{ border-color:transparent; background:transparent; color:#C7CECC; }}
+    .step-link[aria-current="step"] {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 38%,var(--line)); background:linear-gradient(100deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 24%,#1A2129),#1A2129); color:#F4F1E7; box-shadow:inset 3px 0 var(--geo-sand,#E8C872); }}
+    .step-number {{ border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 45%,var(--line)); background:#27332a; color:var(--geo-sand,#E8C872); }}
+    .content-block,.review-card,.task {{ background:linear-gradient(145deg,#202720,#1A2129 72%); border-color:#384239; box-shadow:0 16px 40px rgba(0,0,0,.18); }}
+    .content-block {{ border-left-color:var(--geo-shale,#6B8E5A); }}
+    .content-block:nth-of-type(3n+1) {{ border-left-color:var(--geo-sand,#E8C872); }}
+    .content-block:nth-of-type(3n+2) {{ border-left-color:var(--geo-limestone,#7FB3D5); }}
+    .content-block h2,.review-card h2 {{ color:#F0EEE5; }}
+    .practice-column {{ border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 40%,#384239); border-top:4px solid var(--geo-sand,#E8C872); background:linear-gradient(155deg,#283027,#1A2129 72%); }}
+    .task {{ border-top-color:var(--geo-limestone,#7FB3D5); }}
+    .view-switcher {{ background:#171d1a; border-color:#37443a; }}
+    .view-switcher button[aria-pressed="true"] {{ background:linear-gradient(130deg,#4d683e,#26372b); border-color:var(--geo-shale,#6B8E5A); color:#F1E9CE; }}
+    .review-card {{ border-top-color:var(--geo-sand,#E8C872); }}
+    .review-card:nth-child(3n+2) {{ border-top-color:var(--geo-shale,#6B8E5A); }}
+    .review-card:nth-child(3n) {{ border-top-color:var(--geo-limestone,#7FB3D5); }}
+    .map-node {{ fill:#202b24; stroke:color-mix(in srgb,var(--geo-shale,#6B8E5A) 70%,#1A2129); }}
+    .map-label {{ fill:#ECEFE4; }}
+    .map-number,.link-map {{ color:var(--geo-sand,#E8C872); fill:var(--geo-sand,#E8C872); }}
+    .page,.badge {{ color:#E8DDBA; background:#29352b; border-color:#455440; }}
+    .step-time {{ color:#D9C783; background:#273027; border:1px solid #46503b; }}
+    .terms li {{ color:#DFD5B2; background:#273027; border-color:#46503b; }}
+    blockquote,.hint-content {{ background:#242d27; border-left-color:var(--geo-limestone,#7FB3D5); }}
+    .option {{ border-color:#39433b; background:#1b221e; }}
+    .option:hover {{ background:#29352b; border-color:var(--geo-sand,#E8C872); }}
+    .gap-input {{ border-color:#59614b; background:#141a17; color:#ECEFF4; }}
+    .task-result {{ background:#263228; border-color:var(--geo-shale,#6B8E5A); }}
+    .task-result.correct {{ background:#263d2d; border-color:#75ac65; color:#E7F2DD; }}
+    .muted,.book-title {{ color:#AAB4AB; }}
+    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header.hero {{ min-height:410px; padding:1.2rem; align-items:flex-start; flex-direction:column; }} header.hero::after {{ right:-1rem; bottom:0; width:78%; height:44%; opacity:.42; }} .hero-copy {{ z-index:1; }} .hero h1 {{ font-size:clamp(2.1rem,11vw,3.2rem); overflow-wrap:anywhere; }} .hero-note {{ font-size:1rem; }} .hero-stats {{ gap:.35rem; }} .hero-stats span {{ font-size:.78rem; padding:.3rem .55rem; }} .theme-controls {{ justify-content:flex-start; }} .theme-controls button {{ min-height:42px; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     h1 {{ position:relative; }} h1::after {{ content:""; display:block; width:4.5rem; height:.25rem; margin-top:.45rem; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--teal),var(--sun)); }} .task {{ border-top:3px solid var(--sun); }} .task-result {{ border:1px solid color-mix(in srgb,var(--teal) 32%,var(--line)); }} .task-result.correct {{ border-color:var(--teal); background:color-mix(in srgb,var(--teal) 12%,var(--paper)); }} .option:hover {{ border-color:var(--accent); background:color-mix(in srgb,var(--soft) 65%,var(--paper)); }} .map-node {{ fill:color-mix(in srgb,var(--soft) 82%,var(--sun) 18%); }} .map-edge {{ stroke:var(--teal); }}
     @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} header::after {{ width:76px; height:42px; margin-left:auto; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     @media (prefers-reduced-motion:reduce) {{ *,*::before,*::after {{ scroll-behavior:auto !important; transition:none !important; }} }}
@@ -522,9 +581,17 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 </head>
 <body>
 <div class="shell">
-  <header><div><div class="muted">Офлайн-курс · учитесь короткими шагами</div><strong>{chapter_name}</strong></div><div class="theme-controls"><span class="xp-chip" id="xp-total" aria-live="polite">0 XP</span><button type="button" data-show-view="course">Продолжить</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></header>
+  <header class="hero">
+    <div class="hero-copy">
+      <div class="hero-kicker"><span class="status-dot"></span> ПОЛЕВОЙ ЖУРНАЛ · ГЕОЛОГИЧЕСКАЯ ЭКСПЕДИЦИЯ</div>
+      <h1>{hero_title}</h1>
+      <p class="hero-note">Исследуйте слои знаний, сверяйтесь с источниками и закрепляйте открытия практикой.</p>
+      <div class="hero-stats"><span><b>{step_count}</b> этапов</span><span><b>{task_count}</b> упражнений</span><span><b>офлайн</b> режим</span></div>
+    </div>
+    <div class="theme-controls"><span class="xp-chip" id="xp-total" aria-live="polite">0 XP</span><button type="button" data-show-view="course">Продолжить маршрут</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div>
+  </header>
   <div class="layout">
-    <aside id="course-nav" aria-label="Навигация курса"><strong>Ваш путь</strong><div class="progress" role="progressbar" aria-label="Прогресс по шагам"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav></aside>
+    <aside id="course-nav" aria-label="Навигация курса"><div class="nav-kicker">МАРШРУТ</div><strong>Ваш путь</strong><div class="progress" role="progressbar" aria-label="Прогресс по шагам"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">Каждый шаг открывает новый пласт материала</div></aside>
     <main id="course-content">
       <nav class="view-switcher" aria-label="Раздел курса">
         <button type="button" data-show-view="course" aria-pressed="true">Шаги</button>
@@ -548,7 +615,7 @@ const TASK_KEY = 'course-tasks:' + CHAPTER;
 const XP_KEY = 'course-xp:' + CHAPTER;
 const CARD_KEY = 'course-cards:' + CHAPTER;
 const VIEW_KEY = 'course-view:' + CHAPTER;
-const THEME_KEY = 'course-theme:' + CHAPTER;
+const THEME_KEY = 'course-theme-v2:' + CHAPTER;
 let saved = {{}};
 let solved = {{}};
 let reviewed = {{}};
@@ -565,7 +632,7 @@ function updateXp() {{ document.getElementById('xp-total').textContent = xp + ' 
 updateXp();
 let theme = '';
 try {{ theme = localStorage.getItem(THEME_KEY) || ''; }} catch (_) {{}}
-if (!theme) theme = 'light';
+if (!theme) theme = 'dark';
 document.documentElement.dataset.theme = theme;
 const themeToggle = document.getElementById('theme-toggle');
 function updateThemeButton() {{ themeToggle.textContent = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'; themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'); }}
