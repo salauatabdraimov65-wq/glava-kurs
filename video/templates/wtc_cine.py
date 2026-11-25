@@ -398,6 +398,9 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
                 d.text((x0_ + 22, y + 8), l1, font=f1, fill=mix(bg, text, a))
                 d.text((x0_ + 22, y + 60), l2, font=f2, fill=mix(bg, col, a))
                 y += 118
+    # кадр в истинном масштабе — поверх колонки показаний
+    if s.get("true_scale") is not None:
+        self.draw_true_scale_inset(d, (tx0 - 10, max(R.y_top, ya), tx1 + 10, min(R.y_bot, yb)), s, t, R.fade)
     # живое показание у прибора во время спуска (первая кривая)
     if s.get("moving") and self.curves:
         c = self.curves[0]

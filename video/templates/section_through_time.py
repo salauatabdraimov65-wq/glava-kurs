@@ -54,9 +54,24 @@ def resample(poly, n=N_RESAMPLE):
 
 class SectionThroughTime:
     name = NAME
-    scale_keyword = ("вертикал",)
+    scale_keyword = ("вертикал", "горизонтал", "масштаб", "преувелич")
 
     def __init__(self, params: dict, style: dict):
+        params = copy.deepcopy(params)
+        # модель иногда задаёт разрез в глубинах (вниз — больше): z_top < z_bottom. Тогда переворачиваем знак всех z
+        # и подписываем ось как глубину — сцена та же, падения нет.
+        self.depth_mode = float(params.get("z_top_m", 0)) < float(params.get("z_bottom_m", -100))
+        if self.depth_mode:
+            params["z_top_m"], params["z_bottom_m"] = -float(params["z_top_m"]), -float(params["z_bottom_m"])
+            for b in params.get("bodies", []):
+                for k in b.get("keyframes", []):
+                    k["polygon"] = [[x, -z] for x, z in k.get("polygon", [])]
+            for w in params.get("water_level") or []:
+                w["z"] = -float(w["z"])
+            for a in params.get("arrows") or []:
+                for key in ("from", "to"):
+                    if a.get(key):
+                        a[key] = [a[key][0], -a[key][1]]
         self.p = params
         self.style = style
         self.xmax = float(params.get("x_max_m", 1000))
@@ -284,7 +299,7 @@ class SectionThroughTime:
         # уровень воды
         if wl is not None and wl > self.ztop:
             fw = font(30, True)
-            lab = f"уровень воды выше кадра: {wl:g} м".replace("-", "−").replace(".", ",")
+            lab = f"уровень воды выше кадра: {-wl if self.depth_mode else wl:g} м".replace("-", "−").replace(".", ",")
             d.text((rx1 - fw.getlength(lab) - 8, ry0 + 6), lab, font=fw, fill=water, stroke_width=4, stroke_fill=bg)
         if wl is not None and self.zbot < wl <= self.ztop:
             yw = Z(wl)
@@ -387,11 +402,11 @@ class SectionThroughTime:
         z = math.ceil(self.zbot / step) * step
         while z <= self.ztop + 1e-9:
             y = Z(z)
-            lab = f"{z:g}".replace("-", "−")
+            lab = f"{-z if self.depth_mode else z:g}".replace("-", "−")
             d.text((rx0 - 14 - fz.getlength(lab), y - line_h(fz) / 2), lab, font=fz, fill=muted)
             d.line([(rx0 - 8, y), (rx0, y)], fill=muted, width=2)
             z += step
-        d.text((L["box"][0], ry0 - line_h(fz) - 6), "отметка, м", font=font(28, True), fill=muted)
+        d.text((L["box"][0], ry0 - line_h(fz) - 6), "глубина, м" if self.depth_mode else "отметка, м", font=font(28, True), fill=muted)
         xl = f"0 … {self.xmax:g} м по горизонтали"
         d.text((rx0, ry1 + 10), xl, font=font(28, True), fill=muted)
         # время: крупный счётчик + шкала с метками ключевых моментов
