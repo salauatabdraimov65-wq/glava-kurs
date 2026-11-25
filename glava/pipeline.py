@@ -7,7 +7,7 @@
     uv run python -m glava.pipeline <chapter_id> --video-node <node_id>  # ролик на назначенный организаторами узел
     uv run python -m glava.pipeline <chapter_id> --no-video              # без рендера ролика (быстро)
 
-Этапы: layer, recall (полнота по идеям + добор), review (самопроверка + исправления), illustrate, scene, video, course (курс последним — в него встраивается собранный ролик). Каждый этап пишет строку в metrics.csv.
+Этапы: layer, recall (полнота по идеям + добор), review (самопроверка + исправления), illustrate, scene, video, course (курс последним — в него встраивается собранный ролик). Время этапов — runs/<глава>/stage_times.json; в конце glava.metrics пересобирает metrics.csv (строка на главу и этап по шаблону организаторов).
 Модули других треков (course, video) подключаются, если они есть в репозитории.
 """
 from __future__ import annotations
@@ -16,6 +16,7 @@ import argparse
 import csv
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import time
@@ -40,15 +41,13 @@ def ledger_len() -> int:
 
 
 def metric(chapter, stage, t0, usd0, led0, nodes=0, video_s=0):
-    tin, tout = tokens_since(led0)
-    path = ROOT / "metrics.csv"
-    new = not path.exists() or path.stat().st_size == 0
-    with path.open("a", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
-        if new:
-            w.writerow(["chapter", "stage", "nodes", "llm_tokens_in", "llm_tokens_out", "money_usd", "person_minutes",
-                        "mentor_minutes", "video_seconds", "manual_share"])
-        w.writerow([chapter, stage, nodes, tin, tout, round(spent_usd() - usd0, 4), 0, 0, video_s, 0])
+    """Время этапа → runs/<глава>/stage_times.json (для доли ручного труда); деньги и токены glava.metrics берёт
+    из журнала вызовов, где у каждого вызова есть глава и этап (GLAVA_CHAPTER / GLAVA_STAGE)."""
+    p = ROOT / "runs" / chapter / "stage_times.json"
+    times = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    times[stage] = round(times.get(stage, 0) + (time.time() - t0), 1)
+    if p.parent.exists():
+        p.write_text(json.dumps(times, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"── {stage}: {time.time() - t0:.0f} с, ${spent_usd() - usd0:.3f}", flush=True)
 
 
@@ -119,7 +118,9 @@ def main():
     if a.no_video and "video" in stages:
         stages.remove("video")
     T0 = time.time()
+    os.environ["GLAVA_CHAPTER"] = a.chapter          # каждый вызов модели в журнале помечается главой и этапом
     for st in stages:
+        os.environ["GLAVA_STAGE"] = st
         t0, usd0, led0 = time.time(), spent_usd(), ledger_len()
         if st == "layer":
             run(["layer.build", a.chapter])
@@ -164,6 +165,8 @@ def main():
         if (run_dir / "layer.json").exists():
             nodes = len(json.loads((run_dir / "layer.json").read_text(encoding="utf-8"))["nodes"])
         metric(a.chapter, st, t0, usd0, led0, nodes=nodes)
+    os.environ.pop("GLAVA_STAGE", None)
+    run(["glava.metrics"], soft=True)                 # metrics.csv по шаблону организаторов
     print(f"ГОТОВО {a.chapter}: {(time.time() - T0) / 60:.1f} мин, всего потрачено ${spent_usd():.2f} → {run_dir}")
 
 

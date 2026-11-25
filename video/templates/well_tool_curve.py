@@ -50,7 +50,9 @@ action (в beat, всё необязательно):
   mark: {top, bottom, label} или список — рамка интервала (контакт, коллектор);  clear_marks: true;
   show_mud_cake: true; show_invasion: true;  show_curves: [id...] — какие кривые видны и пишутся;
   callout: [{target: "tool"|"cake"|"invasion"|"bore"|"curve:<id>"|{"depth": м}|{"layer": индекс}, text}] — выноска 1–3 слова;
-  readout: "<id кривой>" — плашка «≈ значение» на конце кривой (значение считает код).
+  readout: "<id кривой>" — плашка «≈ значение» на конце кривой (значение считает код);
+  show_true_scale: true — на эту фразу вставка «истинный масштаб» (ствол реального диаметра — почти линия);
+  нужна хотя бы в одной фразе, лучше ближе к концу: «на самом деле ствол в сотни раз уже».
 Числа свойств условные — перечисли их в assumptions; важно соотношение, которое следует из главы.
 Ствол в кадре всегда шире реального: не пиши «в масштабе»; во сколько раз — код допишет на плашку сам."""
 
@@ -136,12 +138,13 @@ class WellToolCurve:
             "cake": None, "invasion": None,          # время появления (с), None — скрыто
             "marks": [],
             "curves": {c["id"]: {"visible": True, "rec": None} for c in self.curves},
-            "callouts": [], "readout": None, "highlight": None,
+            "callouts": [], "readout": None, "highlight": None, "true_scale": None,
         }
 
     def begin_beat(self, state: dict, action: dict, t: float) -> dict:
         """Мгновенные действия в начале фразы."""
         s = copy.deepcopy(state)
+        s["true_scale"] = t if action.get("show_true_scale") else None   # вставка «истинный масштаб» — на одну фразу
         if action.get("clear_marks"):
             s["marks"] = []
         marks = action.get("mark")
@@ -728,6 +731,50 @@ class WellToolCurve:
                 if ly < p0:
                     ly = yb + 4
                 d.text((lx, ly), lab, font=f_m, fill=col, stroke_width=4, stroke_fill=bg)
+        if s.get("true_scale") is not None and L["tracks"]:
+            self.draw_true_scale_inset(d, (L["tracks"][0][0], p0, L["tracks"][-1][1], p1), s, t, fade)
+
+
+def draw_true_scale_inset(self, d, box, s: dict, t: float, fade: float = 0.4):
+    """Кадр в истинном масштабе (ТЗ: «хотя бы один кадр серии в истинном масштабе»): тот же интервал глубин,
+    одинаковый масштаб по обеим осям — ствол реального диаметра оказывается почти линией."""
+    born = s.get("true_scale")
+    if born is None:
+        return
+    a = min(1.0, max(0.0, (t - born) / max(fade, 1e-3)))
+    st = self.style
+    bg, text, muted, panel = (hex_rgb(st[k]) for k in ("background", "text", "muted", "panel"))
+    meas = hex_rgb(st["measurement"]["color"])
+    x0, y0, x1, y1 = box
+    d.rounded_rectangle([x0, y0, x1, y1], radius=22, fill=mix(bg, panel, a), outline=mix(bg, meas, a), width=4)
+    f_h, f_s = font(34, True), font(30, True)
+    inner = x1 - x0 - 44
+    bore_m = float(self.p.get("bore_diameter_m") or 0.2)
+    span = max(self.bottom - self.top, 1e-6)
+    head = wrap("ИСТИННЫЙ МАСШТАБ", f_h, inner)
+    foot = wrap(f"ствол {bore_m:g} м на {span:g} м разреза".replace(".", ","), f_s, inner) + \
+        wrap("в остальных кадрах ствол расширен", f_s, inner)
+    yy = y0 + 16
+    for ln in head:
+        d.text((x0 + 22, yy), ln, font=f_h, fill=mix(bg, meas, a)); yy += line_h(f_h)
+    top_ = yy + 14
+    bot_ = y1 - len(foot) * line_h(f_s) - 26
+    ppm = (bot_ - top_) / span                       # пикселей на метр — по обеим осям одинаково
+    half_w = min((x1 - x0) / 2 - 30, ppm * span * 0.35)
+    cx = (x0 + x1) / 2
+    for Lr in self.layers:                           # слои той же толщины, что в разрезе
+        ya = top_ + (max(Lr["top"], self.top) - self.top) * ppm
+        yb = top_ + (min(Lr["bottom"], self.bottom) - self.top) * ppm
+        if yb > ya:
+            d.rectangle([cx - half_w, ya, cx + half_w, yb], fill=mix(bg, self.lith_color(Lr.get("lith")), a * 0.9))
+    bw = max(1.5, bore_m * ppm)                      # реальный диаметр в том же масштабе
+    d.rectangle([cx - bw / 2, top_, cx + bw / 2, bot_], fill=mix(bg, text, a))
+    yy = bot_ + 12
+    for i, ln in enumerate(foot):
+        d.text((x0 + 22, yy), ln, font=f_s, fill=mix(bg, text if i == 0 else muted, a)); yy += line_h(f_s)
+
+
+WellToolCurve.draw_true_scale_inset = draw_true_scale_inset
 
 
 # кинематографичная отрисовка для шортса (video/cine.py)
