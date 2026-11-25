@@ -30,7 +30,7 @@ def cine_world(self, ppm_w: float, sec_w_world: float, H: int, ppm: float, R) ->
     z0, z1 = self.top - ext, self.bottom + ext
     wh = int((z1 - z0) * ppm_w)
     ww = int(W * zmax)
-    bore_sx = W * 0.34
+    bore_sx = W * 0.15
     bore_xw = bore_sx * zmax
     bw = float(self.p.get("bore_width", 0.18))
     bore_px = bw * ppm if bw > 1 else W * 0.6 * bw
@@ -174,7 +174,41 @@ def cine_compose(self, R, s: dict, t: float, cam) -> Image.Image:
     return out
 
 
+def _qual(u: float) -> str:
+    return "низкое" if u < 0.34 else ("среднее" if u < 0.67 else "высокое")
+
+
+def _norm(self, c, v):
+    lo, hi = float(c.get("min", 0)), float(c.get("max", 1))
+    if c.get("scale") == "log":
+        lo, hi, v = np.log10(max(lo, 1e-6)), np.log10(max(hi, 1e-6)), np.log10(max(v, 1e-6))
+    return float(min(max((v - lo) / (hi - lo) if hi != lo else 0.5, 0), 1))
+
+
+def _grains(size: int, fluid, rock, seed: int, k: int) -> Image.Image:
+    """Лупа: зёрна породы и флюид в порах между ними (схема)."""
+    rng = np.random.default_rng(seed)
+    n = size * k
+    img = Image.new("RGB", (n, n), tuple(int(c * 0.9) for c in fluid))
+    img.info["ssaa"] = k
+    d = SDraw(img)
+    pts = []
+    for _ in range(400):
+        x, y = rng.uniform(0, size), rng.uniform(0, size)
+        r = rng.uniform(size * 0.07, size * 0.12)
+        if all((x - a) ** 2 + (y - b) ** 2 > (r + rr) ** 2 * 0.72 for a, b, rr in pts):
+            pts.append((x, y, r))
+    for x, y, r in pts:  # зерно со светотенью: тень, тело, блик
+        d.ellipse([x - r + 3, y - r + 4, x + r + 3, y + r + 4], fill=tuple(int(c * 0.45) for c in fluid))
+        d.ellipse([x - r, y - r, x + r, y + r], fill=mix(rock, (0, 0, 0), 0.12))
+        d.ellipse([x - r * 0.85, y - r * 0.9, x + r * 0.6, y + r * 0.55], fill=rock)
+        d.ellipse([x - r * 0.55, y - r * 0.65, x - r * 0.05, y - r * 0.2], fill=mix(rock, (255, 255, 255), 0.35))
+    return img
+
+
 def _cine_overlay(self, img, R, s, t, cam, ys):
+    """Данные в кадре без «графика»: колонка «показания» со световыми лентами и шкалой словами,
+    крупные плашки значений, лупа с порами, викторина, рамки, прибор."""
     st = self.style
     k = R.k
     W, H = R.W, R.H
@@ -186,163 +220,184 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
     w = R.world
     bcx = w["bore_sx"]
     bhalf = w["bore_px"] * zoom / 2
+    i_seg = R.seg_at(t)
+    seg = R.segs[i_seg]
+    quiz = (not seg.beat.say) and seg.beat.pause
+    hl = s.get("highlight")
+    # фокус на слое: остальные слои гаснут
+    if hl and 0 <= hl["idx"] < len(self.layers):
+        a = _alpha(hl["born"], t, 0.4)
+        L0 = self.layers[hl["idx"]]
+        for j, Lr in enumerate(self.layers):
+            if j == hl["idx"]:
+                continue
+            y0_, y1_ = max(0, ys(Lr["top"])), min(H, ys(Lr["bottom"]))
+            if y1_ > y0_:
+                box = (0, int(y0_ * k), W * k, int(y1_ * k))
+                reg = img.crop(box)
+                img.paste(Image.blend(reg, Image.new("RGB", reg.size, bg), 0.5 * a), box[:2])
+    # колонка «показания»: тёмное стекло без рамки
     ya, yb = max(0, ys(self.top)), min(H, ys(self.bottom))
-    # трек: тёмное стекло поверх породы
-    box = (int(tx0 * k), int(max(0, ya - 30) * k), int(tx1 * k), int(min(H, yb + 30) * k))
+    box = (int(tx0 * k), int(max(0, ya) * k), int(tx1 * k), int(min(H, yb) * k))
     if box[3] > box[1]:
         reg = img.crop(box)
-        dark = Image.new("RGB", reg.size, mix(bg, panel, 0.5))
-        img.paste(Image.blend(reg.filter(ImageFilter.GaussianBlur(10 * k)), dark, 0.72), box[:2])
-        d.rectangle([tx0, max(0, ya - 30), tx1, min(H, yb + 30)], outline=mix(bg, muted, 0.6), width=2)
-    # шкала глубин: шаг так, чтобы подписи не слипались
-    f_t = mono_font(26, True)
-    step = next(sv for sv in (0.5, 1, 2, 5, 10, 20, 50, 100) if sv * R.ppm * zoom >= 95)
-    v = np.ceil(self.top / step) * step
-    while v <= self.bottom + 1e-9:
-        y = ys(v)
-        if 300 < y < H - 420:
-            lab = self._fmt(v)
-            d.line([(tx0, y), (tx1, y)], fill=mix(bg, muted, 0.35), width=1)
-            d.text((tx1 - f_t.getlength(lab) - 10, y - line_h(f_t) - 2), lab, font=f_t, fill=mix(muted, text, 0.3),
-                   stroke_width=3, stroke_fill=bg)
-        v += step
-    # границы слоёв продолжаются в треке — видно, что кривая отвечает слоям
+        img.paste(Image.blend(reg.filter(ImageFilter.GaussianBlur(12 * k)), Image.new("RGB", reg.size, bg), 0.62),
+                  box[:2])
+    cw = tx1 - tx0
+    for frac in (1 / 3, 2 / 3):  # границы «низкое / среднее / высокое»
+        x = tx0 + 16 + frac * (cw - 32)
+        for yy in np.arange(ya, yb, 22):
+            d.line([(x, yy), (x, min(yb, yy + 10))], fill=mix(bg, muted, 0.45), width=2)
+    f_q = mono_font(28, True)
+    yq = min(yb, R.y_bot) - 44
+    for frac, word in ((1 / 6, "низко"), (0.5, "средне"), (5 / 6, "высоко")):
+        x = tx0 + 16 + frac * (cw - 32)
+        d.text((x - f_q.getlength(word) / 2, yq), word, font=f_q, fill=mix(muted, text, 0.45),
+               stroke_width=4, stroke_fill=bg)
+    # границы слоёв тонким пунктиром через колонку
     for Lr in self.layers[1:]:
         y = ys(Lr["top"])
         if 0 < y < H:
-            dashed_hline(d, tx0, tx1, y, fill=mix(bg, muted, 0.75), width=2, dash=10, gap=8)
-    # кривые
-    for tr in self.tracks:
-        for cid in tr:
-            cs = s["curves"][cid]
-            if not cs["visible"] or not cs["rec"]:
-                continue
-            c = self._curve(cid)
-            z0, z1 = cs["rec"]
-            m = (self.z >= z0) & (self.z <= z1)
-            zz = np.concatenate([self.z[m], [z1]])
-            vv = np.concatenate([self.values[cid][m], [self.value_at(cid, z1)]])
-            if len(zz) < 2:
-                continue
-            pts = [(self.x_of(c, (tx0 + 10, tx1 - 10), v_), ys(z_)) for z_, v_ in zip(zz, vv)]
-            col = self.curve_color(c)
-            glow = mix(bg, col, 0.35)
-            if c.get("dashed"):
-                dashed_polyline(d, pts, fill=col, width=7)
-            else:
-                d.line(pts, fill=glow, width=16, joint="curve")
-                d.line(pts, fill=col, width=7, joint="curve")
-            if z0 - 1e-6 <= s["tool"] <= z1 + 1e-6:
-                xv = self.x_of(c, (tx0 + 10, tx1 - 10), self.value_at(cid, s["tool"]))
-                yv = ys(s["tool"])
-                d.ellipse([xv - 13, yv - 13, xv + 13, yv + 13], fill=col, outline=bg, width=4)
-    # шкала значений трека — внизу трека
-    if self.curves:
-        c = self.curves[0]
-        f_s = mono_font(26, True)
-        y = min(H - 430, yb + 36)
-        lo = self._fmt(float(c.get("min", 0))).replace("-", "−")
-        hi = f"{self._fmt(float(c.get('max', 1))).replace('-', '−')} {visible(c.get('unit', ''), 'единица кривой')}"
-        d.text((tx0 + 8, y), lo, font=f_s, fill=muted, stroke_width=3, stroke_fill=bg)
-        d.text((tx1 - 8 - f_s.getlength(hi), y), hi, font=f_s, fill=muted, stroke_width=3, stroke_fill=bg)
-    # подписи слоёв — мелко, с тенью, слева от ствола
-    f_l = font(36, True)
-    for Lr in self.layers:
+            dashed_hline(d, tx0, tx1, y, fill=mix(bg, muted, 0.6), width=2, dash=10, gap=10)
+    # световые ленты: каждая кривая в своей шкале (качественно), цвет — из стайлгайда
+    def xcol(c, v):
+        return tx0 + 16 + _norm(self, c, v) * (cw - 32)
+    for c in self.curves:
+        cs = s["curves"][c["id"]]
+        if not cs["visible"] or not cs["rec"]:
+            continue
+        z0, z1 = cs["rec"]
+        m = (self.z >= z0) & (self.z <= z1)
+        zz = np.concatenate([self.z[m], [z1]])
+        vv = np.concatenate([self.values[c["id"]][m], [self.value_at(c["id"], z1)]])
+        if len(zz) < 2:
+            continue
+        pts = [(xcol(c, v_), ys(z_)) for z_, v_ in zip(zz, vv)]
+        col = self.curve_color(c)
+        d.line(pts, fill=mix(bg, col, 0.25), width=26, joint="curve")
+        d.line(pts, fill=mix(bg, col, 0.55), width=13, joint="curve")
+        d.line(pts, fill=mix(col, (255, 255, 255), 0.25), width=5, joint="curve")
+        if z0 - 1e-6 <= s["tool"] <= z1 + 1e-6:
+            xv, yv = xcol(c, self.value_at(c["id"], s["tool"])), ys(s["tool"])
+            d.ellipse([xv - 15, yv - 15, xv + 15, yv + 15], fill=col, outline=(255, 255, 255), width=3)
+    # подписи слоёв — крупно, справа от ствола
+    f_l = font(42, True)
+    label_bottom = {}
+    lab_x = bcx + bhalf + 34
+    lab_w = tx0 - lab_x - 24
+    for j, Lr in enumerate(self.layers):
         if not Lr.get("label"):
             continue
         y0_, y1_ = ys(Lr["top"]), ys(Lr["bottom"])
-        yc = (max(y0_, 330) + min(y1_, H - 440)) / 2
-        if not (330 < yc < H - 440) or (y1_ - y0_) < 50:
+        top_ = max(y0_, R.y_top - 10) + 18
+        if not (R.y_top - 40 < top_ < R.y_bot) or (y1_ - y0_) < 60:
             continue
-        lines = wrap(visible(Lr["label"], "подпись слоя"), f_l, bcx - bhalf - R.safe[0] - 30)
-        yy = yc - len(lines) * line_h(f_l) / 2
-        for ln in lines:
-            d.text((R.safe[0], yy), ln, font=f_l, fill=text, stroke_width=5, stroke_fill=bg)
-            yy += line_h(f_l)
-    # прибор на кабеле: металл, блик, свечение в движении
+        dim = hl and hl["idx"] != j
+        for ln in wrap(visible(Lr["label"], "подпись слоя"), f_l, lab_w)[:2]:
+            d.text((lab_x, top_), ln, font=f_l, fill=mix(text, bg, 0.5) if dim else text, stroke_width=6, stroke_fill=bg)
+            top_ += line_h(f_l)
+        label_bottom[j] = top_
+        if quiz:  # викторина: на каждом пласте «?»
+            qa = min(1.0, (t - seg.start) / 0.3)
+            f_big = font(70, True)
+            cy = (max(y0_, R.y_top) + min(y1_, R.y_bot)) / 2 + 30
+            d.ellipse([lab_x, cy - 46, lab_x + 92, cy + 46], fill=mix(bg, meas, qa))
+            d.text((lab_x + 46 - f_big.getlength("?") / 2, cy - 44), "?", font=f_big, fill=bg)
+    # прибор на кабеле
     ty = ys(s["tool"])
-    th = max(70, R.ppm * zoom * 1.3)
-    tw = max(16, bhalf * 0.9)
+    th = max(80, R.ppm * zoom * 3.2)
+    tw = max(18, bhalf * 0.85)
     d.line([(bcx, 0), (bcx, ty - th / 2)], fill=mix(text, muted, 0.3), width=4)
     if s.get("moving"):
-        for r_, a_ in ((30, 0.14), (18, 0.26)):
-            d.rounded_rectangle([bcx - r_, ty - th / 2 - r_ / 2, bcx + r_, ty + th / 2 + r_ / 2], radius=int(r_),
-                                fill=mix(bg, meas, a_))
-    d.rounded_rectangle([bcx - tw / 2, ty - th / 2, bcx + tw / 2, ty + th / 2], radius=int(tw / 2), fill=mix(meas, (0, 0, 0), 0.25))
+        for r_, a_ in ((34, 0.14), (20, 0.28)):
+            d.rounded_rectangle([bcx - tw / 2 - r_, ty - th / 2 - r_, bcx + tw / 2 + r_, ty + th / 2 + r_],
+                                radius=int(tw / 2 + r_), fill=mix(bg, meas, a_))
+    d.rounded_rectangle([bcx - tw / 2, ty - th / 2, bcx + tw / 2, ty + th / 2], radius=int(tw / 2),
+                        fill=mix(meas, (0, 0, 0), 0.25))
     d.rounded_rectangle([bcx - tw / 2 + 3, ty - th / 2 + 4, bcx - tw / 2 + tw * 0.38, ty + th / 2 - 4],
                         radius=int(tw / 4), fill=mix(meas, (255, 255, 255), 0.35))
-    for j in range(1, 4):
-        yy = ty - th / 2 + th * j / 4
-        d.line([(bcx - tw / 2, yy), (bcx + tw / 2, yy)], fill=mix(meas, (0, 0, 0), 0.5), width=2)
-    # луч синхрона: от прибора к точке кривой
-    dashed_hline(d, bcx + tw, tx0, ty, fill=mix(bg, meas, 0.55), width=2, dash=8, gap=8)
-    # рамки
-    f_m = font(36, True)
+    dashed_hline(d, bcx + tw, tx0, ty, fill=mix(bg, meas, 0.5), width=2, dash=8, gap=8)
+    # рамки сравнения
+    f_m = font(40, True)
     for mk in s["marks"]:
         a = _alpha(mk.get("born"), t, R.fade)
         if a <= 0:
             continue
-        col = mix(bg, text, a)
+        col = mix(bg, meas, a)
         y0_, y1_ = ys(float(mk["top"])), ys(float(mk["bottom"]))
-        rx = 24 + (tx1 - 24) * min(1, a * 1.2)
-        d.rectangle([24, y0_, rx, y1_], outline=col, width=4)
-        if mk.get("label") and a > 0.5:
-            lab = visible(mk["label"], "подпись рамки")
-            d.text((tx0 + 12, y0_ + 6), lab, font=f_m, fill=col, stroke_width=4, stroke_fill=bg)
-    # подсветка слоя
-    hl = s.get("highlight")
+        d.rounded_rectangle([lab_x - 14, y0_ + 4, tx1 + 8, y1_ - 4], radius=18, outline=col, width=5)
+        if mk.get("label") and a > 0.4:
+            lab = visible(mk["label"], "подпись рамки").upper()
+            fl = mono_font(30, True)
+            tw_ = fl.getlength(lab)
+            d.rounded_rectangle([tx1 - tw_ - 30, y0_ - 22, tx1 + 4, y0_ + 22], radius=12, fill=col)
+            d.text((tx1 - tw_ - 14, y0_ - 18), lab, font=fl, fill=bg)
+    # значения крупно: на подсветке слоя без флюида — обе кривые; с флюидом — лупа с порами
     if hl and 0 <= hl["idx"] < len(self.layers):
-        a = _alpha(hl["born"], t, R.fade)
+        a = _alpha(hl["born"] + 0.15, t, 0.35)
         Lr = self.layers[hl["idx"]]
-        d.rectangle([20, ys(Lr["top"]), tx1 + 4, ys(Lr["bottom"])], outline=mix(bg, meas, a), width=6)
-    # выноски и значение — пилюли с линией к объекту
-    f_c = font(34, True)
-    f_v = mono_font(30, True)
-
-    def pill(x, y, label, a, anchor, right=False, fnt=None):
-        fc = fnt or f_c
-        tw_ = fc.getlength(label)
-        hh = line_h(fc) + 12
-        bx = x - tw_ - 26 if right else x
-        d.line([((bx + tw_ + 26) if not right else bx, y), anchor], fill=mix(bg, text, a), width=3)
-        d.ellipse([anchor[0] - 7, anchor[1] - 7, anchor[0] + 7, anchor[1] + 7], fill=mix(bg, text, a))
-        d.rounded_rectangle([bx, y - hh / 2, bx + tw_ + 26, y + hh / 2], radius=int(hh / 2), fill=mix(bg, text, a))
-        d.text((bx + 13, y - hh / 2 + 4), label, font=fc, fill=bg)
-
-    placed = []
-    for n, c in enumerate(s.get("callouts", [])):
-        a = _alpha(c["born"] + 0.15 * n, t, 0.3)
-        if a <= 0:
-            continue
-        tg = c.get("target", "tool")
-        if tg == "tool":
-            anc = (bcx, ty)
-        elif tg in ("cake", "invasion", "bore"):
-            key = {"cake": "mud_cake", "invasion": "invasion_width"}.get(tg)
-            cand = [L for L in self.layers if (L.get(key) if key else True)] or self.layers
-            Lr = min(cand, key=lambda q: abs((q["top"] + q["bottom"]) / 2 - s["tool"]))
-            yz = ys((Lr["top"] + Lr["bottom"]) / 2)
-            anc = (bcx - bhalf - (4 if tg == "cake" else bhalf * 1.6), yz)
-        elif isinstance(tg, dict) and "depth" in tg:
-            anc = (bcx * 0.5, ys(float(tg["depth"])))
-        else:
-            anc = (bcx, ty)
-        y = min(max(anc[1] - 100, 340), H - 460)
-        while any(abs(y - q) < 62 for q in placed):
-            y += 64
-        placed.append(y)
-        pill(R.safe[0], y, visible(c["text"], "выноска"), a, anc)
-    ro = s.get("readout")
-    if ro:
-        a = _alpha(ro["born"], t, 0.3)
-        cid = ro["curve"] or next((c["id"] for c in self.curves if s["curves"][c["id"]]["visible"]), None)
-        cs = s["curves"].get(cid) if cid else None
-        if cs and cs["visible"] and cs["rec"] and a > 0:
-            c = self._curve(cid)
-            z = min(max(s["tool"], cs["rec"][0]), cs["rec"][1])
-            v = self.value_at(cid, z)
-            xv, yv = self.x_of(c, (tx0 + 10, tx1 - 10), v), ys(z)
-            vs = (f"{v:.0f}" if abs(v) >= 10 else f"{v:.1f}").replace("-", "−").replace(".", ",")
-            lab = f"≈ {vs} {visible(c.get('unit', ''), 'единица кривой')}".strip()
-            y = yv + 80 if yv + 80 < H - 460 else yv - 80
-            pill(min(xv + 30, tx1 - f_v.getlength(lab) - 30), y, lab, a, (xv, yv), fnt=f_v)
+        zc = (Lr["top"] + Lr["bottom"]) / 2
+        yc = min(max(ys(zc), R.y_top + 120), R.y_bot - 120)
+        fluid = Lr.get("fluid")
+        if fluid and fluid in st.get("fluids", {}) and a > 0:
+            size = 250
+            key = ("lens", hl["idx"])
+            if key not in R.__dict__.setdefault("_cache", {}):
+                R._cache[key] = _grains(size, hex_rgb(st["fluids"][fluid]["color"]),
+                                        mix(self.lith_color(Lr.get("lith")), (255, 255, 255), 0.15), 5 + hl["idx"], k)
+            lens = R._cache[key]
+            lb = label_bottom.get(hl["idx"], yc - 60)
+            cx_ = lab_x + size / 2 + 10
+            cy_ = min(max(lb + size / 2 + 16, R.y_top + size / 2), R.y_bot - size / 2 - 40)
+            r_ = size / 2 * (0.6 + 0.4 * a)
+            mask = Image.new("L", lens.size, 0)
+            mask.info["ssaa"] = k
+            SDraw_m = SDraw(mask)
+            SDraw_m.ellipse([size / 2 - r_, size / 2 - r_, size / 2 + r_, size / 2 + r_], fill=int(255 * a))
+            img.paste(lens, (int((cx_ - size / 2) * k), int((cy_ - size / 2) * k)), mask)
+            d.ellipse([cx_ - r_, cy_ - r_, cx_ + r_, cy_ + r_], outline=mix(bg, text, a), width=5)
+            d.line([(bcx + bhalf, ys(zc)), (cx_ - r_ * 0.7, cy_ - r_ * 0.7)], fill=mix(bg, text, a * 0.8), width=3)
+            tag = "УВЕЛИЧЕНО · СХЕМА"
+            fl = mono_font(20, True)
+            tw_ = fl.getlength(tag)
+            d.rounded_rectangle([cx_ - tw_ / 2 - 12, cy_ + r_ * 0.62, cx_ + tw_ / 2 + 12, cy_ + r_ * 0.62 + 32],
+                                radius=10, fill=mix(bg, bg, a))
+            d.text((cx_ - tw_ / 2, cy_ + r_ * 0.62 + 4), tag, font=fl, fill=mix(bg, text, a))
+            fname = st["fluids"][fluid].get("ru", fluid)
+            fb = font(36, True)
+            d.text((cx_ - fb.getlength(fname) / 2, cy_ - 22), fname, font=fb, fill=mix(bg, text, a),
+                   stroke_width=5, stroke_fill=bg)
+        elif a > 0:
+            nvis = sum(1 for c in self.curves if s["curves"][c["id"]]["visible"])
+            lb = label_bottom.get(hl["idx"], yc - 60)
+            y = min(max(lb + 14, R.y_top + 10), R.y_bot - 118 * nvis - 50)
+            for c in self.curves:
+                if not s["curves"][c["id"]]["visible"]:
+                    continue
+                v = self.value_at(c["id"], zc)
+                vs = (f"{v:.0f}" if abs(v) >= 10 else f"{v:.1f}").replace("-", "−").replace(".", ",")
+                word = _qual(_norm(self, c, v))
+                col = self.curve_color(c)
+                f1, f2 = mono_font(46, True), font(32, True)
+                l1 = f"≈ {vs} {visible(c.get('unit', ''), 'единица кривой')}"
+                l2 = f"{visible(c.get('label', ''), 'подпись кривой').lower()} · {word}"
+                wpx = max(f1.getlength(l1), f2.getlength(l2)) + 44
+                x0_ = lab_x
+                d.rounded_rectangle([x0_, y, x0_ + wpx, y + 104], radius=20, fill=mix(bg, panel, a))
+                d.rectangle([x0_, y + 14, x0_ + 7, y + 90], fill=mix(bg, col, a))
+                d.text((x0_ + 22, y + 8), l1, font=f1, fill=mix(bg, text, a))
+                d.text((x0_ + 22, y + 60), l2, font=f2, fill=mix(bg, col, a))
+                y += 118
+    # живое показание у прибора во время спуска (первая кривая)
+    if s.get("moving") and self.curves:
+        c = self.curves[0]
+        cs = s["curves"][c["id"]]
+        if cs["visible"]:
+            v = self.value_at(c["id"], s["tool"])
+            vs = (f"{v:.0f}" if abs(v) >= 10 else f"{v:.1f}").replace(".", ",")
+            lab = f"≈ {vs} {visible(c.get('unit', ''), 'единица кривой')}"
+            f1 = mono_font(40, True)
+            y = min(max(ty - 30, R.y_top + 10), R.y_bot - 70)
+            wpx = f1.getlength(lab) + 34
+            d.rounded_rectangle([lab_x, y, lab_x + wpx, y + 64], radius=32, fill=text)
+            d.text((lab_x + 17, y + 6), lab, font=f1, fill=bg)

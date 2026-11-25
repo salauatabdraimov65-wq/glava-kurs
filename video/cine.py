@@ -186,11 +186,11 @@ class CineRenderer:
         self.k = int(rs.get("ssaa", 2))
         self.fade = rs["fade_s"]
         # геометрия мира: интервал глубин занимает середину кадра в общем плане
-        self.y_top, self.y_bot = 610, 1250
+        self.y_top, self.y_bot = 600, 1290
         self.ppm = (self.y_bot - self.y_top) / (template.bottom - template.top)
-        self.zmax = float(rs.get("cine_follow_zoom", 1.5))
+        self.zmax = float(rs.get("cine_follow_zoom", 1.35))
         self.sec_w = int(self.W * 0.6)
-        self.track = (int(self.W * 0.62), self.W - self.safe[0] + 20)
+        self.track = (int(self.W * 0.58), self.W - self.safe[0] + 10)
         self.world = template.cine_world(self.ppm * self.zmax, self.sec_w * self.zmax, self.H, self.ppm, self)
         # состояния
         self.starts = []
@@ -199,10 +199,10 @@ class CineRenderer:
             s0 = template.begin_beat(s, seg.beat.action, seg.start)
             self.starts.append(s0)
             s = template.at(s0, seg.beat.action, 1.0)
-        f_sub = font(46, True)
+        f_sub = font(50, True)
         self.f_sub = f_sub
         self.subs = [subtitle_chunks(seg, f_sub, self.W - 2 * self.safe[0], max_lines=2) for seg in segs]
-        self.intro_dur = min(float(rs.get("intro_s", 2.6)) + 0.8, segs[0].dur * 0.75)
+        self.intro_dur = min(float(rs.get("intro_s", 2.2)), segs[0].dur * 0.6)
         self.cam_keys = self._camera_plan()
         self.L = type("L", (), {"W": self.W, "H": self.H})()
         self.scale_note = template.cine_scale_note(self)
@@ -234,47 +234,49 @@ class CineRenderer:
 
     # ------------------------------------------------------------ камера
     def _camera_plan(self):
-        """Ключи камеры по фразам: (zoom, режим). Прибор едет → наезд и сопровождение; рамки/ответ → общий план;
-        пауза → медленный наезд на трек; финал → общий план."""
-        keys = []
+        """Камера по ролям фраз: прибор едет → сопровождение; подсветка слоя → центр на слое с наездом;
+        викторина, рамка сравнения, финал → общий план; прочие фразы держат предыдущий план."""
+        keys, prev = [], (1.0, "wide", None)
+        last = len(self.segs) - 1
         for i, seg in enumerate(self.segs):
             a = seg.beat.action
-            if i == len(self.segs) - 1:
-                keys.append((1.0, "wide"))
-            elif not seg.beat.say and seg.beat.pause:
-                keys.append((1.12, "hold"))
+            if i == last or i == 0 or (not seg.beat.say and seg.beat.pause) or a.get("mark"):
+                key = (1.0, "wide", None)
             elif "tool_to" in a:
-                keys.append((self.zmax, "follow"))
-            elif a.get("mark") or a.get("readout") or a.get("show_curves"):
-                keys.append((1.0, "wide"))
+                key = (self.zmax, "follow", None)
+            elif a.get("highlight_layer") is not None:
+                key = (1.6, "layer", int(a["highlight_layer"]))
             else:
-                keys.append((1.06, "drift"))
+                key = prev
+            keys.append(key)
+            prev = key
         return keys
 
     def camera(self, t):
-        """(zoom, центр по глубине, скорость центра в px/с) — сглаженно между фразами."""
+        """(zoom, центр по глубине, скорость) — сглажено окном 0,9 с: плавные разгоны и торможения."""
+        mid = (self.tpl.top + self.tpl.bottom) / 2
+
         def raw(tt):
             i = self.seg_at(tt)
-            z, mode = self.cam_keys[i]
+            z, mode, li = self.cam_keys[i]
             s = self.state_at(i, tt)
-            mid = (self.tpl.top + self.tpl.bottom) / 2
             if mode == "follow":
                 cz = s["tool"]
-            elif mode in ("hold", "drift"):
-                cz = mid * 0.6 + s["tool"] * 0.4
+            elif mode == "layer" and li is not None and 0 <= li < len(self.tpl.layers):
+                L = self.tpl.layers[li]
+                cz = (L["top"] + L["bottom"]) / 2
             else:
                 cz = mid
             return z, cz
-        # сглаживание: среднее по окну 0,8 с (плавные разгоны/торможения без рывков на стыках)
-        win = [raw(max(0.0, min(self.total() - 1e-3, t + d))) for d in np.linspace(-0.4, 0.4, 9)]
-        z = float(np.mean([w[0] for w in win]))
-        cz = float(np.mean([w[1] for w in win]))
+        win = [raw(max(0.0, min(self.total() - 1e-3, t + dd))) for dd in np.linspace(-0.45, 0.45, 11)]
+        wts = np.hanning(13)[1:-1]
+        z = float(np.average([w[0] for w in win], weights=wts))
+        cz = float(np.average([w[1] for w in win], weights=wts))
         z2, cz2 = raw(max(0.0, min(self.total() - 1e-3, t + 0.05)))
         vel = abs(cz2 - cz) * self.ppm * z / 0.05
-        # не уводим интервал за пределы кадра
-        half_m = (self.H / 2) / (self.ppm * z)
-        lo, hi = self.tpl.top - 4, self.tpl.bottom + 4
-        cz = min(max(cz, lo + half_m * 0.35), hi - half_m * 0.35)
+        half_m = ((self.y_bot - self.y_top) / 2) / (self.ppm * z)
+        lo, hi = self.tpl.top + half_m, self.tpl.bottom - half_m
+        cz = min(max(cz, lo), hi) if lo < hi else mid
         return z, cz, vel
 
     def ys(self, z, cam):
@@ -297,9 +299,7 @@ class CineRenderer:
             img = self._intro(img, t)
             img.info["ssaa"] = k
         # пауза и финал — сцена приглушена и размыта
-        if not seg.beat.say and seg.beat.pause:
-            img = Image.blend(img, img.filter(ImageFilter.GaussianBlur(6 * k)), min(1, (t - seg.start) / 0.4))
-            img.info["ssaa"] = k
+        # пауза-викторина рисуется шаблоном (знаки «?» на пластах), сцену не размываем
         final = i == len(self.segs) - 1
         if final:
             u = min(1, (t - seg.start) / 0.6)
@@ -383,6 +383,8 @@ class CineRenderer:
         elif cap:
             same = i > 0 and plain(self.segs[i - 1].beat.on_screen) == plain(seg.beat.on_screen)
             toks = [(w.upper(), h) for w, h in caption_tokens(visible(seg.beat.on_screen, "заголовок"))]
+            if toks and not any(h for _, h in toks):
+                toks[-1] = (toks[-1][0], True)
             f, lines = fit(" ".join(w for w, _ in toks), x1 - x0, 118, 64, 3, fnt_fn=display_font)
             lh = int(line_h(f) * 0.9)
             y, n, ti = y0 + 46, 0, 0
@@ -414,7 +416,7 @@ class CineRenderer:
 
     def _legend(self, d, x, y):
         st = self.style
-        f = font(30, True)
+        f = font(34, True)
         vis = [c for c in self.tpl.curves]
         for c in vis:
             col = self.tpl.curve_color(c)

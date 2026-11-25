@@ -28,7 +28,7 @@ def out_dir_for(spec_path: Path) -> Path:
 
 
 def build(spec_path: str | Path, layouts=None, voice: str | None = None,
-          out: str | Path | None = None) -> dict:
+          out: str | Path | None = None, until: float | None = None, fps: int | None = None) -> dict:
     spec = load_spec(spec_path)
     if not layouts:
         asp = (spec.get("aspect") or "").replace(":", "x")
@@ -43,6 +43,9 @@ def build(spec_path: str | Path, layouts=None, voice: str | None = None,
 
     tpl = get_template(spec.template)(spec.params, style)
     segs, tl_info = build_timeline(spec, domain, engine=voice)
+    if until:  # отрывок для оценки: целые фразы, начавшиеся до until (фразу не режем посередине)
+        segs = [sg for sg in segs if sg.start < until]
+        segs[-1].dur += 0.8
 
     # рендереры раньше звука: эффекты привязаны к событиям кадра (движение прибора, рамки, смена сцен)
     renderers = {}
@@ -69,7 +72,7 @@ def build(spec_path: str | Path, layouts=None, voice: str | None = None,
                            "heard": False})
     raw_wav.unlink(missing_ok=True)
 
-    fps, crf = settings["render"]["fps"], settings["render"]["crf"]
+    fps, crf = fps or settings["render"]["fps"], settings["render"]["crf"]
     results, passport_frames, key_times, checks, notes = {}, [], [], [], {}
     for kind in layouts:
         r = renderers[kind]
@@ -114,13 +117,15 @@ def main(argv=None):
     ap.add_argument("--voice", choices=["edge", "silero"], default=None,
                     help="движок голоса (по умолчанию из video/settings.json)")
     ap.add_argument("-o", "--out", default=None, help="папка результата (по умолчанию рядом со spec)")
+    ap.add_argument("--until", type=float, default=None, help="собрать только первые N секунд (отрывок)")
+    ap.add_argument("--fps", type=int, default=None, help="кадров в секунду (по умолчанию из settings.json)")
     a = ap.parse_args(argv)
     if a.layout == "auto":
         asp = (json.loads(Path(a.spec).read_text(encoding="utf-8")).get("aspect") or "").replace(":", "x")
         layouts = (asp,) if asp in ("9x16", "16x9") else ("9x16", "16x9")
     else:
         layouts = ("9x16", "16x9") if a.layout == "both" else (a.layout,)
-    res = build(a.spec, layouts, a.voice, a.out)
+    res = build(a.spec, layouts, a.voice, a.out, a.until, a.fps)
     for k, v in res["videos"].items():
         print(f"{k}: {v}")
 
