@@ -65,9 +65,17 @@ SYS = """Ты сценарист учебных роликов. Пишешь с�
  "exaggerations":["что преувеличено и во сколько раз"],
  "prediction_question":"вопрос на предсказание с паузой до ответа","transfer_question":"вопрос на перенос в конце",
  "data_it_bridge":"как это выглядит в данных и что там ломается","terms_to_check":["термины и аббревиатуры для словаря ударений"]}}
-Правила:
-- Структура: крючок-вопрос в первые 3 секунды → пауза на предсказание (beat с pause_s 2–3) → механизм → ответ → вопрос на перенос.
-- Каждая фраза: до 15–18 слов, для уха: числа и формулы словами, аббревиатура раскрыта при первом упоминании.
+Правила подачи (зритель НИЧЕГО не знает о предмете и смотрит с телефона):
+- История, а не лекция: «проблема → что делают → как это называется». Термин звучит ПОСЛЕ того, как зритель понял, зачем он нужен.
+- Крючок в первые 3 секунды — ставки, а не определение: что пойдёт не так и чего это стоит («Скважину пробурили, а нефти нет. Почему прибор ошибся?»).
+- Говори с зрителем на «ты», просто и живо, как объясняешь другу-программисту. Одна мысль на фразу, 6–14 слов.
+- Одна бытовая аналогия на ролик (is_analogy: true) — и тут же, где она не работает.
+- НИКАКИХ формул, символов, индексов и «квадрат расстояния не больше…» в голосе: только смысл («чем дальше от скважины, тем позже доходит перепад давления»). Числа — круглые, словами, не больше 2–3 на ролик.
+- Структура: крючок → пауза на предсказание (beat без say с pause_s 2–3, on_screen — вопрос) → 3–5 шагов механизма, каждый с действием в кадре → ответ на крючок одной фразой → вопрос на перенос.
+- Если узел (или соседний) опровергает заблуждение — строй сцену-КОНТРАСТ: рядом случай, где заблуждение кажется верным, и ловушка, где оно ломается; зритель сам видит разницу.
+- В кадре не больше 2 кривых (well_tool_curve) и не больше 3–4 слоёв: экран телефона узкий.
+- on_screen — 1–3 слова, ключевое слово можно выделить *звёздочками*; не дублирует голос дословно.
+- Каждая фраза: до 15–18 слов, для уха: числа словами, аббревиатура раскрыта при первом упоминании.
 - Каждая содержательная фраза опирается на утверждение узла (claim_id) и не говорит больше него. Сохраняй условия автора.
 - Сумма слов всех say: {wmin}–{wmax}.
 - Числа в params: если в главе есть числа — бери их; иначе условные значения, и это записано в assumptions. Глубина растёт вниз.
@@ -78,7 +86,8 @@ SYS = """Ты сценарист учебных роликов. Пишешь с�
 {scales}"""
 
 
-def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_id: str | None = None) -> Path:
+def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_id: str | None = None,
+              with_nodes: list[str] | None = None, brief: str | None = None) -> Path:
     run = ROOT / "runs" / chapter
     layer = json.loads((run / "layer.json").read_text(encoding="utf-8"))
     node = next(n for n in layer["nodes"] if n["id"] == node_id)
@@ -99,10 +108,16 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
             f"Решение на данных: {json.dumps(node.get('decision_on_data'), ensure_ascii=False)}\n"
             f"Числа: {node.get('numbers')}\n\nУтверждения (id | стр. | текст | цитата):\n" +
             "\n".join(f'{c["id"]} | {c["page_pdf"]} | {c["text"]} | «{c["quote"]}»' for c in node["claims"]))
+    extra = [n for n in layer["nodes"] if n["id"] in (with_nodes or [])]
+    for n in extra:  # соседний узел, на который опирается та же история
+        user += f"\n\nУтверждения соседнего узла «{n['title']}» (на них тоже можно опираться):\n" + "\n".join(
+            f'{c["id"]} | {c["page_pdf"]} | {c["text"]} | «{c["quote"]}»' for c in n["claims"])
+    if brief:
+        user += f"\n\nБРИФ ОТ РЕДАКТОРА (главное — следуй ему, но не выходи за утверждения):\n{brief}"
     spec = ask_json(sys_p, user, tier="strong", tag=f"scene:{chapter}")
 
     # проверки кодом
-    ids = {c["id"] for c in node["claims"]}
+    ids = {c["id"] for c in node["claims"]} | {c["id"] for n in extra for c in n["claims"]}
     problems = []
     for b in spec.get("beats", []):
         if b.get("claim_id") and b["claim_id"] not in ids:
@@ -126,7 +141,14 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
         k = round(float(p["bore_width"]) / 0.2)
         note = f"ствол показан примерно в {k} раз шире реального (≈0,2 м)"
         spec.setdefault("exaggerations", []).append(note)
-        spec["plaque"] = (spec.get("plaque") or ["не в масштабе:"]) + [note]
+        pl = [x for x in (spec.get("plaque") or ["не в масштабе:"]) if "ствол" not in x]
+        spec["plaque"] = pl + [note]
+    for c in (p.get("curves") or []):   # широкий диапазон (сопротивление) — логарифмическая шкала, как на планшете
+        try:
+            if float(c.get("min", 0)) > 0 and float(c["max"]) / float(c["min"]) >= 50:
+                c["scale"] = "log"
+        except (KeyError, ValueError, ZeroDivisionError):
+            pass
     words = sum(len((b.get("say") or "").split()) for b in spec.get("beats", []))
     if not f["words"][0] <= words <= f["words"][1]:
         problems.append(f"слов {words}, нужно {f['words']}")
@@ -148,5 +170,7 @@ if __name__ == "__main__":
     ap.add_argument("chapter"); ap.add_argument("node_id")
     ap.add_argument("--format", default="short", choices=list(FORMATS))
     ap.add_argument("--template"); ap.add_argument("--video-id")
+    ap.add_argument("--brief", help="необязательный бриф редактора: какую историю рассказать")
+    ap.add_argument("--with", dest="with_nodes", nargs="*", help="id соседних узлов, чьи утверждения тоже можно использовать")
     a = ap.parse_args()
-    make_spec(a.chapter, a.node_id, a.format, a.template, a.video_id)
+    make_spec(a.chapter, a.node_id, a.format, a.template, a.video_id, a.with_nodes, a.brief)
