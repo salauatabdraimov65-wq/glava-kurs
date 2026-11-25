@@ -98,9 +98,16 @@ def font_path(name: str, bold: bool = False) -> str:
     return ""
 
 
+FONTS = VIDEO_DIR / "fonts"
+
+
 @lru_cache(maxsize=None)
-def font(size: int, bold: bool = False, name: str = "Segoe UI") -> ImageFont.FreeTypeFont:
-    p = font_path(name, bold)
+def font(size: int, bold: bool = False, name: str = "PT Sans") -> ImageFont.FreeTypeFont:
+    """Основной шрифт: PT Sans из video/fonts (одинаково на Mac и Windows), иначе системный."""
+    own = FONTS / ("PTSans-Bold.ttf" if bold else "PTSans-Regular.ttf")
+    if own.exists():
+        return ImageFont.truetype(str(own), size)
+    p = font_path("Segoe UI", bold)
     if not p:
         return ImageFont.load_default(size)
     return ImageFont.truetype(p, size)
@@ -108,8 +115,10 @@ def font(size: int, bold: bool = False, name: str = "Segoe UI") -> ImageFont.Fre
 
 @lru_cache(maxsize=None)
 def display_font(size: int) -> ImageFont.FreeTypeFont:
-    """Узкий жирный шрифт для заголовков (как в референсах): Bahnschrift (Windows), Arial Narrow (Mac),
-    иначе обычный жирный."""
+    """Узкий жирный шрифт для заголовков: PT Sans Narrow Bold из video/fonts; иначе Bahnschrift / Arial Narrow."""
+    own = FONTS / "PTSansNarrow-Bold.ttf"
+    if own.exists():
+        return ImageFont.truetype(str(own), size)
     win = Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts" / "bahnschrift.ttf"
     if win.exists():
         f = ImageFont.truetype(str(win), size)
@@ -127,3 +136,10 @@ def display_font(size: int) -> ImageFont.FreeTypeFont:
         if p.exists():
             return ImageFont.truetype(str(p), size)
     return font(size, True)
+
+
+@lru_cache(maxsize=None)
+def mono_font(size: int, bold: bool = True) -> ImageFont.FreeTypeFont:
+    """Цифры, теги, шкалы: JetBrains Mono из video/fonts."""
+    own = FONTS / ("JetBrainsMono-Bold.ttf" if bold else "JetBrainsMono-Regular.ttf")
+    return ImageFont.truetype(str(own), size) if own.exists() else font(size, bold)
