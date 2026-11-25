@@ -1,0 +1,278 @@
+{
+ "chapter": "drill_wiki_ru",
+ "illustrations": [
+  {
+   "id": "ill.well_and_drill_string",
+   "step_id": "drill.well_and_drill_string",
+   "node_id": "drill.well_and_drill_string",
+   "file": "illustrations/well_and_drill_string.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 1–2.",
+   "alt": "Схема механизма: Бурильные трубы соединяют замками в колонну и спускают в скважину. → Колонна подаёт к долоту гидравлическую и механическую энергию, создаёт осевую нагрузку и позволяет управлять траекторией.",
+   "source": "учебный слой, стр. 1, стр. 2",
+   "claim_ids": [
+    "drill.well_and_drill_string#c1",
+    "drill.well_and_drill_string#c2",
+    "drill.well_and_drill_string#c3",
+    "drill.well_and_drill_string#c4",
+    "drill.well_and_drill_string#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.early_drilling_history",
+   "step_id": "drill.early_drilling_history",
+   "node_id": "drill.early_drilling_history",
+   "file": "illustrations/early_drilling_history.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 1.",
+   "alt": "Схема механизма: Ударное бурение позволяло проходить породу; при бурении водяных и соляных скважин иногда находили нефть или газ. → Позже бурение применили целенаправленно для поиска и добычи нефти.",
+   "source": "учебный слой, стр. 1",
+   "claim_ids": [
+    "drill.early_drilling_history#c1",
+    "drill.early_drilling_history#c2",
+    "drill.early_drilling_history#c3",
+    "drill.early_drilling_history#c4",
+    "drill.early_drilling_history#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.deep_drilling_history",
+   "step_id": "drill.deep_drilling_history",
+   "node_id": "drill.deep_drilling_history",
+   "file": "illustrations/deep_drilling_history.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 1–2.",
+   "alt": "Схема механизма: Автор описывает историческую последовательность: в 1930 году скважина достигла 3 км, к концу 1950-х — 7 км, а Кольская сверхглубокая скважина — 12 262 м. → Причины роста глубины и технические механизмы этого роста в главе не объяснены.",
+   "source": "учебный слой, стр. 1, стр. 2",
+   "claim_ids": [
+    "drill.deep_drilling_history#c1",
+    "drill.deep_drilling_history#c2",
+    "drill.deep_drilling_history#c3",
+    "drill.deep_drilling_history#c4",
+    "drill.deep_drilling_history#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.well_purposes",
+   "step_id": "drill.well_purposes",
+   "node_id": "drill.well_purposes",
+   "file": "illustrations/well_purposes.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 2.",
+   "alt": "Схема механизма: Назначение задаёт действие скважины: нагнетательная закачивает воду, газ или пар, чтобы поддерживать пластовое давление или обрабатывать призабойную зону. → Эти меры направлены на удлинение фонтанной добычи или повышение эффективности добычи.",
+   "source": "учебный слой, стр. 2",
+   "claim_ids": [
+    "drill.well_purposes#c1",
+    "drill.well_purposes#c2",
+    "drill.well_purposes#c3",
+    "drill.well_purposes#c4",
+    "drill.well_purposes#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.mud_basic_functions",
+   "step_id": "drill.mud_basic_functions",
+   "node_id": "drill.mud_basic_functions",
+   "file": "illustrations/mud_basic_functions.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 3.",
+   "alt": "Схема механизма: Раствор циркулирует в скважине → вымывает выбуренную породу к поверхности. Его давление компенсирует пластовое давление, а образующаяся корка укрепляет стенки и отделяет породы от открытого ствола. Раствор также удерживает частицы во взвеси после остановки циркуляции и передаёт энергию двигателю и долоту",
+   "source": "учебный слой, стр. 3",
+   "claim_ids": [
+    "drill.mud_basic_functions#c1",
+    "drill.mud_basic_functions#c2",
+    "drill.mud_basic_functions#c3",
+    "drill.mud_basic_functions#c4",
+    "drill.mud_basic_functions#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.mud_protection_functions",
+   "step_id": "drill.mud_protection_functions",
+   "node_id": "drill.mud_protection_functions",
+   "file": "illustrations/mud_protection_functions.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 3.",
+   "alt": "Схема механизма: По главе, раствор предупреждает осыпи и обвалы, охлаждает и смазывает долото, защищает инструмент и помогает избежать осложнений. → Конкретные физические механизмы этих эффектов в главе не описаны.",
+   "source": "учебный слой, стр. 3",
+   "claim_ids": [
+    "drill.mud_protection_functions#c1",
+    "drill.mud_protection_functions#c2",
+    "drill.mud_protection_functions#c3",
+    "drill.mud_protection_functions#c4",
+    "drill.mud_protection_functions#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.mud_circulation_cycle",
+   "step_id": "drill.mud_circulation_cycle",
+   "node_id": "drill.mud_circulation_cycle",
+   "file": "illustrations/mud_circulation_cycle.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 4–5.",
+   "alt": "Схема процедуры: 1. Раствор замешивают и хранят в специальных ёмкостях.; 2. Насос подаёт раствор через бурильные трубы к забою.; 3. Раствор выносит частицы породы вверх по затрубу.; 4. Линия возврата направляет раствор на вибрационное сито.; 5. Сито отделяет шлам; раствор проходит через панель и возвращается в отстойник.; 6. Шлам направляют на удаление; часть частиц отбирают для исследования.",
+   "source": "учебный слой, стр. 4, стр. 5",
+   "claim_ids": [
+    "drill.mud_circulation_cycle#c1",
+    "drill.mud_circulation_cycle#c2",
+    "drill.mud_circulation_cycle#c3",
+    "drill.mud_circulation_cycle#c4",
+    "drill.mud_circulation_cycle#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.mud_types_selection",
+   "step_id": "drill.mud_types_selection",
+   "node_id": "drill.mud_types_selection",
+   "file": "illustrations/mud_types_selection.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 3–5.",
+   "alt": "Схема механизма: Хемогенные отложения → соленасыщенный глинистый раствор или гидрогель; риск осыпания стенок → ингибированный раствор. Высокая температура → термостойкий глинистый или углеводородный раствор; аномально высокое давление → утяжелённый раствор",
+   "source": "учебный слой, стр. 3, стр. 5",
+   "claim_ids": [
+    "drill.mud_types_selection#c1",
+    "drill.mud_types_selection#c2",
+    "drill.mud_types_selection#c3",
+    "drill.mud_types_selection#c4",
+    "drill.mud_types_selection#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.mud_properties_measurement",
+   "step_id": "drill.mud_properties_measurement",
+   "node_id": "drill.mud_properties_measurement",
+   "file": "illustrations/mud_properties_measurement.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 3–4.",
+   "alt": "Схема механизма: Геолого-технические условия → нужные свойства раствора → изменение соотношения дисперсной фазы и среды или добавление материалов и реагентов. Для водоотдачи измеряют объём фильтрата и толщину образовавшейся фильтрационной корки",
+   "source": "учебный слой, стр. 3, стр. 4",
+   "claim_ids": [
+    "drill.mud_properties_measurement#c1",
+    "drill.mud_properties_measurement#c2",
+    "drill.mud_properties_measurement#c3",
+    "drill.mud_properties_measurement#c4",
+    "drill.mud_properties_measurement#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.mud_property_control",
+   "step_id": "drill.mud_property_control",
+   "node_id": "drill.mud_property_control",
+   "file": "illustrations/mud_property_control.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 4.",
+   "alt": "Схема механизма: При аномально высоком пластовом давлении плотность увеличивают специальными утяжелителями, чтобы предупредить водонефтегазопроявления. → Плотность также можно уменьшить аэрацией или пенообразователями; твёрдую фазу регулируют очисткой и флокулянтами, газообразные агенты удаляют дегазатором.",
+   "source": "учебный слой, стр. 4",
+   "claim_ids": [
+    "drill.mud_property_control#c1",
+    "drill.mud_property_control#c2",
+    "drill.mud_property_control#c3",
+    "drill.mud_property_control#c4",
+    "drill.mud_property_control#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.clay_mud_preparation",
+   "step_id": "drill.clay_mud_preparation",
+   "node_id": "drill.clay_mud_preparation",
+   "file": "illustrations/clay_mud_preparation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 4.",
+   "alt": "Схема: признаки Выход раствора заданной вязкости из 1 т сырья, Плотность раствора, Содержание песка, Наличие гипса, растворимых солей и известняка; правило: Качество оценивают прежде всего по выходу раствора заданной вязкости; дополнительно регламентируют плотность и содержание песка. Указанные примеси ухудшают стабильность.; вывод: Сырьё характеризуют по выходу раствора и регламентируемым показателям; вредные примеси связаны с ухудшением стабильности.",
+   "source": "учебный слой, стр. 4",
+   "claim_ids": [
+    "drill.clay_mud_preparation#c1",
+    "drill.clay_mud_preparation#c2",
+    "drill.clay_mud_preparation#c3",
+    "drill.clay_mud_preparation#c4",
+    "drill.clay_mud_preparation#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.blowout_equipment_purpose",
+   "step_id": "drill.blowout_equipment_purpose",
+   "node_id": "drill.blowout_equipment_purpose",
+   "file": "illustrations/blowout_equipment_purpose.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 6.",
+   "alt": "Схема механизма: Герметизация устья позволяет вести работы при закрытой скважине. → Оборудование при этом обеспечивает спуск и подъём бурильных труб, циркуляцию раствора с регулируемым противодавлением на забой и дегазацией, а также управление гидроприводными частями.",
+   "source": "учебный слой, стр. 6",
+   "claim_ids": [
+    "drill.blowout_equipment_purpose#c1",
+    "drill.blowout_equipment_purpose#c2",
+    "drill.blowout_equipment_purpose#c3",
+    "drill.blowout_equipment_purpose#c4",
+    "drill.blowout_equipment_purpose#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.blowout_equipment_components",
+   "step_id": "drill.blowout_equipment_components",
+   "node_id": "drill.blowout_equipment_components",
+   "file": "illustrations/blowout_equipment_components.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 6.",
+   "alt": "Схема механизма: Устьевое оборудование устанавливают при строительстве, эксплуатации или ремонте скважины → оно выполняет функции, связанные с герметизацией устья. Линии дросселирования и глушения выполняют блоками → магистральные линии соединяют эти блоки с превенторным блоком",
+   "source": "учебный слой, стр. 6",
+   "claim_ids": [
+    "drill.blowout_equipment_components#c1",
+    "drill.blowout_equipment_components#c2",
+    "drill.blowout_equipment_components#c3",
+    "drill.blowout_equipment_components#c4",
+    "drill.blowout_equipment_components#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  }
+ ]
+}

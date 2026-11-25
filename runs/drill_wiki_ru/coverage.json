@@ -1,0 +1,860 @@
+{
+ "chapter": "drill_wiki_ru",
+ "rows": [
+  {
+   "unit_id": "p001.01",
+   "kind": "heading",
+   "page_pdf": 1,
+   "excerpt": "Бурение",
+   "node_ids": [
+    "drill.well_and_drill_string"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.02",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Бурение — процесс разрушения горных пород с помощью специальной техники — бурового",
+   "node_ids": [
+    "drill.well_and_drill_string"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.03",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Вертикальное бурение",
+   "node_ids": [],
+   "reason": "Название одного из видов бурения; самостоятельного пояснения или утверждения нет."
+  },
+  {
+   "unit_id": "p001.04",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Наклонно-направленное бурение",
+   "node_ids": [],
+   "reason": "Название одного из видов бурения; самостоятельного пояснения или утверждения нет."
+  },
+  {
+   "unit_id": "p001.05",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Горизонтальное бурение",
+   "node_ids": [],
+   "reason": "Название одного из видов бурения; самостоятельного пояснения или утверждения нет."
+  },
+  {
+   "unit_id": "p001.06",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Бурение скважин — это процесс сооружения направленной цилиндрической горной выработки в земле,",
+   "node_ids": [
+    "drill.well_and_drill_string"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.07",
+   "kind": "heading",
+   "page_pdf": 1,
+   "excerpt": "История бурения",
+   "node_ids": [
+    "drill.early_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.08",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "В работах философа Конфуция, которые были написаны в 600 г. до н.",
+   "node_ids": [
+    "drill.early_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.09",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "В России до середины XIX века нефть добывалась на Апшеронском полуострове из",
+   "node_ids": [
+    "drill.early_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.10",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "За пределами России первая нефтяная скважина была пробурена в 1859 году в",
+   "node_ids": [
+    "drill.early_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.11",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "В 1899 году в России был запатентован электробур. Это был электродвигатель, который",
+   "node_ids": [
+    "drill.deep_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.12",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "В 1930 году в Европе пробурили с земной поверхности скважину на глубину",
+   "node_ids": [
+    "drill.deep_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.13",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Бурение на море впервые было осуществлено в Тихом океане в 1897 г.",
+   "node_ids": [
+    "drill.deep_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.14",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "В 1970-е — 1990-е гг. пробурена Кольская сверхглубокая скважина (СГ-3) — самая",
+   "node_ids": [
+    "drill.deep_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.01",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "В 2020-е годы бурение на нефть и газ в Китае часто стало",
+   "node_ids": [
+    "drill.deep_drilling_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.02",
+   "kind": "heading",
+   "page_pdf": 2,
+   "excerpt": "Классификация скважин по назначению",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.03",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Скважины на нефть и газ, можно систематизировать следующим образом:",
+   "node_ids": [],
+   "reason": "Вводная фраза к последующему перечню классификации, сама не сообщает отдельного факта."
+  },
+  {
+   "unit_id": "p002.04",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "структурно-поисковые, назначение которых — установление (уточнение тектоники, стратиграфии, литологии, оценка продуктивности горизонтов)",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.05",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "разведочные, служащие для выявления продуктивных объектов, а также для оконтуривания уже разрабатываемых",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.06",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "добывающие (эксплуатационные), предназначенные для добычи нефти и газа из земных недр. К",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.07",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "нагнетательные, предназначенные для закачки в пласты воды, газа или пара с целью",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.08",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "опережающие добывающие, служащие для добычи нефти и газа с одновременным уточнением строения",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.09",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "оценочные, назначение которых — определение начальной нефтеводонасыщенности и остаточной нефтенасыщенности пласта (и",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.10",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "контрольные и наблюдательные, предназначенные для наблюдения за объектом разработки исследования характера продвижения",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.11",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "опорные скважины бурят для изучения геологического строения крупных регионов, чтобы установить общие",
+   "node_ids": [
+    "drill.well_purposes"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.12",
+   "kind": "heading",
+   "page_pdf": 2,
+   "excerpt": "Способы бурения",
+   "node_ids": [
+    "drill.well_and_drill_string"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.13",
+   "kind": "heading",
+   "page_pdf": 2,
+   "excerpt": "Буровое оборудование",
+   "node_ids": [
+    "drill.well_and_drill_string"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.14",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Буровая вышка",
+   "node_ids": [],
+   "reason": "Подпись-название элемента иллюстрации без утверждения о нём."
+  },
+  {
+   "unit_id": "p002.15",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Буровая установка",
+   "node_ids": [],
+   "reason": "Подпись-название элемента иллюстрации без утверждения о нём."
+  },
+  {
+   "unit_id": "p002.16",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Буровой станок",
+   "node_ids": [],
+   "reason": "Подпись-название элемента иллюстрации без утверждения о нём."
+  },
+  {
+   "unit_id": "p002.17",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Бурильная колонна представляет собой спущенную в скважину сборку из бурильных труб скреплённых",
+   "node_ids": [
+    "drill.well_and_drill_string"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.18",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Долото шарошечное",
+   "node_ids": [],
+   "reason": "Подпись-название элемента иллюстрации без утверждения о нём."
+  },
+  {
+   "unit_id": "p003.01",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Буровой раствор",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.02",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "Буровой раствор — сложная многокомпонентная дисперсная система суспензионных, эмульсионных и аэрированных жидкостей,",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.03",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "Использование буровых растворов для бурения скважин предложено впервые в 1833 году французским",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.04",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Назначение буровых растворов",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.05",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "компенсирует пластовое давление;",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.06",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "формирует фильтрационную корку на стенках скважины, укрепляя таким образом неустойчивые отложения. Уменьшает",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.07",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "транспортирует выбуренную породу из скважины и удерживает её во взвешенном состоянии после",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.08",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "передаёт гидравлическую энергию на забойный двигатель и долото;",
+   "node_ids": [
+    "drill.mud_basic_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.09",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "предупреждает осыпи, обвалы и др.;",
+   "node_ids": [
+    "drill.mud_protection_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.10",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "обеспечивает качественное вскрытие продуктивных пластов;",
+   "node_ids": [
+    "drill.mud_protection_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.11",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "обеспечивает смазывающее и антикоррозионное действие на буровой инструмент;",
+   "node_ids": [
+    "drill.mud_protection_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.12",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "охлаждает и смазывает долото;",
+   "node_ids": [
+    "drill.mud_protection_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.13",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "предотвращает возможность возникновения осложнений при бурении (дифференциальный прихват, поглощения, нефтегазопроявления и т.",
+   "node_ids": [
+    "drill.mud_protection_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.14",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "обеспечивает информацией о геологическом разрезе.",
+   "node_ids": [
+    "drill.mud_protection_functions"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.15",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Состав буровых растворов",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.16",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "В практике бурения применяют буровые растворы на водной (техническая вода, растворы солей",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.17",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "При бурении в хемогенных отложениях применяют соленасыщенные глинистые растворы, гидрогели, в случае",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.18",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "При бурении в условиях, характеризующихся аномально высокими давлениями, применяют утяжеленные буровые растворы,",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.19",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Свойства и их регулирование",
+   "node_ids": [
+    "drill.mud_properties_measurement"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.20",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "Эффективность применения буровых растворов зависит от их свойств, к которым относятся плотность,",
+   "node_ids": [
+    "drill.mud_properties_measurement"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.21",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "Водоотдача бурового раствора характеризуется объёмом фильтрата (от 2 до 10 см³), отделившегося",
+   "node_ids": [
+    "drill.mud_properties_measurement"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.01",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Содержание твёрдой фазы в буровом растворе характеризует концентрацию глины (3—15 %) и",
+   "node_ids": [
+    "drill.mud_properties_measurement",
+    "drill.mud_property_control"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.02",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Особый класс реагентов применяют при регулировании свойств растворов на углеводородной основе. К",
+   "node_ids": [
+    "drill.mud_property_control"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.03",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Готовят буровые растворы непосредственно перед бурением и в его процессе.",
+   "node_ids": [
+    "drill.clay_mud_preparation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.04",
+   "kind": "heading",
+   "page_pdf": 4,
+   "excerpt": "Сырьё",
+   "node_ids": [
+    "drill.clay_mud_preparation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.05",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Для приготовления буровых растворов используются тонкодисперсные, пластические глины с минимальным содержанием песка,",
+   "node_ids": [
+    "drill.clay_mud_preparation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.06",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Вредными примесями в глинах, ухудшающими стабильность глинистых растворов, являются гипс, растворимые соли,",
+   "node_ids": [
+    "drill.clay_mud_preparation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.07",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Согласно техническим условиям (ТУ У 39-688-81) основным показателем качества глинистого сырья и",
+   "node_ids": [
+    "drill.clay_mud_preparation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.08",
+   "kind": "heading",
+   "page_pdf": 4,
+   "excerpt": "Обращение бурового раствора в скважине",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.09",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Большинство буровых растворов при буровых операциях циркулирует по следующему циклу:",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.10",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Буровой раствор замешивается и хранится в специальных ёмкостях.",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.11",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Буровой насос перекачивает буровой раствор из ёмкости через колонну бурильных труб в",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.12",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Буровой раствор по трубам доходит до забоя скважины, где буровое долото разбуривает",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.13",
+   "kind": "paragraph",
+   "page_pdf": 4,
+   "excerpt": "Затем буровой раствор начинает возвращаться на поверхность, вынося при этом частицы породы",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.01",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Буровой раствор поднимается по затрубу — кольцевому пространству между стенками скважины и",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.02",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "На поверхности буровой раствор проходит через линию возврата — трубу, которая ведёт",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.03",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Сито состоит из ряда вибрирующих металлических ситовых панелей, которые используются для отделения",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.04",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Частицы шлама попадают в жёлоб для удаления. Перед выбросом они могут быть",
+   "node_ids": [
+    "drill.mud_circulation_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.05",
+   "kind": "heading",
+   "page_pdf": 5,
+   "excerpt": "Разновидности",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.06",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Раствор буровой лигнитовый щелочной — буровой раствор, в который вводят определенное количество",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.07",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Раствор известково-битумный — буровой раствор на нефтяной основе, дисперсионной средой которого является",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.08",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Раствор облегчённый — буровой раствор, уменьшенный в весе, облегчённый, который имеет меньшую",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.09",
+   "kind": "paragraph",
+   "page_pdf": 5,
+   "excerpt": "Раствор полимерный — буровой раствор на водной основе, который содержит высокомолекулярные полимеры",
+   "node_ids": [
+    "drill.mud_types_selection"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.01",
+   "kind": "heading",
+   "page_pdf": 6,
+   "excerpt": "Противовыбросовое оборудование",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.02",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Противовыбросовое оборудование — комплекс оборудования, предназначенный для герметизации устья нефтяных и газовых",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.03",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Противовыбросовое оборудование обеспечивает проведение следующих работ:",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.04",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Герметизация скважины;",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.05",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Спуск-подъём колонн бурильных труб при герметизированном устье;",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.06",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Циркуляция бурильного раствора с созданием регулируемого противодавления на забой и его дегазацией;",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.07",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Оперативное управление гидроприводными составными частями оборудования.",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.08",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Противовыбросовое оборудование не следует путать с устьевым оборудованием. Последнее является гораздо более",
+   "node_ids": [
+    "drill.blowout_equipment_purpose"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.09",
+   "kind": "heading",
+   "page_pdf": 6,
+   "excerpt": "Составные части",
+   "node_ids": [
+    "drill.blowout_equipment_components"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.10",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Противовыбросовое оборудование включает устьевое оборудование, манифольд и систему управления.",
+   "node_ids": [
+    "drill.blowout_equipment_components"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.11",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Устьевое оборудование — совокупность технических средств, устанавливаемых на устье скважины нефтяной или",
+   "node_ids": [
+    "drill.blowout_equipment_components"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.12",
+   "kind": "paragraph",
+   "page_pdf": 6,
+   "excerpt": "Манифольд — система трубопроводов, соединенных по определенной схеме и снабженных необходимой арматурой.",
+   "node_ids": [
+    "drill.blowout_equipment_components"
+   ],
+   "reason": null
+  }
+ ]
+}

@@ -135,6 +135,19 @@
       "lang": "ru",
       "domain": "geology",
       "title": "Репетиция: Басниев, гл. XXI, стр. 442–456"
+    },
+    "drill_wiki_ru": {
+      "split": "rehearsal",
+      "md": "samples/rehearsals/drilling_ru_wiki.md",
+      "lang": "ru",
+      "domain": "drilling",
+      "pages": [
+        [
+          1,
+          6
+        ]
+      ],
+      "title": "Репетиция сдвига домена: бурение (русская Википедия, CC BY-SA)"
     }
   }
 }

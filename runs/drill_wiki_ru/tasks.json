@@ -1,0 +1,821 @@
+{
+ "chapter": "drill_wiki_ru",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.well_and_drill_string#c3"
+   ],
+   "prompt": "Как называются начало скважины на поверхности и её дно?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Начало — устье, дно — забой.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Начало — забой, дно — устье.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Начало — ствол, дно — устье.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Начало — ствол, дно — забой.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Начало скважины называется устьем, а дно — забоем (стр. 1).",
+   "step_id": "drill.well_and_drill_string",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.well_and_drill_string#c4",
+    "drill.well_and_drill_string#c5"
+   ],
+   "prompt": "Какие утверждения о бурильной колонне верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Она собрана из соединённых бурильными замками труб и спущена в скважину.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Она подаёт к долоту гидравлическую и механическую энергию.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Она создаёт осевую нагрузку на долото и позволяет управлять траекторией скважины.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Она представляет собой направленную цилиндрическую выработку в земле.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Она остаётся над скважиной как буровая вышка.",
+     "misconception": "misc.rig_stays"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Колонна состоит из соединённых труб, передаёт энергию долоту, создаёт осевую нагрузку и помогает управлять траекторией (стр. 2).",
+   "step_id": "drill.well_and_drill_string",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.early_drilling_history#c4"
+   ],
+   "prompt": "14 июля 1848 года в {{1}} пробурили первую в мире нефтяную скважину ударным способом с {{2}}.",
+   "options": [],
+   "answer": [
+    "Биби-Эйбате",
+    "деревянными штангами"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указаны место и способ бурения первой в мире нефтяной скважины (стр. 1).",
+   "step_id": "drill.early_drilling_history",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.early_drilling_history#c1",
+    "drill.early_drilling_history#c3",
+    "drill.early_drilling_history#c4",
+    "drill.early_drilling_history#c5"
+   ],
+   "prompt": "Расположите события в хронологическом порядке, от самого раннего к самому позднему.",
+   "options": [
+    {
+     "id": "a",
+     "text": "В 1859 году Дрейк пробурил нефтяную скважину возле Тайтусвиля.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В сочинениях Конфуция описаны китайские скважины, сооружавшиеся ударным бурением.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "До середины XIX века в России нефть добывали из колодцев на Апшеронском полуострове.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В 1848 году в Биби-Эйбате пробурили первую в мире нефтяную скважину.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "d",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала идут китайские скважины, затем добыча нефти из колодцев, скважина 1848 года и скважина Дрейка 1859 года (стр. 1).",
+   "step_id": "drill.early_drilling_history",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.deep_drilling_history#c2"
+   ],
+   "prompt": "Когда пробурили первую скважину современной конструкцией электробура?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В 1938 году",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В 1940 году",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "В 1899 году",
+     "misconception": null
+    }
+   ],
+   "answer": "b",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Современную конструкцию разработали в 1938 году, а первую скважину пробурили через два года — в 1940-м (стр. 1).",
+   "step_id": "drill.deep_drilling_history",
+   "id": "t05"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.deep_drilling_history#c9"
+   ],
+   "prompt": "Сколько скважин глубже 8 км насчитывалось к 2025 году в Таримском бассейне?",
+   "options": [
+    {
+     "id": "a",
+     "text": "191",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "91",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "291",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "К 2025 году в Таримском бассейне насчитывалась 191 скважина глубже 8 км (стр. 2).",
+   "step_id": "drill.deep_drilling_history",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.well_purposes#c4",
+    "drill.well_purposes#c8",
+    "drill.well_purposes#c7",
+    "drill.well_purposes#c9"
+   ],
+   "prompt": "Выберите верные утверждения о назначении скважин.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Нагнетательные скважины закачивают в пласты воду, газ или пар, чтобы поддерживать пластовое давление или обрабатывать призабойную зону.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Контрольные и наблюдательные скважины используют для наблюдения за объектом разработки, продвижением пластовых флюидов и изменением газонефтенасыщенности пласта.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Оценочные скважины изучают геологическое строение крупных регионов и закономерности залегания пород.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Опорные скважины определяют начальную и остаточную нефтенасыщенность пласта.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Нагнетательные скважины закачивают жидкости или газ, а контрольные и наблюдательные служат для наблюдения за разработкой (стр. 2).",
+   "step_id": "drill.well_purposes",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.well_purposes#c6"
+   ],
+   "prompt": "Опережающие добывающие скважины добывают нефть и газ, одновременно {{1}} строение продуктивного пласта.",
+   "options": [],
+   "answer": [
+    "уточняя"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Опережающие добывающие скважины одновременно добывают нефть и газ и уточняют строение пласта (стр. 2).",
+   "step_id": "drill.well_purposes",
+   "id": "t08"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.mud_basic_functions#c3",
+    "drill.mud_basic_functions#c7"
+   ],
+   "prompt": "Расположите этапы работы бурового раствора с выбуренной породой в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Раствор вымывает шлам на поверхность между буровой штангой и стенкой скважины"
+    },
+    {
+     "id": "b",
+     "text": "Раствор удерживает шлам во взвеси после остановки циркуляции"
+    },
+    {
+     "id": "c",
+     "text": "Раствор выносит выбуренную породу из скважины"
+    }
+   ],
+   "answer": [
+    "c",
+    "b",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Раствор сначала выносит породу из скважины, может удерживать её во взвеси после остановки циркуляции, а принцип Фовелля описывает вымывание шлама на поверхность (стр. 3).",
+   "step_id": "drill.mud_basic_functions",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_basic_functions#c4",
+    "drill.mud_basic_functions#c5",
+    "drill.mud_basic_functions#c6",
+    "drill.mud_basic_functions#c7",
+    "drill.mud_basic_functions#c8"
+   ],
+   "prompt": "Какое утверждение о функциях бурового раствора верно?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Он компенсирует пластовое давление, формирует фильтрационную корку и передаёт гидравлическую энергию забойному двигателю и долоту.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Он нужен только для охлаждения долота и выноса шлама.",
+     "misconception": "misc.mud_only_cools"
+    },
+    {
+     "id": "c",
+     "text": "Он только выносит шлам и не удерживает его после остановки циркуляции.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Он формирует фильтрационную корку, которая усиливает воздействие фильтрата на породы.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Буровой раствор выполняет перечисленные функции, а фильтрационная корка уменьшает воздействие фильтрата на породы (стр. 3).",
+   "step_id": "drill.mud_basic_functions",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_protection_functions#c3",
+    "drill.mud_protection_functions#c4"
+   ],
+   "prompt": "Какие действия буровой раствор оказывает на буровой инструмент и долото? Выберите все верные варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Оказывает смазывающее и антикоррозионное действие на буровой инструмент.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Охлаждает и смазывает долото.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Предупреждает осыпи и обвалы.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Обеспечивает информацией о геологическом разрезе.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Буровой раствор смазывает и защищает инструмент от коррозии, а также охлаждает и смазывает долото (стр. 3).",
+   "step_id": "drill.mud_protection_functions",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_protection_functions#c4"
+   ],
+   "prompt": "Буровой раствор {{1}} долото.",
+   "options": [],
+   "answer": [
+    "охлаждает и смазывает"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Буровой раствор охлаждает и смазывает долото (стр. 3).",
+   "step_id": "drill.mud_protection_functions",
+   "id": "t12"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.mud_circulation_cycle#c2",
+    "drill.mud_circulation_cycle#c3",
+    "drill.mud_circulation_cycle#c4",
+    "drill.mud_circulation_cycle#c5",
+    "drill.mud_circulation_cycle#c7",
+    "drill.mud_circulation_cycle#c8"
+   ],
+   "prompt": "Расположите этапы циркуляции и очистки раствора в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Раствор замешивают и хранят в специальных ёмкостях."
+    },
+    {
+     "id": "b",
+     "text": "Насос перекачивает раствор через бурильную колонну в скважину."
+    },
+    {
+     "id": "c",
+     "text": "Раствор идёт к забою, где долото разбуривает породу."
+    },
+    {
+     "id": "d",
+     "text": "Раствор возвращается на поверхность с частицами породы и направляется к вибрационному ситу."
+    },
+    {
+     "id": "e",
+     "text": "Сито отделяет шлам, а раствор проходит через панель и возвращается в отстойник."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Раствор проходит эти этапы последовательно — от ёмкостей через скважину к ситу и отстойнику (стр. 4–5).",
+   "step_id": "drill.mud_circulation_cycle",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_circulation_cycle#c6"
+   ],
+   "prompt": "По какому пути раствор поднимается на поверхность из скважины?",
+   "options": [
+    {
+     "id": "a",
+     "text": "По затрубному кольцевому пространству между стенками скважины и бурильной трубой.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Внутри бурильной трубы, в направлении от забоя к поверхности.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "По отдельному каналу внутри долота, не проходя между трубой и стенками скважины.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "На поверхность раствор поднимается по затрубному кольцевому пространству (стр. 5).",
+   "step_id": "drill.mud_circulation_cycle",
+   "id": "t14"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_types_selection#c3"
+   ],
+   "prompt": "При возможном осыпании и оползнях стенок скважины применяют {{1}}.",
+   "options": [],
+   "answer": [
+    "ингибированные растворы"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для предотвращения осыпания и оползней стенок скважины применяют ингибированные растворы (стр. 3).",
+   "step_id": "drill.mud_types_selection",
+   "id": "t15"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.mud_types_selection#c2",
+    "drill.mud_types_selection#c4",
+    "drill.mud_types_selection#c6"
+   ],
+   "prompt": "Какие сочетания условий бурения и применяемых растворов указаны верно?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В хемогенных отложениях применяют соленасыщенные глинистые растворы и гидрогели.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "При высоких температурах применяют термостойкие глинистые растворы и растворы на углеводородной основе.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При аномально высоких давлениях применяют утяжелённые буровые растворы.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В хемогенных отложениях применяют только техническую воду.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "При аномально высоких давлениях применяют облегчённые растворы.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для хемогенных отложений, высоких температур и аномально высоких давлений указаны соответственно варианты a, b и c (стр. 3).",
+   "step_id": "drill.mud_types_selection",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_properties_measurement#c2"
+   ],
+   "prompt": "Водоотдачу характеризуют объёмом фильтрата, отделившегося за {{1}} через стандартную фильтровальную поверхность при перепаде давления около {{2}}.",
+   "options": [],
+   "answer": [
+    "30 минут",
+    "100 кПа"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указаны 30 минут и перепад давления около 100 кПа (стр. 3).",
+   "step_id": "drill.mud_properties_measurement",
+   "id": "t17"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.mud_properties_measurement#c5"
+   ],
+   "prompt": "Расположите элементы в том порядке, в котором они описаны при регулировании свойств раствора.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Учесть геолого-технические условия"
+    },
+    {
+     "id": "b",
+     "text": "Изменить соотношение дисперсной фазы и среды"
+    },
+    {
+     "id": "c",
+     "text": "Ввести специальные материалы и реагенты"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала учитывают геолого-технические условия, затем изменяют соотношение фаз и вводят материалы и реагенты (стр. 4).",
+   "step_id": "drill.mud_properties_measurement",
+   "id": "t18"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.mud_property_control#c1"
+   ],
+   "prompt": "Что делают с плотностью раствора при аномально высоком пластовом давлении, чтобы предупредить водонефтегазопроявления?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Повышают",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Снижают",
+     "misconception": "misc.heavier_mud_always_safer"
+    },
+    {
+     "id": "c",
+     "text": "Оставляют неизменной",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При аномально высоком пластовом давлении плотность раствора повышают, чтобы предупредить водонефтегазопроявления (стр. 4).",
+   "step_id": "drill.mud_property_control",
+   "id": "t19"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.mud_property_control#c4",
+    "drill.mud_property_control#c5",
+    "drill.mud_property_control#c6",
+    "drill.mud_property_control#c7"
+   ],
+   "prompt": "Какие способы и реагенты используют для регулирования свойств раствора? Выберите все верные варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Твёрдую фазу регулируют трёхступенчатой системой очистки на вибрационных ситах",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Газообразные агенты отделяют в дегазаторе",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Для регулирования содержания твёрдой фазы вводят селективные флокулянты",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В растворы на углеводородной основе вводят только утяжелители",
+     "misconception": "misc.mud_only_cools"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Твёрдую фазу очищают и регулируют указанными способами, а газообразные агенты отделяют в дегазаторе (стр. 4).",
+   "step_id": "drill.mud_property_control",
+   "id": "t20"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.clay_mud_preparation#c2"
+   ],
+   "prompt": "Для приготовления растворов используют {{1}} с минимумом песка, образующие с водой {{2}}, долго не оседающую суспензию.",
+   "options": [],
+   "answer": [
+    "тонкодисперсные пластические глины",
+    "вязкую"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Такие глины образуют с водой вязкую, долго не оседающую суспензию (стр. 4).",
+   "step_id": "drill.clay_mud_preparation",
+   "id": "t21"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.clay_mud_preparation#c5"
+   ],
+   "prompt": "Основной показатель качества глинистого сырья и глинопорошков — выход раствора заданной вязкости из одной тонны сырья, выраженный в {{1}}.",
+   "options": [],
+   "answer": [
+    "кубометрах"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Выход раствора заданной вязкости выражают в кубометрах (стр. 4).",
+   "step_id": "drill.clay_mud_preparation",
+   "id": "t22"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "drill.blowout_equipment_purpose#c7",
+    "drill.blowout_equipment_purpose#c8"
+   ],
+   "prompt": "Как соотносятся противовыбросовое и устьевое оборудование?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Устьевое оборудование шире; часть его входит в состав противовыбросового.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Противовыбросовое оборудование шире и включает всё оборудование, устанавливаемое на устье.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Это два названия одного и того же оборудования.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Противовыбросовое оборудование не устанавливается на устье скважины.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Устьевое оборудование охватывает любое оборудование на устье, а часть его входит в состав противовыбросового (стр. 6).",
+   "step_id": "drill.blowout_equipment_purpose",
+   "id": "t23"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.blowout_equipment_purpose#c4"
+   ],
+   "prompt": "Оборудование обеспечивает {{1}} и {{2}} колонн бурильных труб при герметизированном устье.",
+   "options": [],
+   "answer": [
+    "спуск",
+    "подъём"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При герметизированном устье оборудование обеспечивает спуск и подъём колонн бурильных труб (стр. 6).",
+   "step_id": "drill.blowout_equipment_purpose",
+   "id": "t24"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.blowout_equipment_components#c1",
+    "drill.blowout_equipment_components#c4",
+    "drill.blowout_equipment_components#c5"
+   ],
+   "prompt": "Выберите верные утверждения об оборудовании и манифольде.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Противовыбросовое оборудование включает устьевое оборудование, манифольд и систему управления.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Манифольд — это система трубопроводов, соединённых по определённой схеме и снабжённых необходимой арматурой.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Манифольд включает линии дросселирования и глушения, соединённые магистральными линиями с превенторным блоком.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Противовыбросовое оборудование состоит только из устьевого оборудования и манифольда.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Линии дросселирования и глушения соединяются магистральными линиями с системой управления.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В составе оборудования названы устьевое оборудование, манифольд и система управления, а линии манифольда соединяются с превенторным блоком (стр. 6).",
+   "step_id": "drill.blowout_equipment_components",
+   "id": "t25"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "drill.blowout_equipment_components#c4"
+   ],
+   "prompt": "Манифольд — это система {{1}}, соединённых по определённой схеме и снабжённых необходимой {{2}}.",
+   "options": [],
+   "answer": [
+    "трубопроводов",
+    "арматурой"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении манифольд определён как система трубопроводов, снабжённых необходимой арматурой (стр. 6).",
+   "step_id": "drill.blowout_equipment_components",
+   "id": "t26"
+  }
+ ]
+}
