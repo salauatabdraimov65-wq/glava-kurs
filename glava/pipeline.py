@@ -7,7 +7,7 @@
     uv run python -m glava.pipeline <chapter_id> --video-node <node_id>  # ролик на назначенный организаторами узел
     uv run python -m glava.pipeline <chapter_id> --no-video              # без рендера ролика (быстро)
 
-Этапы: layer, recall (полнота по идеям + добор), review (самопроверка + исправления), illustrate, scene, course, video. Каждый этап пишет строку в metrics.csv.
+Этапы: layer, recall (полнота по идеям + добор), review (самопроверка + исправления), illustrate, scene, video, course (курс последним — в него встраивается собранный ролик). Каждый этап пишет строку в metrics.csv.
 Модули других треков (course, video) подключаются, если они есть в репозитории.
 """
 from __future__ import annotations
@@ -24,7 +24,7 @@ from pathlib import Path
 from glava.chapter import ROOT, chapters_config
 from glava.llm import LEDGER, spent_usd
 
-STAGES = ["layer", "recall", "review", "illustrate", "scene", "course", "video"]
+STAGES = ["layer", "recall", "review", "illustrate", "scene", "video", "course"]
 
 
 def tokens_since(n_lines: int) -> tuple[int, int]:
@@ -68,7 +68,7 @@ def pick_video_node(run_dir: Path) -> tuple[str, str, str]:
     routes = json.loads((run_dir / "routing.json").read_text(encoding="utf-8"))["routes"]
     cand = [r for r in routes if r.get("template")] or routes
     best = max(cand, key=lambda r: sum(r["video_scores"].values()))
-    fmt = "short" if best["format"] == "шортс" else "long"
+    fmt = "short" if best["format"] == "шортс" or best.get("video_candidate") else "long"
     return best["node_id"], fmt, best.get("template") or "well_tool_curve"
 
 
@@ -139,6 +139,7 @@ def main():
             run(cmd)
         elif st == "course":
             if has("course.build"):
+                run(["layer.route", a.chapter])   # формат шага — по тому, что реально собрано (ролик есть / нет)
                 run(["course.build", str(run_dir)])
             else:
                 print("(course.build ещё нет в репозитории — пропуск)")
