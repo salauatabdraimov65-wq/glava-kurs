@@ -99,7 +99,9 @@ class PressureDiffusion:
             self.A = float(p.get("dp_MPa", 1.0))
         self.t_min = self.times[0] / 10
         self.t_max = self.times[-1] * 3
-        self.r = np.linspace(self.rw, self.xmax, 400)
+        # радиальный приток: воронка давления — у самой скважины; на линейной оси её не видно → логарифм радиуса
+        self.rlog = bool(p.get("r_log", self.geom == "radial" and self.xmax / max(self.rw, 1e-6) >= 100))
+        self.r = np.geomspace(max(self.rw, 1e-3), self.xmax, 400) if self.rlog else np.linspace(self.rw, self.xmax, 400)
         self.views = list(p.get("views") or ["map", "profile", "bottomhole_vs_log_t"])
         dp_max = float(self.dp(np.array([max(self.rw, 1e-3)]), self.t_max)[0])
         self.p_lo = self.p0 - dp_max * 1.08
@@ -200,7 +202,12 @@ class PressureDiffusion:
 
     def _xy_profile(self, pr, r, p):
         X0, Y0, X1, Y1 = pr
-        return X0 + (r - self.rw) / (self.xmax - self.rw) * (X1 - X0), Y1 - (p - self.p_lo) / (self.p0 - self.p_lo) * (Y1 - Y0)
+        if self.rlog:
+            a, b = math.log10(max(self.rw, 1e-3)), math.log10(self.xmax)
+            u = (math.log10(max(float(r), 1e-3)) - a) / (b - a)
+        else:
+            u = (r - self.rw) / (self.xmax - self.rw)
+        return X0 + u * (X1 - X0), Y1 - (p - self.p_lo) / (self.p0 - self.p_lo) * (Y1 - Y0)
 
     def _xy_bh(self, pr, lt, p):
         X0, Y0, X1, Y1 = pr
@@ -244,10 +251,19 @@ class PressureDiffusion:
             d.text((pb[0] + 18, pb[1] + 12), ls[0], font=fs, fill=text)
             pr = self._plot_rect(pb)
             if v == "profile":
-                nt = 5 if pr[2] - pr[0] > 500 else 3
-                xt = [(self._xy_profile(pr, x, self.p0)[0], fmt_num(x, 1)) for x in np.linspace(0, self.xmax, nt)]
+                if self.rlog:
+                    lo = math.ceil(math.log10(max(self.rw, 1e-3)) - 1e-9)
+                    xs = [10.0 ** e for e in range(lo, int(math.floor(math.log10(self.xmax))) + 1)]
+                    if pr[2] - pr[0] < 400 and len(xs) > 4:
+                        xs = xs[::2]
+                    xt = [(self._xy_profile(pr, x, self.p0)[0], fmt_num(x, 1)) for x in xs]
+                    xlab = "м от скважины, лог. шкала"
+                else:
+                    nt = 5 if pr[2] - pr[0] > 500 else 3
+                    xt = [(self._xy_profile(pr, x, self.p0)[0], fmt_num(x, 1)) for x in np.linspace(0, self.xmax, nt)]
+                    xlab = "м от скважины"
                 yt = self._yticks(lambda p: self._xy_profile(pr, self.rw, p)[1], pr)
-                self._axes(d, pr, "м от скважины", "МПа", xt, yt, muted, grid)
+                self._axes(d, pr, xlab, "МПа", xt, yt, muted, grid)
             elif v == "bottomhole_vs_log_t":
                 xt = []
                 es = list(range(math.ceil(self.lt[0]), math.floor(self.lt[-1]) + 1))
@@ -296,9 +312,10 @@ class PressureDiffusion:
                     pts = [self._xy_profile(pr, r, p) for r, p in zip(self.r, self.pressure(self.r, tf))]
                     col = self._tcolor(i, len(frozen))
                     dashed_polyline(d, pts, fill=col, width=4, dash=14, gap=9)
-                    lx, ly = pts[int(len(pts) * (0.30 + 0.22 * i))]   # подписи моментов — вразбежку
+                    lx, ly = pts[min(len(pts) - 1, int(len(pts) * (0.18 + 0.24 * i)))]   # подписи моментов — вразбежку
                     lab = fmt_time(tf)
-                    d.text((lx + 6, ly + 8 + i * 4), lab, font=font(34), fill=col)
+                    fl_ = font(32, True)
+                    d.text((lx + 6, ly + 12 + i * (line_h(fl_) - 6)), lab, font=fl_, fill=col, stroke_width=5, stroke_fill=bg)
                 pts = [self._xy_profile(pr, r, p) for r, p in zip(self.r, self.pressure(self.r, tm))]
                 d.line(pts, fill=accent, width=7, joint="curve")
                 for m in s["marks"]:
@@ -307,7 +324,8 @@ class PressureDiffusion:
                     col = mix(bg, meas, a)
                     dashed_polyline(d, [(x, pr[1]), (x, pr[3])], fill=col, width=4, dash=12, gap=8)
                     lab = f"{fmt_num(m['x'], 1)} м"
-                    d.text((x + 8, pr[1] + 6), lab, font=f, fill=col)
+                    lx = x + 8 if x + 8 + f.getlength(lab) <= pr[2] - 4 else x - 8 - f.getlength(lab)   # не за край графика
+                    d.text((lx, pr[1] + 6), lab, font=f, fill=col, stroke_width=5, stroke_fill=bg)
             elif v == "bottomhole_vs_log_t":
                 lt_now = math.log10(max(tm, self.t_min))
                 k = max(2, int(np.searchsorted(self.lt, lt_now)))
