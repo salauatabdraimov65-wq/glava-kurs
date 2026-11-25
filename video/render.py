@@ -111,6 +111,49 @@ def mix_audio(segs: list[Segment]) -> np.ndarray:
     return out[: int(round(total * tts.SR))]
 
 
+def sfx_track(segs: list[Segment], n: int, gain_db: float = -24.0) -> np.ndarray:
+    """Тихие процедурные звуки на событиях кадра (без внешних файлов): смена подписи — короткий шорох,
+    рамка — мягкий щелчок, начало движения прибора — низкий «тук». Под голосом, речь не маскируют."""
+    sr = tts.SR
+    out = np.zeros(n, dtype=np.float32)
+    rng = np.random.default_rng(7)
+
+    def put(t, sig):
+        i = int(t * sr)
+        j = min(n, i + len(sig))
+        if i < n:
+            out[i:j] += sig[: j - i]
+
+    def tick(f=1400.0, d=0.07):
+        tt = np.arange(int(d * sr)) / sr
+        return np.sin(2 * np.pi * f * tt) * np.exp(-tt * 60)
+
+    def swish(d=0.22):
+        m = int(d * sr)
+        x = rng.standard_normal(m)
+        x = np.convolve(x, np.ones(24) / 24, mode="same")
+        env = np.sin(np.linspace(0, np.pi, m)) ** 2
+        return x * env * 2.5
+
+    def thump(d=0.18):
+        tt = np.arange(int(d * sr)) / sr
+        return np.sin(2 * np.pi * (90 - 120 * tt) * tt) * np.exp(-tt * 22)
+
+    prev_cap = None
+    for s in segs:
+        a = s.beat.action
+        if s.beat.on_screen and s.beat.on_screen != prev_cap:
+            put(s.start, swish())
+        prev_cap = s.beat.on_screen or prev_cap
+        if a.get("mark"):
+            put(s.start + 0.05, tick())
+            put(s.start + 0.12, tick(1900, 0.05) * 0.6)
+        if "tool_to" in a:
+            put(s.start + 0.1, thump())
+    peak = np.max(np.abs(out)) or 1.0
+    return out / peak * (10 ** (gain_db / 20))
+
+
 def subtitle_chunks(seg: Segment, fnt, max_w: float, max_lines: int = 2) -> list[tuple[float, float, list[str]]]:
     """Фраза → куски по ≤2 строки; время куска пропорционально числу букв."""
     text = subtitle_text(seg.beat.say)
@@ -213,6 +256,9 @@ class Renderer:
             self.starts.append(s0)
             self.ends.append(s1)
             s = s1
+        rs = load_settings()["render"]
+        self.cam_on = rs.get("camera", True)
+        self.cam_zoom = float(rs.get("hook_zoom", 1.6))
         sx0, _, sx1, _ = self.L.sub_box
         self.subs = [subtitle_chunks(seg, self.L.f_sub, sx1 - sx0 - 48) for seg in segs]
 
@@ -238,11 +284,46 @@ class Renderer:
         u = (t - a) / (b - a)
         return self.tpl.at(self.starts[i], seg.beat.action, min(max(u, 0.0), 1.0))
 
+    def _is_pause(self, i):
+        b = self.segs[i].beat
+        return not b.say and b.pause > 0
+
+    def _camera(self, img, i, t, state):
+        """Крючок: камера стартует крупно у прибора и отъезжает на весь разрез (кадр заканчивается полным
+        видом — данные не обрезаны). Пауза на предсказание: сцена приглушается."""
+        cam = self.T.get("camera")
+        if not cam:
+            return
+        k = self.k
+        box = tuple(int(round(v * k)) for v in cam)
+        w, h = box[2] - box[0], box[3] - box[1]
+        hook = self.segs[0]
+        dur = min(2.8, hook.dur)
+        if i == 0 and t < dur and self.cam_on:
+            u = t / dur
+            e = 1 - (1 - u) ** 3
+            z = self.cam_zoom + (1 - self.cam_zoom) * e
+            fx, fy = self.tpl.focus(self.T, state)
+            cx = ((fx - cam[0]) * (1 - e) + (cam[2] - cam[0]) / 2 * e) * k
+            cy = ((fy - cam[1]) * (1 - e) + (cam[3] - cam[1]) / 2 * e) * k
+            cw, ch = w / z, h / z
+            x0 = min(max(cx - cw / 2, 0), w - cw)
+            y0 = min(max(cy - ch / 2, 0), h - ch)
+            region = img.crop(box).crop((x0, y0, x0 + cw, y0 + ch)).resize((w, h), Image.BICUBIC)
+            img.paste(region, box[:2])
+        if self._is_pause(i):
+            seg = self.segs[i]
+            u = min(1.0, (t - seg.start) / 0.3)
+            dark = Image.new("RGB", (w, h), hex_rgb(self.style["background"]))
+            img.paste(Image.blend(img.crop(box), dark, 0.45 * u), box[:2])
+
     def frame(self, t: float) -> Image.Image:
         i = self.seg_at(t)
         seg = self.segs[i]
         img = self.base.copy()
-        self.tpl.draw_dynamic(img, self.T, self.state_at(i, t), t, self.fade)
+        state = self.state_at(i, t)
+        self.tpl.draw_dynamic(img, self.T, state, t, self.fade)
+        self._camera(img, i, t, state)
         d = SDraw(img)
         st = self.style
         bg, text, panel = hex_rgb(st["background"]), hex_rgb(st["text"]), hex_rgb(st["panel"])
@@ -268,7 +349,21 @@ class Renderer:
             accent = hex_rgb(st["measurement"]["color"])
             rounded_box(d, (cx0, top, cx1, top + h), fill=mix(bg, panel, a), radius=22)
             d.rectangle((cx0, top + 14, cx0 + 8, top + h - 14), fill=mix(bg, accent, a))
-            text_block(d, (cx0 + 30, top + 10), ls, f, mix(bg, text, a))
+            yy, n = top + 10, 0
+            for ln in ls:
+                xx = cx0 + 30
+                for w in ln.split(" "):
+                    wu = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.06 * n) / 0.3))
+                    we = 1 - (1 - wu) ** 3
+                    d.text((xx, yy + (1 - we) * 18), w, font=f, fill=mix(bg, text, we))
+                    xx += f.getlength(w + " ")
+                    n += 1
+                yy += line_h(f)
+            if self._is_pause(i):  # таймер на предсказание: полоса убывает
+                pu = min(1.0, (t - seg.start) / max(0.1, seg.dur))
+                bx1 = cx1 - 14 - (cx1 - cx0 - 44) * pu
+                d.rounded_rectangle((cx0 + 30, top + h - 10, max(cx0 + 31, bx1), top + h - 4), radius=3,
+                                    fill=accent)
         # субтитры: сказанные слова белые, впереди — приглушённые (видно, где голос)
         for (a0, a1, lines) in self.subs[i]:
             if a0 <= t < a1:

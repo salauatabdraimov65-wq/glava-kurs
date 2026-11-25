@@ -14,7 +14,7 @@ from pathlib import Path
 
 from . import tts
 from .passport import build_passport
-from .render import Renderer, build_timeline, encode, mix_audio
+from .render import Renderer, build_timeline, encode, mix_audio, sfx_track
 from .spec import load_spec
 from .style import domain_for_chapter, load_settings, load_style
 from .templates import get_template
@@ -39,8 +39,14 @@ def build(spec_path: str | Path, layouts=("9x16", "16x9"), voice: str | None = N
     segs, tl_info = build_timeline(spec, domain, engine=voice)
 
     raw_wav, wav = out_dir / "voice_raw.wav", out_dir / "voice.wav"
-    tts.write_wav(raw_wav, mix_audio(segs))
+    voice_mix = mix_audio(segs)
+    tts.write_wav(raw_wav, voice_mix)
     audio_info = tts.normalize(raw_wav, wav, settings["voice"]["target_lufs"])
+    if settings["render"].get("sfx", True):  # звуковые акценты подмешиваем после нормализации голоса
+        v = tts.decode_to_array(wav)
+        v = v + sfx_track(segs, len(v), settings["render"].get("sfx_gain_db", -24.0))
+        tts.write_wav(wav, v)
+        audio_info["with_sfx_lufs"] = float(tts.loudness(wav).get("input_i", "nan"))
     raw_wav.unlink(missing_ok=True)
 
     fps, crf = settings["render"]["fps"], settings["render"]["crf"]

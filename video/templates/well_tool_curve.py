@@ -152,6 +152,7 @@ class WellToolCurve:
         z0, z1 = start["tool"], self._clamp(float(action["tool_to"]))
         z = z0 + (z1 - z0) * ease(u)
         s["tool"] = z
+        s["moving"] = 0.0 < u < 1.0 and abs(z1 - z0) > 1e-6
         self._record(s, z0, z)
         return s
 
@@ -195,7 +196,7 @@ class WellToolCurve:
         # шапка трека как у планшета: строка на каждую кривую (образец линии + подпись) + шкала
         f_row, f_sc = font(42, True), font(36)
         rows = max(len(tr) for tr in self.tracks) if self.tracks else 1
-        hdr_h = line_h(f_row) * rows + line_h(f_sc) + 8
+        hdr_h = line_h(f_row) * rows + line_h(f_sc) + 34
         hdr_h = max(hdr_h, int(line_h(font(40)) * 2.2) + 8)  # «глубина, м ↓» слева
         plot_top = y0 + hdr_h
         L = {
@@ -203,6 +204,7 @@ class WellToolCurve:
             "sec": (x0 + axis_w + 12, x0 + axis_w + 12 + sec_w),
             "tracks": [], "hdr_top": y0,
         }
+        L["camera"] = (x0, plot_top - 28, x1, y1 + 26)
         tx = L["sec"][1] + gap
         for _ in self.tracks:
             L["tracks"].append((int(tx), int(tx + tr_w)))
@@ -248,6 +250,10 @@ class WellToolCurve:
 
     def lith_color(self, lith):
         return hex_rgb(self.style.get("lithology", {}).get(lith, {}).get("color", self.style["panel"]))
+
+    def focus(self, L, s) -> tuple[float, float]:
+        """Точка интереса для камеры: прибор."""
+        return ((L["bore"][0] + L["bore"][1]) / 2, self.y_of(L, s["tool"]))
 
     # ------------------------------------------------------------ рисование
     def draw_static(self, img: Image.Image, L: dict):
@@ -328,7 +334,7 @@ class WellToolCurve:
             c = self._curve(tr[0])
             sc = f"{self._fmt(float(c.get('min', 0)))} … {self._fmt(float(c.get('max', 1)))} {c.get('unit', '')}".strip()
             fs, ls = fit(sc.replace("-", "−"), tw_, 36, 28, 1)
-            yb_ = L["plot"][0] - line_h(fs) - 2
+            yb_ = L["plot"][0] - line_h(fs) - 30
             d.text((xr[0] + 4, yb_), self._fmt(float(c.get('min', 0))).replace("-", "−"), font=fs, fill=muted)
             mx = f"{self._fmt(float(c.get('max', 1))).replace('-', '−')} {c.get('unit', '')}".strip()
             d.text((xr[1] - 4 - fs.getlength(mx), yb_), mx, font=fs, fill=muted)
@@ -380,7 +386,11 @@ class WellToolCurve:
         cx = (bx0 + bx1) / 2
         tw = max(10, (bx1 - bx0) * 0.42)
         th = max(46, (p1 - p0) / (self.bottom - self.top) * 1.2)
-        d.line([(cx, p0 - 30), (cx, ty - th / 2)], fill=text, width=3)
+        d.line([(cx, p0 - 24), (cx, ty - th / 2)], fill=text, width=3)
+        if s.get("moving"):  # мягкое свечение прибора, пока он едет и пишет кривую
+            for r, a_ in ((tw * 1.6, 0.18), (tw * 1.15, 0.3)):
+                d.rounded_rectangle([cx - r, ty - th / 2 - r / 2, cx + r, ty + th / 2 + r / 2], radius=int(r),
+                                    fill=mix(mud, meas, a_))
         d.rounded_rectangle([cx - tw / 2, ty - th / 2, cx + tw / 2, ty + th / 2], radius=int(tw / 2.5), fill=meas)
         d.ellipse([cx - 6, ty - 6, cx + 6, ty + 6], fill=bg)
         # линия синхрона: прибор → точка кривой
