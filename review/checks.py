@@ -105,7 +105,7 @@ def check_items(pkg: dict, ch: Chapter) -> list[dict]:
         if i["type"] == "claim":
             claims_by_node.setdefault(i.get("node_id"), []).append(i)
 
-    for it in pkg["items"]:
+    def one(it):
         tid, typ = it["id"], it["type"]
         if typ == "claim":
             q, pg = it.get("quote") or "", it.get("page_pdf")
@@ -154,7 +154,13 @@ def check_items(pkg: dict, ch: Chapter) -> list[dict]:
                 miss = [n for n in numbers(it["text"]) if n not in dset]
                 if miss:
                     res.append(cand(tid, "frame_error", f"числа {miss} из факта нет в спецификации сцены", "Привести факт в соответствие со спецификацией сцены", None, None, 0.3))
+    for it in pkg["items"]:
+        try:
+            one(it)
+        except Exception as e:  # одна кривая запись не должна валить проверку остальных
+            print(f"  ! код: {it.get('id')}: {type(e).__name__}: {e}")
     return res
+
 
 
 def check_frames(pkg: dict, ch: Chapter) -> list[dict]:
