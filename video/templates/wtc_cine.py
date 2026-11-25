@@ -280,44 +280,8 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
         if z0 - 1e-6 <= s["tool"] <= z1 + 1e-6:
             xv, yv = xcol(c, self.value_at(c["id"], s["tool"])), ys(s["tool"])
             d.ellipse([xv - 15, yv - 15, xv + 15, yv + 15], fill=col, outline=(255, 255, 255), width=3)
-    # подписи слоёв — крупно, справа от ствола
-    f_l = font(42, True)
-    label_bottom = {}
+    # рамки сравнения — ПОД подписями слоёв (подпись с обводкой не зачёркивается линией рамки)
     lab_x = bcx + bhalf + 34
-    lab_w = tx0 - lab_x - 24
-    for j, Lr in enumerate(self.layers):
-        if not Lr.get("label"):
-            continue
-        y0_, y1_ = ys(Lr["top"]), ys(Lr["bottom"])
-        top_ = max(y0_, R.y_top - 10) + 18
-        if not (R.y_top - 40 < top_ < R.y_bot) or (y1_ - y0_) < 60:
-            continue
-        dim = hl and hl["idx"] != j
-        for ln in wrap(visible(Lr["label"], "подпись слоя"), f_l, lab_w)[:2]:
-            d.text((lab_x, top_), ln, font=f_l, fill=mix(text, bg, 0.5) if dim else text, stroke_width=6, stroke_fill=bg)
-            top_ += line_h(f_l)
-        label_bottom[j] = top_
-        if quiz:  # викторина: на каждом пласте «?»
-            qa = min(1.0, (t - seg.start) / 0.3)
-            f_big = font(70, True)
-            cy = (max(y0_, R.y_top) + min(y1_, R.y_bot)) / 2 + 30
-            d.ellipse([lab_x, cy - 46, lab_x + 92, cy + 46], fill=mix(bg, meas, qa))
-            d.text((lab_x + 46 - f_big.getlength("?") / 2, cy - 44), "?", font=f_big, fill=bg)
-    # прибор на кабеле
-    ty = ys(s["tool"])
-    th = max(80, R.ppm * zoom * 3.2)
-    tw = max(18, bhalf * 0.85)
-    d.line([(bcx, 0), (bcx, ty - th / 2)], fill=mix(text, muted, 0.3), width=4)
-    if s.get("moving"):
-        for r_, a_ in ((34, 0.14), (20, 0.28)):
-            d.rounded_rectangle([bcx - tw / 2 - r_, ty - th / 2 - r_, bcx + tw / 2 + r_, ty + th / 2 + r_],
-                                radius=int(tw / 2 + r_), fill=mix(bg, meas, a_))
-    d.rounded_rectangle([bcx - tw / 2, ty - th / 2, bcx + tw / 2, ty + th / 2], radius=int(tw / 2),
-                        fill=mix(meas, (0, 0, 0), 0.25))
-    d.rounded_rectangle([bcx - tw / 2 + 3, ty - th / 2 + 4, bcx - tw / 2 + tw * 0.38, ty + th / 2 - 4],
-                        radius=int(tw / 4), fill=mix(meas, (255, 255, 255), 0.35))
-    dashed_hline(d, bcx + tw, tx0, ty, fill=mix(bg, meas, 0.5), width=2, dash=8, gap=8)
-    # рамки сравнения
     f_m = font(40, True)
     for mk in s["marks"]:
         a = _alpha(mk.get("born"), t, R.fade)
@@ -332,6 +296,52 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
             tw_ = fl.getlength(lab)
             d.rounded_rectangle([tx1 - tw_ - 30, y0_ - 22, tx1 + 4, y0_ + 22], radius=12, fill=col)
             d.text((tx1 - tw_ - 14, y0_ - 18), lab, font=fl, fill=bg)
+    # подписи слоёв — крупно, справа от ствола
+    f_l = font(42, True)
+    label_bottom = {}
+    label_rects = []
+    lab_x = bcx + bhalf + 34
+    lab_w = tx0 - lab_x - 24
+    for j, Lr in enumerate(self.layers):
+        if not Lr.get("label"):
+            continue
+        y0_, y1_ = ys(Lr["top"]), ys(Lr["bottom"])
+        top_ = max(y0_, R.y_top - 10) + 18
+        if not (R.y_top - 40 < top_ < R.y_bot) or (y1_ - y0_) < 60:
+            continue
+        dim = hl and hl["idx"] != j
+        lines_ = wrap(visible(Lr["label"], "подпись слоя"), f_l, lab_w)[:2]
+        y_lab0, w_lab = top_, max(f_l.getlength(ln) for ln in lines_)
+        for ln in lines_:
+            d.text((lab_x, top_), ln, font=f_l, fill=mix(text, bg, 0.5) if dim else text, stroke_width=6, stroke_fill=bg)
+            top_ += line_h(f_l)
+        label_bottom[j] = top_
+        label_rects.append((lab_x - 6, y_lab0 - 6, lab_x + w_lab + 6, top_ + 6))
+        if quiz:  # викторина: на каждом пласте «?» — справа от подписи, а если не влезает — под ней
+            qa = min(1.0, (t - seg.start) / 0.3)
+            f_big = font(70, True)
+            qx = lab_x + w_lab + 24
+            if qx + 92 > tx0 - 8:
+                qx, cy = lab_x, top_ + 56
+            else:
+                cy = (y_lab0 + top_) / 2
+            if cy + 46 <= min(y1_, R.y_bot) + 10:
+                d.ellipse([qx, cy - 46, qx + 92, cy + 46], fill=mix(bg, meas, qa))
+                d.text((qx + 46 - f_big.getlength("?") / 2, cy - 44), "?", font=f_big, fill=bg)
+    # прибор на кабеле
+    ty = ys(s["tool"])
+    th = max(80, R.ppm * zoom * 3.2)
+    tw = max(18, bhalf * 0.85)
+    d.line([(bcx, 0), (bcx, ty - th / 2)], fill=mix(text, muted, 0.3), width=4)
+    if s.get("moving"):
+        for r_, a_ in ((34, 0.14), (20, 0.28)):
+            d.rounded_rectangle([bcx - tw / 2 - r_, ty - th / 2 - r_, bcx + tw / 2 + r_, ty + th / 2 + r_],
+                                radius=int(tw / 2 + r_), fill=mix(bg, meas, a_))
+    d.rounded_rectangle([bcx - tw / 2, ty - th / 2, bcx + tw / 2, ty + th / 2], radius=int(tw / 2),
+                        fill=mix(meas, (0, 0, 0), 0.25))
+    d.rounded_rectangle([bcx - tw / 2 + 3, ty - th / 2 + 4, bcx - tw / 2 + tw * 0.38, ty + th / 2 - 4],
+                        radius=int(tw / 4), fill=mix(meas, (255, 255, 255), 0.35))
+    dashed_hline(d, bcx + tw, tx0, ty, fill=mix(bg, meas, 0.5), width=2, dash=8, gap=8)
     # значения крупно: на подсветке слоя без флюида — обе кривые; с флюидом — лупа с порами
     if hl and 0 <= hl["idx"] < len(self.layers):
         a = _alpha(hl["born"] + 0.15, t, 0.35)
@@ -397,7 +407,17 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
             vs = (f"{v:.0f}" if abs(v) >= 10 else f"{v:.1f}").replace(".", ",")
             lab = f"≈ {vs} {visible(c.get('unit', ''), 'единица кривой')}"
             f1 = mono_font(40, True)
-            y = min(max(ty - 30, R.y_top + 10), R.y_bot - 70)
             wpx = f1.getlength(lab) + 34
+            y = min(max(ty - 30, R.y_top + 10), R.y_bot - 70)
+            def _hit(yy):
+                return any(not (lab_x + wpx < r[0] or lab_x > r[2] or yy + 64 < r[1] or yy > r[3]) for r in label_rects)
+            if _hit(y):   # ищем ближайшее свободное место по вертикали
+                for dy in range(16, 400, 16):
+                    for yy in (y + dy, y - dy):
+                        if R.y_top + 10 <= yy <= R.y_bot - 70 and not _hit(yy):
+                            y = yy; break
+                    else:
+                        continue
+                    break
             d.rounded_rectangle([lab_x, y, lab_x + wpx, y + 64], radius=32, fill=text)
             d.text((lab_x + 17, y + 6), lab, font=f1, fill=bg)
