@@ -1,0 +1,25 @@
+[project]
+name = "glava-kurs"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Salauat Abdraimov", email = "salauatabdraimov65@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "imageio-ffmpeg>=0.8.1",
+    "jsonschema>=4.26.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "openai>=3.59.0",
+    "pillow>=13.0.0",
+    "pymupdf>=2.1",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+glava-kurs = "glava_kurs:main"
+
+[build-system]
+requires = ["uv_build>=0.13.10,<0.14.0"]
+build-backend = "uv_build"
