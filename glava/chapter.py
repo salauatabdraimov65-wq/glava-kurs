@@ -28,7 +28,16 @@ def materials_dir() -> Path:
         load_dotenv(ROOT / ".env")
     except ImportError:
         pass
-    return Path(os.environ.get("MATERIALS_DIR", ROOT.parent)).expanduser().resolve()
+    p = Path(os.environ.get("MATERIALS_DIR") or ROOT.parent).expanduser()
+    if not p.is_absolute():          # относительный путь — от папки проекта, а не от текущей папки терминала
+        p = ROOT / p
+    p = p.resolve()
+    if not (p / "books md").exists():
+        raise FileNotFoundError(
+            f"Не нашёл материалы организаторов в {p} (нет папки 'books md').\n"
+            f"Либо положите папку glava-kurs внутрь папки с материалами (рядом с 'книги' и 'books md'),\n"
+            f"либо укажите в .env полный путь: MATERIALS_DIR=/путь/к/kmg-materials")
+    return p
 
 
 def chapters_config() -> dict:
