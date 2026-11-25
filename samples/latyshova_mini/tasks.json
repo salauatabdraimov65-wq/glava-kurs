@@ -1,0 +1,24 @@
+{
+ "chapter": "latyshova_gl5_par17-20",
+ "tasks": [
+  {"id": "t01", "type": "single", "kind": "recall", "step_id": "latyshova.mud_controls_logs", "claim_ids": ["latyshova.mud_controls_logs#c4"],
+   "prompt": "Скважину бурят на нефильтрующемся растворе на углеводородной основе. Какой метод электрометрии можно применить?",
+   "options": [{"id": "a", "text": "Индукционный зонд", "misconception": null}, {"id": "b", "text": "Микрозонды", "misconception": null}, {"id": "c", "text": "Метод СП", "misconception": null}],
+   "answer": "a", "explanation": "Раствор не проводит ток, поэтому работает только индукционный зонд, которому не нужен электрический контакт (стр. 91)."},
+  {"id": "t02", "type": "multiple", "kind": "understanding", "step_id": "latyshova.mud_controls_logs", "claim_ids": ["latyshova.mud_controls_logs#c3"],
+   "prompt": "Минерализация раствора растёт, и сопротивление фильтрата приближается к сопротивлению пластовой воды. Какие методы резко теряют способность выделять коллектор?",
+   "options": [{"id": "a", "text": "СП"}, {"id": "b", "text": "Микрозонды"}, {"id": "c", "text": "Гамма-метод"}],
+   "answer": ["a", "b"], "explanation": "Глава называет СП и микрозонды: их эффективность резко снижается (стр. 91)."},
+  {"id": "t03", "type": "order", "kind": "understanding", "step_id": "latyshova.mixed_section_needs_quant", "claim_ids": ["latyshova.mixed_section_needs_quant#c1", "latyshova.mixed_section_needs_quant#c3"],
+   "prompt": "Расположите разрезы от самого простого для построения колонки к самому сложному.",
+   "options": [{"id": "a", "text": "Терригенный разрез с подчинёнными плотными карбонатами"}, {"id": "b", "text": "Смешанный терригенно-карбонатный разрез с водой разной минерализации, нефтью и газом"}],
+   "answer": ["a", "b"], "explanation": "Первый решают электрическими методами, второй — только количественной интерпретацией (стр. 95)."},
+  {"id": "t04", "type": "gap", "kind": "recall", "step_id": "latyshova.mixed_section_needs_quant", "claim_ids": ["latyshova.mixed_section_needs_quant#c3"],
+   "prompt": "В смешанном разрезе коллектор выделяют только на основании {{1}} интерпретации с привлечением геологических сведений.",
+   "answer": ["количественной"], "explanation": "Качественных признаков здесь мало, нужна количественная интерпретация (стр. 95)."},
+  {"id": "t05", "type": "single", "kind": "transfer", "step_id": "latyshova.mud_controls_logs", "claim_ids": ["latyshova.mud_controls_logs#c2"],
+   "prompt": "Модель выделяет коллекторы по отрицательной аномалии СП. В новой скважине раствор пресный. Будет ли признак работать?",
+   "options": [{"id": "a", "text": "Да: при пресном растворе коллекторы выделяются отрицательными аномалиями СП"}, {"id": "b", "text": "Нет: аномалия СП не связана с коллекторами", "misconception": "misc.log_is_rock"}],
+   "answer": "a", "explanation": "Это типичный случай пресного глинистого раствора из главы (стр. 91)."}
+ ]
+}
