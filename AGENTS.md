@@ -24,10 +24,13 @@
 |---|---|---|
 | Фундамент, учебный слой, задания, маршрутизация, сборка всего | `glava/`, `layer/`, `config/`, `pipeline` | Лид + Claude |
 | Модуль проверки закладок | `review/` | Друг 1, Claude Code |
-| Видео: шаблоны сцен, рендер, озвучка | `video/` | Друг 2, Claude Code |
-| Демо-курс (HTML) | `course/` | Друг 3, Codex (Windows) |
+| Видео: только поддержка станка (сборка не падает, шаблоны есть) | `video/` | Друг 2, Claude Code |
+| Демо-курс: сборка, данные, задания, интерактивы | `course/build.py`, `course/interactives.*`, `course/player.js`, `course/publish.py`, `course/test_course.py` | Друг 3, Codex (Windows) |
+| Демо-курс: внешний вид и удобство | `course/theme.css`, `course/assets/`, `course/ui.js` | Друг 2, Claude Code |
 
-Задания треков: `tasks/01_review.md`, `tasks/02_video.md`, `tasks/03_course.md`.
+**Сейчас (ночь 26.11) Друг 3 не работает — Друг 2 ведёт всю папку `course/`**, включая `build.py` и `player.js`. Когда Друг 3 вернётся — снова делят по файлам из таблицы, а Друг 3 начинает с `git pull origin main`.
+
+Задания треков: `tasks/01_review.md`, `tasks/02_video.md`, `tasks/03_course.md`, `tasks/04_course_design.md`.
 
 ## Где что лежит (контракт между треками)
 ```
@@ -53,7 +56,7 @@ uv run python -m review.run <package.json> -o answer.json    # замечани�
 ```
 
 ## Git
-- Своя ветка: `review`, `video`, `course`. Коммить часто, маленькими шагами, сообщение по-русски: что и зачем.
+- Своя ветка: `review`, `video`, `course`, `course-design` (внешний вид курса). Коммить часто, маленькими шагами, сообщение по-русски: что и зачем.
 - В `main` вливает только Лид (владелец репозитория). Перед pull request: `git pull origin main`, прогон своей команды, без ошибок.
 - Никогда не коммить `.env`, ключи, `cache/`.
 

@@ -21,7 +21,7 @@ DIFF = json.loads((ROOT / "config" / "difficulty.json").read_text(encoding="utf-
 # Параметры шаблонов: что станок video/ умеет рисовать. Геологии здесь нет — только устройство сцены.
 TEMPLATES = {
     "well_tool_curve": """Разрез по глубине + ствол скважины + прибор на кабеле + трек(и) кривой, вычисляемой из свойств слоёв.
-params: {"depth_top": м, "depth_bottom": м, "depth_tick": м, "tool_start": м, "tool_resolution_m": окно усреднения прибора, "bore_width": условная ширина ствола,
+params: {"depth_top": м, "depth_bottom": м, "depth_tick": м, "tool_start": м, "tool_resolution_m": окно усреднения прибора, "bore_width": условная ширина ствола, "bore_real_m": реальный диаметр ствола по главе (если в главе нет — 0.2),
  "layers": [{"top": м, "bottom": м, "lith": ключ литологии из стайлгайда, "label": подпись, "fluid": ключ флюида из стайлгайда или null,
              "props": {"<свойство>": число, ...}, "mud_cake": bool, "invasion_width": условная ширина зоны проникновения (0 — нет)}],
  "curves": [{"key": ключ кривой из стайлгайда, "prop": имя свойства из props, "label": подпись, "unit": единица, "min": число, "max": число, "log": bool}]}
@@ -139,9 +139,11 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
     # честность масштаба: условная ширина ствола всегда подписана числом (типичный диаметр ~0,2 м)
     p = spec.get("params") or {}
     if template == "well_tool_curve" and float(p.get("bore_width") or 0) > 0.3:
-        k = round(float(p["bore_width"]) / 0.2)
-        note = f"ствол показан примерно в {k} раз шире реального (≈0,2 м)"
-        spec.setdefault("exaggerations", []).append(note)
+        real = float(p.get("bore_real_m") or 0.2)   # реальный диаметр: из параметров сцены, иначе типичный ~0,2 м
+        k = round(float(p["bore_width"]) / real)
+        note = f"ствол показан примерно в {k} раз шире реального (≈{real:g} м)".replace(".", ",")
+        # одна строка о стволе — от кода; строки модели про ствол убираются, чтобы числа не спорили
+        spec["exaggerations"] = [x for x in (spec.get("exaggerations") or []) if "ствол" not in x.lower()] + [note]
         pl = [x for x in (spec.get("plaque") or ["не в масштабе:"]) if "ствол" not in x]
         spec["plaque"] = pl + [note]
     for c in (p.get("curves") or []):   # широкий диапазон (сопротивление) — логарифмическая шкала, как на планшете
