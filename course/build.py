@@ -537,7 +537,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     .hero-stats {{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.2rem; }}
     .hero-stats span {{ padding:.4rem .8rem; border:1px solid rgba(236,239,244,.17); border-radius:99px; background:rgba(15,20,25,.64); color:#C2C9C8; font-size:.88rem; }}
     .hero-stats b {{ color:var(--geo-sand,#E8C872); }}
-    header.hero::after {{ position:absolute; z-index:0; right:-1rem; bottom:0; width:min(45%,560px); height:88%; border-radius:0; opacity:.68; clip-path:polygon(0 60%,12% 49%,25% 53%,39% 23%,53% 41%,65% 19%,78% 37%,90% 24%,100% 31%,100% 100%,0 100%); background:repeating-linear-gradient(176deg,var(--geo-sand,#E8C872) 0 9px,var(--geo-shale,#6B8E5A) 9px 17px,var(--geo-limestone,#7FB3D5) 17px 25px,var(--geo-dense,#8C7B6B) 25px 33px,var(--geo-dolomite,#A98FD1) 33px 39px); filter:saturate(.9); }}
+    header.hero::after {{ position:absolute; z-index:0; right:-1rem; bottom:0; width:min(45%,560px); height:88%; border-radius:0; opacity:.68; clip-path:polygon(0 60%,12% 49%,25% 53%,39% 23%,53% 41%,65% 19%,78% 37%,90% 24%,100% 31%,100% 100%,0 100%); background:repeating-linear-gradient(176deg,var(--geo-sand,#E8C872) 0 9px,var(--geo-shale,#6B8E5A) 9px 17px,var(--geo-limestone,#7FB3D5) 17px 25px,var(--geo-dense,#8C7B6B) 25px 33px,var(--geo-reef,#F0A35E) 33px 39px); filter:saturate(.9); }}
     .theme-controls {{ align-items:center; justify-content:flex-end; }}
     .theme-controls button,.view-switcher button {{ border-color:rgba(236,239,244,.18); background:#202923; color:#ECEFF4; }}
     .theme-controls button:hover,.view-switcher button:hover {{ background:#2b382f; border-color:var(--geo-sand,#E8C872); }}
@@ -575,62 +575,66 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     .task-result {{ background:#263228; border-color:var(--geo-shale,#6B8E5A); }}
     .task-result.correct {{ background:#263d2d; border-color:#75ac65; color:#E7F2DD; }}
     .muted,.book-title {{ color:#AAB4AB; }}
-    /* Datathon-style void palette with purple/cyan energy, sourced from the geology palette. */
-    :root {{ --accent:var(--geo-dolomite,#A98FD1); --teal:var(--geo-limestone,#7FB3D5); --warm:var(--geo-sand,#E8C872); --sun:var(--geo-anhydrite,#D98CB3); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --soft:#22243a; }}
-    :root[data-theme="dark"] {{ --accent:var(--geo-dolomite,#A98FD1); --teal:var(--geo-limestone,#7FB3D5); --warm:var(--geo-sand,#E8C872); --sun:var(--geo-anhydrite,#D98CB3); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --soft:#22243a; }}
-    body {{ background:radial-gradient(ellipse at 75% -8%,rgba(169,143,209,.2),transparent 38rem),radial-gradient(ellipse at 12% 34%,rgba(127,179,213,.09),transparent 36rem),repeating-radial-gradient(ellipse at 50% 0%,transparent 0 80px,rgba(169,143,209,.035) 81px 82px,transparent 83px 142px),#0D0E18; }}
-    header.hero {{ border-color:rgba(169,143,209,.32); background:radial-gradient(ellipse at 75% 12%,rgba(127,179,213,.2),transparent 34rem),radial-gradient(ellipse at 10% 110%,rgba(169,143,209,.15),transparent 33rem),linear-gradient(120deg,#0D0E18 5%,#17172B 57%,#1B2030 100%); }}
-    .hero-kicker,.nav-kicker {{ color:#C5A9FF; }}
-    .status-dot {{ background:var(--mission); box-shadow:0 0 14px color-mix(in srgb,var(--mission) 70%,transparent); }}
-    header.hero::after {{ opacity:.58; background:repeating-linear-gradient(176deg,var(--geo-dolomite,#A98FD1) 0 9px,var(--geo-limestone,#7FB3D5) 9px 17px,var(--geo-anhydrite,#D98CB3) 17px 25px,var(--geo-sand,#E8C872) 25px 33px,var(--geo-shale,#6B8E5A) 33px 39px); }}
-    .hero h1::after {{ background:linear-gradient(90deg,var(--mission),#7FB3D5,#A98FD1); }}
-    .hero-stats span {{ border-color:rgba(197,169,255,.24); background:rgba(15,15,28,.76); }}
-    .hero-stats b {{ color:var(--mission); }}
-    .hero-completion {{ max-width:450px; margin-top:1rem; color:#B9BBCD; }}
+    /* Progress details use the same geological surface colors as the course. */
+    .hero-completion {{ max-width:450px; margin-top:1rem; color:var(--muted); }}
     .hero-completion > div:first-child {{ display:flex; justify-content:space-between; gap:1rem; margin-bottom:.35rem; font-size:.83rem; }}
-    .hero-completion b {{ color:var(--mission); }}
-    .hero-track {{ height:.55rem; overflow:hidden; border-radius:99px; background:#29283B; }}
-    .hero-track span {{ display:block; width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--mission),#7FB3D5,#A98FD1); transition:width .25s ease; }}
-    .theme-controls button,.view-switcher button {{ border-color:rgba(169,143,209,.25); background:#202036; }}
-    .theme-controls button:hover,.view-switcher button:hover {{ background:#2B2945; border-color:#B8F06C; }}
-    .xp-chip {{ border-color:rgba(217,140,179,.65); background:linear-gradient(130deg,#D98CB3,#A98FD1); color:#17131F; }}
-    #course-nav {{ border-color:#38344F; border-top-color:#A98FD1; background:linear-gradient(155deg,#181827,#141722); }}
-    .nav-kicker {{ color:#A98FD1; }}
-    .step-link {{ color:#C2C4D3; }}
-    .step-link[aria-current="step"] {{ border-color:rgba(169,143,209,.45); background:linear-gradient(100deg,#2B2945,#191A2B); color:#F2EEFF; box-shadow:inset 3px 0 var(--mission); }}
-    .step-number {{ border-color:rgba(169,143,209,.5); background:#27243B; color:#D1B9FF; }}
-    .step-marker {{ margin-left:auto; color:#77778C; font-size:1.15rem; }}
-    .step-link.is-complete .step-marker {{ color:#B8F06C; }}
-    .content-block,.review-card,.task {{ background:linear-gradient(145deg,#1C1D30,#151722 80%); border-color:#33334A; }}
-    .content-block {{ border-left-color:#7FB3D5; }}
-    .content-block:nth-of-type(3n+1) {{ border-left-color:#A98FD1; }}
-    .content-block:nth-of-type(3n+2) {{ border-left-color:#D98CB3; }}
-    .content-block h2,.review-card h2 {{ color:#F0EDFF; }}
-    .practice-column {{ border-color:rgba(169,143,209,.44); border-top-color:#A98FD1; background:linear-gradient(155deg,#25233D,#171825 76%); }}
-    .exercise-kicker {{ color:#B8F06C; }}
-    .view-switcher {{ background:#141522; border-color:#35334B; }}
-    .view-switcher button[aria-pressed="true"] {{ background:linear-gradient(130deg,#393252,#25233D); border-color:#A98FD1; color:#E5DAFF; }}
-    .map-node {{ fill:#23243A; stroke:#5A4C76; }}
-    .map-label {{ fill:#E7E4F3; }}
-    .map-number,.link-map {{ color:#D1B9FF; fill:#D1B9FF; }}
-    .map-edge {{ stroke:#7FB3D5; }}
-    .page,.badge {{ color:#D8C9FF; background:#29263F; border-color:#4B4267; }}
-    .step-time {{ color:#D8C9FF; background:#26243B; border-color:#484064; }}
-    .terms li {{ color:#D8C9FF; background:#242239; border-color:#4B4267; }}
-    blockquote,.hint-content {{ background:#22243A; border-left-color:#7FB3D5; }}
-    .option {{ border-color:#38374F; background:#181A28; }}
-    .option:hover {{ background:#27263F; border-color:var(--mission); }}
-    .gap-input {{ border-color:#4D4964; background:#10121D; color:#ECEFF4; }}
-    .task-result {{ background:#25263B; border-color:#7FB3D5; }}
-    .task-result.correct {{ background:#263629; border-color:#8CBE61; color:#EAF5DE; }}
-    .step-reward {{ margin:.5rem 0 .8rem; padding:.5rem .7rem; border-radius:.7rem; background:#202036; color:#C5BED8; font-size:.85rem; }}
-    .step-reward.is-earned {{ border:1px solid rgba(180,240,107,.45); color:#C8F495; }}
+    .hero-track {{ height:.55rem; overflow:hidden; border-radius:99px; background:color-mix(in srgb,var(--geo-dense,#8C7B6B) 36%,var(--geo-background,#0F1419)); }}
+    .hero-track span {{ display:block; width:0; height:100%; border-radius:inherit; transition:width .25s ease; }}
+    .step-marker {{ margin-left:auto; color:var(--muted); font-size:1.15rem; }}
+    .step-link.is-complete .step-marker {{ color:var(--geo-shale,#6B8E5A); }}
+    .step-reward {{ margin:.5rem 0 .8rem; padding:.5rem .7rem; border-radius:.7rem; font-size:.85rem; }}
     .step-complete {{ margin-top:1rem; }}
-    .step-complete button {{ border-color:color-mix(in srgb,var(--mission) 48%,transparent); background:#293528; color:#D5F5B2; }}
-    .step-complete button:disabled {{ opacity:1; background:#202C25; }}
-    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header.hero {{ min-height:410px; padding:1.2rem; align-items:flex-start; flex-direction:column; }} header.hero::after {{ right:-1rem; bottom:0; width:78%; height:44%; opacity:.42; }} .hero-copy {{ z-index:1; }} .hero h1 {{ font-size:clamp(2.1rem,11vw,3.2rem); overflow-wrap:anywhere; }} .hero-note {{ font-size:1rem; }} .hero-stats {{ gap:.35rem; }} .hero-stats span {{ font-size:.78rem; padding:.3rem .55rem; }} .theme-controls {{ justify-content:flex-start; }} .theme-controls button {{ min-height:42px; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
+    .step-complete button:disabled {{ opacity:1; }}
+    /* One geology palette and a single reading column. */
+    :root,:root[data-theme="dark"] {{ --accent:var(--geo-sand,#E8C872); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-limestone,#7FB3D5); --mission:var(--geo-shale,#6B8E5A); --soft:color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,var(--geo-panel,#1A2129)); }}
+    :root[data-theme="light"] {{ --bg:color-mix(in srgb,var(--geo-dense,#8C7B6B) 24%,var(--geo-salt,#C9D6DF)); --paper:color-mix(in srgb,var(--geo-salt,#C9D6DF) 46%,var(--geo-dense,#8C7B6B)); --ink:var(--geo-background,#0F1419); --muted:color-mix(in srgb,var(--geo-background,#0F1419) 58%,var(--geo-muted,#8A96A3)); --line:color-mix(in srgb,var(--geo-dense,#8C7B6B) 40%,var(--geo-salt,#C9D6DF)); --accent:var(--geo-dense,#8C7B6B); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-limestone,#7FB3D5); --mission:var(--geo-shale,#6B8E5A); --soft:color-mix(in srgb,var(--geo-shale,#6B8E5A) 13%,var(--paper)); }}
+    body {{ background:radial-gradient(ellipse at 78% 0%,color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,transparent),transparent 40rem),radial-gradient(ellipse at 9% 45%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 10%,transparent),transparent 34rem),repeating-radial-gradient(ellipse at 50% 0%,transparent 0 80px,color-mix(in srgb,var(--geo-dense,#8C7B6B) 8%,transparent) 81px 82px,transparent 83px 142px),var(--bg); }}
+    header.hero {{ background:radial-gradient(ellipse at 75% 12%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 18%,transparent),transparent 34rem),linear-gradient(125deg,var(--geo-background,#0F1419),color-mix(in srgb,var(--geo-shale,#6B8E5A) 30%,var(--geo-background,#0F1419)) 60%,var(--geo-panel,#1A2129)); border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 38%,var(--line)); }}
+    header.hero::after {{ background:repeating-linear-gradient(176deg,var(--geo-sand,#E8C872) 0 9px,var(--geo-shale,#6B8E5A) 9px 17px,var(--geo-limestone,#7FB3D5) 17px 25px,var(--geo-dense,#8C7B6B) 25px 33px,var(--geo-reef,#F0A35E) 33px 39px); }}
+    .hero-kicker,.nav-kicker {{ color:var(--geo-sand,#E8C872); }}
+    .status-dot {{ background:var(--geo-shale,#6B8E5A); box-shadow:0 0 14px color-mix(in srgb,var(--geo-shale,#6B8E5A) 75%,transparent); }}
+    .hero h1::after,.hero-track span {{ background:linear-gradient(90deg,var(--geo-sand,#E8C872),var(--geo-shale,#6B8E5A),var(--geo-limestone,#7FB3D5)); }}
+    .hero-stats b,.hero-completion b {{ color:var(--geo-sand,#E8C872); }}
+    .theme-controls button,.view-switcher button {{ background:color-mix(in srgb,var(--geo-panel,#1A2129) 78%,var(--geo-shale,#6B8E5A)); border-color:var(--line); color:var(--ink); }}
+    .theme-controls button:hover,.view-switcher button:hover {{ border-color:var(--geo-sand,#E8C872); }}
+    .xp-chip {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 62%,transparent); background:linear-gradient(130deg,var(--geo-sand,#E8C872),var(--geo-reef,#F0A35E)); color:var(--geo-background,#0F1419); }}
+    .layout,.layout[data-view="course"],.layout[data-view="cards"],.layout[data-view="map"],.layout[data-view="summary"] {{ display:block; }}
+    #course-nav {{ position:static; margin-bottom:1rem; border-color:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--line)); border-top-color:var(--geo-shale,#6B8E5A); background:linear-gradient(135deg,var(--paper),color-mix(in srgb,var(--geo-shale,#6B8E5A) 12%,var(--paper))); }}
+    .nav-kicker {{ color:var(--geo-shale,#6B8E5A); }}
+    .step-list {{ grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); max-height:none; overflow:visible; }}
+    .step-link {{ color:var(--ink); background:transparent; }}
+    .step-link[aria-current="step"] {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 50%,var(--line)); background:linear-gradient(100deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 23%,var(--paper)),var(--paper)); color:var(--ink); box-shadow:inset 3px 0 var(--geo-sand,#E8C872); }}
+    .step-number {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 52%,var(--line)); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,var(--paper)); color:var(--geo-sand,#E8C872); }}
+    .step {{ display:block; }}
+    .lesson-column {{ width:100%; }}
+    .practice-column {{ position:static; width:100%; margin-top:1rem; border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 34%,var(--line)); border-top:4px solid var(--geo-sand,#E8C872); background:linear-gradient(145deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 15%,var(--paper)),var(--paper)); }}
+    .exercise-kicker {{ color:var(--geo-shale,#6B8E5A); }}
+    .content-block,.review-card,.task {{ background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--geo-shale,#6B8E5A) 8%,var(--paper))); border-color:var(--line); }}
+    .content-block {{ border-left-color:var(--geo-shale,#6B8E5A); }}
+    .content-block:nth-of-type(3n+1) {{ border-left-color:var(--geo-sand,#E8C872); }}
+    .content-block:nth-of-type(3n+2) {{ border-left-color:var(--geo-limestone,#7FB3D5); }}
+    .content-block h2,.review-card h2 {{ color:var(--ink); }}
+    .view-switcher {{ background:color-mix(in srgb,var(--geo-dense,#8C7B6B) 16%,var(--paper)); border-color:var(--line); }}
+    .view-switcher button[aria-pressed="true"] {{ background:linear-gradient(130deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 28%,var(--paper)),var(--paper)); border-color:var(--geo-shale,#6B8E5A); color:var(--ink); }}
+    .review-card {{ border-top-color:var(--geo-sand,#E8C872); }}
+    .review-card:nth-child(3n+2) {{ border-top-color:var(--geo-shale,#6B8E5A); }}
+    .review-card:nth-child(3n) {{ border-top-color:var(--geo-limestone,#7FB3D5); }}
+    .map-node {{ fill:color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,var(--paper)); stroke:var(--geo-shale,#6B8E5A); }}
+    .map-label {{ fill:var(--ink); }}
+    .map-number,.link-map {{ color:var(--geo-sand,#E8C872); fill:var(--geo-sand,#E8C872); }}
+    .map-edge {{ stroke:var(--geo-limestone,#7FB3D5); }}
+    .page,.badge {{ color:var(--geo-sand,#E8C872); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,var(--paper)); border-color:color-mix(in srgb,var(--geo-shale,#6B8E5A) 48%,var(--line)); }}
+    .step-reward {{ color:var(--muted); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 17%,var(--paper)); }}
+    .step-reward.is-earned {{ color:var(--geo-shale,#6B8E5A); border-color:var(--geo-shale,#6B8E5A); }}
+    .step-complete button {{ border-color:var(--geo-shale,#6B8E5A); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,var(--paper)); color:var(--ink); }}
+    .step-complete button:disabled {{ background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 13%,var(--paper)); }}
+    .page,.badge {{ color:var(--geo-sand,#E8C872); }}
+    .task-result.correct {{ background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 25%,var(--paper)); border-color:var(--geo-shale,#6B8E5A); color:var(--ink); }}
+    :root[data-theme="light"] header.hero {{ color:#ECEFF4; }}
+    :root[data-theme="light"] header.hero .theme-controls button {{ color:#ECEFF4; }}
+    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header.hero {{ min-height:410px; padding:1.2rem; align-items:flex-start; flex-direction:column; }} header.hero::after {{ right:-1rem; bottom:0; width:78%; height:44%; opacity:.42; }} .hero-copy {{ z-index:1; }} .hero h1 {{ font-size:clamp(2.1rem,11vw,3.2rem); overflow-wrap:anywhere; }} .hero-note {{ font-size:1rem; }} .hero-stats {{ gap:.35rem; }} .hero-stats span {{ font-size:.78rem; padding:.3rem .55rem; }} .theme-controls {{ justify-content:flex-start; }} .theme-controls button {{ min-height:42px; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:none; overflow:visible; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     h1 {{ position:relative; }} h1::after {{ content:""; display:block; width:4.5rem; height:.25rem; margin-top:.45rem; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--teal),var(--sun)); }} .task {{ border-top:3px solid var(--sun); }} .task-result {{ border:1px solid color-mix(in srgb,var(--teal) 32%,var(--line)); }} .task-result.correct {{ border-color:var(--teal); background:color-mix(in srgb,var(--teal) 12%,var(--paper)); }} .option:hover {{ border-color:var(--accent); background:color-mix(in srgb,var(--soft) 65%,var(--paper)); }} .map-node {{ fill:color-mix(in srgb,var(--soft) 82%,var(--sun) 18%); }} .map-edge {{ stroke:var(--teal); }}
-    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} header::after {{ width:76px; height:42px; margin-left:auto; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
+    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} header::after {{ width:76px; height:42px; margin-left:auto; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:none; overflow:visible; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     @media (max-width:700px) {{ .hero-completion {{ width:100%; }} .theme-controls {{ position:relative; z-index:2; }} }}
     @media (prefers-reduced-motion:reduce) {{ *,*::before,*::after {{ scroll-behavior:auto !important; transition:none !important; }} }}
     @media print {{ body {{ background:#fff; color:#000; }} aside,header,.view-switcher,.footer-nav,.practice,.no-print {{ display:none !important; }} .shell,.layout {{ max-width:none; display:block; margin:0; padding:0; }} .step,.step[hidden] {{ display:block !important; page-break-after:always; }} .content-block,.summary-step {{ border:0; padding:.3rem 0; break-inside:avoid; }} .quote > blockquote {{ display:block; }} .app-view[hidden] {{ display:none !important; }} .app-view:not([hidden]) {{ display:block !important; }} }}
