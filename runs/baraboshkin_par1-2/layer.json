@@ -2296,6 +2296,19 @@
      "by_model": false,
      "unit_id": "p036.03",
      "text_by_model": true
+    },
+    {
+     "id": "baraboshkin.fluvial_channel_example#c10",
+     "text": "Предшествующая закупорка русла могла вызвать усиленное блуждание; также отмечена попытка прорвать закупоренное русло.",
+     "kind": "inference",
+     "page_pdf": 36,
+     "page_print": null,
+     "quote": "Возможно, усиленное блуждание русла было вызвано его предшествующей закупоркой",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p036.02",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [

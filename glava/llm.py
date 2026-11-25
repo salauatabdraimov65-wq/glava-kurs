@@ -51,6 +51,8 @@ def _model(tier: str) -> str:
 def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path] | None = None,
              tag: str = "", max_retries: int = 3, effort: str | None = None) -> dict:
     model = _model(tier)
+    if "json" not in (system + user).lower():   # требование API для response_format=json_object
+        system = system + "\nОтвет — строго JSON."
     img_bytes = [Path(p).read_bytes() for p in (images or [])]
     key = hashlib.sha256(json.dumps([model, effort, system, user, [hashlib.sha256(b).hexdigest() for b in img_bytes]],
                                     ensure_ascii=False).encode()).hexdigest()

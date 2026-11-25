@@ -206,6 +206,19 @@
      "by_model": false,
      "unit_id": "p039.11",
      "text_by_model": true
+    },
+    {
+     "id": "barenblatt.pressure_diffusion_basics#c12",
+     "text": "В линейных нестационарных задачах условия задают на непроницаемых границах, скважинах, галереях и контурах питания; давление, напор или расход на скважинах и галереях, вообще говоря, зависят от времени.",
+     "kind": "observation",
+     "page_pdf": 39,
+     "page_print": null,
+     "quote": "Граничные условия в задачах линейной нестационарной фильтрации задаются на границах того же типа, что и в задачах напорной стационарной фильтрации: непроницаемых границах, скважинах, галереях, контурах питания.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p039.05",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [],
@@ -4948,6 +4961,19 @@
      "by_model": false,
      "unit_id": "p049.09",
      "text_by_model": true
+    },
+    {
+     "id": "barenblatt.first_flow_approximation#c6",
+     "text": "При точном решении скорость притока убывает как t⁻¹ᐟ²: u₀(0,t) = k(p₁−p₀)/(μ√(πκt)).",
+     "kind": "observation",
+     "page_pdf": 49,
+     "page_print": null,
+     "quote": "u_0(0, t) = k (p_1 - p_0) / \\mu \\sqrt{\\pi \\varkappa t}. \\tag{II.126}",
+     "source_kind": "formula",
+     "by_model": false,
+     "unit_id": "p049.08",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
@@ -5746,6 +5772,19 @@
      "by_model": false,
      "unit_id": "p050.16",
      "text_by_model": true
+    },
+    {
+     "id": "barenblatt.bounded_radial_reservoir#c7",
+     "text": "В круговом пласте радиуса R первое приближение для бесконечного пласта применимо до достижения зоной возмущения границы: при l=√(12κt) условие l=R даёт t₁=R²/(12κ).",
+     "kind": "inference",
+     "page_pdf": 50,
+     "page_print": null,
+     "quote": "Тогда вплоть до момента $t = t_1 = R^2/12\\varkappa t$ в первом приближении справедливо представление (II.135).",
+     "source_kind": "formula",
+     "by_model": false,
+     "unit_id": "p050.13",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
