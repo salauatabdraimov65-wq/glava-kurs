@@ -94,7 +94,14 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
     step_minutes = estimated_minutes(node, tasks)
     if step_minutes:
         blocks.append(f'<div class="step-time">≈ {step_minutes} мин · чтение и практика</div>')
-    blocks.append('<div class="lesson-column">')
+    step_key = html.escape(str(node.get("id", "")), quote=True)
+    if node_tasks:
+        blocks.append(
+            '<div class="step-mode-switcher" role="group" aria-label="Режим шага">'
+            f'<button type="button" data-step-mode="material" aria-pressed="true" aria-controls="lesson-{step_key}">Материал</button>'
+            f'<button type="button" data-step-mode="practice" aria-pressed="false" aria-controls="practice-{step_key}">Практика <span class="mode-count" data-mode-count>0 / {len(node_tasks)}</span></button></div>'
+        )
+    blocks.append(f'<div class="lesson-column" id="lesson-{step_key}">')
 
     layers = node.get("layers") or {}
     if layers.get("main"):
@@ -236,9 +243,11 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
     if not node_tasks:
         step_id = html.escape(str(node.get("id", "")), quote=True)
         blocks.append(f'<div class="step-complete"><button type="button" data-complete-step="{step_id}">Отметить шаг как изученный</button></div>')
+    else:
+        blocks.append('<div class="reading-actions"><button class="button-primary" type="button" data-open-practice>Перейти к практике →</button></div>')
     blocks.append("</div>")
     if node_tasks:
-        blocks.append('<aside class="content-block practice practice-column"><div class="exercise-kicker">ПРАКТИКА</div><h2>Проверьте понимание</h2><div class="step-reward" data-step-reward></div>')
+        blocks.append(f'<aside class="content-block practice practice-column" id="practice-{step_key}" hidden><div class="exercise-kicker">ПРАКТИКА</div><h2>Проверьте понимание</h2><div class="step-reward" data-step-reward></div>')
         claim_pages = {str(claim.get("id")): claim.get("page_pdf") for claim in claims if claim.get("id")}
         claim_texts = {str(claim.get("id")): claim for claim in claims if claim.get("id") and text_of(claim.get("text"))}
         for task in node_tasks:
@@ -266,6 +275,12 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
                 hint_markup = f'<div class="hint-box"><button type="button" class="hint-toggle" aria-expanded="false">Подсказка</button><div class="hint-content" hidden>{hint_content}</div></div>'
             blocks.append(f'<article class="task" data-task-id="{html.escape(str(task.get("id", "")), quote=True)}">{source_markup}{hint_markup}</article>')
         blocks.append("</aside>")
+    blocks.append(
+        '<details class="step-notes no-print"><summary>Мои заметки к шагу</summary><div class="notes-content">'
+        f'<label for="notes-{step_key}">Запишите выводы, вопросы или то, что хотите повторить.</label>'
+        f'<textarea id="notes-{step_key}" data-step-note maxlength="12000" rows="5"></textarea>'
+        '<span class="notes-status" role="status">Заметки сохраняются только на этом устройстве.</span></div></details>'
+    )
     return "".join(blocks)
 
 
@@ -497,7 +512,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
         step_id = ids[index]
         step_tasks = task_map.get(step_id, [])
         step_markup.append(
-            f'<section class="step" id="step-{index}" data-step-id="{html.escape(step_id, quote=True)}" hidden>'
+            f'<section class="step" id="step-{index}" data-step-id="{html.escape(step_id, quote=True)}" data-mode="material" hidden>'
             f'{render_node(node, step_tasks, illustrations, routes, base)}</section>'
         )
         label = text_of((node.get("layers") or {}).get("topic")) or str(node.get("title", f"Шаг {index + 1}"))
@@ -523,6 +538,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     geology_vars = geology_theme_vars()
     theme_css = Path(__file__).with_name("theme.css").read_text(encoding="utf-8")
     strata_markup = (Path(__file__).parent / "assets" / "strata.svg").read_text(encoding="utf-8")
+    terrain_markup = (Path(__file__).parent / "assets" / "terrain-background.svg").read_text(encoding="utf-8")
     return f'''<!doctype html>
 <html lang="ru">
 <head>
@@ -536,6 +552,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
   </style>
 </head>
 <body>
+<div class="ambient-terrain" aria-hidden="true">{terrain_markup}</div>
 <div class="shell">
   <div class="masthead"><div class="brand"><span class="brand-icon">{ui_icon('layers')}</span> ГЛАВА → КУРС</div><span class="offline-label"><span class="status-dot"></span> Доступно офлайн</span></div>
   <header class="hero">
@@ -553,7 +570,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     <aside id="course-nav" aria-label="Навигация курса"><div class="route-heading">{ui_icon('book')}<div><div class="nav-kicker">СОДЕРЖАНИЕ МОДУЛЯ</div><strong>Последовательность изучения</strong></div></div><div class="progress" role="progressbar" aria-label="Текущий шаг" aria-valuemin="1"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">Читайте материал, сверяйтесь с источником и закрепляйте его заданиями. Прогресс сохраняется на этом устройстве.</div></aside>
     <main id="course-content">
       <nav class="view-switcher" aria-label="Раздел курса">
-        <button type="button" data-show-view="course" aria-pressed="true">{ui_icon('book')} Материал</button>
+        <button type="button" data-show-view="course" aria-pressed="true">{ui_icon('book')} Курс</button>
         <button type="button" data-show-view="cards" aria-pressed="false">{ui_icon('cards')} Карточки</button>
         <button type="button" data-show-view="map" aria-pressed="false">{ui_icon('map')} Карта связей</button>
         <button type="button" data-show-view="summary" aria-pressed="false">{ui_icon('scroll')} Конспект</button>
@@ -576,17 +593,24 @@ const COMPLETE_KEY = 'course-completed-steps:' + CHAPTER;
 const CARD_KEY = 'course-cards:' + CHAPTER;
 const VIEW_KEY = 'course-view:' + CHAPTER;
 const THEME_KEY = 'course-theme-v2:' + CHAPTER;
+const MODE_KEY = 'course-step-modes:' + CHAPTER;
+const NOTES_KEY = 'course-notes:' + CHAPTER;
 let saved = {{}};
 let solved = {{}};
 let reviewed = {{}};
 let completedSteps = {{}};
+function loadRecord(key) {{
+  try {{ const value = JSON.parse(localStorage.getItem(key) || '{{}}'); return value && typeof value === 'object' && !Array.isArray(value) ? value : {{}}; }} catch (_) {{ return {{}}; }}
+}}
+const stepModes = loadRecord(MODE_KEY);
+const notes = loadRecord(NOTES_KEY);
 try {{ saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ solved = JSON.parse(localStorage.getItem(TASK_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ reviewed = JSON.parse(localStorage.getItem(CARD_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ completedSteps = JSON.parse(localStorage.getItem(COMPLETE_KEY) || '{{}}'); }} catch (_) {{}}
 let current = Math.min(Math.max(Number(saved.step) || 0, 0), Math.max(STEPS.length - 1, 0));
 const esc = (s) => String(s ?? '');
-function persist(key, value) {{ try {{ localStorage.setItem(key, JSON.stringify(value)); }} catch (_) {{}} }}
+function persist(key, value) {{ try {{ localStorage.setItem(key, JSON.stringify(value)); return true; }} catch (_) {{ return false; }} }}
 function removeStored(key) {{ try {{ localStorage.removeItem(key); }} catch (_) {{}} }}
 function updateLearningProgress() {{
   const taskCards = [...document.querySelectorAll('[data-task-id]')];
@@ -602,6 +626,7 @@ function syncCourseProgress() {{
     const stepId = step.dataset.stepId;
     const stepTasks = TASKS.filter(task => task.step_id === stepId && validTypes.includes(task.type) && task.id && task.prompt && Object.hasOwn(task, 'answer'));
     const done = stepTasks.length ? stepTasks.every(task => solved[task.id]) : Boolean(completedSteps[stepId]);
+    step.dataset.complete = String(done);
     if (done) {{
       completedCount += 1;
       if (!completedSteps[stepId]) {{
@@ -621,6 +646,8 @@ function syncCourseProgress() {{
       const solvedCount = stepTasks.filter(task => solved[task.id]).length;
       reward.textContent = done ? 'Все задания этапа выполнены' : 'Выполнено заданий: ' + solvedCount + ' из ' + stepTasks.length;
       reward.classList.toggle('is-earned', done);
+      const count = step.querySelector('[data-mode-count]');
+      if (count) count.textContent = solvedCount + ' / ' + stepTasks.length;
     }}
     const completionButton = step.querySelector('[data-complete-step]');
     if (completionButton) {{
@@ -631,6 +658,9 @@ function syncCourseProgress() {{
   document.getElementById('completed-steps').textContent = completedCount + ' / ' + STEPS.length;
   document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
   document.querySelector('.hero-track').setAttribute('aria-valuenow', String(completedCount));
+  const resumeButton = document.querySelector('[data-resume]');
+  resumeButton.textContent = STEPS.length && completedCount === STEPS.length ? 'Повторить материал →' : 'Продолжить обучение →';
+  resumeButton.disabled = !STEPS.length;
   if (changed) {{
     persist(COMPLETE_KEY, completedSteps);
   }}
@@ -664,10 +694,59 @@ function scrollToLesson() {{
   if (heading) {{ heading.tabIndex = -1; heading.focus({{preventScroll: true}}); }}
   step.scrollIntoView({{block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}});
 }}
+function setStepMode(step, mode, save = true) {{
+  const practice = step.querySelector('.practice-column');
+  const selected = mode === 'practice' && practice ? 'practice' : 'material';
+  step.dataset.mode = selected;
+  step.querySelector('.lesson-column').hidden = selected !== 'material';
+  if (practice) practice.hidden = selected !== 'practice';
+  step.querySelectorAll('[data-step-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.stepMode === selected)));
+  stepModes[step.dataset.stepId] = selected;
+  if (save) persist(MODE_KEY, stepModes);
+}}
+STEPS.forEach(step => {{
+  setStepMode(step, stepModes[step.dataset.stepId], false);
+  step.querySelectorAll('[data-step-mode]').forEach(button => button.addEventListener('click', () => setStepMode(step, button.dataset.stepMode)));
+  step.querySelector('[data-open-practice]')?.addEventListener('click', () => {{
+    setStepMode(step, 'practice');
+    step.querySelector('[data-step-mode="practice"]').focus({{preventScroll: true}});
+    step.scrollIntoView({{block: 'start'}});
+  }});
+  const input = step.querySelector('[data-step-note]');
+  const status = step.querySelector('.notes-status');
+  input.value = typeof notes[step.dataset.stepId] === 'string' ? notes[step.dataset.stepId] : '';
+  if (input.value) status.textContent = 'Сохранено на этом устройстве.';
+  input.addEventListener('input', () => {{
+    notes[step.dataset.stepId] = input.value;
+    const message = persist(NOTES_KEY, notes) ? 'Сохранено на этом устройстве.' : 'Сохранение недоступно. Скопируйте заметку перед закрытием страницы.';
+    if (status.textContent !== message) status.textContent = message;
+  }});
+}});
+function resumeLearning() {{
+  const nextIndex = STEPS.findIndex(step => step.dataset.complete !== 'true');
+  setView('course');
+  setStep(nextIndex < 0 ? 0 : nextIndex);
+  if (nextIndex < 0 && STEPS[current]) setStepMode(STEPS[current], 'material');
+  scrollToLesson();
+}}
 document.querySelectorAll('[data-show-view]').forEach(button => button.addEventListener('click', () => {{
-  setView(button.dataset.showView);
-  if (button.hasAttribute('data-resume')) scrollToLesson();
+  if (button.hasAttribute('data-resume')) resumeLearning();
+  else setView(button.dataset.showView);
 }}));
+document.addEventListener('click', event => {{
+  const link = event.target.closest('.task a[href^="#claim-"]');
+  if (!link) return;
+  const target = document.getElementById(link.getAttribute('href').slice(1));
+  const step = target?.closest('.step');
+  if (!step) return;
+  event.preventDefault();
+  setView('course');
+  setStep(STEPS.indexOf(step));
+  setStepMode(step, 'material');
+  target.tabIndex = -1;
+  target.focus({{preventScroll: true}});
+  target.scrollIntoView({{block: 'start'}});
+}});
 function setStep(index) {{
   if (!STEPS.length) return;
   current = Math.min(Math.max(index, 0), STEPS.length - 1);
@@ -709,7 +788,7 @@ document.querySelectorAll('[data-complete-step]').forEach(button => button.addEv
   }}
 }}));
 document.getElementById('print-summary').addEventListener('click', () => {{ setView('summary'); window.print(); }});
-document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(COMPLETE_KEY); location.reload(); }});
+document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(COMPLETE_KEY); removeStored(MODE_KEY); location.reload(); }});
 function taskElement(task) {{
   const card = document.querySelector(`[data-task-id="${{CSS.escape(task.id)}}"]`);
   if (!card) return;
