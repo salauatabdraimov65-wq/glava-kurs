@@ -111,7 +111,7 @@ function initPressureExplorer(block) {
     nodes.push(element('path', {d: points + ` L${right},${py(20)} L${left},${py(20)} Z`, class: 'pressure-area'}));
     nodes.push(element('path', {d: points, class: 'pressure-curve', 'data-near-pressure': pressureAt(0, diffusivity, seconds).toFixed(6), 'data-far-pressure': pressureAt(100, diffusivity, seconds).toFixed(6)}));
     drawing.replaceChildren(...nodes);
-    chart.querySelector('desc').textContent = `κ = ${kappaLabel}, t = ${timeLabel}. Давление у скважины ${pressureAt(0, diffusivity, seconds).toFixed(2)} МПа, на расстоянии 100 м ${pressureAt(100, diffusivity, seconds).toFixed(2)} МПа. Симуляция по формуле главы, условные параметры.`;
+    chart.querySelector('desc').textContent = `κ = ${kappaLabel}, t = ${timeLabel}. Давление в начальной точке ${pressureAt(0, diffusivity, seconds).toFixed(2)} МПа, на расстоянии 100 м ${pressureAt(100, diffusivity, seconds).toFixed(2)} МПа. Симуляция по формуле главы, условные параметры.`;
   }
   kappa.addEventListener('input', draw);
   time.addEventListener('input', draw);

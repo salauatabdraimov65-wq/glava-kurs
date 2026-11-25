@@ -5,14 +5,50 @@ from __future__ import annotations
 import json
 import shutil
 import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 
-from course.build import html_page, inline_text, render_node
+from course.build import html_page, inline_text, render_map, render_node
+from course.domain_theme import art_css, contrast, load_domain, readable_on
 from course.interactives import render_book_tables
 
 
 class CourseBlocksTest(unittest.TestCase):
+    def test_domain_override_uses_its_own_art_and_plain_fallback(self) -> None:
+        with tempfile.TemporaryDirectory(prefix="домен с пробелами ") as temporary:
+            folder = Path(temporary) / "geology"
+            folder.mkdir()
+            (folder / "styleguide.json").write_text('{"course":{"accent":"#246378"}}', encoding="utf-8")
+            domain = load_domain(str(folder))
+            self.assertEqual(art_css(domain["folder"]), ("", []))
+            (folder / "art").mkdir()
+            (folder / "art" / "hills.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg"/>', encoding="utf-8")
+            css, names = art_css(domain["folder"])
+            self.assertEqual(names, ["hills"])
+            self.assertIn("--art-hills:", css)
+            page = html_page({"nodes": [{"id": "new", "title": "Новая тема"}]}, {}, {}, {}, folder, domain=str(folder))
+            self.assertIn('data-art="hills"', page)
+            self.assertIn("--accent:#246378", page)
+            self.assertNotIn("--art-hero:", page)
+
+    def test_map_wraps_long_titles_without_losing_or_inserting_markup(self) -> None:
+        title = "Незнакомое очень длинное название шага для узкого экрана <script>"
+        rendered = render_map([{"id": "a", "title": title, "links": [{"target": "b", "type": "prerequisite"}]},
+                               {"id": "b", "title": "Второй шаг"}])
+        self.assertIn('viewBox="0 0 360 ', rendered)
+        self.assertGreater(rendered.count("<tspan"), 3)
+        self.assertIn("&lt;script&gt;", rendered)
+        self.assertNotIn("<script>", rendered)
+        self.assertIn("предпосылка", rendered)
+
+    def test_caption_contrast_covers_paper_and_tinted_panels(self) -> None:
+        for paper, panels in [("#F8F3E8", ("#F1E9DA", "#F7E5CF")),
+                              ("#0F1419", ("#1A2129", "#383025"))]:
+            color = readable_on("#F0A35E", paper, surfaces=panels)
+            for background in (paper, *panels):
+                self.assertGreaterEqual(contrast(color, background), 4.6)
+
     def test_incomplete_ocr_formula_remains_readable(self) -> None:
         self.assertEqual(inline_text("$p_{0}"), "$p_{0}")
         self.assertIn("p<sub>0</sub>", inline_text("$p_{0}$ и $"))

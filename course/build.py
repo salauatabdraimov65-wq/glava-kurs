@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import textwrap
 import re
 from pathlib import Path
 from typing import Any
@@ -481,9 +482,17 @@ def render_map(nodes: list[dict[str, Any]]) -> str:
     if not nodes:
         return ""
     step_ids = {str(node.get("id", "")): index for index, node in enumerate(nodes)}
-    height = max(180, 100 + len(nodes) * 110)
+    labels = [text_of((node.get("layers") or {}).get("topic")) or str(node.get("title", f"Шаг {i + 1}"))
+              for i, node in enumerate(nodes)]
+    wrapped = [textwrap.wrap(label, width=23) or [""] for label in labels]
+    row_heights = [max(70, 24 + len(lines) * 22) for lines in wrapped]
+    positions = []
+    height = 28
+    for row_height in row_heights:
+        positions.append(height)
+        height += row_height + 60
     pieces = [
-        f'<svg class="link-map" viewBox="0 0 800 {height}" role="img" aria-labelledby="map-title map-desc">',
+        f'<svg class="link-map" viewBox="0 0 360 {height}" role="img" aria-labelledby="map-title map-desc">',
         '<title id="map-title">Карта связей шагов</title>',
         '<desc id="map-desc">Шаги и их связи из учебного слоя</desc>',
         '<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>',
@@ -491,7 +500,8 @@ def render_map(nodes: list[dict[str, Any]]) -> str:
     relations = []
     for source_index, node in enumerate(nodes):
         source_id = str(node.get("id", ""))
-        source_y = 45 + source_index * 110
+        source_y = positions[source_index]
+        source_height = row_heights[source_index]
         for relation in node.get("links") or []:
             if not isinstance(relation, dict) or not relation.get("target"):
                 continue
@@ -503,26 +513,28 @@ def render_map(nodes: list[dict[str, Any]]) -> str:
             }.get(relation_type, relation_type)
             if target_id in step_ids:
                 target_index = step_ids[target_id]
-                target_y = 45 + target_index * 110
+                target_y = positions[target_index]
+                target_height = row_heights[target_index]
                 if source_index < target_index:
-                    path = f"M400 {source_y + 64} C400 {source_y + 82}, 400 {target_y - 18}, 400 {target_y}"
+                    path = f"M210 {source_y + source_height} V{target_y}"
                 elif source_index > target_index:
-                    path = f"M180 {source_y + 32} C70 {source_y + 32}, 70 {target_y + 32}, 180 {target_y + 32}"
+                    path = f"M76 {source_y + source_height // 2} C16 {source_y + source_height // 2}, 16 {target_y + target_height // 2}, 76 {target_y + target_height // 2}"
                 else:
-                    path = f"M620 {source_y + 24} C750 {source_y + 24}, 750 {source_y + 52}, 620 {source_y + 52}"
+                    path = f"M340 {source_y + 18} C360 {source_y + 18}, 360 {source_y + source_height - 18}, 340 {source_y + source_height - 18}"
                 pieces.append(f'<path class="map-edge" d="{path}" marker-end="url(#arrow)"/>')
                 if source_index < target_index:
-                    pieces.append(f'<text class="edge-label" x="410" y="{(source_y + target_y + 64) // 2}">{html.escape(label)}</text>')
+                    pieces.append(f'<text class="edge-label" x="90" y="{source_y + source_height + 35}">{html.escape(label)}</text>')
             note = str(relation.get("note", ""))
             source_name = text_of((node.get("layers") or {}).get("topic")) or str(node.get("title", source_id))
             target_name = next((text_of((item.get("layers") or {}).get("topic")) or str(item.get("title", target_id)) for item in nodes if str(item.get("id", "")) == target_id), target_id)
             relations.append(f'<li><strong>{html.escape(source_name)}</strong> → {html.escape(target_name)} <span class="muted">({html.escape(label)})</span>{f": {html.escape(note)}" if note else ""}</li>')
-    for index, node in enumerate(nodes):
-        y = 45 + index * 110
-        label = text_of((node.get("layers") or {}).get("topic")) or str(node.get("title", f"Шаг {index + 1}"))
-        pieces.append(f'<rect class="map-node" x="180" y="{y}" width="440" height="64" rx="14"/>')
-        pieces.append(f'<text class="map-number" x="205" y="{y + 39}">{index + 1}</text>')
-        pieces.append(f'<text class="map-label" x="240" y="{y + 39}">{html.escape(label[:62])}</text>')
+    for index, lines in enumerate(wrapped):
+        y, row_height = positions[index], row_heights[index]
+        pieces.append(f'<rect class="map-node" x="76" y="{y}" width="264" height="{row_height}" rx="14"/>')
+        pieces.append(f'<text class="map-number" x="88" y="{y + 30}">{index + 1}</text>')
+        spans = "".join(f'<tspan x="122" dy="{0 if line_index == 0 else 22}">{html.escape(line)}</tspan>'
+                        for line_index, line in enumerate(lines))
+        pieces.append(f'<text class="map-label" x="122" y="{y + 30}">{spans}</text>')
     pieces.append("</svg>")
     relations_markup = "<ul class=\"relation-list\">" + "".join(relations) + "</ul>" if relations else "<p class=\"muted\">В исходных данных нет связей между шагами.</p>"
     return "".join(pieces) + relations_markup
@@ -659,7 +671,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 
     domain_data = load_domain(chapter_domain(str(layer.get("chapter", "")), domain))
     tokens = domain_tokens(domain_data)
-    art_style, art_names = art_css(domain_data["name"])
+    art_style, art_names = art_css(domain_data["folder"])
     _SCANS.clear()
     _SCANS.update(find_scans(base))
     videos = find_videos(base)
@@ -779,7 +791,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
       <div class="hero-completion"><div><span>Пройдено уроков</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные уроки" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
     </header>
     <div class="resume-card"><div><div class="nav-kicker" id="resume-label">СЛЕДУЮЩИЙ УРОК</div><h2 id="resume-title"></h2><p id="resume-description" class="muted"></p></div><button class="button-primary" type="button" data-show-view="course" data-resume>Начать обучение →</button></div>
-    <section class="legend-panel" aria-labelledby="legend-title"><h2 id="legend-title">Условные обозначения</h2><p class="muted">Каждый тип шага отмечен своим цветом и знаком, как слой на карте. Так же окрашен маршрут в меню и полоса прогресса.</p><ul class="legend-list">{kinds_legend}</ul>{domain_legend_markup}</section>
+    <section class="legend-panel" aria-labelledby="legend-title"><h2 id="legend-title">Условные обозначения</h2><p class="muted">Тип шага подписан рядом с названием. Маршрут помогает найти текущий урок и увидеть пройденное.</p><ul class="legend-list">{kinds_legend}</ul>{domain_legend_markup}</section>
     <div class="course-toolbar"><div class="learning-status">{ui_icon('check')}<span>Выполнено заданий: <b id="solved-tasks" aria-live="polite">0 / {task_count}</b></span></div><span class="muted">Материал → Практика → Итог урока</span></div>
     <section id="course-nav" aria-label="Программа курса"><div class="route-heading"><div><div class="nav-kicker">Программа курса</div><h2>Уроки в порядке изучения</h2></div></div><nav class="step-list core-log">{''.join(nav_markup)}</nav><div class="nav-footnote">Прогресс и личные заметки сохраняются на этом устройстве.</div></section>
     </section>

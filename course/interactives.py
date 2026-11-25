@@ -69,7 +69,7 @@ def render_pressure(node_id: str, pages: Any) -> str:
     return (
         '<section class="content-block pressure-explorer">'
         f'<h2>Калькулятор давления {page}</h2>'
-        '<p>Меняйте пьезопроводность и время: наблюдайте, как меняется давление на расстоянии от скважины.</p>'
+        '<p>Меняйте пьезопроводность и время: наблюдайте, как меняется давление с расстоянием от начальной точки.</p>'
         '<div class="pressure-controls">'
         f'<label for="kappa-{key}">Пьезопроводность κ <output data-kappa-output for="kappa-{key}"></output>'
         f'<input id="kappa-{key}" data-kappa type="range" min="0.1" max="5" step="0.1" value="1"></label>'
@@ -78,7 +78,7 @@ def render_pressure(node_id: str, pages: Any) -> str:
         '<span class="range-limits"><span>10 с</span><span>30 сут · логарифмическая шкала</span></span></label>'
         '</div>'
         f'<svg class="pressure-chart" role="img" aria-labelledby="pressure-title-{key} pressure-desc-{key}" viewBox="0 0 640 340">'
-        f'<title id="pressure-title-{key}">Давление от расстояния до скважины</title>'
+        f'<title id="pressure-title-{key}">Давление от расстояния до начальной точки</title>'
         f'<desc id="pressure-desc-{key}"></desc><g data-pressure-drawing></g></svg>'
         '<p class="simulation-caption">симуляция по формуле главы, условные параметры '
         '<span class="badge hypothesis">гипотеза</span> <span class="badge">написано моделью</span></p>'

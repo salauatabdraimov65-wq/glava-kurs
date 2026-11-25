@@ -18,7 +18,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 HEX = re.compile(r"#[0-9A-Fa-f]{6}")
 
 # Neutral fallback: used only when the domain package has no usable colours.
-NEUTRAL_LIGHT = {"paper": "#F3E4C4", "paper_2": "#EAD6AE", "ink": "#2A1C10", "muted": "#6B5238"}
+NEUTRAL_LIGHT = {"paper": "#F8F3E8", "paper_2": "#F1E9DA", "ink": "#30291F", "muted": "#695A47"}
 NEUTRAL_DARK = {"paper": "#11161B", "paper_2": "#1A2129", "ink": "#F1E6CF", "muted": "#A9B0B8"}
 NEUTRAL_STRATA = ["#E9B949", "#4FA88B", "#5B8DEF", "#E0736A", "#9C7AD6", "#D9A26B"]
 STATUS = {"good": "#1F8A4C", "bad": "#C2412D"}
@@ -53,12 +53,13 @@ def mix(a: str, b: str, share_b: float) -> str:
     return _hex(tuple(x + (y - x) * share_b for x, y in zip(ra, rb)))  # type: ignore[arg-type]
 
 
-def readable_on(color: str, background: str, target: float = 4.6) -> str:
-    """Shift a colour toward black or white until it reads as text on background."""
-    toward = "#000000" if _luminance(background) > 0.35 else "#FFFFFF"
+def readable_on(color: str, background: str, target: float = 4.6, *, surfaces: tuple[str, ...] = ()) -> str:
+    """Shift a colour until it reads on the page and its tinted panels."""
+    backgrounds = (background, *surfaces)
+    toward = max(("#000000", "#FFFFFF"), key=lambda value: min(contrast(value, bg) for bg in backgrounds))
     for step in range(0, 101, 4):
         candidate = mix(color, toward, step / 100)
-        if contrast(candidate, background) >= target:
+        if all(contrast(candidate, bg) >= target for bg in backgrounds):
             return candidate
     return toward
 
@@ -109,6 +110,7 @@ def load_domain(domain: str) -> dict[str, Any]:
     misconceptions = _read(folder / "misconceptions.json", [])
     return {
         "name": folder.name,
+        "folder": str(folder.resolve()),
         "styleguide": styleguide if isinstance(styleguide, dict) else {},
         "misconceptions": {
             str(item["id"]): str(item.get("text", ""))
@@ -210,18 +212,22 @@ def theme(domain_data: dict[str, Any]) -> dict[str, Any]:
 
     def scheme(base: dict[str, str]) -> list[str]:
         paper = base["paper"]
+        surfaces = (base["paper_2"], mix(paper, accent, .18), mix(paper, accent_2, .16),
+                    mix(paper, STATUS["good"], .14), mix(paper, STATUS["bad"], .12))
+        def text(color: str) -> str:
+            return readable_on(color, paper, surfaces=surfaces)
         return [
-            f"--paper:{paper}", f"--paper-2:{base['paper_2']}", f"--ink:{base['ink']}", f"--muted:{base['muted']}",
+            f"--paper:{paper}", f"--paper-2:{base['paper_2']}", f"--ink:{base['ink']}", f"--muted:{text(base['muted'])}",
             f"--rule:{mix(paper, base['ink'], .22)}", f"--rule-soft:{mix(paper, base['ink'], .1)}",
-            f"--accent-text:{readable_on(accent, paper)}", f"--accent-2-text:{readable_on(accent_2, paper)}",
+            f"--accent-text:{text(accent)}", f"--accent-2-text:{text(accent_2)}",
             f"--accent-wash:{mix(paper, accent, .18)}", f"--accent-2-wash:{mix(paper, accent_2, .16)}",
-            f"--good:{readable_on(STATUS['good'], paper)}", f"--good-wash:{mix(paper, STATUS['good'], .14)}",
-            f"--bad:{readable_on(STATUS['bad'], paper)}", f"--bad-wash:{mix(paper, STATUS['bad'], .12)}",
+            f"--good:{text(STATUS['good'])}", f"--good-wash:{mix(paper, STATUS['good'], .14)}",
+            f"--bad:{text(STATUS['bad'])}", f"--bad-wash:{mix(paper, STATUS['bad'], .12)}",
         ]
 
     light_vars = scheme(light) + light_vars
     dark_vars = scheme(dark) + dark_vars
-    # The core-box navigation stays dark in both themes, like a map's legend panel.
+    # Navigation uses dark tokens; CSS remaps them to paper in the light theme.
     common += [
         f"--night:{dark['paper']}", f"--night-2:{dark['paper_2']}", f"--night-ink:{dark['ink']}",
         f"--night-muted:{dark['muted']}", f"--night-rule:{mix(dark['paper'], dark['ink'], .2)}",
@@ -250,7 +256,13 @@ def art_css(domain_name: str) -> tuple[str, list[str]]:
     """
     import base64
 
-    folders = [PROJECT_ROOT / "domain" / domain_name / "art", Path(__file__).resolve().parent / "art-staging" / domain_name]
+    folder = Path(domain_name)
+    is_path = folder.is_absolute() or "/" in domain_name or "\\" in domain_name
+    folder = folder if is_path else PROJECT_ROOT / "domain" / domain_name
+    folders = [folder / "art"]
+    # Staging belongs only to built-in domains; an override must not inherit unrelated art.
+    if folder.resolve().parent == (PROJECT_ROOT / "domain").resolve():
+        folders.append(Path(__file__).resolve().parent / "art-staging" / folder.name)
     found: dict[str, Path] = {}
     for folder in folders:
         if folder.is_dir():
