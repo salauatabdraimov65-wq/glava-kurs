@@ -85,6 +85,7 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
     step_minutes = estimated_minutes(node, tasks)
     if step_minutes:
         blocks.append(f'<div class="step-time">≈ {step_minutes} мин · чтение и практика</div>')
+    blocks.append('<div class="lesson-column">')
 
     layers = node.get("layers") or {}
     if layers.get("main"):
@@ -224,6 +225,7 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         blocks.append(f'<section class="content-block"><h2>Видео</h2><video controls preload="metadata" src="{src}">Ваш браузер не поддерживает видео.</video></section>')
 
     supported_task_types = {"single", "multiple", "order", "gap", "calc"}
+    blocks.append("</div>")
     node_tasks = [
         task for task in tasks
         if task.get("step_id") == node.get("id")
@@ -233,8 +235,9 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         and "answer" in task
     ]
     if node_tasks:
-        blocks.append('<section class="content-block practice"><h2>Проверьте себя</h2>')
+        blocks.append('<aside class="content-block practice practice-column"><div class="exercise-kicker">ВАША ПРАКТИКА</div><h2>Проверьте себя</h2>')
         claim_pages = {str(claim.get("id")): claim.get("page_pdf") for claim in claims if claim.get("id")}
+        claim_texts = {str(claim.get("id")): claim for claim in claims if claim.get("id") and text_of(claim.get("text"))}
         for task in node_tasks:
             pages_for_task = sorted({claim_pages[claim_id] for claim_id in task.get("claim_ids", []) if claim_id in claim_pages and claim_pages[claim_id]})
             source = ", ".join(str(source_page) for source_page in pages_for_task) or page
@@ -246,8 +249,20 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
                     claim_links.append(f'<a href="#{anchor}">{short_id}</a>')
             claim_text = " · утверждение " + ", ".join(claim_links) if claim_links else ""
             source_markup = f'<span data-task-source class="page">стр. {html.escape(str(source))}{claim_text}</span>' if source else ""
-            blocks.append(f'<article class="task" data-task-id="{html.escape(str(task.get("id", "")), quote=True)}">{source_markup}</article>')
-        blocks.append("</section>")
+            hint_claims = [claim_texts[claim_id] for claim_id in task.get("claim_ids", []) if claim_id in claim_texts]
+            hint_markup = ""
+            if hint_claims:
+                hint_parts = []
+                for claim in hint_claims:
+                    model_badge = '<span class="badge">написано моделью</span>' if claim.get("by_model") is True else ""
+                    hint_parts.append(
+                        f'<p>{inline_text(text_of(claim.get("text")))} '
+                        f'<span class="page">стр. {html.escape(str(claim.get("page_pdf") or page))}</span> {model_badge}</p>'
+                    )
+                hint_content = "".join(hint_parts)
+                hint_markup = f'<div class="hint-box"><button type="button" class="hint-toggle" aria-expanded="false">Подсказка</button><div class="hint-content" hidden>{hint_content}</div></div>'
+            blocks.append(f'<article class="task" data-task-id="{html.escape(str(task.get("id", "")), quote=True)}">{source_markup}{hint_markup}</article>')
+        blocks.append("</aside>")
     return "".join(blocks)
 
 
@@ -463,6 +478,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     h1 {{ font-size:clamp(1.6rem,4vw,2.35rem); line-height:1.2; margin:.3rem 0 .8rem; }} h2 {{ font-size:1.25rem; margin:0 0 .65rem; }} h3 {{ font-size:1rem; margin:.9rem 0 .2rem; color:var(--muted); }}
     button {{ color:inherit; border:1px solid var(--line); background:var(--paper); border-radius:.8rem; min-height:44px; padding:.55rem .8rem; cursor:pointer; box-shadow:0 2px 6px rgba(30,24,70,.04); transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease; }} button:hover {{ border-color:var(--accent); transform:translateY(-1px); box-shadow:0 5px 12px rgba(104,73,237,.12); }} button:focus-visible,input:focus-visible,summary:focus-visible {{ outline:3px solid var(--accent); outline-offset:2px; }}
     .layout {{ display:grid; grid-template-columns:260px minmax(0,1fr); gap:1rem; margin-top:1rem; }} .layout[data-view="course"] {{ grid-template-columns:260px minmax(0,1fr); }} .layout[data-view="cards"],.layout[data-view="map"],.layout[data-view="summary"] {{ grid-template-columns:minmax(0,1fr); }} aside,.content-block,.task {{ background:var(--paper); border:1px solid var(--line); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} aside {{ align-self:start; position:sticky; top:1rem; border-top:4px solid var(--teal); }} .step-list {{ display:grid; gap:.4rem; margin-top:.7rem; }}
+    .step {{ display:grid; grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr); align-items:start; gap:1rem; }} .lesson-column {{ min-width:0; }} .practice-column {{ min-width:0; position:sticky; top:1rem; border-top:4px solid var(--warm); }} .exercise-kicker {{ color:var(--warm); font-size:.75rem; font-weight:800; letter-spacing:.12em; }} .hint-box {{ margin:.6rem 0; }} .hint-toggle {{ min-height:38px; color:var(--accent); }} .hint-content {{ margin-top:.5rem; padding:.6rem .75rem; border-radius:.75rem; background:var(--soft); }} .hint-content[hidden] {{ display:none !important; }}
     .step-link {{ display:flex; gap:.65rem; align-items:center; text-align:left; width:100%; min-height:48px; }} .step-link[aria-current="step"] {{ border-color:var(--accent); background:linear-gradient(110deg,var(--soft),var(--paper)); box-shadow:inset 3px 0 var(--accent); }} .step-number {{ flex:none; display:grid; place-items:center; border-radius:99px; width:1.8rem; height:1.8rem; background:var(--soft); color:var(--accent); font-weight:750; }}
     .progress {{ height:.65rem; border-radius:99px; overflow:hidden; background:var(--line); margin:.8rem 0 .25rem; }} .progress span {{ display:block; height:100%; background:linear-gradient(90deg,var(--teal),var(--accent),var(--warm)); width:0; transition:width .2s; }} .muted,.book-title {{ color:var(--muted); }} .book-title {{ margin-top:-.45rem; }} .step-time {{ display:inline-block; margin:.1rem 0 1rem; padding:.25rem .7rem; color:var(--teal); background:color-mix(in srgb,var(--teal) 10%,var(--paper)); border-radius:99px; font-size:.9rem; }} .paragraph {{ margin:.35rem 0 .75rem; }} .page {{ display:inline-block; white-space:nowrap; font-size:.78rem; color:var(--accent); background:var(--soft); border-radius:99px; padding:.08rem .45rem; margin-left:.25rem; }} .badge {{ font-size:.78rem; color:var(--accent); background:var(--soft); border:1px solid var(--line); border-radius:99px; padding:.08rem .45rem; }} .hypothesis {{ color:var(--warm); border-color:var(--warm); }} .formula {{ white-space:nowrap; }}
     .content-block {{ margin:0 0 .85rem; overflow-wrap:anywhere; border-left:4px solid var(--teal); }} .content-block:nth-of-type(3n+1) {{ border-left-color:var(--accent); }} .content-block:nth-of-type(3n+2) {{ border-left-color:var(--warm); }} .content-block:last-child {{ margin-bottom:0; }} .terms {{ display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; padding:0; }} .terms li {{ padding:.25rem .7rem; border:1px solid color-mix(in srgb,var(--accent) 22%,var(--line)); border-radius:99px; background:var(--soft); color:var(--accent); }}
@@ -470,19 +486,19 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     .task-tools {{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.7rem; }} .task-result {{ margin-top:.65rem; padding:.7rem; border-radius:.65rem; background:var(--soft); }} .task-result[hidden] {{ display:none; }} .gap-input {{ width:min(100%,16rem); border:1px solid var(--line); border-radius:.45rem; padding:.4rem; background:var(--paper); color:var(--ink); }} .order-item {{ display:flex; gap:.4rem; align-items:center; }} .order-item .drag-handle {{ touch-action:none; cursor:grab; min-width:44px; }} .order-item.dragging {{ opacity:.55; }} .order-item .order-text {{ flex:1; }}
     .footer-nav {{ display:flex; justify-content:space-between; gap:.75rem; margin:1rem 0 0; }} .footer-nav button {{ min-width:7rem; }}
     .view-switcher,.theme-controls,.card-actions {{ display:flex; flex-wrap:wrap; gap:.45rem; }} .view-switcher {{ margin:1rem 0 0; padding:.35rem; background:color-mix(in srgb,var(--accent) 8%,var(--paper)); border:1px solid var(--line); border-radius:1rem; }} .view-switcher button[aria-pressed="true"],.card-actions button[aria-pressed="true"] {{ background:linear-gradient(120deg,var(--soft),var(--paper)); border-color:var(--accent); color:var(--accent); font-weight:700; }} .app-view[hidden] {{ display:none !important; }}
-    .cards-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:.75rem; }} .review-card {{ min-width:0; background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--soft) 48%,var(--paper))); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} .review-card:nth-child(3n+2) {{ border-top-color:var(--teal); }} .review-card:nth-child(3n) {{ border-top-color:var(--warm); }} .review-card h2 {{ overflow-wrap:anywhere; }} .review-card .book-title {{ margin:.2rem 0 .7rem; }} .card-actions {{ margin-top:.6rem; }} .review-card .card-actions button {{ flex:1 1 auto; }} .task-source {{ margin:.1rem 0 .45rem; }}
+    .cards-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:.75rem; }} .review-card {{ min-width:0; background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--soft) 48%,var(--paper))); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} .review-card:nth-child(3n+2) {{ border-top-color:var(--teal); }} .review-card:nth-child(3n) {{ border-top-color:var(--warm); }} .review-card h2 {{ overflow-wrap:anywhere; }} .review-card .book-title {{ margin:.2rem 0 .7rem; }} .card-actions {{ margin-top:.6rem; }} .review-card .card-actions button {{ flex:1 1 auto; }} .task-source {{ margin:.1rem 0 .45rem; }} .xp-chip {{ padding:.35rem .75rem; border-radius:99px; background:linear-gradient(110deg,var(--sun),var(--warm)); color:#352342; font-weight:800; box-shadow:0 3px 12px color-mix(in srgb,var(--warm) 26%,transparent); }}
     .link-map {{ display:block; width:100%; height:auto; max-height:75vh; color:var(--accent); }} .map-edge {{ fill:none; stroke:currentColor; stroke-width:2.5; }} .map-node {{ fill:var(--soft); stroke:var(--line); stroke-width:2; }} .map-label {{ fill:var(--ink); font:600 17px system-ui,sans-serif; }} .map-number {{ fill:var(--accent); font:700 18px system-ui,sans-serif; }} .edge-label {{ fill:var(--muted); font:12px system-ui,sans-serif; }} .relation-list {{ padding-left:1.4rem; overflow-wrap:anywhere; }} .relation-list li {{ margin:.5rem 0; }}
     h1 {{ position:relative; }} h1::after {{ content:""; display:block; width:4.5rem; height:.25rem; margin-top:.45rem; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--teal),var(--sun)); }} .task {{ border-top:3px solid var(--sun); }} .task-result {{ border:1px solid color-mix(in srgb,var(--teal) 32%,var(--line)); }} .task-result.correct {{ border-color:var(--teal); background:color-mix(in srgb,var(--teal) 12%,var(--paper)); }} .option:hover {{ border-color:var(--accent); background:color-mix(in srgb,var(--soft) 65%,var(--paper)); }} .map-node {{ fill:color-mix(in srgb,var(--soft) 82%,var(--sun) 18%); }} .map-edge {{ stroke:var(--teal); }}
-    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} aside {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
+    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     @media (prefers-reduced-motion:reduce) {{ *,*::before,*::after {{ scroll-behavior:auto !important; transition:none !important; }} }}
     @media print {{ body {{ background:#fff; color:#000; }} aside,header,.view-switcher,.footer-nav,.practice,.no-print {{ display:none !important; }} .shell,.layout {{ max-width:none; display:block; margin:0; padding:0; }} .step,.step[hidden] {{ display:block !important; page-break-after:always; }} .content-block,.summary-step {{ border:0; padding:.3rem 0; break-inside:avoid; }} .quote > blockquote {{ display:block; }} .app-view[hidden] {{ display:none !important; }} .app-view:not([hidden]) {{ display:block !important; }} }}
   </style>
 </head>
 <body>
 <div class="shell">
-  <header><div><div class="muted">Офлайн-курс</div><strong>{chapter_name}</strong></div><div class="theme-controls"><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></header>
+  <header><div><div class="muted">Офлайн-курс · учитесь короткими шагами</div><strong>{chapter_name}</strong></div><div class="theme-controls"><span class="xp-chip" id="xp-total" aria-live="polite">0 XP</span><button type="button" data-show-view="course">Продолжить</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></header>
   <div class="layout">
-    <aside id="course-nav" aria-label="Навигация курса"><strong>Шаги курса</strong><div class="progress" role="progressbar" aria-label="Прогресс по шагам"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav></aside>
+    <aside id="course-nav" aria-label="Навигация курса"><strong>Ваш путь</strong><div class="progress" role="progressbar" aria-label="Прогресс по шагам"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav></aside>
     <main id="course-content">
       <nav class="view-switcher" aria-label="Раздел курса">
         <button type="button" data-show-view="course" aria-pressed="true">Шаги</button>
@@ -503,19 +519,24 @@ const STEPS = [...document.querySelectorAll('.step')];
 const CHAPTER = {json.dumps(str(layer.get('chapter', 'course')), ensure_ascii=False)};
 const STORE_KEY = 'course-progress:' + CHAPTER;
 const TASK_KEY = 'course-tasks:' + CHAPTER;
+const XP_KEY = 'course-xp:' + CHAPTER;
 const CARD_KEY = 'course-cards:' + CHAPTER;
 const VIEW_KEY = 'course-view:' + CHAPTER;
 const THEME_KEY = 'course-theme:' + CHAPTER;
 let saved = {{}};
 let solved = {{}};
 let reviewed = {{}};
+let xp = 0;
 try {{ saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ solved = JSON.parse(localStorage.getItem(TASK_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ reviewed = JSON.parse(localStorage.getItem(CARD_KEY) || '{{}}'); }} catch (_) {{}}
+try {{ xp = Number(localStorage.getItem(XP_KEY)) || 0; }} catch (_) {{}}
 let current = Math.min(Math.max(Number(saved.step) || 0, 0), Math.max(STEPS.length - 1, 0));
 const esc = (s) => String(s ?? '');
 function persist(key, value) {{ try {{ localStorage.setItem(key, JSON.stringify(value)); }} catch (_) {{}} }}
 function removeStored(key) {{ try {{ localStorage.removeItem(key); }} catch (_) {{}} }}
+function updateXp() {{ document.getElementById('xp-total').textContent = xp + ' XP'; }}
+updateXp();
 let theme = '';
 try {{ theme = localStorage.getItem(THEME_KEY) || ''; }} catch (_) {{}}
 if (!theme) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -533,7 +554,7 @@ function setView(name) {{
   document.getElementById('course-nav').hidden = name !== 'course';
   document.querySelector('.layout').dataset.view = name;
   document.body.dataset.view = name;
-  document.querySelectorAll('[data-show-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showView === name)));
+  document.querySelectorAll('.view-switcher [data-show-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showView === name)));
   try {{ localStorage.setItem(VIEW_KEY, name); }} catch (_) {{}}
 }}
 document.querySelectorAll('[data-show-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.showView)));
@@ -568,7 +589,7 @@ document.querySelectorAll('.review-card').forEach(card => {{
   }});
 }});
 document.getElementById('print-summary').addEventListener('click', () => {{ setView('summary'); window.print(); }});
-document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); location.reload(); }});
+document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(XP_KEY); location.reload(); }});
 function taskElement(task) {{
   const card = document.querySelector(`[data-task-id="${{CSS.escape(task.id)}}"]`);
   if (!card) return;
@@ -614,7 +635,13 @@ function taskElement(task) {{
   }}
   const controls = document.createElement('div'); controls.className = 'task-tools'; const check = document.createElement('button'); check.type = 'button'; check.textContent = 'Проверить'; controls.append(check); card.append(controls);
   const result = document.createElement('div'); result.className = 'task-result'; result.hidden = true; result.setAttribute('aria-live', 'polite'); card.append(result);
-  if (solved[task.id]) showResult(true);
+  card.querySelectorAll('.hint-toggle').forEach(button => button.addEventListener('click', () => {{
+    const hint = button.nextElementSibling;
+    hint.hidden = !hint.hidden;
+    button.setAttribute('aria-expanded', String(!hint.hidden));
+    button.textContent = hint.hidden ? 'Подсказка' : 'Скрыть подсказку';
+  }}));
+  if (solved[task.id]) {{ showResult(true); check.disabled = true; }}
   function expectedAnswer() {{
     const optionText = id => (task.options || []).find(option => String(option.id) === String(id))?.text ?? String(id);
     if (task.type === 'single') return optionText(task.answer);
@@ -642,8 +669,17 @@ function taskElement(task) {{
     else if (task.type === 'order') correct = Array.isArray(task.answer) && answer.length === task.answer.length && answer.every((v, i) => String(v) === String(task.answer[i]));
     else if (task.type === 'gap') correct = Array.isArray(task.answer) && answer.length === task.answer.length && answer.every((v, i) => v.trim().replace(/\\s+/g, ' ').localeCompare(String(task.answer[i]).trim().replace(/\\s+/g, ' '), undefined, {{sensitivity:'base'}}) === 0);
     else if (task.type === 'calc') correct = Number.isFinite(answer) && Math.abs(answer - Number(task.answer)) <= Number(task.tolerance || 0);
-    if (correct) {{ solved[task.id] = true; persist(TASK_KEY, solved); }}
+    const firstSolve = correct && !solved[task.id];
+    if (firstSolve) {{
+      solved[task.id] = true;
+      xp += 10;
+      persist(TASK_KEY, solved);
+      try {{ localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
+      updateXp();
+    }}
     showResult(correct);
+    if (firstSolve) result.textContent += ' +10 XP';
+    if (correct) check.disabled = true;
   }});
 }}
 TASKS.forEach(taskElement);
