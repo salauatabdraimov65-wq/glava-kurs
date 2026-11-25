@@ -1,0 +1,413 @@
+{
+  "date": "2026-11-26",
+  "matrix": [
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 42,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "light",
+        "viewport": 1280
+      }
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 42,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "dark",
+        "viewport": 1280
+      }
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 42,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "light",
+        "viewport": 390
+      }
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 42,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "dark",
+        "viewport": 390
+      }
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 27,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "light",
+        "viewport": 1280
+      }
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 27,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "dark",
+        "viewport": 1280
+      }
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 27,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "light",
+        "viewport": 390
+      }
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "checks": {
+        "overview": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "cards": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "map": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "summary": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "material": {
+          "steps": 27,
+          "issues": []
+        },
+        "practice": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "result": {
+          "overflow": 0,
+          "smallText": [],
+          "smallButtons": [],
+          "contrast": []
+        },
+        "headerProgressInLesson": "hidden",
+        "theme": "dark",
+        "viewport": 390
+      }
+    }
+  ],
+  "extra": {
+    "fileProtocolOffline": true,
+    "unicodePaths": true,
+    "domainOverrideAccent": "#387C91",
+    "domainOverrideWithoutArt": true,
+    "sampleTasksPassed": 5,
+    "chartLabelMinimumPixels": 16.9
+  }
+}
