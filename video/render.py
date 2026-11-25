@@ -221,7 +221,8 @@ class Layout:
             items = [x for x in items if not any(k and k in x.lower() for k in kws)]
         plaque = visible(" ".join(items) or "схема, не в масштабе", "плашка")
         if extra_plaque:
-            plaque = plaque.rstrip(" .;") + "; " + extra_plaque
+            plaque = (plaque.rstrip(" .;") + " " + extra_plaque) if plaque.rstrip().endswith(":") else \
+                (plaque.rstrip(" .;:") + "; " + extra_plaque)
         self.tag_h = line_h(self.f_tag) + 14
         if kind == "9x16":
             w = x1 - x0
@@ -286,7 +287,7 @@ class Renderer:
             s = template.at(s0, seg.beat.action, 1.0)
         sx0, _, sx1, _ = self.L.sub_box
         self.subs = [subtitle_chunks(seg, self.L.f_sub, sx1 - sx0 - 60, max_lines=1) for seg in segs]
-        self.last = len(segs) - 1
+        self.last = len(segs) - 1 if segs and segs[-1].beat.index == len(spec.beats) - 1 else -1
 
     def seg_at(self, t: float) -> int:
         for i, s in enumerate(self.segs):
@@ -296,8 +297,8 @@ class Renderer:
 
     def state_at(self, i: int, t: float) -> dict:
         seg = self.segs[i]
-        moving = self.tpl.animates(seg.beat.action) if hasattr(self.tpl, "animates") else "tool_to" in seg.beat.action
-        if not moving:
+        animates = getattr(self.tpl, "animates", lambda a: "tool_to" in a)  # шаблон сам говорит, что анимируется
+        if not animates(seg.beat.action):
             return self.starts[i]
         a = seg.start + 0.1 + (self.intro_dur if i == 0 and self.intro_on else 0)
         b = seg.start + max(a - seg.start + 0.3, seg.dur - 0.25)

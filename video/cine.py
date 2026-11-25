@@ -216,7 +216,8 @@ class CineRenderer:
 
     def state_at(self, i, t):
         seg = self.segs[i]
-        if "tool_to" not in seg.beat.action:
+        animates = getattr(self.tpl, "animates", lambda a: "tool_to" in a)  # шаблон сам говорит, что анимируется
+        if not animates(seg.beat.action):
             return self.starts[i]
         a = seg.start + 0.1 + (self.intro_dur if i == 0 else 0)
         b = seg.start + max(a - seg.start + 0.3, seg.dur - 0.25)
@@ -240,7 +241,7 @@ class CineRenderer:
         last = len(self.segs) - 1
         for i, seg in enumerate(self.segs):
             a = seg.beat.action
-            if i == last or i == 0 or (not seg.beat.say and seg.beat.pause) or a.get("mark"):
+            if seg.beat.index == len(self.spec.beats) - 1 or i == 0 or (not seg.beat.say and seg.beat.pause) or a.get("mark"):
                 key = (1.0, "wide", None)
             elif "tool_to" in a:
                 key = (self.zmax, "follow", None)
@@ -300,7 +301,7 @@ class CineRenderer:
             img.info["ssaa"] = k
         # пауза и финал — сцена приглушена и размыта
         # пауза-викторина рисуется шаблоном (знаки «?» на пластах), сцену не размываем
-        final = i == len(self.segs) - 1
+        final = seg.beat.index == len(self.spec.beats) - 1   # последняя фраза сценария, а не отрывка
         if final:
             u = min(1, (t - seg.start) / 0.6)
             img = Image.blend(img, img.filter(ImageFilter.GaussianBlur(10 * k)), u)
