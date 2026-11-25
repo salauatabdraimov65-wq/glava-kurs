@@ -30,9 +30,13 @@ def recall(chapter: str) -> dict:
     layer = json.loads((ROOT / "runs" / chapter / "layer.json").read_text(encoding="utf-8"))
     claims = [c for n in layer["nodes"] for c in n["claims"]]
     pages = sorted(ch.pages)
+    from layer.units import split_units
+    us = split_units(ch)
+    outside = {u.page_pdf for u in us if not u.in_scope}
 
     def per_page(p):
-        text = ch.pages[p]
+        # «ключ» только по тексту главы: на крайних страницах куски соседних разделов отрезаются
+        text = ch.pages[p] if p not in outside else "\n\n".join(u.text for u in us if u.page_pdf == p and u.in_scope)
         if len(text.split()) < 40:
             return p, [], []
         ideas = ask_json(SYS_IDEAS, f"Страница {p}:\n{text}", tier="strong", tag=f"ideas:{chapter}", effort="low").get("ideas", [])
