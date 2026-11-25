@@ -1,5 +1,4 @@
-/* «Полевой атлас», максималистская версия: состаренная бумага, чернильный контур,
-   плитки с жёсткой тенью, цветные слои с условными знаками.
+/* «Мягкий атлас»: тёплая бумага, спокойная типографика, акварель и мягкие тени.
    Все цвета — переменные из доменного пакета (course/domain_theme.py): --s0…, --accent, --paper… */
 :root {
   color-scheme: light;
@@ -17,8 +16,8 @@
   --edge: color-mix(in srgb, var(--ink) 22%, var(--paper));
   --wobble: 16px;
   --wobble-2: 16px;
-  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .25 0 0 0 0 .17 0 0 0 0 .08 0 0 0 .32 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='turbulence' baseFrequency='.035' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .25 0 0 0 0 .17 0 0 0 0 .08 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='turbulence' baseFrequency='.035' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
   --ease: cubic-bezier(.2,.8,.2,1);
   font-family: var(--font-ui);
   font-size: 17px;
@@ -61,7 +60,7 @@ p { margin: 0 0 1rem; }
 .skip-link:focus { top: 10px; }
 .ui-icon { width: 21px; height: 21px; flex: none; vertical-align: middle; }
 
-/* ——— Кнопки: чернильный контур и жёсткая тень ——— */
+/* ——— Кнопки ——— */
 button {
   min-height: 44px; padding: .55rem 1rem; cursor: pointer; font-weight: 700;
   color: var(--ink); background: var(--paper);
@@ -508,7 +507,7 @@ figcaption { color: var(--muted); font-size: .92rem; padding-top: .6rem; font-fa
   .site-footer { padding-inline: 20px; }
 }
 @media (max-width: 760px) {
-  :root { font-size: 16px; --shadow: 4px 4px 0 var(--ink); }
+  :root { font-size: 16px; }
   .layout { padding: 18px 14px 28px; }
   .hero { grid-template-columns: minmax(0, 1fr); box-shadow: var(--shadow-sm); }
   .strata-scene { min-height: 190px; border-left: 0; border-top: var(--line-bold) solid var(--edge); }
@@ -582,7 +581,6 @@ button:active { transform: translateY(1px); box-shadow: none; }
 .block-figure { transform: none; }
 .step-mode-switcher button[aria-pressed="true"] { box-shadow: none; }
 .content-block::before { opacity: .5; height: 8px; border-width: 0; }
-.sidebar-links button[aria-pressed="true"], .masthead { }
 
 /* Светлая шапка и меню, как на макете (в тёмной теме остаются тёмными) */
 :root:not([data-theme="dark"]) {
@@ -610,9 +608,142 @@ html[data-art~="hero"] .hero-copy h1 { max-width: 17ch; font-size: clamp(1.6rem,
 html[data-art~="hero"] .hero-note { max-width: 44ch; }
 html[data-art~="hero"] .hero { min-height: 480px; }
 html[data-art~="strata"] .hero-completion { background: linear-gradient(90deg, var(--paper) 0 55%, transparent), var(--art-strata) right center / cover no-repeat; }
-html[data-art~="strata"] .site-footer { }
 @media (max-width: 760px) {
   html[data-art~="hero"] .hero { background: linear-gradient(180deg, var(--paper-2) 0 52%, transparent 78%), var(--art-hero) center bottom / cover no-repeat, var(--paper-2); min-height: 640px; }
   html[data-art~="hero"] .hero-copy { grid-column: 1; }
   html[data-art~="hero"] .hero-copy h1 { max-width: none; }
 }
+
+/* Единая спокойная отделка всех экранов. Смысловые цвета остаются у результатов. */
+:root { --font-display: var(--font-read); --font-type: var(--font-ui); }
+.brand-icon, .kicker-rule, .sidebar-track span, .hero-track span { background: var(--accent); }
+.core-track li { background: var(--night-rule); }
+.core-track li.is-started { background: color-mix(in srgb, var(--accent) 45%, var(--night-2)); }
+.core-track li.is-done { background: var(--accent); }
+.course-sidebar .step-link .core-seg { background: var(--night-2); border-color: var(--night-rule); }
+.course-sidebar .step-link.is-complete .core-seg,
+.course-sidebar .step-link[aria-current="step"] .core-seg { background: var(--accent); box-shadow: none; }
+.course-sidebar .is-complete .step-number,
+.step-link.is-complete .step-number { background: var(--accent); color: var(--accent-on); }
+.step-list .core-seg { background: var(--paper-2); }
+.step-list .step-link.is-complete .core-seg,
+.step-list .step-link:hover .core-seg { background: var(--accent); }
+
+.plate-band { height: 18px; background: var(--accent-wash); border-bottom: 0; }
+.plate-band::after { display: none; }
+.plate-no b, .book-mark, .content-block li::marker, blockquote::before { color: var(--accent-text); }
+.format-label, .claim::before { color: var(--ink); background: var(--paper); border-color: var(--edge); }
+.content-block::before { height: 1px; background: var(--rule); clip-path: none; opacity: 1; }
+.content-block > h2::before { width: 9px; height: 9px; background: var(--accent); border: 0; border-radius: 50%; transform: none; }
+.block-main .paragraph:first-of-type::first-letter { color: var(--accent-text); background: none; border: 0; padding: 0; }
+.terms li { box-shadow: none; transform: none; border-radius: 99px; background: var(--paper-2); }
+.block-example, .review-card:nth-child(3n) { background: var(--paper-2) var(--noise); }
+.block-data > h3, .block-analogy > h3, .block-example > h3, .block-booktasks > h3 {
+  color: var(--muted); background: transparent; padding-inline: 0; text-transform: none; letter-spacing: 0;
+}
+.block-figure, .scan-dialog { box-shadow: var(--shadow); }
+blockquote { box-shadow: none; border: 0; border-left: 2px solid var(--rule); border-radius: 0; }
+.block-video { color: var(--ink); background: var(--paper-2) var(--noise); box-shadow: var(--shadow-sm); }
+.block-video h2 { color: var(--ink); }
+.block-video .block-kicker { color: var(--accent-text); }
+.predict, .transfer { color: var(--ink); background: var(--paper); border-color: var(--edge); }
+.video-frame { border-color: var(--edge); }
+.review-card, .review-card:nth-child(even) { border-radius: 16px; transform: none; }
+.option:has(input:checked) { box-shadow: inset 3px 0 0 var(--accent), var(--shadow-sm); }
+.quiz-jumps button.is-solved { color: var(--ink); background: var(--accent-wash); }
+.quiz-jumps button.is-solved[aria-pressed="true"] { color: var(--paper); background: var(--ink); box-shadow: none; }
+.result-verdict { transform: none; }
+.map-edge { stroke: var(--rule); stroke-width: 1.5; stroke-dasharray: 5 5; }
+.map-node { stroke: var(--edge); stroke-width: 1; }
+.map-label { font-family: var(--font-read); }
+.link-map { max-height: none; }
+.summary-step { max-width: 72ch; }
+.resume-card { transform: none; }
+
+/* Подписи и второстепенные элементы также читаются без увеличения. */
+:is(.page, .badge, .claim-label, .nav-kicker, .hero-kicker, .exercise-kicker,
+    .block-kicker, .view-kicker, .legend-caption, .sidebar-section-label,
+    .lesson-meta, .lesson-status, .step-number, .course-sidebar .step-number,
+    .course-sidebar .lesson-status, .course-sidebar .step-name, .stat span,
+    .format-label, .plate-meta, .plate-no, .book-title, .reader-topbar,
+    .reader-progress, .step-time, .step-reward, .task-instructions, .hint-toggle,
+    .reading-state, .mode-count, .card-actions button, .notes-status,
+    .notes-content label, .nav-footnote, .site-footer, .offline-label,
+    .legend-list.small li, .scene-caption, figcaption, summary, .table-note,
+    .book-table, .simulation-caption, .range-limits) { font-size: 1rem; }
+.page, .badge { white-space: normal; overflow-wrap: anywhere; }
+button, .reader-topbar button, button.page.scan-link, .hint-toggle, summary { min-height: 44px; }
+button { min-width: 44px; }
+.option { min-height: 56px; }
+.paragraph.is-model { border-left-color: var(--muted); background: linear-gradient(90deg, var(--paper-2), transparent); }
+.paragraph.is-hypothesis { background: repeating-linear-gradient(135deg, transparent 0 8px, var(--rule-soft) 8px 9px); }
+.badge { color: var(--muted); transform: none; }
+.badge.hypothesis { color: var(--accent-text); }
+.app-view, .step, .hero-copy, .practice-column, .lesson-results { min-width: 0; }
+.prequestion-text, .task-prompt, .claim, .summary-step, .review-card, .completion-checklist { overflow-wrap: anywhere; }
+
+/* Иллюстрация декоративна: при отсутствии файла остаётся нейтральная бумага. */
+html[data-art~="hills"] .step-plate {
+  padding-top: clamp(60px, 9vw, 110px);
+  background: linear-gradient(0deg, var(--paper) 0 46%, transparent 96%),
+    var(--art-hills) center top / 100% auto no-repeat, var(--paper);
+}
+html[data-art~="hills"] .plate-band { display: none; }
+:root[data-theme="dark"][data-art~="hills"] .step-plate {
+  background: linear-gradient(0deg, var(--paper) 0 46%, color-mix(in srgb, var(--paper) 80%, transparent) 100%),
+    var(--art-hills) center top / 100% auto no-repeat, var(--paper);
+}
+:root[data-theme="dark"][data-art~="hero"] .hero {
+  background: linear-gradient(90deg, var(--paper-2) 0 38%, color-mix(in srgb, var(--paper) 70%, transparent)),
+    var(--art-hero) right bottom / auto 100% no-repeat, var(--paper-2);
+}
+:root[data-theme="dark"][data-art~="strata"] .hero-completion {
+  background: linear-gradient(90deg, var(--paper) 0 55%, color-mix(in srgb, var(--paper) 85%, transparent)),
+    var(--art-strata) right center / cover no-repeat, var(--paper);
+}
+@media (max-width: 1000px) {
+  /* Меню должно перекрывать текст непрозрачной бумагой. */
+  :root:not([data-theme="dark"]) .course-sidebar { background: var(--paper); }
+  body:not([data-view="overview"]) .masthead { grid-template-columns: auto minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .claim-label { position: static; margin-block: .5rem; }
+  .task-tools > button { min-width: 0; width: 100%; }
+  .hero-stats { gap: .7rem; }
+  .stat { padding-right: .6rem; margin-right: 0; }
+  .plate-meta, .reader-progress { gap: .6rem; }
+  .reader-progress .progress { min-width: 40px; }
+  .map-label { font-size: 19px; }
+  :root[data-theme="dark"][data-art~="hero"] .hero {
+    background: linear-gradient(180deg, var(--paper-2) 0 52%, color-mix(in srgb, var(--paper) 75%, transparent) 100%),
+      var(--art-hero) center bottom / cover no-repeat, var(--paper-2);
+  }
+}
+@media print {
+  .hero, .step-plate, .claim, .review-card, .option, .link-map, .block-figure { box-shadow: none; }
+  .summary-step { max-width: none; }
+}
+
+/* Тип шага — текстом; оттенок маршрута единый, легенда домена хранит свои цвета. */
+.legend-list:not(.small) .swatch { background: var(--accent-wash); border-color: var(--edge); }
+.edge-label { font-size: 16px; }
+@media (max-width: 760px) {
+  .hero .stat { flex: 1 1 0; }
+  html[data-art~="hero"] .hero-copy { padding-inline: 20px; }
+}
+
+/* Вложенные правила базы не должны уменьшать подписи. */
+.hero-completion, .course-toolbar, .prequestion-note, .reader-topbar button,
+.block-mechanism > h3, .block-data > h3, .block-analogy > h3,
+.block-example > h3, .block-booktasks > h3 { font-size: 1rem; }
+.link-map { max-width: 560px; margin-inline: auto; }
+.link-map .map-label, .link-map .map-number, .link-map .edge-label { font-size: 16px; }
+.step-mode-switcher button { font-size: 1rem; }
+.resume-card .muted, .step-link[aria-current="step"] .lesson-meta,
+.block-misconception > h2 { color: var(--ink); }
+
+.phase-number { font-size: 1rem; }
+.step-link[aria-current="step"] :is(.lesson-status, .step-marker) { color: var(--ink); }
+html:not([data-art~="hero"]) .hero { grid-template-columns: minmax(0, 1fr); }
+html:not([data-art~="hero"]) .hero-copy { max-width: 78ch; }
+.strata-scene { display: none; }
