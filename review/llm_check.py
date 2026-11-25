@@ -36,6 +36,9 @@ SYSTEM = f"""Ты строгий научный рецензент. Тебе д�
 Категории ошибок:
 {CATEGORIES}
 
+Тяжесть (severity): critical — ошибка меняет вывод или физику (переворот знака/направления, неверный механизм, неверная метка происхождения кадра, перепутанные числа, меняющие вывод);
+significant — потеряно условие или оговорка, сверхобобщение; minor — неточная формулировка без изменения смысла.
+
 Ответ — JSON:
 {{"has_error": bool, "category": одна из категорий или null, "severity": "critical|significant|minor" или null,
  "problem": "что не так, кратко", "fix": "как должно быть: готовая исправленная формулировка по тексту автора",
@@ -91,13 +94,15 @@ def build_user(it: dict, items: dict, pkg: dict, ch: Chapter) -> str:
     return "\n\n".join(parts)
 
 
-def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk") -> list[dict]:
+def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk", only: set | None = None) -> list[dict]:
     items = {i["id"]: i for i in pkg["items"]}
     todo = pkg["items"][:limit] if limit else pkg["items"]
+    if only is not None:
+        todo = [i for i in todo if i["id"] in only]
     out = []
     for it in todo:
         try:
-            r = ask_json(SYSTEM, build_user(it, items, pkg, ch), tier=tier, tag=f"review:{it['id']}")
+            r = ask_json(SYSTEM, build_user(it, items, pkg, ch), tier=tier, tag=f"review:{tier}:{it['id']}")
         except Exception as e:  # бюджет, сеть — не валим весь прогон
             print(f"  ! {it['id']}: {e}")
             if "Потрачено" in str(e):
@@ -110,7 +115,7 @@ def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bul
         page = r.get("page_pdf")
         page = int(page) if isinstance(page, (int, float, str)) and str(page).isdigit() else item_page(it, items, ch)
         out.append(cand(it["id"], cat, r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
-                        float(r.get("confidence") or 0), source="llm", severity=sev))
+                        float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev))
     return out
 
 
@@ -123,12 +128,13 @@ FRAME_SYSTEM = f"""Ты проверяешь кадр учебного роли�
 Сообщай об ошибке кадра только при ОДНОЗНАЧНОМ противоречии одного из видов: (1) `shows` утверждает то, чего нет на картинке или что противоречит спецификации/инвариантам (глубина, порядок слоёв/флюидов, положение меток, направление «выше/ниже», числа);
 (2) метка происхождения не соответствует тому, как построен кадр (на картинке видно «симуляция/схема», а метка «реальные данные», и наоборот); (3) неподписанное преувеличение. Если сомневаешься — ошибки нет.
 Если расхождений нет, ошибки нет: ложная тревога хуже пропуска. Заметь только то, что видно на картинке или явно следует из текста.
+Тяжесть: critical — метка происхождения неверна, неверный порядок слоёв/флюидов, глубина вверх, переворот направления; significant — число или положение метки не совпадает; minor — неточная подпись.
 Категория ошибки всегда frame_error (если это не неверная метка — тоже frame_error).
 Ответ — JSON: {{"has_error": bool, "category": "frame_error", "severity": "critical|significant|minor", "problem": "...", "fix": "что должно быть в кадре/метке",
 "page_pdf": номер страницы главы, подтверждающей исправление (число) или null, "quote": "цитата автора" или null, "confidence": 0..1}}"""
 
 
-def check_frames_with_model(pkg: dict, ch: Chapter, base: Path) -> list[dict]:
+def check_frames_with_model(pkg: dict, ch: Chapter, base: Path, tier: str = "strong") -> list[dict]:
     out = []
     items = {i["id"]: i for i in pkg["items"]}
     for f in pkg["frames"]:
@@ -146,7 +152,7 @@ def check_frames_with_model(pkg: dict, ch: Chapter, base: Path) -> list[dict]:
                 f"Допущения: {json.dumps(spec.get('assumptions'), ensure_ascii=False)}\nПреувеличения: {json.dumps(spec.get('exaggerations'), ensure_ascii=False)}\n"
                 f"Факты сцены:\n" + "\n".join("- " + x["text"] for x in facts) + "\n\nТекст автора:\n" + "\n\n".join(pages_ctx(ch, p) for p in claim_pages[:2]))
         try:
-            r = ask_json(FRAME_SYSTEM, user, tier="strong", images=[base / f["file"]], tag=f"review:{f['id']}")
+            r = ask_json(FRAME_SYSTEM, user, tier=tier, images=[base / f["file"]], tag=f"review:{tier}:{f['id']}")
         except Exception as e:
             print(f"  ! {f['id']}: {e}")
             continue
@@ -156,44 +162,45 @@ def check_frames_with_model(pkg: dict, ch: Chapter, base: Path) -> list[dict]:
         page = int(page) if str(page).isdigit() else (claim_pages[0] if claim_pages else None)
         sev = r.get("severity") if r.get("severity") in TIERS else "significant"
         out.append(cand(f["id"], "frame_error", r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
-                        float(r.get("confidence") or 0), source="llm", severity=sev))
+                        float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev))
     return out
 
 
-VERIFY_SYSTEM = """Ты второй, скептический рецензент. Первый рецензент пометил элемент черновика как ошибочный. Реши, прав ли он.
-Ошибка подтверждается ТОЛЬКО если элемент по смыслу противоречит тексту автора или выходит за него: другое число/знак/направление/степень, снято условие,
-которое меняет вывод, добавлен абсолют («всегда», «любой»), перепутан механизм, измеренное и выведенное смешаны, аналогия объявлена точной или без границы.
-Не ошибка: перефразирование, сокращение без смены смысла, опущенная второстепенная оговорка, не влияющая на вывод, утверждение, которое прямо следует из цитаты автора, даже если звучит неожиданно.
-Сверь элемент с текстом автора слово за словом. Верни JSON: {"confirmed": bool, "category": категория или null, "severity": "critical|significant|minor", "confidence": 0..1,
-"fix": "исправленная формулировка по тексту автора", "page_pdf": число, "quote": "дословная цитата автора, подтверждающая исправление", "reason": "кратко"}"""
+
+REVERSE_SYSTEM = """Ты ищешь ПОДТВЕРЖДЕНИЕ. Дан элемент учебного черновика и текст автора (страницы главы). Найди в тексте автора фрагмент, который ДОСЛОВНО подтверждает элемент так, как он сформулирован, с теми же условиями, числами, знаками и кванторами.
+Если такой фрагмент есть — верни его дословно (без изменений, из текста выше). Если автор говорит иное, уже, с оговорками, которых нет в элементе, или другое число/знак — подтверждения нет.
+Не натягивай: перефразирование без смены смысла допустимо, но смена условия, числа, знака, механизма или добавленный абсолют — это НЕ подтверждение.
+JSON: {"supported": bool, "quote": "дословный фрагмент автора или null", "page_pdf": число или null, "same_conditions": bool, "reason": "кратко"}"""
 
 
-def verify(pkg: dict, ch: Chapter, cands: list[dict]) -> list[dict]:
-    """Второй проход сильной моделью по кандидатам; возвращает подтверждённых с обновлёнными полями."""
+def reverse_check(pkg: dict, ch: Chapter, target: str, base: Path):
+    """Спрашиваем наоборот: есть ли в главе дословное подтверждение элемента. -> (supported_by_text: bool, quote, page)"""
+    from glava.chapter import find_quote
     items = {i["id"]: i for i in pkg["items"]}
-    out = []
-    for c in cands:
-        it = items.get(c["target"])
-        if not it:  # кадры уже проверены сильной моделью с картинкой
-            out.append(c)
-            continue
-        user = (build_user(it, items, pkg, ch) + f"\n\nЗамечание первого рецензента:\nкатегория: {c['category']}\nпроблема: {c['problem']}\n"
-                f"предложенное исправление: {c['fix']}\nстраница: {c['page_pdf']}")
-        try:
-            r = ask_json(VERIFY_SYSTEM, user, tier="strong", tag=f"verify:{c['target']}")
-        except Exception as e:
-            print(f"  ! verify {c['target']}: {e}")
-            continue
-        if not r.get("confirmed"):
-            continue
-        n = dict(c)
-        page = r.get("page_pdf")
-        n["page_pdf"] = int(page) if str(page).isdigit() else c["page_pdf"]
-        n["category"] = r.get("category") or c["category"]
-        n["severity"] = r.get("severity") if r.get("severity") in TIERS else c["severity"]
-        n["fix"] = r.get("fix") or c["fix"]
-        n["quote"] = r.get("quote") or c["quote"]
-        n["confidence"] = round(min(float(c["confidence"]), float(r.get("confidence") or 0)), 2)
-        n["source"] = "llm+verify"
-        out.append(n)
-    return out
+    it = items.get(target)
+    if not it:
+        return False, None, None
+    user = build_user(it, items, pkg, ch).replace("Заявленная цитата автора:", "Цитата, приложенная к элементу:")
+    r = ask_json(REVERSE_SYSTEM, "Найди подтверждение для элемента.\n\n" + user, tier="strong", tag=f"reverse:{target}")
+    q = r.get("quote")
+    if r.get("supported") and r.get("same_conditions") and q:
+        pages = find_quote(ch, q)  # цитата действительно дословно есть в главе (проверка кодом)
+        if pages:
+            return True, q, pages[0]
+    return False, q, None
+
+
+REVERSE_FRAME_SYSTEM = """Ты ищешь подтверждение, что кадр верен. Дан кадр (картинка), описание `shows`, метка, хронология ролика и спецификация.
+Проверь по порядку: (1) `shows` соответствует картинке; (2) `shows` и картинка согласованы с хронологией к секунде кадра и со спецификацией (глубины, положение меток, порядок слоёв); (3) метка происхождения соответствует тому, как построен кадр.
+Если всё это выполняется (мелкие визуальные огрехи не в счёт) — кадр верен. JSON: {"frame_ok": bool, "reason": "кратко"}"""
+
+
+def reverse_check_frame(pkg: dict, ch: Chapter, frame: dict, base: Path) -> bool:
+    spec = next((s["spec"] for s in pkg["scenes"] if s["video_id"] == frame["video_id"]), {})
+    lines = sorted((i for i in pkg["items"] if i["type"] == "script_line" and i.get("video_id") == frame["video_id"]), key=lambda i: i.get("t_start") or 0)
+    beats = spec.get("beats") or []
+    tl = [f"{l.get('t_start')}–{l.get('t_end')} с: «{l['text']}» действие: {json.dumps(beats[k].get('action') if k < len(beats) else None, ensure_ascii=False)}" for k, l in enumerate(lines)]
+    user = (f"Кадр {frame['id']}, секунда {frame['t']}, метка: {frame['label']}\nshows: {frame['shows']}\nИнварианты: {json.dumps(spec.get('invariants'), ensure_ascii=False)}\n"
+            f"Параметры: {json.dumps(spec.get('params'), ensure_ascii=False)[:2500]}\nХронология:\n" + "\n".join(tl))
+    r = ask_json(REVERSE_FRAME_SYSTEM, user, tier="strong", images=[base / frame["file"]], tag=f"reverse:{frame['id']}")
+    return bool(r.get("frame_ok"))

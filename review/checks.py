@@ -155,6 +155,16 @@ def check_items(pkg: dict, ch: Chapter) -> list[dict]:
 
 def check_frames(pkg: dict, ch: Chapter) -> list[dict]:
     res = []
+    # крупные числа (≥100: глубины и т.п.) из `shows` должны быть в спецификации сцены
+    for f in pkg["frames"]:
+        spec = next((s["spec"] for s in pkg["scenes"] if s["video_id"] == f["video_id"]), None)
+        if not spec:
+            continue
+        have = set(numbers(json.dumps(spec, ensure_ascii=False)))
+        miss = [n for n in numbers(f["shows"]) if float(n) >= 100 and n not in have]
+        if miss:
+            res.append(cand(f["id"], "frame_error", f"в описании кадра числа {miss}, которых нет в спецификации сцены",
+                            "Привести описание кадра к значениям спецификации сцены", None, None, 0.45))
     from collections import Counter
     for vid in {f["video_id"] for f in pkg["frames"]}:
         fr = [f for f in pkg["frames"] if f["video_id"] == vid]

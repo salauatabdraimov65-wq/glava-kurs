@@ -13,6 +13,7 @@ ABSOLUTES = [
     "строго", "полностью", "абсолютно", "целиком", "исключительно", "только", "лишь", "неизменно",
     "always", "never", "any ", "every", "all ", "universally", "invariably", "exclusively",
     "only ", "entirely", "completely", "necessarily", "regardless",
+    "без ограничен", "неограниченно", "без предела", "no limit", "no practical limit", "without limit", "unlimited", "indefinitely", "in all cases", "for any ",
 ]
 # Слова-ограничители: есть в цитате, потеряны в утверждении — потерянное условие/оговорка.
 HEDGES = [

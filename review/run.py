@@ -9,30 +9,18 @@ from pathlib import Path
 from glava.chapter import load_chapter
 
 from .checks import check_frames, check_items
+from .screen import aggregate, rank
 
-MAX_REMARKS = 25
+MAX_REMARKS = 20
 
 
 def load_ch(pkg: dict, pkg_path: Path, chapter_md: str | None):
     if chapter_md:
         return load_chapter("test", md_path=Path(chapter_md).resolve())
-    local = pkg_path.parent / pkg["chapter_file"]
-    if local.exists():
+    local = pkg_path.parent / (pkg.get("chapter_file") or "_нет_")
+    if local.is_file():
         return load_chapter("test", md_path=local.resolve())
     return load_chapter(pkg["chapter"])
-
-
-def select(cands: list[dict], min_conf: float, max_n: int) -> list[dict]:
-    """По одной (лучшей) записи на цель; нужны fix и page_pdf; сортировка по уверенности."""
-    best: dict[str, dict] = {}
-    for c in cands:
-        if not c.get("fix") or c.get("page_pdf") is None:
-            continue
-        if c["confidence"] < min_conf:
-            continue
-        if c["target"] not in best or c["confidence"] > best[c["target"]]["confidence"]:
-            best[c["target"]] = c
-    return sorted(best.values(), key=lambda c: -c["confidence"])[:max_n]
 
 
 def to_remark(c: dict) -> dict:
@@ -44,41 +32,70 @@ def main(argv=None):
     ap.add_argument("package")
     ap.add_argument("--chapter-md")
     ap.add_argument("-o", "--out", required=True)
-    ap.add_argument("--llm", default="0", help="0 = без модели; N = первые N целей; all = все")
-    ap.add_argument("--frames", action="store_true", help="проверять кадры моделью (tier strong)")
-    ap.add_argument("--verify", action="store_true", help="второй скептический проход сильной моделью по кандидатам")
+    ap.add_argument("--no-llm", action="store_true", help="только проверки кодом (бесплатно)")
     ap.add_argument("--max", type=int, default=MAX_REMARKS)
-    ap.add_argument("--min-conf", type=float, default=0.5)
-    ap.add_argument("--dump", help="сохранить всех кандидатов (до отсева) в этот json")
+    ap.add_argument("--limit", type=int, help="проверять моделью только первые N элементов (отладка)")
+    ap.add_argument("--no-reverse", action="store_true", help="не делать обратную проверку «найди подтверждение»")
+    ap.add_argument("--dump", help="сохранить всех кандидатов, сигналы и снятые замечания в json")
     a = ap.parse_args(argv)
 
     pkg_path = Path(a.package).resolve()
     pkg = json.loads(pkg_path.read_text(encoding="utf-8"))
     ch = load_ch(pkg, pkg_path, a.chapter_md)
+    base = pkg_path.parent
     cands = check_items(pkg, ch) + check_frames(pkg, ch)
+    dropped = []
 
-    if a.llm != "0" or a.frames:
-        from .llm_check import check_with_model, check_frames_with_model
-        if a.llm != "0":
-            cands += check_with_model(pkg, ch, None if a.llm == "all" else int(a.llm))
-        if a.frames:
-            cands += check_frames_with_model(pkg, ch, pkg_path.parent)
+    if a.no_llm:
+        # без модели один сигнал — код: отдаём лучшие замечания кода как есть
+        survivors = []
+        for c in cands:
+            if c["confidence"] >= 0.5 and c.get("fix") and c.get("page_pdf") is not None:
+                c["signals"] = ["code"]
+                survivors.append(c)
+    else:
+        from .llm_check import check_with_model, check_frames_with_model, reverse_check, reverse_check_frame
+        # каскад: strong спрашиваем только про цели, которые уже пометили код или bulk (иначе второго сигнала всё равно не будет)
+        cands += check_with_model(pkg, ch, a.limit, tier="bulk")
+        flagged = {c["target"] for c in cands if c["confidence"] >= 0.4 or c["source"] == "llm:bulk"}
+        cands += check_with_model(pkg, ch, a.limit, tier="strong", only=flagged)
+        for tier in ("bulk", "strong"):
+            cands += check_frames_with_model(pkg, ch, base, tier=tier)
+        survivors = aggregate(cands, ch)
+        if not a.no_reverse:
+            kept = []
+            frames = {f["id"]: f for f in pkg["frames"]}
+            for c in rank(survivors):
+                try:
+                    if c["target"] in frames:
+                        supported = reverse_check_frame(pkg, ch, frames[c["target"]], base)
+                        why = "кадр верен по обратной проверке"
+                    else:
+                        supported, q, pg = reverse_check(pkg, ch, c["target"], base)
+                        why = f"в главе есть дословное подтверждение (стр. {pg}): {q}"
+                except Exception as e:
+                    print(f"  ! reverse {c['target']}: {e}")
+                    supported, why = False, ""
+                if supported:
+                    dropped.append({"target": c["target"], "problem": c["problem"], "why": why})
+                else:
+                    kept.append(c)
+            survivors = kept
 
-    if a.verify:
-        from .llm_check import verify
-        cands = verify(pkg, ch, [c for c in cands if c["confidence"] >= 0.3])
+    chosen = rank(survivors)[: a.max] if not a.no_llm else sorted(survivors, key=lambda c: -c["confidence"])[: a.max]
     if a.dump:
-        Path(a.dump).write_text(json.dumps(cands, ensure_ascii=False, indent=1), encoding="utf-8")
-    chosen = select(cands, a.min_conf, a.max)
+        Path(a.dump).write_text(json.dumps({"candidates": cands, "chosen": chosen, "dropped_by_reverse": dropped}, ensure_ascii=False, indent=1), encoding="utf-8")
     answer = {"package_id": pkg["package_id"], "remarks": [to_remark(c) for c in chosen]}
 
     schema = json.loads((Path(__file__).resolve().parent.parent / "schemas" / "review_output.schema.json").read_text(encoding="utf-8"))
     import jsonschema
     jsonschema.validate(answer, schema)
     Path(a.out).write_text(json.dumps(answer, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Кандидатов: {len(cands)}, в ответе: {len(chosen)} → {a.out}")
+    print(f"Кандидатов: {len(cands)}, прошли согласие сигналов: {len(survivors) + len(dropped)}, сняты обратной проверкой: {len(dropped)}, в ответе: {len(chosen)} → {a.out}")
     for c in chosen:
-        print(f"  {c['confidence']:.2f} {c['target']:5} {c['category']:22} {c['problem'][:90]}")
+        print(f"  {'+'.join(x.replace('llm:', '') for x in c['signals']):18} {c['target']:5} {c['severity']:11} {c['category']:22} {c['problem'][:70]}")
+    for d in dropped:
+        print(f"  снято {d['target']}: {d['why'][:100]}")
 
 
 if __name__ == "__main__":
