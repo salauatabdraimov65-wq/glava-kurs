@@ -29,6 +29,7 @@ from layer.units import COVERAGE_KIND, Unit, split_units
 WORKERS = 8
 CHUNK_WORDS = 1400
 MIN_CLAIMS_PER_NODE = 4
+MIN_TASKS = 18          # ТЗ: не меньше 15 заданий на главу — берём с запасом
 DIFF = json.loads((ROOT / "config" / "difficulty.json").read_text(encoding="utf-8"))
 
 
@@ -43,6 +44,7 @@ def domain_pack(domain: str) -> dict:
         pack["misconceptions"] = json.loads((d / "misconceptions.json").read_text(encoding="utf-8"))
     if (d / "audience.md").exists():
         pack["audience"] = (d / "audience.md").read_text(encoding="utf-8")
+    pack["notation"] = (d / "notation.md").read_text(encoding="utf-8") if (d / "notation.md").exists() else ""
     return pack
 
 
@@ -279,12 +281,15 @@ SYS_C = """Ты пишешь шаг учебного курса для нови�
  "video_scores":{{"time":0,"invisible":0,"scale":0,"counterintuitive":0,"cause_effect":0}}}}
 video_scores: 0–2 каждый — есть ли изменение во времени, невидимое становится видимым, скачок масштаба, контринтуитивность, цепочка причина→следствие.
 Заблуждения (используй ref только если подходит точно):
-{misc}"""
+{misc}
+
+Обозначения предметной области и ловушки распознавания (в пересказе и глоссарии пиши правильное обозначение):
+{notation}"""
 
 
 def pass_c(ch: Chapter, nodes, claims_by_tmp, units_by_id, pack):
     misc = "\n".join(f'{m["id"]}: {m["text"]}' for m in pack["misconceptions"]) or "(нет)"
-    sys_c = SYS_C.format(audience=pack["audience"][:1500] or "сотрудник цифровой трансформации без профильного образования", misc=misc)
+    sys_c = SYS_C.format(audience=pack["audience"][:1500] or "сотрудник цифровой трансформации без профильного образования", misc=misc, notation=pack.get("notation") or "(нет)")
 
     def run(node):
         cl = [claims_by_tmp[i] for i in node["_claims"]]
@@ -357,7 +362,12 @@ def pass_d(ch, nodes, claims_by_tmp, pack):
         has_num = any(re.search(r"\d", c["text"]) for c in cl)
         types = [plan[(2 * k) % len(plan)], plan[(2 * k + 1) % len(plan)]]
         types = [t if t != "calc" or has_num else "gap" for t in types]
-        n = 2 if len(cl) >= 6 else 1
+        # не меньше MIN_TASKS заданий на главу даже при малом числе шагов
+        need = -(-MIN_TASKS // max(1, len(nodes)))
+        n = max(need, 2 if len(cl) >= 6 else 1)
+        n = min(n, 5, max(1, len(cl)))
+        types = (types + [plan[(2 * k + i) % len(plan)] for i in range(2, 6)])[:max(n, 2)]
+        types = [t if t != "calc" or has_num else "gap" for t in types]
         user = (f"Шаг: {node['title']}\nУтверждения:\n" + "\n".join(f'{c["tmp_id"]} (стр.{c["page_pdf"]}): {c["text"]}' for c in cl)
                 + f"\n\nЗаблуждения:\n{misc}")
         r = ask_json(SYS_D.replace("{n}", str(n)).replace("{types}", ", ".join(types[:n])), user, tier="bulk", tag=f"D:{ch.id}")
@@ -480,20 +490,9 @@ def build(ch: Chapter, out_dir: Path, domain: str):
         t["claim_ids"] = [tmp2id[c] for c in t["claim_ids"]]
     tasks_doc = {"chapter": ch.id, "tasks": tasks}
 
-    # E. маршрутизация
-    routes = []
-    for ln in layer_nodes:
-        vs = {k: int(max(0, min(2, (ln["video_scores"] or {}).get(k, 0) or 0)))
-              for k in ("time", "invisible", "scale", "counterintuitive", "cause_effect")}
-        prim = ln["difficulty"]["primary"]
-        fmt = DIFF["lead_format"].get(prim, "текст")
-        if fmt == "шортс" and sum(vs.values()) < 5:
-            fmt = "текст"
-        if ln["decision_on_data"] and fmt == "текст":
-            fmt = "практикум на данных"
-        routes.append({"node_id": ln["id"], "format": fmt, "secondary_format": "карточки", "video_scores": vs,
-                       "hook_short": False, "template": DIFF["scene_template"].get(prim) if fmt in ("шортс", "длинное видео", "интерактив") else None,
-                       "why": f"тип {prim}/{ln['difficulty']['secondary']}, видеоёмкость {sum(vs.values())}/10 → {fmt}"})
+    # E. маршрутизация — layer/route.py (тот же код, что и при пересчёте)
+    from layer.route import route_node
+    routes = [route_node(ln) for ln in layer_nodes]
     routing = {"chapter": ch.id, "routes": routes}
 
     # E. покрытие
@@ -527,6 +526,13 @@ def build(ch: Chapter, out_dir: Path, domain: str):
         (out_dir / f"{name}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     (out_dir / "units.json").write_text(json.dumps([u.to_dict() for u in units], ensure_ascii=False, indent=1), encoding="utf-8")
 
+    if out_dir == ROOT / "runs" / ch.id:
+        from layer.tables import attach
+        attach(ch.id)   # таблицы книги целиком → book_tables шагов
+        from layer.classify import apply as classify_apply
+        classify_apply(ch.id)   # тип трудности — отдельным проходом по содержанию шага
+        from layer.route import route
+        route(ch.id)            # маршрутизация по уточнённым типам
     in_scope = [r for r in rows if r["reason"] is None or not r["reason"].startswith(("вне главы", "колонтитул"))]
     uncovered = [r for r in rows if (r["reason"] or "").startswith("НЕ ПОКРЫТО")]
     report = {"chapter": ch.id, "nodes": len(layer_nodes), "claims": len(claims), "tasks": len(tasks),

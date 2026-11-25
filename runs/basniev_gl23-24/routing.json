@@ -4,7 +4,7 @@
   {
    "node_id": "basniev.elastic_flow_mechanism",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -13,13 +13,13 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/Ф, видеоёмкость 7/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип М/Ф; видеоёмкость 7/10"
   },
   {
    "node_id": "basniev.elastic_regime_types",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -28,12 +28,27 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/Ф, видеоёмкость 6/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип М/None; видеоёмкость 6/10"
   },
   {
    "node_id": "basniev.elastic_storage_concept",
-   "format": "интерактив",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип М/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "basniev.storage_coefficient",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -43,38 +58,23 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 7/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
   },
   {
-   "node_id": "basniev.storage_coefficient",
-   "format": "интерактив",
+   "node_id": "basniev.reservoir_material_balance",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
     "invisible": 1,
     "scale": 0,
-    "counterintuitive": 2,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
-  },
-  {
-   "node_id": "basniev.reservoir_material_balance",
-   "format": "интерактив",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 1,
-    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "basniev.flow_equation_system",
@@ -88,8 +88,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.elastic_model_assumptions",
@@ -97,14 +97,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Н, видеоёмкость 4/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.linearize_storage_term",
@@ -118,8 +118,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Н, видеоёмкость 4/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.derive_pressure_equation",
@@ -127,14 +127,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
-    "invisible": 1,
+    "invisible": 0,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.pressure_diffusivity",
@@ -148,8 +148,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.gallery_fixed_pressure",
@@ -158,61 +158,16 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 0,
-    "counterintuitive": 1,
+    "scale": 1,
+    "counterintuitive": 0,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.gallery_similarity_variable",
-   "format": "интерактив",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 1,
-    "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 6/10 → интерактив"
-  },
-  {
-   "node_id": "basniev.gallery_similarity_solution",
-   "format": "интерактив",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 0,
-    "invisible": 0,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 2/10 → интерактив"
-  },
-  {
-   "node_id": "basniev.gallery_pressure_profiles",
-   "format": "интерактив",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 2,
-    "invisible": 1,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 5/10 → интерактив"
-  },
-  {
-   "node_id": "basniev.gallery_rate_and_production",
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
@@ -223,38 +178,83 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 8/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
-   "node_id": "basniev.gallery_fixed_rate",
+   "node_id": "basniev.gallery_similarity_solution",
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
-    "invisible": 0,
+    "time": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 1,
+    "counterintuitive": 0,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 4/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
-   "node_id": "basniev.gallery_velocity_solution",
+   "node_id": "basniev.gallery_pressure_profiles",
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 2,
     "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "basniev.gallery_rate_and_production",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "basniev.gallery_fixed_rate",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "basniev.gallery_velocity_solution",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "basniev.integrate_gallery_pressure",
@@ -262,14 +262,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 3/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.gallery_pressure_limit",
@@ -283,8 +283,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.radial_well_problem",
@@ -298,8 +298,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Ф, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.radial_similarity_variable",
@@ -307,14 +307,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.radial_equation_solution",
@@ -324,45 +324,30 @@
     "time": 0,
     "invisible": 0,
     "scale": 0,
-    "counterintuitive": 0,
+    "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 2/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.radial_pressure_formula",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
     "invisible": 1,
     "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/И, видеоёмкость 4/10 → интерактив"
-  },
-  {
-   "node_id": "basniev.exponential_integral_approximation",
-   "format": "интерактив",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 0,
-    "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 4/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
   },
   {
-   "node_id": "basniev.radial_rate_and_time",
+   "node_id": "basniev.exponential_integral_approximation",
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
@@ -373,8 +358,23 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "basniev.radial_rate_and_time",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.finite_well_radius",
@@ -383,17 +383,17 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 1,
+    "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Н/Ф; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.finite_reservoir_boundary",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -404,7 +404,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Н/П, видеоёмкость 5/10 → интерактив"
+   "why": "тип Н/Ф; текст шага и схема"
   },
   {
    "node_id": "basniev.near_well_profiles",
@@ -418,8 +418,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Ф, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_core_idea",
@@ -433,8 +433,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_linear_fixed_rate",
@@ -443,13 +443,13 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 1,
+    "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_linear_boundary",
@@ -463,23 +463,23 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_linear_case_comparison",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
-    "invisible": 1,
+    "invisible": 2,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 6/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "basniev.psss_fixed_pressure_boundary",
@@ -493,12 +493,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_fixed_pressure_rate",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -508,8 +508,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 6/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "basniev.psss_radial_fixed_rate",
@@ -523,8 +523,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Ф, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_radial_boundary",
@@ -538,8 +538,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_radial_pressure_error",
@@ -548,13 +548,13 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 1,
+    "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
    "node_id": "basniev.psss_limits_and_uses",
@@ -564,12 +564,12 @@
     "time": 1,
     "invisible": 1,
     "scale": 0,
-    "counterintuitive": 2,
-    "cause_effect": 2
+    "counterintuitive": 1,
+    "cause_effect": 1
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/П, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   }
  ]
 }

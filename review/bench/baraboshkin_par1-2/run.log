@@ -1,0 +1,20 @@
+Кандидатов: 66, прошли согласие сигналов: 19, сняты обратной проверкой: 0, в ответе: 19 → review/bench/baraboshkin_par1-2/answer.json
+  code+bulk+strong   C043  critical    sign_flip              Перепутано положение относительно базиса действия волн: указано «ниже»
+  code+bulk+strong   C047  significant overgeneralization     «Всегда сливаются» заменяет авторское «часто сливаются» безусловным ут
+  code+bulk+strong   C021  significant overgeneralization     «Всегда» ошибочно заменяет авторское «часто».
+  code+bulk+strong   C041  significant overgeneralization     «Всегда» заменяет авторское «часто» и делает признак универсальным.
+  code+bulk+strong   C042  significant overgeneralization     «Всегда» превращает обычный признак фации в обязательный; автор допуск
+  code+bulk+strong   C059  significant overgeneralization     «Всегда» заменяет авторское «обычно»; также не указан тип дельт.
+  bulk+strong        C020  critical    wrong_scaling          Верхняя граница мощности завышена в 10 раз: 100 м вместо 10 м.
+  bulk+strong        C026  critical    wrong_scaling          Мощность осадка, отложенного за один раз, завышена в десять раз: 10 м 
+  bulk+strong        C051  critical    wrong_scaling          Верхняя граница мощности завышена в 10 раз: 30 м вместо 3,0 м.
+  bulk+strong        C039  critical    sign_flip              Условие перевёрнуто: у автора поверхность скольжения проходит ниже осн
+  bulk+strong        C048  critical    sign_flip              Низкие скорости транспорта указаны вместо высоких.
+  bulk+strong        C078  critical    sign_flip              Направление изменения содержания глинистого материала перевёрнуто: авт
+  bulk+strong        C066  critical    sign_flip              Местоположение внутренней дельты указано неверно: автор помещает её в 
+  bulk+strong        C084  critical    wrong_scaling          Длина 50 км относится к телам шириной 20 км, а не 0,5–1,5 км; параметр
+  bulk+strong        C028  significant measured_vs_inferred   Автор описывает возможное следствие обмеления, но не утверждает, что о
+  bulk+strong        C025  significant measured_vs_inferred   Внедрение намывного вала представлено как установленное прямым измерен
+  bulk+strong        C029  significant measured_vs_inferred   Фраза «прямым измерением установлено» приписывает автору способ устано
+  bulk+strong        C058  significant lost_condition         Утверждение подано как общее для любых устьев, тогда как автор описыва
+  bulk+strong        C031  significant measured_vs_inferred   Утверждение о прямом измерении не подтверждается автором: слабое течен

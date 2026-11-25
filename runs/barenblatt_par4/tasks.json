@@ -138,43 +138,6 @@
   },
   {
    "type": "single",
-   "kind": "recall",
-   "claim_ids": [
-    "barenblatt.short_time_response#c8",
-    "barenblatt.short_time_response#c9"
-   ],
-   "prompt": "Какое решение остаётся при малых временах?",
-   "options": [
-    {
-     "id": "a",
-     "text": "p⁰ erfc[x/(2√(κt))]",
-     "misconception": null
-    },
-    {
-     "id": "b",
-     "text": "p⁰ erfc[x/(2κt)]",
-     "misconception": null
-    },
-    {
-     "id": "c",
-     "text": "p⁰ erfc[2√(κt)/x]",
-     "misconception": null
-    },
-    {
-     "id": "d",
-     "text": "p⁰ exp[−x/(2√(κt))]",
-     "misconception": null
-    }
-   ],
-   "answer": "a",
-   "tolerance": null,
-   "unit": null,
-   "explanation": "При малых временах остаётся решение p⁰ erfc[x/(2√(κt))] (стр. 41).",
-   "step_id": "barenblatt.short_time_response",
-   "id": "t05"
-  },
-  {
-   "type": "single",
    "kind": "understanding",
    "claim_ids": [
     "barenblatt.short_time_response#c10",
@@ -394,46 +357,6 @@
    "explanation": "В условии промежуточной асимптотики радиус скважины соответствует малому аргументу, а внешняя граница — большому (стр. 43).",
    "step_id": "barenblatt.constant_rate_solution",
    "id": "t12"
-  },
-  {
-   "type": "order",
-   "kind": "understanding",
-   "claim_ids": [
-    "barenblatt.radial_pressure_response#c6",
-    "barenblatt.radial_pressure_response#c7",
-    "barenblatt.radial_pressure_response#c8",
-    "barenblatt.radial_pressure_response#c9"
-   ],
-   "prompt": "Расположите шаги получения асимптотического давления на скважине в правильном порядке.",
-   "options": [
-    {
-     "id": "a",
-     "text": "Используют асимптотику Ei(−x)=ln γx для давления на скважине."
-    },
-    {
-     "id": "b",
-     "text": "Применяют таблицы преобразований Лапласа и связь преобразований функции и её производной."
-    },
-    {
-     "id": "c",
-     "text": "Получают давление во времени через интегральную экспоненту."
-    },
-    {
-     "id": "d",
-     "text": "Записывают асимптотическое давление через логарифм времени и радиуса, в эквивалентных формах через qμ/k и Qμ/(kh)."
-    }
-   ],
-   "answer": [
-    "b",
-    "c",
-    "a",
-    "d"
-   ],
-   "tolerance": null,
-   "unit": null,
-   "explanation": "Сначала по таблицам получают временную формулу, затем применяют асимптотику и записывают давление на скважине (стр. 43).",
-   "step_id": "barenblatt.radial_pressure_response",
-   "id": "t13"
   },
   {
    "type": "single",
