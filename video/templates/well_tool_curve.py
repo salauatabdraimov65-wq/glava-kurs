@@ -74,9 +74,16 @@ class WellToolCurve:
         self.layers = sorted(params.get("layers", []), key=lambda L: L["top"])
         self.window = float(params.get("tool_resolution_m", 0.0) or 0.0)
         self.curves = []
+        used = set()
         for i, c in enumerate(params.get("curves", [])):
             c = dict(c)
-            c.setdefault("id", c.get("key", f"c{i}"))
+            cid = c.get("id") or c.get("key") or f"c{i}"
+            if cid in used:
+                cid = f"{cid}_{i}"
+            used.add(cid)
+            c["id"] = cid
+            if c.get("log") and not c.get("scale"):
+                c["scale"] = "log"
             self.curves.append(c)
         # треки: кривые с одинаковым track рисуются в одном треке
         tracks: dict = {}
@@ -129,7 +136,7 @@ class WellToolCurve:
             "cake": None, "invasion": None,          # время появления (с), None — скрыто
             "marks": [],
             "curves": {c["id"]: {"visible": True, "rec": None} for c in self.curves},
-            "callouts": [], "readout": None,
+            "callouts": [], "readout": None, "highlight": None,
         }
 
     def begin_beat(self, state: dict, action: dict, t: float) -> dict:
@@ -154,6 +161,8 @@ class WellToolCurve:
                 s["curves"][cid]["visible"] = False
         co = action.get("callout")
         s["callouts"] = [{**c, "born": t} for c in (co if isinstance(co, list) else [co])] if co else []
+        hl = action.get("highlight_layer")
+        s["highlight"] = {"idx": int(hl), "born": t} if hl is not None and hl is not False else None
         ro = action.get("readout")
         s["readout"] = ({"curve": ro if isinstance(ro, str) else None, "born": t} if ro else None)
         if "tool_jump" in action:
@@ -241,8 +250,11 @@ class WellToolCurve:
             tx += tr_w + 18
         sx0, sx1 = L["sec"]
         bw = float(self.p.get("bore_width", 0.18))
-        bw = bw if bw <= 1 else 0.18
-        bore_px = max(18, min(sec_w * 0.32, sec_w * bw))
+        if bw > 1:  # метры в масштабе глубин
+            px_per_m = (y1 - 6 - plot_top) / (self.bottom - self.top)
+            bore_px = max(18, min(sec_w * 0.32, bw * px_per_m))
+        else:
+            bore_px = max(18, min(sec_w * 0.32, sec_w * bw))
         cx = sx0 + sec_w * 0.74
         L["bore"] = (cx - bore_px / 2, cx + bore_px / 2)
         return L
@@ -281,16 +293,28 @@ class WellToolCurve:
     def lith_color(self, lith):
         return hex_rgb(self.style.get("lithology", {}).get(lith, {}).get("color", self.style["panel"]))
 
+    def _cake_px(self, L):
+        return max(5, (L["bore"][1] - L["bore"][0]) * 0.12)
+
     def scale_note(self, L) -> str:
-        """«ствол шире реального в N раз» — по реальному диаметру (params.bore_diameter_m, по умолчанию 0,2 м)
-        и масштабу глубин этого кадра."""
+        """Преувеличения числом, по нарисованному кадру: ствол (params.bore_diameter_m, по умолчанию 0,2 м)
+        и глинистая корка (params.mud_cake_m, по умолчанию 0,01 м), если она есть в сцене."""
         px_per_m = (L["plot"][1] - L["plot"][0]) / (self.bottom - self.top)
-        real = float(self.p.get("bore_diameter_m") or 0.2) * px_per_m
-        k = (L["bore"][1] - L["bore"][0]) / max(real, 1e-6)
-        if k < 1.5:
-            return ""
-        n = int(round(k)) if k < 20 else int(round(k, -1))
-        return f"ствол шире реального ≈ в {n} раз"
+
+        def times(drawn, real_m):
+            k = drawn / max(real_m * px_per_m, 1e-9)
+            return int(round(k)) if k < 20 else int(round(k, -1))
+        notes = []
+        kb = times(L["bore"][1] - L["bore"][0], float(self.p.get("bore_diameter_m") or 0.2))
+        if kb >= 2:
+            notes.append(f"ствол шире реального ≈ в {kb} раз")
+        if any(Lr.get("mud_cake") for Lr in self.layers):
+            kc = times(self._cake_px(L), float(self.p.get("mud_cake_m") or 0.01))
+            if kc >= 2:
+                notes.append(f"корка толще ≈ в {kc} раз")
+        return "; ".join(notes)
+
+    scale_keyword = ("ствол", "корк")
 
     def focus(self, L, s) -> tuple[float, float]:
         """Точка интереса для камеры: прибор."""
@@ -625,7 +649,7 @@ class WellToolCurve:
         a_cake = alpha(s["cake"])
         if a_cake > 0:
             cake = mix(mud, (20, 16, 12), 0.45)
-            cw = max(5, (bx1 - bx0) * 0.12)
+            cw = self._cake_px(L)
             for Lr in self.layers:
                 if not Lr.get("mud_cake"):
                     continue
@@ -671,6 +695,15 @@ class WellToolCurve:
                 if z0 - 1e-6 <= s["tool"] <= z1 + 1e-6:
                     xv = self.x_of(c, xr, self.value_at(cid, s["tool"]))
                     d.ellipse([xv - 10, ty - 10, xv + 10, ty + 10], fill=col, outline=bg, width=3)
+        # подсветка слоя: рамка вокруг слоя через разрез и треки
+        hlt = s.get("highlight")
+        if hlt and 0 <= hlt["idx"] < len(self.layers):
+            a = alpha(hlt["born"])
+            Lr = self.layers[hlt["idx"]]
+            ya, yb = self.y_of(L, max(Lr["top"], self.top)), self.y_of(L, min(Lr["bottom"], self.bottom))
+            right_ = L["tracks"][-1][1] if L["tracks"] else sx1
+            col = mix(bg, hex_rgb(st["measurement"]["color"]), a)
+            d.rectangle([sx0 - 8, ya - 2, right_ + 8, yb + 2], outline=col, width=5)
         # рамки (контакты, интервалы)
         f_m = font(40, True)
         right = L["tracks"][-1][1] if L["tracks"] else sx1
@@ -695,3 +728,12 @@ class WellToolCurve:
                 if ly < p0:
                     ly = yb + 4
                 d.text((lx, ly), lab, font=f_m, fill=col, stroke_width=4, stroke_fill=bg)
+
+
+# кинематографичная отрисовка для шортса (video/cine.py)
+from . import wtc_cine as _cine  # noqa: E402
+
+WellToolCurve.cine_world = _cine.cine_world
+WellToolCurve.cine_compose = _cine.cine_compose
+WellToolCurve.cine_scale_note = _cine.cine_scale_note
+WellToolCurve._cine_overlay = _cine._cine_overlay

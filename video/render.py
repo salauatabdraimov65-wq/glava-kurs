@@ -60,6 +60,14 @@ def build_timeline(spec: Spec, domain: str, engine: str | None = None) -> tuple[
         return out
 
     res = synth_all(rate)
+    # один голос на весь ролик: если часть фраз ушла в запасной движок — переозвучиваем им всё
+    primary = engine or st["engine"]
+    fb = sorted({r["engine"] for r in res if r and r["engine"] not in (primary, "none")})
+    if fb and st.get("consistent_voice", True):
+        print(f"[video] часть фраз озвучена {fb[0]} — переозвучиваю весь ролик им, чтобы голос был один",
+              file=sys.stderr)
+        engine = fb[0]
+        res = synth_all(rate)
     words = sum(len(b.say.split()) for b in spec.beats if b.say)
     secs = sum(len(r["audio"]) / tts.SR for r in res if r)
     wpm = words / secs * 60 if secs else 0
@@ -195,7 +203,7 @@ class Layout:
     """Геометрия кадра. 9:16: тег → крупный заголовок → сцена → плашка → субтитры (всё в безопасной зоне).
     16:9: сцена слева, справа тег, заголовок, плашка; субтитры внизу."""
 
-    def __init__(self, kind: str, spec: Spec, style: dict, beats, extra_plaque: str = ""):
+    def __init__(self, kind: str, spec: Spec, style: dict, beats, extra_plaque: str = "", replace_kw: str = ""):
         self.kind = kind
         sz = style.get("safe_zone", {"top": 220, "bottom": 380, "side": 70})
         if kind == "9x16":
@@ -207,7 +215,11 @@ class Layout:
         x0, y0, x1, y1 = self.safe
         self.f_tag = font(36, True)
         self.f_sub = font(44, True)
-        plaque = visible(" ".join(spec.get("plaque") or []) or "схема, не в масштабе", "плашка")
+        items = list(spec.get("plaque") or [])
+        kws = (replace_kw,) if isinstance(replace_kw, str) else tuple(replace_kw or ())
+        if extra_plaque and kws:  # строки про те же объекты заменяет посчитанная по кадру
+            items = [x for x in items if not any(k and k in x.lower() for k in kws)]
+        plaque = visible(" ".join(items) or "схема, не в масштабе", "плашка")
         if extra_plaque:
             plaque = plaque.rstrip(" .;") + "; " + extra_plaque
         self.tag_h = line_h(self.f_tag) + 14
@@ -248,7 +260,8 @@ class Renderer:
         # преувеличение подписывается числом (ТЗ): шаблон сам считает, во сколько раз объект крупнее реального
         self.scale_note = template.scale_note(self.T) if hasattr(template, "scale_note") else ""
         if self.scale_note:
-            self.L = Layout(kind, spec, style, [s.beat for s in segs], self.scale_note)
+            self.L = Layout(kind, spec, style, [s.beat for s in segs], self.scale_note,
+                            getattr(template, "scale_keyword", ""))
             self.T = template.layout(self.L.scene_box, compact=(kind == "9x16"))
             self.scale_note = template.scale_note(self.T)
         rs = load_settings()["render"]
@@ -263,6 +276,8 @@ class Renderer:
         d = SDraw(self.base)
         text_block(d, (self.L.plaque_x, self.L.plaque_y), self.L.plaque_lines, self.L.f_plaque,
                    hex_rgb(style["muted"]))
+        if hasattr(template, "prepare"):
+            template.prepare([seg.beat.action for seg in segs])
         self.starts = []
         s = template.initial_state()
         for seg in segs:
@@ -281,7 +296,8 @@ class Renderer:
 
     def state_at(self, i: int, t: float) -> dict:
         seg = self.segs[i]
-        if "tool_to" not in seg.beat.action:
+        moving = self.tpl.animates(seg.beat.action) if hasattr(self.tpl, "animates") else "tool_to" in seg.beat.action
+        if not moving:
             return self.starts[i]
         a = seg.start + 0.1 + (self.intro_dur if i == 0 and self.intro_on else 0)
         b = seg.start + max(a - seg.start + 0.3, seg.dur - 0.25)
