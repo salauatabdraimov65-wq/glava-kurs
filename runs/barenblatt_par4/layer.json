@@ -303,7 +303,8 @@
     "counterintuitive": 0,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "barenblatt.linear_flow_laplace",
@@ -582,7 +583,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.short_time_response",
@@ -897,7 +899,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "barenblatt.steady_state_timescale",
@@ -1189,7 +1192,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "barenblatt.radial_flow_model",
@@ -1479,7 +1483,8 @@
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.constant_rate_solution",
@@ -1745,7 +1750,8 @@
     "scale": 2,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.radial_pressure_response",
@@ -2039,7 +2045,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "barenblatt.pressure_buildup_test",
@@ -2357,7 +2364,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.interference_test_method",
@@ -2646,7 +2654,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.test_model_limits",
@@ -2919,7 +2928,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.laplace_response_function",
@@ -3230,7 +3240,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.laplace_curve_analysis",
@@ -3543,7 +3554,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "barenblatt.two_zone_response",
@@ -3815,7 +3827,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.approximation_motivation",
@@ -4067,7 +4080,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.integral_relations_method",
@@ -4302,7 +4316,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.polynomial_pressure_approximation",
@@ -4550,7 +4565,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.pressure_moment_equations",
@@ -4820,7 +4836,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.first_flow_approximation",
@@ -5022,7 +5039,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.higher_flow_approximations",
@@ -5301,7 +5319,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.radial_integral_approximation",
@@ -5603,7 +5622,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.bounded_radial_reservoir",
@@ -5845,7 +5865,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "barenblatt.bounded_reservoir_settling",
@@ -6094,7 +6115,8 @@
     "counterintuitive": 0,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   }
  ]
 }

@@ -537,6 +537,9 @@ def build(ch: Chapter, out_dir: Path, domain: str):
         (out_dir / f"{name}.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     (out_dir / "units.json").write_text(json.dumps([u.to_dict() for u in units], ensure_ascii=False, indent=1), encoding="utf-8")
 
+    if out_dir == ROOT / "runs" / ch.id:
+        from layer.tables import attach
+        attach(ch.id)   # таблицы книги целиком → book_tables шагов
     in_scope = [r for r in rows if r["reason"] is None or not r["reason"].startswith(("вне главы", "колонтитул"))]
     uncovered = [r for r in rows if (r["reason"] or "").startswith("НЕ ПОКРЫТО")]
     report = {"chapter": ch.id, "nodes": len(layer_nodes), "claims": len(claims), "tasks": len(tasks),

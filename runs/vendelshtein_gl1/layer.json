@@ -275,7 +275,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.quantitative_criteria",
@@ -504,7 +505,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.economic_permeability_limit",
@@ -786,7 +788,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.threshold_correlations",
@@ -1095,7 +1098,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.porosity_log_threshold",
@@ -1396,7 +1400,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.relative_clay_content",
@@ -1723,7 +1728,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.normalized_sp_amplitude",
@@ -2005,7 +2011,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.sp_threshold_limits",
@@ -2279,7 +2286,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.sp_testing_threshold",
@@ -2622,7 +2630,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.gamma_thresholds",
@@ -2863,7 +2872,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.gamma_limits_integration",
@@ -3139,7 +3149,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.nmr_free_fluid",
@@ -3405,7 +3416,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.additional_collector_methods",
@@ -3698,7 +3710,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.saturation_resistivity",
@@ -3974,7 +3987,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.invasion_saturation_accuracy",
@@ -4227,7 +4241,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.statistical_saturation_threshold",
@@ -4494,7 +4509,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.water_saturation_threshold",
@@ -4768,7 +4784,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.clay_resistivity_comparison",
@@ -5093,7 +5110,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.porosity_resistivity_comparison",
@@ -5383,7 +5401,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.time_lapse_productivity",
@@ -5635,7 +5654,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.neutron_fluid_contrast",
@@ -5886,7 +5906,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.repeat_neutron_schedule",
@@ -6154,7 +6175,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.neutron_repeat_regression",
@@ -6453,7 +6475,8 @@
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.neutron_change_interpretation",
@@ -6727,7 +6750,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.dual_probe_neutron",
@@ -7003,7 +7027,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.acoustic_gas_indications",
@@ -7281,7 +7306,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.formation_testing",
@@ -7529,7 +7555,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.effective_thickness",
@@ -7877,7 +7904,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "vendelshtein.oil_water_transition",
@@ -8118,7 +8146,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.resistivity_contact_error",
@@ -8437,7 +8466,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.neutron_contacts",
@@ -8765,7 +8795,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.neutron_statistical_cutoff",
@@ -9076,7 +9107,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.neutron_porosity_corrections",
@@ -9395,7 +9427,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.flowing_well_neutron",
@@ -9703,7 +9736,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.gas_contact_neutron",
@@ -9976,7 +10010,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "vendelshtein.gas_contact_corrections",
@@ -10223,7 +10258,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   }
  ]
 }

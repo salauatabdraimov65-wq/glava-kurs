@@ -214,7 +214,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.elastic_regime_types",
@@ -476,7 +477,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.elastic_storage_concept",
@@ -741,7 +743,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.storage_coefficient",
@@ -1016,7 +1019,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.reservoir_material_balance",
@@ -1402,7 +1406,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "basniev.flow_equation_system",
@@ -1659,7 +1664,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.elastic_model_assumptions",
@@ -1962,7 +1968,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.linearize_storage_term",
@@ -2259,7 +2266,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.derive_pressure_equation",
@@ -2508,7 +2516,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.pressure_diffusivity",
@@ -2796,7 +2805,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_fixed_pressure",
@@ -3047,7 +3057,8 @@
     "scale": 1,
     "counterintuitive": 0,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_similarity_variable",
@@ -3339,7 +3350,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_similarity_solution",
@@ -3616,7 +3628,8 @@
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_pressure_profiles",
@@ -3912,7 +3925,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_rate_and_production",
@@ -4193,7 +4207,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_fixed_rate",
@@ -4490,7 +4505,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_velocity_solution",
@@ -4826,7 +4842,8 @@
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.integrate_gallery_pressure",
@@ -5084,7 +5101,8 @@
     "scale": 0,
     "counterintuitive": 0,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.gallery_pressure_limit",
@@ -5305,7 +5323,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.radial_well_problem",
@@ -5580,7 +5599,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.radial_similarity_variable",
@@ -5876,7 +5896,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.radial_equation_solution",
@@ -6177,7 +6198,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.radial_pressure_formula",
@@ -6513,7 +6535,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "basniev.exponential_integral_approximation",
@@ -6834,7 +6857,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.radial_rate_and_time",
@@ -7070,7 +7094,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.finite_well_radius",
@@ -7319,7 +7344,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.finite_reservoir_boundary",
@@ -7543,7 +7569,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.near_well_profiles",
@@ -7771,7 +7798,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_core_idea",
@@ -8049,7 +8077,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "basniev.psss_linear_fixed_rate",
@@ -8385,7 +8414,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_linear_boundary",
@@ -8668,7 +8698,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_linear_case_comparison",
@@ -8919,7 +8950,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_fixed_pressure_boundary",
@@ -9169,7 +9201,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_fixed_pressure_rate",
@@ -9403,7 +9436,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "basniev.psss_radial_fixed_rate",
@@ -9680,7 +9714,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_radial_boundary",
@@ -9970,7 +10005,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_radial_pressure_error",
@@ -10188,7 +10224,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "basniev.psss_limits_and_uses",
@@ -10419,7 +10456,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   }
  ]
 }

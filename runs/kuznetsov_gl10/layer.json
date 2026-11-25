@@ -216,7 +216,8 @@
     "scale": 2,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_building_types",
@@ -506,7 +507,8 @@
     "scale": 2,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_basin_position",
@@ -717,7 +719,8 @@
     "scale": 1,
     "counterintuitive": 0,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_limestone_types",
@@ -978,7 +981,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.facies_zoning",
@@ -1214,7 +1218,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.dome_reef_zones",
@@ -1472,7 +1477,8 @@
     "counterintuitive": 0,
     "cause_effect": 1
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.atoll_reef_zones",
@@ -1724,7 +1730,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.linear_reef_system",
@@ -1936,7 +1943,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.primary_reef_pores",
@@ -2195,7 +2203,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.secondary_reef_pores",
@@ -2464,7 +2473,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.rainbow_reef_classes",
@@ -2724,7 +2734,8 @@
     "scale": 1,
     "counterintuitive": 0,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.rainbow_collector_zones",
@@ -2958,7 +2969,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.rim_collector_quality",
@@ -3214,7 +3226,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.field_collector_comparison",
@@ -3544,7 +3557,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.vertical_reef_variability",
@@ -3834,7 +3848,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.layered_reef_collectors",
@@ -4112,7 +4127,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_flow_patterns",
@@ -4349,7 +4365,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_seal_formation",
@@ -4585,7 +4602,20 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": [
+    {
+     "number": null,
+     "caption": null,
+     "pages": [
+      217
+     ],
+     "markdown": "|  Типы | Изолированные куполовидные рифы | Асимметричные рифовые системы  |\n| --- | --- | --- |\n|  Палеогеоморфологические | Надеждино D₃f | Кунакбаево P₁  |\n|  Литолого-палеогеоморфологические | Чермасан D₃f |   |\n|  Структурно-палеогеоморфологические | Южный Умет P₁ | Западно-Тепловка P₁  |\n|  Структурно-палеогеоморфологические с литологическим экранированием | Памук J₃ | Командашор D₃f  |\n|  Структурные с рифовым резервуаром | Погромное C₁v | Западно-Тишковское D₃fm  |",
+     "source": "таблица книги, стр. 217",
+     "ocr_note": "Таблица перенесена из распознанного текста без изменений. Возможные ошибки распознавания: есть пустые ячейки (возможно, объединённые ячейки оригинала).",
+     "by_model": false
+    }
+   ]
   },
   {
    "id": "kuznetsov.relief_trap_types",
@@ -4835,7 +4865,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.tectonic_trap_types",
@@ -5093,7 +5124,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_accumulation_shapes",
@@ -5391,7 +5423,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.dome_reef_exploration",
@@ -5663,7 +5696,8 @@
     "counterintuitive": 0,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.atoll_reef_exploration",
@@ -5920,7 +5954,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.asymmetric_reef_exploration",
@@ -6168,7 +6203,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.critical_closure_direction",
@@ -6400,7 +6436,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "kuznetsov.well_spacing_principle",
@@ -6660,7 +6697,8 @@
     "counterintuitive": 2,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "kuznetsov.reef_well_patterns",
@@ -6919,7 +6957,20 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": [
+    {
+     "number": null,
+     "caption": null,
+     "pages": [
+      215
+     ],
+     "markdown": "|  Морфология ловушки | План | Профиль | Система разведки  |\n| --- | --- | --- | --- |\n|  Симметричная | Конусовидная |  | Многоствольная  |\n|   |  Подковообразная |   |   |\n|  Атомметричная | Плосковершинная |  | Кольцевая  |\n|   |  Атолловидная |   |   |\n|  Асимметричная | Суплоценной вершиной |  | Профильная  |",
+     "source": "таблица книги, стр. 215",
+     "ocr_note": "Таблица перенесена из распознанного текста без изменений. Возможные ошибки распознавания: есть пустые ячейки (возможно, объединённые ячейки оригинала).",
+     "by_model": false
+    }
+   ]
   }
  ]
 }

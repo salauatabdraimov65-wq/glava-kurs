@@ -292,7 +292,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.drilling_effects",
@@ -554,7 +555,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.mud_filtration_pressure",
@@ -856,7 +858,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.filtrate_salinity",
@@ -1082,7 +1085,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.water_drilling",
@@ -1307,7 +1311,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "latyshova.nonfiltering_mud",
@@ -1509,7 +1514,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.section_pore_types",
@@ -1729,7 +1735,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.collector_variants",
@@ -1964,7 +1971,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.method_groups",
@@ -2267,7 +2275,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.productivity_methods",
@@ -2553,7 +2562,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.combined_method_signals",
@@ -2807,7 +2817,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.build_lithology_column",
@@ -3079,7 +3090,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.rock_signs_limits",
@@ -3321,7 +3333,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.rock_table_collectors",
@@ -3675,7 +3688,21 @@
     "counterintuitive": 2,
     "cause_effect": 1
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": [
+    {
+     "number": "21",
+     "caption": "Таблица 21.",
+     "pages": [
+      93,
+      94
+     ],
+     "markdown": "|  Породы и коллекторы | Методы сопротивления |   | Метод СП | Кавернограмма | Микрозонды | Гамма-метод | Нейтронные методы  |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n|   |  $$\\rho_n$$ | Характер зоны проникновения | $$U_{cn}$$ | $$d_c$$ | $$\\rho_n$$ | $$I\\gamma$$ | $$In\\gamma, Inn$$  |\n|  Глины | низкое | Отсутствие проникновения | максимальные | $$d_c > d_n$$ | Низкие, совпадающие для микрозондов разной длины | максимальные | Минимальные  |\n|  Пески, песчаники, высокопористые карбонатные коллекторы с межзерновой пористостью, насыщенные высокоминерализованной водой | минимальное | $$\\rho_p < \\rho_m \\geq \\rho_n$$ | минимальные | $$d_c < d_n$$ | Средние, не совпадающие для микрозондов разной длины | средние | средние  |\n|  Пески, песчаники, высокопористые, карбонатные коллекторы с межзерновой пористостью, насыщенные нефтью с небольшим содержанием связанной воды | среднее | $$\\rho_p < \\rho_m > \\rho_n$$ $$\\rho_p < \\rho_m < \\rho_n$$ $$\\rho_p < \\rho_m = \\rho_n$$ | То же | То же | То же | То же | То же  |\n|  Пески, песчаники, высокопористые, карбонатные коллекторы с межзерновой пористостью, насыщенные газом с небольшим содержанием связанной воды | То же | То же | - | - | - | - | максимальные  |\n|  Коллекторы с межзерновой пористостью, насыщенные водой более пресной или такой же, как фильтрат бурового раствора | Среднее | $$\\rho_p < \\rho_m < \\rho_n$$ $$\\rho_p < \\rho_m = \\rho_n$$ | Показания СП выше, чем в глинах или как в глинах; $$\\rho_p \\leq \\rho_n$$ | $$d_c = d_n$$ | - | - | средние  |\n|  Низкопористые коллекторы в чистых карбонатных разностях. Характер насыщения порового про- | То же | Глубокое проникновение | Минимальные или фильтрата, кажущееся отсутствие проникновения | То же | - | минимальные | То же, но выше, чем в песчаных коллекторах  |\n|  странства установить трудно из-за глубокого проникновения. Могут обладать как межзерновой, так и трещиной пористостью |  |  |  |  |  |  |   |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n|  Глинистые известняки, мергели. Могут обладать как межзерновой, так и трещиной пористостью | - | Отсутствие проникновения | максимальные | - | максимальные, резко меняющиеся | Средние или максимальные | Средние, но выше, чем в песчаных коллекторах  |\n|  Ангидриты, чистые плотные кристаллические известняки | максимальное | Отсутствие проникновения | минимальные | d_{c} = d_{a} | То же | минимальные | Максимальные  |\n|  Гипсы, сильно загипсованные породы | То же | То же | То же | То же | То же | То же | Минимальные  |\n|  Галит (каменная соль) | - | - | - | d_{c} = d_{a} при предельном насыщении раствора солью | минимальные при d_{c} » d_{a}. | Очень низкие | Показания меняются с изменением диаметра скважины от средних до очень высоких  |\n|  Калийные соли | - | - | - | То же | То же | Аномально высокие | То же  |",
+     "source": "таблица 21 книги, стр. 93, 94",
+     "ocr_note": "Таблица перенесена из распознанного текста без изменений. Возможные ошибки распознавания: есть пустые ячейки (возможно, объединённые ячейки оригинала).",
+     "by_model": false
+    }
+   ]
   },
   {
    "id": "latyshova.rock_table_dense",
@@ -3998,7 +4025,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 1
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.lithology_method_choice",
@@ -4225,7 +4253,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.direct_collector_signs",
@@ -4498,7 +4527,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.radial_resistance_gradient",
@@ -4740,7 +4770,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.dynamic_indirect_signs",
@@ -4971,7 +5002,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.critical_permeability",
@@ -5185,7 +5217,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.calculate_permeability_limit",
@@ -5406,7 +5439,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.effective_thickness_cutoffs",
@@ -5692,7 +5726,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.saturation_parameter",
@@ -5912,7 +5947,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.resistance_saturation_limits",
@@ -6180,7 +6216,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "latyshova.porosity_resistance_comparison",
@@ -6467,7 +6504,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.saturation_graph_regions",
@@ -6812,7 +6850,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.saturation_cutoffs",
@@ -7052,7 +7091,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.derive_saturation_cutoffs",
@@ -7298,7 +7338,8 @@
     "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.phase_flow_ranges",
@@ -7627,7 +7668,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.clay_saturation_thresholds",
@@ -7993,7 +8035,20 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": [
+    {
+     "number": "22",
+     "caption": "Таблица 22",
+     "pages": [
+      100
+     ],
+     "markdown": "|  \\( a_{CII} \\) | \\( k_{n}^{*},\\% \\) | \\( P_{n}^{*} \\) | \\( k_{n}^{**},\\% \\) | \\( P_{n}^{**} \\) | \\( k_{n,sp},\\% \\) | \\( P_{n,sp} \\)  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  1,0 | 30 | 10 | 80 | 1,6 | 58 | 2,9  |\n|  0,9 | 37 | 5 | 77 | 1,6 | 58 | 2,5  |\n|  0,8 | 42 | 3,1 | 74 | 1,55 | 59 | 2,1  |\n|  0,7 | 50 | 2,1 | 68 | 1,5 | 59 | 1,8  |",
+     "source": "таблица 22 книги, стр. 100",
+     "ocr_note": "Таблица перенесена из распознанного текста без изменений.",
+     "by_model": false
+    }
+   ]
   },
   {
    "id": "latyshova.clay_saturation_examples",
@@ -8251,7 +8306,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.productive_interval_thickness",
@@ -8488,7 +8544,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.fluid_contact_position",
@@ -8786,7 +8843,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "latyshova.noncollector_interbeds",
@@ -9035,7 +9093,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.thin_bed_resistivity",
@@ -9250,7 +9309,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.thin_bed_sp",
@@ -9465,7 +9525,8 @@
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.mixed_thin_interbeds",
@@ -9834,7 +9895,8 @@
     "counterintuitive": 1,
     "cause_effect": 2
    },
-   "reviewed": true
+   "reviewed": true,
+   "book_tables": []
   },
   {
    "id": "latyshova.carbonate_collector_difficulties",
@@ -10099,7 +10161,8 @@
     "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.carbonate_curve_normalization",
@@ -10359,7 +10422,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.carbonate_section_example",
@@ -10632,7 +10696,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.carbonate_porosity_cutoff",
@@ -10882,7 +10947,8 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
-   }
+   },
+   "book_tables": []
   },
   {
    "id": "latyshova.regional_porosity_examples",
@@ -11119,7 +11185,20 @@
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 1
-   }
+   },
+   "book_tables": [
+    {
+     "number": "23",
+     "caption": "Таблица 23.",
+     "pages": [
+      108
+     ],
+     "markdown": "|  Коллектор | $k_{n_0}^*$ %  |\n| --- | --- |\n|  Рифтовые отложения (Башкирия, пермь) | 1  |\n|  Крупнозернистые известняки (Башкирия, Карбон) | 3  |\n|  Крупнозернистые доломиты (Белоруссия, девон) | 3  |\n|  Коллекторы Оренбургского газового месторождения (пермь) | 7  |\n|  Мелоподобные известняки (АССР, верхний мел) | 13  |",
+     "source": "таблица 23 книги, стр. 108",
+     "ocr_note": "Таблица перенесена из распознанного текста без изменений.",
+     "by_model": false
+    }
+   ]
   }
  ]
 }
