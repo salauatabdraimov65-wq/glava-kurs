@@ -1,0 +1,11 @@
+Пакет review_self_package.json: {'claim': 330, 'analogy': 42, 'script_line': 12, 'scene_fact': 13}, сцен 1, кадров 0
+Кандидатов: 75, прошли согласие сигналов: 8, сняты обратной проверкой: 0, в ответе: 8 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/runs/latyshova_gl5_par17-20/review_self.json
+  code+bulk+strong   C178  significant lost_condition         Неравенства для отдельного пласта недостаточно для оценки насыщения то
+  bulk+strong        C100  critical    sign_flip              Указана каверна — расширение скважины, тогда как в таблице для этих ко
+  bulk+strong        C290  critical    other                  Плотность промывочной жидкости ошибочно названа плотностью породы.
+  bulk+strong        C103  significant lost_condition         Пропущено условие высокой минерализации воды; утверждение обобщено на 
+  bulk+strong        C038  significant lost_condition         Высокая минерализация воды выдана за достаточное условие; автор уточня
+  bulk+strong        A08   significant analogy_without_limit  Граница аналогии неверна: глава описывает признаки, по которым различа
+  bulk+strong        C177  significant lost_condition         Утверждение об отличии от других водонасыщенных коллекторов опускает у
+  bulk+strong        C258  significant lost_condition         Не указано, что установление этих сопротивлений относится к выделению 
+finished

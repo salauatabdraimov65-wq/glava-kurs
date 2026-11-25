@@ -1,0 +1,20 @@
+Кандидатов: 62, прошли согласие сигналов: 19, сняты обратной проверкой: 0, в ответе: 19 → review/bench/barenblatt_par4/answer.json
+  code+bulk+strong   C008  critical    sign_flip              Соотношение размеров пласта перевёрнуто: толщина много меньше, а не бо
+  code+bulk+strong   C054  critical    sign_flip              в утверждении «больш», у автора противоположное «меньш»
+  code+bulk+strong   C023  critical    sign_flip              в утверждении «более», у автора противоположное «менее»
+  code+bulk+strong   C025  significant overgeneralization     Утверждение «всегда применяют» подменяет авторское «часто используются
+  code+bulk+strong   C063  significant overgeneralization     «Всегда достаточно» расширяет утверждение автора: он говорит, что прос
+  code+bulk+strong   C051  significant measured_vs_inferred   выведенное выдано за измеренное
+  code+bulk+strong   C061  significant measured_vs_inferred   Утверждение приписывает вывод прямому измерению, тогда как автор делае
+  code+bulk+strong   C037  significant overgeneralization     «Всегда не равен» усиливает авторское «обычно не равен».
+  bulk+strong        C066  critical    sign_flip              Перепутано направление изменения: отклонение убывает с ростом x, а не 
+  bulk+strong        C015  significant measured_vs_inferred   Экспоненциальное приближение выведено из решения уравнения, а не устан
+  bulk+strong        C017  significant wrong_scaling          Для блока длиной 1 м указана 1 с вместо авторской оценки 0,1 с — расхо
+  bulk+strong        C021  significant measured_vs_inferred   Математическое следствие линейности уравнения выдано за результат прям
+  bulk+strong        C029  significant measured_vs_inferred   Получение формулы математическим преобразованием ошибочно названо прям
+  bulk+strong        C055  significant measured_vs_inferred   Малость аргумента выведена из порядков κ и ρ, а не установлена прямым 
+  bulk+strong        C003  significant lost_condition         Уравнение представлено как применимое к слабосжимаемой жидкости вообще
+  bulk+strong        C032  significant measured_vs_inferred   Фраза «прямым измерением установлено» ошибочно характеризует оценку па
+  bulk+strong        C036  significant measured_vs_inferred   Фраза «прямым измерением установлено» выдаёт вывод из модели и обработ
+  bulk+strong        C027  significant lost_condition         Формула приведена без условия промежуточной асимптотики и потому выгля
+  code+bulk          C007  significant missing_caveat         Утверждение опускает оговорку «обычно»: автор говорит об обычно приним
