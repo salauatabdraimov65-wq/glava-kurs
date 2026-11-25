@@ -82,6 +82,15 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
     if book_title and book_title != heading:
         title_page = f'<span class="page">стр. {html.escape(str(page))}</span>' if page else ""
         blocks.append(f'<div class="book-title">Раздел книги: {html.escape(book_title)} {title_page}</div>')
+    supported_task_types = {"single", "multiple", "order", "gap", "calc"}
+    node_tasks = [
+        task for task in tasks
+        if task.get("step_id") == node.get("id")
+        and task.get("type") in supported_task_types
+        and task.get("id")
+        and text_of(task.get("prompt"))
+        and "answer" in task
+    ]
     step_minutes = estimated_minutes(node, tasks)
     if step_minutes:
         blocks.append(f'<div class="step-time">≈ {step_minutes} мин · чтение и практика</div>')
@@ -224,18 +233,12 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         src = html.escape((Path("..") / str(video_path)).as_posix(), quote=True)
         blocks.append(f'<section class="content-block"><h2>Видео</h2><video controls preload="metadata" src="{src}">Ваш браузер не поддерживает видео.</video></section>')
 
-    supported_task_types = {"single", "multiple", "order", "gap", "calc"}
+    if not node_tasks:
+        step_id = html.escape(str(node.get("id", "")), quote=True)
+        blocks.append(f'<div class="step-complete"><button type="button" data-complete-step="{step_id}">Завершить этап · +20 XP</button></div>')
     blocks.append("</div>")
-    node_tasks = [
-        task for task in tasks
-        if task.get("step_id") == node.get("id")
-        and task.get("type") in supported_task_types
-        and task.get("id")
-        and text_of(task.get("prompt"))
-        and "answer" in task
-    ]
     if node_tasks:
-        blocks.append('<aside class="content-block practice practice-column"><div class="exercise-kicker">ВАША ПРАКТИКА</div><h2>Проверьте себя</h2>')
+        blocks.append('<aside class="content-block practice practice-column"><div class="exercise-kicker">ВАША ПРАКТИКА</div><h2>Проверьте себя</h2><div class="step-reward" data-step-reward></div>')
         claim_pages = {str(claim.get("id")): claim.get("page_pdf") for claim in claims if claim.get("id")}
         claim_texts = {str(claim.get("id")): claim for claim in claims if claim.get("id") and text_of(claim.get("text"))}
         for task in node_tasks:
@@ -477,8 +480,8 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
         )
         label = text_of((node.get("layers") or {}).get("topic")) or str(node.get("title", f"Шаг {index + 1}"))
         nav_markup.append(
-            f'<button class="step-link" type="button" data-go="{index}"><span class="step-number">{index + 1}</span>'
-            f'<span>{html.escape(label)}</span></button>'
+            f'<button class="step-link" type="button" data-go="{index}" data-step-id="{html.escape(step_id, quote=True)}"><span class="step-number">{index + 1}</span>'
+            f'<span class="step-name">{html.escape(label)}</span><span class="step-marker" aria-hidden="true">○</span></button>'
         )
 
     cards_markup = render_cards(nodes)
@@ -502,9 +505,9 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
   <meta name="color-scheme" content="light dark">
   <title>{chapter_name} — курс</title>
   <style>
-    :root {{ {geology_vars} color-scheme:light dark; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.6; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(0,0,0,.2); }}
+    :root {{ {geology_vars} color-scheme:light dark; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.6; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --shadow:0 12px 32px rgba(0,0,0,.2); }}
     :root[data-theme="light"] {{ color-scheme:light; --bg:color-mix(in srgb,var(--geo-salt,#C9D6DF) 36%,white); --paper:color-mix(in srgb,var(--geo-salt,#C9D6DF) 18%,white); --ink:color-mix(in srgb,var(--geo-background,#0F1419) 24%,var(--geo-text,#ECEFF4)); --muted:color-mix(in srgb,var(--geo-background,#0F1419) 58%,var(--geo-muted,#8A96A3)); --line:color-mix(in srgb,var(--geo-dense,#8C7B6B) 25%,white); --accent:color-mix(in srgb,var(--geo-dense,#8C7B6B) 74%,var(--geo-sand,#E8C872)); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 18%,white); --teal:color-mix(in srgb,var(--geo-shale,#6B8E5A) 72%,var(--geo-background,#0F1419)); --warm:color-mix(in srgb,var(--geo-reef,#F0A35E) 72%,var(--geo-background,#0F1419)); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(47,58,43,.12); }}
-    :root[data-theme="dark"] {{ color-scheme:dark; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(0,0,0,.2); }}
+    :root[data-theme="dark"] {{ color-scheme:dark; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --shadow:0 12px 32px rgba(0,0,0,.2); }}
     * {{ box-sizing:border-box; }} html,body {{ max-width:100%; }} body {{ margin:0; background:repeating-radial-gradient(ellipse at 12% 10%,transparent 0 42px,color-mix(in srgb,var(--geo-shale,#6B8E5A) 7%,transparent) 43px 44px,transparent 45px 74px),radial-gradient(ellipse at 8% 0%,color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,transparent),transparent 26rem),radial-gradient(ellipse at 94% 8%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 15%,transparent),transparent 30rem),var(--bg); background-attachment:fixed; color:var(--ink); }} button,input {{ font:inherit; }}
     .shell {{ max-width:1280px; margin:auto; padding:1rem; }} header {{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.2rem; border:1px solid var(--line); border-radius:1.35rem; background:linear-gradient(115deg,var(--paper),var(--soft)); box-shadow:var(--shadow); }} header > div:first-child::before {{ content:"⌁"; display:inline-block; margin-right:.5rem; color:var(--teal); font-size:1.65rem; font-weight:800; vertical-align:-.08em; }} header::after {{ content:""; flex:none; width:112px; height:62px; border-radius:60% 60% .5rem .5rem; opacity:.82; clip-path:polygon(0 65%,18% 50%,35% 56%,53% 27%,69% 44%,82% 33%,100% 51%,100% 100%,0 100%); background:repeating-linear-gradient(174deg,var(--geo-sand,#E8C872) 0 8px,var(--geo-shale,#6B8E5A) 8px 15px,var(--geo-limestone,#7FB3D5) 15px 22px,var(--geo-dense,#8C7B6B) 22px 29px); }}
     h1 {{ font-size:clamp(1.6rem,4vw,2.35rem); line-height:1.2; margin:.3rem 0 .8rem; }} h2 {{ font-size:1.25rem; margin:0 0 .65rem; }} h3 {{ font-size:1rem; margin:.9rem 0 .2rem; color:var(--muted); }}
@@ -572,9 +575,63 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     .task-result {{ background:#263228; border-color:var(--geo-shale,#6B8E5A); }}
     .task-result.correct {{ background:#263d2d; border-color:#75ac65; color:#E7F2DD; }}
     .muted,.book-title {{ color:#AAB4AB; }}
+    /* Datathon-style void palette with purple/cyan energy, sourced from the geology palette. */
+    :root {{ --accent:var(--geo-dolomite,#A98FD1); --teal:var(--geo-limestone,#7FB3D5); --warm:var(--geo-sand,#E8C872); --sun:var(--geo-anhydrite,#D98CB3); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --soft:#22243a; }}
+    :root[data-theme="dark"] {{ --accent:var(--geo-dolomite,#A98FD1); --teal:var(--geo-limestone,#7FB3D5); --warm:var(--geo-sand,#E8C872); --sun:var(--geo-anhydrite,#D98CB3); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --soft:#22243a; }}
+    body {{ background:radial-gradient(ellipse at 75% -8%,rgba(169,143,209,.2),transparent 38rem),radial-gradient(ellipse at 12% 34%,rgba(127,179,213,.09),transparent 36rem),repeating-radial-gradient(ellipse at 50% 0%,transparent 0 80px,rgba(169,143,209,.035) 81px 82px,transparent 83px 142px),#0D0E18; }}
+    header.hero {{ border-color:rgba(169,143,209,.32); background:radial-gradient(ellipse at 75% 12%,rgba(127,179,213,.2),transparent 34rem),radial-gradient(ellipse at 10% 110%,rgba(169,143,209,.15),transparent 33rem),linear-gradient(120deg,#0D0E18 5%,#17172B 57%,#1B2030 100%); }}
+    .hero-kicker,.nav-kicker {{ color:#C5A9FF; }}
+    .status-dot {{ background:var(--mission); box-shadow:0 0 14px color-mix(in srgb,var(--mission) 70%,transparent); }}
+    header.hero::after {{ opacity:.58; background:repeating-linear-gradient(176deg,var(--geo-dolomite,#A98FD1) 0 9px,var(--geo-limestone,#7FB3D5) 9px 17px,var(--geo-anhydrite,#D98CB3) 17px 25px,var(--geo-sand,#E8C872) 25px 33px,var(--geo-shale,#6B8E5A) 33px 39px); }}
+    .hero h1::after {{ background:linear-gradient(90deg,var(--mission),#7FB3D5,#A98FD1); }}
+    .hero-stats span {{ border-color:rgba(197,169,255,.24); background:rgba(15,15,28,.76); }}
+    .hero-stats b {{ color:var(--mission); }}
+    .hero-completion {{ max-width:450px; margin-top:1rem; color:#B9BBCD; }}
+    .hero-completion > div:first-child {{ display:flex; justify-content:space-between; gap:1rem; margin-bottom:.35rem; font-size:.83rem; }}
+    .hero-completion b {{ color:var(--mission); }}
+    .hero-track {{ height:.55rem; overflow:hidden; border-radius:99px; background:#29283B; }}
+    .hero-track span {{ display:block; width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--mission),#7FB3D5,#A98FD1); transition:width .25s ease; }}
+    .theme-controls button,.view-switcher button {{ border-color:rgba(169,143,209,.25); background:#202036; }}
+    .theme-controls button:hover,.view-switcher button:hover {{ background:#2B2945; border-color:#B8F06C; }}
+    .xp-chip {{ border-color:rgba(217,140,179,.65); background:linear-gradient(130deg,#D98CB3,#A98FD1); color:#17131F; }}
+    #course-nav {{ border-color:#38344F; border-top-color:#A98FD1; background:linear-gradient(155deg,#181827,#141722); }}
+    .nav-kicker {{ color:#A98FD1; }}
+    .step-link {{ color:#C2C4D3; }}
+    .step-link[aria-current="step"] {{ border-color:rgba(169,143,209,.45); background:linear-gradient(100deg,#2B2945,#191A2B); color:#F2EEFF; box-shadow:inset 3px 0 var(--mission); }}
+    .step-number {{ border-color:rgba(169,143,209,.5); background:#27243B; color:#D1B9FF; }}
+    .step-marker {{ margin-left:auto; color:#77778C; font-size:1.15rem; }}
+    .step-link.is-complete .step-marker {{ color:#B8F06C; }}
+    .content-block,.review-card,.task {{ background:linear-gradient(145deg,#1C1D30,#151722 80%); border-color:#33334A; }}
+    .content-block {{ border-left-color:#7FB3D5; }}
+    .content-block:nth-of-type(3n+1) {{ border-left-color:#A98FD1; }}
+    .content-block:nth-of-type(3n+2) {{ border-left-color:#D98CB3; }}
+    .content-block h2,.review-card h2 {{ color:#F0EDFF; }}
+    .practice-column {{ border-color:rgba(169,143,209,.44); border-top-color:#A98FD1; background:linear-gradient(155deg,#25233D,#171825 76%); }}
+    .exercise-kicker {{ color:#B8F06C; }}
+    .view-switcher {{ background:#141522; border-color:#35334B; }}
+    .view-switcher button[aria-pressed="true"] {{ background:linear-gradient(130deg,#393252,#25233D); border-color:#A98FD1; color:#E5DAFF; }}
+    .map-node {{ fill:#23243A; stroke:#5A4C76; }}
+    .map-label {{ fill:#E7E4F3; }}
+    .map-number,.link-map {{ color:#D1B9FF; fill:#D1B9FF; }}
+    .map-edge {{ stroke:#7FB3D5; }}
+    .page,.badge {{ color:#D8C9FF; background:#29263F; border-color:#4B4267; }}
+    .step-time {{ color:#D8C9FF; background:#26243B; border-color:#484064; }}
+    .terms li {{ color:#D8C9FF; background:#242239; border-color:#4B4267; }}
+    blockquote,.hint-content {{ background:#22243A; border-left-color:#7FB3D5; }}
+    .option {{ border-color:#38374F; background:#181A28; }}
+    .option:hover {{ background:#27263F; border-color:var(--mission); }}
+    .gap-input {{ border-color:#4D4964; background:#10121D; color:#ECEFF4; }}
+    .task-result {{ background:#25263B; border-color:#7FB3D5; }}
+    .task-result.correct {{ background:#263629; border-color:#8CBE61; color:#EAF5DE; }}
+    .step-reward {{ margin:.5rem 0 .8rem; padding:.5rem .7rem; border-radius:.7rem; background:#202036; color:#C5BED8; font-size:.85rem; }}
+    .step-reward.is-earned {{ border:1px solid rgba(180,240,107,.45); color:#C8F495; }}
+    .step-complete {{ margin-top:1rem; }}
+    .step-complete button {{ border-color:color-mix(in srgb,var(--mission) 48%,transparent); background:#293528; color:#D5F5B2; }}
+    .step-complete button:disabled {{ opacity:1; background:#202C25; }}
     @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header.hero {{ min-height:410px; padding:1.2rem; align-items:flex-start; flex-direction:column; }} header.hero::after {{ right:-1rem; bottom:0; width:78%; height:44%; opacity:.42; }} .hero-copy {{ z-index:1; }} .hero h1 {{ font-size:clamp(2.1rem,11vw,3.2rem); overflow-wrap:anywhere; }} .hero-note {{ font-size:1rem; }} .hero-stats {{ gap:.35rem; }} .hero-stats span {{ font-size:.78rem; padding:.3rem .55rem; }} .theme-controls {{ justify-content:flex-start; }} .theme-controls button {{ min-height:42px; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     h1 {{ position:relative; }} h1::after {{ content:""; display:block; width:4.5rem; height:.25rem; margin-top:.45rem; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--teal),var(--sun)); }} .task {{ border-top:3px solid var(--sun); }} .task-result {{ border:1px solid color-mix(in srgb,var(--teal) 32%,var(--line)); }} .task-result.correct {{ border-color:var(--teal); background:color-mix(in srgb,var(--teal) 12%,var(--paper)); }} .option:hover {{ border-color:var(--accent); background:color-mix(in srgb,var(--soft) 65%,var(--paper)); }} .map-node {{ fill:color-mix(in srgb,var(--soft) 82%,var(--sun) 18%); }} .map-edge {{ stroke:var(--teal); }}
     @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} header::after {{ width:76px; height:42px; margin-left:auto; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
+    @media (max-width:700px) {{ .hero-completion {{ width:100%; }} .theme-controls {{ position:relative; z-index:2; }} }}
     @media (prefers-reduced-motion:reduce) {{ *,*::before,*::after {{ scroll-behavior:auto !important; transition:none !important; }} }}
     @media print {{ body {{ background:#fff; color:#000; }} aside,header,.view-switcher,.footer-nav,.practice,.no-print {{ display:none !important; }} .shell,.layout {{ max-width:none; display:block; margin:0; padding:0; }} .step,.step[hidden] {{ display:block !important; page-break-after:always; }} .content-block,.summary-step {{ border:0; padding:.3rem 0; break-inside:avoid; }} .quote > blockquote {{ display:block; }} .app-view[hidden] {{ display:none !important; }} .app-view:not([hidden]) {{ display:block !important; }} }}
   </style>
@@ -587,6 +644,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
       <h1>{hero_title}</h1>
       <p class="hero-note">Исследуйте слои знаний, сверяйтесь с источниками и закрепляйте открытия практикой.</p>
       <div class="hero-stats"><span><b>{step_count}</b> этапов</span><span><b>{task_count}</b> упражнений</span><span><b>офлайн</b> режим</span></div>
+      <div class="hero-completion"><div><span>Разведано</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track"><span id="completion-fill"></span></div></div>
     </div>
     <div class="theme-controls"><span class="xp-chip" id="xp-total" aria-live="polite">0 XP</span><button type="button" data-show-view="course">Продолжить маршрут</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div>
   </header>
@@ -613,6 +671,7 @@ const CHAPTER = {json.dumps(str(layer.get('chapter', 'course')), ensure_ascii=Fa
 const STORE_KEY = 'course-progress:' + CHAPTER;
 const TASK_KEY = 'course-tasks:' + CHAPTER;
 const XP_KEY = 'course-xp:' + CHAPTER;
+const COMPLETE_KEY = 'course-completed-steps:' + CHAPTER;
 const CARD_KEY = 'course-cards:' + CHAPTER;
 const VIEW_KEY = 'course-view:' + CHAPTER;
 const THEME_KEY = 'course-theme-v2:' + CHAPTER;
@@ -620,16 +679,62 @@ let saved = {{}};
 let solved = {{}};
 let reviewed = {{}};
 let xp = 0;
+let completedSteps = {{}};
 try {{ saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ solved = JSON.parse(localStorage.getItem(TASK_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ reviewed = JSON.parse(localStorage.getItem(CARD_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ xp = Number(localStorage.getItem(XP_KEY)) || 0; }} catch (_) {{}}
+try {{ completedSteps = JSON.parse(localStorage.getItem(COMPLETE_KEY) || '{{}}'); }} catch (_) {{}}
 let current = Math.min(Math.max(Number(saved.step) || 0, 0), Math.max(STEPS.length - 1, 0));
 const esc = (s) => String(s ?? '');
 function persist(key, value) {{ try {{ localStorage.setItem(key, JSON.stringify(value)); }} catch (_) {{}} }}
 function removeStored(key) {{ try {{ localStorage.removeItem(key); }} catch (_) {{}} }}
 function updateXp() {{ document.getElementById('xp-total').textContent = xp + ' XP'; }}
 updateXp();
+function syncCourseProgress() {{
+  let completedCount = 0;
+  let changed = false;
+  const justCompleted = [];
+  const validTypes = ['single', 'multiple', 'order', 'gap', 'calc'];
+  STEPS.forEach(step => {{
+    const stepId = step.dataset.stepId;
+    const stepTasks = TASKS.filter(task => task.step_id === stepId && validTypes.includes(task.type) && task.id && task.prompt && Object.hasOwn(task, 'answer'));
+    const done = stepTasks.length ? stepTasks.every(task => solved[task.id]) : Boolean(completedSteps[stepId]);
+    if (done) {{
+      completedCount += 1;
+      if (!completedSteps[stepId]) {{
+        completedSteps[stepId] = true;
+        xp += 20;
+        changed = true;
+        justCompleted.push(stepId);
+      }}
+    }}
+    const nav = [...document.querySelectorAll('.step-link')].find(item => item.dataset.stepId === stepId);
+    if (nav) {{
+      nav.classList.toggle('is-complete', done);
+      nav.querySelector('.step-marker').textContent = done ? '✦' : '○';
+      nav.setAttribute('aria-label', nav.querySelector('.step-name').textContent + (done ? ', пройдено' : ', не пройдено'));
+    }}
+    const reward = step.querySelector('[data-step-reward]');
+    if (reward) {{
+      const solvedCount = stepTasks.filter(task => solved[task.id]).length;
+      reward.textContent = done ? 'Этап пройден · +20 XP' : 'Решено ' + solvedCount + ' из ' + stepTasks.length + ' · +20 XP за этап';
+      reward.classList.toggle('is-earned', done);
+    }}
+    const completionButton = step.querySelector('[data-complete-step]');
+    if (completionButton) {{
+      completionButton.disabled = done;
+      completionButton.textContent = done ? 'Этап пройден · +20 XP' : 'Завершить этап · +20 XP';
+    }}
+  }});
+  document.getElementById('completed-steps').textContent = completedCount + ' / ' + STEPS.length;
+  document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
+  if (changed) {{
+    try {{ localStorage.setItem(COMPLETE_KEY, JSON.stringify(completedSteps)); localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
+  }}
+  updateXp();
+  return justCompleted;
+}}
 let theme = '';
 try {{ theme = localStorage.getItem(THEME_KEY) || ''; }} catch (_) {{}}
 if (!theme) theme = 'dark';
@@ -681,8 +786,19 @@ document.querySelectorAll('.review-card').forEach(card => {{
     }});
   }});
 }});
+document.querySelectorAll('[data-complete-step]').forEach(button => button.addEventListener('click', () => {{
+  const stepId = button.dataset.completeStep;
+  if (!completedSteps[stepId]) {{
+    completedSteps[stepId] = true;
+    xp += 20;
+    try {{ localStorage.setItem(COMPLETE_KEY, JSON.stringify(completedSteps)); localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
+    button.textContent = 'Этап пройден · +20 XP';
+    button.disabled = true;
+    syncCourseProgress();
+  }}
+}}));
 document.getElementById('print-summary').addEventListener('click', () => {{ setView('summary'); window.print(); }});
-document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(XP_KEY); location.reload(); }});
+document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(XP_KEY); removeStored(COMPLETE_KEY); location.reload(); }});
 function taskElement(task) {{
   const card = document.querySelector(`[data-task-id="${{CSS.escape(task.id)}}"]`);
   if (!card) return;
@@ -770,12 +886,14 @@ function taskElement(task) {{
       try {{ localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
       updateXp();
     }}
+    const newMilestones = syncCourseProgress();
     showResult(correct);
-    if (firstSolve) result.textContent += ' +10 XP';
+    if (firstSolve) result.textContent += ' +10 XP' + (newMilestones.includes(card.closest('.step').dataset.stepId) ? ' · этап пройден +20 XP' : '');
     if (correct) check.disabled = true;
   }});
 }}
 TASKS.forEach(taskElement);
+syncCourseProgress();
 setStep(current);
 setView(activeView);
 </script>
