@@ -4,7 +4,7 @@
   {
    "node_id": "latyshova.gis_tasks",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -14,11 +14,11 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Пр, видеоёмкость 6/10 → шортс"
+   "why": "тип И/Пр; видеоёмкость 6/10"
   },
   {
    "node_id": "latyshova.drilling_effects",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -28,12 +28,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/И, видеоёмкость 6/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип М/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.mud_filtration_pressure",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -43,12 +43,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/И, видеоёмкость 5/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип М/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.filtrate_salinity",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -58,8 +58,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 6/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.water_drilling",
@@ -74,7 +74,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип И/М, видеоёмкость 4/10 → текст"
+   "why": "тип М/И; текст шага и схема"
   },
   {
    "node_id": "latyshova.nonfiltering_mud",
@@ -89,11 +89,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип И/М, видеоёмкость 4/10 → текст"
+   "why": "тип И/М; текст шага и схема"
   },
   {
    "node_id": "latyshova.section_pore_types",
-   "format": "карточки",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -103,13 +103,13 @@
     "cause_effect": 1
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Р/П, видеоёмкость 3/10 → карточки"
+   "template": "decision_practicum",
+   "why": "тип Р/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.collector_variants",
    "format": "карточки",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 0,
     "invisible": 0,
@@ -119,7 +119,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Р/П, видеоёмкость 2/10 → карточки"
+   "why": "тип Р/None; распознавание: признак → объект"
   },
   {
    "node_id": "latyshova.method_groups",
@@ -133,12 +133,12 @@
     "cause_effect": 1
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип И/Пр, видеоёмкость 3/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.productivity_methods",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -148,12 +148,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Ф, видеоёмкость 8/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.combined_method_signals",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -163,12 +163,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 7/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.build_lithology_column",
-   "format": "практикум на данных",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -179,11 +179,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+   "why": "тип Пр/И; текст шага и схема"
   },
   {
    "node_id": "latyshova.rock_signs_limits",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -194,11 +194,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Н/И, видеоёмкость 5/10 → интерактив"
+   "why": "тип И/Н; текст шага и схема"
   },
   {
    "node_id": "latyshova.rock_table_collectors",
-   "format": "карточки",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -208,12 +208,12 @@
     "cause_effect": 1
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Р/И, видеоёмкость 4/10 → карточки"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.rock_table_dense",
-   "format": "карточки",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -223,8 +223,8 @@
     "cause_effect": 1
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Р/И, видеоёмкость 4/10 → карточки"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.lithology_method_choice",
@@ -238,12 +238,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/Н, видеоёмкость 4/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Пр/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.direct_collector_signs",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -253,12 +253,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 8/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.radial_resistance_gradient",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -268,13 +268,13 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.dynamic_indirect_signs",
-   "format": "практикум на данных",
-   "secondary_format": "карточки",
+   "format": "шортс",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -283,12 +283,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/И, видеоёмкость 6/10 → практикум на данных"
+   "template": "well_tool_curve",
+   "why": "тип И/Н; видеоёмкость 6/10"
   },
   {
    "node_id": "latyshova.critical_permeability",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -298,8 +298,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 3/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Н/None; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.calculate_permeability_limit",
@@ -313,8 +313,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
    "node_id": "latyshova.effective_thickness_cutoffs",
@@ -328,8 +328,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.saturation_parameter",
@@ -343,12 +343,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип И/Ф, видеоёмкость 4/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.resistance_saturation_limits",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -358,12 +358,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/И, видеоёмкость 4/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.porosity_resistance_comparison",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -373,12 +373,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Пр, видеоёмкость 5/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.saturation_graph_regions",
-   "format": "карточки",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -388,12 +388,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Р/Н, видеоёмкость 7/10 → карточки"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.saturation_cutoffs",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -403,8 +403,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/Ф, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.derive_saturation_cutoffs",
@@ -418,12 +418,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/Н, видеоёмкость 7/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.phase_flow_ranges",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -433,12 +433,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Н, видеоёмкость 6/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Н/Ф; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.clay_saturation_thresholds",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -448,8 +448,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Н, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Н/Ф; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.clay_saturation_examples",
@@ -463,12 +463,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/Р, видеоёмкость 4/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.productive_interval_thickness",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -478,8 +478,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Пр, видеоёмкость 4/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип П/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.fluid_contact_position",
@@ -493,12 +493,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/И, видеоёмкость 7/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.noncollector_interbeds",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -508,8 +508,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/И, видеоёмкость 6/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип И/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.thin_bed_resistivity",
@@ -523,8 +523,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/И; формула/модель — понимание через параметры"
   },
   {
    "node_id": "latyshova.thin_bed_sp",
@@ -538,12 +538,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип И/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.mixed_thin_interbeds",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -553,13 +553,13 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/И, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.carbonate_collector_difficulties",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -569,11 +569,11 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
+   "why": "тип И/М; видеоёмкость 7/10"
   },
   {
    "node_id": "latyshova.carbonate_curve_normalization",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -583,8 +583,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Пр, видеоёмкость 6/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.carbonate_section_example",
@@ -598,12 +598,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/Р, видеоёмкость 6/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип И/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.carbonate_porosity_cutoff",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -613,12 +613,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/И, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "latyshova.regional_porosity_examples",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -629,7 +629,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Н/Р, видеоёмкость 3/10 → интерактив"
+   "why": "тип Н/None; текст шага и схема"
   }
  ]
 }

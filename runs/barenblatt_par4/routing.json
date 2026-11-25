@@ -13,8 +13,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.linear_flow_laplace",
@@ -28,8 +28,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.short_time_response",
@@ -43,8 +43,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 8/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.steady_state_timescale",
@@ -58,8 +58,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 8/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.radial_flow_model",
@@ -73,8 +73,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 4/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.constant_rate_solution",
@@ -88,8 +88,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.radial_pressure_response",
@@ -103,12 +103,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.pressure_buildup_test",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -118,12 +118,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Н, видеоёмкость 6/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "barenblatt.interference_test_method",
-   "format": "шортс",
+   "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -133,12 +133,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Пр, видеоёмкость 8/10 → шортс"
+   "template": "pressure_explorer",
+   "why": "тип Ф/И; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.test_model_limits",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -148,12 +148,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/И, видеоёмкость 7/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Н/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "barenblatt.laplace_response_function",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -163,8 +163,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/И, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "barenblatt.laplace_curve_analysis",
@@ -178,8 +178,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/Ф, видеоёмкость 6/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Ф/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "barenblatt.two_zone_response",
@@ -193,8 +193,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/И, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/И; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.approximation_motivation",
@@ -208,8 +208,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Н/М, видеоёмкость 7/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.integral_relations_method",
@@ -223,8 +223,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 4/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.polynomial_pressure_approximation",
@@ -238,8 +238,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.pressure_moment_equations",
@@ -253,8 +253,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Р, видеоёмкость 4/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.first_flow_approximation",
@@ -268,8 +268,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.higher_flow_approximations",
@@ -283,8 +283,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/Н, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.radial_integral_approximation",
@@ -298,8 +298,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.bounded_radial_reservoir",
@@ -313,8 +313,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 6/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
    "node_id": "barenblatt.bounded_reservoir_settling",
@@ -328,8 +328,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 5/10 → интерактив"
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
   }
  ]
 }

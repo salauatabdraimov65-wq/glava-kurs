@@ -3,7 +3,7 @@
  "routes": [
   {
    "node_id": "kuznetsov.reef_importance",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -14,11 +14,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Н, видеоёмкость 7/10 → интерактив"
+   "why": "тип П/Н; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.reef_building_types",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -29,11 +29,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 7/10 → интерактив"
+   "why": "тип П/Р; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.reef_basin_position",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -44,12 +44,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 2/10 → интерактив"
+   "why": "тип П/None; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.reef_limestone_types",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 0,
     "invisible": 1,
@@ -58,12 +58,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/П, видеоёмкость 6/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип М/Р; видеоёмкость 6/10"
   },
   {
    "node_id": "kuznetsov.facies_zoning",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -74,11 +74,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 5/10 → шортс"
+   "why": "тип М/П; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.dome_reef_zones",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -89,11 +89,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Р, видеоёмкость 2/10 → интерактив"
+   "why": "тип П/Р; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.atoll_reef_zones",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -104,11 +104,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 6/10 → интерактив"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.linear_reef_system",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -119,11 +119,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Р, видеоёмкость 6/10 → интерактив"
+   "why": "тип П/None; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.primary_reef_pores",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -134,12 +134,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/Р, видеоёмкость 5/10 → шортс"
+   "why": "тип М/П; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.secondary_reef_pores",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -148,12 +148,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/В, видеоёмкость 9/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип В/М; видеоёмкость 9/10"
   },
   {
    "node_id": "kuznetsov.rainbow_reef_classes",
-   "format": "карточки",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -164,11 +164,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Р/Н, видеоёмкость 3/10 → карточки"
+   "why": "тип П/Н; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.rainbow_collector_zones",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -179,12 +179,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Р, видеоёмкость 3/10 → интерактив"
+   "why": "тип П/Н; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.rim_collector_quality",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 0,
     "invisible": 1,
@@ -193,12 +193,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/П, видеоёмкость 6/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип М/П; видеоёмкость 6/10"
   },
   {
    "node_id": "kuznetsov.field_collector_comparison",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -208,12 +208,12 @@
     "cause_effect": 1
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Р, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип П/Н; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.vertical_reef_variability",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -223,12 +223,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Н, видеоёмкость 8/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип П/В; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.layered_reef_collectors",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -238,12 +238,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип В/П, видеоёмкость 7/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип В/П; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.reef_flow_patterns",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -253,13 +253,13 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/М, видеоёмкость 5/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип П/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.reef_seal_formation",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -268,12 +268,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/В, видеоёмкость 7/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип В/П; видеоёмкость 7/10"
   },
   {
    "node_id": "kuznetsov.relief_trap_types",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -284,11 +284,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 6/10 → интерактив"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.tectonic_trap_types",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -299,11 +299,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/В, видеоёмкость 8/10 → интерактив"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.reef_accumulation_shapes",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -314,7 +314,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 7/10 → интерактив"
+   "why": "тип П/В; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.dome_reef_exploration",
@@ -328,12 +328,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/И, видеоёмкость 3/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.atoll_reef_exploration",
-   "format": "практикум на данных",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -344,7 +344,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/Н, видеоёмкость 8/10 → практикум на данных"
+   "why": "тип П/Пр; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.asymmetric_reef_exploration",
@@ -358,12 +358,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/П, видеоёмкость 5/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип Пр/П; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.critical_closure_direction",
-   "format": "интерактив",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -373,8 +373,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/Пр, видеоёмкость 6/10 → интерактив"
+   "template": "decision_practicum",
+   "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.well_spacing_principle",
@@ -388,8 +388,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/Н, видеоёмкость 6/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "kuznetsov.reef_well_patterns",
@@ -403,8 +403,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип Пр/П, видеоёмкость 4/10 → практикум на данных"
+   "template": "decision_practicum",
+   "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   }
  ]
 }

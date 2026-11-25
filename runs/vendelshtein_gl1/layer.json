@@ -19,7 +19,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "Пр"
+    "secondary": "М"
    },
    "threshold": false,
    "pages": [
@@ -288,8 +288,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "И",
-    "secondary": "Н"
+    "primary": "Н",
+    "secondary": null
    },
    "threshold": true,
    "pages": [
@@ -518,8 +518,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Ф",
-    "secondary": "Н"
+    "primary": "Н",
+    "secondary": "Ф"
    },
    "threshold": false,
    "pages": [
@@ -801,8 +801,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "И",
-    "secondary": "Н"
+    "primary": "Н",
+    "secondary": "Пр"
    },
    "threshold": false,
    "pages": [
@@ -1111,8 +1111,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "И",
-    "secondary": "Р"
+    "primary": "Н",
+    "secondary": "И"
    },
    "threshold": false,
    "pages": [
@@ -1413,8 +1413,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Ф",
-    "secondary": "И"
+    "primary": "Н",
+    "secondary": "Ф"
    },
    "threshold": false,
    "pages": [
@@ -1742,7 +1742,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "Ф"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -2299,8 +2299,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Пр",
-    "secondary": "Н"
+    "primary": "Н",
+    "secondary": "И"
    },
    "threshold": false,
    "pages": [
@@ -2643,8 +2643,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "И",
-    "secondary": "Пр"
+    "primary": "Н",
+    "secondary": "И"
    },
    "threshold": false,
    "pages": [
@@ -2885,8 +2885,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Н",
-    "secondary": "И"
+    "primary": "И",
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -3163,7 +3163,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "Р"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -3429,8 +3429,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Пр",
-    "secondary": "И"
+    "primary": "И",
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -4000,7 +4000,7 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "М",
+    "primary": "И",
     "secondary": "Н"
    },
    "threshold": false,
@@ -4522,8 +4522,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "М",
-    "secondary": "И"
+    "primary": "Н",
+    "secondary": "Пр"
    },
    "threshold": false,
    "pages": [
@@ -4797,8 +4797,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Пр",
-    "secondary": "И"
+    "primary": "И",
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -5124,7 +5124,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "Р"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -5415,7 +5415,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "М"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -5920,7 +5920,7 @@
    },
    "difficulty": {
     "primary": "Пр",
-    "secondary": "Н"
+    "secondary": "И"
    },
    "threshold": false,
    "pages": [
@@ -6188,8 +6188,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Пр",
-    "secondary": "Ф"
+    "primary": "Ф",
+    "secondary": "Пр"
    },
    "threshold": false,
    "pages": [
@@ -6764,7 +6764,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "Р"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -7319,8 +7319,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Пр",
-    "secondary": "Н"
+    "primary": "И",
+    "secondary": "М"
    },
    "threshold": false,
    "pages": [
@@ -7568,7 +7568,7 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "П",
+    "primary": "И",
     "secondary": "Пр"
    },
    "threshold": false,
@@ -7917,7 +7917,7 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "П",
+    "primary": "Н",
     "secondary": "М"
    },
    "threshold": true,
@@ -8480,7 +8480,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "П"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -8809,7 +8809,7 @@
    },
    "difficulty": {
     "primary": "Н",
-    "secondary": "Пр"
+    "secondary": "И"
    },
    "threshold": false,
    "pages": [
@@ -9120,8 +9120,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Ф",
-    "secondary": "И"
+    "primary": "И",
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -9440,8 +9440,8 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "М",
-    "secondary": "Пр"
+    "primary": "И",
+    "secondary": "М"
    },
    "threshold": false,
    "pages": [
@@ -9750,7 +9750,7 @@
    },
    "difficulty": {
     "primary": "И",
-    "secondary": "Ф"
+    "secondary": "Н"
    },
    "threshold": false,
    "pages": [
@@ -10023,7 +10023,7 @@
     "by_model": true
    },
    "difficulty": {
-    "primary": "Ф",
+    "primary": "И",
     "secondary": "Н"
    },
    "threshold": false,

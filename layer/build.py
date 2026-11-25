@@ -490,20 +490,9 @@ def build(ch: Chapter, out_dir: Path, domain: str):
         t["claim_ids"] = [tmp2id[c] for c in t["claim_ids"]]
     tasks_doc = {"chapter": ch.id, "tasks": tasks}
 
-    # E. маршрутизация
-    routes = []
-    for ln in layer_nodes:
-        vs = {k: int(max(0, min(2, (ln["video_scores"] or {}).get(k, 0) or 0)))
-              for k in ("time", "invisible", "scale", "counterintuitive", "cause_effect")}
-        prim = ln["difficulty"]["primary"]
-        fmt = DIFF["lead_format"].get(prim, "текст")
-        if fmt == "шортс" and sum(vs.values()) < 5:
-            fmt = "текст"
-        if ln["decision_on_data"] and fmt == "текст":
-            fmt = "практикум на данных"
-        routes.append({"node_id": ln["id"], "format": fmt, "secondary_format": "карточки", "video_scores": vs,
-                       "hook_short": False, "template": DIFF["scene_template"].get(prim) if fmt in ("шортс", "длинное видео", "интерактив") else None,
-                       "why": f"тип {prim}/{ln['difficulty']['secondary']}, видеоёмкость {sum(vs.values())}/10 → {fmt}"})
+    # E. маршрутизация — layer/route.py (тот же код, что и при пересчёте)
+    from layer.route import route_node
+    routes = [route_node(ln) for ln in layer_nodes]
     routing = {"chapter": ch.id, "routes": routes}
 
     # E. покрытие
@@ -540,6 +529,10 @@ def build(ch: Chapter, out_dir: Path, domain: str):
     if out_dir == ROOT / "runs" / ch.id:
         from layer.tables import attach
         attach(ch.id)   # таблицы книги целиком → book_tables шагов
+        from layer.classify import apply as classify_apply
+        classify_apply(ch.id)   # тип трудности — отдельным проходом по содержанию шага
+        from layer.route import route
+        route(ch.id)            # маршрутизация по уточнённым типам
     in_scope = [r for r in rows if r["reason"] is None or not r["reason"].startswith(("вне главы", "колонтитул"))]
     uncovered = [r for r in rows if (r["reason"] or "").startswith("НЕ ПОКРЫТО")]
     report = {"chapter": ch.id, "nodes": len(layer_nodes), "claims": len(claims), "tasks": len(tasks),

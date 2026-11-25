@@ -3,7 +3,7 @@
  "routes": [
   {
    "node_id": "baraboshkin.delta_structure",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -14,7 +14,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 4/10 → интерактив"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.delta_types",
@@ -29,12 +29,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 2/10 → текст"
+   "why": "тип М/Р; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.delta_depots",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -43,12 +43,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип В/П, видеоёмкость 7/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип В/П; видеоёмкость 7/10"
   },
   {
    "node_id": "baraboshkin.delta_facies",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -59,12 +59,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Ф, видеоёмкость 3/10 → интерактив"
+   "why": "тип П/None; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.front_progradation",
-   "format": "интерактив",
-   "secondary_format": "карточки",
+   "format": "шортс",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -73,12 +73,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип П/В, видеоёмкость 7/10 → интерактив"
+   "template": "section_through_time",
+   "why": "тип В/П; видеоёмкость 7/10"
   },
   {
    "node_id": "baraboshkin.abandonment_facies",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -88,8 +88,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/В, видеоёмкость 5/10 → шортс"
+   "template": null,
+   "why": "тип В/П; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.bay_fill",
@@ -104,12 +104,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип И/Р, видеоёмкость 4/10 → текст"
+   "why": "тип В/М; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.levees_splays",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -118,12 +118,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/И, видеоёмкость 6/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип М/В; видеоёмкость 6/10"
   },
   {
    "node_id": "baraboshkin.bay_bars",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -133,12 +133,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 7/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип Р/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "baraboshkin.fluvial_channel_example",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -148,13 +148,13 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 7/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип Р/В; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "baraboshkin.distributary_deposits",
    "format": "карточки",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -164,14 +164,59 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Р/И, видеоёмкость 6/10 → карточки"
+   "why": "тип Р/В; распознавание: признак → объект"
   },
   {
    "node_id": "baraboshkin.channel_instability",
    "format": "шортс",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "why": "тип М/П; видеоёмкость 7/10"
+  },
+  {
+   "node_id": "baraboshkin.front_lower_section",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип Р/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "baraboshkin.front_upper_section",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип М/П; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "baraboshkin.fluvial_abandonment",
+   "format": "карточки",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
     "invisible": 1,
     "scale": 1,
     "counterintuitive": 1,
@@ -179,57 +224,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 7/10 → шортс"
-  },
-  {
-   "node_id": "baraboshkin.front_lower_section",
-   "format": "шортс",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 1,
-    "scale": 0,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 5/10 → шортс"
-  },
-  {
-   "node_id": "baraboshkin.front_upper_section",
-   "format": "шортс",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 2,
-    "invisible": 1,
-    "scale": 0,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 6/10 → шортс"
-  },
-  {
-   "node_id": "baraboshkin.fluvial_abandonment",
-   "format": "шортс",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 1,
-    "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 6/10 → шортс"
+   "why": "тип Р/В; распознавание: признак → объект"
   },
   {
    "node_id": "baraboshkin.wave_delta_sections",
-   "format": "шортс",
-   "secondary_format": "карточки",
+   "format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -238,13 +238,13 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 5/10 → шортс"
+   "template": null,
+   "why": "тип Р/П; распознавание: признак → объект"
   },
   {
    "node_id": "baraboshkin.wave_delta_coast",
    "format": "шортс",
-   "secondary_format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -253,12 +253,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/П, видеоёмкость 7/10 → шортс"
+   "template": "section_through_time",
+   "why": "тип В/М; видеоёмкость 7/10"
   },
   {
    "node_id": "baraboshkin.tidal_delta_morphology",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -269,12 +269,12 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 6/10 → шортс"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.tidal_example_upper",
-   "format": "шортс",
-   "secondary_format": "карточки",
+   "format": "карточки",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -283,8 +283,8 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 5/10 → шортс"
+   "template": null,
+   "why": "тип Р/М; распознавание: признак → объект"
   },
   {
    "node_id": "baraboshkin.tidal_example_lower",
@@ -299,11 +299,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип И/Р, видеоёмкость 4/10 → текст"
+   "why": "тип М/Р; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.tidal_channel_section",
-   "format": "шортс",
+   "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
@@ -313,12 +313,12 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 7/10 → шортс"
+   "template": "decision_practicum",
+   "why": "тип Р/М; есть правило автора «признаки → вывод»"
   },
   {
    "node_id": "baraboshkin.tidal_sand_bodies",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -329,11 +329,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 4/10 → интерактив"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.tidal_interchannel_areas",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -344,11 +344,11 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/И, видеоёмкость 4/10 → интерактив"
+   "why": "тип П/М; текст шага и схема"
   },
   {
    "node_id": "baraboshkin.tidal_front_ridges",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -359,7 +359,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/И, видеоёмкость 5/10 → интерактив"
+   "why": "тип П/Р; текст шага и схема"
   }
  ]
 }
