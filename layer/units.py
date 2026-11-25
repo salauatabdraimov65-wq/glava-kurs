@@ -28,6 +28,7 @@ class Unit:
     kind: str            # paragraph | heading | formula | table | figure | task | running_header
     text: str
     excerpt: str
+    in_scope: bool = True   # False — кусок соседнего раздела на крайней странице
 
     def to_dict(self):
         return asdict(self)
@@ -115,6 +116,13 @@ def split_units(ch: Chapter) -> list[Unit]:
             # формула, приклеенная к абзацу, остаётся в абзаце; одиночная строка-формула — отдельно
             n += 1
             units.append(Unit(f"p{p:03d}.{n:02d}", p, kind, b.strip(), _excerpt(b)))
+    # границы главы: куски соседних разделов на крайних страницах
+    start, end = ch.meta.get("start_at"), ch.meta.get("end_at")
+    i0 = next((i for i, u in enumerate(units) if start and u.text.lstrip("# *").startswith(start)), 0)
+    i1 = next((i for i, u in enumerate(units) if end and i > i0 and u.text.lstrip("# *").startswith(end)), len(units))
+    for i, u in enumerate(units):
+        if i < i0 or i >= i1:
+            u.in_scope = False
     return units
 
 

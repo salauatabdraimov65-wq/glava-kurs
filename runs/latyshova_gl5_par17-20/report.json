@@ -1,0 +1,24 @@
+{
+ "chapter": "latyshova_gl5_par17-20",
+ "nodes": 36,
+ "claims": 335,
+ "tasks": 68,
+ "task_types": {
+  "single": 23,
+  "multiple": 15,
+  "gap": 20,
+  "order": 10
+ },
+ "units_in_scope": 187,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "шортс": 10,
+  "текст": 2,
+  "карточки": 4,
+  "практикум на данных": 7,
+  "интерактив": 13
+ },
+ "usd": 0.0,
+ "minutes": 0.0
+}
