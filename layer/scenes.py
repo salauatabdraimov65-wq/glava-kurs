@@ -116,6 +116,8 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
             b["label"] = "схема"
         if b.get("frame_class") not in ("A", "B", "C", "D"):
             b["frame_class"] = "B"
+        if b.get("pause_s") and not b.get("pause"):
+            b["pause"] = b["pause_s"]          # станок video/ читает поле pause
         if len((b.get("say") or "").split()) > 20:
             problems.append(f"длинная фраза: {b['say'][:50]}…")
     # честность масштаба: условная ширина ствола всегда подписана числом (типичный диаметр ~0,2 м)

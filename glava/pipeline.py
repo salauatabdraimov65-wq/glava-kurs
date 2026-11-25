@@ -135,7 +135,8 @@ def main():
             specs = sorted((run_dir / "video").glob("*/spec.json"))
             if has("video.build") and specs:
                 for sp in specs:
-                    run(["video.build", str(sp)])
+                    aspect = json.loads(sp.read_text(encoding="utf-8")).get("aspect", "9:16")
+                    run(["video.build", str(sp), "--layout", "16x9" if aspect == "16:9" else "9x16"])
             else:
                 print("(video.build ещё нет или нет spec.json — пропуск)")
         nodes = 0
