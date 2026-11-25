@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="strata-grain" width="28" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="6" r=".8" fill="var(--geo-dense)" opacity=".4"/>
+      <circle cx="20" cy="17" r=".8" fill="var(--geo-dense)" opacity=".3"/>
+    </pattern>
+    <pattern id="strata-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(32)">
+      <path d="M0 0v12" stroke="var(--geo-background)" stroke-opacity=".1"/>
+    </pattern>
+  </defs>
+  <path fill="var(--illustration-sky)" d="M0 0h1200v240H0z"/>
+  <g stroke="var(--geo-dense)" stroke-opacity=".12" stroke-width="1">
+    <path d="M-20 48C170-18 278 98 450 43S746 4 900 46s224-18 330-10"/>
+    <path d="M-20 36C170-30 278 86 450 31S746-8 900 34s224-18 330-10"/>
+    <path d="M-20 24C170-42 278 74 450 19S746-20 900 22s224-18 330-10"/>
+  </g>
+  <path fill="var(--illustration-distant)" d="M0 126 95 70 172 106 262 43 374 116 475 73 544 103 651 34 773 108 848 66 948 121 1077 45 1200 111v129H0z"/>
+  <path fill="var(--illustration-near)" d="m0 140 134-47 81 42 137-63 155 75 95-36 100 17 143-62 111 64 112-30 132 40v100H0z"/>
+  <path fill="var(--geo-shale)" d="M0 145c108-10 151 28 259 17s185-49 301-35 146 45 262 22 258-37 378-11v102H0z"/>
+  <path fill="var(--geo-sand)" d="M0 151c108-10 151 28 259 17s185-49 301-35 146 45 262 22 258-37 378-11v96H0z"/>
+  <path fill="url(#strata-grain)" d="M0 151c108-10 151 28 259 17s185-49 301-35 146 45 262 22 258-37 378-11v96H0z"/>
+  <path fill="var(--geo-dense)" d="M0 182c108-12 151 30 259 19s185-49 301-35 146 45 262 22 258-37 378-11v63H0z"/>
+  <path fill="url(#strata-hatch)" d="M0 182c108-12 151 30 259 19s185-49 301-35 146 45 262 22 258-37 378-11v63H0z"/>
+  <path fill="var(--geo-limestone)" fill-opacity=".7" d="M0 212c108-12 151 30 259 19s185-49 301-35 146 45 262 22 258-37 378-11v33H0z"/>
+  <g stroke="var(--geo-background)" stroke-opacity=".2" stroke-width="1">
+    <path d="M0 182c108-12 151 30 259 19s185-49 301-35 146 45 262 22 258-37 378-11"/>
+    <path d="M0 212c108-12 151 30 259 19s185-49 301-35 146 45 262 22 258-37 378-11"/>
+  </g>
+</svg>
