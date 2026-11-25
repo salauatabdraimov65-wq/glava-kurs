@@ -67,9 +67,9 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
-    "counterintuitive": 1,
+    "counterintuitive": 0,
     "cause_effect": 2
    },
    "hook_short": false,
@@ -81,15 +81,15 @@
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 2,
+    "time": 1,
     "invisible": 1,
-    "scale": 1,
-    "counterintuitive": 0,
+    "scale": 2,
+    "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "pressure_diffusion",
-   "why": "тип Ф/М, видеоёмкость 6/10 → интерактив"
+   "why": "тип Ф/М, видеоёмкость 7/10 → интерактив"
   },
   {
    "node_id": "barenblatt.radial_pressure_response",
@@ -143,13 +143,13 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 1,
+    "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Н/И, видеоёмкость 8/10 → интерактив"
+   "why": "тип Н/И, видеоёмкость 7/10 → интерактив"
   },
   {
    "node_id": "barenblatt.laplace_response_function",
@@ -173,13 +173,13 @@
    "video_scores": {
     "time": 1,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/Ф, видеоёмкость 5/10 → практикум на данных"
+   "why": "тип Пр/Ф, видеоёмкость 6/10 → практикум на данных"
   },
   {
    "node_id": "barenblatt.two_zone_response",
@@ -291,7 +291,7 @@
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 2,
     "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
@@ -299,7 +299,7 @@
    },
    "hook_short": false,
    "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 5/10 → интерактив"
+   "why": "тип Ф/П, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "barenblatt.bounded_radial_reservoir",
@@ -307,14 +307,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "pressure_diffusion",
-   "why": "тип Ф/П, видеоёмкость 5/10 → интерактив"
+   "why": "тип Ф/П, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "barenblatt.bounded_reservoir_settling",

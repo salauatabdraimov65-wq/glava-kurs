@@ -43,6 +43,7 @@ def domain_pack(domain: str) -> dict:
         pack["misconceptions"] = json.loads((d / "misconceptions.json").read_text(encoding="utf-8"))
     if (d / "audience.md").exists():
         pack["audience"] = (d / "audience.md").read_text(encoding="utf-8")
+    pack["notation"] = (d / "notation.md").read_text(encoding="utf-8") if (d / "notation.md").exists() else ""
     return pack
 
 
@@ -279,12 +280,15 @@ SYS_C = """Ты пишешь шаг учебного курса для нови�
  "video_scores":{{"time":0,"invisible":0,"scale":0,"counterintuitive":0,"cause_effect":0}}}}
 video_scores: 0–2 каждый — есть ли изменение во времени, невидимое становится видимым, скачок масштаба, контринтуитивность, цепочка причина→следствие.
 Заблуждения (используй ref только если подходит точно):
-{misc}"""
+{misc}
+
+Обозначения предметной области и ловушки распознавания (в пересказе и глоссарии пиши правильное обозначение):
+{notation}"""
 
 
 def pass_c(ch: Chapter, nodes, claims_by_tmp, units_by_id, pack):
     misc = "\n".join(f'{m["id"]}: {m["text"]}' for m in pack["misconceptions"]) or "(нет)"
-    sys_c = SYS_C.format(audience=pack["audience"][:1500] or "сотрудник цифровой трансформации без профильного образования", misc=misc)
+    sys_c = SYS_C.format(audience=pack["audience"][:1500] or "сотрудник цифровой трансформации без профильного образования", misc=misc, notation=pack.get("notation") or "(нет)")
 
     def run(node):
         cl = [claims_by_tmp[i] for i in node["_claims"]]

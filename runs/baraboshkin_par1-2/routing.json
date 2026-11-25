@@ -18,37 +18,7 @@
   },
   {
    "node_id": "baraboshkin.delta_types",
-   "format": "практикум на данных",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 1,
-    "scale": 0,
-    "counterintuitive": 0,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": null,
-   "why": "тип М/П, видеоёмкость 4/10 → практикум на данных"
-  },
-  {
-   "node_id": "baraboshkin.delta_depots",
-   "format": "шортс",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 0,
-    "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": null,
-   "why": "тип В/П, видеоёмкость 5/10 → шортс"
-  },
-  {
-   "node_id": "baraboshkin.delta_facies",
-   "format": "интерактив",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
@@ -59,7 +29,37 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Ф, видеоёмкость 2/10 → интерактив"
+   "why": "тип М/П, видеоёмкость 2/10 → текст"
+  },
+  {
+   "node_id": "baraboshkin.delta_depots",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип В/П, видеоёмкость 7/10 → шортс"
+  },
+  {
+   "node_id": "baraboshkin.delta_facies",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип П/Ф, видеоёмкость 3/10 → интерактив"
   },
   {
    "node_id": "baraboshkin.front_progradation",
@@ -68,31 +68,16 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/В, видеоёмкость 6/10 → интерактив"
+   "why": "тип П/В, видеоёмкость 7/10 → интерактив"
   },
   {
    "node_id": "baraboshkin.abandonment_facies",
-   "format": "шортс",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 0,
-    "scale": 1,
-    "counterintuitive": 2,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": "well_tool_curve",
-   "why": "тип И/В, видеоёмкость 6/10 → шортс"
-  },
-  {
-   "node_id": "baraboshkin.bay_fill",
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
@@ -104,10 +89,40 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 5/10 → шортс"
+   "why": "тип И/В, видеоёмкость 5/10 → шортс"
+  },
+  {
+   "node_id": "baraboshkin.bay_fill",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип И/Р, видеоёмкость 4/10 → текст"
   },
   {
    "node_id": "baraboshkin.levees_splays",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип М/И, видеоёмкость 6/10 → шортс"
+  },
+  {
+   "node_id": "baraboshkin.bay_bars",
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
@@ -118,30 +133,15 @@
     "cause_effect": 2
    },
    "hook_short": false,
-   "template": null,
-   "why": "тип М/И, видеоёмкость 7/10 → шортс"
-  },
-  {
-   "node_id": "baraboshkin.bay_bars",
-   "format": "шортс",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 1,
-    "invisible": 1,
-    "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 6/10 → шортс"
+   "why": "тип И/М, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "baraboshkin.fluvial_channel_example",
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 2,
     "invisible": 1,
     "scale": 1,
     "counterintuitive": 1,
@@ -149,7 +149,7 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 6/10 → шортс"
+   "why": "тип И/Р, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "baraboshkin.distributary_deposits",
@@ -158,13 +158,13 @@
    "video_scores": {
     "time": 1,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Р/И, видеоёмкость 5/10 → карточки"
+   "why": "тип Р/И, видеоёмкость 6/10 → карточки"
   },
   {
    "node_id": "baraboshkin.channel_instability",
@@ -172,14 +172,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
-    "invisible": 0,
-    "scale": 0,
+    "invisible": 1,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 5/10 → шортс"
+   "why": "тип М/П, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "baraboshkin.front_lower_section",
@@ -203,13 +203,13 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 1,
+    "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/М, видеоёмкость 7/10 → шортс"
+   "why": "тип И/М, видеоёмкость 6/10 → шортс"
   },
   {
    "node_id": "baraboshkin.fluvial_abandonment",
@@ -218,13 +218,13 @@
    "video_scores": {
     "time": 1,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 5/10 → шортс"
+   "why": "тип И/Р, видеоёмкость 6/10 → шортс"
   },
   {
    "node_id": "baraboshkin.wave_delta_sections",
@@ -261,7 +261,7 @@
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 0,
     "invisible": 1,
     "scale": 2,
     "counterintuitive": 1,
@@ -269,7 +269,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 7/10 → шортс"
+   "why": "тип М/П, видеоёмкость 6/10 → шортс"
   },
   {
    "node_id": "baraboshkin.tidal_example_upper",
@@ -288,7 +288,7 @@
   },
   {
    "node_id": "baraboshkin.tidal_example_lower",
-   "format": "практикум на данных",
+   "format": "текст",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -299,7 +299,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип И/Р, видеоёмкость 4/10 → практикум на данных"
+   "why": "тип И/Р, видеоёмкость 4/10 → текст"
   },
   {
    "node_id": "baraboshkin.tidal_channel_section",
@@ -322,29 +322,29 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 1,
-    "invisible": 1,
+    "invisible": 0,
     "scale": 2,
-    "counterintuitive": 1,
-    "cause_effect": 2
+    "counterintuitive": 0,
+    "cause_effect": 1
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 7/10 → интерактив"
+   "why": "тип П/М, видеоёмкость 4/10 → интерактив"
   },
   {
    "node_id": "baraboshkin.tidal_interchannel_areas",
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
-    "invisible": 0,
+    "time": 0,
+    "invisible": 1,
     "scale": 1,
     "counterintuitive": 0,
-    "cause_effect": 1
+    "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/И, видеоёмкость 3/10 → интерактив"
+   "why": "тип П/И, видеоёмкость 4/10 → интерактив"
   },
   {
    "node_id": "baraboshkin.tidal_front_ridges",
@@ -353,8 +353,8 @@
    "video_scores": {
     "time": 1,
     "invisible": 1,
-    "scale": 2,
-    "counterintuitive": 0,
+    "scale": 1,
+    "counterintuitive": 1,
     "cause_effect": 1
    },
    "hook_short": false,

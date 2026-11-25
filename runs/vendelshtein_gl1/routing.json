@@ -8,13 +8,13 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Пр, видеоёмкость 6/10 → шортс"
+   "why": "тип И/Пр, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "vendelshtein.quantitative_criteria",
@@ -81,15 +81,15 @@
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "pressure_diffusion",
-   "why": "тип Ф/И, видеоёмкость 4/10 → интерактив"
+   "why": "тип Ф/И, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "vendelshtein.normalized_sp_amplitude",
@@ -113,20 +113,20 @@
    "video_scores": {
     "time": 0,
     "invisible": 1,
-    "scale": 1,
+    "scale": 0,
     "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Н/И, видеоёмкость 6/10 → интерактив"
+   "why": "тип Н/И, видеоёмкость 5/10 → интерактив"
   },
   {
    "node_id": "vendelshtein.sp_testing_threshold",
    "format": "практикум на данных",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 0,
     "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
@@ -134,7 +134,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/Н, видеоёмкость 5/10 → практикум на данных"
+   "why": "тип Пр/Н, видеоёмкость 4/10 → практикум на данных"
   },
   {
    "node_id": "vendelshtein.gamma_thresholds",
@@ -188,13 +188,13 @@
    "video_scores": {
     "time": 1,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/И, видеоёмкость 5/10 → практикум на данных"
+   "why": "тип Пр/И, видеоёмкость 6/10 → практикум на данных"
   },
   {
    "node_id": "vendelshtein.saturation_resistivity",
@@ -217,14 +217,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 1,
+    "invisible": 2,
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/Н, видеоёмкость 5/10 → шортс"
+   "why": "тип М/Н, видеоёмкость 6/10 → шортс"
   },
   {
    "node_id": "vendelshtein.statistical_saturation_threshold",
@@ -249,31 +249,16 @@
     "time": 0,
     "invisible": 2,
     "scale": 1,
-    "counterintuitive": 2,
+    "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/И, видеоёмкость 7/10 → шортс"
+   "why": "тип М/И, видеоёмкость 6/10 → шортс"
   },
   {
    "node_id": "vendelshtein.clay_resistivity_comparison",
    "format": "практикум на данных",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 0,
-    "invisible": 1,
-    "scale": 0,
-    "counterintuitive": 2,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": null,
-   "why": "тип Пр/И, видеоёмкость 5/10 → практикум на данных"
-  },
-  {
-   "node_id": "vendelshtein.porosity_resistivity_comparison",
-   "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -283,8 +268,23 @@
     "cause_effect": 2
    },
    "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 7/10 → практикум на данных"
+  },
+  {
+   "node_id": "vendelshtein.porosity_resistivity_comparison",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 7/10 → шортс"
+   "why": "тип И/Р, видеоёмкость 5/10 → шортс"
   },
   {
    "node_id": "vendelshtein.time_lapse_productivity",
@@ -306,8 +306,8 @@
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 2,
-    "invisible": 1,
+    "time": 1,
+    "invisible": 2,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
@@ -322,14 +322,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
-    "invisible": 2,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/Н, видеоёмкость 7/10 → практикум на данных"
+   "why": "тип Пр/Н, видеоёмкость 6/10 → практикум на данных"
   },
   {
    "node_id": "vendelshtein.neutron_repeat_regression",
@@ -352,14 +352,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
-    "invisible": 1,
+    "invisible": 2,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Н, видеоёмкость 6/10 → шортс"
+   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "vendelshtein.dual_probe_neutron",
@@ -368,20 +368,20 @@
    "video_scores": {
     "time": 1,
     "invisible": 2,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Р, видеоёмкость 6/10 → шортс"
+   "why": "тип И/Р, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "vendelshtein.acoustic_gas_indications",
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 2,
     "scale": 0,
     "counterintuitive": 2,
@@ -389,11 +389,26 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Н, видеоёмкость 6/10 → шортс"
+   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "vendelshtein.formation_testing",
    "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/Н, видеоёмкость 7/10 → практикум на данных"
+  },
+  {
+   "node_id": "vendelshtein.effective_thickness",
+   "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
@@ -404,22 +419,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/Н, видеоёмкость 6/10 → практикум на данных"
-  },
-  {
-   "node_id": "vendelshtein.effective_thickness",
-   "format": "интерактив",
-   "secondary_format": "карточки",
-   "video_scores": {
-    "time": 0,
-    "invisible": 1,
-    "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
-   },
-   "hook_short": false,
-   "template": null,
-   "why": "тип П/Пр, видеоёмкость 5/10 → интерактив"
+   "why": "тип П/Пр, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "vendelshtein.oil_water_transition",
@@ -429,19 +429,19 @@
     "time": 0,
     "invisible": 1,
     "scale": 1,
-    "counterintuitive": 1,
+    "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 5/10 → интерактив"
+   "why": "тип П/М, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "vendelshtein.resistivity_contact_error",
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 2,
+    "time": 1,
     "invisible": 2,
     "scale": 0,
     "counterintuitive": 2,
@@ -449,7 +449,7 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Н, видеоёмкость 8/10 → шортс"
+   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "vendelshtein.neutron_contacts",
@@ -487,14 +487,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 0,
+    "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": "pressure_diffusion",
-   "why": "тип Ф/И, видеоёмкость 3/10 → интерактив"
+   "why": "тип Ф/И, видеоёмкость 4/10 → интерактив"
   },
   {
    "node_id": "vendelshtein.flowing_well_neutron",

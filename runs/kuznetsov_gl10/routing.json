@@ -23,13 +23,13 @@
    "video_scores": {
     "time": 1,
     "invisible": 1,
-    "scale": 1,
+    "scale": 2,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 6/10 → интерактив"
+   "why": "тип П/М, видеоёмкость 7/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.reef_basin_position",
@@ -39,19 +39,19 @@
     "time": 0,
     "invisible": 0,
     "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
+    "counterintuitive": 0,
+    "cause_effect": 1
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 4/10 → интерактив"
+   "why": "тип П/М, видеоёмкость 2/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.reef_limestone_types",
    "format": "шортс",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 0,
     "invisible": 1,
     "scale": 1,
     "counterintuitive": 2,
@@ -59,7 +59,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/П, видеоёмкость 7/10 → шортс"
+   "why": "тип М/П, видеоёмкость 6/10 → шортс"
   },
   {
    "node_id": "kuznetsov.facies_zoning",
@@ -84,12 +84,12 @@
     "time": 0,
     "invisible": 0,
     "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
+    "counterintuitive": 0,
+    "cause_effect": 1
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Р, видеоёмкость 4/10 → интерактив"
+   "why": "тип П/Р, видеоёмкость 2/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.atoll_reef_zones",
@@ -142,14 +142,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 2,
-    "invisible": 2,
+    "invisible": 1,
     "scale": 2,
     "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип М/В, видеоёмкость 10/10 → шортс"
+   "why": "тип М/В, видеоёмкость 9/10 → шортс"
   },
   {
    "node_id": "kuznetsov.rainbow_reef_classes",
@@ -159,12 +159,12 @@
     "time": 0,
     "invisible": 1,
     "scale": 1,
-    "counterintuitive": 1,
-    "cause_effect": 2
+    "counterintuitive": 0,
+    "cause_effect": 1
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Р/Н, видеоёмкость 5/10 → карточки"
+   "why": "тип Р/Н, видеоёмкость 3/10 → карточки"
   },
   {
    "node_id": "kuznetsov.rainbow_collector_zones",
@@ -172,14 +172,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 1,
-    "scale": 1,
+    "invisible": 0,
+    "scale": 0,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Р, видеоёмкость 5/10 → интерактив"
+   "why": "тип П/Р, видеоёмкость 3/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.rim_collector_quality",
@@ -187,9 +187,9 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 2,
+    "invisible": 1,
     "scale": 1,
-    "counterintuitive": 1,
+    "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
@@ -201,10 +201,10 @@
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 0,
+    "time": 1,
     "invisible": 1,
     "scale": 1,
-    "counterintuitive": 2,
+    "counterintuitive": 1,
     "cause_effect": 1
    },
    "hook_short": false,
@@ -218,13 +218,13 @@
    "video_scores": {
     "time": 2,
     "invisible": 1,
-    "scale": 0,
+    "scale": 1,
     "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Н, видеоёмкость 7/10 → интерактив"
+   "why": "тип П/Н, видеоёмкость 8/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.layered_reef_collectors",
@@ -234,12 +234,12 @@
     "time": 2,
     "invisible": 1,
     "scale": 1,
-    "counterintuitive": 2,
+    "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип В/П, видеоёмкость 8/10 → шортс"
+   "why": "тип В/П, видеоёмкость 7/10 → шортс"
   },
   {
    "node_id": "kuznetsov.reef_flow_patterns",
@@ -279,19 +279,19 @@
     "time": 0,
     "invisible": 1,
     "scale": 1,
-    "counterintuitive": 1,
+    "counterintuitive": 2,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/М, видеоёмкость 5/10 → интерактив"
+   "why": "тип П/М, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.tectonic_trap_types",
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 2,
     "invisible": 1,
     "scale": 1,
     "counterintuitive": 2,
@@ -299,7 +299,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/В, видеоёмкость 7/10 → интерактив"
+   "why": "тип П/В, видеоёмкость 8/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.reef_accumulation_shapes",
@@ -324,12 +324,12 @@
     "time": 0,
     "invisible": 1,
     "scale": 0,
-    "counterintuitive": 1,
+    "counterintuitive": 0,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+   "why": "тип Пр/И, видеоёмкость 3/10 → практикум на данных"
   },
   {
    "node_id": "kuznetsov.atoll_reef_exploration",
@@ -366,7 +366,7 @@
    "format": "интерактив",
    "secondary_format": "карточки",
    "video_scores": {
-    "time": 1,
+    "time": 2,
     "invisible": 1,
     "scale": 0,
     "counterintuitive": 1,
@@ -374,7 +374,7 @@
    },
    "hook_short": false,
    "template": null,
-   "why": "тип П/Пр, видеоёмкость 5/10 → интерактив"
+   "why": "тип П/Пр, видеоёмкость 6/10 → интерактив"
   },
   {
    "node_id": "kuznetsov.well_spacing_principle",
@@ -397,14 +397,14 @@
    "secondary_format": "карточки",
    "video_scores": {
     "time": 0,
-    "invisible": 1,
+    "invisible": 0,
     "scale": 1,
     "counterintuitive": 1,
     "cause_effect": 2
    },
    "hook_short": false,
    "template": null,
-   "why": "тип Пр/П, видеоёмкость 5/10 → практикум на данных"
+   "why": "тип Пр/П, видеоёмкость 4/10 → практикум на данных"
   }
  ]
 }
