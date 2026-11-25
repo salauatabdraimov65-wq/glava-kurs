@@ -10,6 +10,7 @@ from glava.chapter import load_chapter
 
 from .checks import check_frames, check_items
 from .screen import aggregate, rank
+from .llm_check import pmap
 
 MAX_REMARKS = 20
 
@@ -35,6 +36,7 @@ def main(argv=None):
     ap.add_argument("--no-llm", action="store_true", help="только проверки кодом (бесплатно)")
     ap.add_argument("--max", type=int, default=MAX_REMARKS)
     ap.add_argument("--limit", type=int, help="проверять моделью только первые N элементов (отладка)")
+    ap.add_argument("--workers", type=int, default=8, help="потоков для вызовов модели (1 = последовательно)")
     ap.add_argument("--no-reverse", action="store_true", help="не делать обратную проверку «найди подтверждение»")
     ap.add_argument("--dump", help="сохранить всех кандидатов, сигналы и снятые замечания в json")
     a = ap.parse_args(argv)
@@ -56,26 +58,28 @@ def main(argv=None):
     else:
         from .llm_check import check_with_model, check_frames_with_model, reverse_check, reverse_check_frame
         # каскад: strong спрашиваем только про цели, которые уже пометили код или bulk (иначе второго сигнала всё равно не будет)
-        cands += check_with_model(pkg, ch, a.limit, tier="bulk")
+        cands += check_with_model(pkg, ch, a.limit, tier="bulk", workers=a.workers)
         flagged = {c["target"] for c in cands if c["confidence"] >= 0.4 or c["source"] == "llm:bulk"}
-        cands += check_with_model(pkg, ch, a.limit, tier="strong", only=flagged)
+        cands += check_with_model(pkg, ch, a.limit, tier="strong", only=flagged, workers=a.workers)
         for tier in ("bulk", "strong"):
-            cands += check_frames_with_model(pkg, ch, base, tier=tier)
+            cands += check_frames_with_model(pkg, ch, base, tier=tier, workers=a.workers)
         survivors = aggregate(cands, ch)
         if not a.no_reverse:
             kept = []
             frames = {f["id"]: f for f in pkg["frames"]}
-            for c in rank(survivors):
+            ranked = rank(survivors)
+
+            def rev(c):
                 try:
                     if c["target"] in frames:
-                        supported = reverse_check_frame(pkg, ch, frames[c["target"]], base)
-                        why = "кадр верен по обратной проверке"
-                    else:
-                        supported, q, pg = reverse_check(pkg, ch, c["target"], base)
-                        why = f"в главе есть дословное подтверждение (стр. {pg}): {q}"
+                        return reverse_check_frame(pkg, ch, frames[c["target"]], base), "кадр верен по обратной проверке"
+                    supported, q, pg = reverse_check(pkg, ch, c["target"], base)
+                    return supported, f"в главе есть дословное подтверждение (стр. {pg}): {q}"
                 except Exception as e:
                     print(f"  ! reverse {c['target']}: {e}")
-                    supported, why = False, ""
+                    return False, ""
+
+            for c, (supported, why) in zip(ranked, pmap(rev, ranked, a.workers)):  # порядок — как в ранге
                 if supported:
                     dropped.append({"target": c["target"], "problem": c["problem"], "why": why})
                 else:

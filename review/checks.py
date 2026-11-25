@@ -58,7 +58,7 @@ def compare(text: str, src: str, ctx: str) -> list[tuple[str, str, float]]:
     c = ctx.lower().replace("ё", "е")
     # числа
     tn, qn, cn = set(numbers(text)), set(numbers(src)), set(numbers(ctx))
-    extra = [n for n in tn if n not in qn]
+    extra = sorted(n for n in tn if n not in qn)
     if extra:
         in_ctx = [n for n in extra if n in cn]
         cat = "wrong_scaling" if has(SCALING, t) else "other"
