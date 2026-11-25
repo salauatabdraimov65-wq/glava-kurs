@@ -1,0 +1,850 @@
+{
+  "video_id": "reh_long_heterogeneity_flow_types",
+  "node_id": "reh.heterogeneity_flow_types",
+  "node_card": {
+    "id": "reh.heterogeneity_flow_types",
+    "title": "Зоны и схемы потоков",
+    "difficulty": {
+      "primary": "Ф",
+      "secondary": "П"
+    },
+    "threshold": false,
+    "pages": [
+      444
+    ],
+    "misconception": {
+      "ref": null,
+      "text": "Шаг не выделяет отдельного заблуждения новичка.",
+      "by_model": true
+    },
+    "layers": {
+      "topic": {
+        "text": "Зоны и схемы потоков",
+        "by_model": true
+      },
+      "main": {
+        "text": "При зональной неоднородности свойства внутри зоны считают в среднем одинаковыми, а на границе они меняются скачком. Непрерывную или случайную неоднородность задают функциями координат.",
+        "by_model": true
+      },
+      "mechanism": {
+        "text": "При бурении раствор проникает от скважины в пласт, и его фильтрационные свойства непрерывно ухудшаются. Эту неоднородность можно представить зональной или непрерывной моделью. Схематизация потоков выделяет рассматриваемые случаи: тип неоднородности сочетается с геометрией потока.",
+        "by_model": true
+      },
+      "practice": {
+        "text": "Автор предлагает моделировать проникновение раствора как зональную или непрерывную неоднородность. Далее он рассматривает одномерные потоки несжимаемой жидкости и газа по закону Дарси.",
+        "by_model": true
+      },
+      "nuances": {
+        "text": "Для полноты потребовалось бы рассмотреть разные флюиды и линейные и нелинейные законы фильтрации. Учебник ограничивается наиболее характерными случаями; методологический подход, по автору, остается единым.",
+        "by_model": true
+      },
+      "deeper": []
+    },
+    "layer_file": "runs/reh_basniev_gl21/layer.json"
+  },
+  "script": [
+    {
+      "t_start": 0.15,
+      "t_end": 4.58,
+      "text": "Выберешь неподходящую модель пласта — и можешь неверно описать поток.",
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "is_analogy": false,
+      "on_screen": "Цена выбора"
+    },
+    {
+      "t_start": 8.08,
+      "t_end": 10.86,
+      "text": "При бурении раствор проникает из скважины в пласт.",
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "is_analogy": false,
+      "on_screen": "Проникновение раствора"
+    },
+    {
+      "t_start": 11.36,
+      "t_end": 16.39,
+      "text": "Автор описывает равномерное проникновение и непрерывное ухудшение фильтрационных свойств.",
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "is_analogy": false,
+      "on_screen": "Свойства меняются"
+    },
+    {
+      "t_start": 16.89,
+      "t_end": 20.49,
+      "text": "В этом описании ухудшение идёт от скважины вглубь пласта.",
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "is_analogy": false,
+      "on_screen": "От скважины"
+    },
+    {
+      "t_start": 20.99,
+      "t_end": 24.2,
+      "text": "Теперь тебе нужно задать эти изменения для модели потока.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "is_analogy": false,
+      "on_screen": "Выбор описания"
+    },
+    {
+      "t_start": 24.7,
+      "t_end": 28.56,
+      "text": "Можно разбить область на зоны и назначить каждой средние свойства.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "is_analogy": false,
+      "on_screen": "Средние по зонам"
+    },
+    {
+      "t_start": 29.06,
+      "t_end": 32.48,
+      "text": "Внутри зоны модель считает свойства в среднем одинаковыми.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "is_analogy": false,
+      "on_screen": "Внутри зоны"
+    },
+    {
+      "t_start": 32.98,
+      "t_end": 36.67,
+      "text": "На границе соседних зон свойства в этой модели меняются скачком.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "is_analogy": false,
+      "on_screen": "Скачок на границе"
+    },
+    {
+      "t_start": 37.17,
+      "t_end": 41.72,
+      "text": "Другой вариант описывает изменение свойств непрерывно от точки к точке.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "is_analogy": false,
+      "on_screen": "Плавный переход"
+    },
+    {
+      "t_start": 42.22,
+      "t_end": 46.18,
+      "text": "Для этого свойство задают известной функцией координат каждой точки.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "is_analogy": false,
+      "on_screen": "Свойство и координаты"
+    },
+    {
+      "t_start": 46.68,
+      "t_end": 49.21,
+      "text": "Это как ступеньки рядом с плавным пандусом.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "is_analogy": true,
+      "on_screen": "Два описания"
+    },
+    {
+      "t_start": 49.71,
+      "t_end": 53.42,
+      "text": "Но пласт не лестница: ступени здесь только способ описания.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "is_analogy": false,
+      "on_screen": "Предел аналогии"
+    },
+    {
+      "t_start": 53.92,
+      "t_end": 57.08,
+      "text": "Первый способ называют зональной моделью неоднородности.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "is_analogy": false,
+      "on_screen": "Зональная модель"
+    },
+    {
+      "t_start": 57.58,
+      "t_end": 60.67,
+      "text": "Второй называют моделью с непрерывной неоднородностью.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "is_analogy": false,
+      "on_screen": "Непрерывная модель"
+    },
+    {
+      "t_start": 61.17,
+      "t_end": 64.76,
+      "text": "Оба способа применимы к описанию проникновения бурового раствора.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "is_analogy": false,
+      "on_screen": "Один процесс"
+    },
+    {
+      "t_start": 65.26,
+      "t_end": 68.65,
+      "text": "Поэтому скачок на схеме ещё не доказывает скачок в пласте.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "is_analogy": false,
+      "on_screen": "Не путай описания"
+    },
+    {
+      "t_start": 69.15,
+      "t_end": 72.34,
+      "text": "Свойства могут задавать и случайной функцией координат.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "is_analogy": false,
+      "on_screen": "Случайная функция"
+    },
+    {
+      "t_start": 72.84,
+      "t_end": 76.34,
+      "text": "Кроме свойств, для описания потока выбирают его геометрию.",
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "is_analogy": false,
+      "on_screen": "Геометрия потока"
+    },
+    {
+      "t_start": 76.84,
+      "t_end": 81.83,
+      "text": "Для зональной модели автор рассматривает, например, радиальный и прямолинейный потоки.",
+      "claim_id": "reh.heterogeneity_flow_types#c7",
+      "is_analogy": false,
+      "on_screen": "Разные геометрии"
+    },
+    {
+      "t_start": 82.33,
+      "t_end": 85.43,
+      "text": "В этом примере скважина задаёт радиальную геометрию.",
+      "claim_id": "reh.heterogeneity_flow_types#c7",
+      "is_analogy": false,
+      "on_screen": "Поток к скважине"
+    },
+    {
+      "t_start": 85.93,
+      "t_end": 89.29,
+      "text": "Рядом ты видишь условный расчёт давления в однородном пласте.",
+      "claim_id": null,
+      "is_analogy": false,
+      "on_screen": "Отдельный расчёт"
+    },
+    {
+      "t_start": 89.79,
+      "t_end": 92.89,
+      "text": "Карта и график показывают этот расчёт в один момент.",
+      "claim_id": null,
+      "is_analogy": false,
+      "on_screen": "Синхронные виды"
+    },
+    {
+      "t_start": 93.39,
+      "t_end": 96.72,
+      "text": "Переведи время вперёд и сравни кривые на графике давления.",
+      "claim_id": null,
+      "is_analogy": false,
+      "on_screen": "Два момента"
+    },
+    {
+      "t_start": 97.22,
+      "t_end": 100.96,
+      "text": "Этот расчёт не сравнивает давления для двух моделей неоднородности.",
+      "claim_id": null,
+      "is_analogy": false,
+      "on_screen": "Важное ограничение"
+    },
+    {
+      "t_start": 101.46,
+      "t_end": 105.57,
+      "text": "Для полного разбора понадобились бы разные жидкости и законы фильтрации.",
+      "claim_id": "reh.heterogeneity_flow_types#c9",
+      "is_analogy": false,
+      "on_screen": "Другие случаи"
+    },
+    {
+      "t_start": 106.07,
+      "t_end": 110.46,
+      "text": "Учебник ограничивается характерными случаями, сохраняя общий подход.",
+      "claim_id": "reh.heterogeneity_flow_types#c10",
+      "is_analogy": false,
+      "on_screen": "Границы главы"
+    },
+    {
+      "t_start": 110.96,
+      "t_end": 115.51,
+      "text": "Верный выбор связывает описание свойств с геометрией рассматриваемого потока.",
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "is_analogy": false,
+      "on_screen": "Свойства и поток"
+    },
+    {
+      "t_start": 116.01,
+      "t_end": 120.2,
+      "text": "Какую модель ты выберешь для плавного изменения свойств вдоль галереи?",
+      "claim_id": "reh.heterogeneity_flow_types#c8",
+      "is_analogy": false,
+      "on_screen": "А у галереи?"
+    }
+  ],
+  "sources": [
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "в результате схематизации фильтрационных потоков можно выделить"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "фильтрационные свойства ухудшаются непрерывно от скважины в глубь пласта"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "можно моделировать и как зональную, и как с непрерывной неоднородностью"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "на границе двух зон фильтрационно-емкостные свойства меняются скачкообразно"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "считаются заданными известными непрерывными или случайными функциями координат"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c7",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "плоскорадиальный и радиально-сферический потоки в зонально-неоднородном пласте"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c9",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "необходимо рассмотреть фильтрацию в неоднородных пластах для различных флюидов"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c10",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "рамки учебника не позволяют представить столь детальное рассмотрение"
+    },
+    {
+      "claim_id": "reh.heterogeneity_flow_types#c8",
+      "page_pdf": 444,
+      "page_or_dataset": "стр. PDF 444",
+      "quote": "проницаемость является непрерывной или случайной функцией точек области фильтрации"
+    }
+  ],
+  "scene_spec": "runs/reh_basniev_gl21/video/reh_long_heterogeneity_flow_types/spec.json",
+  "frames": [
+    {
+      "t": 4.63,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F01.png",
+      "on_screen": "Цена выбора"
+    },
+    {
+      "t": 7.63,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F02.png",
+      "on_screen": "Граница или переход?"
+    },
+    {
+      "t": 10.91,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F03.png",
+      "on_screen": "Проникновение раствора"
+    },
+    {
+      "t": 16.44,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F04.png",
+      "on_screen": "Свойства меняются"
+    },
+    {
+      "t": 20.54,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F05.png",
+      "on_screen": "От скважины"
+    },
+    {
+      "t": 24.25,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F06.png",
+      "on_screen": "Выбор описания"
+    },
+    {
+      "t": 28.61,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F07.png",
+      "on_screen": "Средние по зонам"
+    },
+    {
+      "t": 32.53,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F08.png",
+      "on_screen": "Внутри зоны"
+    },
+    {
+      "t": 36.72,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F09.png",
+      "on_screen": "Скачок на границе"
+    },
+    {
+      "t": 41.77,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F10.png",
+      "on_screen": "Плавный переход"
+    },
+    {
+      "t": 46.23,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F11.png",
+      "on_screen": "Свойство и координаты"
+    },
+    {
+      "t": 49.26,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F12.png",
+      "on_screen": "Два описания"
+    },
+    {
+      "t": 53.47,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F13.png",
+      "on_screen": "Предел аналогии"
+    },
+    {
+      "t": 57.13,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F14.png",
+      "on_screen": "Зональная модель"
+    },
+    {
+      "t": 60.72,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F15.png",
+      "on_screen": "Непрерывная модель"
+    },
+    {
+      "t": 64.81,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F16.png",
+      "on_screen": "Один процесс"
+    },
+    {
+      "t": 68.7,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F17.png",
+      "on_screen": "Не путай описания"
+    },
+    {
+      "t": 72.39,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F18.png",
+      "on_screen": "Случайная функция"
+    },
+    {
+      "t": 76.39,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F19.png",
+      "on_screen": "Геометрия потока"
+    },
+    {
+      "t": 81.88,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F20.png",
+      "on_screen": "Разные геометрии"
+    },
+    {
+      "t": 85.48,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F21.png",
+      "on_screen": "Поток к скважине"
+    },
+    {
+      "t": 89.34,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F22.png",
+      "on_screen": "Отдельный расчёт"
+    },
+    {
+      "t": 92.94,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F23.png",
+      "on_screen": "Синхронные виды"
+    },
+    {
+      "t": 96.77,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F24.png",
+      "on_screen": "Два момента"
+    },
+    {
+      "t": 101.01,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F25.png",
+      "on_screen": "Важное ограничение"
+    },
+    {
+      "t": 105.62,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F26.png",
+      "on_screen": "Другие случаи"
+    },
+    {
+      "t": 110.51,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F27.png",
+      "on_screen": "Границы главы"
+    },
+    {
+      "t": 115.56,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F28.png",
+      "on_screen": "Свойства и поток"
+    },
+    {
+      "t": 121.45,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames_16x9/F29.png",
+      "on_screen": "А у галереи?"
+    }
+  ],
+  "exaggerations": [
+    "Фрагмент зоны проникновения на схематической вставке увеличен в 20 раз относительно масштаба карты."
+  ],
+  "prediction_question": "Что выберешь для описания изменения свойств: границу между зонами или плавный переход?",
+  "transfer_question": "Какую модель ты выберешь для плавного изменения свойств вдоль галереи?",
+  "data_it_bridge": "Вход прямой модели — свойства по зонам либо известные непрерывные или случайные функции координат; отдельно задаётся геометрия потока. Глава не указывает формат измерений, правило выбора по данным или способ обнаружения случаев, где модель не работает.",
+  "physics_checklist": [],
+  "audio_check": {
+    "engines": [
+      "edge"
+    ],
+    "voice": [
+      "ru-RU-DmitryNeural"
+    ],
+    "edge_rate": "+0%",
+    "wpm_overall": 140.2,
+    "max_words_in_phrase": 10,
+    "loudness": {
+      "before_lufs": -19.59,
+      "after_lufs": -16.02,
+      "with_sfx_lufs": -16.03
+    },
+    "sync": "длительность кадра фразы = длительность её аудио; голос начинается через 0,15 с после смены кадра",
+    "digits_in_script": [],
+    "formula_in_script": [],
+    "listen_check": [
+      "сква́жина"
+    ],
+    "phrases": [
+      {
+        "beat": 1,
+        "words": 10,
+        "sec": 4.43,
+        "wpm": 135.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Выберешь неподходящую модель пласта , и можешь неверно описать поток."
+      },
+      {
+        "beat": 3,
+        "words": 8,
+        "sec": 2.78,
+        "wpm": 172.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "При бурении раствор проникает из скважины в пласт."
+      },
+      {
+        "beat": 4,
+        "words": 9,
+        "sec": 5.03,
+        "wpm": 107.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Автор описывает равномерное проникновение и непрерывное ухудшение фильтрационных свойств."
+      },
+      {
+        "beat": 5,
+        "words": 9,
+        "sec": 3.6,
+        "wpm": 149.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "В этом описании ухудшение идёт от скважины вглубь пласта."
+      },
+      {
+        "beat": 6,
+        "words": 9,
+        "sec": 3.21,
+        "wpm": 168.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Теперь тебе нужно задать эти изменения для модели потока."
+      },
+      {
+        "beat": 7,
+        "words": 10,
+        "sec": 3.86,
+        "wpm": 155.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Можно разбить область на зоны и назначить каждой средние свойства."
+      },
+      {
+        "beat": 8,
+        "words": 8,
+        "sec": 3.42,
+        "wpm": 140.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Внутри зоны модель считает свойства в среднем одинаковыми."
+      },
+      {
+        "beat": 9,
+        "words": 10,
+        "sec": 3.69,
+        "wpm": 162.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На границе соседних зон свойства в этой модели меняются скачком."
+      },
+      {
+        "beat": 10,
+        "words": 10,
+        "sec": 4.55,
+        "wpm": 131.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Другой вариант описывает изменение свойств непрерывно от точки к точке."
+      },
+      {
+        "beat": 11,
+        "words": 9,
+        "sec": 3.96,
+        "wpm": 136.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Для этого свойство задают известной функцией координат каждой точки."
+      },
+      {
+        "beat": 12,
+        "words": 7,
+        "sec": 2.53,
+        "wpm": 166.0,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Это как ступеньки рядом с плавным пандусом."
+      },
+      {
+        "beat": 13,
+        "words": 9,
+        "sec": 3.71,
+        "wpm": 145.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Но пласт не лестница: ступени здесь только способ описания."
+      },
+      {
+        "beat": 14,
+        "words": 6,
+        "sec": 3.16,
+        "wpm": 113.8,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Первый способ называют зональной моделью неоднородности."
+      },
+      {
+        "beat": 15,
+        "words": 6,
+        "sec": 3.09,
+        "wpm": 116.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Второй называют моделью с непрерывной неоднородностью."
+      },
+      {
+        "beat": 16,
+        "words": 8,
+        "sec": 3.59,
+        "wpm": 133.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Оба способа применимы к описанию проникновения бурового раствора."
+      },
+      {
+        "beat": 17,
+        "words": 10,
+        "sec": 3.39,
+        "wpm": 177.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Поэтому скачок на схеме ещё не доказывает скачок в пласте."
+      },
+      {
+        "beat": 18,
+        "words": 7,
+        "sec": 3.19,
+        "wpm": 131.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Свойства могут задавать и случайной функцией координат."
+      },
+      {
+        "beat": 19,
+        "words": 8,
+        "sec": 3.49,
+        "wpm": 137.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Кроме свойств, для описания потока выбирают его геометрию."
+      },
+      {
+        "beat": 20,
+        "words": 10,
+        "sec": 5.0,
+        "wpm": 120.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Для зональной модели автор рассматривает, например, радиальный и прямолинейный потоки."
+      },
+      {
+        "beat": 21,
+        "words": 7,
+        "sec": 3.1,
+        "wpm": 135.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "В этом примере скважина задаёт радиальную геометрию."
+      },
+      {
+        "beat": 22,
+        "words": 9,
+        "sec": 3.36,
+        "wpm": 160.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Рядом ты видишь условный расчёт давления в однородном пласте."
+      },
+      {
+        "beat": 23,
+        "words": 9,
+        "sec": 3.1,
+        "wpm": 174.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Карта и график показывают этот расчёт в один момент."
+      },
+      {
+        "beat": 24,
+        "words": 9,
+        "sec": 3.33,
+        "wpm": 162.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Переведи время вперёд и сравни кривые на графике давления."
+      },
+      {
+        "beat": 25,
+        "words": 9,
+        "sec": 3.74,
+        "wpm": 144.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Этот расчёт не сравнивает давления для двух моделей неоднородности."
+      },
+      {
+        "beat": 26,
+        "words": 10,
+        "sec": 4.11,
+        "wpm": 146.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Для полного разбора понадобились бы разные жидкости и законы фильтрации."
+      },
+      {
+        "beat": 27,
+        "words": 7,
+        "sec": 4.39,
+        "wpm": 95.7,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Учебник ограничивается характерными случаями, сохраняя общий подход."
+      },
+      {
+        "beat": 28,
+        "words": 9,
+        "sec": 4.55,
+        "wpm": 118.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Верный выбор связывает описание свойств с геометрией рассматриваемого потока."
+      },
+      {
+        "beat": 29,
+        "words": 10,
+        "sec": 4.19,
+        "wpm": 143.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Какую модель ты выберешь для плавного изменения свойств вдоль галереи?"
+      }
+    ],
+    "silent_phrases": []
+  },
+  "scene_check": [
+    {
+      "item": "давление растёт от скважины к границе (поток к скважине)",
+      "ok": true
+    },
+    {
+      "item": "со временем давление в каждой точке не растёт (воронка углубляется)",
+      "ok": true
+    },
+    {
+      "item": "забойное давление падает со временем при постоянном дебите",
+      "ok": true
+    },
+    {
+      "item": "давление вдали от скважины ≈ начальному (возмущение не дошло)",
+      "ok": true
+    },
+    {
+      "item": "кривые посчитаны по формуле главы (E1 — интегральная показательная функция)",
+      "ok": true
+    }
+  ],
+  "visual_text_check": {
+    "rule": "подписи и субтитры без формул и греческих букв (ТЗ)",
+    "replaced": []
+  },
+  "template": "pressure_diffusion",
+  "warnings": [
+    "beat 22: фраза без claim_id — голос не опирается на утверждение",
+    "beat 23: фраза без claim_id — голос не опирается на утверждение",
+    "beat 24: фраза без claim_id — голос не опирается на утверждение",
+    "beat 25: фраза без claim_id — голос не опирается на утверждение"
+  ]
+}

@@ -14,6 +14,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Н; текст шага и схема"
   },
   {
@@ -29,6 +30,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Р; текст шага и схема"
   },
   {
@@ -44,6 +46,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/None; текст шага и схема"
   },
   {
@@ -59,6 +62,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип М/Р; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -75,6 +79,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип М/П; текст шага и схема"
   },
   {
@@ -90,6 +95,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Р; текст шага и схема"
   },
   {
@@ -105,6 +111,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -120,6 +127,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/None; текст шага и схема"
   },
   {
@@ -135,11 +143,12 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип М/П; текст шага и схема"
   },
   {
    "node_id": "kuznetsov.secondary_reef_pores",
-   "format": "текст",
+   "format": "шортс",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -150,8 +159,9 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип В/М; видеоёмкость 9/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
-   "video_candidate": true
+   "scene_template": "section_through_time",
+   "why": "тип В/М; видеоёмкость 9/10",
+   "video_path": "video/kuznetsov_short_secondary_reef_pores/video.mp4"
   },
   {
    "node_id": "kuznetsov.rainbow_reef_classes",
@@ -166,6 +176,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Н; текст шага и схема"
   },
   {
@@ -181,6 +192,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Н; текст шага и схема"
   },
   {
@@ -196,6 +208,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип М/П; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -212,6 +225,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -227,6 +241,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/В; есть правило автора «признаки → вывод»"
   },
   {
@@ -242,6 +257,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип В/П; есть правило автора «признаки → вывод»"
   },
   {
@@ -257,6 +273,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -272,6 +289,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -288,6 +306,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -303,6 +322,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -318,6 +338,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/В; текст шага и схема"
   },
   {
@@ -333,6 +354,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   },
   {
@@ -348,6 +370,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Пр; текст шага и схема"
   },
   {
@@ -363,6 +386,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип Пр/П; есть правило автора «признаки → вывод»"
   },
   {
@@ -378,6 +402,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   },
   {
@@ -393,6 +418,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   },
   {
@@ -408,6 +434,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип П/Пр; есть правило автора «признаки → вывод»"
   }
  ]

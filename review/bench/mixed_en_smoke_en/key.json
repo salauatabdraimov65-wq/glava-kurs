@@ -1,0 +1,180 @@
+{
+ "package_id": "bench_mixed_en_smoke",
+ "errors": [
+  {
+   "target": "C081",
+   "category": "sign_flip",
+   "severity": "critical",
+   "correct": "Under the described land-based conditions, data loss is less problematic, and logging is often repeated without complications.",
+   "pages": [
+    7
+   ],
+   "quote": "this is less problematic, and logs are often run again without issue.",
+   "note": "«less» заменено на «more»"
+  },
+  {
+   "target": "C080",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "correct": "At onshore sites, for example in South Texas, where the commodity segment of the oilfield services sector operates, logging is often conducted without the infrastructure of a drilling rig.",
+   "pages": [
+    7
+   ],
+   "quote": "On land locations (e.g. South Texas, US) where there is what is called a \"Commodity\" Oil service sector, where logging often is without the rig infrastructure.",
+   "note": "«often» заменено на «always»"
+  },
+  {
+   "target": "C039",
+   "category": "wrong_scaling",
+   "severity": "critical",
+   "correct": "To address this problem, induction logging was developed in the late 1940s.",
+   "pages": [
+    2
+   ],
+   "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+   "note": "число 1940 увеличено в 10 раз"
+  },
+  {
+   "target": "C071",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Slickline uses solid mechanical wire with an outer diameter of 0.072–0.125 inches.",
+   "pages": [
+    7
+   ],
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD),",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C073",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "correct": "Operations with memory tools are often conducted on slickline instead of mobilizing a full-scale electric logging unit.",
+   "pages": [
+    7
+   ],
+   "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+   "note": "«often» заменено на «always»"
+  },
+  {
+   "target": "C056",
+   "category": "wrong_scaling",
+   "severity": "critical",
+   "correct": "NUMAR's developments in the 1990s led to the creation of continuous NMR logging technology, used in the oil and gas industry, water exploration, and ore exploration.",
+   "pages": [
+    2
+   ],
+   "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology",
+   "note": "число 1990 увеличено в 10 раз"
+  },
+  {
+   "target": "C072",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "This wire is used to manipulate the well completion system or perform other operations in it.",
+   "pages": [
+    7
+   ],
+   "quote": "to manipulate or otherwise carry out operations in the well bore completion system.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Gamma-ray logging, which measures natural radioactivity, appeared in 1939, and WSI neutron logging in 1941.",
+   "pages": [
+    2
+   ],
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C012",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "The instruments measure, among other things, natural gamma radiation, electrical and acoustic properties, induced radioactive responses, electromagnetic characteristics, NMR, and pressure.",
+   "pages": [
+    1
+   ],
+   "quote": "measure the natural gamma ray, electrical, acoustic, stimulated radioactive responses, electromagnetic, nuclear magnetic resonance, pressure and other properties",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Measurements and their analysis make it possible to infer additional properties, such as hydrocarbon saturation and reservoir pressure, and make decisions about drilling and production.",
+   "pages": [
+    1
+   ],
+   "quote": "used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Nuclear logging methods continued to develop after the war.",
+   "pages": [
+    2
+   ],
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Conrad developed the Schlumberger array for prospecting metallic ores, and the brothers adapted this surface method for underground measurements.",
+   "pages": [
+    2
+   ],
+   "quote": "a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "correct": "The analogy is limited: the chapter describes the physical compatibility of electrical methods with drilling fluid, not just computational infrastructure.",
+   "pages": [
+    2
+   ],
+   "note": "граница аналогии заменена на «точная, для любых»"
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "The borehole penetrates geological formations, and logging creates a detailed record of them.",
+   "pages": [
+    1
+   ],
+   "quote": "making a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "L01.12",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "If groundwater is being studied, what would be the record: a sample or the result of its inspection?",
+   "pages": [
+    1
+   ],
+   "quote": "either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs)",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "S01.06",
+   "category": "frame_error",
+   "severity": "significant",
+   "correct": "Layer 1950–1980 m: Sandstone; properties {\"signal\": 30}",
+   "pages": [
+    1
+   ],
+   "note": "число 1980 увеличено в 10 раз"
+  }
+ ],
+ "tricky_true": []
+}

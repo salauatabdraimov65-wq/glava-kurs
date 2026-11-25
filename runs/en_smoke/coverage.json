@@ -1,0 +1,421 @@
+{
+ "chapter": "en_smoke",
+ "rows": [
+  {
+   "unit_id": "p001.01",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Well logging, also known as borehole logging, is the practice of making",
+   "node_ids": [
+    "en.logging_basics"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.02",
+   "kind": "heading",
+   "page_pdf": 1,
+   "excerpt": "Wireline logging",
+   "node_ids": [
+    "en.logging_basics"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.03",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Different industries, as mining, oil and gas uses wireline logging to obtain",
+   "node_ids": [
+    "en.logging_basics"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.04",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Wireline logging is performed by lowering a 'logging tool' - or a",
+   "node_ids": [
+    "en.logging_tools"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.05",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "The data itself is recorded either at surface (real-time mode), or in",
+   "node_ids": [
+    "en.logging_tools"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.06",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Real-time data is recorded directly against measured cable depth. Memory data is",
+   "node_ids": [
+    "en.depth_and_classification"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.07",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "The measured cable depth can be derived from a number of different",
+   "node_ids": [
+    "en.depth_and_classification"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.08",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "There are many types of wireline logs and they can be categorized",
+   "node_ids": [
+    "en.depth_and_classification"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p001.09",
+   "kind": "paragraph",
+   "page_pdf": 1,
+   "excerpt": "Wireline logs can be divided into broad categories based on the physical",
+   "node_ids": [
+    "en.depth_and_classification"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.01",
+   "kind": "heading",
+   "page_pdf": 2,
+   "excerpt": "History",
+   "node_ids": [
+    "en.electrical_logging_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.02",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Conrad and Marcel Schlumberger, who founded Schlumberger Limited in 1926, are considered",
+   "node_ids": [
+    "en.electrical_logging_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.03",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "In 1931, Henri George Doll and G. Dechatre, working for Schlumberger, discovered",
+   "node_ids": [
+    "en.electrical_logging_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.04",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "In 1940, Schlumberger invented the spontaneous potential dipmeter; this instrument allowed the",
+   "node_ids": [
+    "en.electrical_logging_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.05",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Oil-based mud (OBM) was first used in Rangely Field, Colorado, in 1948.",
+   "node_ids": [
+    "en.logging_technology_development"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.06",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "The introduction of the transistor and integrated circuits in the 1960s made",
+   "node_ids": [
+    "en.logging_technology_development"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.07",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "The two types of porosity logs (acoustic logs and nuclear logs) date",
+   "node_ids": [
+    "en.logging_technology_development"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.08",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Nuclear logging was initially developed to measure the natural gamma radiation emitted",
+   "node_ids": [
+    "en.nuclear_logging_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.09",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "After the discovery of nuclear magnetic resonance by Bloch and Purcell in",
+   "node_ids": [
+    "en.nuclear_logging_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p002.10",
+   "kind": "paragraph",
+   "page_pdf": 2,
+   "excerpt": "Many modern oil and gas wells are drilled directionally. At first, loggers",
+   "node_ids": [
+    "en.logging_while_drilling"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.01",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Electrical logs Resistivity log Resistivity logging measures the subsurface electrical resistivity, which",
+   "node_ids": [
+    "en.logging_tools"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.02",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Borehole imaging The term \"borehole imaging\" refers to those logging and data-processing",
+   "node_ids": [
+    "en.logging_tools"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.03",
+   "kind": "paragraph",
+   "page_pdf": 3,
+   "excerpt": "Optical imaging Acoustic imaging Electrical imaging Methods that draw on both acoustic",
+   "node_ids": [
+    "en.logging_tools"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p003.04",
+   "kind": "heading",
+   "page_pdf": 3,
+   "excerpt": "Porosity logs Porosity logs measure the fraction or percentage of pore volume",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.01",
+   "kind": "heading",
+   "page_pdf": 4,
+   "excerpt": "Density The density log measures the bulk density of a formation by",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.02",
+   "kind": "heading",
+   "page_pdf": 4,
+   "excerpt": "Neutron porosity The neutron porosity log works by bombarding a formation with",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.03",
+   "kind": "heading",
+   "page_pdf": 4,
+   "excerpt": "Sonic A sonic log provides a formation interval transit time, which is",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p004.04",
+   "kind": "heading",
+   "page_pdf": 4,
+   "excerpt": "Lithology logs Gamma ray A log of the natural radioactivity of the",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.01",
+   "kind": "heading",
+   "page_pdf": 5,
+   "excerpt": "Self/spontaneous potential The Spontaneous Potential (SP) log measures the natural or spontaneous",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.02",
+   "kind": "heading",
+   "page_pdf": 5,
+   "excerpt": "Miscellaneous logs Caliper A tool that measures the diameter of the borehole",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p005.03",
+   "kind": "heading",
+   "page_pdf": 5,
+   "excerpt": "Nuclear magnetic resonance Nuclear magnetic resonance (NMR) logging uses the NMR response",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.01",
+   "kind": "heading",
+   "page_pdf": 6,
+   "excerpt": "Spectral acoustic logging Spectral acoustic logging is an acoustic measurement technique used",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.02",
+   "kind": "heading",
+   "page_pdf": 6,
+   "excerpt": "Corrosion well logging Throughout the life of the wells, integrity controles of",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p006.03",
+   "kind": "heading",
+   "page_pdf": 6,
+   "excerpt": "Logging while drilling In the 1970s, a new approach to wireline logging",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.01",
+   "kind": "heading",
+   "page_pdf": 7,
+   "excerpt": "Memory log This method of data acquisition involves recording the sensor data",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.02",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "The tools can be conveyed into wells where the trajectory is deviated",
+   "node_ids": [
+    "en.memory_tool_delivery"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.03",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "The type of sensors are limited in comparison to those used on",
+   "node_ids": [
+    "en.memory_tool_delivery",
+    "en.slickline_memory_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.04",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "In cased hole operation there is normally a \"Slick Line\" intervention unit.",
+   "node_ids": [
+    "en.slickline_memory_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.05",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "Since the results are not known until returned to surface, any realtime",
+   "node_ids": [
+    "en.memory_logging_risks",
+    "en.slickline_memory_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p007.06",
+   "kind": "paragraph",
+   "page_pdf": 7,
+   "excerpt": "Failure during recording is not known until the memory tools are retrieved.",
+   "node_ids": [
+    "en.memory_logging_risks"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p008.01",
+   "kind": "heading",
+   "page_pdf": 8,
+   "excerpt": "Coring Coring is the process of obtaining an actual sample of a",
+   "node_ids": [],
+   "reason": "заголовок без содержания"
+  },
+  {
+   "unit_id": "p008.02",
+   "kind": "heading",
+   "page_pdf": 8,
+   "excerpt": "Mudlogging Mud logs are well logs prepared by describing rock or soil",
+   "node_ids": [],
+   "reason": "заголовок без содержания"
+  },
+  {
+   "unit_id": "p008.03",
+   "kind": "heading",
+   "page_pdf": 8,
+   "excerpt": "Information use In the oil industry, the well and mud logs are",
+   "node_ids": [],
+   "reason": "заголовок без содержания"
+  }
+ ]
+}

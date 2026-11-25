@@ -5,3 +5,7 @@ __pycache__/
 .DS_Store
 cache/
 *.wav
+
+# кадры и ролики рендерятся станком, в git не храним (ролики обучения кладём явно: git add -f)
+runs/*/video/*/frames*/
+runs/*/video/*/*.mp4

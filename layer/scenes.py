@@ -39,10 +39,35 @@ params: {"x_max_m": ширина разреза, "z_top_m": верх (отмет
  "bodies": [{"id": "reef_core", "lith": ключ литологии из стайлгайда, "fluid": ключ флюида или null, "label": подпись,
              "keyframes": [{"t": момент, "polygon": [[x, z], ...]}]}],
  "arrows": [{"t_from": момент, "t_to": момент, "from": [x, z], "to": [x, z], "label": "подпись процесса"}]}
-action в beat: {"time_to": момент к концу фразы} | {"highlight_body": "id"} | {"mark_x": м} | {"show_true_scale": true} | {}""",
+action в beat: {"time_to": момент к концу фразы} | {"highlight_body": "id"} | {"mark_x": м} | {"show_true_scale": true} | {}
+ОГРАНИЧЕНИЯ сцены (иначе кадр нечитаем на телефоне):
+- 2–6 тел; каждое тело не тоньше 1/12 ширины и высоты разреза (тонкие стенки, корки, трубы — рисуй условно толще и назови это в exaggerations);
+  подписи тел короткие (1–3 слова) и разные; тела одной природы (левая и правая стенка) — одно тело или одна подпись.
+- lith и fluid выбирай по смыслу (жидкость/раствор — флюид, а не порода); нет подходящего ключа — ближайший нейтральный.
+- Время: если в главе есть числа (годы, тысячи лет, часы) — бери их; если нет — "time_unit": "этап", "time_steps": [0, 1, 2, 3]
+  и НЕ придумывай чисел времени.
+- Что говорит голос, то видно в кадре к концу фразы: «тело растёт» — его контур в следующем ключевом кадре больше;
+  «выходит выше уровня моря» — верх тела выше water_level в этот момент. Нельзя показать — не говори этого как события в кадре.
+- 1–3 стрелки процессов, подпись 1–2 слова.
+- Разрез подбирай по телам: тела занимают бо́льшую часть x_max_m и интервала z_top_m…z_bottom_m (запас 10–20%), а не узкую полосу.""",
 }
 
 COMPUTED_TEMPLATES = {"well_tool_curve", "pressure_diffusion", "section_through_time"}  # кадр считается из модели
+
+
+def template_doc(template: str) -> str:
+    """Описание параметров — из самого станка (video.templates.catalog), чтобы сценарий и станок не расходились;
+    к нему — правила подачи из TEMPLATES (ограничения сцены). Станка нет — только TEMPLATES."""
+    try:
+        from video.templates import catalog
+        c = catalog().get(template)
+    except Exception:
+        c = None
+    if not c:
+        return TEMPLATES[template]
+    rules = TEMPLATES.get(template, "").split("ОГРАНИЧЕНИЯ", 1)
+    extra = ("\nОГРАНИЧЕНИЯ" + rules[1]) if len(rules) == 2 else ""
+    return f"{c['summary']}\n{c['guide']}{extra}"
 
 FORMATS = {
     "short": {"aspect": "9:16", "words": (90, 160), "seconds": "40–75", "focus": "один механизм"},
@@ -99,7 +124,7 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
     scales = sc.read_text(encoding="utf-8") if sc.exists() else "(нет)"
     f = FORMATS[fmt]
     sys_p = SYS.format(aspect=f["aspect"], seconds=f["seconds"], focus=f["focus"], template=template,
-                       template_doc=TEMPLATES[template], lith=list(style["lithology"]), fluids=list(style["fluids"]),
+                       template_doc=template_doc(template), lith=list(style["lithology"]), fluids=list(style["fluids"]),
                        curves=list(style["curves"]), wmin=f["words"][0], wmax=f["words"][1],
                        misc="; ".join(m["text"] for m in misc), scales=scales)
     user = (f"Узел: {node['title']} ({node_id}), тип {node['difficulty']}\nСуть: {node['layers']['main']['text']}\n"
@@ -136,9 +161,14 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
             b["pause"] = b["pause_s"]          # станок video/ читает поле pause
         if len((b.get("say") or "").split()) > 20:
             problems.append(f"длинная фраза: {b['say'][:50]}…")
+    # служебные фразы модели («кратность допишет код») — не для зрителя
+    for key in ("plaque", "exaggerations"):
+        spec[key] = [x for x in (spec.get(key) or []) if not re.search(r"\bкод\b|допиш", x, re.I)]
+    if not spec.get("plaque"):
+        spec["plaque"] = ["не в масштабе:"]
     # честность масштаба: условная ширина ствола всегда подписана числом (типичный диаметр ~0,2 м)
     p = spec.get("params") or {}
-    if template == "well_tool_curve" and float(p.get("bore_width") or 0) > 0.3:
+    if template == "well_tool_curve" and "bore_diameter_m" not in p and float(p.get("bore_width") or 0) > 1.0:   # старый формат (ширина в м)
         real = float(p.get("bore_real_m") or 0.2)   # реальный диаметр: из параметров сцены, иначе типичный ~0,2 м
         k = round(float(p["bore_width"]) / real)
         note = f"ствол показан примерно в {k} раз шире реального (≈{real:g} м)".replace(".", ",")

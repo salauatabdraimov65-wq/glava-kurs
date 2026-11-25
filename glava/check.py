@@ -77,6 +77,8 @@ def check(cid: str) -> bool:
 
 
 if __name__ == "__main__":
-    ids = list(chapters_config()) if "--all" in sys.argv or len(sys.argv) == 1 else sys.argv[1:]
+    # --all — главы обучения и контроля; репетиционные (split=rehearsal) проверяются, только если названы явно
+    ids = ([c for c, m in chapters_config().items() if m.get("split") != "rehearsal"]
+           if "--all" in sys.argv or len(sys.argv) == 1 else sys.argv[1:])
     res = [check(c) for c in ids]
     sys.exit(0 if all(res) else 1)

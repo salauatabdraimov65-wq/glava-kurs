@@ -1,0 +1,1200 @@
+{
+ "package_id": "bench_mixed_basniev_gl23-24",
+ "chapter": "basniev_gl23-24",
+ "chapter_file": "train_basniev.md",
+ "language": "ru",
+ "items": [
+  {
+   "id": "C002",
+   "type": "claim",
+   "node_id": "basniev.elastic_flow_mechanism",
+   "text": "Количественные характеристики неустановившегося процесса зависят от упругих свойств пласта и насыщающих его жидкостей.",
+   "kind": "observation",
+   "page_pdf": 474,
+   "quote": "Количественные характеристики неустановившихся процессов (величины изменения давления, скоростей, дебитов) зависят от упругих свойств пластов и насыщающих их жидкостей.",
+   "orig_id": "basniev.elastic_flow_mechanism#c2"
+  },
+  {
+   "id": "C005",
+   "type": "claim",
+   "node_id": "basniev.elastic_flow_mechanism",
+   "text": "При пуске скважины на упругом режиме жидкость начинает двигаться за счет потенциальной энергии упругой деформации пласта и жидкости: сначала вблизи забоя, затем во все более удаленных областях.",
+   "kind": "observation",
+   "page_pdf": 474,
+   "quote": "движение жидкости начинается за счет использования потенциальной энергии упругой деформации пласта и жидкости сначала в ближайших окрестностях забоя, затем во все более удаленных областях пласта.",
+   "orig_id": "basniev.elastic_flow_mechanism#c5"
+  },
+  {
+   "id": "C010",
+   "type": "claim",
+   "node_id": "basniev.elastic_regime_types",
+   "text": "В закрытых пластовых ловушках, где пласт вблизи залежи выклинивается или экранирован сбросом, до снижения давления до давления насыщения действует замкнуто-упругий режим.",
+   "kind": "observation",
+   "page_pdf": 475,
+   "quote": "В начальной стадии разработки такой залежи, до тех пор, пока пластовое давление не снизилось до давления насыщения, имеет место замкнуто-упругий режим движения флюида.",
+   "orig_id": "basniev.elastic_regime_types#c3"
+  },
+  {
+   "id": "C011",
+   "type": "claim",
+   "node_id": "basniev.elastic_regime_types",
+   "text": "Для упругого режима характерно длительное перераспределение давления после начала работы скважины или изменения темпа отбора жидкости.",
+   "kind": "observation",
+   "page_pdf": 475,
+   "quote": "Характерная особенность проявления упругого режима в процессе разработки нефтяных месторождений проявляется в длительности во времени процесса перераспределения пластового давления после начала работы скважины или изменения темпа отбора жидкости из скважины.",
+   "orig_id": "basniev.elastic_regime_types#c4"
+  },
+  {
+   "id": "C015",
+   "type": "claim",
+   "node_id": "basniev.elastic_regime_types",
+   "text": "Наиболее полно теорию упругого режима с учетом упругих свойств скелета и насыщающих жидкостей разработал В. Н. Щелкачев.",
+   "kind": "observation",
+   "page_pdf": 475,
+   "quote": "Наиболее полно теория упругого режима с учетом упругих свойств твердого скелета пласта и насыщающих жидкостей была разработана В.Н.Щелкачевым.",
+   "orig_id": "basniev.elastic_regime_types#c8"
+  },
+  {
+   "id": "C018",
+   "type": "claim",
+   "node_id": "basniev.elastic_storage_concept",
+   "text": "При снижении давления упругий запас возрастает, а при повышении — накапливается.",
+   "kind": "observation",
+   "page_pdf": 475,
+   "quote": "При снижении давления в пласте упругий запас жидкости естественно убывает, а при повышении давления происходит накопление упругого запаса жидкости в нем.",
+   "orig_id": "basniev.elastic_storage_concept#c3"
+  },
+  {
+   "id": "C030",
+   "type": "claim",
+   "node_id": "basniev.storage_coefficient",
+   "text": "Изменение упругого запаса равно (mβж+βс)V₀Δp.",
+   "kind": "observation",
+   "page_pdf": 476,
+   "quote": "\\Delta V_{\\text{з}} = (m \\beta_{\\text{ж}} + \\beta_{\\text{с}}) V_0 \\Delta p, \\quad (23.3)",
+   "orig_id": "basniev.storage_coefficient#c7"
+  },
+  {
+   "id": "C048",
+   "type": "claim",
+   "node_id": "basniev.reservoir_material_balance",
+   "text": "Прямым измерением установлено: изучение гидродинамики упругого режима важно для теории и практики разработки нефтяных и газовых месторождений.",
+   "kind": "observation",
+   "page_pdf": 477,
+   "quote": "Изучение гидродинамики упругого режима фильтрации имеет важнейшее значение как для теории, так и для практики разработки нефтяных и газовых месторождений.",
+   "orig_id": "basniev.reservoir_material_balance#c14"
+  },
+  {
+   "id": "C050",
+   "type": "claim",
+   "node_id": "basniev.reservoir_material_balance",
+   "text": "При естественном упругом режиме, всегда, добывается незначительная часть извлекаемых запасов — до 2–5%.",
+   "kind": "observation",
+   "page_pdf": 477,
+   "quote": "Как правило, при естественном упругом режиме добывается незначительная часть извлекаемых запасов (до 2–5%).",
+   "orig_id": "basniev.reservoir_material_balance#c16"
+  },
+  {
+   "id": "C057",
+   "type": "claim",
+   "node_id": "basniev.flow_equation_system",
+   "text": "После пренебрежения массовыми силами и введения обобщенной функции Лейбензона система преобразуется к форме уравнений 19.21.",
+   "kind": "inference",
+   "page_pdf": 478,
+   "quote": "после пренебрежения массовыми силами и введения обобщенной функции Лейбензона, преобразуется к виду (19.21)",
+   "orig_id": "basniev.flow_equation_system#c5"
+  },
+  {
+   "id": "C065",
+   "type": "claim",
+   "node_id": "basniev.elastic_model_assumptions",
+   "text": "В модели принимают k и μ постоянными, хотя всегда деформации меняют проницаемость наряду с пористостью, особенно на глубокозалегающих месторождениях.",
+   "kind": "assumption",
+   "page_pdf": 478,
+   "quote": "Для проницаемости и вязкости примем $k = \\text{const}$ и $\\mu = \\text{const}$, однако заметим, что, как показывают результаты лабораторных экспериментов, а также опыт разработки месторождений, в ряде случаев наряду с изменением пористости вследствие возникающих деформаций, происходят и изменения проницаемости пластов.",
+   "orig_id": "basniev.elastic_model_assumptions#c4"
+  },
+  {
+   "id": "C074",
+   "type": "claim",
+   "node_id": "basniev.elastic_model_assumptions",
+   "text": "Потенциал давления определяется интегралом плотности по давлению, умноженным на $k/\\mu$.",
+   "kind": "observation",
+   "page_pdf": 479,
+   "quote": "P = \\frac{k}{\\mu} \\int \\rho \\, dp",
+   "orig_id": "basniev.elastic_model_assumptions#c13"
+  },
+  {
+   "id": "C080",
+   "type": "claim",
+   "node_id": "basniev.linearize_storage_term",
+   "text": "Для преобразования временной производной авторы вычисляют произведение пористости на плотность.",
+   "kind": "observation",
+   "page_pdf": 479,
+   "quote": "вычислим произведение $m\\rho$",
+   "orig_id": "basniev.linearize_storage_term#c6"
+  },
+  {
+   "id": "C082",
+   "type": "claim",
+   "node_id": "basniev.linearize_storage_term",
+   "text": "Квадратичным по перепаду давления слагаемым в выражении для $m\\rho$ пренебрегают как малым по сравнению с двумя другими.",
+   "kind": "assumption",
+   "page_pdf": 479,
+   "quote": "Последним слагаемым в правой части полученного выражения ввиду его малости по сравнению с двумя другими слагаемыми можно пренебречь",
+   "orig_id": "basniev.linearize_storage_term#c8"
+  },
+  {
+   "id": "C084",
+   "type": "claim",
+   "node_id": "basniev.linearize_storage_term",
+   "text": "После отбрасывания квадратичного члена произведение $m\\rho$ записывается через эффективный коэффициент упругости $\\beta^*$.",
+   "kind": "observation",
+   "page_pdf": 480,
+   "quote": "m\\rho = m_0\\rho_0 \\left[ 1 + \\beta^* (p - p_0)/m_0 \\right]",
+   "orig_id": "basniev.linearize_storage_term#c10"
+  },
+  {
+   "id": "C097",
+   "type": "claim",
+   "node_id": "basniev.pressure_diffusivity",
+   "text": "Для записи уравнения вводится обозначение коэффициента $\\kappa$.",
+   "kind": "observation",
+   "page_pdf": 480,
+   "quote": "где введено обозначение",
+   "orig_id": "basniev.pressure_diffusivity#c3"
+  },
+  {
+   "id": "C098",
+   "type": "claim",
+   "node_id": "basniev.pressure_diffusivity",
+   "text": "Коэффициент пьезопроводности равен $k/(\\mu\\beta^*)$.",
+   "kind": "observation",
+   "page_pdf": 480,
+   "quote": "\\kappa = k / (\\mu \\beta^*)",
+   "orig_id": "basniev.pressure_diffusivity#c4"
+  },
+  {
+   "id": "C100",
+   "type": "claim",
+   "node_id": "basniev.pressure_diffusivity",
+   "text": "Коэффициент $\\kappa$ характеризует скорость перераспределения пластового давления при неустановившейся фильтрации упругой жидкости в упругой пористой среде.",
+   "kind": "observation",
+   "page_pdf": 480,
+   "quote": "характеризующий скорость перераспределения пластового давления при неустановившейся фильтрации упругой жидкости в",
+   "orig_id": "basniev.pressure_diffusivity#c6"
+  },
+  {
+   "id": "C102",
+   "type": "claim",
+   "node_id": "basniev.pressure_diffusivity",
+   "text": "Прямым измерением установлено: размерность коэффициента пьезопроводности устанавливается из выражения (23.18).",
+   "kind": "observation",
+   "page_pdf": 481,
+   "quote": "Размерность коэффициента пьезопроводности $\\kappa$ можно установить из (23.18)",
+   "orig_id": "basniev.pressure_diffusivity#c8"
+  },
+  {
+   "id": "C109",
+   "type": "claim",
+   "node_id": "basniev.gallery_fixed_pressure",
+   "text": "Для одномерного потока в полубесконечной области уравнение пьезопроводности имеет вид $p_t=\\kappa p_{xx}$.",
+   "kind": "observation",
+   "page_pdf": 481,
+   "quote": "\\frac{\\partial p}{\\partial t} = \\kappa \\frac{\\partial^2 p}{\\partial x^2}, \\quad 0 < x < \\infty",
+   "orig_id": "basniev.gallery_fixed_pressure#c4"
+  },
+  {
+   "id": "C110",
+   "type": "claim",
+   "node_id": "basniev.gallery_fixed_pressure",
+   "text": "Начальные и граничные условия задачи записываются математически.",
+   "kind": "observation",
+   "page_pdf": 482,
+   "quote": "Начальные и граничные условия, сформулированные выше и записанные в виде математических соотношений",
+   "orig_id": "basniev.gallery_fixed_pressure#c5"
+  },
+  {
+   "id": "C112",
+   "type": "claim",
+   "node_id": "basniev.gallery_fixed_pressure",
+   "text": "На галерее при $x=0$ и $t>0$ поддерживается давление $p_\\tau$.",
+   "kind": "assumption",
+   "page_pdf": 482,
+   "quote": "p(x, t) = p_\\tau \\quad \\text{при} \\quad x = 0, \\quad t > 0",
+   "orig_id": "basniev.gallery_fixed_pressure#c7"
+  },
+  {
+   "id": "C115",
+   "type": "claim",
+   "node_id": "basniev.gallery_similarity_variable",
+   "text": "Прямым измерением установлено: автомодельность задачи авторы показывают анализом размерностей: аргументы давления образуют один безразмерный комплекс.",
+   "kind": "observation",
+   "page_pdf": 482,
+   "quote": "из аргументов, от которых зависит давление, можно составить один безразмерный комплекс",
+   "orig_id": "basniev.gallery_similarity_variable#c1"
+  },
+  {
+   "id": "C117",
+   "type": "claim",
+   "node_id": "basniev.gallery_similarity_variable",
+   "text": "Безразмерное давление представлено как функция координаты, времени и коэффициента пьезопроводности.",
+   "kind": "observation",
+   "page_pdf": 482,
+   "quote": "P = f(x, t, \\kappa)",
+   "orig_id": "basniev.gallery_similarity_variable#c3"
+  },
+  {
+   "id": "C144",
+   "type": "claim",
+   "node_id": "basniev.gallery_pressure_profiles",
+   "text": "Интеграл (23.26) называется интегралом вероятности, табулирован и изменяется от 0 до 1.",
+   "kind": "observation",
+   "page_pdf": 483,
+   "quote": "называется интегралом вероятности, является табулированной функцией, изменяющейся в пределах от 0 до 1",
+   "orig_id": "basniev.gallery_pressure_profiles#c7"
+  },
+  {
+   "id": "C149",
+   "type": "claim",
+   "node_id": "basniev.gallery_pressure_profiles",
+   "text": "Рисунок показывает профили давления в разные моменты времени при постоянном забойном давлении галереи.",
+   "kind": "observation",
+   "page_pdf": 484,
+   "quote": "Кривые распределения давления в различные моменты времени",
+   "orig_id": "basniev.gallery_pressure_profiles#c12"
+  },
+  {
+   "id": "C152",
+   "type": "claim",
+   "node_id": "basniev.gallery_rate_and_production",
+   "text": "В обозначениях $B$ и $h$ — ширина и толщина пласта; для расчёта дебита дифференцируют распределение давления.",
+   "kind": "observation",
+   "page_pdf": 484,
+   "quote": "$B, h$ – соответственно, ширина и толщина пласта",
+   "orig_id": "basniev.gallery_rate_and_production#c3"
+  },
+  {
+   "id": "C153",
+   "type": "claim",
+   "node_id": "basniev.gallery_rate_and_production",
+   "text": "Прямым измерением установлено: градиент давления у галереи равен $(p_\\mathrm{k}-p_\\mathrm{r})/\\sqrt{\\pi\\kappa t}$.",
+   "kind": "observation",
+   "page_pdf": 484,
+   "quote": "= \\frac{p_{\\mathrm{k}} - p_{\\mathrm{r}}}{\\sqrt{\\pi \\kappa t}}",
+   "orig_id": "basniev.gallery_rate_and_production#c4"
+  },
+  {
+   "id": "C154",
+   "type": "claim",
+   "node_id": "basniev.gallery_rate_and_production",
+   "text": "Дебит галереи в любой момент времени находят подстановкой градиента давления из (23.29) в выражение (23.28).",
+   "kind": "inference",
+   "page_pdf": 484,
+   "quote": "подставив значение градиента давления",
+   "orig_id": "basniev.gallery_rate_and_production#c5"
+  },
+  {
+   "id": "C170",
+   "type": "claim",
+   "node_id": "basniev.gallery_fixed_rate",
+   "text": "С учетом определения w уравнение (23.32) переписывается как уравнение для скорости фильтрации.",
+   "kind": "inference",
+   "page_pdf": 486,
+   "quote": "можно переписать в виде",
+   "orig_id": "basniev.gallery_fixed_rate#c11"
+  },
+  {
+   "id": "C172",
+   "type": "claim",
+   "node_id": "basniev.gallery_velocity_solution",
+   "text": "Уравнение для w по форме совпадает с уравнением теплопроводности, поэтому его решение аналогично решению для давления с заменой p на w.",
+   "kind": "inference",
+   "page_pdf": 486,
+   "quote": "с заменой давления $p$ на скорость фильтрации $w$",
+   "orig_id": "basniev.gallery_velocity_solution#c1"
+  },
+  {
+   "id": "C173",
+   "type": "claim",
+   "node_id": "basniev.gallery_velocity_solution",
+   "text": "Решение для скорости фильтрации имеет вид суммы констант, где одна умножает функцию ошибок от x/(2√(κt)).",
+   "kind": "observation",
+   "page_pdf": 486,
+   "quote": "\\quad (23.34)",
+   "orig_id": "basniev.gallery_velocity_solution#c2"
+  },
+  {
+   "id": "C174",
+   "type": "claim",
+   "node_id": "basniev.gallery_velocity_solution",
+   "text": "Для определения решения необходимо использовать начальное и граничное условия для w.",
+   "kind": "observation",
+   "page_pdf": 486,
+   "quote": "начальное и граничное условия для $w$",
+   "orig_id": "basniev.gallery_velocity_solution#c3"
+  },
+  {
+   "id": "C175",
+   "type": "claim",
+   "node_id": "basniev.gallery_velocity_solution",
+   "text": "Начальная скорость фильтрации равна нулю, а на галерее она равна w1.",
+   "kind": "assumption",
+   "page_pdf": 486,
+   "quote": "w(x, 0) = 0, \\quad w(0, t) = w_1",
+   "orig_id": "basniev.gallery_velocity_solution#c4"
+  },
+  {
+   "id": "C176",
+   "type": "claim",
+   "node_id": "basniev.gallery_velocity_solution",
+   "text": "Константы интегрирования определяют из указанных начального и граничного условий.",
+   "kind": "observation",
+   "page_pdf": 486,
+   "quote": "Используя эти условия, найдем константы интегрирования.",
+   "orig_id": "basniev.gallery_velocity_solution#c5"
+  },
+  {
+   "id": "C183",
+   "type": "claim",
+   "node_id": "basniev.gallery_velocity_solution",
+   "text": "Прямым измерением установлено: из двух условий получаются C2=w1 и C1=−w1.",
+   "kind": "observation",
+   "page_pdf": 486,
+   "quote": "Из этих двух равенств имеем $C_2 = w_1$, $C_1 = -w_1$ и, следовательно,",
+   "orig_id": "basniev.gallery_velocity_solution#c12"
+  },
+  {
+   "id": "C196",
+   "type": "claim",
+   "node_id": "basniev.gallery_pressure_limit",
+   "text": "А экспонента также стремится к нулю.",
+   "kind": "inference",
+   "page_pdf": 488,
+   "quote": "это произведение стремится к нулю",
+   "orig_id": "basniev.gallery_pressure_limit#c2"
+  },
+  {
+   "id": "C211",
+   "type": "claim",
+   "node_id": "basniev.radial_similarity_variable",
+   "text": "Искомое давление зависит от пяти определяющих параметров: r, t, κ, pк и Q0μ/(2πkh); далее проводится анализ их размерностей.",
+   "kind": "observation",
+   "page_pdf": 489,
+   "quote": "зависит от пяти определяющих параметров",
+   "orig_id": "basniev.radial_similarity_variable#c1"
+  },
+  {
+   "id": "C219",
+   "type": "claim",
+   "node_id": "basniev.radial_similarity_variable",
+   "text": "Прямым измерением установлено: полученное уравнение нужно интегрировать с условиями, преобразованными из (23.41) к безразмерному виду.",
+   "kind": "observation",
+   "page_pdf": 489,
+   "quote": "преобразованием к безразмерному виду",
+   "orig_id": "basniev.radial_similarity_variable#c9"
+  },
+  {
+   "id": "C224",
+   "type": "claim",
+   "node_id": "basniev.radial_equation_solution",
+   "text": "После подстановки v из уравнения (23.44) получают дифференциальное уравнение для v.",
+   "kind": "observation",
+   "page_pdf": 489,
+   "quote": "из уравнения (23.44) получим",
+   "orig_id": "basniev.radial_equation_solution#c3"
+  },
+  {
+   "id": "C227",
+   "type": "claim",
+   "node_id": "basniev.radial_equation_solution",
+   "text": "Интегрирование уравнения (23.46) приводит к соотношению (23.47).",
+   "kind": "inference",
+   "page_pdf": 490,
+   "quote": "Проинтегрировав (23.46), получим",
+   "orig_id": "basniev.radial_equation_solution#c6"
+  },
+  {
+   "id": "C232",
+   "type": "claim",
+   "node_id": "basniev.radial_equation_solution",
+   "text": "Интегрируя (23.48) от ξ до бесконечности и используя первое условие (23.41), получают (23.49).",
+   "kind": "inference",
+   "page_pdf": 490,
+   "quote": "в пределах от $\\xi$ до бесконечности, учтя первое из условий (23.41)",
+   "orig_id": "basniev.radial_equation_solution#c11"
+  },
+  {
+   "id": "C245",
+   "type": "claim",
+   "node_id": "basniev.radial_pressure_formula",
+   "text": "Прямым измерением установлено: давление в любой точке плоскорадиального потока при упругом режиме определяется основной формулой (23.52).",
+   "kind": "observation",
+   "page_pdf": 491,
+   "quote": "давление в любой точке плоскорадиального потока в условиях упругого режима фильтрации",
+   "orig_id": "basniev.radial_pressure_formula#c12"
+  },
+  {
+   "id": "C247",
+   "type": "claim",
+   "node_id": "basniev.radial_pressure_formula",
+   "text": "Формула (23.52) — основная формула теории упругого режима; её применяют, в частности, при интерпретации исследований скважин и расчётах распределения давления.",
+   "kind": "observation",
+   "page_pdf": 491,
+   "quote": "Она имеет широкое практическое применение, в частности, используется при интерпретации результатов исследования скважин",
+   "orig_id": "basniev.radial_pressure_formula#c14"
+  },
+  {
+   "id": "C260",
+   "type": "claim",
+   "node_id": "basniev.exponential_integral_approximation",
+   "text": "При r²/(4κt)≤1 давление приближённо равно pκ минус Q₀μ/(4πkh), умноженное на ln(4κt/r²)−0,5772.",
+   "kind": "inference",
+   "page_pdf": 491,
+   "quote": "p(r, t) = p_\\kappa - \\frac{Q_0 \\mu}{4 \\pi k h}",
+   "orig_id": "basniev.exponential_integral_approximation#c13"
+  },
+  {
+   "id": "C277",
+   "type": "claim",
+   "node_id": "basniev.finite_reservoir_boundary",
+   "text": "Для предыдущего приближения погрешность забойного давления не превышает 0,8% при F₀≤0,2, 1% при F₀≤0,35 и 1,9% при F₀≤0,5.",
+   "kind": "observation",
+   "page_pdf": 493,
+   "quote": "погрешность в подсчетах забойного давления не превзойдет 0,08% при Fo ≤ 0,2; 1% при Fo ≤ 0,35; 1,9% при Fo ≤ 0,5",
+   "orig_id": "basniev.finite_reservoir_boundary#c2"
+  },
+  {
+   "id": "C283",
+   "type": "claim",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Градиент давления вблизи скважины равен Q₀μ/(2πkr).",
+   "kind": "inference",
+   "page_pdf": 493,
+   "quote": "\\partial p / \\partial r = Q_0 \\mu / (2 \\pi k r)",
+   "orig_id": "basniev.near_well_profiles#c2"
+  },
+  {
+   "id": "C284",
+   "type": "claim",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Рисунок 23.4 показывает пьезометрические кривые при пуске скважины с постоянным дебитом и поясняет обозначения r_c и Rк.",
+   "kind": "observation",
+   "page_pdf": 493,
+   "quote": "Пьезометрические кривые при пуске скважины с постоянным дебитом Q₀",
+   "orig_id": "basniev.near_well_profiles#c3"
+  },
+  {
+   "id": "C285",
+   "type": "claim",
+   "node_id": "basniev.near_well_profiles",
+   "text": "При r²≤0,03·4κt градиент давления практически не зависит от времени и совпадает с выражением для установившейся плоскорадиальной фильтрации несжимаемой жидкости.",
+   "kind": "observation",
+   "page_pdf": 493,
+   "quote": "градиент давления для значений r, удовлетворяющих неравенству r² ≤ 0,03 · 4κt, практически не зависит от времени",
+   "orig_id": "basniev.near_well_profiles#c4"
+  },
+  {
+   "id": "C286",
+   "type": "claim",
+   "node_id": "basniev.near_well_profiles",
+   "text": "При указанных значениях r пьезометрические кривые являются логарифмическими линиями.",
+   "kind": "observation",
+   "page_pdf": 493,
+   "quote": "Для указанных значений r пьезометрические кривые представляют собой логарифмические линии",
+   "orig_id": "basniev.near_well_profiles#c5"
+  },
+  {
+   "id": "C287",
+   "type": "claim",
+   "node_id": "basniev.near_well_profiles",
+   "text": "При постоянном дебите забойное давление со временем падает, а углы наклона касательных θ на забое одинаковы для всех кривых.",
+   "kind": "observation",
+   "page_pdf": 493,
+   "quote": "Давление на забое скважины падает с течением времени, углы наклона касательных θ на забое одинаковы для всех кривых",
+   "orig_id": "basniev.near_well_profiles#c6"
+  },
+  {
+   "id": "C294",
+   "type": "claim",
+   "node_id": "basniev.psss_core_idea",
+   "text": "В невозмущённой области давление постоянно и равно начальному контурному давлению.",
+   "kind": "assumption",
+   "page_pdf": 494,
+   "quote": "давление всюду постоянно и равно начальному контурному давлению",
+   "orig_id": "basniev.psss_core_idea#c7"
+  },
+  {
+   "id": "C295",
+   "type": "claim",
+   "node_id": "basniev.psss_core_idea",
+   "text": "Закон движения подвижной границы находят из уравнения материального баланса и граничных условий.",
+   "kind": "inference",
+   "page_pdf": 494,
+   "quote": "определяется при помощи уравнения материального баланса и граничных условий",
+   "orig_id": "basniev.psss_core_idea#c8"
+  },
+  {
+   "id": "C304",
+   "type": "claim",
+   "node_id": "basniev.psss_linear_fixed_rate",
+   "text": "В возмущенной области давление приближенно считается установившимся и линейно зависит от координаты.",
+   "kind": "assumption",
+   "page_pdf": 495,
+   "quote": "в этой области считается установившимся (см. гл. XX, §2), т.е. описывается линейной зависимостью:",
+   "orig_id": "basniev.psss_linear_fixed_rate#c6"
+  },
+  {
+   "id": "C317",
+   "type": "claim",
+   "node_id": "basniev.psss_linear_boundary",
+   "text": "Баланс записывается как производная по времени произведения Bhl и выражения для перепада давления.",
+   "kind": "observation",
+   "page_pdf": 496,
+   "quote": "Q = \\beta^* \\frac{d}{dt} \\left( Bhl \\frac{Q \\mu l}{2kBh} \\right),",
+   "orig_id": "basniev.psss_linear_boundary#c5"
+  },
+  {
+   "id": "C322",
+   "type": "claim",
+   "node_id": "basniev.psss_linear_boundary",
+   "text": "Интегрирование дифференциального соотношения дает закон движения границы.",
+   "kind": "inference",
+   "page_pdf": 496,
+   "quote": "Проинтегрируем полученное соотношение и найдем",
+   "orig_id": "basniev.psss_linear_boundary#c10"
+  },
+  {
+   "id": "C339",
+   "type": "claim",
+   "node_id": "basniev.psss_fixed_pressure_rate",
+   "text": "Найденный закон границы подставляется для определения распределения давления в зоне.",
+   "kind": "inference",
+   "page_pdf": 497,
+   "quote": "Следовательно, распределение давления в возмущенной зоне пласта определяется соотношением",
+   "orig_id": "basniev.psss_fixed_pressure_rate#c1"
+  },
+  {
+   "id": "C349",
+   "type": "claim",
+   "node_id": "basniev.psss_radial_fixed_rate",
+   "text": "В радиальной зоне давление логарифмически зависит от расстояния до скважины и радиуса границы.",
+   "kind": "observation",
+   "page_pdf": 498,
+   "quote": "p(r, t) = p_\\kappa - \\frac{Q\\mu}{2\\pi kh} \\ln \\frac{R(t)}{r}.",
+   "orig_id": "basniev.psss_radial_fixed_rate#c5"
+  },
+  {
+   "id": "C350",
+   "type": "claim",
+   "node_id": "basniev.psss_radial_fixed_rate",
+   "text": "На рисунке показаны профили давления в разные моменты при постоянном дебите.",
+   "kind": "observation",
+   "page_pdf": 498,
+   "quote": "Кривые распределения давления в плоскорадиальном потоке в разные моменты времени по методу ПССС (отбор осуществляется при условии $Q = \\text{const}$)",
+   "orig_id": "basniev.psss_radial_fixed_rate#c6"
+  },
+  {
+   "id": "C357",
+   "type": "claim",
+   "node_id": "basniev.psss_radial_boundary",
+   "text": "Средневзвешенное давление в установившемся плоскорадиальном потоке берется по формуле (20.25).",
+   "kind": "observation",
+   "page_pdf": 498,
+   "quote": "Средневзвешенное пластовое давление $\\bar{p}$ в установившемся плоскорадиальном потоке (см. гл. XX, §3) определяется по формуле (20.25)",
+   "orig_id": "basniev.psss_radial_boundary#c3"
+  },
+  {
+   "id": "A01",
+   "type": "analogy",
+   "node_id": "basniev.elastic_flow_mechanism",
+   "text": "Гипотеза: это похоже на высвобождение накопленной упругой энергии системы после изменения нагрузки.",
+   "breaks_where": "Гипотеза: аналогия не описывает движение жидкости через породу и условие давления выше давления насыщения."
+  },
+  {
+   "id": "A09",
+   "type": "analogy",
+   "node_id": "basniev.derive_pressure_equation",
+   "text": "Гипотеза: уравнение можно сравнить с правилом обновления состояния системы, где изменение во времени связано с пространственным распределением величины.",
+   "breaks_where": "Гипотеза: аналогия не описывает физический смысл давления, упругости пласта и фильтрации, которые глава связывает коэффициентами уравнения."
+  },
+  {
+   "id": "A26",
+   "type": "analogy",
+   "node_id": "basniev.finite_well_radius",
+   "text": "Гипотеза: точечный сток похож на упрощённую модель, которая заменяет объект с конечным размером идеализированным объектом.",
+   "breaks_where": "Аналогия ограничена: глава сравнивает физические расчёты давления, а не вычислительные модели или программные объекты."
+  },
+  {
+   "id": "A28",
+   "type": "analogy",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Гипотеза: профиль давления можно сравнить с графиком значения системы по расстоянию от источника.",
+   "breaks_where": "Аналогия ограничена: глава задаёт конкретный физический профиль, зависимость которого описана формулой и условием по r и t. Обычный график в ИТ сам по себе не объясняет эту физическую связь."
+  },
+  {
+   "id": "A38",
+   "type": "analogy",
+   "node_id": "basniev.psss_limits_and_uses",
+   "text": "Гипотеза: метод похож на упрощенную вычислительную модель, которая лучше предсказывает итоговый показатель, чем внутреннее распределение.",
+   "breaks_where": "Аналогия точная: здесь она не перестаёт работать, величина постоянна и одинакова для любых объектов."
+  },
+  {
+   "id": "L01.08",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Прямым измерением установлено: сохраним эту кривую, чтобы сравнить её с более поздней.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 26.09,
+   "t_end": 30.0,
+   "claim_ref": "C284",
+   "on_screen": "Первый момент"
+  },
+  {
+   "id": "L01.09",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Теперь скважина работает дольше, но её дебит остаётся постоянным.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 30.0,
+   "t_end": 33.91,
+   "claim_ref": "C284",
+   "on_screen": "Позже"
+  },
+  {
+   "id": "L01.10",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "На виде сверху зона заметного снижения давления стала шире.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 33.91,
+   "t_end": 37.83,
+   "claim_ref": "C260",
+   "on_screen": "Зона шире"
+  },
+  {
+   "id": "L01.17",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Значит, одинаковый наклон нельзя переносить на весь пласт.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 60.0,
+   "t_end": 63.48,
+   "claim_ref": "C285",
+   "on_screen": "Не везде"
+  },
+  {
+   "id": "L01.18",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Вернёмся ближе к скважине и сравним наклоны там.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 63.48,
+   "t_end": 66.96,
+   "claim_ref": "C285",
+   "on_screen": "Ближняя точка"
+  },
+  {
+   "id": "L01.21",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Прямым измерением установлено: в этой ближней области кривые имеют логарифмическую форму.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 75.65,
+   "t_end": 79.13,
+   "claim_ref": "C286",
+   "on_screen": "Форма кривых"
+  },
+  {
+   "id": "L01.22",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "А график забойного давления показывает его падение со временем.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 79.13,
+   "t_end": 83.04,
+   "claim_ref": "C287",
+   "on_screen": "Давление на забое"
+  },
+  {
+   "id": "L01.23",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "На этом графике время отложено по логарифмической шкале.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 83.04,
+   "t_end": 86.52,
+   "claim_ref": "C260",
+   "on_screen": "Шкала времени"
+  },
+  {
+   "id": "L01.24",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Ответ на вопрос: постоянный дебит не удерживает давление на забое.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 86.52,
+   "t_end": 90.87,
+   "claim_ref": "C287",
+   "on_screen": "Ответ"
+  },
+  {
+   "id": "L01.25",
+   "type": "script_line",
+   "node_id": "basniev.near_well_profiles",
+   "text": "При этом наклон у забоя для показанных кривых одинаков.",
+   "video_id": "basniev_long_near_well_profiles",
+   "t_start": 90.87,
+   "t_end": 94.78,
+   "claim_ref": "C287",
+   "on_screen": "Два признака"
+  },
+  {
+   "id": "S01.03",
+   "type": "scene_fact",
+   "node_id": "basniev.near_well_profiles",
+   "text": "На профиле одновременно не более двух кривых; на графике забоя — одна.",
+   "video_id": "basniev_long_near_well_profiles",
+   "spec_path": "invariants[2]"
+  },
+  {
+   "id": "S01.05",
+   "type": "scene_fact",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Указание одинакового наклона касательных относится к забою; близость наклонов в точке 15 м проверяется расчётом.",
+   "video_id": "basniev_long_near_well_profiles",
+   "spec_path": "invariants[4]"
+  },
+  {
+   "id": "S01.06",
+   "type": "scene_fact",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Точка 1000 м не удовлетворяет условию почти постоянного градиента ни в одном из двух показанных моментов.",
+   "video_id": "basniev_long_near_well_profiles",
+   "spec_path": "invariants[5]"
+  },
+  {
+   "id": "S01.08",
+   "type": "scene_fact",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Плашка «не в масштабе: маркер скважины увеличен в 50 раз» называет все преувеличения сцены: Диаметр условного маркера скважины на карте соответствует 10 м вместо реального диаметра 0,2 м: увеличение в 50 раз.",
+   "video_id": "basniev_long_near_well_profiles",
+   "spec_path": "plaque; exaggerations"
+  },
+  {
+   "id": "S01.09",
+   "type": "scene_fact",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Условно все численные параметры модели, кроме порога 0,03, выбраны для иллюстрации; глава не задаёт их для этого рисунка.",
+   "video_id": "basniev_long_near_well_profiles",
+   "spec_path": "assumptions[0]"
+  },
+  {
+   "id": "S01.14",
+   "type": "scene_fact",
+   "node_id": "basniev.near_well_profiles",
+   "text": "Условно схема дорожки отображается поверх профиля и сразу убирается; она не является отдельным расчётом.",
+   "video_id": "basniev_long_near_well_profiles",
+   "spec_path": "assumptions[5]"
+  }
+ ],
+ "scenes": [
+  {
+   "video_id": "basniev_long_near_well_profiles",
+   "spec": {
+    "title": "Дебит постоянный, давление падает",
+    "plaque": [
+     "не в масштабе:",
+     "маркер скважины увеличен в 50 раз"
+    ],
+    "params": {
+     "geometry": "radial",
+     "solution": "ei",
+     "p0_MPa": 20,
+     "kappa_m2_s": 1,
+     "q_m3_s": 0.001,
+     "mu_Pa_s": 0.001,
+     "k_m2": 1e-13,
+     "h_m": 10,
+     "r_w_m": 0.1,
+     "x_max_m": 300,
+     "times_s": [
+      3600,
+      14400
+     ],
+     "views": [
+      "map",
+      "profile",
+      "bottomhole_vs_log_t"
+     ]
+    },
+    "beats": [
+     {
+      "say": "Скважина работает с постоянным дебитом. Почему давление на забое всё равно падает?",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Дебит постоянный",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "bottomhole_vs_log_t"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Как ты думаешь, изменится ли при этом наклон у скважины?",
+      "claim_id": null,
+      "on_screen": "Наклон изменится?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "",
+      "claim_id": null,
+      "on_screen": "Твой прогноз?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 3,
+      "pause": 3
+     },
+     {
+      "say": "Посмотрим на расчёт после запуска скважины с постоянным дебитом.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "on_screen": "Запуск скважины",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "time_to": 3600
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Дебит — это объём жидкости, который скважина выдаёт за время.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "on_screen": "Объём за время",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "На виде сверху цвет показывает, где давление уже снизилось.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "on_screen": "Снижение давления",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "На профиле ты видишь давление на разных расстояниях от скважины.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "on_screen": "Давление и расстояние",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Сохраним эту кривую, чтобы сравнить её с более поздней.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "on_screen": "Первый момент",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_curve_at": 3600
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Теперь скважина работает дольше, но её дебит остаётся постоянным.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "on_screen": "Позже",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "time_to": 14400
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "На виде сверху зона заметного снижения давления стала шире.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "on_screen": "Зона шире",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "На профиле появилась вторая кривая для того же расчёта.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "on_screen": "Два момента",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_curve_at": 14400
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Сравни кривые возле скважины: поздняя проходит ниже ранней.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Давление ниже",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 0.1
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Но у самого забоя наклоны кривых почти одинаковы.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Наклон сохранился",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 0.1
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Представь дорожку, которую опускают, сохраняя её наклон.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Дорожка опускается",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": true,
+      "pause_s": 0
+     },
+     {
+      "say": "Но это не цельная дорожка: дальше от скважины наклон меняется.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "on_screen": "Аналогия ограничена",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 100
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Сравни оба момента здесь: участки кривых уже не параллельны.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "on_screen": "Дальняя точка",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 100
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Значит, одинаковый наклон нельзя переносить на весь пласт.",
+      "claim_id": "basniev.near_well_profiles#c4",
+      "on_screen": "Не везде",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Вернёмся ближе к скважине и сравним наклоны там.",
+      "claim_id": "basniev.near_well_profiles#c4",
+      "on_screen": "Ближняя точка",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 15
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Здесь спустя достаточное время наклон почти не зависит от времени.",
+      "claim_id": "basniev.near_well_profiles#c4",
+      "on_screen": "Почти одинаковы",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 15
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Такой наклон называют градиентом давления: он показывает изменение с расстоянием.",
+      "claim_id": "basniev.near_well_profiles#c2",
+      "on_screen": "Градиент давления",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "В этой ближней области кривые имеют логарифмическую форму.",
+      "claim_id": "basniev.near_well_profiles#c5",
+      "on_screen": "Форма кривых",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 15
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "А график забойного давления показывает его падение со временем.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Давление на забое",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "bottomhole_vs_log_t"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "На этом графике время отложено по логарифмической шкале.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "on_screen": "Шкала времени",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "bottomhole_vs_log_t"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Ответ на вопрос: постоянный дебит не удерживает давление на забое.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Ответ",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "bottomhole_vs_log_t"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "При этом наклон у забоя для показанных кривых одинаков.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "on_screen": "Два признака",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "А что ты проверишь, прежде чем сравнивать наклоны дальше от скважины?",
+      "claim_id": null,
+      "on_screen": "Проверишь условие?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 100
+      },
+      "is_analogy": false,
+      "pause_s": 2,
+      "pause": 2
+     }
+    ],
+    "objects": [
+     "Синхронные виды: карта давления, радиальный профиль и забойное давление во времени.",
+     "Условный маркер скважины на карте с подписью об увеличении.",
+     "На профиле две кривые с подписями моментов: 1 час и 4 часа.",
+     "Маркеры расстояний 15 м и 100 м; касательные только у забоя.",
+     "На графике забоя одна временная кривая; горизонтальная ось логарифмическая.",
+     "Единая шкала цвета давления на карте."
+    ],
+    "invariants": [
+     "Дебит, свойства пласта и начальное давление постоянны во всём расчёте.",
+     "Все виды показывают одну модель и согласованный текущий момент; сохранённая ранняя кривая подписана отдельно.",
+     "На профиле одновременно не более двух кривых; на графике забоя — одна.",
+     "Граница применимости почти постоянного градиента проверяется условием r² ≤ 0,03·4κt отдельно для каждого момента.",
+     "Указание одинакового наклона касательных относится к забою; близость наклонов в точке 15 м проверяется расчётом.",
+     "Точка 100 м не удовлетворяет условию почти постоянного градиента ни в одном из двух показанных моментов.",
+     "Маркер скважины не воспринимается как её реальный размер."
+    ],
+    "assumptions": [
+     "Условно все численные параметры модели, кроме порога 0,03, выбраны для иллюстрации; глава не задаёт их для этого рисунка.",
+     "Условно пласт однородный, скважина полностью вскрывает его толщину, дебит после пуска постоянен; модель не включает границ пласта.",
+     "Условно используются радиальное решение с интегральной показательной функцией и расчётные, а не измеренные давления.",
+     "Условно q_m3_s — полный объёмный дебит. Для размерного согласования формулы градиента узла с формулой давления соседнего узла Q₀ в градиенте нужно понимать как дебит на единицу толщины; определение Q₀ в предоставленном тексте не уточнено.",
+     "Условно граница зоны на карте задаётся выбранным порогом снижения давления; это не резкий физический фронт.",
+     "Условно схема дорожки отображается поверх профиля и сразу убирается; она не является отдельным расчётом."
+    ],
+    "exaggerations": [
+     "Диаметр условного маркера скважины на карте соответствует 10 м вместо реального диаметра 0,2 м: увеличение в 50 раз."
+    ],
+    "prediction_question": "Изменится ли наклон профиля у забоя, когда давление там упадёт?",
+    "transfer_question": "Что нужно проверить, прежде чем сравнивать наклоны дальше от скважины?",
+    "data_it_bridge": "Входы расчёта — постоянный дебит, свойства пласта, расстояния и время; выходы — две серии давления по расстоянию и серия забойного давления по времени. Сравнивай значения давления и локальные наклоны отдельно. Правило почти неизменного градиента ломается вне указанного условия по расстоянию и времени. Это расчётные кривые: глава не описывает измерения, шум, пропуски или сбои данных.",
+    "terms_to_check": [
+     "забой",
+     "дебит",
+     "градиент давления",
+     "пьезопроводность",
+     "пьезометрическая кривая",
+     "логарифмическая шкала",
+     "интегральная показательная функция"
+    ],
+    "video_id": "basniev_long_near_well_profiles",
+    "chapter": "basniev_gl23-24",
+    "node_id": "basniev.near_well_profiles",
+    "template": "pressure_diffusion",
+    "format": "long",
+    "aspect": "16:9",
+    "styleguide": "domain/geology/styleguide.json",
+    "spec_check": {
+     "words": 229,
+     "beats": 26,
+     "beats_with_claim": 23,
+     "problems": []
+    }
+   }
+  }
+ ],
+ "frames": []
+}

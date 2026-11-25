@@ -60,6 +60,14 @@ def build_timeline(spec: Spec, domain: str, engine: str | None = None) -> tuple[
         return out
 
     res = synth_all(rate)
+    # один голос на весь ролик: если часть фраз ушла в запасной движок — переозвучиваем им всё
+    primary = engine or st["engine"]
+    fb = sorted({r["engine"] for r in res if r and r["engine"] not in (primary, "none")})
+    if fb and st.get("consistent_voice", True):
+        print(f"[video] часть фраз озвучена {fb[0]} — переозвучиваю весь ролик им, чтобы голос был один",
+              file=sys.stderr)
+        engine = fb[0]
+        res = synth_all(rate)
     words = sum(len(b.say.split()) for b in spec.beats if b.say)
     secs = sum(len(r["audio"]) / tts.SR for r in res if r)
     wpm = words / secs * 60 if secs else 0
@@ -195,7 +203,7 @@ class Layout:
     """Геометрия кадра. 9:16: тег → крупный заголовок → сцена → плашка → субтитры (всё в безопасной зоне).
     16:9: сцена слева, справа тег, заголовок, плашка; субтитры внизу."""
 
-    def __init__(self, kind: str, spec: Spec, style: dict, beats):
+    def __init__(self, kind: str, spec: Spec, style: dict, beats, extra_plaque: str = "", replace_kw: str = ""):
         self.kind = kind
         sz = style.get("safe_zone", {"top": 220, "bottom": 380, "side": 70})
         if kind == "9x16":
@@ -207,7 +215,14 @@ class Layout:
         x0, y0, x1, y1 = self.safe
         self.f_tag = font(36, True)
         self.f_sub = font(44, True)
-        plaque = visible(" ".join(spec.get("plaque") or []) or "схема, не в масштабе", "плашка")
+        items = list(spec.get("plaque") or [])
+        kws = (replace_kw,) if isinstance(replace_kw, str) else tuple(replace_kw or ())
+        if extra_plaque and kws:  # строки про те же объекты заменяет посчитанная по кадру
+            items = [x for x in items if not any(k and k in x.lower() for k in kws)]
+        plaque = visible(" ".join(items) or "схема, не в масштабе", "плашка")
+        if extra_plaque:
+            plaque = (plaque.rstrip(" .;") + " " + extra_plaque) if plaque.rstrip().endswith(":") else \
+                (plaque.rstrip(" .;:") + "; " + extra_plaque)
         self.tag_h = line_h(self.f_tag) + 14
         if kind == "9x16":
             w = x1 - x0
@@ -215,7 +230,7 @@ class Layout:
             self.head_size, self.head_lines = 92, 2
             self.head_y = y0 + self.tag_h + 18
             hh = int(line_h(display_font(self.head_size)) * 1.02) * 2
-            self.f_plaque, self.plaque_lines = fit(plaque, w, 38, 34, 2)
+            self.f_plaque, self.plaque_lines = fit(plaque, w, 38, 32, 3)
             self.sub_h = line_h(self.f_sub) * 2 + 22
             self.sub_box = (x0, y1 - self.sub_h, x1, y1)
             pl_h = len(self.plaque_lines) * line_h(self.f_plaque)
@@ -243,6 +258,13 @@ class Renderer:
         self.spec, self.tpl, self.style, self.kind, self.segs = spec, template, style, kind, segs
         self.L = Layout(kind, spec, style, [s.beat for s in segs])
         self.T = template.layout(self.L.scene_box, compact=(kind == "9x16"))
+        # преувеличение подписывается числом (ТЗ): шаблон сам считает, во сколько раз объект крупнее реального
+        self.scale_note = template.scale_note(self.T) if hasattr(template, "scale_note") else ""
+        if self.scale_note:
+            self.L = Layout(kind, spec, style, [s.beat for s in segs], self.scale_note,
+                            getattr(template, "scale_keyword", ""))
+            self.T = template.layout(self.L.scene_box, compact=(kind == "9x16"))
+            self.scale_note = template.scale_note(self.T)
         rs = load_settings()["render"]
         self.fade = rs["fade_s"]
         self.k = int(rs.get("ssaa", 2))
@@ -255,6 +277,8 @@ class Renderer:
         d = SDraw(self.base)
         text_block(d, (self.L.plaque_x, self.L.plaque_y), self.L.plaque_lines, self.L.f_plaque,
                    hex_rgb(style["muted"]))
+        if hasattr(template, "prepare"):
+            template.prepare([seg.beat.action for seg in segs])
         self.starts = []
         s = template.initial_state()
         for seg in segs:
@@ -263,7 +287,7 @@ class Renderer:
             s = template.at(s0, seg.beat.action, 1.0)
         sx0, _, sx1, _ = self.L.sub_box
         self.subs = [subtitle_chunks(seg, self.L.f_sub, sx1 - sx0 - 60, max_lines=1) for seg in segs]
-        self.last = len(segs) - 1
+        self.last = len(segs) - 1 if segs and segs[-1].beat.index == len(spec.beats) - 1 else -1
 
     def seg_at(self, t: float) -> int:
         for i, s in enumerate(self.segs):

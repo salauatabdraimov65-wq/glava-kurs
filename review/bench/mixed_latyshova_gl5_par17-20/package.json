@@ -1,0 +1,1098 @@
+{
+ "package_id": "bench_mixed_latyshova_gl5_par17-20",
+ "chapter": "latyshova_gl5_par17-20",
+ "chapter_file": "train_latyshova.md",
+ "language": "ru",
+ "items": [
+  {
+   "id": "C005",
+   "type": "claim",
+   "node_id": "latyshova.gis_tasks",
+   "text": "Более сложные коллекторы интерпретируют количественно, оценивая пористость, глинистость, нефтегазонасыщенность либо параметр насыщения Pп.",
+   "kind": "observation",
+   "page_pdf": 90,
+   "quote": "методами количественной интерпретации через оценку коэффициентов пористости, глинистости, нефтегазонасыщения, либо параметра насыщения $P_п$.",
+   "orig_id": "latyshova.gis_tasks#c5"
+  },
+  {
+   "id": "C010",
+   "type": "claim",
+   "node_id": "latyshova.drilling_effects",
+   "text": "На выбор методов и интерпретацию существенно влияют условия бурения, прежде всего тип и параметры промывочной жидкости; они во многом определяют достоверность и качество геофизической информации.",
+   "kind": "observation",
+   "page_pdf": 90,
+   "quote": "На комплекс применяемых методов и способы их интерпретации также существенно влияют условия бурения скважин и в первую очередь тип и параметры промывочной жидкости",
+   "orig_id": "latyshova.drilling_effects#c1"
+  },
+  {
+   "id": "C013",
+   "type": "claim",
+   "node_id": "latyshova.drilling_effects",
+   "text": "При бурении на глинистом растворе в межзерновых коллекторах возникают зоны проникновения фильтрата и глинистая корка; диаметр скважины меньше номинального.",
+   "kind": "observation",
+   "page_pdf": 90,
+   "quote": "образование в межзерновых коллекторах зон проникновения фильтрата раствора и глинистых корок на стенках скважины $d_c < d_a$.",
+   "orig_id": "latyshova.drilling_effects#c4"
+  },
+  {
+   "id": "C015",
+   "type": "claim",
+   "node_id": "latyshova.drilling_effects",
+   "text": "В глинах, глинистых сланцах и аргиллитах диаметр уменьшается из-за разбухания глинистых частиц и их вымывания буровым раствором.",
+   "kind": "observation",
+   "page_pdf": 90,
+   "quote": "В глинах, глинистых сланцах, аргиллитах за счет разбухания глинистых частиц и вымывания их струей бурового раствора диаметр скважины увеличивается.",
+   "orig_id": "latyshova.drilling_effects#c6"
+  },
+  {
+   "id": "C041",
+   "type": "claim",
+   "node_id": "latyshova.nonfiltering_mud",
+   "text": "При таких растворах применимы только методы, которым не нужен прямой электрический контакт с породой; из электрометрических методов применим только индукционный зонд.",
+   "kind": "inference",
+   "page_pdf": 91,
+   "quote": "ограничения использования геофизического комплекса методов только теми, где не требуется прямого электрического контакта с породой. Из методов электрометрии применим только индукционный зонд.",
+   "orig_id": "latyshova.nonfiltering_mud#c3"
+  },
+  {
+   "id": "C044",
+   "type": "claim",
+   "node_id": "latyshova.section_pore_types",
+   "text": "Основные типы разреза — терригенный, карбонатный и гидрохимический; встречаются также разрезы смешанных типов.",
+   "kind": "observation",
+   "page_pdf": 91,
+   "quote": "В качестве основных типов разреза рассматривают терригенный, карбонатный и гидрохимический. Кроме того, встречаются разрезы смешанного типа",
+   "orig_id": "latyshova.section_pore_types#c1"
+  },
+  {
+   "id": "C046",
+   "type": "claim",
+   "node_id": "latyshova.section_pore_types",
+   "text": "Вулканогенные разрезы по вещественному составу близки к терригенным, а по структуре порового пространства коллекторов — к карбонатным, кроме карстовых образований.",
+   "kind": "observation",
+   "page_pdf": 91,
+   "quote": "вулканогенные, которые по вещественному составу близки к терригенным, а по структуре порового пространства коллекторов — к карбонатным (за исключением карстовых образований).",
+   "orig_id": "latyshova.section_pore_types#c3"
+  },
+  {
+   "id": "C047",
+   "type": "claim",
+   "node_id": "latyshova.section_pore_types",
+   "text": "По морфологии порового пространства коллекторы делят на межзерновые, трещинные, кавернозно-трещинные и смешанные.",
+   "kind": "observation",
+   "page_pdf": 91,
+   "quote": "коллекторы разделяют на межзерновые, трещинные, кавернозно-трещинные и смешанные типы.",
+   "orig_id": "latyshova.section_pore_types#c4"
+  },
+  {
+   "id": "C055",
+   "type": "claim",
+   "node_id": "latyshova.collector_variants",
+   "text": "Особую группу составляют высокопродуктивные трещинно-кавернозно-межзерновые коллекторы с крупными пустотами и полостями выщелачивания карстового типа.",
+   "kind": "observation",
+   "page_pdf": 91,
+   "quote": "высокопродуктивные трещинно-кавернозно-межзерновые коллекторы с наличием крупных пустот и полостей выщелачивания карстового типа.",
+   "orig_id": "latyshova.collector_variants#c6"
+  },
+  {
+   "id": "C063",
+   "type": "claim",
+   "node_id": "latyshova.method_groups",
+   "text": "СП применим в скважинах на глинистом растворе и воде при ρф > ρн.",
+   "kind": "observation",
+   "page_pdf": 92,
+   "quote": "он применим в скважинах, бурящихся на глинистом растворе и воде при ρф > ρн.",
+   "orig_id": "latyshova.method_groups#c7"
+  },
+  {
+   "id": "C064",
+   "type": "claim",
+   "node_id": "latyshova.method_groups",
+   "text": "Гамма-метод дифференцирует терригенный разрез по объемной глинистости kг, а карбонатный — по объемному содержанию нерастворимого остатка kн.",
+   "kind": "observation",
+   "page_pdf": 92,
+   "quote": "Гамма-метод дифференцирует терригенный разрез по объемной глинистости kг, карбонатный - по объемному содержанию нерастворимого остатка kн",
+   "orig_id": "latyshova.method_groups#c8"
+  },
+  {
+   "id": "C066",
+   "type": "claim",
+   "node_id": "latyshova.productivity_methods",
+   "text": "Продуктивность можно оценивать практически всеми методами комплекса, поскольку параметр Pн связывает геофизические свойства с нефтегазонасыщением порового пространства коллектора.",
+   "kind": "inference",
+   "page_pdf": 92,
+   "quote": "Оценку продуктивности можно осуществить фактически по всем методам комплекса, что вытекает из главного петрофизического параметра Pн",
+   "orig_id": "latyshova.productivity_methods#c1"
+  },
+  {
+   "id": "C069",
+   "type": "claim",
+   "node_id": "latyshova.productivity_methods",
+   "text": "К методам оценки продуктивности относятся боковое электрическое зондирование, экранированные и индукционные зонды с разными радиусами исследования.",
+   "kind": "observation",
+   "page_pdf": 92,
+   "quote": "методами оценки продуктивности являются боковое электрическое зондирование, экранированные и индукционные зонды с разными радиусами исследования",
+   "orig_id": "latyshova.productivity_methods#c4"
+  },
+  {
+   "id": "C070",
+   "type": "claim",
+   "node_id": "latyshova.productivity_methods",
+   "text": "Эти зонды позволяют определить или качественно оценить удельное сопротивление неизмененной части пласта.",
+   "kind": "observation",
+   "page_pdf": 92,
+   "quote": "позволяющие определить или при качественной интерпретации оценить удельное сопротивление неизмененной части пласта.",
+   "orig_id": "latyshova.productivity_methods#c5"
+  },
+  {
+   "id": "C073",
+   "type": "claim",
+   "node_id": "latyshova.productivity_methods",
+   "text": "Сфера применения перечисленных методов шире, чем предполагает данная классификация.",
+   "kind": "observation",
+   "page_pdf": 92,
+   "quote": "Сфера применения каждого из перечисленных методов шире, чем это предусмотрено данной классификацией.",
+   "orig_id": "latyshova.productivity_methods#c8"
+  },
+  {
+   "id": "C074",
+   "type": "claim",
+   "node_id": "latyshova.combined_method_signals",
+   "text": "Диаграммы ЯМР дают информацию о пористости в терригенном и карбонатном разрезах, а СП и ГМ — в терригенном.",
+   "kind": "observation",
+   "page_pdf": 92,
+   "quote": "диаграмма ЯМР в терригенном и карбонатном разрезах, диаграммы СП, ГМ - в терригенном, несут информацию о пористости",
+   "orig_id": "latyshova.combined_method_signals#c1"
+  },
+  {
+   "id": "C098",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Таблица характеризует признаки осадочных пород и коллекторов по геофизическим методам при глинистом буровом растворе.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "Основные признаки некоторых осадочных пород и коллекторов по данным геофизических методов (глинистый раствор).",
+   "orig_id": "latyshova.rock_table_collectors#c1"
+  },
+  {
+   "id": "C099",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Глины характеризуются низким сопротивлением, отсутствием проникновения, максимальными показаниями СП и гамма-метода, каверной и минимальными показаниями нейтронных методов.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "Глины | низкое | Отсутствие проникновения | максимальные | $$d_c > d_n$$ | Низкие, совпадающие для микрозондов разной длины | максимальные | Минимальные",
+   "orig_id": "latyshova.rock_table_collectors#c2"
+  },
+  {
+   "id": "C100",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Для этих пород при насыщении высокоминерализованной водой и при глинистом растворе характерны минимальное сопротивление, минимальные показания СП, сужение скважины (d_c < d_n), средние несовпадающие показания микрозондов, средние показания гамма- и нейтронных методов.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "Пески, песчаники, высокопористые карбонатные коллекторы с межзерновой пористостью, насыщенные высокоминерализованной водой | минимальное",
+   "orig_id": "latyshova.rock_table_collectors#c3"
+  },
+  {
+   "id": "C101",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Для водонасыщенных песков, песчаников и высокопористых карбонатных коллекторов при высокоминерализованной воде характер зоны проникновения задается соотношением ρp < ρm ≥ ρn.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "$$\\rho_p < \\rho_m \\geq \\rho_n$$",
+   "orig_id": "latyshova.rock_table_collectors#c4"
+  },
+  {
+   "id": "C104",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Нефтенасыщенные пески, песчаники и высокопористые межзерновые карбонатные коллекторы с небольшим содержанием связанной воды имеют среднее сопротивление.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "насыщенные нефтью с небольшим содержанием связанной воды | среднее",
+   "orig_id": "latyshova.rock_table_collectors#c7"
+  },
+  {
+   "id": "C106",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Для нефтенасыщенных коллекторов указаны такие же показатели СП, кавернограммы, микрозондов, гамма- и нейтронных методов, как в строке выше.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "То же | То же | То же | То же | То же",
+   "orig_id": "latyshova.rock_table_collectors#c9"
+  },
+  {
+   "id": "C108",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Для газонасыщенных коллекторов в строке таблицы отсутствуют значения СП, кавернограммы и микрозондов, а нейтронные показания максимальны.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "| - | - | - | - | максимальные",
+   "orig_id": "latyshova.rock_table_collectors#c11"
+  },
+  {
+   "id": "C109",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Межзерновые коллекторы, насыщенные более пресной водой или водой той же минерализации, что фильтрат раствора, характеризуются средним сопротивлением.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "Коллекторы с межзерновой пористостью, насыщенные водой более пресной или такой же, как фильтрат бурового раствора | Среднее",
+   "orig_id": "latyshova.rock_table_collectors#c12"
+  },
+  {
+   "id": "C111",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_collectors",
+   "text": "Показания СП у таких коллекторов ниже, чем в глинах, либо такие же, как в глинах; указано также соотношение ρp ≤ ρn.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "Показания СП выше, чем в глинах или как в глинах; $$\\rho_p \\leq \\rho_n$$",
+   "orig_id": "latyshova.rock_table_collectors#c14"
+  },
+  {
+   "id": "C114",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Для низкопористых чистых карбонатных коллекторов таблица указывает глубокое проникновение, минимальные показания СП или отсутствие проникновения по кажущимся показаниям, а нейтронные показания выше, чем в песчаных коллекторах.",
+   "kind": "observation",
+   "page_pdf": 93,
+   "quote": "Глубокое проникновение | Минимальные или фильтрата, кажущееся отсутствие проникновения",
+   "orig_id": "latyshova.rock_table_dense#c3"
+  },
+  {
+   "id": "C117",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Ангидриты и чистые плотные кристаллические известняки имеют максимальное сопротивление, отсутствие проникновения, минимальные СП, равенство dc = da и минимальные гамма-показания.",
+   "kind": "observation",
+   "page_pdf": 94,
+   "quote": "Ангидриты, чистые плотные кристаллические известняки | максимальное | Отсутствие проникновения | минимальные | d_{c} = d_{a}",
+   "orig_id": "latyshova.rock_table_dense#c6"
+  },
+  {
+   "id": "C120",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Для галита гамма-показания очень высокие, а нейтронные меняются с диаметром скважины от средних до очень высоких.",
+   "kind": "observation",
+   "page_pdf": 94,
+   "quote": "Очень низкие | Показания меняются с изменением диаметра скважины от средних до очень высоких",
+   "orig_id": "latyshova.rock_table_dense#c9"
+  },
+  {
+   "id": "C122",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Прямым измерением установлено: глинистые известняки и мергели могут иметь межзерновую и трещинную пористость; проникновения в них нет, СП максимальны, а показания микрозондов максимальны и резко меняются.",
+   "kind": "observation",
+   "page_pdf": 94,
+   "quote": "Глинистые известняки, мергели. Могут обладать как межзерновой, так и трещиной пористостью | - | Отсутствие проникновения | максимальные | - | максимальные, резко меняющиеся | Средние или максимальные | Средние, но выше, чем в песчаных коллекторах",
+   "orig_id": "latyshova.rock_table_dense#c11"
+  },
+  {
+   "id": "C123",
+   "type": "claim",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Для ангидритов и чистых плотных кристаллических известняков микрозондовые показания такие же, как в предыдущей строке таблицы, а нейтронные максимальны.",
+   "kind": "observation",
+   "page_pdf": 94,
+   "quote": "Ангидриты, чистые плотные кристаллические известняки | максимальное | Отсутствие проникновения | минимальные | d_{c} = d_{a} | То же | минимальные | Максимальные",
+   "orig_id": "latyshova.rock_table_dense#c12"
+  },
+  {
+   "id": "C133",
+   "type": "claim",
+   "node_id": "latyshova.direct_collector_signs",
+   "text": "При качественном глинистом растворе с малой водоотдачей и невысокой минерализацией признаками коллектора служат сужение диаметра скважины из-за глинистой корки, положительное приращение микрозондов при небольших показаниях и, иногда, зона проникновения или радиальный градиент сопротивления.",
+   "kind": "observation",
+   "page_pdf": 96,
+   "quote": "сужение диаметра за счет образования глинистой корки (dᵢ < dₙ); положительные приращения на диаграмме микрозондов (ρₙГМЗ < ρₙПМЗ) при невысоких значениях их показаний",
+   "orig_id": "latyshova.direct_collector_signs#c4"
+  },
+  {
+   "id": "C135",
+   "type": "claim",
+   "node_id": "latyshova.direct_collector_signs",
+   "text": "При росте водоотдачи раствора глинистая корка утолщается: в хороших условиях ее толщина не превышает 10 см, а при плохом растворе достигает 3–4 см.",
+   "kind": "observation",
+   "page_pdf": 96,
+   "quote": "hᵣₓ ≤ 1 см в хороших условиях и достигает 3-4 см при плохом растворе",
+   "orig_id": "latyshova.direct_collector_signs#c6"
+  },
+  {
+   "id": "C136",
+   "type": "claim",
+   "node_id": "latyshova.direct_collector_signs",
+   "text": "С увеличением толщины корки разность показаний микрозондов сначала растет, затем уменьшается.",
+   "kind": "observation",
+   "page_pdf": 96,
+   "quote": "разница в показаниях микрозондов сначала возрастает, а потом убывает.",
+   "orig_id": "latyshova.direct_collector_signs#c7"
+  },
+  {
+   "id": "C139",
+   "type": "claim",
+   "node_id": "latyshova.radial_resistance_gradient",
+   "text": "Но качественные диаграммы микрозондов практически не получаются.",
+   "kind": "observation",
+   "page_pdf": 96,
+   "quote": "При возрастании минерализации раствора корки на стенках коллекторов образуются, но качественные диаграммы микрозондов практически не получаются.",
+   "orig_id": "latyshova.radial_resistance_gradient#c1"
+  },
+  {
+   "id": "C146",
+   "type": "claim",
+   "node_id": "latyshova.dynamic_indirect_signs",
+   "text": "Прямым измерением установлено: при повторных замерах наблюдения ведут одним методом при неизменных условиях в скважине; метод двух растворов предполагает смену скважинных условий.",
+   "kind": "observation",
+   "page_pdf": 96,
+   "quote": "с неизменными условиями в скважине — метод повторных замеров — или при смене скважинных условий — метод двух растворов.",
+   "orig_id": "latyshova.dynamic_indirect_signs#c2"
+  },
+  {
+   "id": "C161",
+   "type": "claim",
+   "node_id": "latyshova.calculate_permeability_limit",
+   "text": "Критическая проницаемость вычисляется по формуле kпр* = (μη/2π) ln(Rк/rс).",
+   "kind": "observation",
+   "page_pdf": 97,
+   "quote": "k^*_{\\text{пр}} = (\\mu\\eta/2\\pi)\\ln(R_\\text{к}/r_\\text{с})",
+   "orig_id": "latyshova.calculate_permeability_limit#c5"
+  },
+  {
+   "id": "C172",
+   "type": "claim",
+   "node_id": "latyshova.saturation_parameter",
+   "text": "Сопротивление водонасыщенного пласта ρвн получают косвенно: по известной пористости рассчитывают параметр пористости, затем ρвн = Pнρв.",
+   "kind": "observation",
+   "page_pdf": 97,
+   "quote": "затем - в ρвн = Pнρв.",
+   "orig_id": "latyshova.saturation_parameter#c3"
+  },
+  {
+   "id": "C175",
+   "type": "claim",
+   "node_id": "latyshova.resistance_saturation_limits",
+   "text": "Прямым измерением установлено: чистые высокопористые межзерновые коллекторы характеризуются высокими коэффициентами нефтегазонасыщения.",
+   "kind": "observation",
+   "page_pdf": 97,
+   "quote": "Чистые, высокопористые межзерновые коллекторы характеризуются высокими значениями коэффициентов нефте-, газонасыщения.",
+   "orig_id": "latyshova.resistance_saturation_limits#c1"
+  },
+  {
+   "id": "C176",
+   "type": "claim",
+   "node_id": "latyshova.resistance_saturation_limits",
+   "text": "Для таких коллекторов насыщение можно оценивать по сопротивлению неизмененной части или даже кажущемуся сопротивлению оптимальных зондов, если пористость и Pн меняются в узких пределах, а пластовые воды одинаковы по разрезу.",
+   "kind": "inference",
+   "page_pdf": 97,
+   "quote": "если коэффициент пористости, а следовательно, и Pн изменяются в нешироких пределах, а пластовые воды одинаковы для всего изучаемого разреза",
+   "orig_id": "latyshova.resistance_saturation_limits#c2"
+  },
+  {
+   "id": "C188",
+   "type": "claim",
+   "node_id": "latyshova.porosity_resistance_comparison",
+   "text": "Прямым измерением установлено: в области коллекторов располагается семейство графиков ρн=f(kн) для различных значений относительного водонасыщения пор.",
+   "kind": "observation",
+   "page_pdf": 98,
+   "quote": "В области коллекторов расположено семейство графиков ρn = f(kn) для различных значений относительного водонасыщения пор",
+   "orig_id": "latyshova.porosity_resistance_comparison#c7"
+  },
+  {
+   "id": "C190",
+   "type": "claim",
+   "node_id": "latyshova.porosity_resistance_comparison",
+   "text": "Промежуточные кривые при постоянном kn получены статистической обработкой петрофизических исследований.",
+   "kind": "observation",
+   "page_pdf": 98,
+   "quote": "Промежуточные кривые для kn = const получены путем статистической обработки результатов петрофизических исследований.",
+   "orig_id": "latyshova.porosity_resistance_comparison#c9"
+  },
+  {
+   "id": "C192",
+   "type": "claim",
+   "node_id": "latyshova.saturation_graph_regions",
+   "text": "График 2 отражает зависимость ρno от kn для водоносных коллекторов и продолжается в области А неколлекторов.",
+   "kind": "observation",
+   "page_pdf": 98,
+   "quote": "График 2 представляет зависимость ρno = f(kn) для полностью водоносных коллекторов, которая продолжается и в области А для неколлекторов.",
+   "orig_id": "latyshova.saturation_graph_regions#c2"
+  },
+  {
+   "id": "C198",
+   "type": "claim",
+   "node_id": "latyshova.saturation_graph_regions",
+   "text": "Кривые ρn* и ρn** строят совместным анализом зависимостей параметра насыщения, фазовых проницаемостей и связанной воды для классов коллекторов и объекта.",
+   "kind": "observation",
+   "page_pdf": 98,
+   "quote": "Зависимости ρn* = f(kn) и ρn** = f(kn) построены на основе совместного анализа кривых Pn = f(kn) для разных классов коллекторов",
+   "orig_id": "latyshova.saturation_graph_regions#c8"
+  },
+  {
+   "id": "C199",
+   "type": "claim",
+   "node_id": "latyshova.saturation_graph_regions",
+   "text": "Характер насыщения определяют по области, в которую попадает точка с координатами ρn и kn на системе графиков рис. 69.",
+   "kind": "inference",
+   "page_pdf": 98,
+   "quote": "при этом область, в которой окажется точка, определяет характер насыщения распознаваемого пласта.",
+   "orig_id": "latyshova.saturation_graph_regions#c9"
+  },
+  {
+   "id": "C216",
+   "type": "claim",
+   "node_id": "latyshova.derive_saturation_cutoffs",
+   "text": "Петрофизический способ устанавливает критические значения по лабораторному сопоставлению Pn=f(kn) и относительных фазовых проницаемостей для нефти, воды и газа.",
+   "kind": "observation",
+   "page_pdf": 99,
+   "quote": "критические значения  \\( P_{n} \\) ,  \\( k_{n} \\)  находят, получая в лаборатории и сопоставляя связь  \\( P_{n} = f(k_{n}) \\)  и зависимость относительной фазовой проницаемости по нефти, воде и газу",
+   "orig_id": "latyshova.derive_saturation_cutoffs#c6"
+  },
+  {
+   "id": "C222",
+   "type": "claim",
+   "node_id": "latyshova.phase_flow_ranges",
+   "text": "На рисунке 70 области 1, 2 и 3 обозначают соответственно течение нефти, нефти с водой и воды.",
+   "kind": "observation",
+   "page_pdf": 99,
+   "quote": "1, 2, 3 – области течения нефти, нефти с водой и воды соответственно.",
+   "orig_id": "latyshova.phase_flow_ranges#c4"
+  },
+  {
+   "id": "C227",
+   "type": "claim",
+   "node_id": "latyshova.phase_flow_ranges",
+   "text": "При Pn** > Pn ≥ 1 коллектор дает чистую воду.",
+   "kind": "observation",
+   "page_pdf": 99,
+   "quote": "при  \\( P_{n}^{**} > P_{n} \\geq 1 \\)  коллектор дает чистую воду.",
+   "orig_id": "latyshova.phase_flow_ranges#c9"
+  },
+  {
+   "id": "C241",
+   "type": "claim",
+   "node_id": "latyshova.clay_saturation_thresholds",
+   "text": "При αСП = 0,9 для kₙ* указаны 370% и Pₙ* = 5; для kₙ** — 77% и Pₙ** = 1,6; для kₙ,sp — 58% и Pₙ,sp = 2,5.",
+   "kind": "observation",
+   "page_pdf": 100,
+   "quote": "0,9 | 37 | 5 | 77 | 1,6 | 58 | 2,5",
+   "orig_id": "latyshova.clay_saturation_thresholds#c9"
+  },
+  {
+   "id": "C250",
+   "type": "claim",
+   "node_id": "latyshova.clay_saturation_examples",
+   "text": "Для Pₙ=3 и αСП=0,7 коллектор предельно нефтенасыщенный.",
+   "kind": "observation",
+   "page_pdf": 100,
+   "quote": "г) коллектор предельно нефтенасыщенный",
+   "orig_id": "latyshova.clay_saturation_examples#c4"
+  },
+  {
+   "id": "C253",
+   "type": "claim",
+   "node_id": "latyshova.productive_interval_thickness",
+   "text": "Толщину однородного продуктивного пласта-коллектора определяют по геофизическим диаграммам, учитывая правила определения границ пласта.",
+   "kind": "observation",
+   "page_pdf": 100,
+   "quote": "определяют по диаграммам геофизических методов с учетом правил определения границ пласта",
+   "orig_id": "latyshova.productive_interval_thickness#c1"
+  },
+  {
+   "id": "C259",
+   "type": "claim",
+   "node_id": "latyshova.fluid_contact_position",
+   "text": "При наличии переходной зоны ВНК сначала по диаграммам больших зондов БЭЗ или индукционного зонда определяют кровлю переходной зоны и зеркало воды.",
+   "kind": "observation",
+   "page_pdf": 101,
+   "quote": "определяют нижнюю границу зоны предельного нефтегазонасыщения (кровлю переходной зоны) и положение зеркала воды",
+   "orig_id": "latyshova.fluid_contact_position#c1"
+  },
+  {
+   "id": "C262",
+   "type": "claim",
+   "node_id": "latyshova.fluid_contact_position",
+   "text": "ВНК проводят через точку переходной зоны, где ρп равно принятому критерию ρп* или ρп,пр.",
+   "kind": "observation",
+   "page_pdf": 101,
+   "quote": "находят точку, в которой ρп = ρп* или ρп = ρп,пр",
+   "orig_id": "latyshova.fluid_contact_position#c4"
+  },
+  {
+   "id": "C270",
+   "type": "claim",
+   "node_id": "latyshova.noncollector_interbeds",
+   "text": "Плотные алевролиты и песчаники с неактивным карбонатным или силикатным цементом показывают высокие значения на диаграммах микрозондов и нейтронных методов и обычно не прослеживаются на диаграммах СП и ГМ.",
+   "kind": "observation",
+   "page_pdf": 101,
+   "quote": "практически не прослеживаются на диаграммах СП и ГМ",
+   "orig_id": "latyshova.noncollector_interbeds#c3"
+  },
+  {
+   "id": "C271",
+   "type": "claim",
+   "node_id": "latyshova.noncollector_interbeds",
+   "text": "Прослои с неактивным цементом могут прослеживаться на СП и ГМ.",
+   "kind": "observation",
+   "page_pdf": 101,
+   "quote": "за исключением случаев, когда наряду с неактивным в породе присутствует глинистый цемент",
+   "orig_id": "latyshova.noncollector_interbeds#c4"
+  },
+  {
+   "id": "C272",
+   "type": "claim",
+   "node_id": "latyshova.noncollector_interbeds",
+   "text": "В тонкослоистой пачке коллектора и глины отдельные неколлекторские прослои не выделяются даже микроэлектрическими методами с максимальной вертикальной разрешающей способностью.",
+   "kind": "observation",
+   "page_pdf": 101,
+   "quote": "отдельные прослои неколлекторов не выделяются даже по данным методов с максимальной разрешающей способностью по вертикали",
+   "orig_id": "latyshova.noncollector_interbeds#c5"
+  },
+  {
+   "id": "C279",
+   "type": "claim",
+   "node_id": "latyshova.thin_bed_resistivity",
+   "text": "Сопротивление продуктивных прослоев рассчитывают по параметрам керна либо принимают равным сопротивлению наиболее чистых продуктивных коллекторов разреза.",
+   "kind": "observation",
+   "page_pdf": 102,
+   "quote": "рассчитывают по значениям параметров, измеренных по керну, или принимают в качестве нее удельное сопротивление наиболее чистых продуктивных коллекторов",
+   "orig_id": "latyshova.thin_bed_resistivity#c6"
+  },
+  {
+   "id": "C285",
+   "type": "claim",
+   "node_id": "latyshova.mixed_thin_interbeds",
+   "text": "Для пачки с тонкими прослоями двух типов неколлекторов среднее сопротивление связано с сопротивлениями коллектора и обоих типов неколлекторов.",
+   "kind": "observation",
+   "page_pdf": 102,
+   "quote": "связь между средним удельным сопротивлением пачки",
+   "orig_id": "latyshova.mixed_thin_interbeds#c1"
+  },
+  {
+   "id": "C293",
+   "type": "claim",
+   "node_id": "latyshova.mixed_thin_interbeds",
+   "text": "Среднее сопротивление пачки равно 73 Ом·м; по керну плотные прослои составляют не более 20% общей толщины.",
+   "kind": "observation",
+   "page_pdf": 104,
+   "quote": "Среднее удельное сопротивление пачки 7,3 Ом·м. По данным керновых определений плотные прослои составляют не более 20% от общей толщины.",
+   "orig_id": "latyshova.mixed_thin_interbeds#c9"
+  },
+  {
+   "id": "C312",
+   "type": "claim",
+   "node_id": "latyshova.carbonate_curve_normalization",
+   "text": "Метод сохраняет примерно одинаковую эффективность при различных граничных k*n и при существенно различающихся в интервале пористости и k*n.",
+   "kind": "observation",
+   "page_pdf": 107,
+   "quote": "Способ также дает примерно одинаковую эффективность при различном граничном значении  \\( k_{n}^{*} \\)  и при наличии в исследуемом интервале разреза коллекторов, пористость и значение  \\( k_{n}^{*} \\)  которых существенно отличаются.",
+   "orig_id": "latyshova.carbonate_curve_normalization#c7"
+  },
+  {
+   "id": "C322",
+   "type": "claim",
+   "node_id": "latyshova.carbonate_porosity_cutoff",
+   "text": "Зависимости kn,cn от kn для разных типов межзерновых карбонатных коллекторов позволяют оценить критическое значение kn*.",
+   "kind": "observation",
+   "page_pdf": 107,
+   "quote": "По зависимости между  \\( k_{n,cn} \\)  и  \\( k_{n} \\)  можно оценить критическое значение  \\( k_{n}^{*} \\) .",
+   "orig_id": "latyshova.carbonate_porosity_cutoff#c2"
+  },
+  {
+   "id": "A13",
+   "type": "analogy",
+   "node_id": "latyshova.rock_signs_limits",
+   "text": "Похоже на признак в данных, значение которого зависит не только от целевого класса, но и от состава объекта.",
+   "breaks_where": "Аналогия не описывает физические причины изменений каротажа: глава связывает их с составом и свойствами пород."
+  },
+  {
+   "id": "A26",
+   "type": "analogy",
+   "node_id": "latyshova.saturation_graph_regions",
+   "text": "Это похоже на классификатор, который относит точку с двумя признаками к области решений.",
+   "breaks_where": "Границы здесь основаны на петрофизических зависимостях и свойствах объекта, а не просто на выбранной алгоритмом геометрии."
+  },
+  {
+   "id": "A28",
+   "type": "analogy",
+   "node_id": "latyshova.derive_saturation_cutoffs",
+   "text": "Статистический способ похож на настройку порога классификатора по накопленным размеченным примерам; петрофизический — на получение порога из лабораторной модели.",
+   "breaks_where": "Аналогия точная: здесь она не перестаёт работать, величина постоянна и одинакова для любых объектов."
+  },
+  {
+   "id": "A33",
+   "type": "analogy",
+   "node_id": "latyshova.fluid_contact_position",
+   "text": "Переходную зону можно представить как интерполяцию между двумя известными опорными точками, а критерий — как порог выбора положения контакта.",
+   "breaks_where": "Геологические опорные точки и критерии получают из исследований и ранее описанных способов; это не произвольные значения для интерполяции."
+  },
+  {
+   "id": "A38",
+   "type": "analogy",
+   "node_id": "latyshova.carbonate_collector_difficulties",
+   "text": "Гипотеза: это похоже на ситуацию, когда один показатель данных совместим с несколькими классами, поэтому его недостаточно для надёжного решения.",
+   "breaks_where": "Гипотеза: аналогия ограничена — глава описывает физическое проникновение фильтрата в породу, а не только неоднозначность признака в данных."
+  },
+  {
+   "id": "L01.01",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Выберешь пласт только по сопротивлению — можешь промахнуться мимо нефти.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 0.0,
+   "t_end": 4.35,
+   "claim_ref": "C117",
+   "on_screen": "Риск ошибки"
+  },
+  {
+   "id": "L01.03",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Прибор спускается в скважину с глинистым буровым раствором.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 4.35,
+   "t_end": 7.83,
+   "claim_ref": "C098",
+   "on_screen": "Спуск прибора"
+  },
+  {
+   "id": "L01.05",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Прямым измерением установлено: ниже нефтенасыщенный песчаник: здесь сопротивление уже на среднем уровне.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 11.74,
+   "t_end": 15.65,
+   "claim_ref": "C104",
+   "on_screen": "Средний отклик"
+  },
+  {
+   "id": "L01.06",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "В этом примере нефть занимает поры между зёрнами песчаника.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 15.65,
+   "t_end": 19.57,
+   "claim_ref": "C104",
+   "on_screen": "Нефть в порах"
+  },
+  {
+   "id": "L01.09",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Как одна запись в логе: она подходит разным причинам ошибки.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 28.26,
+   "t_end": 32.61,
+   "claim_ref": "C117",
+   "on_screen": "Один признак"
+  },
+  {
+   "id": "L01.10",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Но здесь даже две кривые не всегда различают породы.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 32.61,
+   "t_end": 36.52,
+   "claim_ref": "C123",
+   "on_screen": "Предел аналогии"
+  },
+  {
+   "id": "L01.11",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Поэтому сопротивление сопоставляют с показаниями других методов, включая нейтронный.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 36.52,
+   "t_end": 40.43,
+   "claim_ref": "C123",
+   "on_screen": "Сочетание методов"
+  },
+  {
+   "id": "L01.12",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Прямым измерением установлено: у этого песчаника нейтронные показания средние, у плотного известняка максимальные.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 40.43,
+   "t_end": 44.78,
+   "claim_ref": "C106",
+   "on_screen": "Вторая кривая"
+  },
+  {
+   "id": "L01.13",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "В нашем примере нефть не там, где сопротивление максимально.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 44.78,
+   "t_end": 48.7,
+   "claim_ref": "C104",
+   "on_screen": "Ответ"
+  },
+  {
+   "id": "L01.14",
+   "type": "script_line",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Как ты проверишь породу, если оба метода дают одинаковые признаки?",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "t_start": 48.7,
+   "t_end": 53.04,
+   "claim_ref": "C123",
+   "on_screen": "Что проверишь?"
+  },
+  {
+   "id": "S01.03",
+   "type": "scene_fact",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Цвет и шкала каждого трека постоянны; показания усредняются в окне прибора",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec_path": "invariants[2]"
+  },
+  {
+   "id": "S01.05",
+   "type": "scene_fact",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "На границах слоёв кривые сглажены окном усреднения",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec_path": "invariants[4]"
+  },
+  {
+   "id": "S01.06",
+   "type": "scene_fact",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "fluid: null означает, что флюид не задан, а не доказанное отсутствие нефти",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec_path": "invariants[5]"
+  },
+  {
+   "id": "S01.10",
+   "type": "scene_fact",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Плашка «не в масштабе: ствол показан примерно в 11 раз шире реального (≈2 м)» называет все преувеличения сцены: Ширина ствола показана как 2,2 м вместо условных 0,22 м: преувеличение в 10 раз.; ствол показан примерно в 11 раз шире реального (≈0,2 м)",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec_path": "plaque; exaggerations"
+  },
+  {
+   "id": "S01.11",
+   "type": "scene_fact",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Условно все глубины, толщины и численные показания заданы для иллюстрации: исходная таблица не содержит этих чисел.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec_path": "assumptions[0]"
+  },
+  {
+   "id": "S01.13",
+   "type": "scene_fact",
+   "node_id": "latyshova.rock_table_dense",
+   "text": "Условно нейтронная шкала показывает относительные уровни таблицы, а не измеренную пористость.",
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec_path": "assumptions[2]"
+  }
+ ],
+ "scenes": [
+  {
+   "video_id": "latyshova_short_high_res_not_oil",
+   "spec": {
+    "title": "Где сопротивление выше — там нефть?",
+    "plaque": [
+     "не в масштабе:",
+     "ствол показан примерно в 11 раз шире реального (≈0,2 м)"
+    ],
+    "params": {
+     "depth_top": 2000,
+     "depth_bottom": 2060,
+     "depth_tick": 10,
+     "tool_start": 2001,
+     "tool_resolution_m": 1,
+     "bore_width": 2.2,
+     "layers": [
+      {
+       "top": 2000,
+       "bottom": 2020,
+       "lith": "shale",
+       "label": "Глина",
+       "fluid": null,
+       "props": {
+        "resistivity": 3,
+        "neutron_response": 10
+       },
+       "mud_cake": false,
+       "invasion_width": 0
+      },
+      {
+       "top": 2020,
+       "bottom": 2040,
+       "lith": "sand",
+       "label": "Нефтенасыщенный песчаник",
+       "fluid": "oil",
+       "props": {
+        "resistivity": 50,
+        "neutron_response": 50
+       },
+       "mud_cake": false,
+       "invasion_width": 0
+      },
+      {
+       "top": 2040,
+       "bottom": 2060,
+       "lith": "limestone",
+       "label": "Плотный известняк",
+       "fluid": null,
+       "props": {
+        "resistivity": 500,
+        "neutron_response": 90
+       },
+       "mud_cake": false,
+       "invasion_width": 0
+      }
+     ],
+     "curves": [
+      {
+       "key": "RES",
+       "prop": "resistivity",
+       "label": "Сопротивление",
+       "unit": "Ом·м",
+       "min": 1,
+       "max": 1000,
+       "log": true,
+       "scale": "log"
+      },
+      {
+       "key": "NEUTRON",
+       "prop": "neutron_response",
+       "label": "Нейтронный метод",
+       "unit": "усл. ед.",
+       "min": 0,
+       "max": 100,
+       "log": false
+      }
+     ]
+    },
+    "beats": [
+     {
+      "say": "Выберешь пласт только по сопротивлению — можешь промахнуться мимо нефти.",
+      "claim_id": "latyshova.rock_table_dense#c6",
+      "on_screen": "Риск ошибки",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "",
+      "claim_id": null,
+      "on_screen": "Где нефть?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 3,
+      "pause": 3
+     },
+     {
+      "say": "Прибор спускается в скважину с глинистым буровым раствором.",
+      "claim_id": "latyshova.rock_table_collectors#c1",
+      "on_screen": "Спуск прибора",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "tool_to": 2010
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Сначала он проходит глину: её сопротивление в таблице низкое.",
+      "claim_id": "latyshova.rock_table_collectors#c2",
+      "on_screen": "Низкий отклик",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "highlight_layer": 0
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Ниже нефтенасыщенный песчаник: здесь сопротивление уже на среднем уровне.",
+      "claim_id": "latyshova.rock_table_collectors#c7",
+      "on_screen": "Средний отклик",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "tool_to": 2030
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "В этом примере нефть занимает поры между зёрнами песчаника.",
+      "claim_id": "latyshova.rock_table_collectors#c7",
+      "on_screen": "Нефть в порах",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "highlight_layer": 1
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Ещё ниже сопротивление достигает максимума, но перед тобой плотный известняк.",
+      "claim_id": "latyshova.rock_table_dense#c6",
+      "on_screen": "Ловушка",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "tool_to": 2050
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "По таблице такое же максимальное сопротивление бывает и у ангидрита.",
+      "claim_id": "latyshova.rock_table_dense#c6",
+      "on_screen": "Другие породы",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "highlight_layer": 2
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Как одна запись в логе: она подходит разным причинам ошибки.",
+      "claim_id": "latyshova.rock_table_dense#c6",
+      "on_screen": "Один признак",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": true,
+      "pause_s": 0
+     },
+     {
+      "say": "Но здесь даже две кривые не всегда различают породы.",
+      "claim_id": "latyshova.rock_table_dense#c12",
+      "on_screen": "Предел аналогии",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Поэтому сопротивление сопоставляют с показаниями других методов, включая нейтронный.",
+      "claim_id": "latyshova.rock_table_dense#c12",
+      "on_screen": "Сочетание методов",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark": {
+        "top": 2020,
+        "bottom": 2060,
+        "label": "Сравни отклики"
+       }
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "У этого песчаника нейтронные показания средние, у плотного известняка максимальные.",
+      "claim_id": "latyshova.rock_table_collectors#c9",
+      "on_screen": "Вторая кривая",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "В нашем примере нефть не там, где сопротивление максимально.",
+      "claim_id": "latyshova.rock_table_collectors#c7",
+      "on_screen": "Ответ",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "highlight_layer": 1
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Как ты проверишь породу, если оба метода дают одинаковые признаки?",
+      "claim_id": "latyshova.rock_table_dense#c12",
+      "on_screen": "Что проверишь?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     }
+    ],
+    "objects": [
+     "Вертикальный разрез с тремя подписанными слоями",
+     "Шкала глубины, растущая вниз",
+     "Ствол скважины, прибор и кабель",
+     "Два подписанных трека: сопротивление и нейтронный метод",
+     "Кривые, проявляющиеся вслед за движением прибора"
+    ],
+    "invariants": [
+     "Порядок слоёв и их границы не меняются между кадрами",
+     "Прибор движется только вниз; глубина растёт вниз",
+     "Цвет и шкала каждого трека постоянны; показания усредняются в окне прибора",
+     "В кадре не более двух кривых и трёх слоёв",
+     "На границах слоёв кривые сглажены окном усреднения",
+     "fluid: null означает, что флюид не задан, а не доказанное отсутствие нефти"
+    ],
+    "assumptions": [
+     "Условно все глубины, толщины и численные показания заданы для иллюстрации: исходная таблица не содержит этих чисел.",
+     "Условно песчаник — высокопористый межзерновой коллектор с нефтью и небольшим содержанием связанной воды.",
+     "Условно нейтронная шкала показывает относительные уровни таблицы, а не измеренную пористость.",
+     "Условно известняк в этом примере не выбран как нефтенасыщенный; отсутствие флюида в параметрах не доказывает отсутствия пор или нефти.",
+     "Условно проникновение в песчаник не визуализируется: нулевая ширина здесь не является утверждением о его отсутствии.",
+     "Условно настоящий диаметр ствола равен 0,22 м; корка и отдельные поры не показаны."
+    ],
+    "exaggerations": [
+     "Ширина ствола показана как 2,2 м вместо условных 0,22 м: преувеличение в 10 раз.",
+     "ствол показан примерно в 11 раз шире реального (≈0,2 м)"
+    ],
+    "prediction_question": "Где нефть?",
+    "transfer_question": "Как ты проверишь породу, если оба метода дают одинаковые признаки?",
+    "data_it_bridge": "В данных каждой породе сопоставляют набор признаков, а не один столбец. Ангидрит и плотный известняк разделить по этим двум показаниям нельзя; нужны дополнительные сведения. При разборе таблицы ссылки «то же» надо раскрывать из предыдущей строки. Для галита нейтронные показания зависят от диаметра скважины.",
+    "terms_to_check": [
+     "каротаж",
+     "ангидрит",
+     "нейтронный метод",
+     "сопротивление",
+     "галит",
+     "глинистый буровой раствор"
+    ],
+    "video_id": "latyshova_short_high_res_not_oil",
+    "chapter": "latyshova_gl5_par17-20",
+    "node_id": "latyshova.rock_table_dense",
+    "template": "well_tool_curve",
+    "format": "short",
+    "aspect": "9:16",
+    "styleguide": "domain/geology/styleguide.json",
+    "spec_check": {
+     "words": 122,
+     "beats": 14,
+     "beats_with_claim": 13,
+     "problems": []
+    }
+   }
+  }
+ ],
+ "frames": []
+}

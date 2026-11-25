@@ -43,6 +43,7 @@ def route_node(n: dict) -> dict:
         secondary = "текст"   # если ролик не собран — шаг закрывает текст со схемой
     return {"node_id": n["id"], "format": fmt, "secondary_format": secondary, "video_scores": vs,
             "hook_short": False, "template": tpl,
+            "scene_template": DIFF["scene_template"].get(prim),   # шаблон сцены ролика по типу трудности (для выбора узла под ролик)
             "why": f"тип {prim}/{sec}; {why2}"}
 
 

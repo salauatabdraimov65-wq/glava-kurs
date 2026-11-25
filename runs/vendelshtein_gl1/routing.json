@@ -14,6 +14,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -29,6 +30,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/None; есть правило автора «признаки → вывод»"
   },
   {
@@ -44,6 +46,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Ф; есть правило автора «признаки → вывод»"
   },
   {
@@ -59,6 +62,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
@@ -74,6 +78,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
@@ -89,6 +94,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Ф; есть правило автора «признаки → вывод»"
   },
   {
@@ -104,6 +110,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -119,6 +126,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
@@ -134,6 +142,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
@@ -149,6 +158,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
@@ -164,6 +174,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -179,6 +190,7 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -195,6 +207,7 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -211,6 +224,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -226,6 +240,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -241,6 +256,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
@@ -256,6 +272,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
   },
   {
@@ -271,6 +288,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -286,6 +304,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -301,6 +320,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -316,6 +336,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -331,6 +352,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "well_tool_curve",
    "why": "тип Пр/И; текст шага и схема"
   },
   {
@@ -346,6 +368,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Пр; формула/модель — понимание через параметры"
   },
   {
@@ -361,6 +384,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -376,6 +400,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -391,6 +416,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -406,6 +432,7 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
+   "scene_template": "well_tool_curve",
    "why": "тип И/М; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -422,6 +449,7 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Пр; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -438,6 +466,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -453,6 +482,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -468,6 +498,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -483,6 +514,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/И; есть правило автора «признаки → вывод»"
   },
   {
@@ -498,6 +530,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -513,6 +546,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -528,6 +562,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -543,6 +578,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "well_tool_curve",
    "why": "тип И/Н; текст шага и схема"
   }
  ]

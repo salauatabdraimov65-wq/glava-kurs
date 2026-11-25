@@ -1,0 +1,216 @@
+{
+ "chapter": "drill_wiki_ru",
+ "routes": [
+  {
+   "node_id": "drill.well_and_drill_string",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/П; текст шага и схема"
+  },
+  {
+   "node_id": "drill.early_drilling_history",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/Пр; текст шага и схема"
+  },
+  {
+   "node_id": "drill.deep_drilling_history",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 2,
+    "counterintuitive": 0,
+    "cause_effect": 0
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип В/None; текст шага и схема"
+  },
+  {
+   "node_id": "drill.well_purposes",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/None; текст шага и схема"
+  },
+  {
+   "node_id": "drill.mud_basic_functions",
+   "format": "шортс",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/None; видеоёмкость 6/10",
+   "video_path": "video/drill_short_mud_basic_functions/video.mp4"
+  },
+  {
+   "node_id": "drill.mud_protection_functions",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/None; текст шага и схема"
+  },
+  {
+   "node_id": "drill.mud_circulation_cycle",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/None; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "drill.mud_types_selection",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/None; текст шага и схема"
+  },
+  {
+   "node_id": "drill.mud_properties_measurement",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/Пр; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "drill.mud_property_control",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/Пр; текст шага и схема"
+  },
+  {
+   "node_id": "drill.clay_mud_preparation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/Пр; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "drill.blowout_equipment_purpose",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/None; текст шага и схема"
+  },
+  {
+   "node_id": "drill.blowout_equipment_components",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/М; текст шага и схема"
+  }
+ ]
+}

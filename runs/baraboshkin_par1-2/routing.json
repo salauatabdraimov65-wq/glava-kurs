@@ -14,6 +14,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -29,6 +30,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип М/Р; текст шага и схема"
   },
   {
@@ -44,6 +46,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -60,6 +63,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/None; текст шага и схема"
   },
   {
@@ -75,6 +79,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -91,6 +96,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип В/П; текст шага и схема"
   },
   {
@@ -106,6 +112,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип В/М; текст шага и схема"
   },
   {
@@ -121,6 +128,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип М/В; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -137,6 +145,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип Р/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -152,6 +161,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип Р/В; есть правило автора «признаки → вывод»"
   },
   {
@@ -167,6 +177,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип Р/В; распознавание: признак → объект"
   },
   {
@@ -182,6 +193,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип М/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -198,6 +210,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип Р/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -213,6 +226,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип М/П; есть правило автора «признаки → вывод»"
   },
   {
@@ -228,6 +242,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип Р/В; распознавание: признак → объект"
   },
   {
@@ -243,6 +258,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип Р/П; распознавание: признак → объект"
   },
   {
@@ -258,6 +274,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип В/М; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -274,6 +291,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -289,6 +307,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип Р/М; распознавание: признак → объект"
   },
   {
@@ -304,6 +323,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип М/Р; текст шага и схема"
   },
   {
@@ -319,6 +339,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип Р/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -334,6 +355,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -349,6 +371,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/М; текст шага и схема"
   },
   {
@@ -364,6 +387,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "section_through_time",
    "why": "тип П/Р; текст шага и схема"
   }
  ]

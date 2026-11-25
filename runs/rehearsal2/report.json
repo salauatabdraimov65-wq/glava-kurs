@@ -1,0 +1,23 @@
+{
+ "chapter": "rehearsal2",
+ "nodes": 13,
+ "claims": 132,
+ "tasks": 26,
+ "task_types": {
+  "single": 9,
+  "multiple": 6,
+  "gap": 6,
+  "order": 5
+ },
+ "units_in_scope": 62,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "текст": 4,
+  "шортс": 3,
+  "практикум на данных": 5,
+  "карточки": 1
+ },
+ "usd": 0.068,
+ "minutes": 1.9
+}

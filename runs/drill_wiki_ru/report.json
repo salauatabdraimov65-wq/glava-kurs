@@ -1,0 +1,22 @@
+{
+ "chapter": "drill_wiki_ru",
+ "nodes": 13,
+ "claims": 98,
+ "tasks": 26,
+ "task_types": {
+  "single": 7,
+  "multiple": 6,
+  "gap": 9,
+  "order": 4
+ },
+ "units_in_scope": 87,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "текст": 9,
+  "шортс": 3,
+  "практикум на данных": 1
+ },
+ "usd": 0.056,
+ "minutes": 1.8
+}

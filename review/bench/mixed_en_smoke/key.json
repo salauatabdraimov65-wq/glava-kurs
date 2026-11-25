@@ -1,0 +1,170 @@
+{
+ "package_id": "bench_mixed_en_smoke",
+ "errors": [
+  {
+   "target": "C071",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Slickline использует сплошную механическую проволоку наружным диаметром 0,072–0,125 дюйма.",
+   "pages": [
+    7
+   ],
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD),",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C072",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Эта проволока служит для манипуляций с системой заканчивания скважины или выполнения в ней других операций.",
+   "pages": [
+    7
+   ],
+   "quote": "to manipulate or otherwise carry out operations in the well bore completion system.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Каротаж гамма-излучения, измеряющий естественную радиоактивность, появился в 1939 году, а нейтронный каротаж WSI — в 1941 году.",
+   "pages": [
+    2
+   ],
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C012",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Приборы измеряют, среди прочего, естественное гамма-излучение, электрические и акустические свойства, индуцированные радиоактивные отклики, электромагнитные характеристики, ЯМР и давление.",
+   "pages": [
+    1
+   ],
+   "quote": "measure the natural gamma ray, electrical, acoustic, stimulated radioactive responses, electromagnetic, nuclear magnetic resonance, pressure and other properties",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Измерения и их анализ позволяют выводить дополнительные свойства, например насыщенность углеводородами и пластовое давление, и принимать решения о бурении и добыче.",
+   "pages": [
+    1
+   ],
+   "quote": "used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Ядерные каротажные методы продолжали развиваться и после войны.",
+   "pages": [
+    2
+   ],
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Конрад разработал массив Шлюмберже для поисков металлических руд, а братья приспособили этот поверхностный метод для подземных измерений.",
+   "pages": [
+    2
+   ],
+   "quote": "a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C046",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Первоначально ядерный каротаж разрабатывали для измерения естественного гамма-излучения подземных формаций.",
+   "pages": [
+    2
+   ],
+   "quote": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C059",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Современные методы позволяют непрерывно передавать информацию на поверхность; это называют каротажем во время бурения (LWD) или измерениями во время бурения (MWD).",
+   "pages": [
+    2
+   ],
+   "quote": "Modern techniques now permit continuous information at the surface.  This is known as logging while drilling (LWD) or measurement-while-drilling (MWD).",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C004",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Каротаж применяют при поисках нефти и газа, подземных вод, полезных ископаемых и геотермальных ресурсов, а также в экологических, научных и геотехнических исследованиях.",
+   "pages": [
+    1
+   ],
+   "quote": "performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C065",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Разработаны компактные комбинации приборов для оценки пластов в открытом стволе с регистрацией данных в памяти.",
+   "pages": [
+    7
+   ],
+   "quote": "Although there are now developed some memory \"Open Hole\" compact formation evaluation tool combinations.",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "C063",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "В таких случаях приборы памяти можно доставлять на бурильных трубах или гибких трубах.",
+   "pages": [
+    7
+   ],
+   "quote": "the memory tools can be conveyed on Pipe or Coil Tubing",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "correct": "Аналогия ограничена: глава описывает физическую совместимость электрических методов с буровым раствором, а не только вычислительную инфраструктуру.",
+   "pages": [
+    2
+   ],
+   "note": "граница аналогии заменена на «точная, для любых»"
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Скважина вскрывает геологические формации, а каротаж создаёт их подробную запись.",
+   "pages": [
+    1
+   ],
+   "quote": "making a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "note": "вывод выдан за прямое измерение"
+  },
+  {
+   "target": "L01.12",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "correct": "Если изучают подземные воды, что будет записью: образец или результат его осмотра?",
+   "pages": [
+    1
+   ],
+   "quote": "either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs)",
+   "note": "вывод выдан за прямое измерение"
+  }
+ ],
+ "tricky_true": []
+}

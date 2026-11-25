@@ -1,0 +1,891 @@
+{
+ "chapter": "rehearsal2",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.false_caprock_trap#c5"
+   ],
+   "prompt": "Что определяет реальную максимальную высоту залежи в критической седловине?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Подошва истинной покрышки",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Кровля ложной покрышки",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Подошва ложной покрышки",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Критический перегиб в основании складки",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В критической седловине ложная покрышка не служит надежным латеральным экраном, поэтому высоту задает подошва истинной покрышки (стр. 150).",
+   "step_id": "rehearsal2.false_caprock_trap",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.false_caprock_trap#c4",
+    "rehearsal2.false_caprock_trap#c6",
+    "rehearsal2.false_caprock_trap#c8"
+   ],
+   "prompt": "Какие утверждения о ложной покрышке верны? Выберите все подходящие варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Углеводороды могут фильтроваться через нее в критической седловине за геологическое время, несмотря на очень низкую проницаемость.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В своде поднятия кровля залежи определяется кровлей ложной покрышки, а на периферии — ее подошвой.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "В своде поднятия кровля залежи определяется подошвой ложной покрышки, а на периферии — ее кровлей.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Отложения ложных покрышек не следует полностью исключать из потенциально интересных объектов: новые технологии могут сделать извлечение углеводородов рентабельным.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Ложная покрышка полностью исключает фильтрацию углеводородов в критической седловине даже за геологическое время.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Углеводороды фильтруются через ложную покрышку в седловине, положение кровли залежи различается в своде и на периферии, а новые технологии могут сделать извлечение рентабельным (стр. 150).",
+   "step_id": "rehearsal2.false_caprock_trap",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.cyclic_reservoir_structure#c10"
+   ],
+   "prompt": "Продуктивные пласты в {{1}} циклитов чередуются с полуколлекторами в {{2}} и кровлях.",
+   "options": [],
+   "answer": [
+    "центральных частях",
+    "основаниях"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Продуктивные пласты приурочены к центральным частям, а полуколлекторы — к основаниям и кровлям циклитов (стр. 151).",
+   "step_id": "rehearsal2.cyclic_reservoir_structure",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.cyclic_reservoir_structure#c5",
+    "rehearsal2.cyclic_reservoir_structure#c7",
+    "rehearsal2.cyclic_reservoir_structure#c9"
+   ],
+   "prompt": "Расположите части типичного циклита снизу вверх.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Основание: микрозернистые тонкослоистые глинистые доломиты, доломитовые мергели и доломитовые аргиллиты.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Центральная часть: фитогенные известняки, нередко перекристаллизованные и доломитизированные.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Верх: плотные неглинистые микрозернистые доломиты, местами сульфатизированные и с прослоями ангидритов.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Типичный циклит снизу вверх состоит из основания, центральной части и плотного верха (стр. 151).",
+   "step_id": "rehearsal2.cyclic_reservoir_structure",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.layer_connectivity_cycles#c1"
+   ],
+   "prompt": "Как устанавливается динамическая связь некоторых продуктивных пластов в пределах залежи?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Для них установлены единые ВНК и ГВК.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Они связаны только потому, что имеют одинаковую мощность.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Каждый пласт обязательно имеет отдельные ВНК и ГВК.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Их связь означает наличие подземных озёр между пластами.",
+     "misconception": "misc.oil_lake"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Динамическую связь некоторых пластов подтверждают единые ВНК и ГВК (стр. 151).",
+   "step_id": "rehearsal2.layer_connectivity_cycles",
+   "id": "t05"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.layer_connectivity_cycles#c5",
+    "rehearsal2.layer_connectivity_cycles#c3"
+   ],
+   "prompt": "Как схема показывает строение НГК и роль мощных соляных пачек?",
+   "options": [
+    {
+     "id": "a",
+     "text": "НГК разделён на экранирующую толщу и природный резервуар, состоящий из циклитов I–IV; мощные соляные пачки обособляют НГК.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "НГК состоит только из экранирующей толщи, а соляные пачки служат природным резервуаром.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Природный резервуар показан как единый пласт без циклитов, а соль связывает все НГК.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "НГК — это подземная пустота, разделённая соляными стенками.",
+     "misconception": "misc.reservoir_void"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Схема выделяет экранирующую толщу и резервуар из циклитов I–IV, а мощные соляные пачки обособляют НГК (стр. 151–152).",
+   "step_id": "rehearsal2.layer_connectivity_cycles",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.sea_level_cycle#c2",
+    "rehearsal2.sea_level_cycle#c4",
+    "rehearsal2.sea_level_cycle#c5",
+    "rehearsal2.sea_level_cycle#c6",
+    "rehearsal2.sea_level_cycle#c7",
+    "rehearsal2.sea_level_cycle#c8"
+   ],
+   "prompt": "Какие утверждения верно описывают смену условий в бассейне в течение цикла?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В начале цикла при низком уровне моря осадки формировались в крайне мелководных условиях при интенсивном поступлении глины.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В средние этапы цикла происходило заметное углубление водоема.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Трансгрессия расширяла связь с океаном, способствуя нормальной солености и осаждению карбонатов кальция.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "На завершающем этапе осолонение связывалось с обмелением и изоляцией водоема.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "На завершающем этапе осаждались только карбонаты кальция, а осолонение прекращалось.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В начале цикла условия были мелководными и глинистыми, трансгрессия обеспечивала нормальную соленость, а в конце возобновлялось осолонение при обмелении и изоляции (стр. 153).",
+   "step_id": "rehearsal2.sea_level_cycle",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.sea_level_cycle#c9"
+   ],
+   "prompt": "Цикл генетически {{1}}, но несимметричный: трансгрессивная ветвь связана с близостью суши и притоком глины, а регрессивная — с {{2}} при изоляции.",
+   "options": [],
+   "answer": [
+    "трансгрессивно-регрессивный",
+    "осолонением"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Утверждение прямо характеризует цикл как трансгрессивно-регрессивный и связывает регрессивную ветвь с осолонением при изоляции (стр. 153).",
+   "step_id": "rehearsal2.sea_level_cycle",
+   "id": "t08"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.sediment_sources_mechanisms#c10",
+    "rehearsal2.sediment_sources_mechanisms#c11",
+    "rehearsal2.sediment_sources_mechanisms#c12"
+   ],
+   "prompt": "Расположите этапы циклической седиментации в хронологическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Начало: действуют все три механизма, вероятно, преобладает терригенная седиментация",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Средние этапы: отчетливо преобладают биогенный и биохемогенный механизмы",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Завершающий этап: преобладает хемогенный механизм, осаждается каменная соль",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Механизмы сменялись от вероятного преобладания терригенного в начале к биогенному и биохемогенному в середине и хемогенному в конце (стр. 154).",
+   "step_id": "rehearsal2.sediment_sources_mechanisms",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.sediment_sources_mechanisms#c6"
+   ],
+   "prompt": "Какие вещества поступали из континента, а какие — из вод Мирового океана?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из континента поступало кластогенное глинистое вещество, из океанских вод — растворенные компоненты, включая кальций, магний и хлориды",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Из континента поступали растворенные кальций, магний и хлориды, из океанских вод — кластогенная глина",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Все вещества поступали только с континента, а океанские воды служили лишь средой осаждения",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Все вещества поступали только из вод Мирового океана, включая кластогенную глину",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Материал поступал из двух источников: глинистое вещество — с континента, растворенные компоненты — из вод Мирового океана (стр. 153).",
+   "step_id": "rehearsal2.sediment_sources_mechanisms",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.sedimentation_rock_properties#c1",
+    "rehearsal2.sedimentation_rock_properties#c2",
+    "rehearsal2.sedimentation_rock_properties#c3",
+    "rehearsal2.sedimentation_rock_properties#c4",
+    "rehearsal2.sedimentation_rock_properties#c9"
+   ],
+   "prompt": "Какие утверждения верно описывают связь этапов трансгрессии и регрессии со свойствами пластов?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В начале трансгрессии мелководье и терригенный привнос с юга и юго-востока способствуют формированию полуколлекторов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "При развитии трансгрессии поступление терригенного материала сокращается, а биогенное осаждение карбонатов формирует коллекторы.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При максимуме регрессии резко повышенная соленость и хемогенное извлечение хлорида натрия приводят к образованию коллекторов.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В начале регрессии осолонение сменяет биогенное осаждение преимущественно хемогенным и биохемогенным осаждением доломита и частично сульфатов кальция; возникают полуколлекторы.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Коллекторы образуются при преобладании хемогенного осаждения и резко повышенной солёности.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В начале трансгрессии формируются полуколлекторы, при её развитии — коллекторы, а в начале регрессии возникают полуколлекторы (стр. 154).",
+   "step_id": "rehearsal2.sedimentation_rock_properties",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.sedimentation_rock_properties#c8"
+   ],
+   "prompt": "В циклите верхний блок схемы соответствует {{1}} с преобладанием {{2}} накопления терригенного материала.",
+   "options": [],
+   "answer": [
+    "основанию",
+    "механогенного"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Верхний блок соответствует основанию с преобладанием механогенного накопления терригенного материала (стр. 155).",
+   "step_id": "rehearsal2.sedimentation_rock_properties",
+   "id": "t12"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.sedimentation_model_limits#c3"
+   ],
+   "prompt": "Расположите элементы латерального изменения с северо-востока на юго-запад.",
+   "options": [
+    {
+     "id": "a",
+     "text": "На северо-востоке — известняки"
+    },
+    {
+     "id": "b",
+     "text": "Далее известняки сменяются доломитами"
+    },
+    {
+     "id": "c",
+     "text": "На юго-западе содержание глинистого материала в основании циклитов сокращается"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "С северо-востока на юго-запад известняки сменяются доломитами, а содержание глинистого материала сокращается (стр. 155).",
+   "step_id": "rehearsal2.sedimentation_model_limits",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.sedimentation_model_limits#c7"
+   ],
+   "prompt": "Что образуется при миграции вещества в растворах и хемогенном осаждении в условиях высокой солёности?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Коллектор",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Флюидоупор",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Полуколлектор или полупокрышка",
+     "misconception": null
+    }
+   ],
+   "answer": "b",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При хемогенном осаждении из растворов в условиях высокой солёности образуется флюидоупор (стр. 155).",
+   "step_id": "rehearsal2.sedimentation_model_limits",
+   "id": "t14"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.clastic_reservoir_environments#c5"
+   ],
+   "prompt": "В каких обстановках известны промышленные залежи обломочных пород? Выберите все подходящие варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "В аллювиальных и дельтовых отложениях",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В мелководно-морских отложениях",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "В турбидитах подводных каньонов и оснований континентального склона",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Только в глубоководных морских отложениях",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Только в вулканических породах",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Промышленные залежи перечислены в аллювиальных, дельтовых и мелководно-морских отложениях, а также в турбидитах подводных каньонов и оснований континентального склона (стр. 157).",
+   "step_id": "rehearsal2.clastic_reservoir_environments",
+   "id": "t15"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.clastic_reservoir_environments#c2"
+   ],
+   "prompt": "С каким диапазоном запасов нефти связаны обломочные породы по разным оценкам?",
+   "options": [
+    {
+     "id": "a",
+     "text": "52–65 %",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "72–77 %",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "25–35 %",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "100 %",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "По разным оценкам, с обломочными породами связано 52–65 % запасов нефти (стр. 157).",
+   "step_id": "rehearsal2.clastic_reservoir_environments",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs#c2",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c3"
+   ],
+   "prompt": "В аллювиально-дельтовых отложениях осаждаются и фоссилизируются значительные количества {{1}}; после катагенетических преобразований это вещество может генерировать {{2}}.",
+   "options": [],
+   "answer": [
+    "органического вещества",
+    "нефть и газ"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Органическое вещество накапливается в отложениях и после преобразований может дать нефть и газ (стр. 158).",
+   "step_id": "rehearsal2.delta_hydrocarbon_reservoirs",
+   "id": "t17"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs#c2",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c3",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c4"
+   ],
+   "prompt": "Расположите этапы образования собственных углеводородов в дельтовых комплексах в логическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Органическое вещество после катагенетических преобразований генерирует нефть и газ.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В крупных длительно развивающихся дельтовых комплексах создаются необходимые термобарические условия.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Вместе с минеральными компонентами осаждаются и фоссилизируются значительные количества органического вещества.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "c",
+    "b",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала накапливается органическое вещество, затем в крупных комплексах возникают необходимые условия, после чего оно генерирует углеводороды (стр. 158).",
+   "step_id": "rehearsal2.delta_hydrocarbon_reservoirs",
+   "id": "t18"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.volga_ural_stratigraphy#c6"
+   ],
+   "prompt": "Где распространены терригенные фации тульского горизонта и в каком направлении они замещаются карбонатными отложениями?",
+   "options": [
+    {
+     "id": "a",
+     "text": "На севере и северо-западе; к юго-востоку замещаются карбонатными отложениями.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "На юге и юго-востоке; к северо-западу замещаются карбонатными отложениями.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "По всей провинции без замещения карбонатными отложениями.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Только в Камско-Кинельской впадине; к северу замещаются карбонатными отложениями.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Терригенные фации тульского горизонта распространены на севере и северо-западе и к юго-востоку сменяются карбонатными отложениями (стр. 160).",
+   "step_id": "rehearsal2.volga_ural_stratigraphy",
+   "id": "t19"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.volga_ural_stratigraphy#c4",
+    "rehearsal2.volga_ural_stratigraphy#c5",
+    "rehearsal2.volga_ural_stratigraphy#c10"
+   ],
+   "prompt": "Выберите верные утверждения о полноте разреза и последовательности горизонтов.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Наиболее полные разрезы включают елховский, радаевский, бобриковский и тульский горизонты.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Максимальные мощности и наибольшая стратиграфическая полнота приурочены к Камско-Кинельской впадине.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При отсутствии радаевских отложений бобриковские залегают непосредственно на елховских.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Наиболее полные разрезы начинаются с тульского горизонта, а елховский в них не входит.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "При отсутствии радаевских отложений бобриковские залегают непосредственно на турнейских породах.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Полные разрезы охватывают перечисленные горизонты, их максимум отмечен во впадине, а без радаевских отложений бобриковские лежат на елховских (стр. 160).",
+   "step_id": "rehearsal2.volga_ural_stratigraphy",
+   "id": "t20"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.bobrikovian_river_channels#c4",
+    "rehearsal2.bobrikovian_river_channels#c5"
+   ],
+   "prompt": "Русловые образования обычно имеют {{1}} форму в плане и {{2}} форму в разрезе.",
+   "options": [],
+   "answer": [
+    "полосовидную",
+    "линзовидную"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В плане русловые образования полосовидны, а в разрезе линзовидны (стр. 160).",
+   "step_id": "rehearsal2.bobrikovian_river_channels",
+   "id": "t21"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.bobrikovian_river_channels#c5",
+    "rehearsal2.bobrikovian_river_channels#c6"
+   ],
+   "prompt": "Расположите признаки руслового тела от основания к кровле.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Песчаники грубо- и крупнозернистые"
+    },
+    {
+     "id": "b",
+     "text": "Песчаники более тонкозернистые"
+    },
+    {
+     "id": "c",
+     "text": "В верхней части могут встречаться линзы каменных углей"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Песчаники грубее в основании и тоньше в кровле, где могут встречаться линзы каменных углей (стр. 160).",
+   "step_id": "rehearsal2.bobrikovian_river_channels",
+   "id": "t22"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.delta_paleogeography_map#c1"
+   ],
+   "prompt": "Что происходит с руслами при смещении к юго-востоку?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Они начинают делиться, приобретают веерообразную форму, и здесь формируется наземная часть дельты.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Они сливаются в одно русло, и здесь формируется подводная часть дельты.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Они становятся прямыми и неразветвлёнными.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Они исчезают, а дельта формируется только у Ново-Ибрайкино.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При смещении к юго-востоку русла делятся и приобретают веерообразную форму, формируя наземную часть дельты (стр. 160).",
+   "step_id": "rehearsal2.delta_paleogeography_map",
+   "id": "t23"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "rehearsal2.delta_paleogeography_map#c10"
+   ],
+   "prompt": "Как обычно устроены бобриковские отложения?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Два песчано-алевролитовых пласта разделены пачкой глинисто-алевролитовых пород.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Два глинисто-алевролитовых пласта разделены пачкой песчаников.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Один песчано-алевролитовый пласт без разделяющей пачки.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Три песчано-алевролитовых пласта разделены двумя пачками глинисто-алевролитовых пород.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении сказано, что два песчано-алевролитовых пласта разделены пачкой глинисто-алевролитовых пород (стр. 161).",
+   "step_id": "rehearsal2.delta_paleogeography_map",
+   "id": "t24"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.underwater_delta_facies#c2",
+    "rehearsal2.underwater_delta_facies#c3",
+    "rehearsal2.underwater_delta_facies#c4",
+    "rehearsal2.underwater_delta_facies#c5"
+   ],
+   "prompt": "Какие утверждения верно описывают карту и выделенные на ней отложения?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В подводно-дельтовых фациях выделены межрусловые песчано-глинисто-алевролитовые и преимущественно песчаные русловые отложения.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Для зоны течений обозначены песчаные и песчано-алевролитовые отложения, а также отложения с растительными остатками и углем.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Для мелководно-морских фаций указаны преимущественно глинистые отложения без прослоев песчаников.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "На карте обозначены только литологические границы; изопахиты и направление течений не показаны.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Варианты a и b соответствуют описанию фаций и карты на стр. 162.",
+   "step_id": "rehearsal2.underwater_delta_facies",
+   "id": "t25"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "rehearsal2.underwater_delta_facies#c9"
+   ],
+   "prompt": "Иные разрезы представлены {{1}} в плане песчаными телами, {{2}} в поперечном сечении.",
+   "options": [],
+   "answer": [
+    "линейно вытянутыми",
+    "линзовидными"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Форма песчаных тел указана в утверждении c129 на стр. 162.",
+   "step_id": "rehearsal2.underwater_delta_facies",
+   "id": "t26"
+  }
+ ]
+}

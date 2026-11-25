@@ -97,7 +97,8 @@ def spoken_text(text: str, domain: str, stress_marks: bool) -> str:
         out = re.sub(r"[А-Яа-яЁё́-]+", repl, out)
     else:
         out = out.replace(ACUTE, "")
-    out = out.replace("—", ",").replace("«", "").replace("»", "")
+    out = re.sub(r"\s*—\s*", ", ", out).replace("«", "").replace("»", "")
+    out = re.sub(r"\s+,", ",", out)
     return re.sub(r"\s+", " ", out).strip()
 
 
@@ -159,18 +160,18 @@ async def _edge_once(text: str, voice: str, rate: str, out: Path):
     out.write_bytes(bytes(data))
 
 
-def edge_synth(text: str, voice: str, rate: str, out: Path) -> str:
-    """edge-tts иногда не отдаёт звук на отдельных фразах — повторяем и слегка меняем пунктуацию."""
-    variants = [text, text.rstrip(".!?") + "!", "… " + text, text.rstrip(".") + "…"]
+def edge_synth(text: str, voice: str, rate: str, out: Path, attempts: int = 7) -> str:
+    """Сервис edge-tts временами не отдаёт звук (через раз на той же фразе) — повторяем с нарастающей паузой."""
+    import time
     last = None
-    for i, v in enumerate(variants):
-        for attempt in range(2):
-            try:
-                asyncio.run(_edge_once(v, voice, rate, out))
-                return v
-            except Exception as e:  # сеть, пустой ответ
-                last = e
-    raise TTSError(f"edge-tts не озвучил фразу: {last}")
+    for k in range(attempts):
+        try:
+            asyncio.run(_edge_once(text, voice, rate, out))
+            return text
+        except Exception as e:  # сеть, пустой ответ
+            last = e
+            time.sleep(min(6.0, 0.6 * 2 ** k))
+    raise TTSError(f"edge-tts не озвучил фразу за {attempts} попыток: {last}")
 
 
 _silero_model = None

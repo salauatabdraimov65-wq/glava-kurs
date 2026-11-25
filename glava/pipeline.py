@@ -56,20 +56,28 @@ def has(module: str) -> bool:
     return (ROOT / module.replace(".", "/")).with_suffix(".py").exists()
 
 
-def run(cmd: list[str]):
+def run(cmd: list[str], soft: bool = False) -> bool:
     print("$", " ".join(cmd), flush=True)
     r = subprocess.run([sys.executable, "-m", *cmd], cwd=ROOT)
     if r.returncode:
+        if soft:   # ролик не собрался — курс всё равно собираем, шаг закрывают текст и схема
+            print(f"⚠ этап не удался, продолжаю: {' '.join(cmd)}", flush=True)
+            return False
         raise SystemExit(f"этап упал: {' '.join(cmd)}")
+    return True
 
 
 def pick_video_node(run_dir: Path) -> tuple[str, str, str]:
     """Узел с наибольшей видеоёмкостью среди тех, у кого есть шаблон сцены."""
+    from layer.scenes import TEMPLATES   # только шаблоны СЦЕН (интерактивы курса — не ролики)
     routes = json.loads((run_dir / "routing.json").read_text(encoding="utf-8"))["routes"]
-    cand = [r for r in routes if r.get("template")] or routes
-    best = max(cand, key=lambda r: sum(r["video_scores"].values()))
+    def scene_tpl(r):
+        return r.get("template") if r.get("template") in TEMPLATES else r.get("scene_template")
+    cand = [r for r in routes if scene_tpl(r) in TEMPLATES] or routes
+    best = max(cand, key=lambda r: (bool(r.get("video_candidate") or r["format"] == "шортс"), sum(r["video_scores"].values())))
     fmt = "short" if best["format"] == "шортс" or best.get("video_candidate") else "long"
-    return best["node_id"], fmt, best.get("template") or "well_tool_curve"
+    tpl = scene_tpl(best) if scene_tpl(best) in TEMPLATES else "section_through_time"
+    return best["node_id"], fmt, tpl
 
 
 def main():
@@ -137,7 +145,7 @@ def main():
             cmd = ["layer.scenes", a.chapter, node, "--format", fmt]
             if tpl:
                 cmd += ["--template", tpl]
-            run(cmd)
+            run(cmd, soft=True)
         elif st == "course":
             if has("course.build"):
                 run(["layer.route", a.chapter])   # формат шага — по тому, что реально собрано (ролик есть / нет)
@@ -149,7 +157,7 @@ def main():
             if has("video.build") and specs:
                 for sp in specs:
                     aspect = json.loads(sp.read_text(encoding="utf-8")).get("aspect", "9:16")
-                    run(["video.build", str(sp), "--layout", "16x9" if aspect == "16:9" else "9x16"])
+                    run(["video.build", str(sp), "--layout", "16x9" if aspect == "16:9" else "9x16"], soft=True)
             else:
                 print("(video.build ещё нет или нет spec.json — пропуск)")
         nodes = 0

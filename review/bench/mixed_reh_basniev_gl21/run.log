@@ -1,0 +1,15 @@
+Кандидатов: 41, сняты обратной проверкой: 0, в ответе: 14 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_reh_basniev_gl21/answer.json (46 с)
+  code+bulk+strong   A13    significant analogy_without_limit  Граница аналогии отрицается, а средняя проницаемость ошибочно объявлен
+  bulk+strong        C063   critical    measured_vs_inferred   Формула представлена как результат прямого измерения, хотя автор вывод
+  bulk+strong        C095   significant measured_vs_inferred   Автор не сообщает о прямом измерении: средняя проницаемость выводится 
+  bulk+strong        C101   significant measured_vs_inferred   Линейность выдана за результат прямого измерения, тогда как автор полу
+  bulk+strong        C106   significant measured_vs_inferred   Формула представлена как результат прямого измерения, тогда как автор 
+  bulk+strong        C119   significant measured_vs_inferred   Формулы представлены как результат прямого измерения, хотя автор приво
+  bulk+strong        C120   significant measured_vs_inferred   Автор приводит эти выражения как формулы для расчёта дебита, а не как 
+  bulk+strong        C124   significant measured_vs_inferred   Результат интегрирования выдан за установленный прямым измерением. Авт
+  bulk+strong        C129   significant measured_vs_inferred   Формула представлена как результат прямого измерения, тогда как автор 
+  bulk+strong        C144   significant measured_vs_inferred   Формула представлена как результат прямого измерения, тогда как автор 
+  bulk+strong        L01.07 significant measured_vs_inferred   Зональная схематизация выдана за результат прямого измерения. Автор ра
+  bulk+strong        C068   significant measured_vs_inferred   Автор рассматривает заданное течение как условие задачи, а не как резу
+  bulk+strong        C073   significant measured_vs_inferred   Соотношение выдано за результат прямого измерения, тогда как автор при
+  bulk+strong        L01.20 significant measured_vs_inferred   Фраза «Прямым измерением установлено» приписывает вывод автору как рез

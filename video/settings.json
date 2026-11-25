@@ -24,6 +24,11 @@
     "camera": true,
     "hook_zoom": 1.6,
     "sfx": true,
-    "sfx_gain_db": -24.0
+    "sfx_gain_db": -24.0,
+    "cine": true,
+    "cine_follow_zoom": 1.5,
+    "music": true,
+    "music_db": -20,
+    "sfx_db": -8
   }
 }

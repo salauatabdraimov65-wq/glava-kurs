@@ -1,0 +1,712 @@
+{
+ "chapter": "rehearsal2",
+ "rows": [
+  {
+   "unit_id": "p150.01",
+   "kind": "figure",
+   "page_pdf": 150,
+   "excerpt": "Рис. 7.1. Схема, объясняющая реальную высоту залежи (а) и отсутствие залежи (б)",
+   "node_ids": [
+    "rehearsal2.false_caprock_trap"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p150.02",
+   "kind": "paragraph",
+   "page_pdf": 150,
+   "excerpt": "1 – истинная покрышка; 2 – ложная покрышка; 3 – пласт-коллектор; 4",
+   "node_ids": [
+    "rehearsal2.false_caprock_trap"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p150.03",
+   "kind": "paragraph",
+   "page_pdf": 150,
+   "excerpt": "разреза, то максимально возможная высота залежи определяется от подошвы ложной покрышки в",
+   "node_ids": [
+    "rehearsal2.false_caprock_trap"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p150.04",
+   "kind": "paragraph",
+   "page_pdf": 150,
+   "excerpt": "Исходя из этого, если мощность ложной покрышки больше или равна амплитуде поднятия,",
+   "node_ids": [
+    "rehearsal2.false_caprock_trap"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p150.05",
+   "kind": "paragraph",
+   "page_pdf": 150,
+   "excerpt": "Сказанное вовсе не означает полного исключения подобных отложений как на границе экранирующих",
+   "node_ids": [
+    "rehearsal2.false_caprock_trap"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p150.06",
+   "kind": "paragraph",
+   "page_pdf": 150,
+   "excerpt": "Выше отмечалось, что набор пород полуколлекторов, слагающих",
+   "node_ids": [],
+   "reason": "Незавершенный фрагмент предложения; содержательное утверждение в этой единице не сформулировано."
+  },
+  {
+   "unit_id": "p150.07",
+   "kind": "heading",
+   "page_pdf": 150,
+   "excerpt": "150",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p151.01",
+   "kind": "paragraph",
+   "page_pdf": 151,
+   "excerpt": "пачки полупокрышек, существенно шире, чем истинных коллекторов и истинных флюидоупоров, тем более",
+   "node_ids": [
+    "rehearsal2.cyclic_reservoir_structure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p151.02",
+   "kind": "paragraph",
+   "page_pdf": 151,
+   "excerpt": "В разрезе венд-кембрийских отложений выделены даниловский, усольский, бельский, булайский и литвинцевский НГК.",
+   "node_ids": [
+    "rehearsal2.cyclic_reservoir_structure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p151.03",
+   "kind": "paragraph",
+   "page_pdf": 151,
+   "excerpt": "При этом существует динамическая связь пластов-коллекторов, поскольку в пределах залежи для ряда",
+   "node_ids": [
+    "rehearsal2.layer_connectivity_cycles"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p151.04",
+   "kind": "paragraph",
+   "page_pdf": 151,
+   "excerpt": "В более полных циклитах завершающим элементом является каменная соль, появление мощных пачек",
+   "node_ids": [
+    "rehearsal2.layer_connectivity_cycles"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p151.05",
+   "kind": "paragraph",
+   "page_pdf": 151,
+   "excerpt": "Подобное чередование пород связано с колебаниями уровня моря (в результате эвстатики или",
+   "node_ids": [
+    "rehearsal2.layer_connectivity_cycles"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p151.06",
+   "kind": "heading",
+   "page_pdf": 151,
+   "excerpt": "151",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p152.01",
+   "kind": "table",
+   "page_pdf": 152,
+   "excerpt": "НГК Циклиты резервуарной части НГК Литологическая колонка Форма поступления осадочного материала Преобладающий",
+   "node_ids": [
+    "rehearsal2.layer_connectivity_cycles"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p152.02",
+   "kind": "figure",
+   "page_pdf": 152,
+   "excerpt": "Рис. 7.2. Принципиальная схема строения и формирования нефтегазоносного комплекса в венд-кембрийских отложениях",
+   "node_ids": [
+    "rehearsal2.layer_connectivity_cycles"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p152.03",
+   "kind": "paragraph",
+   "page_pdf": 152,
+   "excerpt": "1 – аргиллиты; 2 – мергели доломитовые; 3 – известняки и доломиты",
+   "node_ids": [
+    "rehearsal2.layer_connectivity_cycles"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p153.01",
+   "kind": "paragraph",
+   "page_pdf": 153,
+   "excerpt": "хано-Иркутско-Олекминского бассейна (фациально-палеогеографической области), который отделялся от Мирового океана обширной отмельной Анабаро-Синской",
+   "node_ids": [
+    "rehearsal2.sea_level_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p153.02",
+   "kind": "paragraph",
+   "page_pdf": 153,
+   "excerpt": "При низком уровне моря в начале каждого цикла седиментации осадкообразование происходило, по-видимому,",
+   "node_ids": [
+    "rehearsal2.sea_level_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p153.03",
+   "kind": "paragraph",
+   "page_pdf": 153,
+   "excerpt": "В средние этапы циклов вряд ли произошло заметное углубление водоема, так как",
+   "node_ids": [
+    "rehearsal2.sea_level_cycle"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p153.04",
+   "kind": "paragraph",
+   "page_pdf": 153,
+   "excerpt": "Отмеченная мелкая цикличность объединяется в циклиты более крупные, которые и представляют собой",
+   "node_ids": [
+    "rehearsal2.sediment_sources_mechanisms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p153.05",
+   "kind": "paragraph",
+   "page_pdf": 153,
+   "excerpt": "Таким образом, поступление осадочного материала в водоем седиментации происходило в двух формах",
+   "node_ids": [
+    "rehearsal2.sediment_sources_mechanisms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p153.06",
+   "kind": "heading",
+   "page_pdf": 153,
+   "excerpt": "153",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p154.01",
+   "kind": "paragraph",
+   "page_pdf": 154,
+   "excerpt": "растворенный – либо чисто хемогенным и биохемогенным путем (микроэнергические доломиты завершающих элементов",
+   "node_ids": [
+    "rehearsal2.sediment_sources_mechanisms"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p154.02",
+   "kind": "paragraph",
+   "page_pdf": 154,
+   "excerpt": "Сложные сочетания различных источников поступления осадочного материала и разных механизмов его осаждения,",
+   "node_ids": [
+    "rehearsal2.sedimentation_rock_properties"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p154.03",
+   "kind": "paragraph",
+   "page_pdf": 154,
+   "excerpt": "Таким образом, терригенный источник осадочного материала и механическое осаждение последнего при факультативной",
+   "node_ids": [
+    "rehearsal2.sedimentation_rock_properties"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p154.04",
+   "kind": "heading",
+   "page_pdf": 154,
+   "excerpt": "154",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p155.01",
+   "kind": "paragraph",
+   "page_pdf": 155,
+   "excerpt": "копления – биогенного при нормальной или близкой к ней солености и хемогенного",
+   "node_ids": [
+    "rehearsal2.sedimentation_rock_properties"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p155.02",
+   "kind": "paragraph",
+   "page_pdf": 155,
+   "excerpt": "Рассмотренные процессы образования пластов с различными коллекторскими и экранирующими свойствами являются достаточно",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits",
+    "rehearsal2.sedimentation_rock_properties"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p155.03",
+   "kind": "paragraph",
+   "page_pdf": 155,
+   "excerpt": "Имеются и определенные латеральные изменения, например, последовательная смена с северо-востока на юго-запад",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p155.04",
+   "kind": "table",
+   "page_pdf": 155,
+   "excerpt": "Форма миграции Способ осаждения Соленость водоема --- --- --- --- Среднеокеаническая или",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p155.05",
+   "kind": "figure",
+   "page_pdf": 155,
+   "excerpt": "Рис. 7.3. Схема образования пластов-коллекторов, полуколлекторов и флюидоупоров при разных сочетаниях форм",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p155.06",
+   "kind": "paragraph",
+   "page_pdf": 155,
+   "excerpt": "Сплошными линиями показаны главные механизмы, пунктирными – факультативные",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p155.07",
+   "kind": "heading",
+   "page_pdf": 155,
+   "excerpt": "155",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p156.01",
+   "kind": "paragraph",
+   "page_pdf": 156,
+   "excerpt": "не меняет общей принципиальной картины образования пластов-коллекторов, полуколлекторов и флюидоупоров и должно",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p156.02",
+   "kind": "paragraph",
+   "page_pdf": 156,
+   "excerpt": "То обстоятельство, что для образования собственно коллекторов и флюидоупоров требуется лишь одно",
+   "node_ids": [
+    "rehearsal2.sedimentation_model_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.01",
+   "kind": "heading",
+   "page_pdf": 157,
+   "excerpt": "Глава 8",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.02",
+   "kind": "heading",
+   "page_pdf": 157,
+   "excerpt": "ПРИРОДНЫЕ РЕЗЕРВУАРЫ ОБЛОМОЧНЫХ ОТЛОЖЕНИЙ",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.03",
+   "kind": "paragraph",
+   "page_pdf": 157,
+   "excerpt": "Обломочные породы являются важнейшими коллекторами нефти и газа. Соответственно сложенные ими резервуары",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.04",
+   "kind": "paragraph",
+   "page_pdf": 157,
+   "excerpt": "Спектр петрографических типов пород-коллекторов весьма широк – от конгломератов до алевролитов, а",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.05",
+   "kind": "paragraph",
+   "page_pdf": 157,
+   "excerpt": "Известны промышленные залежи и месторождения в моренных и золовых пустынных образованиях, озерных,",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.06",
+   "kind": "paragraph",
+   "page_pdf": 157,
+   "excerpt": "В настоящей главе дана краткая характеристика резервуаров лишь двух крупных фациальных областей",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.07",
+   "kind": "heading",
+   "page_pdf": 157,
+   "excerpt": "8.1. ПРИРОДНЫЕ РЕЗЕРВУАРЫ АЛЛЮВИАЛЬНО-ДЕЛЬТОВЫХ ОТЛОЖЕНИЙ",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.08",
+   "kind": "paragraph",
+   "page_pdf": 157,
+   "excerpt": "Аллювиальные и особенно дельтовые отложения – один из наиболее важных терригенных комплексов,",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p157.09",
+   "kind": "heading",
+   "page_pdf": 157,
+   "excerpt": "157",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p158.01",
+   "kind": "paragraph",
+   "page_pdf": 158,
+   "excerpt": "2339 учтенных месторождений 1185, т.е. 50,6 %, приурочены к аллювиально-дельтовым отложениям [Мовшович",
+   "node_ids": [
+    "rehearsal2.clastic_reservoir_environments"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p158.02",
+   "kind": "paragraph",
+   "page_pdf": 158,
+   "excerpt": "Подобное обстоятельство – почти повсеместное распространение и высокая нефтегазоносность, определяется сочетанием ряда",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p158.03",
+   "kind": "paragraph",
+   "page_pdf": 158,
+   "excerpt": "Прежде всего в отложениях этого типа, особенно дельтовых, наряду с чисто минеральными",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p158.04",
+   "kind": "paragraph",
+   "page_pdf": 158,
+   "excerpt": "Во всех случаях, в том числе в кратковременно существующих аллювиально-дельтовых системах, имеющих",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p158.05",
+   "kind": "paragraph",
+   "page_pdf": 158,
+   "excerpt": "Показательный, хотя и частный пример – положение залежей углеводородов в песчаниках выгодской",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p158.06",
+   "kind": "paragraph",
+   "page_pdf": 158,
+   "excerpt": "Вполне понятно, что примеры подобных резервуаров и месторождений не только многочисленны, но",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p158.07",
+   "kind": "heading",
+   "page_pdf": 158,
+   "excerpt": "158",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p159.01",
+   "kind": "figure",
+   "page_pdf": 159,
+   "excerpt": "Рис. 8.1. Эоценовая Долинская дельта Бориславско-Покутской зоны Предкарпатского прогиба [Акрамходжаев и др.,",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p159.02",
+   "kind": "paragraph",
+   "page_pdf": 159,
+   "excerpt": "1 – изопахиты песчаников, м; 2 – оси трендов повышенной мощности песчаников;",
+   "node_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p159.03",
+   "kind": "paragraph",
+   "page_pdf": 159,
+   "excerpt": "Строение резервуаров этого типа в нашей стране детально изучено на примере терригенного",
+   "node_ids": [
+    "rehearsal2.volga_ural_stratigraphy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p159.04",
+   "kind": "heading",
+   "page_pdf": 159,
+   "excerpt": "159",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p160.01",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "запасы таких месторождений, как Арланское, Мухановское, Туймазинское и др.",
+   "node_ids": [
+    "rehearsal2.volga_ural_stratigraphy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.02",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "Стратиграфически это отложения нижнего виза, но их объем меняется и в разных",
+   "node_ids": [
+    "rehearsal2.volga_ural_stratigraphy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.03",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "Терригенные отложения нижнего виза залегают на турнейших карбонатных породах либо согласно, либо",
+   "node_ids": [
+    "rehearsal2.volga_ural_stratigraphy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.04",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "В бобриковское время водные артерии, стекавшие с северо-западной суши в пределах обнаженных",
+   "node_ids": [
+    "rehearsal2.bobrikovian_river_channels"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.05",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "Часть их фиксируется на южном куполе Татарского свода прежде всего эрозионными врезами",
+   "node_ids": [
+    "rehearsal2.bobrikovian_river_channels"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.06",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "По мере смещения к юго-востоку начинается деление русел. Они приобретают веерообразную форму,",
+   "node_ids": [
+    "rehearsal2.delta_paleogeography_map"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.07",
+   "kind": "paragraph",
+   "page_pdf": 160,
+   "excerpt": "В юго-западной части южного купола Татарского свода и над Серноводско-Абдулинским прогибом, включая",
+   "node_ids": [
+    "rehearsal2.delta_paleogeography_map"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p160.08",
+   "kind": "heading",
+   "page_pdf": 160,
+   "excerpt": "160",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p161.01",
+   "kind": "figure",
+   "page_pdf": 161,
+   "excerpt": "Рис. 8.2. Схема палеогеографии бобриковского времени Среднего Заволжья [Грачевский, Кузнецов, 1962]:",
+   "node_ids": [
+    "rehearsal2.delta_paleogeography_map"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p161.02",
+   "kind": "paragraph",
+   "page_pdf": 161,
+   "excerpt": "1 – граница континентальных и бассейновых отложений; 2 – границы фациальных областей;",
+   "node_ids": [
+    "rehearsal2.delta_paleogeography_map"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p161.03",
+   "kind": "paragraph",
+   "page_pdf": 161,
+   "excerpt": "турне, причем амплитуда среза к юго-востоку и югу уменьшается, залегают бобриковские отложения",
+   "node_ids": [
+    "rehearsal2.delta_paleogeography_map"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p161.04",
+   "kind": "heading",
+   "page_pdf": 161,
+   "excerpt": "161",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p162.01",
+   "kind": "figure",
+   "page_pdf": 162,
+   "excerpt": "Рис. 8.3. Литолого-фациальная карта бобриковского горизонта в пределах Оренбургской области.",
+   "node_ids": [
+    "rehearsal2.underwater_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p162.02",
+   "kind": "paragraph",
+   "page_pdf": 162,
+   "excerpt": "Подводно-дельтовые фации: 1 – межрусловые песчано-глинисто-алевролитовые отложения; 2 – русловые преимущественно песчаные",
+   "node_ids": [
+    "rehearsal2.underwater_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p162.03",
+   "kind": "paragraph",
+   "page_pdf": 162,
+   "excerpt": "говолнистые, содержат обуглившиеся растительные остатки, нередко биотурбированы илоедами. При этом с северо-запада",
+   "node_ids": [
+    "rehearsal2.underwater_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p162.04",
+   "kind": "paragraph",
+   "page_pdf": 162,
+   "excerpt": "В то же время в этой зоне имеются и принципиально иные разрезы.",
+   "node_ids": [
+    "rehearsal2.underwater_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p162.05",
+   "kind": "paragraph",
+   "page_pdf": 162,
+   "excerpt": "Это линейно вытянутые в плане, линзовидные в поперечном сечении песчаные тела, мощностью",
+   "node_ids": [
+    "rehearsal2.underwater_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p162.06",
+   "kind": "heading",
+   "page_pdf": 162,
+   "excerpt": "162",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  }
+ ]
+}

@@ -1,0 +1,278 @@
+{
+ "chapter": "rehearsal2",
+ "illustrations": [
+  {
+   "id": "ill.false_caprock_trap",
+   "step_id": "rehearsal2.false_caprock_trap",
+   "node_id": "rehearsal2.false_caprock_trap",
+   "file": "illustrations/false_caprock_trap.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 150.",
+   "alt": "Схема механизма: Низкая проницаемость ложной покрышки не исключает фильтрацию углеводородов через неё в критической седловине за геологическое время. → Поэтому там она не служит надёжным боковым экраном, а реальную максимальную высоту задаёт подошва истинной покрышки.",
+   "source": "учебный слой, стр. 150",
+   "claim_ids": [
+    "rehearsal2.false_caprock_trap#c1",
+    "rehearsal2.false_caprock_trap#c2",
+    "rehearsal2.false_caprock_trap#c3",
+    "rehearsal2.false_caprock_trap#c4",
+    "rehearsal2.false_caprock_trap#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.cyclic_reservoir_structure",
+   "step_id": "rehearsal2.cyclic_reservoir_structure",
+   "node_id": "rehearsal2.cyclic_reservoir_structure",
+   "file": "illustrations/cyclic_reservoir_structure.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 151.",
+   "alt": "Схема механизма: Циклиты чередуют породы с разными свойствами: центральные фитогенные известняки почти без глины сравнительно пористы и проницаемы → формируют продуктивные пласты. Низкопористые породы основания и почти непроницаемые доломиты кровли → образуют пачки полуколлекторов, или полупокрышек",
+   "source": "учебный слой, стр. 151",
+   "claim_ids": [
+    "rehearsal2.cyclic_reservoir_structure#c1",
+    "rehearsal2.cyclic_reservoir_structure#c2",
+    "rehearsal2.cyclic_reservoir_structure#c3",
+    "rehearsal2.cyclic_reservoir_structure#c4",
+    "rehearsal2.cyclic_reservoir_structure#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.layer_connectivity_cycles",
+   "step_id": "rehearsal2.layer_connectivity_cycles",
+   "node_id": "rehearsal2.layer_connectivity_cycles",
+   "file": "illustrations/layer_connectivity_cycles.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 151–152.",
+   "alt": "Схема механизма: Низкая матричная проницаемость пород пачек и их трещиноватость обусловливают динамическую связь пластов-коллекторов. → В более полных циклитах каменная соль завершает последовательность; мощные соляные пачки обособляют нефтегазоносный комплекс. → Колебания уровня моря из-за эвстатики или тектонических движений связаны с чередованием пород.",
+   "source": "учебный слой, стр. 151, стр. 152",
+   "claim_ids": [
+    "rehearsal2.layer_connectivity_cycles#c1",
+    "rehearsal2.layer_connectivity_cycles#c2",
+    "rehearsal2.layer_connectivity_cycles#c3",
+    "rehearsal2.layer_connectivity_cycles#c4",
+    "rehearsal2.layer_connectivity_cycles#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.sea_level_cycle",
+   "step_id": "rehearsal2.sea_level_cycle",
+   "node_id": "rehearsal2.sea_level_cycle",
+   "file": "illustrations/sea_level_cycle.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 153.",
+   "alt": "Схема: признаки привнос глинистого материала, доломитность, мелководные онколитовые и строматолитовые породы, преобладание карбонатов кальция; правило: По автору, сочетание признаков помогает интерпретировать этап цикла: глинистый материал и доломитность характерны для начала; карбонаты кальция связаны с трансгрессией; доломитовые и иногда сульфатные осадки — с завершающим осолонением.; вывод: Цикл интерпретируется как трансгрессивно-регрессивный и несимметричный.",
+   "source": "учебный слой, стр. 153",
+   "claim_ids": [
+    "rehearsal2.sea_level_cycle#c1",
+    "rehearsal2.sea_level_cycle#c2",
+    "rehearsal2.sea_level_cycle#c3",
+    "rehearsal2.sea_level_cycle#c4",
+    "rehearsal2.sea_level_cycle#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.sediment_sources_mechanisms",
+   "step_id": "rehearsal2.sediment_sources_mechanisms",
+   "node_id": "rehearsal2.sediment_sources_mechanisms",
+   "file": "illustrations/sediment_sources_mechanisms.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 153–154.",
+   "alt": "Схема механизма: Континентальный кластогенный материал осаждался механически; растворенные компоненты осаждались хемогенно, биогенно или биохемогенно. → При трансгрессии глинистые осадки сменялись карбонатными, а при регрессии — соленосными.",
+   "source": "учебный слой, стр. 153, стр. 154",
+   "claim_ids": [
+    "rehearsal2.sediment_sources_mechanisms#c1",
+    "rehearsal2.sediment_sources_mechanisms#c2",
+    "rehearsal2.sediment_sources_mechanisms#c3",
+    "rehearsal2.sediment_sources_mechanisms#c4",
+    "rehearsal2.sediment_sources_mechanisms#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.sedimentation_rock_properties",
+   "step_id": "rehearsal2.sedimentation_rock_properties",
+   "node_id": "rehearsal2.sedimentation_rock_properties",
+   "file": "illustrations/sedimentation_rock_properties.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 154–155.",
+   "alt": "Схема: признаки механизм осаждения, солёность водоёма, источник осадочного материала; правило: Преобладание биогенного осаждения при нормальной или близкой к нормальной солёности связано с коллекторами; хемогенное осаждение при резко повышенной солёности — с флюидоупорами.; вывод: Условия осадконакопления помогают объяснить распределение коллекторов, полуколлекторов и флюидоупоров в разрезе.",
+   "source": "учебный слой, стр. 154, стр. 155",
+   "claim_ids": [
+    "rehearsal2.sedimentation_rock_properties#c1",
+    "rehearsal2.sedimentation_rock_properties#c2",
+    "rehearsal2.sedimentation_rock_properties#c3",
+    "rehearsal2.sedimentation_rock_properties#c4",
+    "rehearsal2.sedimentation_rock_properties#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.sedimentation_model_limits",
+   "step_id": "rehearsal2.sedimentation_model_limits",
+   "node_id": "rehearsal2.sedimentation_model_limits",
+   "file": "illustrations/sedimentation_model_limits.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 155–156.",
+   "alt": "Схема механизма: Форма миграции вещества и способ осаждения при определённой солёности связаны с типом пласта: например, растворная миграция и биогенное осаждение при нормальной или близкой солёности дают коллектор. → Повышение глинистости циклитов может создать мощную в целом непроницаемую толщу, обладающую свойствами флюидоупора.",
+   "source": "учебный слой, стр. 155, стр. 156",
+   "claim_ids": [
+    "rehearsal2.sedimentation_model_limits#c1",
+    "rehearsal2.sedimentation_model_limits#c2",
+    "rehearsal2.sedimentation_model_limits#c3",
+    "rehearsal2.sedimentation_model_limits#c4",
+    "rehearsal2.sedimentation_model_limits#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.clastic_reservoir_environments",
+   "step_id": "rehearsal2.clastic_reservoir_environments",
+   "node_id": "rehearsal2.clastic_reservoir_environments",
+   "file": "illustrations/clastic_reservoir_environments.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 157–158.",
+   "alt": "Схема механизма: Разные обстановки осадконакопления → различия в строении сложенных породами резервуаров → разнообразие их видов и параметров",
+   "source": "учебный слой, стр. 157, стр. 158",
+   "claim_ids": [
+    "rehearsal2.clastic_reservoir_environments#c1",
+    "rehearsal2.clastic_reservoir_environments#c2",
+    "rehearsal2.clastic_reservoir_environments#c3",
+    "rehearsal2.clastic_reservoir_environments#c4",
+    "rehearsal2.clastic_reservoir_environments#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.delta_hydrocarbon_reservoirs",
+   "step_id": "rehearsal2.delta_hydrocarbon_reservoirs",
+   "node_id": "rehearsal2.delta_hydrocarbon_reservoirs",
+   "file": "illustrations/delta_hydrocarbon_reservoirs.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 158–159.",
+   "alt": "Схема механизма: Органическое вещество осаждается вместе с минеральными компонентами и фоссилизируется, то есть сохраняется в отложениях. → Катагенетические преобразования могут привести к образованию нефти и газа; для крупных длительно развивающихся дельт нужные условия обеспечивают большая мощность отложений и быстрое прогибание. → Переслаивание песков и глин способствует формированию резервуаров в руслах и протоках.",
+   "source": "учебный слой, стр. 158, стр. 159",
+   "claim_ids": [
+    "rehearsal2.delta_hydrocarbon_reservoirs#c1",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c2",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c3",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c4",
+    "rehearsal2.delta_hydrocarbon_reservoirs#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.volga_ural_stratigraphy",
+   "step_id": "rehearsal2.volga_ural_stratigraphy",
+   "node_id": "rehearsal2.volga_ural_stratigraphy",
+   "file": "illustrations/volga_ural_stratigraphy.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 159–160.",
+   "alt": "Схема: признаки последовательность горизонтов, наличие радаевского горизонта, тип контакта с турнейскими породами, распространение терригенных фаций; правило: По главе, отсутствие радаевских отложений означает, что бобриковские отложения непосредственно залегают на елховских; на юго-востоке тульские терригенные фации замещаются карбонатными.; вывод: Состав и последовательность отложений зависят от района.",
+   "source": "учебный слой, стр. 159, стр. 160",
+   "claim_ids": [
+    "rehearsal2.volga_ural_stratigraphy#c1",
+    "rehearsal2.volga_ural_stratigraphy#c2",
+    "rehearsal2.volga_ural_stratigraphy#c3",
+    "rehearsal2.volga_ural_stratigraphy#c4",
+    "rehearsal2.volga_ural_stratigraphy#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.bobrikovian_river_channels",
+   "step_id": "rehearsal2.bobrikovian_river_channels",
+   "node_id": "rehearsal2.bobrikovian_river_channels",
+   "file": "illustrations/bobrikovian_river_channels.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 160.",
+   "alt": "Схема: признаки эрозионный врез в малиновские и турнейские отложения, полосовидная форма в плане, линзовидная форма в разрезе, грубая и крупная зернистость в основании песчаников; правило: Сочетание перечисленных признаков соответствует описанию русловых образований в главе.; вывод: Признаки позволяют распознавать русловые образования по описанию автора.",
+   "source": "учебный слой, стр. 160",
+   "claim_ids": [
+    "rehearsal2.bobrikovian_river_channels#c1",
+    "rehearsal2.bobrikovian_river_channels#c2",
+    "rehearsal2.bobrikovian_river_channels#c3",
+    "rehearsal2.bobrikovian_river_channels#c4",
+    "rehearsal2.bobrikovian_river_channels#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.delta_paleogeography_map",
+   "step_id": "rehearsal2.delta_paleogeography_map",
+   "node_id": "rehearsal2.delta_paleogeography_map",
+   "file": "illustrations/delta_paleogeography_map.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 160–161.",
+   "alt": "Схема механизма: При смещении к юго-востоку русла делятся и приобретают веерообразную форму → формируется наземная часть дельты. К юго-востоку и югу амплитуда среза уменьшается → бобриковские отложения имеют сравнительно постоянную мощность 5–10 м",
+   "source": "учебный слой, стр. 160, стр. 161",
+   "claim_ids": [
+    "rehearsal2.delta_paleogeography_map#c1",
+    "rehearsal2.delta_paleogeography_map#c2",
+    "rehearsal2.delta_paleogeography_map#c3",
+    "rehearsal2.delta_paleogeography_map#c4",
+    "rehearsal2.delta_paleogeography_map#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.underwater_delta_facies",
+   "step_id": "rehearsal2.underwater_delta_facies",
+   "node_id": "rehearsal2.underwater_delta_facies",
+   "file": "illustrations/underwater_delta_facies.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 162.",
+   "alt": "Схема механизма: С северо-запада на юго-восток песчанистость уменьшается, а разрезы становятся глинистее. → При этом отдельные разрезы представлены хорошо отсортированными песчаными телами значительной мощности.",
+   "source": "учебный слой, стр. 162",
+   "claim_ids": [
+    "rehearsal2.underwater_delta_facies#c1",
+    "rehearsal2.underwater_delta_facies#c2",
+    "rehearsal2.underwater_delta_facies#c3",
+    "rehearsal2.underwater_delta_facies#c4",
+    "rehearsal2.underwater_delta_facies#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+Кандидатов: 43, сняты обратной проверкой: 0, в ответе: 13 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_rehearsal2/answer.json (49 с)
+  code+bulk+strong   C118   critical    sign_flip              Направление изменения амплитуды среза перевёрнуто: автор пишет, что он
+  code+bulk+strong   A05    significant analogy_without_limit  Граница аналогии объявлена отсутствующей, а некая величина — постоянно
+  code+bulk+strong   C126   significant overgeneralization     Слово «всегда» преувеличивает частоту биотурбации: автор пишет «нередк
+  code+bulk+strong   C119   significant overgeneralization     Слово «всегда» подменяет авторское «обычно»; кроме того, описание отно
+  bulk+strong        C070   critical    wrong_scaling          Верхняя граница доли запасов нефти указана как 650 % вместо 65 %.
+  bulk+strong        C108   critical    wrong_scaling          Максимальная мощность прослоев угля завышена в 10 раз: указано 10 м вм
+  bulk+strong        C081   critical    sign_flip              Низкая нефтегазоносность указана вместо высокой.
+  bulk+strong        C007   significant lost_condition         Вывод приведён без условия о соотношении мощности ложной покрышки и ам
+  bulk+strong        C022   significant measured_vs_inferred   Утверждение о прямом измерении причинной связи не подтверждено текстом
+  bulk+strong        C026   significant measured_vs_inferred   Палеогеографическая реконструкция выдана за результат прямого измерени
+  bulk+strong        C039   significant measured_vs_inferred   Фраза «прямым измерением установлено» необоснованно представляет рекон
+  bulk+strong        C100   significant lost_condition         Утверждение обобщает наблюдение, которое автор относит к разрезам южне
+  bulk+strong        L01.12 significant measured_vs_inferred   Фраза заявляет о прямом измерении, не указывая, что именно измерено. А

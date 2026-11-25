@@ -1,0 +1,11 @@
+Кандидатов: 41, сняты обратной проверкой: 1, в ответе: 9 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_en_smoke/answer.json (50 с)
+  code+bulk+strong   A05    significant analogy_without_limit  Граница аналогии ошибочно объявляет её точной и универсальной, а также
+  bulk+strong        C048   significant measured_vs_inferred   Фраза «It was directly measured» ошибочно представляет исторические да
+  bulk+strong        C052   significant measured_vs_inferred   Элемент выдаёт историческое утверждение о развитии методов за результа
+  bulk+strong        C028   significant measured_vs_inferred   Исторический факт ошибочно представлен как результат прямого измерения
+  bulk+strong        C046   significant measured_vs_inferred   Историческое утверждение о цели разработки ошибочно представлено как р
+  bulk+strong        C063   significant measured_vs_inferred   Утверждение о прямом измерении не подтверждается автором: он описывает
+  bulk+strong        L01.03 significant measured_vs_inferred   Фраза «It was directly measured» необоснованно представляет определени
+  bulk+strong        C009   significant measured_vs_inferred   Фраза «It was directly measured that» без основания приписывает прямом
+  bulk+strong        L01.11 significant other                  Фраза относит перечисленные области применения к проволочному каротажу
+  снято C078: в главе есть дословное подтверждение (стр. 7): Failure during recording is not known until the memor
