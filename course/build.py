@@ -235,10 +235,10 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
 
     if not node_tasks:
         step_id = html.escape(str(node.get("id", "")), quote=True)
-        blocks.append(f'<div class="step-complete"><button type="button" data-complete-step="{step_id}">Завершить этап · +20 XP</button></div>')
+        blocks.append(f'<div class="step-complete"><button type="button" data-complete-step="{step_id}">Отметить шаг как изученный</button></div>')
     blocks.append("</div>")
     if node_tasks:
-        blocks.append('<aside class="content-block practice practice-column"><div class="exercise-kicker">ВАША ПРАКТИКА</div><h2>Проверьте себя</h2><div class="step-reward" data-step-reward></div>')
+        blocks.append('<aside class="content-block practice practice-column"><div class="exercise-kicker">ПРАКТИКА</div><h2>Проверьте понимание</h2><div class="step-reward" data-step-reward></div>')
         claim_pages = {str(claim.get("id")): claim.get("page_pdf") for claim in claims if claim.get("id")}
         claim_texts = {str(claim.get("id")): claim for claim in claims if claim.get("id") and text_of(claim.get("text"))}
         for task in node_tasks:
@@ -424,19 +424,18 @@ def geology_theme_vars() -> str:
     return " ".join(f"--geo-{name}:{value};" for name, value in safe_palette.items())
 
 
-def pixel_icon(name: str) -> str:
-    """Small original game-style icons, kept inline for offline use."""
+def ui_icon(name: str) -> str:
+    """Simple line icons, kept inline for offline use."""
     paths = {
-        "pickaxe": "M6 1h12v3h3v3h-6V5H9v2H6V4H3V1h3zM12 7h3v3h-3zm-3 3h3v3H9zm-3 3h3v3H6zm-3 3h3v5H1v-3h2z",
-        "book": "M2 3h8v2h4V3h8v16h-8v2h-4v-2H2zm3 3v10h5V6zm9 0v10h5V6z",
-        "gem": "M6 2h12v4h4v10h-4v4h-4v3h-4v-3H6v-4H2V6h4zm3 4v4H6v4h4v4h4v-4h4v-4h-3V6z",
-        "map": "M1 4h6V1h10v3h6v16h-6v3H7v-3H1zm3 3v10h3V7zm6-3v16h4V4zm7 3v10h3V7z",
-        "cards": "M1 1h16v4H5v14H1zm6 6h16v16H7zm3 3v10h10V10z",
-        "scroll": "M5 1h14v3h3v5h-3v10h-3v4H5v-3H2v-5h3zm3 3v13h8V4zm2 3h4v2h-4zm0 5h4v2h-4z",
-        "flag": "M3 1h3v22H3zm3 0h15v12H6zm3 3v6h9V4z",
+        "layers": "m12 3 10 5-10 5L2 8 12 3ZM2 12l10 5 10-5M2 16l10 5 10-5",
+        "book": "M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1Zm0 0v15",
+        "check": "M9 12l2 2 4-4M9 3H5v19h14V3h-4M9 2h6v4H9V2Z",
+        "map": "m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Zm6-2v16m6-14v16",
+        "cards": "M7 7h14v14H7V7ZM3 17V3h14",
+        "scroll": "M5 3h14v18H5V3Zm4 5h6m-6 4h6m-6 4h4",
     }
-    path = paths.get(name, paths["gem"])
-    return f'<svg class="pixel-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="{path}"/></svg>'
+    path = paths.get(name, paths["book"])
+    return f'<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="{path}"/></svg>'
 
 
 def count_word(count: int, one: str, few: str, many: str) -> str:
@@ -523,7 +522,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     task_json = task_json.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     geology_vars = geology_theme_vars()
     theme_css = Path(__file__).with_name("theme.css").read_text(encoding="utf-8")
-    world_markup = (Path(__file__).parent / "assets" / "world.svg").read_text(encoding="utf-8")
+    strata_markup = (Path(__file__).parent / "assets" / "strata.svg").read_text(encoding="utf-8")
     return f'''<!doctype html>
 <html lang="ru">
 <head>
@@ -538,26 +537,26 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 </head>
 <body>
 <div class="shell">
-  <div class="masthead"><div class="brand"><span class="brand-icon">{pixel_icon('pickaxe')}</span> ГЛАВА → КУРС</div><span class="offline-label"><span class="status-dot"></span> СОХРАНЯЕТСЯ НА УСТРОЙСТВЕ</span></div>
+  <div class="masthead"><div class="brand"><span class="brand-icon">{ui_icon('layers')}</span> ГЛАВА → КУРС</div><span class="offline-label"><span class="status-dot"></span> Доступно офлайн</span></div>
   <header class="hero">
-    <div class="world-scene" aria-hidden="true">{world_markup}<span class="world-tag">МИР ЗНАНИЙ / РЕЖИМ ИССЛЕДОВАТЕЛЯ</span></div>
     <div class="hero-copy">
-      <div class="hero-kicker">{pixel_icon('flag')} ВАША НОВАЯ ЭКСПЕДИЦИЯ</div>
+      <div class="hero-kicker">УЧЕБНЫЙ МОДУЛЬ</div>
       <h1>{hero_title}</h1>
-      <p class="hero-note">Открывайте новые слои знаний. Изучайте главу, собирайте опыт и прокладывайте свой маршрут.</p>
-      <div class="hero-stats"><span>{pixel_icon('map')} <b>{step_count}</b> {step_word}</span><span>{pixel_icon('pickaxe')} <b>{task_count}</b> {task_word}</span><span>{pixel_icon('book')} <b>офлайн</b> мир</span></div>
-      <div class="hero-completion"><div><span>Маршрут исследован</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные этапы" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
+      <p class="hero-note">Изучите материал главы, разберите объяснения и проверьте понимание на практических заданиях.</p>
+      <div class="hero-stats"><span>{ui_icon('book')} <b>{step_count}</b> {step_word}</span><span>{ui_icon('check')} <b>{task_count}</b> {task_word}</span><span>{ui_icon('scroll')} Ссылки на источник</span></div>
+      <div class="hero-completion"><div><span>Пройдено этапов</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные этапы" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
     </div>
+    <div class="strata-scene" aria-hidden="true">{strata_markup}</div>
   </header>
-  <div class="game-toolbar"><div class="xp-chip">{pixel_icon('gem')}<span id="xp-total" aria-live="polite">0 XP</span></div><div class="theme-controls"><button class="button-primary" type="button" data-show-view="course" data-resume>Продолжить маршрут →</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></div>
+  <div class="course-toolbar"><div class="learning-status">{ui_icon('check')}<span>Выполнено заданий: <b id="solved-tasks" aria-live="polite">0 / {task_count}</b></span></div><div class="theme-controls"><button class="button-primary" type="button" data-show-view="course" data-resume>Продолжить обучение →</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></div>
   <div class="layout">
-    <aside id="course-nav" aria-label="Навигация курса"><div class="route-heading">{pixel_icon('map')}<div><div class="nav-kicker">КАРТА МИРА</div><strong>Выберите следующий этап</strong></div></div><div class="progress" role="progressbar" aria-label="Текущий шаг" aria-valuemin="1"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">+10 XP за верный ответ · +20 XP за пройденный этап</div></aside>
+    <aside id="course-nav" aria-label="Навигация курса"><div class="route-heading">{ui_icon('book')}<div><div class="nav-kicker">СОДЕРЖАНИЕ МОДУЛЯ</div><strong>Последовательность изучения</strong></div></div><div class="progress" role="progressbar" aria-label="Текущий шаг" aria-valuemin="1"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">Читайте материал, сверяйтесь с источником и закрепляйте его заданиями. Прогресс сохраняется на этом устройстве.</div></aside>
     <main id="course-content">
       <nav class="view-switcher" aria-label="Раздел курса">
-        <button type="button" data-show-view="course" aria-pressed="true">{pixel_icon('pickaxe')} Шаги</button>
-        <button type="button" data-show-view="cards" aria-pressed="false">{pixel_icon('cards')} Карточки</button>
-        <button type="button" data-show-view="map" aria-pressed="false">{pixel_icon('map')} Карта связей</button>
-        <button type="button" data-show-view="summary" aria-pressed="false">{pixel_icon('scroll')} Конспект</button>
+        <button type="button" data-show-view="course" aria-pressed="true">{ui_icon('book')} Материал</button>
+        <button type="button" data-show-view="cards" aria-pressed="false">{ui_icon('cards')} Карточки</button>
+        <button type="button" data-show-view="map" aria-pressed="false">{ui_icon('map')} Карта связей</button>
+        <button type="button" data-show-view="summary" aria-pressed="false">{ui_icon('scroll')} Конспект</button>
       </nav>
       <section id="course-view" class="app-view">{''.join(step_markup)}<div class="footer-nav"><button id="previous" type="button">← Назад</button><button id="next" type="button">Дальше →</button></div></section>
       <section id="cards-view" class="app-view" hidden><h1>Карточки повторения</h1><div class="cards-grid">{cards_markup}</div></section>
@@ -565,7 +564,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
       <section id="summary-view" class="app-view" hidden><h1>Конспект</h1><p><button id="print-summary" class="no-print" type="button">Распечатать / сохранить в PDF</button></p>{summary_markup}</section>
     </main>
   </div>
-  <footer class="site-footer">{pixel_icon('pickaxe')} ЕЩЁ ОДИН СЛОЙ — ЕЩЁ ОДНО ОТКРЫТИЕ</footer>
+  <footer class="site-footer">Материал главы · Практические задания · Повторение</footer>
 </div>
 <script>
 const TASKS = {task_json};
@@ -573,7 +572,6 @@ const STEPS = [...document.querySelectorAll('.step')];
 const CHAPTER = {json.dumps(str(layer.get('chapter', 'course')), ensure_ascii=False)};
 const STORE_KEY = 'course-progress:' + CHAPTER;
 const TASK_KEY = 'course-tasks:' + CHAPTER;
-const XP_KEY = 'course-xp:' + CHAPTER;
 const COMPLETE_KEY = 'course-completed-steps:' + CHAPTER;
 const CARD_KEY = 'course-cards:' + CHAPTER;
 const VIEW_KEY = 'course-view:' + CHAPTER;
@@ -581,19 +579,20 @@ const THEME_KEY = 'course-theme-v2:' + CHAPTER;
 let saved = {{}};
 let solved = {{}};
 let reviewed = {{}};
-let xp = 0;
 let completedSteps = {{}};
 try {{ saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ solved = JSON.parse(localStorage.getItem(TASK_KEY) || '{{}}'); }} catch (_) {{}}
 try {{ reviewed = JSON.parse(localStorage.getItem(CARD_KEY) || '{{}}'); }} catch (_) {{}}
-try {{ xp = Number(localStorage.getItem(XP_KEY)) || 0; }} catch (_) {{}}
 try {{ completedSteps = JSON.parse(localStorage.getItem(COMPLETE_KEY) || '{{}}'); }} catch (_) {{}}
 let current = Math.min(Math.max(Number(saved.step) || 0, 0), Math.max(STEPS.length - 1, 0));
 const esc = (s) => String(s ?? '');
 function persist(key, value) {{ try {{ localStorage.setItem(key, JSON.stringify(value)); }} catch (_) {{}} }}
 function removeStored(key) {{ try {{ localStorage.removeItem(key); }} catch (_) {{}} }}
-function updateXp() {{ document.getElementById('xp-total').textContent = xp + ' XP'; }}
-updateXp();
+function updateLearningProgress() {{
+  const taskCards = [...document.querySelectorAll('[data-task-id]')];
+  const solvedCount = taskCards.filter(card => solved[card.dataset.taskId]).length;
+  document.getElementById('solved-tasks').textContent = solvedCount + ' / ' + taskCards.length;
+}}
 function syncCourseProgress() {{
   let completedCount = 0;
   let changed = false;
@@ -607,7 +606,6 @@ function syncCourseProgress() {{
       completedCount += 1;
       if (!completedSteps[stepId]) {{
         completedSteps[stepId] = true;
-        xp += 20;
         changed = true;
         justCompleted.push(stepId);
       }}
@@ -615,28 +613,28 @@ function syncCourseProgress() {{
     const nav = [...document.querySelectorAll('.step-link')].find(item => item.dataset.stepId === stepId);
     if (nav) {{
       nav.classList.toggle('is-complete', done);
-      nav.querySelector('.step-marker').textContent = done ? '✦' : '○';
+      nav.querySelector('.step-marker').textContent = done ? '✓' : '○';
       nav.setAttribute('aria-label', nav.querySelector('.step-name').textContent + (done ? ', пройдено' : ', не пройдено'));
     }}
     const reward = step.querySelector('[data-step-reward]');
     if (reward) {{
       const solvedCount = stepTasks.filter(task => solved[task.id]).length;
-      reward.textContent = done ? 'Этап пройден · +20 XP' : 'Решено ' + solvedCount + ' из ' + stepTasks.length + ' · +20 XP за этап';
+      reward.textContent = done ? 'Все задания этапа выполнены' : 'Выполнено заданий: ' + solvedCount + ' из ' + stepTasks.length;
       reward.classList.toggle('is-earned', done);
     }}
     const completionButton = step.querySelector('[data-complete-step]');
     if (completionButton) {{
       completionButton.disabled = done;
-      completionButton.textContent = done ? 'Этап пройден · +20 XP' : 'Завершить этап · +20 XP';
+      completionButton.textContent = done ? 'Шаг изучен' : 'Отметить шаг как изученный';
     }}
   }});
   document.getElementById('completed-steps').textContent = completedCount + ' / ' + STEPS.length;
   document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
   document.querySelector('.hero-track').setAttribute('aria-valuenow', String(completedCount));
   if (changed) {{
-    try {{ localStorage.setItem(COMPLETE_KEY, JSON.stringify(completedSteps)); localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
+    persist(COMPLETE_KEY, completedSteps);
   }}
-  updateXp();
+  updateLearningProgress();
   return justCompleted;
 }}
 let theme = '';
@@ -704,15 +702,14 @@ document.querySelectorAll('[data-complete-step]').forEach(button => button.addEv
   const stepId = button.dataset.completeStep;
   if (!completedSteps[stepId]) {{
     completedSteps[stepId] = true;
-    xp += 20;
-    try {{ localStorage.setItem(COMPLETE_KEY, JSON.stringify(completedSteps)); localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
-    button.textContent = 'Этап пройден · +20 XP';
+    persist(COMPLETE_KEY, completedSteps);
+    button.textContent = 'Шаг изучен';
     button.disabled = true;
     syncCourseProgress();
   }}
 }}));
 document.getElementById('print-summary').addEventListener('click', () => {{ setView('summary'); window.print(); }});
-document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(XP_KEY); removeStored(COMPLETE_KEY); location.reload(); }});
+document.getElementById('reset-progress').addEventListener('click', () => {{ removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(COMPLETE_KEY); location.reload(); }});
 function taskElement(task) {{
   const card = document.querySelector(`[data-task-id="${{CSS.escape(task.id)}}"]`);
   if (!card) return;
@@ -746,7 +743,7 @@ function taskElement(task) {{
     }});
     list.addEventListener('dragover', e => {{ e.preventDefault(); const dragged = list.querySelector('.dragging'); const target = e.target.closest('.order-item'); if (dragged && target && dragged !== target) {{ const rect = target.getBoundingClientRect(); list.insertBefore(dragged, e.clientY < rect.top + rect.height / 2 ? target : target.nextSibling); }} }});
     let pointerRow = null;
-    list.addEventListener('pointerdown', e => {{ const handle = e.target.closest('.drag-handle'); if (!handle) return; pointerRow = handle.closest('.order-item'); pointerRow.classList.add('dragging'); handle.setPointerCapture(e.pointerId); e.preventDefault(); }});
+    list.addEventListener('pointerdown', e => {{ const handle = e.target.closest('.drag-handle'); if (!handle || handle.disabled) return; pointerRow = handle.closest('.order-item'); pointerRow.classList.add('dragging'); handle.setPointerCapture(e.pointerId); e.preventDefault(); }});
     list.addEventListener('pointermove', e => {{ if (!pointerRow) return; const target = document.elementFromPoint(e.clientX, e.clientY)?.closest('.order-item'); if (target && target !== pointerRow) {{ const rect = target.getBoundingClientRect(); list.insertBefore(pointerRow, e.clientY < rect.top + rect.height / 2 ? target : target.nextSibling); }} }});
     list.addEventListener('pointerup', () => {{ if (pointerRow) pointerRow.classList.remove('dragging'); pointerRow = null; }});
     list.addEventListener('pointercancel', () => {{ if (pointerRow) pointerRow.classList.remove('dragging'); pointerRow = null; }});
@@ -764,7 +761,29 @@ function taskElement(task) {{
     button.setAttribute('aria-expanded', String(!hint.hidden));
     button.textContent = hint.hidden ? 'Подсказка' : 'Скрыть подсказку';
   }}));
-  if (solved[task.id]) {{ showResult(true); check.disabled = true; }}
+  function restoreAndLockAnswer() {{
+    if (task.type === 'single' || task.type === 'multiple') {{
+      const expected = (Array.isArray(task.answer) ? task.answer : [task.answer]).map(String);
+      card.querySelectorAll('.option input').forEach(input => {{ input.checked = expected.includes(input.value); }});
+    }} else if (task.type === 'gap') {{
+      const expected = Array.isArray(task.answer) ? task.answer : [task.answer];
+      [...card.querySelectorAll('[data-gap]')].sort((a, b) => Number(a.dataset.gap) - Number(b.dataset.gap)).forEach((input, index) => {{ input.value = String(expected[index] ?? ''); }});
+    }} else if (task.type === 'calc') {{
+      card.querySelector('[data-calc]').value = String(task.answer);
+    }} else if (task.type === 'order') {{
+      const list = card.querySelector('.order-list');
+      const rows = [...list.querySelectorAll('.order-item')];
+      (Array.isArray(task.answer) ? task.answer : []).forEach(id => {{
+        const row = rows.find(item => item.dataset.id === String(id));
+        if (row) list.append(row);
+      }});
+      rows.forEach(row => {{ row.draggable = false; }});
+      list.querySelectorAll('button').forEach(button => {{ button.disabled = true; }});
+    }}
+    card.querySelectorAll('input').forEach(input => {{ input.disabled = true; }});
+    check.disabled = true;
+  }}
+  if (solved[task.id]) {{ restoreAndLockAnswer(); showResult(true); }}
   function expectedAnswer() {{
     const optionText = id => (task.options || []).find(option => String(option.id) === String(id))?.text ?? String(id);
     if (task.type === 'single') return optionText(task.answer);
@@ -795,15 +814,12 @@ function taskElement(task) {{
     const firstSolve = correct && !solved[task.id];
     if (firstSolve) {{
       solved[task.id] = true;
-      xp += 10;
       persist(TASK_KEY, solved);
-      try {{ localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
-      updateXp();
     }}
     const newMilestones = syncCourseProgress();
     showResult(correct);
-    if (firstSolve) result.textContent += ' +10 XP' + (newMilestones.includes(card.closest('.step').dataset.stepId) ? ' · этап пройден +20 XP' : '');
-    if (correct) check.disabled = true;
+    if (firstSolve && newMilestones.includes(card.closest('.step').dataset.stepId)) result.textContent += ' Все задания этапа выполнены.';
+    if (correct) restoreAndLockAnswer();
   }});
 }}
 TASKS.forEach(taskElement);
