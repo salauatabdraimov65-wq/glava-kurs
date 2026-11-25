@@ -237,3 +237,32 @@ def theme(domain_data: dict[str, Any]) -> dict[str, Any]:
         "ons": [ink_on(item["color"], "#FFFFFF", "#111111") for item in strata],
         "patterns": [item["pattern"] if item["pattern"] in PATTERNS else PATTERNS[i % len(PATTERNS)] for i, item in enumerate(strata)],
     }
+
+
+ART_TYPES = {".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml"}
+
+
+def art_css(domain_name: str) -> tuple[str, list[str]]:
+    """Illustrations of the domain as CSS variables (--art-<file name>: url(data:…)).
+
+    Looked up in domain/<name>/art/ first, then in course/art-staging/<name>/ (until the domain
+    package gets the files). No files = no variables: the course falls back to plain paper.
+    """
+    import base64
+
+    folders = [PROJECT_ROOT / "domain" / domain_name / "art", Path(__file__).resolve().parent / "art-staging" / domain_name]
+    found: dict[str, Path] = {}
+    for folder in folders:
+        if folder.is_dir():
+            for item in sorted(folder.iterdir()):
+                if item.suffix.lower() in ART_TYPES and item.is_file() and not item.name.startswith("."):
+                    found.setdefault(item.stem.lower(), item)
+    variables, names = [], []
+    for stem, path in found.items():
+        safe = re.sub(r"[^a-z0-9-]+", "-", stem).strip("-")
+        if not safe:
+            continue
+        data = base64.b64encode(path.read_bytes()).decode("ascii")
+        variables.append(f'--art-{safe}:url("data:{ART_TYPES[path.suffix.lower()]};base64,{data}")')
+        names.append(safe)
+    return (":root{" + ";".join(variables) + "}" if variables else ""), names

@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from course.domain_theme import chapter_domain, load_domain, pattern_body
+from course.domain_theme import art_css, chapter_domain, load_domain, pattern_body
 from course.domain_theme import theme as domain_tokens
 from course.interactives import render_book_tables, render_decision, render_pressure
 
@@ -659,6 +659,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 
     domain_data = load_domain(chapter_domain(str(layer.get("chapter", "")), domain))
     tokens = domain_tokens(domain_data)
+    art_style, art_names = art_css(domain_data["name"])
     _SCANS.clear()
     _SCANS.update(find_scans(base))
     videos = find_videos(base)
@@ -707,8 +708,9 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
         stats.append((total_minutes, "мин"))
     if video_count:
         stats.append((video_count, count_word(video_count, "ролик", "ролика", "роликов")))
+    stat_icons = [ui_icon("book"), ui_icon("check"), ui_icon("scroll"), ui_icon("cards")]
     stats_markup = "".join(
-        f'<div class="stat" style="{seg_style(i, strata_count)}"><b>{value}</b><span>{html.escape(word)}</span></div>'
+        f'<div class="stat">{stat_icons[i % len(stat_icons)]}<b>{value}</b><span>{html.escape(word)}</span></div>'
         for i, (value, word) in enumerate(stats)
     )
     kind_counts = {value: kinds.count(value) for value in kind_order.values()}
@@ -740,7 +742,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     theme_css = Path(__file__).with_name("theme.css").read_text(encoding="utf-8")
     core_track = f'<ol class="core-track" aria-hidden="true">{"".join(core_markup)}</ol>'
     return f'''<!doctype html>
-<html lang="ru" data-domain="{html.escape(domain_data["name"], quote=True)}">
+<html lang="ru" data-domain="{html.escape(domain_data["name"], quote=True)}" data-art="{" ".join(art_names)}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -748,6 +750,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
   <title>{chapter_name} — курс</title>
   <style>
     {tokens["css"]}
+    {art_style}
     {theme_css}
   </style>
 </head>
