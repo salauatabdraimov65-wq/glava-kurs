@@ -6,6 +6,8 @@
   1) утверждение с замечанием получает исправленный текст (fix), исходный текст и причина — в поле review;
   2) узлы с исправленными утверждениями заново наполняются моделью (суть, механизм…), чтобы ошибка не осталась в тексте шага;
   3) задания, опиравшиеся на исправленные утверждения, убираются (если заданий остаётся ≥ 15);
+  5) замечания к ИТ-аналогиям (элементы A…) — модель правит аналогию и её границу «где ломается» по замечанию
+     и цитате автора; исходный вариант — в it_analogy["review"];
   4) замечания к текстам шага (элементы T…: «Суть», «Как это работает»…) — модель точечно правит это поле
      по замечанию, остальной текст сохраняется; исходный текст и замечание — в node["review_texts"].
 Цитата и страница не меняются: исправление опирается на ту же страницу (замечание без страницы не применяется).
@@ -48,7 +50,8 @@ def apply(run_dir: Path) -> dict:
         fixed.append(c["id"]); touched.add(node["id"])
     if not fixed:
         print("замечаний к утверждениям нет")
-        res = {"applied": 0, "step_texts": apply_step_texts(run_dir, layer, remarks, by_item)}
+        res = {"applied": 0, "step_texts": apply_step_texts(run_dir, layer, remarks, by_item),
+               "analogies": apply_analogies(layer, remarks, by_item)}
         layer_p.write_text(json.dumps(layer, ensure_ascii=False, indent=1), encoding="utf-8")
         print(json.dumps(res, ensure_ascii=False)); return res
 
@@ -80,6 +83,7 @@ def apply(run_dir: Path) -> dict:
         n["decision_on_data"] = d if isinstance(d, dict) and d.get("rule") else None
         n["reviewed"] = True
     n_texts = apply_step_texts(run_dir, layer, remarks, by_item)   # узлы, заполненные заново, пропустятся сами (текст изменился)
+    n_analog = apply_analogies(layer, remarks, by_item)
     layer_p.write_text(json.dumps(layer, ensure_ascii=False, indent=1), encoding="utf-8")
 
     # задания на исправленных утверждениях
@@ -92,7 +96,7 @@ def apply(run_dir: Path) -> dict:
             dropped = len(td["tasks"]) - len(keep)
             td["tasks"] = keep
             tp.write_text(json.dumps(td, ensure_ascii=False, indent=1), encoding="utf-8")
-    res = {"applied": len(fixed), "step_texts": n_texts, "claims": fixed, "nodes_refilled": len(nodes), "tasks_dropped": dropped}
+    res = {"applied": len(fixed), "step_texts": n_texts, "analogies": n_analog, "claims": fixed, "nodes_refilled": len(nodes), "tasks_dropped": dropped}
     print(json.dumps(res, ensure_ascii=False))
     return res
 
@@ -121,6 +125,8 @@ def apply_step_texts(run_dir: Path, layer: dict, remarks: list, by_item: dict) -
         node, key = nodes.get(it["node_id"]), LABEL_KEY.get(it.get("layer"))
         if not node or not key:
             continue
+        if any(x.get("field") == key and x.get("problem") == r.get("problem") for x in node.get("review_texts", [])):
+            continue   # это замечание уже применено (повторный запуск)
         val = node["layers"].get(key)
         slots = list(enumerate(val)) if isinstance(val, list) else [(None, val)]
         slot = next((i for i, v in slots if norm((v or {}).get("text", "") if isinstance(v, dict) else v or "") == norm(it["text"])), "none")
@@ -149,6 +155,49 @@ def apply_step_texts(run_dir: Path, layer: dict, remarks: list, by_item: dict) -
                                                     "severity": r.get("severity"), "problem": r.get("problem"), "page_pdf": r["page_pdf"]})
         done += 1
     print(f"исправлено текстов шага: {done} из {len(jobs)} применимых замечаний")
+    return done
+
+
+SYS_ANALOGY = """Ты редактор учебного курса для ИТ-специалистов. Дана ИТ-аналогия к шагу, её граница («где аналогия ломается»),
+замечание проверяющего и цитата автора. Исправь МИНИМАЛЬНО: убери абсолюты и ошибки, верни условие автора, граница должна честно
+говорить, где аналогия перестаёт работать, и не противоречить главе. Стиль и длину сохрани.
+Верни JSON {"text": "аналогия", "breaks_where": "где ломается"}"""
+
+
+def apply_analogies(layer: dict, remarks: list, by_item: dict) -> int:
+    from concurrent.futures import ThreadPoolExecutor
+    from glava.chapter import norm
+    from glava.llm import ask_json
+    nodes = {n["id"]: n for n in layer["nodes"]}
+    jobs = []
+    for r in remarks:
+        it = by_item.get(r.get("target"))
+        if not it or it.get("type") != "analogy" or not (r.get("problem") or r.get("fix")):
+            continue
+        node = nodes.get(it.get("node_id"))
+        a = (node or {}).get("it_analogy") or {}
+        if not a.get("text") or norm(a["text"]) != norm(it["text"]) or a.get("review"):
+            continue   # аналогия уже другая (узел заполнен заново) или уже исправлена
+        jobs.append((r, node, a))
+
+    def run1(j):
+        r, node, a = j
+        user = (f"ШАГ: {node['title']}\nАНАЛОГИЯ: {a['text']}\nГДЕ ЛОМАЕТСЯ: {a.get('breaks_where') or '—'}\n"
+                f"ЗАМЕЧАНИЕ: {r.get('problem')}\nПРЕДЛОЖЕНИЕ: {r.get('fix') or '—'}\n"
+                f"ЦИТАТА АВТОРА (стр. {r.get('page_pdf')}): {r.get('quote') or '—'}")
+        return ask_json(SYS_ANALOGY, user, tier="bulk", tag="apply-review-analogy")
+    with ThreadPoolExecutor(8) as ex:
+        outs = list(ex.map(run1, jobs))
+    done = 0
+    for (r, node, a), out in zip(jobs, outs):
+        t, b = (out.get("text") or "").strip(), (out.get("breaks_where") or "").strip()
+        if not t or not b:
+            continue
+        node["it_analogy"] = {"text": t, "breaks_where": b, "by_model": True,
+                              "review": {"original_text": a["text"], "original_breaks_where": a.get("breaks_where"),
+                                         "category": r.get("category"), "problem": r.get("problem"), "page_pdf": r.get("page_pdf")}}
+        done += 1
+    print(f"исправлено аналогий: {done} из {len(jobs)}")
     return done
 
 

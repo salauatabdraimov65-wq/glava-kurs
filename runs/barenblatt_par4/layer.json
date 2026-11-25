@@ -2078,14 +2078,6 @@
      "severity": "significant",
      "problem": "у автора условие/оговорка «обычно», в утверждении её нет",
      "page_pdf": 43
-    },
-    {
-     "field": "deeper",
-     "original_text": "Преобразование давления: P̄(r, σ)=−pσ⁻¹K₀(rν).",
-     "category": "lost_condition",
-     "severity": "significant",
-     "problem": "у автора условие/оговорка «обычно», в утверждении её нет",
-     "page_pdf": 43
     }
    ]
   },
