@@ -1,0 +1,1843 @@
+{
+ "chapter": "vendelshtein_gl1",
+ "rows": [
+  {
+   "unit_id": "p009.01",
+   "kind": "figure",
+   "page_pdf": 9,
+   "excerpt": "Рис. 6. Выделение коллекторов способом «исследование – испытание – исследование» в карбонатном",
+   "node_ids": [
+    "vendelshtein.repeat_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.02",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "При прочих равных условиях наиболее эффективны повторные замеры микроэкранированным, экранированным и индукционным",
+   "node_ids": [
+    "vendelshtein.repeat_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.03",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Наибольшее распространение в каждом из рассмотренных вариантов временных исследований на производстве получили",
+   "node_ids": [
+    "vendelshtein.repeat_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.04",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Повторные измерения потенциалов собственной поляризации могут также дать дополнительную информацию о наличии",
+   "node_ids": [
+    "vendelshtein.repeat_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.05",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Повторные измерения в колонне методами радиометрии проводят главным образом для разделения коллекторов",
+   "node_ids": [
+    "vendelshtein.repeat_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.06",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Все рассмотренные геофизические методы выделения межзерновых коллекторов неприменимы в скважинах, бурящихся на",
+   "node_ids": [
+    "vendelshtein.repeat_logging"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.07",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Косвенные количественные признаки. Выделение коллекторов по прямым качественным признакам в настоящее время",
+   "node_ids": [
+    "vendelshtein.quantitative_criteria"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.08",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Рассмотрим способы, связанные с применением критических значений параметров ( K_ np ^",
+   "node_ids": [
+    "vendelshtein.quantitative_criteria"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.09",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Все способы, связанные с применением граничных значений параметров, характеризующих коллекторские свойства (",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.10",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Взяв типичные значения эффективной мощности ( h_ phi ) продуктивного пласта, депрессии",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.11",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "[ eta_ mathrm np ^ = mathrm Q ^ / Delta mathrm",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p009.12",
+   "kind": "paragraph",
+   "page_pdf": 9,
+   "excerpt": "Зная ( eta^ _ np ) и используя значения вязкости нефти (",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.01",
+   "kind": "formula",
+   "page_pdf": 10,
+   "excerpt": "mathrm K _ mathrm np ^ = mu eta_ mathrm np ^",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.02",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "(1.2)",
+   "node_ids": [],
+   "reason": "Содержит только обозначение номера формулы «(1.2)», без содержания."
+  },
+  {
+   "unit_id": "p010.03",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "где mathrm R _ mathrm s — радиус контура питания скважины; mathrm",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.04",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Полученное таким образом граничное значение mathrm K _ mathrm np ^ является",
+   "node_ids": [
+    "vendelshtein.economic_permeability_limit",
+    "vendelshtein.threshold_correlations"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.05",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Характерно, что ни в одном районе установленная таким образом величина mathrm K",
+   "node_ids": [
+    "vendelshtein.threshold_correlations"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.06",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Граничные значения параметров mathrm K _ mathrm n ^ , mathrm C",
+   "node_ids": [
+    "vendelshtein.threshold_correlations"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.07",
+   "kind": "figure",
+   "page_pdf": 10,
+   "excerpt": "Рис. 7. Разделение пород на коллекторы (1) и неколлекторы (2) по критическим",
+   "node_ids": [
+    "vendelshtein.threshold_correlations"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.08",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Граничные значения геофизических параметров alpha^ _ mathrm CII , Delta mathrm J",
+   "node_ids": [
+    "vendelshtein.threshold_correlations"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.09",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "Корреляционную связь между геофизическими параметрами mathrm P _ mathrm n , alpha_",
+   "node_ids": [
+    "vendelshtein.threshold_correlations"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p010.10",
+   "kind": "paragraph",
+   "page_pdf": 10,
+   "excerpt": "По диаграммам геофизических методов — интервального времени Delta mathrm T акустического метода,",
+   "node_ids": [
+    "vendelshtein.porosity_log_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.01",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Выделение коллекторов по диаграммам методов пористости по критической величине ( K_ n",
+   "node_ids": [
+    "vendelshtein.porosity_log_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.02",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Диаграммы геофизических методов глинистости — самопроизвольной поляризации, гамма-метода — напротив, широко применяют",
+   "node_ids": [
+    "vendelshtein.porosity_log_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.03",
+   "kind": "figure",
+   "page_pdf": 11,
+   "excerpt": "Рис. 8. Выделение коллекторов (на кривых отмечены штриховкой) в карбонатном разрезе по",
+   "node_ids": [
+    "vendelshtein.porosity_log_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.04",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "При буренин скважин на пресном глинистом растворе ( ( rho_ mathrm g",
+   "node_ids": [
+    "vendelshtein.porosity_log_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.05",
+   "kind": "figure",
+   "page_pdf": 11,
+   "excerpt": "Рис. 9. Сопоставление коэффициентов пористости ( K_ n ) и глинистости (",
+   "node_ids": [
+    "vendelshtein.relative_clay_content"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.06",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Величина аномалии ( Delta U_ СП ) тем больше, чем больше различие",
+   "node_ids": [
+    "vendelshtein.relative_clay_content"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.07",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "[ eta_ mathrm гл = mathrm K _ mathrm гл / (",
+   "node_ids": [
+    "vendelshtein.relative_clay_content"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.08",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "где ( eta_ гл ) - комплексный параметр, объединяющий величины, характеризующие пористость",
+   "node_ids": [
+    "vendelshtein.relative_clay_content"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p011.09",
+   "kind": "paragraph",
+   "page_pdf": 11,
+   "excerpt": "Сопоставление коэффициентов пористости ( K_ n ) и глинистости ( K_ гл",
+   "node_ids": [
+    "vendelshtein.relative_clay_content"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.01",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "род на коллекторы и неколлекторы — отсутствие или незначительное присутствие в изучаемых",
+   "node_ids": [
+    "vendelshtein.relative_clay_content"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.02",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "При интерпретации диаграмм СП предпочитают использовать не абсолютную ( Delta U_ СП",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.03",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "[ alpha_ mathrm CII = Delta mathrm U _ mathrm CII /",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.04",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "которую рассчитывают как отношение амплитуды в интерпретируемом пласте ( Delta U_ СП",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.05",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Величина ( alpha_ СП ) тесно связана с ( eta_ Omega )",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.06",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "С уменьшением минерализации пластовых вод и ростом активности глинистого материала зависимость (",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.07",
+   "kind": "figure",
+   "page_pdf": 12,
+   "excerpt": "Рис. 10. Зависимости ( alpha_ mathrm сп = f( eta_ mathrm гл",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.08",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Коллекторам соответствуют области ( alpha_ СП > alpha_ СП ^ ) и",
+   "node_ids": [
+    "vendelshtein.normalized_sp_amplitude",
+    "vendelshtein.sp_threshold_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.09",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Из изложенного следует, что отрицательная (при ( C_ s > C_ phi",
+   "node_ids": [
+    "vendelshtein.sp_threshold_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p012.10",
+   "kind": "paragraph",
+   "page_pdf": 12,
+   "excerpt": "Критическое значение ( alpha_ СП ^ ) для изучаемых отложений можно найти,",
+   "node_ids": [
+    "vendelshtein.sp_threshold_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.01",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "зависимостью ( alpha_ mathrm CII = f( eta_ mathrm гл ) )",
+   "node_ids": [
+    "vendelshtein.sp_threshold_limits"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.02",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "В этом случае для испытанных объектов сопоставляют величину ( alpha_ СП )",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.03",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Для реализации этих способов необходимо располагать результатами опробования большого числа объектов, что",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.04",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Диаграммы СП для выделения коллекторов в терригенном разрезе нельзя применять в скважинах,",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.05",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Преимущество другого метода глинистости — гамма-метода — заключается в возможности использования его",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.06",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "[ Delta mathrm J _ gamma = left( mathrm I _ gamma",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.07",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "где ( I_ gamma x ) , ( I_ gamma max )",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.08",
+   "kind": "figure",
+   "page_pdf": 13,
+   "excerpt": "Рис. 11. Определение критического значения ( alpha_ СП ^ ) путем сопоставления",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.09",
+   "kind": "figure",
+   "page_pdf": 13,
+   "excerpt": "Рис. 12. Определение критического значения ( alpha_ СП ^ ) по пересечению",
+   "node_ids": [
+    "vendelshtein.sp_testing_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.10",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Уровень минимальных показаний ( I_ gamma min ) соответствует в терригенном разрезе",
+   "node_ids": [
+    "vendelshtein.gamma_thresholds"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.11",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Величину ( Delta J gamma^ ) находят: а) используя критическое значение (",
+   "node_ids": [
+    "vendelshtein.gamma_thresholds"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.12",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Приемы нахождения ( Delta J gamma^ ) в последних двух способах аналогичны",
+   "node_ids": [
+    "vendelshtein.gamma_thresholds"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.13",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Однако связь параметра ( K_ пр ) с ( eta_ гл )",
+   "node_ids": [
+    "vendelshtein.gamma_thresholds"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.14",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "Применение диаграмм ГМ для выделения коллекторов имеет следующие ограничения.",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p013.15",
+   "kind": "paragraph",
+   "page_pdf": 13,
+   "excerpt": "1. По диаграмме ГМ, как и по диаграмме СП, можно ошибочно выделить",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.01",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "грамм микрозондов, нейтронного гамма-метода и акустического метода (как и при анализе диаграммы",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.02",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "2. В разрезах с распространением полимиктовых песчаников и алевролитов диаграмма ГМ не",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.03",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Трудно надежно выделить коллекторы в разрезах, содержащих породы-коллекторы, радиоактивность которых повышена вследствие",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.04",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Наиболее надежное выделение межзерновых коллекторов в терригенном разрезе обеспечивается при комплексной интерпретации",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.05",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "В настоящее время разработаны математические методы комплексной интерпретации диаграмм промыслово-геофизических методов, обеспечивающие",
+   "node_ids": [
+    "vendelshtein.gamma_limits_integration"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.06",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Однозначно выделяется межзерновой коллектор в терригенном разрезе по диаграммам метода ядерно-магнитного резонанса",
+   "node_ids": [
+    "vendelshtein.nmr_free_fluid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.07",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Метод неприменим: 1) в разрезах, содержащих ферро- и парамагнитные минералы (в первую",
+   "node_ids": [
+    "vendelshtein.nmr_free_fluid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.08",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Для выделения коллекторов помимо геофизических методов можно использовать диаграммы продолжительности бурения и",
+   "node_ids": [
+    "vendelshtein.additional_collector_methods"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.09",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "Рассмотренные приемы выделения межзернового коллектора эффективны при изучении терригенных разрезов со слабой",
+   "node_ids": [
+    "vendelshtein.additional_collector_methods"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.10",
+   "kind": "figure",
+   "page_pdf": 14,
+   "excerpt": "Рис. 13. Выделение коллекторов по диаграмме ЯМР (в варианте ССП) в терригенном",
+   "node_ids": [
+    "vendelshtein.nmr_free_fluid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p014.11",
+   "kind": "paragraph",
+   "page_pdf": 14,
+   "excerpt": "( U_ 1 , U_ 2 , U_ 3 ) – кривые",
+   "node_ids": [
+    "vendelshtein.nmr_free_fluid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.01",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "ше. При большей величине эффективной пористости требуемые концентрации уменьшают обратно пропорционально величине",
+   "node_ids": [
+    "vendelshtein.additional_collector_methods"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.02",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Временные исследования с активацией глинистого раствора — весьма эффективный способ выделения в",
+   "node_ids": [
+    "vendelshtein.additional_collector_methods"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.03",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Временные исследования в обсаженных скважинах нейтронными методами проводят для оценки характера насыщения",
+   "node_ids": [
+    "vendelshtein.additional_collector_methods"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.04",
+   "kind": "heading",
+   "page_pdf": 20,
+   "excerpt": "ОЦЕНКА ХАРАКТЕРА НАСЫЩЕНИЯ КОЛЛЕКТОРА",
+   "node_ids": [
+    "vendelshtein.saturation_resistivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.05",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Характер насыщения породы-коллектора оценивают, как правило, на основе материалов промысловой геофизики, полученных",
+   "node_ids": [
+    "vendelshtein.saturation_resistivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.06",
+   "kind": "figure",
+   "page_pdf": 20,
+   "excerpt": "Рис. 21. Пример искажения кажущегося сопротивления ( rho_ n ) в продуктивном",
+   "node_ids": [
+    "vendelshtein.saturation_resistivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.07",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Методы электрометрии. Оценка характера насыщения коллектора и установление его промышленной нефтегазоности основаны",
+   "node_ids": [
+    "vendelshtein.saturation_resistivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.08",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Важнейшее благоприятное условие определения ( rho_ n ) — наличие зоны проникновения,",
+   "node_ids": [
+    "vendelshtein.invasion_saturation_accuracy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.09",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Для получения истинного значения параметра ( P_ n ) необходимо знать коэффициент",
+   "node_ids": [
+    "vendelshtein.invasion_saturation_accuracy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.10",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Критические значения ( rho^ _ n ) и ( P^ _ n",
+   "node_ids": [
+    "vendelshtein.invasion_saturation_accuracy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p020.11",
+   "kind": "paragraph",
+   "page_pdf": 20,
+   "excerpt": "Для определения ( rho^ _ n ) и ( P^ _ n",
+   "node_ids": [
+    "vendelshtein.invasion_saturation_accuracy"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.01",
+   "kind": "paragraph",
+   "page_pdf": 21,
+   "excerpt": "двух классов коллекторов, давших при испытании промышленный приток нефти или газа (продуктивные",
+   "node_ids": [
+    "vendelshtein.statistical_saturation_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.02",
+   "kind": "paragraph",
+   "page_pdf": 21,
+   "excerpt": "Другой способ основан на применении критического значения коэффициента водонасыщения K п, которое",
+   "node_ids": [
+    "vendelshtein.water_saturation_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.03",
+   "kind": "figure",
+   "page_pdf": 21,
+   "excerpt": "Рис. 22. Пример статистических распределений значений ρпп для водоносных (1) и ρпп",
+   "node_ids": [
+    "vendelshtein.statistical_saturation_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.04",
+   "kind": "figure",
+   "page_pdf": 21,
+   "excerpt": "Рис. 23. Зависимость относительной проницаемости для нефти Kпр в (1) и для",
+   "node_ids": [
+    "vendelshtein.water_saturation_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.05",
+   "kind": "paragraph",
+   "page_pdf": 21,
+   "excerpt": "Зависимости Kпр в = f (Kп, Kп) и Kпр в = f",
+   "node_ids": [
+    "vendelshtein.water_saturation_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.06",
+   "kind": "paragraph",
+   "page_pdf": 21,
+   "excerpt": "Установив по кривым фазовой проницаемости для коллектора данного типа граничное значение K",
+   "node_ids": [
+    "vendelshtein.clay_resistivity_comparison",
+    "vendelshtein.water_saturation_threshold"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p021.07",
+   "kind": "paragraph",
+   "page_pdf": 21,
+   "excerpt": "Для оценки продуктивности глинистых терригенных коллекторов, удельные сопротивления которых для продуктивных и",
+   "node_ids": [
+    "vendelshtein.clay_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.01",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "ляется отскок точки, соответствующей данному коллектору, вверх от линии или семейства линий",
+   "node_ids": [
+    "vendelshtein.clay_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.02",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "Сопоставление ( rho_ n ) пород со значениями ( K_ n )",
+   "node_ids": [
+    "vendelshtein.porosity_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.03",
+   "kind": "figure",
+   "page_pdf": 22,
+   "excerpt": "Рис. 24. Разделение коллекторов в терригенном разрезе на продуктивные и водоносные по",
+   "node_ids": [
+    "vendelshtein.clay_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.04",
+   "kind": "figure",
+   "page_pdf": 22,
+   "excerpt": "Рис. 25. Разделение межзерновых коллекторов в карбонатном разрезе на нефтеносные и водоносные",
+   "node_ids": [
+    "vendelshtein.porosity_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.05",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "1 – неколлекторы; коллекторы: 2 – с неопределенным характером насыщения, 3 –",
+   "node_ids": [
+    "vendelshtein.porosity_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.06",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "Другим графическим вариантом этого способа является рассмотренное выше сопоставление нормализованных по пористости",
+   "node_ids": [
+    "vendelshtein.porosity_resistivity_comparison"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.07",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "В терригенных и высокопористых карбонатных отложениях продуктивные коллекторы выделяют, совмещая кривые (",
+   "node_ids": [
+    "vendelshtein.time_lapse_productivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.08",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "Для большей части продуктивных коллекторов характерно снижение во времени показаний зондов со",
+   "node_ids": [
+    "vendelshtein.time_lapse_productivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.09",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "Временные исследования обсаженных скважин нейтронными и низкочастотными акустическими методами позволяют выделить продуктивные",
+   "node_ids": [
+    "vendelshtein.time_lapse_productivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.10",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "Нейтронные методы. Изменения показаний нейтронных методов во времени служат признаком коллектора; если",
+   "node_ids": [
+    "vendelshtein.neutron_fluid_contrast",
+    "vendelshtein.time_lapse_productivity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p022.11",
+   "kind": "paragraph",
+   "page_pdf": 22,
+   "excerpt": "Нейтронные свойства пресной воды и нефти близки. Поэтому надежное разделение нефтеносных и",
+   "node_ids": [
+    "vendelshtein.neutron_fluid_contrast"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.01",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "носных пластов возможно лишь при не слишком малой минерализации пластовых вод (выше",
+   "node_ids": [
+    "vendelshtein.neutron_fluid_contrast"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.02",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "Для обеспечения высокой эффективности временных замеров следует выполнять следующие условия.",
+   "node_ids": [
+    "vendelshtein.neutron_fluid_contrast"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.03",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "1. Первый замер должен быть проведен сразу после крепления исследуемого интервала. Для",
+   "node_ids": [
+    "vendelshtein.repeat_neutron_schedule"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.04",
+   "kind": "figure",
+   "page_pdf": 23,
+   "excerpt": "Рис. 26. Выделение продуктивных пластов путем сопоставления временного декремента затухания поля тепловых",
+   "node_ids": [
+    "vendelshtein.repeat_neutron_schedule"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.05",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "Пласты: 1 – непроницаемые, использованные для проведения средней линии, 2 – не",
+   "node_ids": [
+    "vendelshtein.repeat_neutron_schedule"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.06",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "2. Второй замер после фонового должен проводиться (в зависимости от ожидаемых характеристик",
+   "node_ids": [
+    "vendelshtein.repeat_neutron_schedule"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.07",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "Результаты повторных исследований обрабатывают следующим образом. Части разреза, содержащие явно неизмененные пласты,",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.08",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "По полученным данным для каждой пары замеров (первого и одного из последующих)",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.09",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "[ mathrm a = mathrm k _ mathrm xy / mathrm D",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.10",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "здесь",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.11",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "[ mathrm M _ mathrm x = Sigma mathrm x _ mathrm",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.12",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "[ mathrm M _ mathrm y = Sigma mathrm y _ mathrm",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.13",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "[ mathrm D _ mathrm x = left[ Sigma left( mathrm x",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.14",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "где i – номера пластов, n – общее число неизмененных пластов.",
+   "node_ids": [
+    "vendelshtein.neutron_repeat_regression"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p023.15",
+   "kind": "paragraph",
+   "page_pdf": 23,
+   "excerpt": "После проведения линии регрессии (или вычисления ее коэффициентов а и b) рассчитывают",
+   "node_ids": [
+    "vendelshtein.neutron_change_interpretation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.01",
+   "kind": "formula",
+   "page_pdf": 24,
+   "excerpt": "sigma = [ Sigma(y_i - ax_i - b)^2]^ 1/2 / (n-2);",
+   "node_ids": [
+    "vendelshtein.neutron_change_interpretation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.02",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "(I.7)",
+   "node_ids": [],
+   "reason": "Только номер формулы (I.7), без самостоятельного содержательного текста."
+  },
+  {
+   "unit_id": "p024.03",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "на корреляционном графике проводят две прямые y = ax + b pm",
+   "node_ids": [
+    "vendelshtein.neutron_change_interpretation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.04",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "Более наглядную картину изменений показаний ИНМ можно получить, если перестроить все диаграммы",
+   "node_ids": [
+    "vendelshtein.neutron_change_interpretation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.05",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "Изучение расформирования зоны проникновения позволяет качественно судить и о проницаемости пласта: обычно",
+   "node_ids": [
+    "vendelshtein.dual_probe_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.06",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "Таким образом, водоносные пласты без зоны проникновения отмечаются совпадением показаний двух зондов,",
+   "node_ids": [
+    "vendelshtein.dual_probe_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.07",
+   "kind": "figure",
+   "page_pdf": 24,
+   "excerpt": "Рис. 27. Выделение коллекторов в обсаженной скважине по диаграмме ИНМ-КВ.",
+   "node_ids": [
+    "vendelshtein.dual_probe_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.08",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "1 – известняки, 2 – глины, 3 – участки диаграмм, соответствующие коллектору",
+   "node_ids": [
+    "vendelshtein.dual_probe_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p024.09",
+   "kind": "paragraph",
+   "page_pdf": 24,
+   "excerpt": "Акустический метод. Для изучения разрезов обсаженных трубами скважин возможно применение широкополосной модификации",
+   "node_ids": [
+    "vendelshtein.dual_probe_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.01",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Так, при наличии водонефтяного контакта в мощном достаточно однородном коллекторе нефтенасыщенная часть",
+   "node_ids": [
+    "vendelshtein.acoustic_gas_indications"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.02",
+   "kind": "figure",
+   "page_pdf": 25,
+   "excerpt": "Рис. 28. Определение ВНК в терригенном коллекторе по диаграммам амплитуд продольной (",
+   "node_ids": [
+    "vendelshtein.acoustic_gas_indications"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.03",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Песчаник: 1 – водоносный, 2 – нефтеносный; 3 – глина; 4 –",
+   "node_ids": [
+    "vendelshtein.acoustic_gas_indications"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.04",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Для изучения характера насыщения коллекторов в обсаженной трубами скважине рассмотренной модификацией акустического",
+   "node_ids": [
+    "vendelshtein.acoustic_gas_indications"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.05",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Если определить характер насыщения отдельных коллекторов в разрезе данной скважины по геофизическим",
+   "node_ids": [
+    "vendelshtein.acoustic_gas_indications"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.06",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Прямые методы. На диаграммах газометрии скважин нефтеносные коллекторы отмечаются аномалией повышенного содержания",
+   "node_ids": [
+    "vendelshtein.acoustic_gas_indications"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.07",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Последнее десятилетие характеризуется успешным внедрением в комплекс геофизических исследований испытателей пластов на",
+   "node_ids": [
+    "vendelshtein.formation_testing"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.08",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "На основании результатов исследований приборами ОПТ получают детальный профиль проницаемости (по мощности)",
+   "node_ids": [
+    "vendelshtein.formation_testing"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.09",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Информативность испытаний, как и при геофизических исследованиях скважин, резко снижается при неблагоприятном",
+   "node_ids": [
+    "vendelshtein.formation_testing"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.10",
+   "kind": "heading",
+   "page_pdf": 25,
+   "excerpt": "ОПРЕДЕЛЕНИЕ ЭФФЕКТИВНОЙ МОЩНОСТИ КОЛЛЕКТОРОВ. УСТАНОВЛЕНИЕ ВОДОНЕФТЯНОГО И ГАЗОЖИДКОСТНОГО КОНТАКТОВ",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.11",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Методы электрометрии. Эффективная мощность продуктивного коллектора ( h_ phi ) — один",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.12",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "В неоднородном пласте-коллекторе, содержащем прослои неколлектора, для расчета ( h_ phi )",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.13",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "В разрезах нефтяных и газовых месторождений встречаются продуктивные горизонты, представленные переслаиванием очень",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p025.14",
+   "kind": "paragraph",
+   "page_pdf": 25,
+   "excerpt": "Эффективную мощность слоистых глинистых коллекторов можно оценить, используя связь между площадью аномалии",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p026.01",
+   "kind": "paragraph",
+   "page_pdf": 26,
+   "excerpt": "щающих ρин пород и глинистого раствора ρр, так как в этом случае",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p026.02",
+   "kind": "paragraph",
+   "page_pdf": 26,
+   "excerpt": "При насыщении коллектора нефтью или газом только в верхней части, что наблюдается",
+   "node_ids": [
+    "vendelshtein.oil_water_transition"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p026.03",
+   "kind": "paragraph",
+   "page_pdf": 26,
+   "excerpt": "этих параметров в нефтеносной части для коллектора, для которой ρп = ρкп,",
+   "node_ids": [
+    "vendelshtein.oil_water_transition"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p026.04",
+   "kind": "figure",
+   "page_pdf": 26,
+   "excerpt": "Рис. 29. Примеры определения мощности пластов-коллекторов по диаграммам различных методов (по В.",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p026.05",
+   "kind": "figure",
+   "page_pdf": 26,
+   "excerpt": "Рис. 30. Палетка для определения истинной мощности h пласта по ее фиктивному",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p026.06",
+   "kind": "paragraph",
+   "page_pdf": 26,
+   "excerpt": "3aBnCIMocTH: (1 - mathrm h _ phi / mathrm h = mathrm",
+   "node_ids": [],
+   "reason": "Подпись к палетке сильно повреждена распознаванием; надежно восстановить обозначения и условия применимости кривых нельзя."
+  },
+  {
+   "unit_id": "p027.01",
+   "kind": "figure",
+   "page_pdf": 27,
+   "excerpt": "Рис. 31. Палетки для определения истинной мощности h по ее фиктивному значению",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.02",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "Зависимости: a – h ( _ sp )/d ( _ r )",
+   "node_ids": [
+    "vendelshtein.effective_thickness"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.03",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "Границами переходной зоны являются: вверху – подош внизу – зеркало воды, т.",
+   "node_ids": [
+    "vendelshtein.oil_water_transition"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.04",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "1 – зона предельного нефтенасыщения; 2 – зона недонасыщения (переходная); 3 –",
+   "node_ids": [
+    "vendelshtein.oil_water_transition"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.05",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "При испытании переходной зоны в верхней части получают приток нефти с различным",
+   "node_ids": [
+    "vendelshtein.oil_water_transition"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.06",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "Положение ВНК по диаграммам метода сопротивлений определяют так. Устанавливают границы переходной зоны;",
+   "node_ids": [
+    "vendelshtein.resistivity_contact_error"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.07",
+   "kind": "figure",
+   "page_pdf": 27,
+   "excerpt": "Рис. 33. Пример неправильного определения положения ВНК по данным электрометрии в терригенном",
+   "node_ids": [
+    "vendelshtein.resistivity_contact_error"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.08",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "1 – глина; песчаники; 2 – нефтеносные, 3 – водоносные; 4 –",
+   "node_ids": [
+    "vendelshtein.resistivity_contact_error"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.09",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "Мощность переходной зоны изменяется от долей метра для чистых кварцевых терригенных коллекторов",
+   "node_ids": [
+    "vendelshtein.oil_water_transition"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.10",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "В скважинах, вскрывающих коллекторы с высокой вертикальной проницаемостью, в зоне ВНК наблюдается",
+   "node_ids": [
+    "vendelshtein.resistivity_contact_error"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p027.11",
+   "kind": "paragraph",
+   "page_pdf": 27,
+   "excerpt": "1, )",
+   "node_ids": [],
+   "reason": "Остаток распознанного текста не содержит самостоятельного утверждения."
+  },
+  {
+   "unit_id": "p028.01",
+   "kind": "paragraph",
+   "page_pdf": 28,
+   "excerpt": "раствора перемещается из первоначальной зоны проникновения в слой коллектора, подстилающий ВНК (рис.",
+   "node_ids": [
+    "vendelshtein.resistivity_contact_error"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p028.02",
+   "kind": "paragraph",
+   "page_pdf": 28,
+   "excerpt": "Нейтронные методы. Использование измерений нейтронными методами в обсаженных трубами скважинах для выделения",
+   "node_ids": [
+    "vendelshtein.resistivity_contact_error"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p028.03",
+   "kind": "paragraph",
+   "page_pdf": 28,
+   "excerpt": "Разделение нефтеносных и газоносных пластов и определение ГНК электрическими методами возможно лишь",
+   "node_ids": [
+    "vendelshtein.neutron_contacts"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p028.04",
+   "kind": "paragraph",
+   "page_pdf": 28,
+   "excerpt": "Основными методами разделения нефтеносных и водоносных пластов являются импульсные нейтрон-нейтронный и нейтронный",
+   "node_ids": [
+    "vendelshtein.neutron_contacts",
+    "vendelshtein.neutron_statistical_cutoff"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p028.05",
+   "kind": "figure",
+   "page_pdf": 28,
+   "excerpt": "Рис. 34. Вариационные кривые f(x) и графики функции распределения F(x) декремента затухания",
+   "node_ids": [
+    "vendelshtein.neutron_statistical_cutoff"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p028.06",
+   "kind": "figure",
+   "page_pdf": 28,
+   "excerpt": "Рис. 35. Разделение нефтеносных (1) и водоносных (2) пластов путем сопоставления декремента",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.01",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Для построения таких графиков при отсутствии данных опробования можно воспользоваться результатами анализа",
+   "node_ids": [
+    "vendelshtein.neutron_statistical_cutoff"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.02",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "По данным химического анализа следует рассчитать декремент затухания ( lambda_ ск )",
+   "node_ids": [
+    "vendelshtein.neutron_statistical_cutoff"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.03",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Если пределы изменения ( lambda ) для водоносных и нефтеносных пластов существенно",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.04",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Если одновременно в значительных пределах и независимо друг от друга изменяются и",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.05",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Исправление за влияние глинистости сводится к вычитанию из λ величины",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.06",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "[ Delta lambda_ mathrm гл = mathrm K _ mathrm гл (",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.07",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Аналогично поправку за влияние пористости (условно считая, что пласт водоносный) определяют по",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.08",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "[ Delta lambda_ mathrm н = ( mathrm K _ mathrm н",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.09",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "где ( lambda_ гл , lambda_ гв , lambda_ в ) —",
+   "node_ids": [
+    "vendelshtein.neutron_porosity_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.10",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "В залежах легких нефтей с высоким газовым фактором водородосодержание нефтей и сечение",
+   "node_ids": [
+    "vendelshtein.flowing_well_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.11",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Для исключения влияния изменений ( K_ н ) и ( K_ гл",
+   "node_ids": [
+    "vendelshtein.flowing_well_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.12",
+   "kind": "figure",
+   "page_pdf": 29,
+   "excerpt": "Рис. 36. Пример выделения нефтеносных пластов по результатам НМ-Т в работающей (I)",
+   "node_ids": [
+    "vendelshtein.flowing_well_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.13",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Пласты: 1 – нефтеносные, 2 – обводненные, 3 – водоносные",
+   "node_ids": [
+    "vendelshtein.flowing_well_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.14",
+   "kind": "figure",
+   "page_pdf": 29,
+   "excerpt": "Рис. 37. Определение положения ГНК и ВНК по данным электро- и радиометрии",
+   "node_ids": [
+    "vendelshtein.neutron_contacts"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.15",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "Коллектор: 1 – газоносный, 2 – нефтеносный, 3 – водоносный;",
+   "node_ids": [
+    "vendelshtein.neutron_contacts"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.16",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "4 – глина; 5 – глинистый алевролит",
+   "node_ids": [
+    "vendelshtein.neutron_contacts"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p029.17",
+   "kind": "paragraph",
+   "page_pdf": 29,
+   "excerpt": "При низких пластовых давлениях (менее 200-300 кгс/см²) и умеренной глинистости выделение газоносных",
+   "node_ids": [
+    "vendelshtein.gas_contact_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.01",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "данных декремент затухания поля нейтронов в газоносном пласте ( lambda_ r0 )",
+   "node_ids": [
+    "vendelshtein.gas_contact_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.02",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "[ lambda_ mathrm r 0 = lambda_ mathrm r 8 (1 -",
+   "node_ids": [
+    "vendelshtein.gas_contact_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.03",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "где ( lambda_ r ) – декремент затухания поля нейтронов в газе;",
+   "node_ids": [
+    "vendelshtein.gas_contact_neutron"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.04",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "При установлении ГЖК по данным стационарных нейтронных методов поправку за колебания пористости",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.05",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "[ Delta mathrm K Pi = mathrm K _ Pi - mathrm",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.06",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "[ Delta w _ mathrm r 0 = mathrm K _ mathrm",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.07",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "где wCB — объемное содержание связанной воды в глинистой фракции; ( Delta",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.08",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "Кажущаяся пористость, исправленная за влияние глинистости и пористости, сравнивается с критической величиной",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.09",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "Заметим, что в терригенных коллекторах часто наблюдается корреляционная связь между пористостью и",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p030.10",
+   "kind": "paragraph",
+   "page_pdf": 30,
+   "excerpt": "В особо сложных случаях надежное определение характера насыщения пластов по данным измерений",
+   "node_ids": [
+    "vendelshtein.gas_contact_corrections",
+    "vendelshtein.neutron_contacts"
+   ],
+   "reason": null
+  }
+ ]
+}

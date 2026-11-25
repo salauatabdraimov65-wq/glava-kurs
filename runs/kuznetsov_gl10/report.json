@@ -1,0 +1,23 @@
+{
+ "chapter": "kuznetsov_gl10",
+ "nodes": 27,
+ "claims": 227,
+ "tasks": 52,
+ "task_types": {
+  "single": 16,
+  "multiple": 11,
+  "gap": 19,
+  "order": 6
+ },
+ "units_in_scope": 121,
+ "uncovered": 1,
+ "coverage_pct": 99.2,
+ "formats": {
+  "интерактив": 14,
+  "шортс": 7,
+  "карточки": 1,
+  "практикум на данных": 5
+ },
+ "usd": 0.15,
+ "minutes": 2.7
+}

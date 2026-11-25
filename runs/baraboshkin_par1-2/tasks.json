@@ -1,0 +1,1395 @@
+{
+ "chapter": "baraboshkin_par1-2",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.delta_structure#c1"
+   ],
+   "prompt": "Что такое дельта реки?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Конус выноса речного обломочного материала, возникающий там, где река достигает базиса эрозии.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Подводная часть конуса, сложенная только тонкообломочным материалом.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Субаэральная часть речного русла.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Форма рельефа, возникающая исключительно под действием волн и приливов.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Дельта — конус выноса речного обломочного материала у базиса эрозии (стр. 30).",
+   "step_id": "baraboshkin.delta_structure",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.delta_structure#c2"
+   ],
+   "prompt": "Какие факторы влияют на геометрию дельты? Выберите все верные варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Взаимодействие речных и бассейновых процессов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Речной сток и климат.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Тектоника и рельеф.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Волны и приливы.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Только состав обломочного материала.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Геометрия дельты зависит от взаимодействия речных и бассейновых процессов, стока, климата, тектоники, рельефа, волн и приливов (стр. 30).",
+   "step_id": "baraboshkin.delta_structure",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.delta_types#c1",
+    "baraboshkin.delta_types#c2",
+    "baraboshkin.delta_types#c3",
+    "baraboshkin.delta_types#c4"
+   ],
+   "prompt": "По преобладающему процессу во фронтальной части различают преимущественно {{1}} дельты, дельты с преобладанием волнового, штормового режима и дельты с преобладанием {{2}} режима.",
+   "options": [],
+   "answer": [
+    "флювиальные",
+    "приливно-отливного"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждениях названы эти группы дельт по доминирующему процессу во фронтальной части (стр. 31).",
+   "step_id": "baraboshkin.delta_types",
+   "id": "t03"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.delta_types#c5"
+   ],
+   "prompt": "На схеме морфологии и фаций дельты отмечены береговые валы, {{1}}, внутридельтовый залив, бары и {{2}}.",
+   "options": [],
+   "answer": [
+    "рукав реки",
+    "продельтовая глина"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Рукав реки и продельтовая глина входят в перечень элементов, отмеченных на схеме (стр. 31).",
+   "step_id": "baraboshkin.delta_types",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.delta_depots#c3"
+   ],
+   "prompt": "Почему внутри дельтового депоцентра разрезы часто повторяются или становятся цикличными?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из-за повторения стадий продвижения и отмирания дельты или её лопастей",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Из-за долговременных колебаний поступления осадков, погружения и уровня моря",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Потому что площадь осадочного тела дельты ограничена",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Потому что все дельтовые последовательности являются регрессивными",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Цикличность связывают с повторением стадий продвижения и отмирания дельты или её лопастей (стр. 31).",
+   "step_id": "baraboshkin.delta_depots",
+   "id": "t05"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.delta_facies#c8",
+    "baraboshkin.delta_facies#c9",
+    "baraboshkin.delta_facies#c10"
+   ],
+   "prompt": "Выберите верные утверждения об ассоциации дельтовой равнины.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Она включает накопление осадков в протоках и межпротоковых внутридельтовых областях.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Она может быть флювиальной или приливной.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Флювиальная ассоциация встречается только в дельтах с приливным режимом.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Приливная ассоциация занимает верхнюю часть равнины приливных дельт.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Дельтовая равнина включает осадки протоков и межпротоковых областей и бывает флювиальной или приливной (стр. 32).",
+   "step_id": "baraboshkin.delta_facies",
+   "id": "t06"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.delta_facies#c9"
+   ],
+   "prompt": "Ассоциация дельтовой равнины может быть {{1}} или {{2}}.",
+   "options": [],
+   "answer": [
+    "флювиальной",
+    "приливной"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении перечислены два типа ассоциации дельтовой равнины: флювиальная и приливная (стр. 32).",
+   "step_id": "baraboshkin.delta_facies",
+   "id": "t07"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.front_progradation#c1",
+    "baraboshkin.front_progradation#c2"
+   ],
+   "prompt": "Расположите этапы и особенности формирования разреза фронта дельты в порядке, описанном в утверждениях.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Мелкозернистые фации авандельты или продельты"
+    },
+    {
+     "id": "b",
+     "text": "Береговые фации, где преобладают песчаники"
+    },
+    {
+     "id": "c",
+     "text": "Разрез может быть срезан флювиальными или приливными каналами"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Регрессивная последовательность идёт от мелкозернистых фаций к береговым, а затем разрез может быть срезан каналами (стр. 32).",
+   "step_id": "baraboshkin.front_progradation",
+   "id": "t08"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.front_progradation#c3"
+   ],
+   "prompt": "От чего зависят сильные изменения разрезов фронта внутри одной дельты?",
+   "options": [
+    {
+     "id": "a",
+     "text": "От близости к устью рукава",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только от глубины воды",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Только от преобладающей размерности речного стока",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "От удалённости от берега, независимо от положения рукавов",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Внутри дельты разрезы фронта меняются в зависимости от близости к устью рукава (стр. 33).",
+   "step_id": "baraboshkin.front_progradation",
+   "id": "t09"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.abandonment_facies#c4",
+    "baraboshkin.abandonment_facies#c5",
+    "baraboshkin.abandonment_facies#c7"
+   ],
+   "prompt": "Какие утверждения о значении фаций отмирания верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Они позволяют коррелировать разрезы с различным латеральным соотношением фаций.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Они помогают построить седиментационную модель.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Они лучше всего указывают на фоновые условия, включая климат и параметры приемного бассейна.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Они показывают только состав пород, но не помогают при корреляции разрезов.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Фации отмирания помогают коррелировать разрезы и строить седиментационную модель, а также указывают на фоновые условия (стр. 33).",
+   "step_id": "baraboshkin.abandonment_facies",
+   "id": "t10"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.abandonment_facies#c2"
+   ],
+   "prompt": "Фации отмирания — {{1}}, связанные с {{2}}.",
+   "options": [],
+   "answer": [
+    "тонкие латерально выдержанные маркирующие слои",
+    "низкими скоростями осадконакопления"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Фации отмирания описаны как тонкие латерально выдержанные маркирующие слои, связанные с низкими скоростями осадконакопления (стр. 33).",
+   "step_id": "baraboshkin.abandonment_facies",
+   "id": "t11"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.bay_fill#c4",
+    "baraboshkin.bay_fill#c9"
+   ],
+   "prompt": "Как обычно меняется заполнение внутридельтового залива вверх по разрезу?",
+   "options": [
+    {
+     "id": "a",
+     "text": "От аргиллитов и алевролитов к маломощным песчаникам",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "От песчаников к аргиллитам и алевролитам",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "От конкреций сидерита к угольным пластам",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Разрез начинается с аргиллитов и алевролитов, а обычно завершается маломощными песчаниками (стр. 34).",
+   "step_id": "baraboshkin.bay_fill",
+   "id": "t12"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.bay_fill#c2",
+    "baraboshkin.bay_fill#c3"
+   ],
+   "prompt": "Как описаны серии заполнения внутридельтовых заливов?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Это часто повторные небольшие регрессивные разрезы мощностью 4–10 м",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Это один непрерывный разрез мощностью 40–100 м",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Это повторные трансгрессивные разрезы мощностью менее 1 м",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Это крупные разрезы без повторных заполнений",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Заполнения часто представлены сериями небольших регрессивных разрезов мощностью 4–10 м (стр. 34).",
+   "step_id": "baraboshkin.bay_fill",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.levees_splays#c5"
+   ],
+   "prompt": "Сколько осадка может осесть за один раз при образовании крупного конуса выноса промоины?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Около 1 м",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Около 1 см",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Около 10 м",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для крупных конусов выноса промоин указано осаждение около 1 м осадка за один раз (стр. 35).",
+   "step_id": "baraboshkin.levees_splays",
+   "id": "t14"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.levees_splays#c3",
+    "baraboshkin.levees_splays#c6",
+    "baraboshkin.levees_splays#c7"
+   ],
+   "prompt": "Какие утверждения о намывных валах и конусах выноса промоин верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В сторону от края канала слои утончаются и становятся мельче по зерну.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Конус выноса промоины имеет эрозионное основание и текстуры, отражающие ослабление потока и уменьшение зернистости вверх.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Резкое обмеление из-за крупных конусов выноса промоин может привести к запруживанию и осушению области конуса.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В сторону от края канала слои становятся толще и крупнее по зерну.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Слои утончаются и мельчают от края канала, конус имеет описанные текстуры, а резкое обмеление может запрудить и осушить его область (стр. 35).",
+   "step_id": "baraboshkin.levees_splays",
+   "id": "t15"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.bay_bars#c4"
+   ],
+   "prompt": "Разрезы каналов промоин имеют мощность {{1}}.",
+   "options": [],
+   "answer": [
+    "1–4 м"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Мощность разрезов каналов промоин составляет 1–4 м (стр. 35).",
+   "step_id": "baraboshkin.bay_bars",
+   "id": "t16"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.bay_bars#c2",
+    "baraboshkin.bay_bars#c3",
+    "baraboshkin.bay_bars#c8"
+   ],
+   "prompt": "Расположите признаки разреза устьевого бара и связанных с ним отложений от нижней части вверх.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Разрез укрупняется вверх по зерну"
+    },
+    {
+     "id": "b",
+     "text": "Средняя и верхняя части разреза часто размываются каналом промоины"
+    },
+    {
+     "id": "c",
+     "text": "Ближе к верхней части разрезов встречаются палеопочвы или торф"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Вверх по разрезу зерно укрупняется, его средняя и верхняя части могут размываться каналом, а ближе к верху встречаются палеопочвы или торф (стр. 35).",
+   "step_id": "baraboshkin.bay_bars",
+   "id": "t17"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.fluvial_channel_example#c5"
+   ],
+   "prompt": "Как интерпретирован врез в строке 5?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Как попытка прорвать закупоренное русло",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Как глубинная эрозия блуждающего русла с рельефом около 4,8 м",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Как остаточные осадки в наиболее глубоких частях русла",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Как разлив поймы, перекрывший прирусловой вал",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Врез в строке 5 интерпретирован как попытка прорвать закупоренное русло (стр. 36).",
+   "step_id": "baraboshkin.fluvial_channel_example",
+   "id": "t18"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.fluvial_channel_example#c2"
+   ],
+   "prompt": "Какие утверждения верно описывают строку 8? Выберите два варианта.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Отложения интерпретированы как русловое заполнение и горизонтальное наращивание",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Песок переносился по дну и перерабатывался на плосковских банках",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Отложения интерпретированы как вертикальное наращивание поймы при разливах",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Врез с рельефом около 4,8 м отражает глубинную эрозию блуждающего русла",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для строки 8 указаны русловое заполнение, горизонтальное наращивание и перенос песка по дну с переработкой на плосковских банках (стр. 36).",
+   "step_id": "baraboshkin.fluvial_channel_example",
+   "id": "t19"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.distributary_deposits#c2"
+   ],
+   "prompt": "Дельтовые рукава, как правило, {{1}}, имеют базальные поверхности размыва, внутриформационные конгломераты и растительные остатки.",
+   "options": [],
+   "answer": [
+    "извилисты"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Извилистость названа среди характерных признаков дельтовых рукавов (стр. 36).",
+   "step_id": "baraboshkin.distributary_deposits",
+   "id": "t20"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.distributary_deposits#c4"
+   ],
+   "prompt": "Расположите в порядке, описанном для авульсии, её последствия:",
+   "options": [
+    {
+     "id": "a",
+     "text": "Образование разрезов с уменьшением зернистости вверх"
+    },
+    {
+     "id": "b",
+     "text": "Перехват рукава (авульсия)"
+    },
+    {
+     "id": "c",
+     "text": "Отмирание рукава"
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Перехват рукава обычно приводит к его отмиранию и образованию разрезов с уменьшением зернистости вверх (стр. 37).",
+   "step_id": "baraboshkin.distributary_deposits",
+   "id": "t21"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.channel_instability#c4"
+   ],
+   "prompt": "Почему дельтовые рукава существуют недолго по сравнению с речными руслами?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из-за своей неустойчивости",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Потому что они всегда состоят только из мелкозернистого материала",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Потому что их песчаные тела имеют высокое отношение ширины к длине",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Потому что оползни берегов не могут влиять на дельтовые протоки",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Дельтовые рукава существуют недолго по сравнению с речными руслами из-за своей неустойчивости (стр. 39).",
+   "step_id": "baraboshkin.channel_instability",
+   "id": "t22"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.front_lower_section#c2",
+    "baraboshkin.front_lower_section#c3"
+   ],
+   "prompt": "Какие утверждения верно описывают фацию основания фронта дельты?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Она может быть массивной, но обычно имеет рассеянную полосчатость, нарушенную биотурбацией.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В ней редка морская фауна, но встречается растительный детрит.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Для неё обычно характерны обильная морская фауна и отсутствие растительного детрита.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Её полосчатость обычно не нарушается биотурбацией.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Фация может быть массивной, обычно имеет нарушенную биотурбацией полосчатость, редкую морскую фауну и растительный детрит (стр. 39).",
+   "step_id": "baraboshkin.front_lower_section",
+   "id": "t23"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.front_lower_section#c6"
+   ],
+   "prompt": "В более грубозернистых слоях текстура вверх меняется от {{1}} к {{2}} слоистости ряби.",
+   "options": [],
+   "answer": [
+    "параллельной слоистости",
+    "асимметричной"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Вверх по слою параллельная слоистость сменяется асимметричной слоистостью ряби (стр. 39).",
+   "step_id": "baraboshkin.front_lower_section",
+   "id": "t24"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.front_upper_section#c2",
+    "baraboshkin.front_upper_section#c3"
+   ],
+   "prompt": "Расположите признаки и интерпретацию в порядке от основания разреза вверх:",
+   "options": [
+    {
+     "id": "a",
+     "text": "В основании некоторых слоёв наблюдается постепенный переход."
+    },
+    {
+     "id": "b",
+     "text": "Постепенный переход свидетельствует об увеличении скорости потока вверх по разрезу."
+    },
+    {
+     "id": "c",
+     "text": "Грубые слои становятся мощнее и часто сливаются."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Постепенный переход в основании указывает на рост скорости потока вверх, а выше грубые слои становятся мощнее и сливаются (стр. 39).",
+   "step_id": "baraboshkin.front_upper_section",
+   "id": "t25"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.front_upper_section#c4"
+   ],
+   "prompt": "Что представляют собой линзовидные пласты песчаника?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Небольшие субаквальные продолжения дельтовых проток.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Выдержанные по площади пласты, одинаково распространённые по всей дельте.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Пласты, образованные только ослаблением течений.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Следы тонкодисперсного растительного детрита на поверхности напластования.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Линзовидные слои песчаника описаны как небольшие субаквальные продолжения дельтовых проток (стр. 39).",
+   "step_id": "baraboshkin.front_upper_section",
+   "id": "t26"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.fluvial_abandonment#c3",
+    "baraboshkin.fluvial_abandonment#c4",
+    "baraboshkin.fluvial_abandonment#c5"
+   ],
+   "prompt": "Какие утверждения описывают фацию отмирания в верхней части фронта дельты?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Это маломощный интервал интенсивно биотурбированных кварцевых песчаников, интерпретируемых как трансгрессивные остатки барьерных островов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Песчаники могут быть сцементированы кальцитом, образованным при растворении раковин, и содержать глауконит.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Мощность слоев составляет 0,5–3,0 м; иногда они содержат отчетливую эрозионную поверхность.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Эта фация представляет собой толстый слой лигнита, образованный на дне дельтового фронта.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Фация описана как маломощный биотурбированный песчаный интервал с возможным кальцитовым цементом, глауконитом и эрозионной поверхностью (стр. 40).",
+   "step_id": "baraboshkin.fluvial_abandonment",
+   "id": "t27"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.fluvial_abandonment#c7",
+    "baraboshkin.fluvial_abandonment#c8"
+   ],
+   "prompt": "Верхняя часть дельтовой равнины {{1}}; в тропическом гумидном климате ее поверхность покрывают {{2}}, образующие маркирующие горизонты.",
+   "options": [],
+   "answer": [
+    "осушается",
+    "обширные слои лигнита или торфа"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Верхняя часть дельтовой равнины осушается, а в тропическом гумидном климате на ней формируются маркирующие горизонты лигнита или торфа (стр. 40).",
+   "step_id": "baraboshkin.fluvial_abandonment",
+   "id": "t28"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.wave_delta_sections#c4",
+    "baraboshkin.wave_delta_sections#c5",
+    "baraboshkin.wave_delta_sections#c7"
+   ],
+   "prompt": "Расположите элементы разреза от основания к верхней части.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Тонкозернистый элемент, местами со штормовыми турбидитами"
+    },
+    {
+     "id": "b",
+     "text": "Хорошо сортированные песчаники средней и верхней частей"
+    },
+    {
+     "id": "c",
+     "text": "Верхняя пляжевая фация, которая может лучше развиваться на флангах рукавов"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "От основания кверху указан тонкозернистый элемент, затем песчаники, а верхняя пляжевая фация относится к верхней части разреза (стр. 40).",
+   "step_id": "baraboshkin.wave_delta_sections",
+   "id": "t29"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.wave_delta_sections#c1"
+   ],
+   "prompt": "Какие отложения входят в ассоциации дельтовой равнины волновых дельт?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Песчаники флювиальных русловых каналов и отложения внутридельтовых заливов",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только песчаники пляжей и баров",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Тонкозернистые отложения основания фронта дельты и штормовые турбидиты",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Только песчаники флювиальных дельтовых рукавов",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Ассоциации дельтовой равнины включают песчаники флювиальных русловых каналов и отложения внутридельтовых заливов (стр. 40).",
+   "step_id": "baraboshkin.wave_delta_sections",
+   "id": "t30"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.wave_delta_coast#c2"
+   ],
+   "prompt": "В устьях не образуются {{1}}, а изобаты {{2}} береговой линии.",
+   "options": [],
+   "answer": [
+    "бары",
+    "параллельны"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Волновая система характеризуется отсутствием баров в устьях и параллельностью изобат береговой линии (стр. 40).",
+   "step_id": "baraboshkin.wave_delta_coast",
+   "id": "t31"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.wave_delta_coast#c3",
+    "baraboshkin.wave_delta_coast#c4",
+    "baraboshkin.wave_delta_coast#c7"
+   ],
+   "prompt": "Какие утверждения соответствуют волновой переработке дельты? Выберите все верные варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "При продвижении обычно вовлекается весь фронт дельты.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Позади береговой линии могут встречаться отмершие береговые валы, а между ними — удлиненные лагуны.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "После отмирания дельты волновая переработка широко распространяет неполные, сокращенные разрезы фронта.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "После отмирания дельты песчаники флювиальных рукавов обычно сохраняются по всему фронту.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "При продвижении вовлекаются только отдельные участки фронта дельты.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Волны обычно вовлекают весь фронт, формируют береговые валы и лагуны, а после отмирания дельты распространяют сокращенные разрезы (стр. 40–41).",
+   "step_id": "baraboshkin.wave_delta_coast",
+   "id": "t32"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_delta_morphology#c3",
+    "baraboshkin.tidal_delta_morphology#c4"
+   ],
+   "prompt": "В протоках преобладают {{1}} пластовые формы. Внутренняя дельта состоит из переплетенных песчаных {{2}} и илистых отмелей.",
+   "options": [],
+   "answer": [
+    "дюнные",
+    "баров"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В протоках преобладают дюнные пластовые формы, а внутренняя дельта включает песчаные бары — стр. 41.",
+   "step_id": "baraboshkin.tidal_delta_morphology",
+   "id": "t33"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.tidal_delta_morphology#c4",
+    "baraboshkin.tidal_delta_morphology#c5"
+   ],
+   "prompt": "Расположите этапы формирования внутренней дельты в порядке, описанном в утверждениях.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Возникает внутренняя дельта из переплетенных песчаных баров и илистых отмелей."
+    },
+    {
+     "id": "b",
+     "text": "Приливное течение подпруживает флювиальный поток."
+    },
+    {
+     "id": "c",
+     "text": "Значительная часть твердого стока осаждается в местах разветвления рукавов."
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Подпруживание потока приливом способствует осаждению твердого стока в местах разветвления, где формируется внутренняя дельта — стр. 41.",
+   "step_id": "baraboshkin.tidal_delta_morphology",
+   "id": "t34"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.tidal_example_upper#c6"
+   ],
+   "prompt": "Как интерпретирован горизонт 7?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Как русловые осадки, вероятно, латерально наращивавшиеся на мысовидных барах при сильных изменчивых течениях",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Как пойменные осадки, наращивавшиеся преимущественно во время разливов",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Как осадки разливов с чередованием затопления и осушения, при далёком активном русле",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Как осадки глубоких частей русла без перемещения песка по руслу",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Горизонт 7 интерпретирован как русловые осадки с латеральным наращиванием на мысовидных барах (стр. 42).",
+   "step_id": "baraboshkin.tidal_example_upper",
+   "id": "t35"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_example_upper#c3"
+   ],
+   "prompt": "Какие признаки описаны в горизонте 8? Выберите все верные варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Трещины усыхания в трех горизонтах",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Волнистые кровли песчаников и конволнатая слоистость",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Катуны и норы беспозвоночных",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Трещины усыхания отсутствуют",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Обильные известковые конкреции",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для горизонта 8 отмечены трещины усыхания, волнистые кровли песчаников, конволнатая слоистость, катуны и норы беспозвоночных (стр. 42).",
+   "step_id": "baraboshkin.tidal_example_upper",
+   "id": "t36"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_example_lower#c2"
+   ],
+   "prompt": "В горизонте 5 часто чередуются линзовидные прослои {{1}} и алевролита; песчаники преимущественно {{2}}.",
+   "options": [],
+   "answer": [
+    "песчаника",
+    "белые, грубозернистые и косослоистые"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении о горизонте 5 указаны чередование песчаников с алевролитами и характеристики песчаников (стр. 42).",
+   "step_id": "baraboshkin.tidal_example_lower",
+   "id": "t37"
+  },
+  {
+   "type": "gap",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.tidal_example_lower#c3"
+   ],
+   "prompt": "Горизонт 5 интерпретирован как осадки русел под воздействием приливов, с изменчивыми течениями и днищем из глинистых и песчаных {{1}}, покрытых «{{2}}».",
+   "options": [],
+   "answer": [
+    "отмелей",
+    "дюнами"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В интерпретации горизонта 5 названы глинистые и песчаные отмели, покрытые «дюнами» (стр. 42).",
+   "step_id": "baraboshkin.tidal_example_lower",
+   "id": "t38"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_channel_section#c2"
+   ],
+   "prompt": "Как изменяются приливные рукава вверх по разрезу?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Утоняются, содержат больше глинистого материала и многочисленные ходы илоедов",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Становятся грубее и содержат меньше глинистого материала",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Переходят вверх в параллельно-слоистые прибрежные баровые пески",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Сохраняют одинаковый состав, а меняются только направления палеотечений",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Вверх по разрезу рукава утоняются, становятся более глинистыми и содержат многочисленные ходы илоедов (стр. 42).",
+   "step_id": "baraboshkin.tidal_channel_section",
+   "id": "t39"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_sand_bodies#c3",
+    "baraboshkin.tidal_sand_bodies#c4",
+    "baraboshkin.tidal_sand_bodies#c5"
+   ],
+   "prompt": "Выберите верные утверждения о приливных протоках и песчаных телах.",
+   "options": [
+    {
+     "id": "a",
+     "text": "На дистальных песчаных грядах количество осадка ограничено, а приливные течения ослаблены.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Приливные протоки менее склонны менять направление и отмирать, однако могут мигрировать.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Форма и размеры песчаных тел зависят от размеров и формы рукавов и степени их латеральной миграции.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Приливные протоки часто меняют направление и отмирают, но не могут мигрировать.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Форма песчаных тел не зависит от размеров и формы рукавов.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Все три выбранных утверждения соответствуют описанию дистальных гряд, поведения проток и факторов формы тел (стр. 43).",
+   "step_id": "baraboshkin.tidal_sand_bodies",
+   "id": "t40"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "baraboshkin.tidal_interchannel_areas#c4",
+    "baraboshkin.tidal_interchannel_areas#c5"
+   ],
+   "prompt": "Расположите элементы разреза в порядке снизу вверх:",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пески и алевриты кос"
+    },
+    {
+     "id": "b",
+     "text": "Фации мангровых болот"
+    },
+    {
+     "id": "c",
+     "text": "Глинистые пробки, образовавшиеся при заполнении каналов"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В разрезе снизу располагаются пески и алевриты кос, выше — фации мангровых болот, где могут быть глинистые пробки (стр. 44).",
+   "step_id": "baraboshkin.tidal_interchannel_areas",
+   "id": "t41"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_interchannel_areas#c6"
+   ],
+   "prompt": "Какие отмели могут формироваться в аридном климате, особенно около границы зоны максимальных приливов?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Илистые и песчаные отмели, местами с соляными ваннами",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Мангровые болота, расчленённые мелкими приливными каналами",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Пески и алевриты кос, переходящие в лагуны",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Глинистые пробки, образовавшиеся при заполнении лагун",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В аридном климате формируются илистые и песчаные отмели, местами с соляными ваннами (стр. 44).",
+   "step_id": "baraboshkin.tidal_interchannel_areas",
+   "id": "t42"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "baraboshkin.tidal_front_ridges#c1",
+    "baraboshkin.tidal_front_ridges#c3",
+    "baraboshkin.tidal_front_ridges#c4",
+    "baraboshkin.tidal_front_ridges#c5"
+   ],
+   "prompt": "Какие утверждения верно описывают приливные гряды фронта дельты?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Приливные гряды радиально расположены относительно устьев рукавов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В каналах между грядами встречаются отмели и бары с донными формами, ориентированными по направлениям паводковых и приливно-отливных течений.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Отмирание дельт этого типа может приводить к образованию обширных заболоченных равнин.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В идеализированном разрезе пески верхов регрессивного типа имеют однонаправленную косую слоистость.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Приливные гряды могут достигать 300 м в длину и 2 км в ширину.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Гряды радиально расположены, в межгрядовых каналах есть отмели и бары, а отмирание дельт может образовать заболоченные равнины (стр. 44).",
+   "step_id": "baraboshkin.tidal_front_ridges",
+   "id": "t43"
+  }
+ ]
+}

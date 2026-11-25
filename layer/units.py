@@ -28,6 +28,7 @@ class Unit:
     kind: str            # paragraph | heading | formula | table | figure | task | running_header
     text: str
     excerpt: str
+    in_scope: bool = True   # False — кусок соседнего раздела на крайней странице
 
     def to_dict(self):
         return asdict(self)
@@ -75,7 +76,7 @@ def classify(block: str, headers: set[str], in_tasks: bool) -> str:
     s = block.strip()
     first = s.splitlines()[0]
     bare = s.strip("# *")
-    if (PAGE_NUM_RE.match(s) or len(bare) <= 2 or set(bare) <= set("-—_ ")
+    if (PAGE_NUM_RE.match(s) or len(bare) <= 2 or (len(bare) < 25 and re.fullmatch(r"[\d\s.,;:]+", bare)) or set(bare) <= set("-—_ ")
             or (6 <= len(bare) < 90 and "\n" not in s and bare.upper() in headers and not TASK_HEAD_RE.match(s))):
         return "running_header"   # колонтитул, номер страницы или обрывок распознавания
     if s.startswith("|"):
@@ -115,6 +116,13 @@ def split_units(ch: Chapter) -> list[Unit]:
             # формула, приклеенная к абзацу, остаётся в абзаце; одиночная строка-формула — отдельно
             n += 1
             units.append(Unit(f"p{p:03d}.{n:02d}", p, kind, b.strip(), _excerpt(b)))
+    # границы главы: куски соседних разделов на крайних страницах
+    start, end = ch.meta.get("start_at"), ch.meta.get("end_at")
+    i0 = next((i for i, u in enumerate(units) if start and u.text.lstrip("# *").startswith(start)), 0)
+    i1 = next((i for i, u in enumerate(units) if end and i > i0 and u.text.lstrip("# *").startswith(end)), len(units))
+    for i, u in enumerate(units):
+        if i < i0 or i >= i1:
+            u.in_scope = False
     return units
 
 
