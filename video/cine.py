@@ -412,8 +412,13 @@ class CineRenderer:
             kws = getattr(self.tpl, "scale_keyword", ())
             items = [x for x in (self.spec.get("plaque") or []) if not any(kw in x.lower() for kw in kws)]
             pl = visible(" ".join(items).rstrip(" .;:") + ("; " if items else "") + self.scale_note, "плашка")
-        fpl, pls = fit(pl, x1 - x0, 30, 26, 2)
-        text_block(d, (x0, 1290), pls, fpl, mix(muted, text, 0.15))
+        fpl, pls = fit(pl, x1 - x0 - 24, 32, 28, 2)
+        # плашка не должна прятаться за разрезом: подложка и место ниже кадра сцены
+        ph = len(pls) * line_h(fpl)
+        py = 1352
+        _bg = hex_rgb(st["background"])
+        d.rounded_rectangle([x0 - 12, py - 8, x1 + 12, py + ph + 8], radius=12, fill=mix(_bg, hex_rgb(st["panel"]), 0.85))
+        text_block(d, (x0, py), pls, fpl, mix(muted, text, 0.35))
 
     def _legend(self, d, x, y):
         st = self.style

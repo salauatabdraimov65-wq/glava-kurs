@@ -54,6 +54,21 @@ action в beat: {"time_to": момент к концу фразы} | {"highlight
 
 COMPUTED_TEMPLATES = {"well_tool_curve", "pressure_diffusion", "section_through_time"}  # кадр считается из модели
 
+
+def template_doc(template: str) -> str:
+    """Описание параметров — из самого станка (video.templates.catalog), чтобы сценарий и станок не расходились;
+    к нему — правила подачи из TEMPLATES (ограничения сцены). Станка нет — только TEMPLATES."""
+    try:
+        from video.templates import catalog
+        c = catalog().get(template)
+    except Exception:
+        c = None
+    if not c:
+        return TEMPLATES[template]
+    rules = TEMPLATES.get(template, "").split("ОГРАНИЧЕНИЯ", 1)
+    extra = ("\nОГРАНИЧЕНИЯ" + rules[1]) if len(rules) == 2 else ""
+    return f"{c['summary']}\n{c['guide']}{extra}"
+
 FORMATS = {
     "short": {"aspect": "9:16", "words": (90, 160), "seconds": "40–75", "focus": "один механизм"},
     "long": {"aspect": "16:9", "words": (200, 380), "seconds": "90–180",
@@ -109,7 +124,7 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
     scales = sc.read_text(encoding="utf-8") if sc.exists() else "(нет)"
     f = FORMATS[fmt]
     sys_p = SYS.format(aspect=f["aspect"], seconds=f["seconds"], focus=f["focus"], template=template,
-                       template_doc=TEMPLATES[template], lith=list(style["lithology"]), fluids=list(style["fluids"]),
+                       template_doc=template_doc(template), lith=list(style["lithology"]), fluids=list(style["fluids"]),
                        curves=list(style["curves"]), wmin=f["words"][0], wmax=f["words"][1],
                        misc="; ".join(m["text"] for m in misc), scales=scales)
     user = (f"Узел: {node['title']} ({node_id}), тип {node['difficulty']}\nСуть: {node['layers']['main']['text']}\n"
@@ -146,9 +161,14 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
             b["pause"] = b["pause_s"]          # станок video/ читает поле pause
         if len((b.get("say") or "").split()) > 20:
             problems.append(f"длинная фраза: {b['say'][:50]}…")
+    # служебные фразы модели («кратность допишет код») — не для зрителя
+    for key in ("plaque", "exaggerations"):
+        spec[key] = [x for x in (spec.get(key) or []) if not re.search(r"\bкод\b|допиш", x, re.I)]
+    if not spec.get("plaque"):
+        spec["plaque"] = ["не в масштабе:"]
     # честность масштаба: условная ширина ствола всегда подписана числом (типичный диаметр ~0,2 м)
     p = spec.get("params") or {}
-    if template == "well_tool_curve" and float(p.get("bore_width") or 0) > 0.3:
+    if template == "well_tool_curve" and "bore_diameter_m" not in p and float(p.get("bore_width") or 0) > 1.0:   # старый формат (ширина в м)
         real = float(p.get("bore_real_m") or 0.2)   # реальный диаметр: из параметров сцены, иначе типичный ~0,2 м
         k = round(float(p["bore_width"]) / real)
         note = f"ствол показан примерно в {k} раз шире реального (≈{real:g} м)".replace(".", ",")
