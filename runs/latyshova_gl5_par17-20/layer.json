@@ -3889,6 +3889,19 @@
      "by_model": false,
      "unit_id": "p094.01",
      "text_by_model": true
+    },
+    {
+     "id": "latyshova.rock_table_dense#c13",
+     "text": "В чистых карбонатных коллекторах низкой пористости отмечены глубокое проникновение, минимальные показания гамма-метода и нейтронные показания выше, чем в песчаных коллекторах; проникновение может казаться отсутствующим.",
+     "kind": "observation",
+     "page_pdf": 93,
+     "page_print": null,
+     "quote": "Глубокое проникновение | Минимальные или фильтрата, кажущееся отсутствие проникновения | То же | - | минимальные | То же, но выше, чем в песчаных коллекторах",
+     "source_kind": "table",
+     "by_model": false,
+     "unit_id": "p093.03",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
@@ -7880,6 +7893,19 @@
      "by_model": false,
      "unit_id": "p100.09",
      "text_by_model": true
+    },
+    {
+     "id": "latyshova.clay_saturation_thresholds#c14",
+     "text": "Для чистого коллектора при αСП=1: Pₙ=35 соответствует чистой нефти; 7 — нефти с небольшим количеством воды; 2 — воде с признаками нефти; 1,3 — чистой воде.",
+     "kind": "observation",
+     "page_pdf": 100,
+     "page_print": null,
+     "quote": "при испытании даст соответственно: чистую нефть; нефть с небольшим количеством воды; воду с признаками нефти; чистую воду.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p100.01",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
@@ -9706,6 +9732,32 @@
      "by_model": false,
      "unit_id": "p105.02",
      "text_by_model": true
+    },
+    {
+     "id": "latyshova.mixed_thin_interbeds#c11",
+     "text": "Эффективную толщину продуктивных прослоев находят по среднему удельному сопротивлению пачки, учитывая сопротивления глин и плотных пород и их доли: вклад каждого типа пород учитывается пропорционально его толщине.",
+     "kind": "inference",
+     "page_pdf": 104,
+     "page_print": null,
+     "quote": "если удельные сопротивления плотных разностей 38 Ом·м, глин 2,2 Ом·м, продуктивных коллекторов 25 Ом·м.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p104.02",
+     "text_by_model": true,
+     "added_by": "idea_recall"
+    },
+    {
+     "id": "latyshova.mixed_thin_interbeds#c12",
+     "text": "При расчёте эффективной толщины слоистого глинистого коллектора по среднему сопротивлению игнорирование плотных прослоев приводит к ошибке определения толщины.",
+     "kind": "inference",
+     "page_pdf": 104,
+     "page_print": null,
+     "quote": "ecII np paCte He bΦ no BeJIuHHe cpeIHeRo COIIpOTHBJIeHHN II pH IcIOJIb3OBaHHN MoJIeN CIOHCTOrO rJIHHCTOrO KOJIeKTopa He yHTbBAOTcI IIOTbIe IIPOcJIoH.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p104.05",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
