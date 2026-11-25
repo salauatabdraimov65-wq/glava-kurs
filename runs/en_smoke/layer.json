@@ -1,0 +1,2440 @@
+{
+ "chapter": "en_smoke",
+ "source": "samples/rehearsals/well_logging_en.md",
+ "title": "Well logging (Wikipedia, smoke test EN)",
+ "pdf_pages": [
+  "1-8"
+ ],
+ "generated_by": "layer.build; модели: gpt-6-luna / gpt-6.1-terra",
+ "nodes": [
+  {
+   "id": "en.logging_basics",
+   "order": 1,
+   "title": "Что показывает каротаж скважины",
+   "book_title": "Обзор каротажа",
+   "why_here": {
+    "text": "Шаг объясняет, что записывает каротаж и как эти данные помогают принимать решения.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "И",
+    "secondary": "Пр"
+   },
+   "threshold": true,
+   "pages": [
+    1
+   ],
+   "layers": {
+    "topic": {
+     "text": "Что показывает каротаж",
+     "by_model": true
+    },
+    "main": {
+     "text": "Каротаж — подробная запись геологических формаций, вскрытых скважиной. Запись получают осмотром образцов или измерениями приборами в скважине. По измерениям и их анализу специалисты выводят дополнительные свойства и принимают решения о бурении и добыче.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Приборы измеряют физические свойства пород на разных глубинах → анализ этих измерений позволяет выводить дополнительные свойства, например насыщенность углеводородами и пластовое давление.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Специалист получает запись свойств пород по глубине, анализирует измерения и связывает их с другими наборами данных. Результаты используют для выводов о свойствах пласта и решений о бурении и добыче.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Каротаж может основываться на осмотре поднятых образцов или физических измерениях в скважине. Некоторые геофизические измерения выполняют при бурении, освоении, добыче или ликвидации скважины. Проволочный каротаж и газовый каротаж — разные методы, связанные интеграцией данных.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.logging_basics#c1",
+     "text": "Каротаж — это подробная запись геологических формаций, вскрытых скважиной.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "making a detailed record (a well log) of the geologic formations penetrated by a borehole",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.01",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c2",
+     "text": "Запись может основываться на визуальном осмотре поднятых образцов или на физических измерениях приборами в скважине.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs)",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.01",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c3",
+     "text": "Некоторые геофизические каротажные измерения можно выполнять на любом этапе истории скважины: при бурении, освоении, добыче или ликвидации.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "during any phase of a well's history: drilling, completing, producing, or abandoning",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.01",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c4",
+     "text": "Каротаж применяют при поисках нефти и газа, подземных вод, полезных ископаемых и геотермальных ресурсов, а также в экологических, научных и геотехнических исследованиях.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.01",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c5",
+     "text": "Проволочный каротаж используют в горном деле, нефтегазовой отрасли и консультировании по подземным водам для получения непрерывной записи свойств пород.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "uses wireline logging to obtain a continuous record of a formation's rock properties",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c6",
+     "text": "Проволочный каротаж определяется как получение и анализ геофизических данных в зависимости от глубины скважины с предоставлением связанных услуг.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "The acquisition and analysis of geophysical data performed as a function of well bore depth, together with the provision of related services.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c7",
+     "text": "Проволочный каротаж и газовый каротаж — разные методы, но они тесно связаны интеграцией наборов данных.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "\"wireline logging\" and \"mud logging\" are not the same, yet are closely linked through the integration of the data sets",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c8",
+     "text": "Измерения привязывают к истинной глубине вдоль ствола (TAH).",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "The measurements are made referenced to \"TAH\" - True Along Hole depth",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_basics#c9",
+     "text": "Измерения и их анализ позволяют выводить дополнительные свойства, например насыщенность углеводородами и пластовое давление, и принимать решения о бурении и добыче.",
+     "kind": "inference",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.03",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "refutes_misconception",
+     "target": "misc.log_is_rock"
+    }
+   ],
+   "misconception": {
+    "ref": "misc.log_is_rock",
+    "text": "Каротаж — не сама порода, а запись её свойств, полученная осмотром образцов или измерениями.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Вход: образцы, поднятые на поверхность, или физические измерения приборами в скважине. Выход: запись свойств пород в зависимости от глубины; анализ позволяет выводить насыщенность углеводородами и пластовое давление.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Глава не описывает ошибки, пропуски или сбои каротажных данных.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: при объединении наборов данных могут возникнуть ошибки сопоставления глубины.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: выводы модели по каротажу могут быть ненадёжными, если входные измерения или их привязка ошибочны.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Гипотеза: каротаж похож на журнал измерений датчиков, привязанный к координате вдоль скважины.",
+    "breaks_where": "Аналогия ограничена: глава не описывает цифровой формат записи, устройство датчиков или правила обработки данных.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "каротаж",
+    "геологический каротаж",
+    "геофизический каротаж",
+    "проволочный каротаж",
+    "газовый каротаж",
+    "TAH",
+    "насыщенность углеводородами",
+    "пластовое давление"
+   ],
+   "terms_used": [
+    "скважина",
+    "геологические формации",
+    "геофизические данные",
+    "свойства пород"
+   ],
+   "glossary": [
+    {
+     "term": "Каротаж",
+     "definition": "Подробная запись геологических формаций, вскрытых скважиной.",
+     "en": "well logging"
+    },
+    {
+     "term": "Геологический каротаж",
+     "definition": "Запись, основанная на визуальном осмотре образцов, поднятых на поверхность.",
+     "en": "geological log"
+    },
+    {
+     "term": "Геофизический каротаж",
+     "definition": "Запись, основанная на физических измерениях приборами в скважине.",
+     "en": "geophysical log"
+    },
+    {
+     "term": "Проволочный каротаж",
+     "definition": "Получение и анализ геофизических данных в зависимости от глубины скважины, вместе с связанными услугами.",
+     "en": "wireline logging"
+    },
+    {
+     "term": "Газовый каротаж",
+     "definition": "Отдельный от проволочного каротажа метод; их данные могут интегрировать.",
+     "en": "mud logging"
+    },
+    {
+     "term": "TAH",
+     "definition": "Истинная глубина вдоль ствола скважины, к которой привязывают измерения.",
+     "en": "True Along Hole depth"
+    },
+    {
+     "term": "Насыщенность углеводородами",
+     "definition": "Свойство, которое можно выводить по измерениям и их анализу.",
+     "en": "hydrocarbon saturation"
+    },
+    {
+     "term": "Пластовое давление",
+     "definition": "Давление в пласте, которое можно выводить по измерениям и их анализу.",
+     "en": "formation pressure"
+    }
+   ],
+   "procedure": [],
+   "numbers": [],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.logging_tools",
+   "order": 2,
+   "title": "Как приборы записывают свойства пород",
+   "book_title": "Проволочный каротаж",
+   "why_here": {
+    "text": "Шаг объясняет, как приборы получают и записывают сведения о породах и флюидах.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "И",
+    "secondary": "Пр"
+   },
+   "threshold": false,
+   "pages": [
+    1,
+    3
+   ],
+   "layers": {
+    "topic": {
+     "text": "Запись каротажных данных",
+     "by_model": true
+    },
+    "main": {
+     "text": "Каротажный прибор спускают в скважину на кабеле, а датчики регистрируют свойства пород и содержащихся в них флюидов. Данные записывают на поверхности в реальном времени или сохраняют в скважине.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Приборы с датчиками реагируют на свойства пород и флюидов → получают измерения → сохраняют их на поверхности или в памяти прибора. Основные группы методов выделяют по свойству, на которое они реагируют.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Специалист спускает в скважину один прибор или сборку приборов на проволочном кабеле. Данные записывают во время бурения или после достижения полной глубины. Клиенту предоставляют каротажную запись и электронную копию исходных данных.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Каротаж можно проводить во время бурения или после достижения скважиной полной глубины. В первом случае получают сведения о вскрываемых породах в реальном времени; во втором можно зарегистрировать весь ствол. Глава также перечисляет методы визуализации: оптические, акустические, электрические и совмещающие акустические и электрические техники.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.logging_tools#c1",
+     "text": "Каротажный прибор или сборку приборов спускают в скважину на конце проволочного кабеля.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "lowering a 'logging tool' - or a string of one or more instruments - on the end of a wireline into an oil well",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c2",
+     "text": "Петрофизические свойства регистрируют с помощью различных датчиков.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "recording petrophysical properties using a variety of sensors",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c3",
+     "text": "Приборы измеряют, среди прочего, естественное гамма-излучение, электрические и акустические свойства, индуцированные радиоактивные отклики, электромагнитные характеристики, ЯМР и давление.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "measure the natural gamma ray, electrical, acoustic, stimulated radioactive responses, electromagnetic, nuclear magnetic resonance, pressure and other properties",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c4",
+     "text": "В статье каротажные методы широко группируются по основному свойству, на которое они реагируют.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "they are broadly broken down by the main property that they respond to",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c5",
+     "text": "Данные записывают либо на поверхности в реальном времени, либо в скважине в режиме памяти; затем клиенту предоставляют каротажную запись и электронную копию исходных данных.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "recorded either at surface (real-time mode), or in the hole (memory mode)",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c6",
+     "text": "Каротаж можно проводить во время бурения, чтобы получать информацию о вскрываемых породах в реальном времени.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "during the drilling process (see Logging While Drilling), to provide real-time information about the formations being penetrated by the borehole",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c7",
+     "text": "Также каротаж можно проводить после достижения скважиной полной глубины, регистрируя весь ствол.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "once the well has reached Total Depth and the whole depth of the borehole can be logged",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_tools#c8",
+     "text": "К методам визуализации относятся оптическая, акустическая и электрическая визуализация, а также методы, объединяющие акустическую и электрическую техники в одном каротажном приборе.",
+     "kind": "observation",
+     "page_pdf": 3,
+     "page_print": null,
+     "quote": "Methods that draw on both acoustic and electrical imaging techniques using the same logging tool",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p003.03",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_basics"
+    },
+    {
+     "type": "refutes_misconception",
+     "target": "misc.log_is_rock"
+    }
+   ],
+   "misconception": {
+    "ref": "misc.log_is_rock",
+    "text": "Каротажная кривая — не сама порода, а запись измерений приборов, реагирующих на её свойства.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Вход — измерения датчиков свойств пород и флюидов. Выход — каротажная запись и электронная копия исходных данных.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Глава не описывает ошибки данных, несовпадение глубин или другие случаи, когда запись нарушается.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: режим записи и тип прибора могут влиять на сопоставимость данных для моделей.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: при объединении данных важно учитывать, какие свойства измеряет каждый тип датчика.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Датчики похожи на разные типы сборщиков данных: каждый регистрирует свой класс сигналов.",
+    "breaks_where": "Аналогия ограничена: глава описывает приборы, реагирующие на свойства пород и флюидов, а не программные сборщики.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": {
+    "inputs": "Глава не указывает.",
+    "manual_steps": "Глава не указывает.",
+    "judgment_points": "Глава не указывает.",
+    "time": "Глава не указывает.",
+    "typical_errors": "Глава не указывает.",
+    "by_model": true
+   },
+   "terms_introduced": [
+    "Каротаж",
+    "Проволочный каротаж",
+    "Каротажная запись",
+    "Режим памяти",
+    "Полная глубина скважины"
+   ],
+   "terms_used": [
+    "Датчик",
+    "Исходные данные",
+    "Оптическая визуализация",
+    "Акустическая визуализация",
+    "Электрическая визуализация"
+   ],
+   "glossary": [
+    {
+     "term": "Каротаж",
+     "definition": "Регистрация свойств пород и содержащихся в них флюидов приборами в скважине.",
+     "en": "Well logging"
+    },
+    {
+     "term": "Проволочный каротаж",
+     "definition": "Каротаж, при котором прибор или сборку приборов спускают в скважину на проволочном кабеле.",
+     "en": "Wireline logging"
+    },
+    {
+     "term": "Каротажная запись",
+     "definition": "Предоставляемое клиенту представление зарегистрированных данных.",
+     "en": "Well log"
+    },
+    {
+     "term": "Режим памяти",
+     "definition": "Способ записи, при котором данные сохраняют в скважине.",
+     "en": "Memory mode"
+    },
+    {
+     "term": "Полная глубина скважины",
+     "definition": "Глубина, которой скважина достигла к моменту регистрации всего ствола.",
+     "en": "Total Depth"
+    }
+   ],
+   "procedure": [
+    "Спустить каротажный прибор или сборку приборов в скважину на проволочном кабеле.",
+    "Регистрировать свойства пород датчиками.",
+    "Записать данные на поверхности в реальном времени или сохранить их в скважине в режиме памяти.",
+    "Предоставить клиенту каротажную запись и электронную копию исходных данных."
+   ],
+   "numbers": [],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   }
+  },
+  {
+   "id": "en.depth_and_classification",
+   "order": 3,
+   "title": "Как измерения привязывают к глубине",
+   "book_title": "Проволочный каротаж",
+   "why_here": {
+    "text": "Привязка к глубине нужна, чтобы понимать, где именно получено каждое измерение каротажа.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "Пр",
+    "secondary": "И"
+   },
+   "threshold": true,
+   "pages": [
+    1
+   ],
+   "layers": {
+    "topic": {
+     "text": "Привязка измерений к глубине",
+     "by_model": true
+    },
+    "main": {
+     "text": "В реальном времени измерения сразу связывают с измеренной глубиной кабеля. В режиме памяти сначала связывают измерения со временем, затем объединяют их с глубиной по общей временной шкале.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Измерения и глубину записывают относительно одного времени → сопоставляют записи → получают отклик прибора как функцию глубины. Растяжение кабеля и температура влияют на измеренную глубину → измерения необходимо корректировать.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Специалист определяет глубину кабеля по показаниям калиброванного счётчика колеса или магнитным меткам. Затем корректирует измерения на упругое растяжение и температуру; для режима памяти совмещает данные по времени.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Магнитные метки с калиброванными приращениями длины кабеля точнее счётчика колеса. Глубину, записанную в режиме памяти, можно корректировать так же, как данные реального времени. По главе, достижимая точность TAH не должна различаться. Каротаж также различают по функции, технологии и измеряемым физическим свойствам.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.depth_and_classification#c1",
+     "text": "Данные в реальном времени непосредственно привязывают к измеренной глубине кабеля.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "Real-time data is recorded directly against measured cable depth.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c2",
+     "text": "В режиме памяти данные измерений записывают по времени, одновременно измеряя глубину в зависимости от времени; затем наборы объединяют по общей временной шкале, получая отклик прибора как функцию глубины.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "The two data sets are then merged using the common time base to create an instrument response versus depth log.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c3",
+     "text": "Записанную в режиме памяти глубину можно корректировать так же, как данные реального времени, поэтому достижимая точность TAH не должна различаться.",
+     "kind": "inference",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "so there should be no difference in the attainable TAH accuracy",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c4",
+     "text": "Измеренную глубину кабеля можно получать разными способами; обычно используют калиброванный счетчик колеса или, точнее, магнитные метки с калиброванными приращениями длины кабеля.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "usually either recorded based on a calibrated wheel counter, or (more accurately) using magnetic marks which provide calibrated increments of cable length",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.07",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c5",
+     "text": "Измерения необходимо корректировать на упругое растяжение и температуру.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "corrected for elastic stretch and temperature",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.07",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c6",
+     "text": "Проволочные каротажные записи можно классифицировать по функции или используемой технологии.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "categorized either by their function or by the technology that they use",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c7",
+     "text": "Каротаж в открытом стволе проводят до облицовки нефтяной или газовой скважины трубами.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "\"Open hole logs\" are run before the oil or gas well is lined with pipe or cased.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c8",
+     "text": "Каротаж в обсаженной скважине проводят после установки обсадной или эксплуатационной колонны.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "\"Cased hole logs\" are run after the well is lined with casing or production pipe.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.depth_and_classification#c9",
+     "text": "Проволочные каротажные записи можно разделять на широкие категории по измеряемым физическим свойствам.",
+     "kind": "observation",
+     "page_pdf": 1,
+     "page_print": null,
+     "quote": "divided into broad categories based on the physical properties measured",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p001.09",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_basics"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    }
+   ],
+   "misconception": {
+    "ref": null,
+    "text": "Не следует считать, что данные режима памяти невозможно корректировать так же, как данные реального времени.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Входы: измерения и глубина кабеля; для режима памяти оба набора записывают по времени. Выход: отклик прибора как функция глубины.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Измеренную глубину требуется корректировать на упругое растяжение и температуру. Глава не описывает другие возможные сбои данных.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: ошибки синхронизации времени могут сместить привязку измерений к глубине.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: при объединении каротажных файлов полезно сохранять способ измерения глубины и применённые поправки.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Это похоже на объединение двух потоков данных по временным меткам: один содержит измерения, другой — положение кабеля.",
+    "breaks_where": "В отличие от цифровых потоков, измеренная длина кабеля требует поправок на упругое растяжение и температуру.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": {
+    "inputs": "Измерения прибора, измеренная глубина кабеля; в режиме памяти — временные записи обоих наборов.",
+    "manual_steps": "Измерить глубину, сопоставить записи по времени и применить поправки на растяжение и температуру.",
+    "judgment_points": "Выбрать способ получения глубины кабеля и выполнить необходимые корректировки.",
+    "time": "",
+    "typical_errors": "Глава не перечисляет типичные ошибки.",
+    "by_model": true
+   },
+   "terms_introduced": [
+    "Привязка к глубине",
+    "Каротаж в реальном времени",
+    "Каротаж в режиме памяти",
+    "Каротаж в открытом стволе",
+    "Каротаж в обсаженной скважине",
+    "Упругое растяжение"
+   ],
+   "terms_used": [
+    "Измеренная глубина кабеля",
+    "Калиброванный счётчик колеса",
+    "Магнитные метки",
+    "Общая временная шкала",
+    "Температурная коррекция",
+    "TAH"
+   ],
+   "glossary": [
+    {
+     "term": "Каротаж в реальном времени",
+     "definition": "Запись измерений непосредственно относительно измеренной глубины кабеля.",
+     "en": "Real-time logging"
+    },
+    {
+     "term": "Каротаж в режиме памяти",
+     "definition": "Запись измерений по времени с последующим сопоставлением с глубиной, также записанной по времени.",
+     "en": "Memory logging"
+    },
+    {
+     "term": "Каротаж в открытом стволе",
+     "definition": "Каротаж до того, как скважину облицевали трубами или обсадили.",
+     "en": "Open hole logging"
+    },
+    {
+     "term": "Каротаж в обсаженной скважине",
+     "definition": "Каротаж после установки обсадной или эксплуатационной колонны.",
+     "en": "Cased hole logging"
+    },
+    {
+     "term": "Упругое растяжение",
+     "definition": "Изменение длины кабеля при растяжении, которое учитывают при корректировке измерений.",
+     "en": "Elastic stretch"
+    }
+   ],
+   "procedure": [
+    "Измерить глубину кабеля одним из доступных способов.",
+    "Для данных режима памяти записать измерения и глубину относительно времени.",
+    "Объединить данные по общей временной шкале, получив отклик прибора как функцию глубины.",
+    "Скорректировать измерения на упругое растяжение и температуру."
+   ],
+   "numbers": [],
+   "needs_scan": [],
+   "decision_on_data": {
+    "features": [
+     "Время измерения",
+     "Измеренная глубина кабеля",
+     "Способ измерения глубины"
+    ],
+    "rule": "Данные режима памяти объединяют с глубиной по общей временной шкале; измерения корректируют на упругое растяжение и температуру.",
+    "conclusion": "Получают отклик прибора как функцию глубины.",
+    "counterexample": "Глава не приводит контрпример к этому правилу."
+   },
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.electrical_logging_history",
+   "order": 4,
+   "title": "Первые электрические измерения в скважине",
+   "book_title": "История",
+   "why_here": {
+    "text": "Шаг показывает, как появились электрические измерения скважин и какие выводы позволяли делать первые записи.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "И",
+    "secondary": "М"
+   },
+   "threshold": false,
+   "pages": [
+    2
+   ],
+   "layers": {
+    "topic": {
+     "text": "Первые электрические измерения",
+     "by_model": true
+    },
+    "main": {
+     "text": "В 1927 году в скважине получили первую электрическую каротажную запись сопротивления. Позднее совместная регистрация сопротивления и самопроизвольного потенциала помогала различать проницаемые нефтеносные пласты и непроницаемые непродуктивные пласты.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Буровой раствор естественно создавал эффект самопроизвольного потенциала на границах проницаемых пластов → гальванометр колебался даже без пропускания тока. Одновременная запись этого сигнала и сопротивления → позволяла различать проницаемые нефтеносные и непроницаемые непродуктивные пласты.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "В 1927 году сотрудники Schlumberger спустили электрический зонд в скважину и получили первую каротажную запись. Позднее специалисты одновременно регистрировали самопроизвольный потенциал и сопротивление. Дипметр позволял вычислять угол и направление падения слоя.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Первая запись в современных терминах была каротажем сопротивления, описанным как перевернутый боковой каротаж длиной 3,5 метра. Источник не уточняет, как именно вычисляли падение слоя или различали пласты по конкретным значениям кривых.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.electrical_logging_history#c1",
+     "text": "Конрада и Марселя Шлюмберже, основавших Schlumberger Limited в 1926 году, считают изобретателями электрического каротажа.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "who founded Schlumberger Limited in 1926, are considered the inventors of electric well logging",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c2",
+     "text": "Конрад разработал массив Шлюмберже для поисков металлических руд, а братья приспособили этот поверхностный метод для подземных измерений.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c3",
+     "text": "5 сентября 1927 года сотрудники Schlumberger спустили электрический зонд в скважину в Пешельбронне, Эльзас, и получили первую каротажную запись.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "On September 5, 1927, a crew working for Schlumberger lowered an electric sonde or tool down a well in Pechelbronn, Alsace, France creating the first well log.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c4",
+     "text": "В современных терминах первая запись была каротажем сопротивления, описываемым как перевернутый боковой каротаж длиной 3,5 метра.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "the first log was a resistivity log that could be described as 3.5-meter upside-down lateral log",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c5",
+     "text": "В 1931 году Анри Жорж Долль и Г. Дешатр заметили, что гальванометр колеблется даже без пропускания тока по кабелям в скважине.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "the galvanometer wiggled even when no current was being passed through the logging cables down in  the well",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c6",
+     "text": "Это наблюдение привело к открытию самопроизвольного потенциала (SP), который был столь же важен, как возможность измерять сопротивление.",
+     "kind": "inference",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "This led to the discovery of the spontaneous potential (SP) which was as important as the ability to measure resistivity.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c7",
+     "text": "Эффект SP естественно создавался буровым раствором на границах проницаемых пластов.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The SP effect was produced naturally by the borehole mud at the boundaries of permeable beds.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c8",
+     "text": "Совместная регистрация SP и сопротивления позволяла различать проницаемые нефтеносные пласты и непроницаемые непродуктивные пласты.",
+     "kind": "inference",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "By simultaneously recording SP and resistivity, loggers could distinguish between permeable oil-bearing beds and impermeable nonproducing beds.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c9",
+     "text": "В 1940 году Schlumberger изобрела дипметр самопроизвольного потенциала, позволявший вычислять угол и направление падения слоя.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "this instrument allowed the calculation of the dip and direction of the dip of a layer",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.electrical_logging_history#c10",
+     "text": "Позднее базовый дипметр усовершенствовали дипметром сопротивления в 1947 году и непрерывным дипметром сопротивления в 1952 году.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "enhanced by the resistivity dipmeter (1947) and the continuous resistivity dipmeter (1952)",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.04",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_basics"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    }
+   ],
+   "misconception": {
+    "ref": null,
+    "text": "Источник не формулирует конкретное заблуждение новичка, которое этот шаг исправляет.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Вход — электрические измерения зонда в скважине. Первая запись показывала сопротивление; позднее одновременно записывали самопроизвольный потенциал и сопротивление. Совместная запись позволяла различать описанные в главе типы пластов.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Глава не указывает численные значения кривых или случаи, когда различение пластов по совместной записи не работает.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: в цифровых данных первой записи соответствовала бы кривая сопротивления по глубине.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: для анализа исторических данных важно проверять, записаны ли сопротивление и самопроизвольный потенциал одновременно.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Гипотеза: самопроизвольный сигнал можно сравнить с телеметрией, которая появляется без активной команды на передачу.",
+    "breaks_where": "Гипотеза: аналогия не объясняет физическое происхождение сигнала; глава связывает эффект с буровым раствором и границами проницаемых пластов.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "Электрический каротаж",
+    "Сопротивление",
+    "Самопроизвольный потенциал",
+    "Дипметр",
+    "Падение слоя"
+   ],
+   "terms_used": [
+    "Буровой раствор",
+    "Проницаемый пласт",
+    "Непроницаемый пласт",
+    "Гальванометр"
+   ],
+   "glossary": [
+    {
+     "term": "Электрический каротаж",
+     "definition": "Измерения электрических свойств в скважине с помощью спускаемого зонда.",
+     "en": "electric well logging"
+    },
+    {
+     "term": "Электрический зонд",
+     "definition": "Прибор, который спускают в скважину для электрических измерений.",
+     "en": "electric sonde"
+    },
+    {
+     "term": "Сопротивление",
+     "definition": "Электрическое свойство, измерение которого использовалось в первой каротажной записи.",
+     "en": "resistivity"
+    },
+    {
+     "term": "Самопроизвольный потенциал",
+     "definition": "Естественный электрический эффект, возникавший на границах проницаемых пластов.",
+     "en": "spontaneous potential (SP)"
+    },
+    {
+     "term": "Дипметр",
+     "definition": "Прибор, позволявший вычислять угол и направление падения слоя.",
+     "en": "dipmeter"
+    },
+    {
+     "term": "Падение слоя",
+     "definition": "Наклон слоя; дипметр позволял вычислять его угол и направление.",
+     "en": "dip"
+    }
+   ],
+   "procedure": [],
+   "numbers": [
+    "1926 год — основана Schlumberger Limited.",
+    "5 сентября 1927 года — получена первая каротажная запись.",
+    "3,5 метра — длина первого каротажа, описанного как перевернутый боковой.",
+    "1931 год — обнаружен эффект самопроизвольного потенциала.",
+    "1940 год — изобретён дипметр самопроизвольного потенциала.",
+    "1947 год — усовершенствование дипметра сопротивления.",
+    "1952 год — создан непрерывный дипметр сопротивления."
+   ],
+   "needs_scan": [],
+   "decision_on_data": {
+    "features": [
+     "Самопроизвольный потенциал",
+     "Сопротивление"
+    ],
+    "rule": "При совместной регистрации самопроизвольного потенциала и сопротивления специалисты могли различать проницаемые нефтеносные пласты и непроницаемые непродуктивные пласты.",
+    "conclusion": "Совместная запись помогала различать указанные типы пластов.",
+    "counterexample": "Глава не описывает исключения или ошибки этого правила."
+   },
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.logging_technology_development",
+   "order": 5,
+   "title": "Как развивались каротажные приборы",
+   "book_title": "История",
+   "why_here": {
+    "text": "История показывает, как условия бурения и новые технологии меняли возможности каротажных приборов.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "М",
+    "secondary": "И"
+   },
+   "threshold": false,
+   "pages": [
+    2
+   ],
+   "layers": {
+    "topic": {
+     "text": "Развитие каротажных приборов",
+     "by_model": true
+    },
+    "main": {
+     "text": "Каротажные методы менялись вслед за свойствами бурового раствора и развитием электроники. Позже комбинированные приборы стали записывать сопротивление и пористость за один проход.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Нефтяной буровой раствор не проводит ток, поэтому обычные электрические методы с ним не работают. Индукционный каротаж разработали для решения этой проблемы; транзисторы и интегральные схемы повысили надёжность записей, а компьютеризация ускорила обработку и расширила сбор данных.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "В 1970-х комбинированные приборы записывали каротаж сопротивления и пористости за один проход по скважине. На некоторых комбинированных приборах до сих пор выполняют акустические, или sonic-записи.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Обычные электрические каротажные методы требуют проводящего, то есть водного, раствора. Ядерный каротаж дополнил акустический, но не вытеснил его полностью.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.logging_technology_development#c1",
+     "text": "Нефтяной буровой раствор впервые применили на месторождении Рангли в Колорадо в 1948 году.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Oil-based mud (OBM) was first used in Rangely Field, Colorado, in 1948.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c2",
+     "text": "Обычные электрические каротажные методы требуют проводящего водного раствора, тогда как нефтяные растворы не проводят ток.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c3",
+     "text": "Для решения этой проблемы в конце 1940-х годов разработали индукционный каротаж.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c4",
+     "text": "Появление транзисторов и интегральных схем в 1960-х годах значительно повысило надежность электрических каротажных записей.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The introduction of the transistor and integrated circuits in the 1960s made electric logs vastly more reliable.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c5",
+     "text": "Компьютеризация ускорила обработку каротажных данных и резко расширила возможности их сбора.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Computerization allowed much faster log processing, and dramatically expanded log data-gathering capacity.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c6",
+     "text": "В 1970-х появились комбинированные записи, в которых каротаж сопротивления и пористости выполняли за один проход по скважине.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "combo type logs where resistivity logs and porosity logs were recorded in one pass in the borehole",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c7",
+     "text": "Два типа каротажа пористости — акустический и ядерный — появились в 1940-х годах.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The two types of porosity logs (acoustic logs and nuclear logs) date originally from the 1940s.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.07",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c8",
+     "text": "Акустический каротаж развился из технологий, созданных во время Второй мировой войны.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Sonic logs grew out of technology developed during World War II.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.07",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_technology_development#c9",
+     "text": "Ядерный каротаж дополнил акустический, однако акустические или sonic-записи по-прежнему выполняют на некоторых комбинированных приборах.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "acoustic or sonic logs are still run on some combination logging tools",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.07",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.electrical_logging_history"
+    }
+   ],
+   "misconception": null,
+   "data_meaning": {
+    "from_chapter": {
+     "text": "На входе — условия применения раствора и приборов; результат — электрические, акустические и ядерные каротажные записи. Глава сообщает, что компьютеризация ускорила обработку и расширила сбор данных.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "При непроводящем нефтяном растворе обычные электрические методы не работают. Для этой проблемы разработали индукционный каротаж.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: тип бурового раствора может быть важным признаком при анализе каротажных данных.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: различия поколений приборов могут влиять на сопоставимость записей; глава этого не уточняет.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Гипотеза: развитие приборов напоминает обновление оборудования и вычислительной инфраструктуры, которое ускоряет сбор и обработку данных.",
+    "breaks_where": "Аналогия ограничена: глава описывает физическую совместимость электрических методов с буровым раствором, а не только вычислительную инфраструктуру.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "нефтяной буровой раствор",
+    "индукционный каротаж",
+    "акустический каротаж",
+    "ядерный каротаж",
+    "комбинированный каротаж"
+   ],
+   "terms_used": [
+    "электрический каротаж",
+    "каротаж сопротивления",
+    "каротаж пористости",
+    "акустическая, или sonic-запись"
+   ],
+   "glossary": [
+    {
+     "term": "Нефтяной буровой раствор",
+     "definition": "Раствор на нефтяной основе, который не проводит электрический ток.",
+     "en": "Oil-based mud (OBM)"
+    },
+    {
+     "term": "Индукционный каротаж",
+     "definition": "Каротажный метод, разработанный для решения проблемы применения непроводящего нефтяного раствора.",
+     "en": "Induction log"
+    },
+    {
+     "term": "Каротаж пористости",
+     "definition": "Каротаж, связанный с оценкой пористости; в главе названы акустический и ядерный типы.",
+     "en": "Porosity log"
+    },
+    {
+     "term": "Комбинированный каротаж",
+     "definition": "Запись разных видов каротажа за один проход по скважине.",
+     "en": "Combo-type log"
+    }
+   ],
+   "procedure": [],
+   "numbers": [
+    "1948 год: нефтяной буровой раствор впервые применили на месторождении Рангли в Колорадо.",
+    "Конец 1940-х: разработан индукционный каротаж.",
+    "1960-е: появились транзисторы и интегральные схемы; повысилась надёжность электрических записей.",
+    "1940-е: появились акустический и ядерный каротаж пористости.",
+    "1970-е: появились комбинированные записи сопротивления и пористости за один проход."
+   ],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.nuclear_logging_history",
+   "order": 6,
+   "title": "От гамма-каротажа к ядерному резонансу",
+   "book_title": "История",
+   "why_here": {
+    "text": "Шаг показывает, как ядерный каротаж перешёл от регистрации естественного излучения к активным и ЯМР-методам.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "И",
+    "secondary": "М"
+   },
+   "threshold": false,
+   "pages": [
+    2
+   ],
+   "layers": {
+    "topic": {
+     "text": "История ядерного каротажа",
+     "by_model": true
+    },
+    "main": {
+     "text": "Ядерный каротаж начинался с измерения естественного гамма-излучения, но вскоре появились методы активного облучения пород. Позднее разработали ЯМР-каротаж: его ранняя версия была научно успешной, но инженерно неудачной.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Естественная радиоактивность пород даёт сигнал гамма-каротажа; активные методы облучают породы ядерными частицами. Глинистые пласты обычно дают более высокий уровень гамма-излучения, поэтому гамма-каротаж помогает выявлять их. ЯМР-каротаж использует ядерный магнитный резонанс; развитие инженерных решений позволило перейти к непрерывной записи.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Гамма-каротаж используют для выявления глинистых пластов. Ядерные записи можно выполнять в обсаженных скважинах. Современная непрерывная технология ЯМР-каротажа применяется в нефтегазовой отрасли, поисках воды и руд.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Глинистые пласты часто образуют относительно малопроницаемую покрышку над углеводородными коллекторами. Обычно они имеют более высокий уровень гамма-излучения. Глава не утверждает, что гамма-каротаж напрямую измеряет глинистость.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.nuclear_logging_history#c1",
+     "text": "Первоначально ядерный каротаж разрабатывали для измерения естественного гамма-излучения подземных формаций.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c2",
+     "text": "Затем отрасль быстро перешла к методам, активно облучающим породы ядерными частицами.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "the industry quickly moved to logs that actively bombard rocks with nuclear particles",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c3",
+     "text": "Каротаж гамма-излучения, измеряющий естественную радиоактивность, появился в 1939 году, а нейтронный каротаж WSI — в 1941 году.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c4",
+     "text": "Гамма-каротаж особенно полезен для выявления глинистых пластов: они часто образуют относительно малопроницаемую покрышку над углеводородными коллекторами и обычно имеют более высокий уровень гамма-излучения.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "shale beds which often provide a relatively low permeability cap over hydrocarbon reservoirs usually display a higher level of gamma radiation",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c5",
+     "text": "Ядерные записи важны, поскольку их можно выполнять в обсаженных скважинах.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "These logs were important because they can be used in cased wells (wells with production casing).",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c6",
+     "text": "Во время Второй мировой войны правительство США предоставило Schlumberger почти полную монополию на каротаж открытого ствола, а Lane-Wells — монополию на каротаж обсаженных скважин.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The US Government gave a near wartime monopoly on open-hole logging to Schlumberger, and a monopoly on cased-hole logging to Lane-Wells.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c7",
+     "text": "Ядерные каротажные методы продолжали развиваться и после войны.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Nuclear logs continued to evolve after the war.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.08",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c8",
+     "text": "После открытия ядерного магнитного резонанса Блохом и Пёрселлом в 1946 году Chevron и Schlumberger в начале 1950-х разработали ЯМР-каротаж с использованием поля Земли.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "the nuclear magnetic resonance log using the Earth's field was developed in the early 1950s by Chevron and Schlumberger",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.09",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c9",
+     "text": "Николаас Блумберген подал патент Schlumberger в 1966 году.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Nicolaas Bloembergen filed the Schlumberger patent in 1966.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.09",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c10",
+     "text": "ЯМР-каротаж был научным успехом, но инженерной неудачей.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "The NMR log was a scientific success but an engineering failure.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.09",
+     "text_by_model": true
+    },
+    {
+     "id": "en.nuclear_logging_history#c11",
+     "text": "Разработки NUMAR в 1990-х годах привели к созданию технологии непрерывного ЯМР-каротажа, применяемой в нефтегазовой отрасли, водных и рудных поисках.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.09",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.depth_and_classification"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.logging_technology_development"
+    },
+    {
+     "type": "refutes_misconception",
+     "target": "misc.gr_measures_clay"
+    }
+   ],
+   "misconception": {
+    "ref": "misc.gr_measures_clay",
+    "text": "Гамма-каротаж не измеряет глинистость напрямую: глава говорит, что глинистые пласты обычно имеют более высокий уровень гамма-излучения.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Вход гамма-каротажа — естественное гамма-излучение формаций; запись показывает его уровень. Для нейтронного метода глава указывает активное облучение пород ядерными частицами. Для ЯМР-каротажа описаны ранняя запись с использованием поля Земли и поздняя непрерывная технология.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Глава не описывает формат записей, численные значения сигналов или условия, при которых связь гамма-излучения с глинистыми пластами не работает.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: при обучении модели гамма-сигнал может быть признаком глинистости, но его нельзя считать прямой меткой глинистости.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: различия методов и поколений оборудования могут влиять на сопоставимость каротажных данных.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Историю можно представить как переход от пассивного мониторинга сигнала к активному воздействию и затем к новой технологии измерения.",
+    "breaks_where": "Аналогия не объясняет физику радиоактивности и ЯМР; глава также не сравнивает методы как версии одной системы.",
+    "by_model": true
+   },
+   "now_practice": {
+    "text": "Глава сообщает, что технология непрерывного ЯМР-каротажа, возникшая благодаря разработкам NUMAR в 1990-х, применяется в нефтегазовой отрасли, поисках воды и руд.",
+    "by_model": true,
+    "hypothesis": true
+   },
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "гамма-каротаж",
+    "нейтронный каротаж",
+    "ЯМР-каротаж",
+    "обсаженная скважина",
+    "открытый ствол"
+   ],
+   "terms_used": [
+    "естественная радиоактивность",
+    "глинистый пласт",
+    "ядерное магнитное резонанс"
+   ],
+   "glossary": [
+    {
+     "term": "Гамма-каротаж",
+     "definition": "Каротаж, измеряющий естественное гамма-излучение подземных формаций.",
+     "en": "gamma ray log"
+    },
+    {
+     "term": "Нейтронный каротаж",
+     "definition": "Ядерный каротажный метод, появившийся после методов измерения естественного гамма-излучения.",
+     "en": "neutron log"
+    },
+    {
+     "term": "ЯМР-каротаж",
+     "definition": "Каротаж на основе ядерного магнитного резонанса.",
+     "en": "NMR log"
+    },
+    {
+     "term": "Обсаженная скважина",
+     "definition": "Скважина с обсадной колонной; глава уточняет, что речь о production casing.",
+     "en": "cased well"
+    },
+    {
+     "term": "Открытый ствол",
+     "definition": "Часть скважины, для которой глава отдельно называет каротаж открытого ствола.",
+     "en": "open hole"
+    }
+   ],
+   "procedure": [],
+   "numbers": [
+    "1939 год — Well Surveys Inc. ввела гамма-каротаж естественной радиоактивности.",
+    "1941 год — появился нейтронный каротаж WSI.",
+    "1946 год — Блох и Пёрселл открыли ядерный магнитный резонанс.",
+    "Начало 1950-х — Chevron и Schlumberger разработали ЯМР-каротаж с использованием поля Земли.",
+    "1966 год — Николаас Блумберген подал патент Schlumberger.",
+    "1990-е годы — разработки NUMAR привели к технологии непрерывного ЯМР-каротажа."
+   ],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.logging_while_drilling",
+   "order": 7,
+   "title": "Как измеряют во время бурения",
+   "book_title": "История",
+   "why_here": {
+    "text": "Шаг объясняет, как получают измерения в направленной скважине во время бурения.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "М",
+    "secondary": "Пр"
+   },
+   "threshold": false,
+   "pages": [
+    2
+   ],
+   "layers": {
+    "topic": {
+     "text": "Измерения во время бурения",
+     "by_model": true
+    },
+    "main": {
+     "text": "Современные методы передают информацию от приборов в скважине на поверхность непрерывно. Передачу данных с помощью импульсов бурового раствора называют MWD.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Если скважина отклоняется от вертикали, приборы сначала приходилось прикреплять к бурильной колонне. Современные методы передают информацию на поверхность, а MWD использует импульсы бурового раствора для передачи данных от приборов внизу колонны к поверхностным процессорам.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Специалист получает на поверхности данные от приборов, установленных внизу бурильной колонны. Глава не описывает дальнейшую обработку этих данных.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Глава называет два термина: каротаж во время бурения (LWD) и измерения во время бурения (MWD). Она связывает передачу импульсами бурового раствора именно с MWD.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.logging_while_drilling#c1",
+     "text": "Многие современные нефтяные и газовые скважины бурят направленно.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Many modern oil and gas wells are drilled directionally.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.10",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_while_drilling#c2",
+     "text": "Изначально при отклонении скважины от вертикали приборы приходилось каким-либо образом прикреплять к бурильной колонне.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "loggers had to run their tools somehow attached to the drill pipe if the well was not vertical",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.10",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_while_drilling#c3",
+     "text": "Современные методы позволяют непрерывно передавать информацию на поверхность; это называют каротажем во время бурения (LWD) или измерениями во время бурения (MWD).",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "Modern techniques now permit continuous information at the surface.  This is known as logging while drilling (LWD) or measurement-while-drilling (MWD).",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.10",
+     "text_by_model": true
+    },
+    {
+     "id": "en.logging_while_drilling#c4",
+     "text": "MWD передает данные от приборов внизу бурильной колонны к поверхностным процессорам с помощью импульсов бурового раствора.",
+     "kind": "observation",
+     "page_pdf": 2,
+     "page_print": null,
+     "quote": "MWD logs use mud pulse technology to transmit data from the tools on the bottom of the drillstring to the processors at the surface.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p002.10",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    }
+   ],
+   "misconception": {
+    "ref": null,
+    "text": "Не следует считать, что данные приборов получают только после завершения бурения: глава описывает их непрерывную передачу на поверхность.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Вход — данные приборов внизу бурильной колонны. Выход — передаваемая на поверхность информация для процессоров. Типы измеряемых величин глава не уточняет.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Глава не описывает случаи потери или искажения передачи данных.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: при анализе данных может быть важно учитывать способ передачи и соответствующий тип оборудования.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Гипотеза: это похоже на передачу данных с удалённого устройства на сервер.",
+    "breaks_where": "Гипотеза: аналогия не объясняет физический способ передачи импульсами бурового раствора и условия внутри скважины.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "LWD",
+    "MWD",
+    "бурильная колонна",
+    "импульсы бурового раствора"
+   ],
+   "terms_used": [
+    "направленное бурение",
+    "поверхностные процессоры"
+   ],
+   "glossary": [
+    {
+     "term": "LWD",
+     "definition": "Каротаж во время бурения: получение информации при бурении скважины.",
+     "en": "Logging while drilling"
+    },
+    {
+     "term": "MWD",
+     "definition": "Измерения во время бурения; глава указывает, что данные передаются импульсами бурового раствора.",
+     "en": "Measurement while drilling"
+    },
+    {
+     "term": "Бурильная колонна",
+     "definition": "Колонна, к которой прикрепляли приборы при бурении отклонённой скважины.",
+     "en": "Drillstring"
+    },
+    {
+     "term": "Импульсы бурового раствора",
+     "definition": "Импульсы, с помощью которых MWD передаёт данные на поверхность.",
+     "en": "Mud pulses"
+    }
+   ],
+   "procedure": [],
+   "numbers": [],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.memory_tool_delivery",
+   "order": 8,
+   "title": "Как доставляют приборы памяти",
+   "book_title": "Каротаж на памяти",
+   "why_here": {
+    "text": "Шаг объясняет, как доставляют приборы памяти в скважины, куда обычный электрический кабель не достаёт.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "Пр",
+    "secondary": "М"
+   },
+   "threshold": false,
+   "pages": [
+    7
+   ],
+   "layers": {
+    "topic": {
+     "text": "Доставка приборов памяти",
+     "by_model": true
+    },
+    "main": {
+     "text": "Приборы памяти можно доставлять на бурильных или гибких трубах, если траектория скважины или её вылет затрудняют применение электрического кабеля. В открытый ствол компактный прибор можно спустить внутри бурильной трубы, а на глубине вытолкнуть для начала каротажа.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "На большом вылете соотношение массы и прочности электрического кабеля может ограничивать его применение → приборы доставляют на трубах. Размещение прибора внутри бурильной трубы защищает его при спуске → на глубине прибор вытолкнут для начала каротажа.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Специалист выбирает способ доставки с учётом траектории и вылета скважины. Прибор можно спустить внутри бурильной трубы, а на глубине вытолкнуть из её конца. Для некоторых базовых приборов открытого ствола используют гибкий безмуфтовый кабель, чтобы снизить стоимость и время работ.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Типы датчиков у приборов памяти ограничены по сравнению с приборами на электрическом кабеле. Они обычно ориентированы на обсаженную скважину на этапе добычи. Однако разработаны компактные комбинации для оценки пластов в открытом стволе. Глава не описывает конкретные ограничения способов доставки или условия выбора.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.memory_tool_delivery#c1",
+     "text": "Приборы можно доставлять в скважины с отклоненной траекторией или с вылетом, превышающим досягаемость обычных электрических кабелей.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "The tools can be conveyed into wells where the trajectory is deviated or extended beyond the reach of conventional Electric Wireline cables.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_tool_delivery#c2",
+     "text": "Для таких скважин могут использовать сочетание, обусловленное соотношением массы и прочности электрического кабеля на большом вылете.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "This can involve a combination of weight to strength ratio of the electric cable over this extended reach.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_tool_delivery#c3",
+     "text": "В таких случаях приборы памяти можно доставлять на бурильных трубах или гибких трубах.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "the memory tools can be conveyed on Pipe or Coil Tubing",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.02",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_tool_delivery#c4",
+     "text": "По сравнению с электрическим кабелем датчики для каротажа на памяти ограничены по типам и обычно ориентированы на обсаженную скважину на этапе добычи.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "The type of sensors are limited in comparison to those used on Electric Line, and tend to be focussed on the cased hole, production stage of the well.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_tool_delivery#c5",
+     "text": "Разработаны компактные комбинации приборов для оценки пластов в открытом стволе с регистрацией данных в памяти.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "Although there are now developed some memory \"Open Hole\" compact formation evaluation tool combinations.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_tool_delivery#c6",
+     "text": "Приборы можно спустить внутри бурильной трубы, чтобы защитить их от повреждений при спуске в скважину.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "These tools can be deployed and carried downhole concealed internally in drill pipe to protect them from damage while running in the hole,",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_tool_delivery#c7",
+     "text": "На глубине приборы можно вытолкнуть из конца бурильной трубы, чтобы начать каротаж.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "and then \"Pumped\" out the end at depth to initiate logging.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.03",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.depth_and_classification"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.logging_while_drilling"
+    }
+   ],
+   "misconception": {
+    "ref": null,
+    "text": "Глава не исправляет конкретное заблуждение из списка.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Приборы регистрируют данные в памяти во время каротажа. Типы датчиков ограничены; конкретные кривые, форматы и выходные данные глава не называет.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Глава указывает на ограниченный выбор датчиков и обычную ориентацию приборов памяти на обсаженную скважину при добыче. Другие сбои данных не описаны.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: разные способы доставки могут приводить к различиям в составе доступных признаков для моделей.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: при объединении данных приборов памяти и электрического кабеля потребуется проверять сопоставимость измерений.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Это похоже на доставку вычислительного устройства в труднодоступное место внутри защитного контейнера, а затем его активацию.",
+    "breaks_where": "Аналогия не описывает физические ограничения кабеля, труб и скважин. Глава также не утверждает, что приборы выполняют вычисления.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": {
+    "inputs": "Не указано в главе.",
+    "manual_steps": "Глава описывает спуск внутри трубы и вытеснение прибора на глубине.",
+    "judgment_points": "Не указано в главе.",
+    "time": "Для базовых приборов на гибком безмуфтовом кабеле заявлено снижение времени работ.",
+    "typical_errors": "Не указано в главе.",
+    "by_model": true
+   },
+   "terms_introduced": [
+    "прибор памяти",
+    "открытый ствол",
+    "обсаженная скважина",
+    "бурильная труба",
+    "гибкая труба",
+    "каротаж на памяти"
+   ],
+   "terms_used": [
+    "электрический кабель",
+    "оценка пластов",
+    "гибкий безмуфтовый кабель"
+   ],
+   "glossary": [
+    {
+     "term": "Прибор памяти",
+     "definition": "Прибор для каротажа, который регистрирует данные в собственной памяти.",
+     "en": "memory tool"
+    },
+    {
+     "term": "Открытый ствол",
+     "definition": "Участок скважины без обсадной трубы.",
+     "en": "open hole"
+    },
+    {
+     "term": "Обсаженная скважина",
+     "definition": "Скважина, укреплённая обсадной трубой.",
+     "en": "cased hole"
+    },
+    {
+     "term": "Вылет скважины",
+     "definition": "Удалённость участка скважины от точки, до которой достаёт обычный кабель.",
+     "en": null
+    }
+   ],
+   "procedure": [
+    "Спустить прибор внутри бурильной трубы, защитив его от повреждений.",
+    "На глубине вытолкнуть прибор из конца трубы.",
+    "Начать каротаж."
+   ],
+   "numbers": [],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.slickline_memory_logging",
+   "order": 9,
+   "title": "Как работают на механической проволоке",
+   "book_title": "Каротаж на памяти",
+   "why_here": {
+    "text": "Шаг объясняет, как проводят каротаж на памяти без полноценной установки электрического каротажа.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "Пр",
+    "secondary": "М"
+   },
+   "threshold": false,
+   "pages": [
+    7
+   ],
+   "layers": {
+    "topic": {
+     "text": "Каротаж на slickline",
+     "by_model": true
+    },
+    "main": {
+     "text": "Slickline — сплошная механическая проволока для операций в скважине; на ней часто спускают приборы памяти. Их результаты становятся известны после возвращения приборов на поверхность.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Приборы памяти на slickline проводят в скважину вместо мобилизации установки электрического каротажа → снижаются затраты и время работ. Данные недоступны до возвращения приборов на поверхность → изменения условий добычи нельзя наблюдать в реальном времени.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "В обсаженной скважине обычно используют установку slickline для вмешательства в скважину. Приборы памяти часто спускают на этой проволоке вместо полноценной установки электрического каротажа.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Типы датчиков ограничены по сравнению с электрическим каротажем. Они преимущественно ориентированы на обсаженную скважину и этап добычи. Для открытого ствола также существуют простые приборы памяти для товарного сегмента.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.slickline_memory_logging#c1",
+     "text": "Для товарного сегмента доступны и другие простые приборы оценки открытого ствола с регистрацией в памяти, работающие на slickline.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "Other basic open hole formation evaluation memory tools are available for use in \"Commodity\" markets on slickline",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.slickline_memory_logging#c2",
+     "text": "Использование таких приборов на slickline предназначено для снижения затрат и времени работ.",
+     "kind": "inference",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "on slickline to reduce costs and operating time.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.03",
+     "text_by_model": true
+    },
+    {
+     "id": "en.slickline_memory_logging#c3",
+     "text": "При работах в обсаженной скважине обычно используют установку slickline для вмешательства в скважину.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "In cased hole operation there is normally a \"Slick Line\" intervention unit.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.slickline_memory_logging#c4",
+     "text": "Slickline использует сплошную механическую проволоку наружным диаметром 0,072–0,125 дюйма.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD),",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.slickline_memory_logging#c5",
+     "text": "Эта проволока служит для манипуляций с системой заканчивания скважины или выполнения в ней других операций.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "to manipulate or otherwise carry out operations in the well bore completion system.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.slickline_memory_logging#c6",
+     "text": "Операции с приборами памяти часто проводят на slickline вместо мобилизации полноценной установки электрического каротажа.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.04",
+     "text_by_model": true
+    },
+    {
+     "id": "en.slickline_memory_logging#c7",
+     "text": "Результаты каротажа на памяти становятся известны только после возвращения приборов на поверхность.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "Since the results are not known until returned to surface,",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.05",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.depth_and_classification"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.memory_tool_delivery"
+    }
+   ],
+   "misconception": {
+    "ref": null,
+    "text": "Результаты каротажа на памяти доступны во время измерений.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Приборы памяти собирают данные в скважине; результаты становятся доступны после возвращения приборов на поверхность.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "Во время каротажа нельзя отслеживать изменения условий скважины в реальном времени и точно менять условия добычи по текущим результатам.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: для ML задержка получения данных может мешать оперативно корректировать прогнозы во время каротажа.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: время и стоимость операций могут влиять на выбор метода сбора данных.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Гипотеза: это похоже на сбор логов устройством без постоянной связи, с последующей передачей данных.",
+    "breaks_where": "Аналогия ограничена: глава говорит о приборах в скважине и механической проволоке, а не о сетевом устройстве.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "slickline",
+    "каротаж на памяти",
+    "обсаженная скважина"
+   ],
+   "terms_used": [
+    "прибор памяти",
+    "электрический каротаж",
+    "открытый ствол"
+   ],
+   "glossary": [
+    {
+     "term": "Slickline",
+     "definition": "Сплошная механическая проволока для манипуляций с оборудованием и выполнения операций в скважине.",
+     "en": "slickline"
+    },
+    {
+     "term": "Каротаж на памяти",
+     "definition": "Каротаж, результаты которого становятся известны после возвращения приборов на поверхность.",
+     "en": "memory logging"
+    },
+    {
+     "term": "Обсаженная скважина",
+     "definition": "Скважина, в которой установлена обсадная колонна.",
+     "en": "cased hole"
+    }
+   ],
+   "procedure": [],
+   "numbers": [
+    "Наружный диаметр проволоки slickline: 0,072–0,125 дюйма."
+   ],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  },
+  {
+   "id": "en.memory_logging_risks",
+   "order": 10,
+   "title": "Какие риски есть у памяти",
+   "book_title": "Каротаж на памяти",
+   "why_here": {
+    "text": "Шаг показывает операционные ограничения каротажа на памяти и последствия для наблюдения за скважиной.",
+    "by_model": true
+   },
+   "difficulty": {
+    "primary": "Н",
+    "secondary": "Пр"
+   },
+   "threshold": false,
+   "pages": [
+    7
+   ],
+   "layers": {
+    "topic": {
+     "text": "Риски каротажа на памяти",
+     "by_model": true
+    },
+    "main": {
+     "text": "При каротаже на памяти изменения динамики скважины нельзя отслеживать в реальном времени. Неисправность записи обнаруживается только после извлечения приборов, поэтому потеря данных особенно существенна на дорогих морских объектах.",
+     "by_model": true
+    },
+    "mechanism": {
+     "text": "Результаты становятся известны после возвращения приборов на поверхность → изменения динамики скважины нельзя наблюдать в реальном времени. Поэтому точно менять подземные условия добычи, регулируя поверхностные дебиты, ограниченно возможно. Неисправность во время записи выявляется только после извлечения приборов → данные могут быть потеряны.",
+     "by_model": true
+    },
+    "practice": {
+     "text": "Автор отмечает, что поверхностные дебиты часто меняют при работах на электрическом кабеле. На описанных наземных объектах каротаж часто повторяют без осложнений, если запись потеряна.",
+     "by_model": true
+    },
+    "nuances": {
+     "text": "Потеря данных может быть серьёзной проблемой на крупных и дорогих морских объектах. На наземных объектах Южного Техаса она менее проблематична: каротаж часто проводят без инфраструктуры буровой установки и повторяют без осложнений.",
+     "by_model": true
+    },
+    "deeper": []
+   },
+   "claims": [
+    {
+     "id": "en.memory_logging_risks#c1",
+     "text": "Поэтому реальные изменения динамики скважины нельзя отслеживать в реальном времени.",
+     "kind": "inference",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "any realtime well dynamic changes cannot be monitored real time.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_logging_risks#c2",
+     "text": "Это ограничивает возможность точно менять подземные условия добычи во время каротажа на памяти, регулируя поверхностные дебиты.",
+     "kind": "inference",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "This limits the ability to modify or change the well down hole production conditions accurately during the memory logging by changing the surface production rates.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_logging_risks#c3",
+     "text": "Автор отмечает, что изменение поверхностных дебитов часто выполняют при работах на электрическом кабеле.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "Something that is often done in Electric Line operations.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.05",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_logging_risks#c4",
+     "text": "Неисправность во время записи обнаруживается только после извлечения приборов памяти.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "Failure during recording is not known until the memory tools are retrieved.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_logging_risks#c5",
+     "text": "Потеря данных может стать серьёзной проблемой на крупных и дорогих морских объектах.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "This loss of data can be a major issue on large offshore (expensive) locations.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_logging_risks#c6",
+     "text": "На наземных объектах, например в Южном Техасе, где работает товарный сектор нефтесервисных услуг, каротаж часто проводят без инфраструктуры буровой установки.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "On land locations (e.g. South Texas, US) where there is what is called a \"Commodity\" Oil service sector, where logging often is without the rig infrastructure.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.06",
+     "text_by_model": true
+    },
+    {
+     "id": "en.memory_logging_risks#c7",
+     "text": "В описанных наземных условиях потеря данных менее проблематична, и каротаж часто повторяют без осложнений.",
+     "kind": "observation",
+     "page_pdf": 7,
+     "page_print": null,
+     "quote": "this is less problematic, and logs are often run again without issue.",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p007.06",
+     "text_by_model": true
+    }
+   ],
+   "links": [
+    {
+     "type": "prerequisite",
+     "target": "en.logging_tools"
+    },
+    {
+     "type": "prerequisite",
+     "target": "en.slickline_memory_logging"
+    }
+   ],
+   "misconception": {
+    "ref": null,
+    "text": "Неисправность записи при каротаже на памяти обнаруживается сразу. Глава уточняет: её замечают после извлечения приборов.",
+    "by_model": true
+   },
+   "data_meaning": {
+    "from_chapter": {
+     "text": "Вход — запись приборов памяти и поверхностные дебиты. Результаты записи становятся известны после возвращения приборов на поверхность; неисправность выявляется после извлечения.",
+     "by_model": true
+    },
+    "breaks": {
+     "text": "При неисправности во время записи данные могут быть потеряны. Глава не описывает конкретные признаки неисправности или структуру файлов.",
+     "by_model": true
+    },
+    "hypotheses": [
+     {
+      "text": "Гипотеза: задержка обнаружения неисправности может привести к пропуску интервала данных.",
+      "by_model": true,
+      "hypothesis": true
+     },
+     {
+      "text": "Гипотеза: для цифрового контроля полезно отдельно хранить сведения о повторных записях и их качестве.",
+      "by_model": true,
+      "hypothesis": true
+     }
+    ]
+   },
+   "it_analogy": {
+    "text": "Гипотеза: каротаж на памяти похож на устройство, которое сначала записывает данные локально, а затем передаёт их для проверки.",
+    "breaks_where": "Аналогия ограничена: глава не описывает способ передачи данных. Каротаж также связан с изменением подземных условий добычи, а не только с записью и передачей информации.",
+    "by_model": true
+   },
+   "now_practice": null,
+   "inefficiency_lens": null,
+   "terms_introduced": [
+    "Каротаж на памяти",
+    "Поверхностный дебит",
+    "Электрический кабель"
+   ],
+   "terms_used": [
+    "Динамика скважины",
+    "Подземные условия добычи",
+    "Инфраструктура буровой установки"
+   ],
+   "glossary": [
+    {
+     "term": "Каротаж на памяти",
+     "definition": "Запись измерений приборами с сохранением результатов до их возвращения на поверхность.",
+     "en": "memory logging"
+    },
+    {
+     "term": "Поверхностный дебит",
+     "definition": "Расход продукции скважины, измеряемый на поверхности.",
+     "en": "surface production rate"
+    },
+    {
+     "term": "Электрический кабель",
+     "definition": "Кабель, на котором выполняют каротажные работы; глава упоминает его в связи с изменением поверхностных дебитов.",
+     "en": "Electric Line"
+    }
+   ],
+   "procedure": [],
+   "numbers": [],
+   "needs_scan": [],
+   "decision_on_data": null,
+   "worked_examples": [],
+   "book_tasks": [],
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   }
+  }
+ ]
+}

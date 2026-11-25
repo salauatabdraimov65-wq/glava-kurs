@@ -1,0 +1,23 @@
+{
+ "chapter": "en_smoke",
+ "nodes": 10,
+ "claims": 81,
+ "tasks": 20,
+ "task_types": {
+  "single": 5,
+  "multiple": 5,
+  "gap": 6,
+  "order": 4
+ },
+ "units_in_scope": 42,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "шортс": 5,
+  "текст": 1,
+  "практикум на данных": 3,
+  "интерактив": 1
+ },
+ "usd": 0.048,
+ "minutes": 1.4
+}

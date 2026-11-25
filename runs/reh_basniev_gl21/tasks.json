@@ -1,0 +1,1147 @@
+{
+ "chapter": "reh_basniev_gl21",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.layered_heterogeneity#c6",
+    "reh.layered_heterogeneity#c7",
+    "reh.layered_heterogeneity#c8"
+   ],
+   "prompt": "Как в модели описывается слоистая неоднородность пласта?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пласт разделен по толщине на слои с однородными внутри, но различными между собой фильтрационными характеристиками; свойства меняются только по толщине и кусочно-постоянны по вертикальной координате.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Свойства меняются только по площади пласта, а границы слоев считаются криволинейными.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Свойства непрерывно меняются по толщине, а проницаемость одинакова во всех слоях.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Слои различаются только пористостью, а их проницаемость и другие фильтрационные характеристики одинаковы.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При слоистой неоднородности свойства внутри слоев однородны, меняются по толщине кусочно-постоянно, а границы считаются плоскими (стр. 443).",
+   "step_id": "reh.layered_heterogeneity",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.layered_heterogeneity#c9",
+    "reh.layered_heterogeneity#c10",
+    "reh.layered_heterogeneity#c11"
+   ],
+   "prompt": "Какие утверждения о гидравлически изолированных слоях и слоях с перетоками верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Слои могут быть разделены непроницаемыми границами.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "При гидравлически изолированных слоях потоки можно рассчитывать по одномерным схемам.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При перетоках между слоями точный расчет, вообще говоря, требует решения двумерных задач фильтрации.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "При любых перетоках между слоями достаточно одномерной схемы.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Слои с разной проницаемостью всегда гидравлически изолированы.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Слои могут быть изолированы или сообщаться перетоками; для изолированных применимы одномерные схемы, а перетоки обычно требуют двумерного расчета (стр. 444).",
+   "step_id": "reh.layered_heterogeneity",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.heterogeneity_flow_types#c2"
+   ],
+   "prompt": "При непрерывной или случайной неоднородности свойства меняются от точки к точке и в прямых задачах задаются {{1}}.",
+   "options": [],
+   "answer": [
+    "известными функциями координат"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В прямых задачах такие свойства задаются известными функциями координат (стр. 444).",
+   "step_id": "reh.heterogeneity_flow_types",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.heterogeneity_flow_types#c9",
+    "reh.heterogeneity_flow_types#c10",
+    "reh.heterogeneity_flow_types#c11"
+   ],
+   "prompt": "Расположите утверждения в порядке рассуждения: от того, что потребовало бы полного изучения, к тому, что рассматривается в учебнике.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из-за ограниченного объема рассматриваются только наиболее характерные случаи, при едином методологическом подходе.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Полное изучение потребовало бы рассмотреть разные жидкости и законы фильтрации.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Далее рассматриваются одномерные потоки несжимаемой жидкости и газа по закону Дарси.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала обозначен полный объем возможного изучения, затем ограничение учебника и, наконец, конкретно рассматриваемые потоки (стр. 444).",
+   "step_id": "reh.heterogeneity_flow_types",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.parallel_liquid_flow#c5"
+   ],
+   "prompt": "Как меняется давление жидкости вдоль пласта от x=0 до x=L?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Линейно убывает от p_k до p_r",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Линейно возрастает от p_r до p_k",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Остаётся постоянным и равным p_k",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Давление линейно убывает от p_k при x=0 до p_r при x=L (стр. 445).",
+   "step_id": "reh.parallel_liquid_flow",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.individual_layer_flow#c2",
+    "reh.individual_layer_flow#c3",
+    "reh.individual_layer_flow#c5"
+   ],
+   "prompt": "Выберите верные утверждения о скорости фильтрации и дебите пропластков.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Скорость фильтрации в пропластке пропорциональна его проницаемости и перепаду давления на единицу длины.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Дебит пропластка зависит от его проницаемости, площади сечения и перепада давления на единицу длины.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При одинаковой депрессии скорость выше в пропластке с большей проницаемостью, а дебит — при большей проницаемости и площади сечения.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "При одинаковой депрессии скорость фильтрации одинакова во всех пропластках независимо от проницаемости.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Скорость и дебит зависят от указанных параметров пропластка, поэтому утверждение d неверно (стр. 445–446).",
+   "step_id": "reh.individual_layer_flow",
+   "id": "t07"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.layered_gas_flow#c6",
+    "reh.layered_gas_flow#c7",
+    "reh.layered_gas_flow#c8"
+   ],
+   "prompt": "Расположите утверждения в порядке от распределения давления к массовому расходу газа в пропластке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Для совершенного газа квадрат давления линейно меняется по длине пласта между p_k² и p_r²."
+    },
+    {
+     "id": "b",
+     "text": "Массовый поток газа в пропластке i выражается через k_i, плотность и перепад квадратов давления; его можно записать через локальные ρ(x) и p(x)."
+    },
+    {
+     "id": "c",
+     "text": "Массовый расход совершенного газа в пропластке i пропорционален k_i, перепаду квадратов давления и площади h_iB."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала задаётся изменение квадрата давления, затем выражается массовый поток и, наконец, массовый расход с учётом площади h_iB (стр. 446).",
+   "step_id": "reh.layered_gas_flow",
+   "id": "t08"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.layered_gas_flow#c2"
+   ],
+   "prompt": "Как распределена функция Лейбензона между граничными значениями P_k и P_r?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Линейно",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Постоянно по всей длине пласта",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Нелинейно, по квадратичному закону",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Скачком в середине пласта",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Функция Лейбензона линейно распределена между граничными значениями P_k и P_r (стр. 446).",
+   "step_id": "reh.layered_gas_flow",
+   "id": "t09"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.parallel_effective_permeability#c2",
+    "reh.parallel_effective_permeability#c5",
+    "reh.parallel_effective_permeability#c7"
+   ],
+   "prompt": "Какие утверждения о суммировании расходов и средней проницаемости параллельных слоёв верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Массовый расход всего пласта находят суммированием расходов отдельных пропластков.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Эквивалентную среднюю проницаемость определяют из условия равенства дебитов неоднородного и однородного пластов.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Средняя проницаемость равна сумме проницаемостей слоёв, делённой на общую толщину.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Среднюю проницаемость определяют из условия равенства давлений в неоднородном и однородном пластах.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Расходы пропластков суммируют, а эквивалентную проницаемость находят по равенству дебитов; формула среднего учитывает толщины слоёв (стр. 446–447).",
+   "step_id": "reh.parallel_effective_permeability",
+   "id": "t10"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.parallel_effective_permeability#c7"
+   ],
+   "prompt": "Средняя проницаемость равна {{1}}, деленной на {{2}}.",
+   "options": [],
+   "answer": [
+    "сумме произведений проницаемости каждого слоя на его толщину",
+    "общую толщину h"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении средняя проницаемость задана как сумма произведений проницаемости каждого слоя на его толщину, делённая на общую толщину h (стр. 447).",
+   "step_id": "reh.parallel_effective_permeability",
+   "id": "t11"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.layered_total_rate#c1",
+    "reh.layered_total_rate#c2",
+    "reh.layered_total_rate#c3"
+   ],
+   "prompt": "Расположите шаги описания дебита несжимаемой жидкости в логическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Подставить функции Лейбензона для несжимаемой жидкости и совершенного газа"
+    },
+    {
+     "id": "b",
+     "text": "Задать отдельную формулу общего дебита для несжимаемой жидкости"
+    },
+    {
+     "id": "c",
+     "text": "Указать, от каких величин дебит зависит прямо и обратно"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала подстановка функций дает формулы общего дебита, затем отдельно задается формула для жидкости и описываются ее зависимости (стр. 447).",
+   "step_id": "reh.layered_total_rate",
+   "id": "t12"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.layer_travel_time#c1"
+   ],
+   "prompt": "Для несжимаемой жидкости время движения рассчитывают отдельно для каждого {{1}}, используя его {{2}} и проницаемость.",
+   "options": [],
+   "answer": [
+    "пропластка",
+    "пористость"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Время рассчитывают отдельно для каждого пропластка, используя его пористость и проницаемость (стр. 447).",
+   "step_id": "reh.layer_travel_time",
+   "id": "t13"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zonal_liquid_flow#c7"
+   ],
+   "prompt": "При установившемся течении дебит {{1}} во всех зонах; при постоянном сечении {{2}} и скорость фильтрации.",
+   "options": [],
+   "answer": [
+    "одинаков",
+    "одинакова"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Закон сохранения массы обеспечивает одинаковый дебит во всех зонах, а постоянное сечение — одинаковую скорость фильтрации (стр. 448).",
+   "step_id": "reh.zonal_liquid_flow",
+   "id": "t14"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.zonal_liquid_flow#c4",
+    "reh.zonal_liquid_flow#c5",
+    "reh.zonal_liquid_flow#c6"
+   ],
+   "prompt": "Расположите шаги описания течения несжимаемой жидкости в правильном порядке: от давления к дебиту.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Дебит равен скорости фильтрации, умноженной на площадь сечения S."
+    },
+    {
+     "id": "b",
+     "text": "Давление линейно убывает от p_k до p_r на длине L."
+    },
+    {
+     "id": "c",
+     "text": "Скорость фильтрации определяется проницаемостью, вязкостью и градиентом давления с обратным знаком."
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала задаётся распределение давления, затем определяется скорость фильтрации и через неё дебит (стр. 448).",
+   "step_id": "reh.zonal_liquid_flow",
+   "id": "t15"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.zonal_pressure_profile#c7"
+   ],
+   "prompt": "Как выглядит график давления, если градиент постоянен внутри каждой зоны, но различается между зонами?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Ломаная из отрезков с разными наклонами",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Одна прямая с одинаковым наклоном на всём пласте",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Кривая с постоянно меняющимся наклоном внутри каждой зоны",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Горизонтальная линия с одинаковым давлением во всех зонах",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В каждой зоне градиент постоянен, но между зонами различается, поэтому график — ломаная с разными наклонами (стр. 449).",
+   "step_id": "reh.zonal_pressure_profile",
+   "id": "t16"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zonal_pressure_profile#c8",
+    "reh.zonal_pressure_profile#c9"
+   ],
+   "prompt": "Какие утверждения о граничных давлениях и длине пласта верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "При x₁=0 давление p₁ равно p_k.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "На конце пласта xₙ₊₁=L давление равно p_r.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Полная длина L равна длине только первой зоны.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Для постановки задачи достаточно задать давление только на конце пласта.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "На границах заданы p₁=p_k и pₙ₊₁=p_r; полная длина L складывается из длин всех зон (стр. 449).",
+   "step_id": "reh.zonal_pressure_profile",
+   "id": "t17"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.series_flow_resistance#c6"
+   ],
+   "prompt": "Суммарный перепад давления равен {{1}}, умноженному на сумму {{2}} по всем зонам.",
+   "options": [],
+   "answer": [
+    "Qμ/(Bh)",
+    "l_i/k_i"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Это выражение суммарного перепада давления приведено на стр. 449.",
+   "step_id": "reh.series_flow_resistance",
+   "id": "t18"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.series_flow_resistance#c2",
+    "reh.series_flow_resistance#c3",
+    "reh.series_flow_resistance#c4",
+    "reh.series_flow_resistance#c5",
+    "reh.series_flow_resistance#c6",
+    "reh.series_flow_resistance#c7",
+    "reh.series_flow_resistance#c8"
+   ],
+   "prompt": "Расположите шаги получения формулы дебита зонально-неоднородного пласта в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Записать перепады давления в отдельных зонах."
+    },
+    {
+     "id": "b",
+     "text": "Сложить равенства для перепадов по зонам."
+    },
+    {
+     "id": "c",
+     "text": "Выразить суммарный перепад через сумму l_i/k_i по всем зонам."
+    },
+    {
+     "id": "d",
+     "text": "Получить формулу дебита несжимаемой жидкости."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала складывают перепады по зонам, затем выражают суммарный перепад и выводят из него дебит (стр. 449).",
+   "step_id": "reh.series_flow_resistance",
+   "id": "t19"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zone_boundary_pressure#c6"
+   ],
+   "prompt": "Для пласта из двух зон чему равно давление p₂ на границе зон?",
+   "options": [
+    {
+     "id": "a",
+     "text": "[p_k(l₂/k₂)−p_r(l₁/k₁)]/(l₁/k₁+l₂/k₂)",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "[p_k(l₁/k₁)−p_r(l₂/k₂)]/(l₁/k₁+l₂/k₂)",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "[p_k(l₂/k₂)−p_r(l₁/k₁)]/(l₁/k₁−l₂/k₂)",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для двух зон p₂ выражается указанным отношением с суммой l₁/k₁ и l₂/k₂ в знаменателе (стр. 450).",
+   "step_id": "reh.zone_boundary_pressure",
+   "id": "t20"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zone_boundary_pressure#c4"
+   ],
+   "prompt": "Давление на границе первой и второй зон равно p_k минус (l₁/k₁), умноженное на {{1}}, деленный на {{2}}.",
+   "options": [],
+   "answer": [
+    "общий перепад",
+    "сумму l_i/k_i"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении дана формула через общий перепад и сумму l_i/k_i (стр. 450).",
+   "step_id": "reh.zone_boundary_pressure",
+   "id": "t21"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.series_effective_permeability#c2",
+    "reh.series_effective_permeability#c3",
+    "reh.series_effective_permeability#c4",
+    "reh.series_effective_permeability#c5"
+   ],
+   "prompt": "Какие утверждения о средней проницаемости зонально-неоднородного пласта верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Дебит можно выразить как для неоднородного пласта и через среднюю проницаемость и полную длину.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Приравнивание выражений дебита позволяет получить формулу средней проницаемости.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Средняя проницаемость равна полной длине, делённой на сумму l_i/k_i.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Среднюю проницаемость находят как обычное арифметическое среднее проницаемостей зон.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Для зонально-неоднородного пласта применяют тот же закон, что и для слоисто-неоднородного.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Два выражения дебита приравнивают, получая формулу kср = L/Σ(l_i/k_i); для такого пласта не применяют закон слоисто-неоднородного пласта (стр. 450).",
+   "step_id": "reh.series_effective_permeability",
+   "id": "t22"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.zonal_gas_flow#c3",
+    "reh.zonal_gas_flow#c4",
+    "reh.zonal_gas_flow#c5"
+   ],
+   "prompt": "Расположите этапы определения массового расхода газа в зоне в логическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Функция Лейбензона линейно изменяется между граничными значениями"
+    },
+    {
+     "id": "b",
+     "text": "Массовая скорость определяется через k_i/μ и перепад функции Лейбензона на единицу длины"
+    },
+    {
+     "id": "c",
+     "text": "Массовый расход получают умножением массовой скорости на сечение hB"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала задаётся изменение функции, затем через её перепад определяется скорость, а после — расход через сечение (стр. 451).",
+   "step_id": "reh.zonal_gas_flow",
+   "id": "t23"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zonal_gas_flow#c6"
+   ],
+   "prompt": "Как выражается массовый расход газа через весь пласт?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Bh/μ, умноженное на перепад P_k−P_r и делённое на сумму l_i/k_i",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Bh/μ, умноженное на перепад P_k−P_r и сумму l_i/k_i",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Bh/μ, умноженное на сумму l_i/k_i и делённое на перепад P_k−P_r",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Bμ/h, умноженное на перепад P_k−P_r и делённое на сумму l_i/k_i",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Расход равен Bh/μ, умноженному на перепад P_k−P_r и делённому на сумму l_i/k_i (стр. 451).",
+   "step_id": "reh.zonal_gas_flow",
+   "id": "t24"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zonal_ideal_gas#c2",
+    "reh.zonal_ideal_gas#c4",
+    "reh.zonal_ideal_gas#c5"
+   ],
+   "prompt": "Какие утверждения о расчёте совершенного газа верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Давление внутри зоны определяется квадратным корнем из линейного по x выражения для квадратов граничных давлений.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Массовый расход равен массовой скорости, умноженной на hB.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Массовый расход пропорционален сумме l_i/k_i.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Массовый расход пропорционален перепаду квадратов давлений на концах и обратно пропорционален сумме l_i/k_i.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Верны формулы давления и массового расхода, приведённые на стр. 451.",
+   "step_id": "reh.zonal_ideal_gas",
+   "id": "t25"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zonal_ideal_gas#c6"
+   ],
+   "prompt": "Проницаемость характеризует {{1}} и не зависит от {{2}}.",
+   "options": [],
+   "answer": [
+    "пористую среду",
+    "флюида"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Утверждение о независимости проницаемости от флюида приведено на стр. 451.",
+   "step_id": "reh.zonal_ideal_gas",
+   "id": "t26"
+  },
+  {
+   "type": "order",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.zonal_travel_time#c1",
+    "reh.zonal_travel_time#c2",
+    "reh.zonal_travel_time#c3",
+    "reh.zonal_travel_time#c4",
+    "reh.zonal_travel_time#c5"
+   ],
+   "prompt": "Расположите утверждения в порядке, в котором они представлены в шаге.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Задаются формулы времени движения частиц для несжимаемой жидкости."
+    },
+    {
+     "id": "b",
+     "text": "Для несжимаемой жидкости задаются формулы времени до координаты x и полного времени прохождения зоны."
+    },
+    {
+     "id": "c",
+     "text": "Задаются формулы времени движения частиц для газа."
+    },
+    {
+     "id": "d",
+     "text": "Для газа задаются формулы времени до координаты x и полного времени в зоне."
+    },
+    {
+     "id": "e",
+     "text": "Указывается диапазон координаты x и суммирование времен прохождения зон для получения общего времени."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Утверждения о формулах для несжимаемой жидкости предшествуют формулам для газа, а затем задаются диапазон x и суммирование времен (стр. 452).",
+   "step_id": "reh.zonal_travel_time",
+   "id": "t27"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.continuous_permeability_flow#c3",
+    "reh.continuous_permeability_flow#c4",
+    "reh.continuous_permeability_flow#c5"
+   ],
+   "prompt": "Какой шаг следует после разделения переменных в выводе интегральных соотношений?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Интегрирование разделённых уравнений",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Замена проницаемости на постоянную величину",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Определение дебита без использования уравнений",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "После разделения переменных уравнения интегрируют (стр. 452).",
+   "step_id": "reh.continuous_permeability_flow",
+   "id": "t28"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.continuous_permeability_flow#c2",
+    "reh.continuous_permeability_flow#c7",
+    "reh.continuous_permeability_flow#c8"
+   ],
+   "prompt": "Выберите верные утверждения о течении при непрерывно меняющейся проницаемости.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Дебит жидкости выражается как −k(x)dp/dx·Bh/μ.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Дебит газа выражается как −k(x)dP/dx·Bh/μ.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Перепад давления или функция Лейбензона равны соответствующему дебиту, умноженному на μ/(Bh) и интеграл 1/k(x) по длине пласта.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "При заданной функции k(x) можно определить все характеристики течения флюидов.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Дебит жидкости и газа не зависит от проницаемости пласта.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формулы дебитов, интегральное соотношение и возможность определить характеристики при заданной k(x) приведены на стр. 452–453.",
+   "step_id": "reh.continuous_permeability_flow",
+   "id": "t29"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.radial_layered_liquid#c6"
+   ],
+   "prompt": "В слоисто-неоднородном пласте давление распределено {{1}} во всех пропластках, а скорость фильтрации и дебит в каждом пропластке {{2}}.",
+   "options": [],
+   "answer": [
+    "одинаково",
+    "свои"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Давление одинаково во всех пропластках, а их скорости фильтрации и дебиты различаются (стр. 453).",
+   "step_id": "reh.radial_layered_liquid",
+   "id": "t30"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.radial_layer_average#c5"
+   ],
+   "prompt": "Как определяют среднюю проницаемость слоисто-неоднородного пласта?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Сумму произведений проницаемостей слоёв на их толщины делят на общую толщину",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Складывают проницаемости слоёв и делят на число слоёв",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Общую толщину делят на сумму произведений проницаемостей слоёв на их толщины",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Берут проницаемость самого толстого слоя",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Среднюю проницаемость находят как сумму произведений проницаемостей слоёв на их толщины, делённую на общую толщину (стр. 454).",
+   "step_id": "reh.radial_layer_average",
+   "id": "t32"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.radial_layered_gas#c4"
+   ],
+   "prompt": "Массовый дебит газа в слое i пропорционален {{1}} и {{2}}.",
+   "options": [],
+   "answer": [
+    "k_i h_i",
+    "разности квадратов граничных давлений"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Дебит пропорционален произведению проницаемости на толщину слоя и разности квадратов граничных давлений (стр. 454).",
+   "step_id": "reh.radial_layered_gas",
+   "id": "t33"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.radial_zonal_flow#c9"
+   ],
+   "prompt": "Как соотносятся дебит и скорость фильтрации в разных зонах зонально-неоднородного пласта?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Дебит одинаков во всех зонах, а скорость в каждой зоне своя и меняется из-за неодинаковой площади сечения.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Дебит и скорость одинаковы во всех зонах.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Дебит в каждой зоне свой, а скорость одинакова во всём пласте.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "И дебит, и скорость постоянно меняются внутри каждой зоны.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При установившемся течении дебит во всех зонах одинаков, тогда как скорость различается и меняется внутри зоны из-за изменения площади сечения (стр. 455).",
+   "step_id": "reh.radial_zonal_flow",
+   "id": "t34"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "reh.radial_zonal_flow#c5"
+   ],
+   "prompt": "Давление внутри зоны изменяется {{1}} по радиусу между давлениями на её границах.",
+   "options": [],
+   "answer": [
+    "логарифмически"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Внутри каждой зоны давление изменяется логарифмически по радиусу (стр. 455).",
+   "step_id": "reh.radial_zonal_flow",
+   "id": "t35"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.radial_zonal_resistance#c2",
+    "reh.radial_zonal_resistance#c6",
+    "reh.radial_zonal_resistance#c7"
+   ],
+   "prompt": "Какие утверждения о выводе формулы дебита верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Формулы (21.35) нельзя непосредственно использовать для вычислений: сначала нужно выразить дебит через заданные давления.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Сложение выражений для перепадов давления по зонам даёт суммарное уравнение между граничными давлениями пласта.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Полный перепад давления равен дебиту, умноженному на сумму логарифмических сопротивлений зон, с общим множителем μ/(2πh).",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Перепады давления по отдельным зонам не складываются в суммарное уравнение.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Формулы (21.35) сразу дают дебит без использования давлений на контуре питания и у скважины.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала дебит выражают через заданные давления, а суммирование зональных перепадов даёт общий перепад с логарифмическими сопротивлениями (стр. 456).",
+   "step_id": "reh.radial_zonal_resistance",
+   "id": "t36"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "reh.radial_zonal_average#c1",
+    "reh.radial_zonal_average#c2",
+    "reh.radial_zonal_average#c3"
+   ],
+   "prompt": "Расположите шаги вывода формулы средней проницаемости в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Получить формулу средней проницаемости."
+    },
+    {
+     "id": "b",
+     "text": "Использовать формулу дебита (21.36)."
+    },
+    {
+     "id": "c",
+     "text": "Приравнять дебит зонально-неоднородного пласта дебиту однородного пласта со средней проницаемостью."
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала используют формулу дебита, затем приравнивают дебиты и получают выражение средней проницаемости (стр. 456).",
+   "step_id": "reh.radial_zonal_average",
+   "id": "t37"
+  }
+ ]
+}

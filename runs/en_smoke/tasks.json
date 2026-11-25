@@ -1,0 +1,666 @@
+{
+ "chapter": "en_smoke",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "en.logging_basics#c1",
+    "en.logging_basics#c2"
+   ],
+   "prompt": "Что такое каротаж скважины?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Подробная запись геологических формаций, вскрытых скважиной; она может основываться на осмотре образцов или измерениях приборами в скважине.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Прямое изображение подземных озёр нефти и газа.",
+     "misconception": "misc.oil_lake"
+    },
+    {
+     "id": "c",
+     "text": "Только визуальный осмотр образцов, поднятых из скважины.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Определение состава пород исключительно по сейсмическим данным.",
+     "misconception": "misc.seismic_sees_oil"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Каротаж записывает формации, вскрытые скважиной, используя осмотр образцов или измерения приборами (стр. 1).",
+   "step_id": "en.logging_basics",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.logging_basics#c3",
+    "en.logging_basics#c4",
+    "en.logging_basics#c5"
+   ],
+   "prompt": "Выберите верные утверждения о применении каротажа.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Некоторые геофизические измерения можно выполнять при бурении, освоении, добыче или ликвидации скважины.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Каротаж применяют только при поиске нефти и газа.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Каротаж используют также для поиска подземных вод, полезных ископаемых и геотермальных ресурсов, а также в экологических, научных и геотехнических исследованиях.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Проволочный каротаж используют в горном деле, нефтегазовой отрасли и консультировании по подземным водам, чтобы получать непрерывную запись свойств пород.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Проволочный каротаж применяют только после ликвидации скважины.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Эти утверждения соответствуют перечисленным этапам, областям применения и задачам проволочного каротажа (стр. 1).",
+   "step_id": "en.logging_basics",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "en.logging_tools#c2"
+   ],
+   "prompt": "Петрофизические свойства регистрируют с помощью различных {{1}}.",
+   "options": [],
+   "answer": [
+    "датчиков"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Свойства регистрируют с помощью различных датчиков (стр. 1).",
+   "step_id": "en.logging_tools",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.logging_tools#c1",
+    "en.logging_tools#c2",
+    "en.logging_tools#c5"
+   ],
+   "prompt": "Расположите этапы в порядке, который следует из утверждений шага.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Данные предоставляют клиенту в виде каротажной записи и электронной копии исходных данных.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Прибор или сборку приборов спускают в скважину на конце проволочного кабеля.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Петрофизические свойства регистрируют с помощью датчиков.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Данные записывают на поверхности в реальном времени или в скважине в режиме памяти.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "d",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала прибор спускают в скважину и регистрируют свойства, затем записанные данные предоставляют клиенту (стр. 1).",
+   "step_id": "en.logging_tools",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.depth_and_classification#c2"
+   ],
+   "prompt": "Как в режиме памяти получают отклик прибора как функцию глубины?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Записывают данные по времени и измеряют глубину в зависимости от времени, затем объединяют наборы по общей временной шкале.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Каждое измерение сразу привязывают к измеренной глубине кабеля.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Записывают данные только по глубине, не измеряя время.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Сначала объединяют данные по глубине, а затем определяют время измерений.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В режиме памяти данные измерений и глубину связывают по времени, а затем объединяют по общей временной шкале (стр. 1).",
+   "step_id": "en.depth_and_classification",
+   "id": "t05"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "en.depth_and_classification#c5"
+   ],
+   "prompt": "Измерения необходимо корректировать на {{1}} и {{2}}.",
+   "options": [],
+   "answer": [
+    "упругое растяжение",
+    "температуру"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Утверждение прямо указывает, что корректировки учитывают упругое растяжение и температуру (стр. 1).",
+   "step_id": "en.depth_and_classification",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.electrical_logging_history#c5",
+    "en.electrical_logging_history#c6",
+    "en.electrical_logging_history#c7",
+    "en.electrical_logging_history#c8"
+   ],
+   "prompt": "Выберите верные утверждения об открытии и применении самопроизвольного потенциала (SP).",
+   "options": [
+    {
+     "id": "a",
+     "text": "В 1931 году гальванометр колебался даже без пропускания тока по кабелям в скважине.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Наблюдение колебаний гальванометра привело к открытию SP, который был важен наряду с измерением сопротивления.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Эффект SP возникал только при пропускании тока по кабелям в скважине.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Совместная регистрация SP и сопротивления помогала различать проницаемые нефтеносные и непроницаемые непродуктивные пласты.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Гальванометр колебался без тока, это привело к открытию SP, а совместная регистрация SP и сопротивления помогала различать пласты (стр. 2).",
+   "step_id": "en.electrical_logging_history",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "en.electrical_logging_history#c9",
+    "en.electrical_logging_history#c10"
+   ],
+   "prompt": "В 1940 году Schlumberger изобрела {{1}}, а затем базовый дипметр усовершенствовали {{2}}.",
+   "options": [],
+   "answer": [
+    "дипметр самопроизвольного потенциала",
+    "дипметром сопротивления"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Дипметр самопроизвольного потенциала появился в 1940 году, а дипметр сопротивления — в 1947 году (стр. 2).",
+   "step_id": "en.electrical_logging_history",
+   "id": "t08"
+  },
+  {
+   "type": "order",
+   "kind": "recall",
+   "claim_ids": [
+    "en.logging_technology_development#c7",
+    "en.logging_technology_development#c4",
+    "en.logging_technology_development#c6"
+   ],
+   "prompt": "Расположите события в хронологическом порядке — от более раннего к более позднему.",
+   "options": [
+    {
+     "id": "a",
+     "text": "В 1940-х годах появились акустический и ядерный каротаж пористости."
+    },
+    {
+     "id": "b",
+     "text": "В 1960-х годах появление транзисторов и интегральных схем повысило надежность электрических каротажных записей."
+    },
+    {
+     "id": "c",
+     "text": "В 1970-х появились комбинированные записи сопротивления и пористости за один проход."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала появились методы каротажа пористости в 1940-х, затем приборы с транзисторами и интегральными схемами в 1960-х, а в 1970-х — комбинированные записи (стр. 2).",
+   "step_id": "en.logging_technology_development",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.logging_technology_development#c2",
+    "en.logging_technology_development#c3"
+   ],
+   "prompt": "Почему разработали индукционный каротаж?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Обычные электрические методы требуют проводящего водного раствора, а нефтяные растворы не проводят ток.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Нефтяные растворы проводят ток лучше водных, поэтому требовался метод для снижения сигнала.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Обычные электрические методы работают только в нефтяном растворе, но не в водном.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Индукционный каротаж разработали для измерения пористости вместо акустического каротажа.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Индукционный каротаж разработали в конце 1940-х, чтобы решать проблему непроводящих нефтяных растворов (стр. 2).",
+   "step_id": "en.logging_technology_development",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "en.nuclear_logging_history#c4",
+    "en.nuclear_logging_history#c5"
+   ],
+   "prompt": "Какие утверждения о ядерном каротаже верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Гамма-каротаж особенно полезен для выявления глинистых пластов, которые обычно имеют более высокий уровень гамма-излучения.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Гамма-каротаж напрямую измеряет глинистость пород.",
+     "misconception": "misc.gr_measures_clay"
+    },
+    {
+     "id": "c",
+     "text": "Ядерные записи можно выполнять в обсаженных скважинах.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Гамма-каротаж определяет глинистые пласты, потому что гамма-излучение отражается от породы.",
+     "misconception": "misc.gr_reflects"
+    }
+   ],
+   "answer": [
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Глинистые пласты обычно дают более высокий уровень гамма-излучения, а ядерные записи можно выполнять в обсаженных скважинах (стр. 2).",
+   "step_id": "en.nuclear_logging_history",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "en.nuclear_logging_history#c8"
+   ],
+   "prompt": "После открытия ядерного магнитного резонанса {{1}} в 1946 году Chevron и Schlumberger в начале 1950-х разработали ЯМР-каротаж с использованием {{2}}.",
+   "options": [],
+   "answer": [
+    "Блохом и Пёрселлом",
+    "поля Земли"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указаны открытие Блохом и Пёрселлом и использование поля Земли при разработке раннего ЯМР-каротажа (стр. 2).",
+   "step_id": "en.nuclear_logging_history",
+   "id": "t12"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.logging_while_drilling#c4"
+   ],
+   "prompt": "Расположите элементы передачи данных MWD от начала к концу пути сигнала.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Приборы внизу бурильной колонны"
+    },
+    {
+     "id": "b",
+     "text": "Импульсы бурового раствора"
+    },
+    {
+     "id": "c",
+     "text": "Поверхностные процессоры"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Данные идут от приборов внизу колонны к поверхностным процессорам с помощью импульсов бурового раствора (стр. 2).",
+   "step_id": "en.logging_while_drilling",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "en.logging_while_drilling#c3",
+    "en.logging_while_drilling#c4"
+   ],
+   "prompt": "Как MWD передаёт данные от приборов внизу бурильной колонны к поверхности?",
+   "options": [
+    {
+     "id": "a",
+     "text": "С помощью импульсов бурового раствора",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "С помощью сейсмических отражений от нефтяных пластов",
+     "misconception": "misc.seismic_sees_oil"
+    },
+    {
+     "id": "c",
+     "text": "Путём извлечения керна и его доставки на поверхность",
+     "misconception": "misc.core_eq_cuttings"
+    },
+    {
+     "id": "d",
+     "text": "С помощью постоянного кабеля, прикреплённого к бурильной колонне",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "MWD передаёт данные к поверхностным процессорам с помощью импульсов бурового раствора (стр. 2).",
+   "step_id": "en.logging_while_drilling",
+   "id": "t14"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "en.memory_tool_delivery#c6",
+    "en.memory_tool_delivery#c7"
+   ],
+   "prompt": "Приборы можно спустить внутри {{1}}, чтобы защитить их от повреждений. На глубине приборы можно {{2}} из конца бурильной трубы, чтобы начать каротаж.",
+   "options": [],
+   "answer": [
+    "бурильной трубы",
+    "вытолкнуть"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Приборы защищают спуском внутри бурильной трубы, а на глубине выталкивают из её конца (стр. 7).",
+   "step_id": "en.memory_tool_delivery",
+   "id": "t15"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.memory_tool_delivery#c3",
+    "en.memory_tool_delivery#c6",
+    "en.memory_tool_delivery#c7"
+   ],
+   "prompt": "Какие утверждения верно описывают доставку приборов памяти?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Их можно доставлять на бурильных трубах или гибких трубах.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Их можно спустить внутри бурильной трубы для защиты от повреждений.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "На глубине приборы можно вытолкнуть из конца бурильной трубы, чтобы начать каротаж.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Их доставляют только на обычном электрическом кабеле.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Их начинают выталкивать из трубы ещё до спуска в скважину.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Приборы памяти можно спускать на трубах, защищать внутри бурильной трубы и выталкивать на глубине для начала каротажа (стр. 7).",
+   "step_id": "en.memory_tool_delivery",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "en.slickline_memory_logging#c4",
+    "en.slickline_memory_logging#c5"
+   ],
+   "prompt": "Slickline использует {{1}} наружным диаметром {{2}}.",
+   "options": [],
+   "answer": [
+    "сплошную механическую проволоку",
+    "0,072–0,125 дюйма"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Slickline — это сплошная механическая проволока указанного наружного диаметра, стр. 7.",
+   "step_id": "en.slickline_memory_logging",
+   "id": "t17"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.slickline_memory_logging#c6",
+    "en.slickline_memory_logging#c7"
+   ],
+   "prompt": "Расположите этапы операции с приборами памяти на slickline в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Результаты каротажа становятся известны после возвращения приборов на поверхность.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Проводят операцию с приборами памяти на slickline вместо мобилизации полноценной установки электрического каротажа.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Приборы возвращают на поверхность.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала проводят операцию на slickline, затем возвращают приборы на поверхность, после чего становятся известны результаты, стр. 7.",
+   "step_id": "en.slickline_memory_logging",
+   "id": "t18"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "en.memory_logging_risks#c4"
+   ],
+   "prompt": "Когда обнаруживается неисправность, возникшая во время записи на прибор памяти?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Только после извлечения приборов памяти",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Сразу в реальном времени",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При регулировании поверхностных дебитов",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "После повторного проведения каротажа",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Неисправность во время записи обнаруживается только после извлечения приборов памяти (стр. 7).",
+   "step_id": "en.memory_logging_risks",
+   "id": "t19"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "en.memory_logging_risks#c5",
+    "en.memory_logging_risks#c6",
+    "en.memory_logging_risks#c7"
+   ],
+   "prompt": "Какие утверждения о потере данных при каротаже на памяти соответствуют описанию? Выберите все подходящие варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "На крупных и дорогих морских объектах потеря данных может стать серьёзной проблемой.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "На описанных наземных объектах потеря данных менее проблематична, а каротаж часто можно повторить без осложнений.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "На наземных объектах потеря данных всегда серьёзнее, чем на морских.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "На морских объектах потеря данных не представляет серьёзной проблемы.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "При потере данных каротаж нельзя повторить на наземных объектах.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Потеря данных может быть серьёзной на крупных морских объектах, тогда как в описанных наземных условиях каротаж часто повторяют без осложнений (стр. 7).",
+   "step_id": "en.memory_logging_risks",
+   "id": "t20"
+  }
+ ]
+}

@@ -86,8 +86,8 @@ def load_chapter(chapter_id: str, md_path: str | Path | None = None, pages=None)
     if pages:
         meta["pages"] = pages
     path = Path(meta["md"])
-    if not path.is_absolute():
-        path = materials_dir() / path
+    if not path.is_absolute():   # от папки материалов; если там нет — от папки проекта (репетиционные тексты в samples/)
+        path = (ROOT / path) if (ROOT / path).is_file() else materials_dir() / path
     raw = split_pages(path.read_text(encoding="utf-8"))
     wanted = page_list(meta["pages"]) if meta.get("pages") else sorted(raw)
     ch = Chapter(chapter_id, meta, {}, {}, {})

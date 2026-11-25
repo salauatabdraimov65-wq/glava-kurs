@@ -1,0 +1,22 @@
+{
+ "chapter": "reh_basniev_gl21",
+ "nodes": 23,
+ "claims": 166,
+ "tasks": 37,
+ "task_types": {
+  "single": 10,
+  "multiple": 8,
+  "gap": 10,
+  "order": 9
+ },
+ "units_in_scope": 165,
+ "uncovered": 1,
+ "coverage_pct": 99.4,
+ "formats": {
+  "текст": 7,
+  "практикум на данных": 5,
+  "интерактив": 11
+ },
+ "usd": 0.095,
+ "minutes": 2.3
+}

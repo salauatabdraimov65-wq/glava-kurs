@@ -1,0 +1,374 @@
+{
+ "chapter": "reh_basniev_gl21",
+ "routes": [
+  {
+   "node_id": "reh.layered_heterogeneity",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.heterogeneity_flow_types",
+   "format": "длинное видео",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/П; формула/модель — понимание через параметры",
+   "video_path": "video/reh_long_heterogeneity_flow_types/video_16x9.mp4"
+  },
+  {
+   "node_id": "reh.parallel_liquid_flow",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "reh.individual_layer_flow",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "reh.layered_gas_flow",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.parallel_effective_permeability",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.layered_total_rate",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.layer_travel_time",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.zonal_liquid_flow",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/Ф; текст шага и схема"
+  },
+  {
+   "node_id": "reh.zonal_pressure_profile",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.series_flow_resistance",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.zone_boundary_pressure",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "reh.series_effective_permeability",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.zonal_gas_flow",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.zonal_ideal_gas",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.zonal_travel_time",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.continuous_permeability_flow",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.radial_layered_liquid",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "reh.radial_layer_average",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "reh.radial_layered_gas",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.radial_zonal_flow",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.radial_zonal_resistance",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "reh.radial_zonal_average",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
+  }
+ ]
+}

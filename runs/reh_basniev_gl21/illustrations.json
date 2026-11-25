@@ -1,0 +1,528 @@
+{
+ "chapter": "reh_basniev_gl21",
+ "illustrations": [
+  {
+   "id": "ill.layered_heterogeneity",
+   "step_id": "reh.layered_heterogeneity",
+   "node_id": "reh.layered_heterogeneity",
+   "file": "illustrations/layered_heterogeneity.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 443–444.",
+   "alt": "Схема механизма: Разные фильтрационно-ёмкостные свойства областей → различия фильтрационных потоков. Перетоки между слоями → для точного расчёта, вообще говоря, нужны двумерные задачи",
+   "source": "учебный слой, стр. 443, стр. 444",
+   "claim_ids": [
+    "reh.layered_heterogeneity#c1",
+    "reh.layered_heterogeneity#c2",
+    "reh.layered_heterogeneity#c3",
+    "reh.layered_heterogeneity#c4",
+    "reh.layered_heterogeneity#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.heterogeneity_flow_types",
+   "step_id": "reh.heterogeneity_flow_types",
+   "node_id": "reh.heterogeneity_flow_types",
+   "file": "illustrations/heterogeneity_flow_types.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 444.",
+   "alt": "Схема механизма: При бурении раствор проникает от скважины в пласт, и его фильтрационные свойства непрерывно ухудшаются. → Эту неоднородность можно представить зональной или непрерывной моделью. → Схематизация потоков выделяет рассматриваемые случаи: тип неоднородности сочетается с геометрией потока.",
+   "source": "учебный слой, стр. 444",
+   "claim_ids": [
+    "reh.heterogeneity_flow_types#c1",
+    "reh.heterogeneity_flow_types#c2",
+    "reh.heterogeneity_flow_types#c3",
+    "reh.heterogeneity_flow_types#c4",
+    "reh.heterogeneity_flow_types#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.parallel_liquid_flow",
+   "step_id": "reh.parallel_liquid_flow",
+   "node_id": "reh.parallel_liquid_flow",
+   "file": "illustrations/parallel_liquid_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 445.",
+   "alt": "Схема: признаки Проницаемость kᵢ, Перепад давления pк − pр, Расстояние L; правило: При одинаковом градиенте давления скорость фильтрации пропорциональна проницаемости: wₓ = (k / μ)((pк − pр) / L).; вывод: В пропластках с разной проницаемостью скорости фильтрации различаются.",
+   "source": "учебный слой, стр. 445",
+   "claim_ids": [
+    "reh.parallel_liquid_flow#c1",
+    "reh.parallel_liquid_flow#c2",
+    "reh.parallel_liquid_flow#c3",
+    "reh.parallel_liquid_flow#c4",
+    "reh.parallel_liquid_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.individual_layer_flow",
+   "step_id": "reh.individual_layer_flow",
+   "node_id": "reh.individual_layer_flow",
+   "file": "illustrations/individual_layer_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 445–446.",
+   "alt": "Схема: признаки проницаемость kᵢ, площадь сечения hᵢB, перепад давления на единицу длины; правило: При одинаковом перепаде давления скорость пропорциональна проницаемости. Дебит пропорционален проницаемости и площади сечения.; вывод: Более проницаемый пропласток имеет большую скорость фильтрации; при большем сечении и проницаемости его дебит выше.",
+   "source": "учебный слой, стр. 445, стр. 446",
+   "claim_ids": [
+    "reh.individual_layer_flow#c1",
+    "reh.individual_layer_flow#c2",
+    "reh.individual_layer_flow#c3",
+    "reh.individual_layer_flow#c4",
+    "reh.individual_layer_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.layered_gas_flow",
+   "step_id": "reh.layered_gas_flow",
+   "node_id": "reh.layered_gas_flow",
+   "file": "illustrations/layered_gas_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 446.",
+   "alt": "Схема процедуры: 1. Использовать формулы потока через функцию Лейбензона.; 2. Подставить в них выражение функции Лейбензона для совершенного газа.; 3. Рассчитать давление, массовый поток и массовый расход пропластка.",
+   "source": "учебный слой, стр. 446",
+   "claim_ids": [
+    "reh.layered_gas_flow#c1",
+    "reh.layered_gas_flow#c2",
+    "reh.layered_gas_flow#c3",
+    "reh.layered_gas_flow#c4",
+    "reh.layered_gas_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.parallel_effective_permeability",
+   "step_id": "reh.parallel_effective_permeability",
+   "node_id": "reh.parallel_effective_permeability",
+   "file": "illustrations/parallel_effective_permeability.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 446–447.",
+   "alt": "Схема механизма: Расход всего пласта складывается из расходов отдельных пропластков. → Приравнивание этого расхода к расходу однородного пласта одинаковых размеров приводит к среднему значению kср = Σ(kᵢhᵢ)/h.",
+   "source": "учебный слой, стр. 446, стр. 447",
+   "claim_ids": [
+    "reh.parallel_effective_permeability#c1",
+    "reh.parallel_effective_permeability#c2",
+    "reh.parallel_effective_permeability#c3",
+    "reh.parallel_effective_permeability#c4",
+    "reh.parallel_effective_permeability#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.layered_total_rate",
+   "step_id": "reh.layered_total_rate",
+   "node_id": "reh.layered_total_rate",
+   "file": "illustrations/layered_total_rate.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 447.",
+   "alt": "Схема механизма: Подстановка функции Лейбензона для каждого типа флюида в уравнение (21.11) → формула общего дебита. Для жидкости в числителе стоит перепад давления, для газа — разность квадратов давлений",
+   "source": "учебный слой, стр. 447",
+   "claim_ids": [
+    "reh.layered_total_rate#c1",
+    "reh.layered_total_rate#c2",
+    "reh.layered_total_rate#c3",
+    "reh.layered_total_rate#c4"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.layer_travel_time",
+   "step_id": "reh.layer_travel_time",
+   "node_id": "reh.layer_travel_time",
+   "file": "illustrations/layer_travel_time.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 447.",
+   "alt": "Схема механизма: Свои пористость и проницаемость пропластка входят в формулу → рассчитанное время относится именно к этому пропластку. Для газа формулы учитывают давления через разности их кубов и квадратов",
+   "source": "учебный слой, стр. 447",
+   "claim_ids": [
+    "reh.layer_travel_time#c1",
+    "reh.layer_travel_time#c2",
+    "reh.layer_travel_time#c3",
+    "reh.layer_travel_time#c4"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.zonal_liquid_flow",
+   "step_id": "reh.zonal_liquid_flow",
+   "node_id": "reh.zonal_liquid_flow",
+   "file": "illustrations/zonal_liquid_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 447–448.",
+   "alt": "Схема механизма: Закон сохранения массы при установившемся течении требует, чтобы через каждую зону проходил одинаковый объем жидкости. → Поскольку площадь сечения постоянна, одинаковы и скорости фильтрации; проницаемость зоны влияет на связь скорости с градиентом давления.",
+   "source": "учебный слой, стр. 447, стр. 448",
+   "claim_ids": [
+    "reh.zonal_liquid_flow#c1",
+    "reh.zonal_liquid_flow#c2",
+    "reh.zonal_liquid_flow#c3",
+    "reh.zonal_liquid_flow#c4",
+    "reh.zonal_liquid_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.zonal_pressure_profile",
+   "step_id": "reh.zonal_pressure_profile",
+   "node_id": "reh.zonal_pressure_profile",
+   "file": "illustrations/zonal_pressure_profile.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 449.",
+   "alt": "Схема механизма: Разность давлений на границах зоны, делённая на её длину, задаёт градиент давления. → По формулам главы скорость фильтрации пропорциональна этому перепаду на единицу длины, проницаемости и обратно пропорциональна вязкости; объёмный дебит дополнительно зависит от площади сечения hB.",
+   "source": "учебный слой, стр. 449",
+   "claim_ids": [
+    "reh.zonal_pressure_profile#c1",
+    "reh.zonal_pressure_profile#c2",
+    "reh.zonal_pressure_profile#c3",
+    "reh.zonal_pressure_profile#c4",
+    "reh.zonal_pressure_profile#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.series_flow_resistance",
+   "step_id": "reh.series_flow_resistance",
+   "node_id": "reh.series_flow_resistance",
+   "file": "illustrations/series_flow_resistance.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 449.",
+   "alt": "Схема процедуры: 1. Определить параметры каждой зоны и общий дебит.; 2. Рассчитать перепад давления в каждой зоне.; 3. Сложить перепады, чтобы получить давление между концами пласта.; 4. Использовать соотношение для вычисления дебита либо граничных давлений.",
+   "source": "учебный слой, стр. 449",
+   "claim_ids": [
+    "reh.series_flow_resistance#c1",
+    "reh.series_flow_resistance#c2",
+    "reh.series_flow_resistance#c3",
+    "reh.series_flow_resistance#c4",
+    "reh.series_flow_resistance#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.zone_boundary_pressure",
+   "step_id": "reh.zone_boundary_pressure",
+   "node_id": "reh.zone_boundary_pressure",
+   "file": "illustrations/zone_boundary_pressure.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 450.",
+   "alt": "Схема: признаки pₖ, pᵣ, lᵢ, kᵢ; правило: Вычислить давление на границе из соотношения для первой зоны и всего пласта.; вывод: Получить p₂; остальные граничные давления определять аналогично.",
+   "source": "учебный слой, стр. 450",
+   "claim_ids": [
+    "reh.zone_boundary_pressure#c1",
+    "reh.zone_boundary_pressure#c2",
+    "reh.zone_boundary_pressure#c3",
+    "reh.zone_boundary_pressure#c4",
+    "reh.zone_boundary_pressure#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.series_effective_permeability",
+   "step_id": "reh.series_effective_permeability",
+   "node_id": "reh.series_effective_permeability",
+   "file": "illustrations/series_effective_permeability.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 450.",
+   "alt": "Схема процедуры: 1. Записать дебит для неоднородного пласта.; 2. Записать дебит через среднюю проницаемость и полную длину.; 3. Приравнять выражения и выразить среднюю проницаемость.",
+   "source": "учебный слой, стр. 450",
+   "claim_ids": [
+    "reh.series_effective_permeability#c1",
+    "reh.series_effective_permeability#c2",
+    "reh.series_effective_permeability#c3",
+    "reh.series_effective_permeability#c4",
+    "reh.series_effective_permeability#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.zonal_gas_flow",
+   "step_id": "reh.zonal_gas_flow",
+   "node_id": "reh.zonal_gas_flow",
+   "file": "illustrations/zonal_gas_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 450–451.",
+   "alt": "Схема механизма: Перепад функции Лейбензона в зоне задаёт её градиент. → Массовая скорость пропорциональна проницаемости зоны и этому градиенту, делённому на вязкость; умножение на сечение даёт массовый расход зоны. → Для всего пласта зоны учитываются суммой lᵢ/kᵢ.",
+   "source": "учебный слой, стр. 450, стр. 451",
+   "claim_ids": [
+    "reh.zonal_gas_flow#c1",
+    "reh.zonal_gas_flow#c2",
+    "reh.zonal_gas_flow#c3",
+    "reh.zonal_gas_flow#c4",
+    "reh.zonal_gas_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.zonal_ideal_gas",
+   "step_id": "reh.zonal_ideal_gas",
+   "node_id": "reh.zonal_ideal_gas",
+   "file": "illustrations/zonal_ideal_gas.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 451–452.",
+   "alt": "Схема процедуры: 1. Задать давления на концах пласта и параметры зон.; 2. Рассчитать общий расход по формуле для всего пласта.; 3. Для первой зоны приравнять общий расход и расход через эту зону.; 4. Найти давление на границе первой и второй зон.; 5. Аналогично определить давления на остальных границах зон.",
+   "source": "учебный слой, стр. 451, стр. 452",
+   "claim_ids": [
+    "reh.zonal_ideal_gas#c1",
+    "reh.zonal_ideal_gas#c2",
+    "reh.zonal_ideal_gas#c3",
+    "reh.zonal_ideal_gas#c4",
+    "reh.zonal_ideal_gas#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.zonal_travel_time",
+   "step_id": "reh.zonal_travel_time",
+   "node_id": "reh.zonal_travel_time",
+   "file": "illustrations/zonal_travel_time.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 452.",
+   "alt": "Схема процедуры: 1. Выбрать формулу по модели флюида: несжимаемая жидкость или газ.; 2. Для времени до координаты x использовать значение x в пределах координат зоны.; 3. Определить полное время T_i прохождения каждой зоны.; 4. Сложить времена зон: T = Σᵢ₌₁ⁿ T_i.",
+   "source": "учебный слой, стр. 452",
+   "claim_ids": [
+    "reh.zonal_travel_time#c1",
+    "reh.zonal_travel_time#c2",
+    "reh.zonal_travel_time#c3",
+    "reh.zonal_travel_time#c4",
+    "reh.zonal_travel_time#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.continuous_permeability_flow",
+   "step_id": "reh.continuous_permeability_flow",
+   "node_id": "reh.continuous_permeability_flow",
+   "file": "illustrations/continuous_permeability_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 452–453.",
+   "alt": "Схема процедуры: 1. Записать дифференциальное уравнение дебита для жидкости или газа.; 2. Разделить переменные.; 3. Проинтегрировать полученное уравнение по длине пласта.; 4. Использовать интегральное соотношение для определения характеристик течения.",
+   "source": "учебный слой, стр. 452, стр. 453",
+   "claim_ids": [
+    "reh.continuous_permeability_flow#c1",
+    "reh.continuous_permeability_flow#c2",
+    "reh.continuous_permeability_flow#c3",
+    "reh.continuous_permeability_flow#c4",
+    "reh.continuous_permeability_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.radial_layered_liquid",
+   "step_id": "reh.radial_layered_liquid",
+   "node_id": "reh.radial_layered_liquid",
+   "file": "illustrations/radial_layered_liquid.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 453.",
+   "alt": "Схема: признаки проницаемость kᵢ, толщина hᵢ, радиус r; правило: При одинаковом градиенте давления скорость слоя пропорциональна kᵢ и обратно пропорциональна r; дебит пропорционален kᵢ и hᵢ.; вывод: При заданных общих условиях более проницаемый и толстый пропласток имеет больший дебит.",
+   "source": "учебный слой, стр. 453",
+   "claim_ids": [
+    "reh.radial_layered_liquid#c1",
+    "reh.radial_layered_liquid#c2",
+    "reh.radial_layered_liquid#c3",
+    "reh.radial_layered_liquid#c4",
+    "reh.radial_layered_liquid#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.radial_layer_average",
+   "step_id": "reh.radial_layer_average",
+   "node_id": "reh.radial_layer_average",
+   "file": "illustrations/radial_layer_average.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 454.",
+   "alt": "Схема: признаки проницаемость каждого слоя kᵢ, толщина каждого слоя hᵢ, общая толщина h; правило: kср = Σ(kᵢhᵢ)/h, где h = Σhᵢ.; вывод: Средняя проницаемость определяется суммой произведений проницаемостей на толщины, делённой на общую толщину.",
+   "source": "учебный слой, стр. 454",
+   "claim_ids": [
+    "reh.radial_layer_average#c1",
+    "reh.radial_layer_average#c2",
+    "reh.radial_layer_average#c3",
+    "reh.radial_layer_average#c4",
+    "reh.radial_layer_average#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.radial_layered_gas",
+   "step_id": "reh.radial_layered_gas",
+   "node_id": "reh.radial_layered_gas",
+   "file": "illustrations/radial_layered_gas.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 454.",
+   "alt": "Схема механизма: Аналогия фильтрации газа и несжимаемой жидкости вместе с соотношениями (21.32) даёт формулы для слоистого пласта. → В формулах массовый поток зависит от проницаемости, разности квадратов граничных давлений и обратно пропорционален радиусу; интегральный дебит слоя также зависит от его толщины.",
+   "source": "учебный слой, стр. 454",
+   "claim_ids": [
+    "reh.radial_layered_gas#c1",
+    "reh.radial_layered_gas#c2",
+    "reh.radial_layered_gas#c3",
+    "reh.radial_layered_gas#c4"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.radial_zonal_flow",
+   "step_id": "reh.radial_zonal_flow",
+   "node_id": "reh.radial_zonal_flow",
+   "file": "illustrations/radial_zonal_flow.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 454–455.",
+   "alt": "Схема механизма: При установившемся течении масса сохраняется: сколько жидкости входит через внешний контур, столько выходит через скважину. → Поэтому дебит зон одинаков; разные проницаемости и площади сечения дают разные распределения давления и скорости.",
+   "source": "учебный слой, стр. 454, стр. 455",
+   "claim_ids": [
+    "reh.radial_zonal_flow#c1",
+    "reh.radial_zonal_flow#c2",
+    "reh.radial_zonal_flow#c3",
+    "reh.radial_zonal_flow#c4",
+    "reh.radial_zonal_flow#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.radial_zonal_resistance",
+   "step_id": "reh.radial_zonal_resistance",
+   "node_id": "reh.radial_zonal_resistance",
+   "file": "illustrations/radial_zonal_resistance.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 456.",
+   "alt": "Схема процедуры: 1. Записать перепад давления для каждой зоны через дебит.; 2. Сложить выражения для перепадов по всем зонам.; 3. Выразить дебит через граничные давления и параметры зон.",
+   "source": "учебный слой, стр. 456",
+   "claim_ids": [
+    "reh.radial_zonal_resistance#c1",
+    "reh.radial_zonal_resistance#c2",
+    "reh.radial_zonal_resistance#c3",
+    "reh.radial_zonal_resistance#c4",
+    "reh.radial_zonal_resistance#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.radial_zonal_average",
+   "step_id": "reh.radial_zonal_average",
+   "node_id": "reh.radial_zonal_average",
+   "file": "illustrations/radial_zonal_average.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 456.",
+   "alt": "Схема: признаки Проницаемости зон kᵢ, Радиусы границ зон rᵢ и rᵢ₊₁, Внешний радиус Rк, Радиус скважины rс; правило: Вычислить ln(Rк/rс) и разделить на сумму ln(rᵢ₊₁/rᵢ)/kᵢ.; вывод: Результат — средняя проницаемость, дающая тот же дебит, что и зональный пласт.",
+   "source": "учебный слой, стр. 456",
+   "claim_ids": [
+    "reh.radial_zonal_average#c1",
+    "reh.radial_zonal_average#c2",
+    "reh.radial_zonal_average#c3",
+    "reh.radial_zonal_average#c4"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "fig.redrawn_21_1",
+   "step_id": "reh.parallel_liquid_flow",
+   "node_id": "reh.parallel_liquid_flow",
+   "file": "illustrations/redrawn_21_1.svg",
+   "frame_class": "B",
+   "origin": "redrawn_from_book",
+   "label": "симуляция",
+   "caption": "При фильтрации несжимаемой жидкости давление линейно падает от контура питания до галереи и одинаково во всех пропластках. Кривая 2 для газа не воспроизведена: её формула в приведённом тексте отсутствует. Рис. 21.1 книги, перерисованный расчётом: pk - (pk - pr) / L * x; 1 — жидкость. Оси в условных единицах.",
+   "alt": "График: Распределение давления в слоистом пласте. По оси x — Расстояние вдоль пласта x, по оси y — Давление p. Кривые: 1 — жидкость.",
+   "source": "Перерисовано по рис. 21.1, стр. 445; рассчитано кодом по формуле главы, стр. 445",
+   "claim_ids": [
+    "reh.parallel_liquid_flow#c1",
+    "reh.parallel_liquid_flow#c2",
+    "reh.parallel_liquid_flow#c3",
+    "reh.parallel_liquid_flow#c4"
+   ],
+   "prompt": null,
+   "formula_quote": "$$p(x) = p_k - \\frac{p_k - p_r}{L} x, \\quad (21.1)$$",
+   "expression": "pk - (pk - pr) / L * x",
+   "by_model": true
+  },
+  {
+   "id": "fig.redrawn_21_3",
+   "step_id": "reh.radial_layered_liquid",
+   "node_id": "reh.radial_layered_liquid",
+   "file": "illustrations/redrawn_21_3.svg",
+   "frame_class": "B",
+   "origin": "redrawn_from_book",
+   "label": "симуляция",
+   "caption": "Давление жидкости возрастает от забойного давления до давления на контуре питания. При отсутствии перетоков распределение давления одинаково во всех пропластках. Кривая для газа не построена: её формула в приведённом тексте отсутствует. Рис. 21.3 книги, перерисованный расчётом: pk - (pk - pc) / log(Rk / rc) * log(Rk / x); 1 — жидкость. Оси в условных единицах.",
+   "alt": "График: Распределение давления в слоистом пласте. По оси x — Расстояние от скважины r, по оси y — Давление p. Кривые: 1 — жидкость.",
+   "source": "Перерисовано по рис. 21.3, стр. 453; рассчитано кодом по формуле главы, стр. 453",
+   "claim_ids": [
+    "reh.radial_layered_liquid#c1",
+    "reh.radial_layered_liquid#c2",
+    "reh.radial_layered_liquid#c3",
+    "reh.radial_layered_liquid#c4"
+   ],
+   "prompt": null,
+   "formula_quote": "$$p(r) = p_k - \\frac{p_k - p_c}{\\ln R_k / r_c} \\ln \\frac{R_k}{r}$$",
+   "expression": "pk - (pk - pc) / log(Rk / rc) * log(Rk / x)",
+   "by_model": true
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+{
+ "chapter": "en_smoke",
+ "routes": [
+  {
+   "node_id": "en.logging_basics",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Пр, видеоёмкость 5/10 → шортс"
+  },
+  {
+   "node_id": "en.logging_tools",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип И/Пр, видеоёмкость 4/10 → текст"
+  },
+  {
+   "node_id": "en.depth_and_classification",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 5/10 → практикум на данных"
+  },
+  {
+   "node_id": "en.electrical_logging_history",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/М, видеоёмкость 7/10 → шортс"
+  },
+  {
+   "node_id": "en.logging_technology_development",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "why": "тип М/И, видеоёмкость 6/10 → шортс"
+  },
+  {
+   "node_id": "en.nuclear_logging_history",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/М, видеоёмкость 7/10 → шортс"
+  },
+  {
+   "node_id": "en.logging_while_drilling",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "why": "тип М/Пр, видеоёмкость 5/10 → шортс"
+  },
+  {
+   "node_id": "en.memory_tool_delivery",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/М, видеоёмкость 5/10 → практикум на данных"
+  },
+  {
+   "node_id": "en.slickline_memory_logging",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/М, видеоёмкость 5/10 → практикум на данных"
+  },
+  {
+   "node_id": "en.memory_logging_risks",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_diffusion",
+   "why": "тип Н/Пр, видеоёмкость 6/10 → интерактив"
+  }
+ ]
+}

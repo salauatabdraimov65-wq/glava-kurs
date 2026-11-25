@@ -1,0 +1,214 @@
+{
+ "chapter": "en_smoke",
+ "illustrations": [
+  {
+   "id": "ill.logging_basics",
+   "step_id": "en.logging_basics",
+   "node_id": "en.logging_basics",
+   "file": "illustrations/logging_basics.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 1.",
+   "alt": "Схема механизма: Приборы измеряют физические свойства пород на разных глубинах → анализ этих измерений позволяет выводить дополнительные свойства, например насыщенность углеводородами и пластовое давление",
+   "source": "учебный слой, стр. 1",
+   "claim_ids": [
+    "en.logging_basics#c1",
+    "en.logging_basics#c2",
+    "en.logging_basics#c3",
+    "en.logging_basics#c4",
+    "en.logging_basics#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.logging_tools",
+   "step_id": "en.logging_tools",
+   "node_id": "en.logging_tools",
+   "file": "illustrations/logging_tools.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 1–3.",
+   "alt": "Схема процедуры: 1. Спустить каротажный прибор или сборку приборов в скважину на проволочном кабеле.; 2. Регистрировать свойства пород датчиками.; 3. Записать данные на поверхности в реальном времени или сохранить их в скважине в режиме памяти.; 4. Предоставить клиенту каротажную запись и электронную копию исходных данных.",
+   "source": "учебный слой, стр. 1, стр. 3",
+   "claim_ids": [
+    "en.logging_tools#c1",
+    "en.logging_tools#c2",
+    "en.logging_tools#c3",
+    "en.logging_tools#c4",
+    "en.logging_tools#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.depth_and_classification",
+   "step_id": "en.depth_and_classification",
+   "node_id": "en.depth_and_classification",
+   "file": "illustrations/depth_and_classification.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 1.",
+   "alt": "Схема: признаки Время измерения, Измеренная глубина кабеля, Способ измерения глубины; правило: Данные режима памяти объединяют с глубиной по общей временной шкале; измерения корректируют на упругое растяжение и температуру.; вывод: Получают отклик прибора как функцию глубины.",
+   "source": "учебный слой, стр. 1",
+   "claim_ids": [
+    "en.depth_and_classification#c1",
+    "en.depth_and_classification#c2",
+    "en.depth_and_classification#c3",
+    "en.depth_and_classification#c4",
+    "en.depth_and_classification#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.electrical_logging_history",
+   "step_id": "en.electrical_logging_history",
+   "node_id": "en.electrical_logging_history",
+   "file": "illustrations/electrical_logging_history.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 2.",
+   "alt": "Схема: признаки Самопроизвольный потенциал, Сопротивление; правило: При совместной регистрации самопроизвольного потенциала и сопротивления специалисты могли различать проницаемые нефтеносные пласты и непроницаемые непродуктивные пласты.; вывод: Совместная запись помогала различать указанные типы пластов.",
+   "source": "учебный слой, стр. 2",
+   "claim_ids": [
+    "en.electrical_logging_history#c1",
+    "en.electrical_logging_history#c2",
+    "en.electrical_logging_history#c3",
+    "en.electrical_logging_history#c4",
+    "en.electrical_logging_history#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.logging_technology_development",
+   "step_id": "en.logging_technology_development",
+   "node_id": "en.logging_technology_development",
+   "file": "illustrations/logging_technology_development.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 2.",
+   "alt": "Схема механизма: Нефтяной буровой раствор не проводит ток, поэтому обычные электрические методы с ним не работают. → Индукционный каротаж разработали для решения этой проблемы; транзисторы и интегральные схемы повысили надёжность записей, а компьютеризация ускорила обработку и расширила сбор данных.",
+   "source": "учебный слой, стр. 2",
+   "claim_ids": [
+    "en.logging_technology_development#c1",
+    "en.logging_technology_development#c2",
+    "en.logging_technology_development#c3",
+    "en.logging_technology_development#c4",
+    "en.logging_technology_development#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.nuclear_logging_history",
+   "step_id": "en.nuclear_logging_history",
+   "node_id": "en.nuclear_logging_history",
+   "file": "illustrations/nuclear_logging_history.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 2.",
+   "alt": "Схема механизма: Естественная радиоактивность пород даёт сигнал гамма-каротажа; активные методы облучают породы ядерными частицами. → Глинистые пласты обычно дают более высокий уровень гамма-излучения, поэтому гамма-каротаж помогает выявлять их. → ЯМР-каротаж использует ядерный магнитный резонанс; развитие инженерных решений позволило перейти к непрерывной записи.",
+   "source": "учебный слой, стр. 2",
+   "claim_ids": [
+    "en.nuclear_logging_history#c1",
+    "en.nuclear_logging_history#c2",
+    "en.nuclear_logging_history#c3",
+    "en.nuclear_logging_history#c4",
+    "en.nuclear_logging_history#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.logging_while_drilling",
+   "step_id": "en.logging_while_drilling",
+   "node_id": "en.logging_while_drilling",
+   "file": "illustrations/logging_while_drilling.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 2.",
+   "alt": "Схема механизма: Если скважина отклоняется от вертикали, приборы сначала приходилось прикреплять к бурильной колонне. → Современные методы передают информацию на поверхность, а MWD использует импульсы бурового раствора для передачи данных от приборов внизу колонны к поверхностным процессорам.",
+   "source": "учебный слой, стр. 2",
+   "claim_ids": [
+    "en.logging_while_drilling#c1",
+    "en.logging_while_drilling#c2",
+    "en.logging_while_drilling#c3",
+    "en.logging_while_drilling#c4"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.memory_tool_delivery",
+   "step_id": "en.memory_tool_delivery",
+   "node_id": "en.memory_tool_delivery",
+   "file": "illustrations/memory_tool_delivery.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 7.",
+   "alt": "Схема процедуры: 1. Спустить прибор внутри бурильной трубы, защитив его от повреждений.; 2. На глубине вытолкнуть прибор из конца трубы.; 3. Начать каротаж.",
+   "source": "учебный слой, стр. 7",
+   "claim_ids": [
+    "en.memory_tool_delivery#c1",
+    "en.memory_tool_delivery#c2",
+    "en.memory_tool_delivery#c3",
+    "en.memory_tool_delivery#c4",
+    "en.memory_tool_delivery#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.slickline_memory_logging",
+   "step_id": "en.slickline_memory_logging",
+   "node_id": "en.slickline_memory_logging",
+   "file": "illustrations/slickline_memory_logging.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 7.",
+   "alt": "Схема механизма: Приборы памяти на slickline проводят в скважину вместо мобилизации установки электрического каротажа → снижаются затраты и время работ. Данные недоступны до возвращения приборов на поверхность → изменения условий добычи нельзя наблюдать в реальном времени",
+   "source": "учебный слой, стр. 7",
+   "claim_ids": [
+    "en.slickline_memory_logging#c1",
+    "en.slickline_memory_logging#c2",
+    "en.slickline_memory_logging#c3",
+    "en.slickline_memory_logging#c4",
+    "en.slickline_memory_logging#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.memory_logging_risks",
+   "step_id": "en.memory_logging_risks",
+   "node_id": "en.memory_logging_risks",
+   "file": "illustrations/memory_logging_risks.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 7.",
+   "alt": "Схема механизма: Результаты становятся известны после возвращения приборов на поверхность → изменения динамики скважины нельзя наблюдать в реальном времени. Поэтому точно менять подземные условия добычи, регулируя поверхностные дебиты, ограниченно возможно. Неисправность во время записи выявляется только после извлечения приборов → данные могут быть потеряны",
+   "source": "учебный слой, стр. 7",
+   "claim_ids": [
+    "en.memory_logging_risks#c1",
+    "en.memory_logging_risks#c2",
+    "en.memory_logging_risks#c3",
+    "en.memory_logging_risks#c4",
+    "en.memory_logging_risks#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  }
+ ]
+}

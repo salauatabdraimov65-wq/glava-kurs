@@ -1,0 +1,1989 @@
+{
+ "chapter": "reh_basniev_gl21",
+ "rows": [
+  {
+   "unit_id": "p442.01",
+   "kind": "heading",
+   "page_pdf": 442,
+   "excerpt": "442",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.02",
+   "kind": "heading",
+   "page_pdf": 442,
+   "excerpt": "ГЛАВА XX",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.03",
+   "kind": "paragraph",
+   "page_pdf": 442,
+   "excerpt": "для распределения давления в пласте",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.04",
+   "kind": "formula",
+   "page_pdf": 442,
+   "excerpt": "p(r) = left[ p_k^ n+1 - (p_k^ n+1 - p_c^ n+1 )",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.05",
+   "kind": "paragraph",
+   "page_pdf": 442,
+   "excerpt": "для скорости фильтрации",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.06",
+   "kind": "formula",
+   "page_pdf": 442,
+   "excerpt": "w = frac Q 2 pi rh = frac cr_c^ frac n-1",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.07",
+   "kind": "paragraph",
+   "page_pdf": 442,
+   "excerpt": "Если в формулах (20.80)–(20.83) положить n = 2 , то получим расчетные",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.08",
+   "kind": "paragraph",
+   "page_pdf": 442,
+   "excerpt": "Как следует из формулы (20.75), кривая распределения давления для несжимаемой жидкости имеет",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.09",
+   "kind": "figure",
+   "page_pdf": 442,
+   "excerpt": "Рис. 20.17. Индикаторные линии, соответствующие различным законам фильтрации жидкости",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.10",
+   "kind": "paragraph",
+   "page_pdf": 442,
+   "excerpt": "ведены индикаторные линии для течения несжимаемой жидкости при линейном законе фильтрации (",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p442.11",
+   "kind": "paragraph",
+   "page_pdf": 442,
+   "excerpt": "Скорость фильтрации вдоль линии тока изменяется при нелинейном законе фильтрации так же,",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p443.01",
+   "kind": "heading",
+   "page_pdf": 443,
+   "excerpt": "Глава XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p443.02",
+   "kind": "heading",
+   "page_pdf": 443,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ ПО ЗАКОНУ ДАРСИ НЕСЖИМАЕМОЙ ЖИДКОСТИ И ГАЗА В НЕОДНОРОДНЫХ",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p443.03",
+   "kind": "heading",
+   "page_pdf": 443,
+   "excerpt": "§1. Основные типы неоднородности пластов",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p443.04",
+   "kind": "paragraph",
+   "page_pdf": 443,
+   "excerpt": "В природных условиях продуктивные коллекторы углеводородного сырья редко бывают однородными, т.е. такими,",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p443.05",
+   "kind": "paragraph",
+   "page_pdf": 443,
+   "excerpt": "Однако часто изменение проницаемости по пласту носит столь хаотичный характер, что значительные",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p443.06",
+   "kind": "paragraph",
+   "page_pdf": 443,
+   "excerpt": "В пластах-коллектрах углеводородного сырья выделяют следующие основные типы макронеоднородности.",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p443.07",
+   "kind": "paragraph",
+   "page_pdf": 443,
+   "excerpt": "1. Слоистая неоднородность. При слоистой неоднородности пласт разделяется по толщине на несколько",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.01",
+   "kind": "heading",
+   "page_pdf": 444,
+   "excerpt": "444",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p444.02",
+   "kind": "heading",
+   "page_pdf": 444,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p444.03",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "тать, что отдельные слои – пропластки разделены непроницаемыми границами (случай гидравлически изолированных",
+   "node_ids": [
+    "reh.layered_heterogeneity"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.04",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "2. Зональная неоднородность. При зональной неоднородности пласта фильтрационные свойства меняются в плоскости",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.05",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "3. Пласты с непрерывной или случайной неоднородностью. На практике встречаются пласты, в",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.06",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "Например, при бурении скважин буровой раствор фильтруется в пласт с углеводородным сырьем",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.07",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "Таким образом, в результате схематизации фильтрационных потоков можно выделить:",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.08",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "1) прямолинейно-параллельный, плоскорадиальный и радиально-сферический потоки в слоисто-неоднородном пласте; 2) прямолинейно-параллельный, плоскорадиальный",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.09",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "Очевидно, что для полноты изучения необходимо рассмотреть фильтрацию в неоднородных пластах для",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p444.10",
+   "kind": "paragraph",
+   "page_pdf": 444,
+   "excerpt": "Рассмотрим одномерные потоки несжимаемой жидкости и газа в неоднородных пластах по закону",
+   "node_ids": [
+    "reh.heterogeneity_flow_types"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.01",
+   "kind": "heading",
+   "page_pdf": 445,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p445.02",
+   "kind": "heading",
+   "page_pdf": 445,
+   "excerpt": "445",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p445.03",
+   "kind": "heading",
+   "page_pdf": 445,
+   "excerpt": "§2. Прямолинейно-параллельный поток в слоисто-неоднородном пласте",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.04",
+   "kind": "paragraph",
+   "page_pdf": 445,
+   "excerpt": "Пусть горизонтальный пласт толщины h и ширины B состоит из n пропластков",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.05",
+   "kind": "figure",
+   "page_pdf": 445,
+   "excerpt": "Рис. 21.1. Прямолинейно неоднородный поток в слоисто неоднородном пласте: 1 – p(x)",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.06",
+   "kind": "paragraph",
+   "page_pdf": 445,
+   "excerpt": "формулами (20.4) и (20.5) для давления, скорости фильтрации и дебита при фильтрации",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.07",
+   "kind": "formula",
+   "page_pdf": 445,
+   "excerpt": "p(x) = p_k - frac p_k - p_r L x,",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.08",
+   "kind": "formula",
+   "page_pdf": 445,
+   "excerpt": "w_x = - frac k mu frac dp dx = - frac",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.09",
+   "kind": "formula",
+   "page_pdf": 445,
+   "excerpt": "w_x S = Q = frac k mu frac p_k - p_r",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.10",
+   "kind": "paragraph",
+   "page_pdf": 445,
+   "excerpt": "но с той разницей, что формула для распределения давления будет одинаковой для",
+   "node_ids": [
+    "reh.parallel_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.11",
+   "kind": "formula",
+   "page_pdf": 445,
+   "excerpt": "p(x) = p_k - frac p_k - p_r L x, quad (21.1)",
+   "node_ids": [
+    "reh.individual_layer_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.12",
+   "kind": "formula",
+   "page_pdf": 445,
+   "excerpt": "w^i = frac k_i mu frac p_k - p_r L , quad",
+   "node_ids": [
+    "reh.individual_layer_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p445.13",
+   "kind": "formula",
+   "page_pdf": 445,
+   "excerpt": "Q^i = frac k_i mu frac p_k - p_r L h_i B.",
+   "node_ids": [
+    "reh.individual_layer_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.01",
+   "kind": "heading",
+   "page_pdf": 446,
+   "excerpt": "446",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p446.02",
+   "kind": "heading",
+   "page_pdf": 446,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p446.03",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "В формулах (21.1)–(21.3) и далее в этой главе индекс i обозначает номер",
+   "node_ids": [
+    "reh.individual_layer_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.04",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "Различие в формулах (21.2) и (21.3) обусловлено, очевидно, тем, что несмотря на",
+   "node_ids": [
+    "reh.individual_layer_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.05",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "Используя аналогию между фильтрацией несжимаемой жидкости и газа, из соотношений (21.1)–(21.3) получим",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.06",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "P(x) = P_k - frac P_k - P_r L x, quad (21.4)",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.07",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "rho w^i = frac k_i mu frac P_k - P_r L ,",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.08",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "Q_m^i = frac k_i mu frac P_k - P_r L h_i B.",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.09",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "Следовательно, если положить, что фильтруется совершенный газ и подставить в (21.4)–(21.6) выражение",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.10",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "p(x) = sqrt p_k^2 - frac p_k^2 - p_r^2 L x ,",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.11",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "rho w^i = frac k_i rho_ text ат 2 mu p_ text",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.12",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "Q_m^i = frac k_i rho_ text ат 2 mu p_ text ат",
+   "node_ids": [
+    "reh.layered_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.13",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "Для дальнейших рассуждений опять воспользуемся аналогией между фильтрацией несжимаемой жидкости и газа",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.14",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "Массовый расход всего пласта можно вычислить как сумму расходов во всех отдельных",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.15",
+   "kind": "formula",
+   "page_pdf": 446,
+   "excerpt": "Q_m = sum_ i=1 ^n Q_m^i = sum_ i=1 ^n frac k_i",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p446.16",
+   "kind": "paragraph",
+   "page_pdf": 446,
+   "excerpt": "Для гидродинамических расчетов удобно заменить формулу для потока флюида в неоднородном пласте",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.01",
+   "kind": "heading",
+   "page_pdf": 447,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p447.02",
+   "kind": "heading",
+   "page_pdf": 447,
+   "excerpt": "447",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p447.03",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "размеров, но со средней проницаемостью k_ text ср , величину которой можно",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.04",
+   "kind": "formula",
+   "page_pdf": 447,
+   "excerpt": "Q_m = frac k_ text ср (P_k - P_r) mu L Bh",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.05",
+   "kind": "heading",
+   "page_pdf": 447,
+   "excerpt": "откуда",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p447.06",
+   "kind": "formula",
+   "page_pdf": 447,
+   "excerpt": "k_ text ср = sum_ i=1 ^n k_i h_i / h, quad",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.07",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "Следовательно, средняя проницаемость в слоисто-неоднородном пласте не зависит от флюида и одинакова",
+   "node_ids": [
+    "reh.parallel_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.08",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "Подставив в (21.11) значения функции Лейбензона для несжимаемой жидкости и совершенного газа,",
+   "node_ids": [
+    "reh.layered_total_rate"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.09",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "для несжимаемой жидкости",
+   "node_ids": [
+    "reh.layered_total_rate"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.10",
+   "kind": "formula",
+   "page_pdf": 447,
+   "excerpt": "Q_m = frac B rho_0 (p_k - p_r) mu L sum_ i=1",
+   "node_ids": [
+    "reh.layered_total_rate"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.11",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "для газа",
+   "node_ids": [
+    "reh.layered_total_rate"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.12",
+   "kind": "formula",
+   "page_pdf": 447,
+   "excerpt": "Q_m = frac B rho_ text ат (p_k^2 - p_r^2) 2 mu",
+   "node_ids": [
+    "reh.layered_total_rate"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.13",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "Время движения частиц флюида для несжимаемой жидкости, без учета разницы между пористостью",
+   "node_ids": [
+    "reh.layer_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.14",
+   "kind": "formula",
+   "page_pdf": 447,
+   "excerpt": "t_i = frac m_i mu k_i frac Lx p_k - p_r quad",
+   "node_ids": [
+    "reh.layer_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.15",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "Аналогично для газа формулы (20.37) и (20.38) преобразуются с учетом фильтрационных свойств",
+   "node_ids": [
+    "reh.layer_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.16",
+   "kind": "formula",
+   "page_pdf": 447,
+   "excerpt": "t_i = frac 4 m_i mu L^2 (p_k^3 - p_r^3(x)) 3 k_i",
+   "node_ids": [
+    "reh.layer_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.17",
+   "kind": "heading",
+   "page_pdf": 447,
+   "excerpt": "§3. Прямолинейно-параллельный поток в зонально-неоднородном пласте",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p447.18",
+   "kind": "paragraph",
+   "page_pdf": 447,
+   "excerpt": "Пусть горизонтальный пласт постоянной толщины h и постоянной ширины B состоит из",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.01",
+   "kind": "heading",
+   "page_pdf": 448,
+   "excerpt": "448",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p448.02",
+   "kind": "heading",
+   "page_pdf": 448,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p448.03",
+   "kind": "figure",
+   "page_pdf": 448,
+   "excerpt": "Рис. 21.2. Прямолинейно-параллельный поток в зонально-неоднородном пласте. Показана кривая p(x) для жидкости",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.04",
+   "kind": "paragraph",
+   "page_pdf": 448,
+   "excerpt": "скорости фильтрации и дебита. Например, при фильтрации несжимаемой жидкости",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.05",
+   "kind": "formula",
+   "page_pdf": 448,
+   "excerpt": "p(x) = p_k - frac p_k - p_r L x,",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.06",
+   "kind": "formula",
+   "page_pdf": 448,
+   "excerpt": "w_x = - frac k mu frac dp dx = - frac",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.07",
+   "kind": "formula",
+   "page_pdf": 448,
+   "excerpt": "w_x S = Q = frac k mu frac p_k - p_r",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.08",
+   "kind": "paragraph",
+   "page_pdf": 448,
+   "excerpt": "где в качестве давления на контуре питания и галерее принимаются давления в",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.09",
+   "kind": "paragraph",
+   "page_pdf": 448,
+   "excerpt": "длины l_i , i = 1, 2, dots, n . На границах",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p448.10",
+   "kind": "paragraph",
+   "page_pdf": 448,
+   "excerpt": "В пласте происходит одномерное установившееся фильтрационное течение однородного флюида. Поэтому в каждой",
+   "node_ids": [
+    "reh.zonal_liquid_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.01",
+   "kind": "heading",
+   "page_pdf": 449,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p449.02",
+   "kind": "heading",
+   "page_pdf": 449,
+   "excerpt": "449",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p449.03",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "пласта ( 1 le i le n ) имеют вид",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.04",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "p_i(x) = p_i - frac p_i - p_ i+1 l_i x, quad",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.05",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "w = frac k_i mu frac p_i - p_ i+1 l_i ,",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.06",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "Q = frac k_i mu frac p_i - p_ i+1 l_i hB.",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.07",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "Из равенства (21.15) можно получить значения градиента давления в каждой зоне",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.08",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "frac dp_i(x) dx = - frac p_i - p_ i+1 l_i ,",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.09",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "Таким образом, градиент давления в каждой зоне постоянный, но неодинаковых в разных",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.10",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "Для постановки задачи достаточно задать давления только на контуре питания и на",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.11",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "p_ n+1 = p_r quad text при quad x_ n+1 = L",
+   "node_ids": [
+    "reh.zonal_pressure_profile"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.12",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "для расчета формулами (21.15)–(21.17), необходимо вычислить давления на границе всех зон. Для",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.13",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "p_k - p_2 = Q mu l_1 / k_1 Bh,",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.14",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "p_2 - p_3 = Q mu l_2 / k_2 Bh, quad (21.18)",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.15",
+   "kind": "heading",
+   "page_pdf": 449,
+   "excerpt": "...",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p449.16",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "p_n - p_r = Q mu l_n / k_n Bh.",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.17",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "Нетрудно видеть, что после сложения равенств (21.18), получим",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.18",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "p_k - p_r = frac Q mu Bh sum_ i=1 ^n l_i",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.19",
+   "kind": "paragraph",
+   "page_pdf": 449,
+   "excerpt": "Разрешив это соотношение относительно Q , получим формулу для дебита в зонально-неоднородном",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p449.20",
+   "kind": "formula",
+   "page_pdf": 449,
+   "excerpt": "Q = frac Bh mu frac p_k - p_r sum_ i=1 ^n",
+   "node_ids": [
+    "reh.series_flow_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.01",
+   "kind": "heading",
+   "page_pdf": 450,
+   "excerpt": "450",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p450.02",
+   "kind": "heading",
+   "page_pdf": 450,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p450.03",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "С помощью формул (21.17) и (21.19) можно определить значения давления на границах",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.04",
+   "kind": "formula",
+   "page_pdf": 450,
+   "excerpt": "k_1 frac p_k - p_2 l_1 = frac p_k - p_r sum_",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.05",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "в котором единственной неизвестной величиной является давление на границе первой и второй",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.06",
+   "kind": "formula",
+   "page_pdf": 450,
+   "excerpt": "p_2 = p_k - frac l_1 k_1 frac p_k - p_r sum_",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.07",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "В случае, когда неоднородный пласт состоит из двух зон неоднородности, из полученного",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.08",
+   "kind": "formula",
+   "page_pdf": 450,
+   "excerpt": "p_2 = frac p_k frac l_2 k_2 - p_r frac l_1 k_1",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.09",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "Аналогично можно определить давление и на остальных границах зон неоднородности.",
+   "node_ids": [
+    "reh.zone_boundary_pressure"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.10",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "Используя равенство (21.19), определим теперь среднюю проницаемость неоднородного пласта",
+   "node_ids": [
+    "reh.series_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.11",
+   "kind": "formula",
+   "page_pdf": 450,
+   "excerpt": "Q = frac Bh mu frac p_k - p_r sum_ i=1 ^n",
+   "node_ids": [
+    "reh.series_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.12",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "Из последнего соотношения следует формула для k_ text ср",
+   "node_ids": [
+    "reh.series_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.13",
+   "kind": "formula",
+   "page_pdf": 450,
+   "excerpt": "k_ text ср = L bigg/ sum_ i=1 ^n l_i / k_i.",
+   "node_ids": [
+    "reh.series_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.14",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "Таким образом, среднее значение проницаемости в зонально-неоднородном пласте определяется по иному закону,",
+   "node_ids": [
+    "reh.series_effective_permeability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p450.15",
+   "kind": "paragraph",
+   "page_pdf": 450,
+   "excerpt": "Используя аналогию между фильтрацией несжимаемой жидкости и газа, из (21.15) – (21.17)",
+   "node_ids": [
+    "reh.zonal_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.01",
+   "kind": "heading",
+   "page_pdf": 451,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p451.02",
+   "kind": "heading",
+   "page_pdf": 451,
+   "excerpt": "451",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p451.03",
+   "kind": "paragraph",
+   "page_pdf": 451,
+   "excerpt": "рации газа в зонально-неоднородном пласте",
+   "node_ids": [
+    "reh.zonal_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.04",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "P_i(x) = P_i - frac P_i - P_ i+1 l_i x, quad",
+   "node_ids": [
+    "reh.zonal_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.05",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "rho w = frac k_i mu frac P_i - P_ i+1 l_i",
+   "node_ids": [
+    "reh.zonal_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.06",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "Q_m = frac k_i mu frac P_i - P_ i+1 l_i hB,",
+   "node_ids": [
+    "reh.zonal_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.07",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "Q_m = frac Bh mu frac P_k - P_r sum_ i=1 ^n",
+   "node_ids": [
+    "reh.zonal_gas_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.08",
+   "kind": "paragraph",
+   "page_pdf": 451,
+   "excerpt": "Подставив в равенства (21.21)–(21.24) функцию Лейбензона для совершенного газа, получим формулы для",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.09",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "p_i(x) = sqrt p_i^2 - frac p_i^2 - p_ i+1 ^2 l_i",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.10",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "rho w = frac k_i rho_ text ат 2 mu p_ text",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.11",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "Q_m = frac k_i rho_ text ат 2 mu p_ text ат",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.12",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "Q_m = frac Bh rho_ text ат 2 mu p_ text ат",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.13",
+   "kind": "paragraph",
+   "page_pdf": 451,
+   "excerpt": "Заметим, что с помощью формулы (21.28) можно определить среднее значение проницаемости в",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.14",
+   "kind": "paragraph",
+   "page_pdf": 451,
+   "excerpt": "С помощью формул (21.27) и (21.28) можно определить давления на границах зон",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p451.15",
+   "kind": "formula",
+   "page_pdf": 451,
+   "excerpt": "k_1 frac p_k^2 - p_2^2 l_1 = frac p_k^2 - p_r^2 sum_",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.01",
+   "kind": "heading",
+   "page_pdf": 452,
+   "excerpt": "452",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p452.02",
+   "kind": "heading",
+   "page_pdf": 452,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p452.03",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "в котором единственной неизвестной величиной является давление на границе первой и второй",
+   "node_ids": [
+    "reh.zonal_ideal_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.04",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "Время движения частиц флюида для модели несжимаемой жидкости в i -й зоне",
+   "node_ids": [
+    "reh.zonal_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.05",
+   "kind": "formula",
+   "page_pdf": 452,
+   "excerpt": "t_i = frac m_i mu k_i frac x l_i p_i - p_",
+   "node_ids": [
+    "reh.zonal_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.06",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "Аналогично для модели газа имеем",
+   "node_ids": [
+    "reh.zonal_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.07",
+   "kind": "formula",
+   "page_pdf": 452,
+   "excerpt": "t_i = frac 4 m_i mu l_i^2 (p_i^3 - p_i^3(x)) 3 k_i",
+   "node_ids": [
+    "reh.zonal_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.08",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "Во всех формулах для определения t_i значение x изменяется в пределах x_i",
+   "node_ids": [
+    "reh.zonal_travel_time"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.09",
+   "kind": "heading",
+   "page_pdf": 452,
+   "excerpt": "§4. О расчете пластов с непрерывной неоднородностью",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.10",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "Если установившееся прямолинейное движение флюида происходит в пласте, проницаемость которого изменяется непрерывно,",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.11",
+   "kind": "formula",
+   "page_pdf": 452,
+   "excerpt": "Q = - frac k(x) mu frac dp dx Bh quad text",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.12",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "Разделив в дифференциальных уравнениях переменные:",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.13",
+   "kind": "formula",
+   "page_pdf": 452,
+   "excerpt": "dp = - frac Q mu Bh frac dx k(x) quad text",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.14",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "и проинтегрировав их",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.15",
+   "kind": "formula",
+   "page_pdf": 452,
+   "excerpt": "int_ p_h ^ p_r dp = - frac Q mu Bh int_",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.16",
+   "kind": "paragraph",
+   "page_pdf": 452,
+   "excerpt": "получим формулы для распределения по пласту давления и функции Лейбензона, соответственно",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p452.17",
+   "kind": "formula",
+   "page_pdf": 452,
+   "excerpt": "p_k - p_r = frac Q mu Bh int_ 0 ^ L",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.01",
+   "kind": "heading",
+   "page_pdf": 453,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p453.02",
+   "kind": "heading",
+   "page_pdf": 453,
+   "excerpt": "453",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p453.03",
+   "kind": "paragraph",
+   "page_pdf": 453,
+   "excerpt": "Таким образом, и в этом случае можно определить все характеристики течения флюидов,",
+   "node_ids": [
+    "reh.continuous_permeability_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.04",
+   "kind": "heading",
+   "page_pdf": 453,
+   "excerpt": "§5. Плоскорадиальный поток в слоисто-неоднородном пласте",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.05",
+   "kind": "paragraph",
+   "page_pdf": 453,
+   "excerpt": "Пусть круглый горизонтальный пласт толщины h состоит из n пропластков толщиной h_i",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.06",
+   "kind": "figure",
+   "page_pdf": 453,
+   "excerpt": "Рис. 21.3. Кривые распределения давления для жидкости (1) и для газа (2)",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.07",
+   "kind": "paragraph",
+   "page_pdf": 453,
+   "excerpt": "дом из них имеем плоскорадиальный фильтрационный поток с расчетными формулами (20.20)–(20.22):",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.08",
+   "kind": "formula",
+   "page_pdf": 453,
+   "excerpt": "p(r) = p_k - frac p_k - p_c ln R_k / r_c",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.09",
+   "kind": "formula",
+   "page_pdf": 453,
+   "excerpt": "w_r = - frac k mu frac dp dr = frac k(p_k",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.10",
+   "kind": "formula",
+   "page_pdf": 453,
+   "excerpt": "w_r S = Q = frac 2 pi k h (p_k -",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.11",
+   "kind": "paragraph",
+   "page_pdf": 453,
+   "excerpt": "для давления, скорости фильтрации и дебита при фильтрации несжимаемой жидкости с той",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.12",
+   "kind": "formula",
+   "page_pdf": 453,
+   "excerpt": "p(r) = p_k - frac p_k - p_c ln R_k / r_c",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.13",
+   "kind": "formula",
+   "page_pdf": 453,
+   "excerpt": "w_r^i = - frac k_i mu frac dp dr = frac k_i(p_k",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.14",
+   "kind": "formula",
+   "page_pdf": 453,
+   "excerpt": "w_r^i S_i = Q^i = frac 2 pi k_i h_i (p_k -",
+   "node_ids": [
+    "reh.radial_layered_liquid"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p453.15",
+   "kind": "paragraph",
+   "page_pdf": 453,
+   "excerpt": "(21.32)",
+   "node_ids": [],
+   "reason": "НЕ ПОКРЫТО: утверждения не извлечены"
+  },
+  {
+   "unit_id": "p454.01",
+   "kind": "heading",
+   "page_pdf": 454,
+   "excerpt": "454",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p454.02",
+   "kind": "heading",
+   "page_pdf": 454,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p454.03",
+   "kind": "paragraph",
+   "page_pdf": 454,
+   "excerpt": "Дебит всего пласта определяется как сумма дебитов всех пропластков",
+   "node_ids": [
+    "reh.radial_layer_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.04",
+   "kind": "formula",
+   "page_pdf": 454,
+   "excerpt": "Q = sum_ i=1 ^n w_r^i S_i = sum_ i=1 ^n Q^i",
+   "node_ids": [
+    "reh.radial_layer_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.05",
+   "kind": "paragraph",
+   "page_pdf": 454,
+   "excerpt": "Среднее значение проницаемости пласта k_ text ср определяется из условия равенства дебитов",
+   "node_ids": [
+    "reh.radial_layer_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.06",
+   "kind": "formula",
+   "page_pdf": 454,
+   "excerpt": "frac 2 pi k_ text ср h(p_k - p_c) mu ln R_k",
+   "node_ids": [
+    "reh.radial_layer_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.07",
+   "kind": "paragraph",
+   "page_pdf": 454,
+   "excerpt": "и дается выражением k_ text ср = sum_ i=1 ^n k_i h_i",
+   "node_ids": [
+    "reh.radial_layer_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.08",
+   "kind": "paragraph",
+   "page_pdf": 454,
+   "excerpt": "Используя аналогию между фильтрацией несжимаемой жидкости и газа, из соотношений (21.32) можно",
+   "node_ids": [
+    "reh.radial_layered_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.09",
+   "kind": "formula",
+   "page_pdf": 454,
+   "excerpt": "p(r) = sqrt p_k^2 - frac p_k^2 - p_c^2 ln R_k /",
+   "node_ids": [
+    "reh.radial_layered_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.10",
+   "kind": "formula",
+   "page_pdf": 454,
+   "excerpt": "w_r^i rho = - frac k_i mu frac dP dr = frac",
+   "node_ids": [
+    "reh.radial_layered_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.11",
+   "kind": "formula",
+   "page_pdf": 454,
+   "excerpt": "w_r^i rho S_i = Q_m^i = frac pi k_i h_i rho_ text",
+   "node_ids": [
+    "reh.radial_layered_gas"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.12",
+   "kind": "heading",
+   "page_pdf": 454,
+   "excerpt": "§6. Плоскорадиальный поток в зонально-неоднородном пласте",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.13",
+   "kind": "paragraph",
+   "page_pdf": 454,
+   "excerpt": "Пусть имеется горизонтальный пласт толщиной h , состоящий из n кольцеобразных зон",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p454.14",
+   "kind": "paragraph",
+   "page_pdf": 454,
+   "excerpt": "Из постановки задачи следует, что в пласте происходит одномерное установившееся фильтрационное течение",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.01",
+   "kind": "heading",
+   "page_pdf": 455,
+   "excerpt": "ОДНОМЕРНЫЕ ФИЛЬТРАЦИОННЫЕ ПОТОКИ",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p455.02",
+   "kind": "heading",
+   "page_pdf": 455,
+   "excerpt": "455",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p455.03",
+   "kind": "figure",
+   "page_pdf": 455,
+   "excerpt": "Рис. 21.4. Распределение давления в плоскорадиальном потоке несжимаемой жидкости в зонально-неоднородном пласте",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.04",
+   "kind": "paragraph",
+   "page_pdf": 455,
+   "excerpt": "дой из зон зонально-неоднородного пласта имеем плоскорадиальный фильтрационный поток с теми же",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.05",
+   "kind": "formula",
+   "page_pdf": 455,
+   "excerpt": "p_i(r) = p_ i+1 - frac p_ i+1 - p_i ln r_",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.06",
+   "kind": "formula",
+   "page_pdf": 455,
+   "excerpt": "w_r^i = - frac k_i mu frac dp dr = frac k_i(p_",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.07",
+   "kind": "formula",
+   "page_pdf": 455,
+   "excerpt": "w_r^i S = Q = frac 2 pi k_i h(p_ i+1 -",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.08",
+   "kind": "paragraph",
+   "page_pdf": 455,
+   "excerpt": "где в качестве давлений на контуре питания и на скважине принимаются давления",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p455.09",
+   "kind": "paragraph",
+   "page_pdf": 455,
+   "excerpt": "По сравнению со слоисто-неоднородным пластом, в котором формула для распределения давления была",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.01",
+   "kind": "heading",
+   "page_pdf": 456,
+   "excerpt": "456",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p456.02",
+   "kind": "heading",
+   "page_pdf": 456,
+   "excerpt": "ГЛАВА XXI",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p456.03",
+   "kind": "paragraph",
+   "page_pdf": 456,
+   "excerpt": "скорости фильтрации и дебита при зонально-неоднородной плоскорадиальной фильтрации в каждой из зон",
+   "node_ids": [
+    "reh.radial_zonal_flow"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.04",
+   "kind": "paragraph",
+   "page_pdf": 456,
+   "excerpt": "Как и в случае прямолинейно-параллельной фильтрации, формулами (21.35) воспользоваться для вычислений невозможно,",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.05",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "p_k - p_n = frac Q mu 2 pi k_i h ln",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.06",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "p_n - p_ n-1 = frac Q mu 2 pi k_ i-1",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.07",
+   "kind": "heading",
+   "page_pdf": 456,
+   "excerpt": "...",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p456.08",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "p_1 - p_c = frac Q mu 2 pi k_i h ln",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.09",
+   "kind": "paragraph",
+   "page_pdf": 456,
+   "excerpt": "Сложив все равенства, получим уравнение",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.10",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "p_k - p_c = frac Q mu 2 pi h sum_ i=1",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.11",
+   "kind": "paragraph",
+   "page_pdf": 456,
+   "excerpt": "из которого следует",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.12",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "Q = frac 2 pi h mu frac p_k - p_c sum_",
+   "node_ids": [
+    "reh.radial_zonal_resistance"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.13",
+   "kind": "paragraph",
+   "page_pdf": 456,
+   "excerpt": "Используя равенство (21.36), выведем формулу для средней проницаемости",
+   "node_ids": [
+    "reh.radial_zonal_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.14",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "Q = frac 2 pi h mu frac p_k - p_c sum_",
+   "node_ids": [
+    "reh.radial_zonal_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.15",
+   "kind": "heading",
+   "page_pdf": 456,
+   "excerpt": "откуда",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p456.16",
+   "kind": "formula",
+   "page_pdf": 456,
+   "excerpt": "k_ cp = ln frac R_k r_c bigg/ sum frac ln r_",
+   "node_ids": [
+    "reh.radial_zonal_average"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p456.17",
+   "kind": "paragraph",
+   "page_pdf": 456,
+   "excerpt": "С помощью формул (21.35) и (21.36) можно определить давления на границах зон.",
+   "node_ids": [
+    "reh.radial_zonal_average"
+   ],
+   "reason": null
+  }
+ ]
+}
