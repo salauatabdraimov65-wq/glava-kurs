@@ -75,6 +75,25 @@ class SectionThroughTime:
                 continue
             self.bodies.append({**b, "keyframes": kf, "_rs": [resample(k["polygon"]) for k in kf]})
         self.arrows = params.get("arrows") or []
+        self.legend = []          # одна строка легенды на подпись (левая и правая стенка — одна строка)
+        for b in self.bodies:
+            lab = (b.get("label") or "").strip()
+            if lab and lab not in [x[0] for x in self.legend]:
+                self.legend.append((lab, b))
+        self.ve_fit = self.ve     # растяжение под кадр — считается в layout, подписывается на плашке
+        # кадр по телам: если тела занимают малую часть разреза по высоте — показываем только их отметки
+        # (оси подписаны истинными отметками; уровень воды выше кадра подписывается числом)
+        zs = [z for b in self.bodies for k in b["keyframes"] for _, z in k["polygon"]]
+        zs += [pt[1] for a in self.arrows for pt in (a.get("from"), a.get("to")) if pt]
+        if zs:
+            bmin, bmax = max(min(zs), self.zbot), min(max(zs), self.ztop)
+            h = max(bmax - bmin, 1e-6)
+            if h < 0.6 * (self.ztop - self.zbot):
+                zt, zb = min(self.ztop, bmax + 0.15 * h), max(self.zbot, bmin - 0.1 * h)
+                wmax = max((w["z"] for w in self.water), default=None)
+                if wmax is not None and bmax < wmax <= bmax + 0.6 * h:
+                    zt = min(self.ztop, wmax + 0.12 * h)     # уровень воды близко — оставляем его в кадре
+                self.ztop, self.zbot = zt, zb
         self.t0 = self.steps[0] if self.steps else 0.0
         self.t1 = self.steps[-1] if self.steps else 1.0
 
@@ -157,13 +176,25 @@ class SectionThroughTime:
         top_pad = line_h(f_t) * 2 + 30          # счётчик времени и шкала времени
         bot_pad = 70                              # подпись оси x
         left_pad = 120                            # отметки z
-        W, H = x1 - x0 - left_pad - 10, y1 - y0 - top_pad - bot_pad
+        cols = 1 if (x1 - x0) < 1100 and len(self.legend) <= 3 else 2
+        rows = math.ceil(len(self.legend) / cols) if self.legend else 0
+        leg_h = rows * 50 + (24 if rows else 0)
+        W, H = x1 - x0 - left_pad - 10, y1 - y0 - top_pad - bot_pad - leg_h
+        # подгонка: разрез занимает ~85% высоты области; растяжение честно подписывается на плашке
+        span_z = self.ztop - self.zbot
+        ratio = span_z * self.ve / self.xmax            # h/w разреза при исходном растяжении
+        target = 0.95 * H / W
+        fit_k = target / ratio if ratio > 0 else 1.0
+        if 0.9 <= fit_k <= 1.1:
+            fit_k = 1.0
+        self.ve_fit = max(0.05, min(self.ve * fit_k, 25.0))
         return {"box": box, "area": (x0 + left_pad, y0 + top_pad, x0 + left_pad + W, y0 + top_pad + H),
+                "legend": (x0 + 10, y0 + top_pad + H + bot_pad - 10, x1 - 10, y1), "legend_cols": cols,
                 "compact": compact, "timebar": (x0 + left_pad, y0 + line_h(f_t) + 16, x1 - 10)}
 
     def _ve(self, s):
         tr = s.get("true") if s else None
-        return self.ve + (1 - self.ve) * (tr["u"] if tr else 0.0)
+        return self.ve_fit + (1 - self.ve_fit) * (tr["u"] if tr else 0.0)
 
     def _map(self, L, s):
         ax0, ay0, ax1, ay1 = L["area"]
@@ -181,13 +212,26 @@ class SectionThroughTime:
         return (lambda x: ox + x * sx), (lambda z: oy + (self.ztop - z) * sz), (ox, oy, ox + w, oy + h)
 
     def scale_note(self, L) -> str:
-        if self.ve > 1.01:
-            return f"вертикаль растянута ≈ в {self.ve:g} раза" if self.ve < 5 else f"вертикаль растянута ≈ в {self.ve:g} раз"
+        def nice(v):
+            v = round(v, 1) if v < 3 else round(v)
+            word = "раза" if (v % 10 in (2, 3, 4) and not 12 <= v % 100 <= 14 and float(v).is_integer()) or not float(v).is_integer() else "раз"
+            return f"{v:g} {word}".replace(".", ",")
+        if self.ve_fit > 1.05:
+            return f"вертикаль растянута ≈ в {nice(self.ve_fit)}"
+        if self.ve_fit < 0.95:
+            return f"горизонталь растянута ≈ в {nice(1 / self.ve_fit)}"
         return ""
 
     # ------------------------------------------------------------ рисование
     def draw_static(self, img, L):
         pass  # всё зависит от времени и масштаба — рисуется в draw_dynamic
+
+    def _body_color(self, b):
+        col = self._lith(b.get("lith"))
+        fl = b.get("fluid")
+        if fl and fl in self.style.get("fluids", {}):
+            col = mix(col, hex_rgb(self.style["fluids"][fl]["color"]), 0.35)
+        return col
 
     def _lith(self, lith):
         return hex_rgb(self.style.get("lithology", {}).get(lith, {}).get("color", self.style["muted"]))
@@ -238,6 +282,10 @@ class SectionThroughTime:
             else:
                 d.line(pts + [pts[0]], fill=edge, width=3)
         # уровень воды
+        if wl is not None and wl > self.ztop:
+            fw = font(30, True)
+            lab = f"уровень воды выше кадра: {wl:g} м".replace("-", "−").replace(".", ",")
+            d.text((rx1 - fw.getlength(lab) - 8, ry0 + 6), lab, font=fw, fill=water, stroke_width=4, stroke_fill=bg)
         if wl is not None and self.zbot < wl <= self.ztop:
             yw = Z(wl)
             d.line([(rx0, yw), (rx1, yw)], fill=mix(bg, water, 0.95), width=4)
@@ -269,6 +317,7 @@ class SectionThroughTime:
 
         # подписи тел — по убыванию площади, у центра тела
         fl_ = font(38, True)
+        drawn_labels = set()
         order = []
         for b in self.bodies:
             poly, a = self.body_poly(b, s["t"])
@@ -279,9 +328,14 @@ class SectionThroughTime:
         for area, b, poly in sorted(order, key=lambda q: -q[0]):
             cx, cz = poly[:, 0].mean(), poly[:, 1].mean()
             lab = visible(b["label"], "подпись тела")
-            ls = wrap(lab, fl_, max(160, (rx1 - rx0) * 0.45))
+            sx_ = [X(x) for x in poly[:, 0]]; sz_ = [Z(z) for z in poly[:, 1]]
+            bw, bh = max(sx_) - min(sx_), max(sz_) - min(sz_)
+            ls = wrap(lab, fl_, max(60, bw * 0.92))
             w = max(fl_.getlength(ln) for ln in ls)
             h = len(ls) * line_h(fl_)
+            if w > bw * 0.95 or h > bh * 0.9 or lab in drawn_labels:
+                continue          # не помещается внутри тела — тело узнаётся по цвету в легенде
+            drawn_labels.add(lab)
             r = free_pos(X(cx) - w / 2, Z(cz) - h / 2, w, h)
             dim = hl and hl["id"] != b["id"]
             yy = r[1]
@@ -342,7 +396,11 @@ class SectionThroughTime:
         d.text((rx0, ry1 + 10), xl, font=font(28, True), fill=muted)
         # время: крупный счётчик + шкала с метками ключевых моментов
         f_big = mono_font(44, True)
-        tl = f"{s['t']:.0f} {self.unit}".strip() if abs(s["t"]) >= 1 or s["t"] == 0 else f"{s['t']:.1f} {self.unit}"
+        if self.unit.strip().lower().startswith("этап"):   # условные этапы — без выдуманных чисел времени
+            k_ = min(range(len(self.steps)), key=lambda i: abs(self.steps[i] - s["t"])) if self.steps else 0
+            tl = f"этап {k_ + 1} из {max(len(self.steps), 1)}"
+        else:
+            tl = f"{s['t']:.0f} {self.unit}".strip() if abs(s["t"]) >= 1 or s["t"] == 0 else f"{s['t']:.1f} {self.unit}"
         tx0, ty, tx1 = L["timebar"]
         d.text((tx0, L["box"][1]), tl, font=f_big, fill=meas)
         d.line([(tx0, ty + 18), (tx1, ty + 18)], fill=mix(bg, muted, 0.6), width=4)
@@ -351,6 +409,25 @@ class SectionThroughTime:
         for ts_ in self.steps:
             x = tx0 + (tx1 - tx0) * (ts_ - self.t0) / max(self.t1 - self.t0, 1e-9)
             d.ellipse([x - 7, ty + 11, x + 7, ty + 25], fill=meas if ts_ <= s["t"] + 1e-9 else mix(bg, muted, 0.7))
+        # легенда: цвет → подпись (видимые к этому моменту тела ярко, ещё не появившиеся — бледно)
+        if self.legend and L.get("legend"):
+            lx0, ly0, lx1, _ = L["legend"]
+            cols = L.get("legend_cols", 2)
+            cw = (lx1 - lx0) / cols
+            fg = font(32, True)
+            for i, (lab, b) in enumerate(self.legend):
+                cx_, cy_ = lx0 + (i % cols) * cw, ly0 + (i // cols) * 50
+                _, a = self.body_poly(b, s["t"])
+                on = a >= 0.6
+                is_hl = bool(hl) and any(q["id"] == hl["id"] and (q.get("label") or "").strip() == lab for q in self.bodies)
+                col = self._body_color(b)
+                d.rounded_rectangle([cx_, cy_ + 6, cx_ + 34, cy_ + 40], radius=6,
+                                    fill=col if on else mix(bg, col, 0.35), outline=meas if is_hl else None, width=4)
+                txt = visible(lab, "легенда")
+                while fg.getlength(txt) > cw - 60 and len(txt) > 4:
+                    txt = txt[:-2].rstrip() + "…"
+                d.text((cx_ + 48, cy_ + 4), txt, font=fg,
+                       fill=(meas if is_hl else text) if on else mix(bg, muted, 0.6))
 
     def _texture(self, img, pts, ink, k):
         """Штриховка внутри контура тела (маской), чтобы тело читалось как порода, а не заливка."""
