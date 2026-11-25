@@ -747,3 +747,6 @@ html[data-art~="hills"] .plate-band { display: none; }
 html:not([data-art~="hero"]) .hero { grid-template-columns: minmax(0, 1fr); }
 html:not([data-art~="hero"]) .hero-copy { max-width: 78ch; }
 .strata-scene { display: none; }
+/* Оси графиков и индексы формул сохраняют читаемый размер на телефоне. */
+.pressure-chart text { font: 17px var(--font-ui); }
+sub, sup { font-size: 1rem; }
