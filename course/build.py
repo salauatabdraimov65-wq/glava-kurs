@@ -395,6 +395,32 @@ def render_map(nodes: list[dict[str, Any]]) -> str:
     return "".join(pieces) + relations_markup
 
 
+def geology_theme_vars() -> str:
+    """Load the domain palette so course colors stay aligned with the geology package."""
+    project_root = Path(__file__).resolve().parents[1]
+    styleguide = read_json(project_root / "domain" / "geology" / "styleguide.json", {}) or {}
+    lithology = styleguide.get("lithology", {})
+    palette = {
+        "background": styleguide.get("background"),
+        "panel": styleguide.get("panel"),
+        "text": styleguide.get("text"),
+        "muted": styleguide.get("muted"),
+        "sand": (lithology.get("sand") or {}).get("color"),
+        "shale": (lithology.get("shale") or {}).get("color"),
+        "limestone": (lithology.get("limestone") or {}).get("color"),
+        "dolomite": (lithology.get("dolomite") or {}).get("color"),
+        "anhydrite": (lithology.get("anhydrite") or {}).get("color"),
+        "salt": (lithology.get("salt") or {}).get("color"),
+        "dense": (lithology.get("dense") or {}).get("color"),
+        "reef": (lithology.get("reef") or {}).get("color"),
+    }
+    safe_palette = {
+        name: value for name, value in palette.items()
+        if isinstance(value, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", value)
+    }
+    return " ".join(f"--geo-{name}:{value};" for name, value in safe_palette.items())
+
+
 def ordered_nodes(raw_nodes: list[Any]) -> list[dict[str, Any]]:
     nodes = [node for node in raw_nodes if isinstance(node, dict) and node.get("id")]
     nodes.sort(key=lambda node: (node.get("order", 10**9), str(node.get("id", ""))))
@@ -461,6 +487,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     chapter_name = html.escape(str(layer.get("chapter", "Курс")))
     task_json = json.dumps(tasks, ensure_ascii=False, separators=(",", ":"))
     task_json = task_json.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
+    geology_vars = geology_theme_vars()
     return f'''<!doctype html>
 <html lang="ru">
 <head>
@@ -469,12 +496,11 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
   <meta name="color-scheme" content="light dark">
   <title>{chapter_name} — курс</title>
   <style>
-    :root {{ color-scheme: light dark; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.6; --bg:#f5f0ff; --paper:#fff; --ink:#24213f; --muted:#625e80; --line:#e3dcf4; --accent:#6849ed; --soft:#eee9ff; --teal:#13a99a; --warm:#ed794c; --sun:#ffc857; --shadow:0 12px 32px rgba(59,42,112,.08); }}
-    @media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) {{ --bg:#171526; --paper:#211f35; --ink:#f4f1ff; --muted:#c3bddc; --line:#3d3858; --accent:#b3a0ff; --soft:#302b4a; --teal:#57d7c7; --warm:#ff9b76; --sun:#ffd36e; --shadow:0 12px 32px rgba(0,0,0,.2); }} }}
-    :root[data-theme="light"] {{ color-scheme:light; --bg:#f5f0ff; --paper:#fff; --ink:#24213f; --muted:#625e80; --line:#e3dcf4; --accent:#6849ed; --soft:#eee9ff; --teal:#13a99a; --warm:#ed794c; --sun:#ffc857; --shadow:0 12px 32px rgba(59,42,112,.08); }}
-    :root[data-theme="dark"] {{ color-scheme:dark; --bg:#171526; --paper:#211f35; --ink:#f4f1ff; --muted:#c3bddc; --line:#3d3858; --accent:#b3a0ff; --soft:#302b4a; --teal:#57d7c7; --warm:#ff9b76; --sun:#ffd36e; --shadow:0 12px 32px rgba(0,0,0,.2); }}
-    * {{ box-sizing:border-box; }} html,body {{ max-width:100%; }} body {{ margin:0; background:radial-gradient(ellipse at 7% 0%, color-mix(in srgb, var(--sun) 22%, transparent), transparent 26rem),radial-gradient(ellipse at 97% 8%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 30rem),var(--bg); background-attachment:fixed; color:var(--ink); }} button,input {{ font:inherit; }}
-    .shell {{ max-width:1280px; margin:auto; padding:1rem; }} header {{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.2rem; border:1px solid var(--line); border-radius:1.35rem; background:linear-gradient(115deg,var(--paper),var(--soft)); box-shadow:var(--shadow); }} header > div:first-child::before {{ content:"✦"; display:inline-block; margin-right:.5rem; color:var(--warm); font-size:1.45rem; vertical-align:-.08em; }}
+    :root {{ {geology_vars} color-scheme:light dark; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.6; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(0,0,0,.2); }}
+    :root[data-theme="light"] {{ color-scheme:light; --bg:color-mix(in srgb,var(--geo-salt,#C9D6DF) 36%,white); --paper:color-mix(in srgb,var(--geo-salt,#C9D6DF) 18%,white); --ink:color-mix(in srgb,var(--geo-background,#0F1419) 24%,var(--geo-text,#ECEFF4)); --muted:color-mix(in srgb,var(--geo-background,#0F1419) 58%,var(--geo-muted,#8A96A3)); --line:color-mix(in srgb,var(--geo-dense,#8C7B6B) 25%,white); --accent:color-mix(in srgb,var(--geo-dense,#8C7B6B) 74%,var(--geo-sand,#E8C872)); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 18%,white); --teal:color-mix(in srgb,var(--geo-shale,#6B8E5A) 72%,var(--geo-background,#0F1419)); --warm:color-mix(in srgb,var(--geo-reef,#F0A35E) 72%,var(--geo-background,#0F1419)); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(47,58,43,.12); }}
+    :root[data-theme="dark"] {{ color-scheme:dark; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(0,0,0,.2); }}
+    * {{ box-sizing:border-box; }} html,body {{ max-width:100%; }} body {{ margin:0; background:repeating-radial-gradient(ellipse at 12% 10%,transparent 0 42px,color-mix(in srgb,var(--geo-shale,#6B8E5A) 7%,transparent) 43px 44px,transparent 45px 74px),radial-gradient(ellipse at 8% 0%,color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,transparent),transparent 26rem),radial-gradient(ellipse at 94% 8%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 15%,transparent),transparent 30rem),var(--bg); background-attachment:fixed; color:var(--ink); }} button,input {{ font:inherit; }}
+    .shell {{ max-width:1280px; margin:auto; padding:1rem; }} header {{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.2rem; border:1px solid var(--line); border-radius:1.35rem; background:linear-gradient(115deg,var(--paper),var(--soft)); box-shadow:var(--shadow); }} header > div:first-child::before {{ content:"⌁"; display:inline-block; margin-right:.5rem; color:var(--teal); font-size:1.65rem; font-weight:800; vertical-align:-.08em; }} header::after {{ content:""; flex:none; width:112px; height:62px; border-radius:60% 60% .5rem .5rem; opacity:.82; clip-path:polygon(0 65%,18% 50%,35% 56%,53% 27%,69% 44%,82% 33%,100% 51%,100% 100%,0 100%); background:repeating-linear-gradient(174deg,var(--geo-sand,#E8C872) 0 8px,var(--geo-shale,#6B8E5A) 8px 15px,var(--geo-limestone,#7FB3D5) 15px 22px,var(--geo-dense,#8C7B6B) 22px 29px); }}
     h1 {{ font-size:clamp(1.6rem,4vw,2.35rem); line-height:1.2; margin:.3rem 0 .8rem; }} h2 {{ font-size:1.25rem; margin:0 0 .65rem; }} h3 {{ font-size:1rem; margin:.9rem 0 .2rem; color:var(--muted); }}
     button {{ color:inherit; border:1px solid var(--line); background:var(--paper); border-radius:.8rem; min-height:44px; padding:.55rem .8rem; cursor:pointer; box-shadow:0 2px 6px rgba(30,24,70,.04); transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease; }} button:hover {{ border-color:var(--accent); transform:translateY(-1px); box-shadow:0 5px 12px rgba(104,73,237,.12); }} button:focus-visible,input:focus-visible,summary:focus-visible {{ outline:3px solid var(--accent); outline-offset:2px; }}
     .layout {{ display:grid; grid-template-columns:260px minmax(0,1fr); gap:1rem; margin-top:1rem; }} .layout[data-view="course"] {{ grid-template-columns:260px minmax(0,1fr); }} .layout[data-view="cards"],.layout[data-view="map"],.layout[data-view="summary"] {{ grid-template-columns:minmax(0,1fr); }} aside,.content-block,.task {{ background:var(--paper); border:1px solid var(--line); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} aside {{ align-self:start; position:sticky; top:1rem; border-top:4px solid var(--teal); }} .step-list {{ display:grid; gap:.4rem; margin-top:.7rem; }}
@@ -489,7 +515,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     .cards-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:.75rem; }} .review-card {{ min-width:0; background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--soft) 48%,var(--paper))); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} .review-card:nth-child(3n+2) {{ border-top-color:var(--teal); }} .review-card:nth-child(3n) {{ border-top-color:var(--warm); }} .review-card h2 {{ overflow-wrap:anywhere; }} .review-card .book-title {{ margin:.2rem 0 .7rem; }} .card-actions {{ margin-top:.6rem; }} .review-card .card-actions button {{ flex:1 1 auto; }} .task-source {{ margin:.1rem 0 .45rem; }} .xp-chip {{ padding:.35rem .75rem; border-radius:99px; background:linear-gradient(110deg,var(--sun),var(--warm)); color:#352342; font-weight:800; box-shadow:0 3px 12px color-mix(in srgb,var(--warm) 26%,transparent); }}
     .link-map {{ display:block; width:100%; height:auto; max-height:75vh; color:var(--accent); }} .map-edge {{ fill:none; stroke:currentColor; stroke-width:2.5; }} .map-node {{ fill:var(--soft); stroke:var(--line); stroke-width:2; }} .map-label {{ fill:var(--ink); font:600 17px system-ui,sans-serif; }} .map-number {{ fill:var(--accent); font:700 18px system-ui,sans-serif; }} .edge-label {{ fill:var(--muted); font:12px system-ui,sans-serif; }} .relation-list {{ padding-left:1.4rem; overflow-wrap:anywhere; }} .relation-list li {{ margin:.5rem 0; }}
     h1 {{ position:relative; }} h1::after {{ content:""; display:block; width:4.5rem; height:.25rem; margin-top:.45rem; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--teal),var(--sun)); }} .task {{ border-top:3px solid var(--sun); }} .task-result {{ border:1px solid color-mix(in srgb,var(--teal) 32%,var(--line)); }} .task-result.correct {{ border-color:var(--teal); background:color-mix(in srgb,var(--teal) 12%,var(--paper)); }} .option:hover {{ border-color:var(--accent); background:color-mix(in srgb,var(--soft) 65%,var(--paper)); }} .map-node {{ fill:color-mix(in srgb,var(--soft) 82%,var(--sun) 18%); }} .map-edge {{ stroke:var(--teal); }}
-    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
+    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} header::after {{ width:76px; height:42px; margin-left:auto; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:35vh; overflow-y:auto; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
     @media (prefers-reduced-motion:reduce) {{ *,*::before,*::after {{ scroll-behavior:auto !important; transition:none !important; }} }}
     @media print {{ body {{ background:#fff; color:#000; }} aside,header,.view-switcher,.footer-nav,.practice,.no-print {{ display:none !important; }} .shell,.layout {{ max-width:none; display:block; margin:0; padding:0; }} .step,.step[hidden] {{ display:block !important; page-break-after:always; }} .content-block,.summary-step {{ border:0; padding:.3rem 0; break-inside:avoid; }} .quote > blockquote {{ display:block; }} .app-view[hidden] {{ display:none !important; }} .app-view:not([hidden]) {{ display:block !important; }} }}
   </style>
@@ -539,7 +565,7 @@ function updateXp() {{ document.getElementById('xp-total').textContent = xp + ' 
 updateXp();
 let theme = '';
 try {{ theme = localStorage.getItem(THEME_KEY) || ''; }} catch (_) {{}}
-if (!theme) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+if (!theme) theme = 'light';
 document.documentElement.dataset.theme = theme;
 const themeToggle = document.getElementById('theme-toggle');
 function updateThemeButton() {{ themeToggle.textContent = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'; themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'); }}
