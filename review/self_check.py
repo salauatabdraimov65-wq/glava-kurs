@@ -13,6 +13,9 @@ from pathlib import Path
 from glava.chapter import ROOT
 
 
+STEP_LAYERS = [("main", "Суть"), ("mechanism", "Как это работает"), ("practice", "Практика"), ("nuances", "Нюансы"), ("deeper", "Глубже")]
+
+
 def _text(x):
     return x.get("text") if isinstance(x, dict) else x
 
@@ -28,6 +31,17 @@ def build_package(run_dir: Path) -> dict:
             claim_map[c["id"]] = iid
             items.append({"id": iid, "type": "claim", "node_id": node["id"], "text": c["text"], "kind": c.get("kind"),
                           "page_pdf": c.get("page_pdf"), "quote": c.get("quote"), "orig_id": c["id"]})
+    # тексты шагов (то, что читает жюри): «Суть», «Как это работает» и другие слои, написанные моделью; цитаты у них нет, сверяются со страницами узла
+    tn = 0
+    for node in layer["nodes"]:
+        for key, label in STEP_LAYERS:
+            v = (node.get("layers") or {}).get(key)
+            for part in (v if isinstance(v, list) else [v]):
+                text = _text(part)
+                if text and text.strip():
+                    tn += 1
+                    items.append({"id": f"T{tn:03d}", "type": "claim", "node_id": node["id"], "text": text.strip(), "page_pdf": (node.get("pages") or [None])[0],
+                                  "pages": node.get("pages"), "quote": None, "layer": label})
     for k, node in enumerate((n for n in layer["nodes"] if _text(n.get("it_analogy"))), 1):
         a = node["it_analogy"]
         items.append({"id": f"A{k:02d}", "type": "analogy", "node_id": node["id"], "text": a["text"], "breaks_where": a.get("breaks_where")})
@@ -80,16 +94,18 @@ def main(argv=None):
     ap.add_argument("--no-llm", action="store_true")
     ap.add_argument("--limit", type=int)
     ap.add_argument("--dump")
+    ap.add_argument("--max", type=int, default=60, help="потолок замечаний (для тестового пакета в ~90 целей — 20, здесь целей больше)")
     a = ap.parse_args(argv)
     run_dir = Path(a.run_dir).resolve()
     pkg = build_package(run_dir)
     out = Path(a.out).resolve()
     pkg_path = out.with_name(out.stem + "_package.json")
     pkg_path.write_text(json.dumps(pkg, ensure_ascii=False, indent=1), encoding="utf-8")
-    kinds = {t: sum(1 for i in pkg["items"] if i["type"] == t) for t in ("claim", "analogy", "script_line", "scene_fact")}
+    kinds = {"claim": sum(1 for i in pkg["items"] if i["type"] == "claim" and i["id"].startswith("C")), "step_text": sum(1 for i in pkg["items"] if i["id"].startswith("T")),
+             **{t: sum(1 for i in pkg["items"] if i["type"] == t) for t in ("analogy", "script_line", "scene_fact")}}
     print(f"Пакет {pkg_path.name}: {kinds}, сцен {len(pkg['scenes'])}, кадров {len(pkg['frames'])}")
     from . import run
-    args = [str(pkg_path), "-o", str(out)] + (["--chapter-md", a.chapter_md] if a.chapter_md else []) + (["--no-llm"] if a.no_llm else []) + (["--limit", str(a.limit)] if a.limit else []) + (["--dump", a.dump] if a.dump else [])
+    args = [str(pkg_path), "-o", str(out)] + (["--chapter-md", a.chapter_md] if a.chapter_md else []) + (["--no-llm"] if a.no_llm else []) + (["--limit", str(a.limit)] if a.limit else []) + (["--dump", a.dump] if a.dump else []) + ["--max", str(a.max)]
     return run.main(args)
 
 

@@ -99,14 +99,19 @@ def build_user(it: dict, items: dict, pkg: dict, ch: Chapter) -> str:
         if node_cl:
             parts.append("Утверждения узла:\n" + "\n".join(f"- [{c['id']}, стр. {c['page_pdf']}] {c['text']}" for c in node_cl))
             page = node_cl[0]["page_pdf"]
-    if page is None:
-        page, _ = best_page(ch, it["text"])
-    ctx = pages_ctx(ch, page)
+    if it.get("pages"):  # текст шага: все страницы узла (не больше 4), без цитаты
+        ctx = "\n\n".join(f"<!-- page {p_} -->\n{ch.pages[p_][:6000]}" for p_ in it["pages"][:4] if p_ in ch.pages)
+        if it.get("layer"):
+            parts.insert(1, f"Слой шага, написанный моделью: «{it['layer']}» (это пересказ главы, цитаты нет: сверяй со страницами)")
+    else:
+        if page is None:
+            page, _ = best_page(ch, it["text"])
+        ctx = pages_ctx(ch, page)
     parts.append("Текст автора (страницы источника ± соседние):\n" + ctx)
     return "\n\n".join(parts)
 
 
-def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk", only: set | None = None, workers: int = WORKERS) -> list[dict]:
+def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk", only: set | None = None, workers: int = WORKERS, effort: str | None = None) -> list[dict]:
     items = {i["id"]: i for i in pkg["items"]}
     todo = pkg["items"][:limit] if limit else pkg["items"]
     if only is not None:
@@ -114,7 +119,7 @@ def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bul
 
     def one(it):
         try:
-            r = ask_json(SYSTEM, build_user(it, items, pkg, ch), tier=tier, tag=f"review:{tier}:{it['id']}")
+            r = ask_json(SYSTEM, build_user(it, items, pkg, ch), tier=tier, tag=f"review:{tier}:{it['id']}", effort=effort)
         except Exception as e:  # бюджет, сеть — не валим весь прогон
             print(f"  ! {it['id']}: {e}")
             return None

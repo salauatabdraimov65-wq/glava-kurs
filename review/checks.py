@@ -120,7 +120,11 @@ def check_items(pkg: dict, ch: Chapter) -> list[dict]:
                                     "Заменить цитату дословной: " + (best_sentence(ch, q, p) or ""), p, best_sentence(ch, q, p), 0.55 if sc > 0.5 else 0.3, severity="significant"))
                     pg = p
             ctx = ch.pages.get(pg, "") if pg else ""
-            for cat, prob, conf in compare(it["text"], q, ctx):
+            src = q
+            if not q:  # текст шага без цитаты: источник — все страницы узла
+                ctx = "\n".join(ch.pages.get(p_, "") for p_ in (it.get("pages") or ([pg] if pg else [])))
+                src = ctx
+            for cat, prob, conf in compare(it["text"], src, ctx):
                 p = pg
                 res.append(cand(tid, cat, prob, "Привести формулировку к тексту автора: «" + (best_sentence(ch, q or it["text"], p) or q) + "»", p, best_sentence(ch, q or it["text"], p), conf))
         elif typ == "script_line":
