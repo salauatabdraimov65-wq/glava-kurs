@@ -1,7 +1,7 @@
 """Одна команда на главу: слой → иллюстрации → сценарий ролика → курс → ролик.
 
     uv run python -m glava.pipeline <chapter_id>                       # всё
-    uv run python -m glava.pipeline test1 --md путь/глава.md --pages 12-30 --title "…" [--lang en] [--domain drilling]
+    uv run python -m glava.pipeline test1 --md путь/глава.md --pages 12-30 --title "…" [--start-at "§ 9."] [--end-at "§ 11."] [--lang en] [--domain drilling]
     uv run python -m glava.pipeline <chapter_id> --from course           # после ручной правки факта в layer.json:
                                                                          # пересобрать курс и ролик, слой не трогать
     uv run python -m glava.pipeline <chapter_id> --video-node <node_id>  # ролик на назначенный организаторами узел
@@ -77,6 +77,8 @@ def main():
     ap.add_argument("chapter")
     ap.add_argument("--md"); ap.add_argument("--pages"); ap.add_argument("--title")
     ap.add_argument("--lang"); ap.add_argument("--domain")
+    ap.add_argument("--start-at", help="начало первой единицы главы, напр. «§ 9.» — всё до неё на первой странице не входит в главу")
+    ap.add_argument("--end-at", help="начало первой единицы следующего раздела, напр. «§ 11.»")
     ap.add_argument("--from", dest="start", choices=STAGES, default="layer")
     ap.add_argument("--only", choices=STAGES)
     ap.add_argument("--video-node"); ap.add_argument("--video-format", choices=["short", "long"])
@@ -94,6 +96,10 @@ def main():
             entry["pages"] = [[int(x) for x in r.split("-")] for r in a.pages.split(",")]
         if a.title:
             entry["title"] = a.title
+        if a.start_at:
+            entry["start_at"] = a.start_at
+        if a.end_at:
+            entry["end_at"] = a.end_at
         cfg["chapters"][a.chapter] = entry
         cfg_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding="utf-8")
     if a.chapter not in chapters_config():

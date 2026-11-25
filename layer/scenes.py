@@ -31,9 +31,18 @@ params: {"geometry": "radial"|"linear", "solution": "ei"|"erfc"|"pssss", "p0_MPa
  "q_m3_s": дебит (для radial), "mu_Pa_s": вязкость, "k_m2": проницаемость, "h_m": толщина, "r_w_m": радиус скважины,
  "x_max_m": размер области на графике, "times_s": [моменты времени для кривых], "views": ["map","profile","bottomhole_vs_log_t"]}
 action в beat: {"time_to": секунды модели к концу фразы} | {"show_curve_at": t} | {"mark_x": м} | {"show_view": "..."} | {}""",
+    "section_through_time": """Вертикальный разрез (x — расстояние, z — глубина/высота), где тела растут, смещаются или замещаются во времени:
+рост рифа к свету, проградация дельты, заполнение ловушки, перемещение фронта флюида. Форма тел между ключевыми кадрами интерполируется.
+params: {"x_max_m": ширина разреза, "z_top_m": верх (отметка, м; может быть выше уровня моря), "z_bottom_m": низ, "vertical_exaggeration": во сколько раз растянута вертикаль (1 — истинный масштаб),
+ "time_unit": "тыс. лет"|"млн лет"|"сут"|"ч", "time_steps": [моменты времени ключевых кадров],
+ "water_level": [{"t": момент, "z": отметка уровня воды}] или [],
+ "bodies": [{"id": "reef_core", "lith": ключ литологии из стайлгайда, "fluid": ключ флюида или null, "label": подпись,
+             "keyframes": [{"t": момент, "polygon": [[x, z], ...]}]}],
+ "arrows": [{"t_from": момент, "t_to": момент, "from": [x, z], "to": [x, z], "label": "подпись процесса"}]}
+action в beat: {"time_to": момент к концу фразы} | {"highlight_body": "id"} | {"mark_x": м} | {"show_true_scale": true} | {}""",
 }
 
-COMPUTED_TEMPLATES = {"well_tool_curve", "pressure_diffusion"}  # кадр считается из модели
+COMPUTED_TEMPLATES = {"well_tool_curve", "pressure_diffusion", "section_through_time"}  # кадр считается из модели
 
 FORMATS = {
     "short": {"aspect": "9:16", "words": (90, 160), "seconds": "40–75", "focus": "один механизм"},
@@ -62,7 +71,11 @@ SYS = """Ты сценарист учебных роликов. Пишешь с�
 - Каждая содержательная фраза опирается на утверждение узла (claim_id) и не говорит больше него. Сохраняй условия автора.
 - Сумма слов всех say: {wmin}–{wmax}.
 - Числа в params: если в главе есть числа — бери их; иначе условные значения, и это записано в assumptions. Глубина растёт вниз.
-- Не закрепляй заблуждения из списка: {misc}"""
+- Не закрепляй заблуждения из списка: {misc}
+- Масштабы и скорости процессов правдоподобны (таблица ниже). Тела и зоны рисуй в масштабе разреза; отдельные поры/зёрна
+  в разрезе километрового масштаба не рисуй — показывай зону. Любое увеличение — в exaggerations и plaque с числом «в N раз».
+Типичные масштабы предметной области:
+{scales}"""
 
 
 def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_id: str | None = None) -> Path:
@@ -72,11 +85,13 @@ def make_spec(chapter: str, node_id: str, fmt: str, template: str | None, video_
     template = template or DIFF["scene_template"].get(node["difficulty"]["primary"]) or "well_tool_curve"
     style = json.loads((ROOT / "domain" / layer.get("domain", "geology") / "styleguide.json").read_text(encoding="utf-8"))
     misc = json.loads((ROOT / "domain" / layer.get("domain", "geology") / "misconceptions.json").read_text(encoding="utf-8"))
+    sc = ROOT / "domain" / layer.get("domain", "geology") / "scales.md"
+    scales = sc.read_text(encoding="utf-8") if sc.exists() else "(нет)"
     f = FORMATS[fmt]
     sys_p = SYS.format(aspect=f["aspect"], seconds=f["seconds"], focus=f["focus"], template=template,
                        template_doc=TEMPLATES[template], lith=list(style["lithology"]), fluids=list(style["fluids"]),
                        curves=list(style["curves"]), wmin=f["words"][0], wmax=f["words"][1],
-                       misc="; ".join(m["text"] for m in misc))
+                       misc="; ".join(m["text"] for m in misc), scales=scales)
     user = (f"Узел: {node['title']} ({node_id}), тип {node['difficulty']}\nСуть: {node['layers']['main']['text']}\n"
             f"Механизм: {node['layers']['mechanism']['text']}\nНюансы: {node['layers']['nuances']['text']}\n"
             f"Частая ошибка: {(node.get('misconception') or {}).get('text')}\n"
