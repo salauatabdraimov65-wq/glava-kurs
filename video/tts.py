@@ -75,10 +75,23 @@ def spoken_text(text: str, domain: str, stress_marks: bool) -> str:
         if len(k) >= 2 or not k.isalpha():
             out = _sub_word(out, k, abbr[k])
     if stress_marks:
+        def accented(lw: str) -> str | None:
+            if lw in stress:
+                return stress[lw]
+            # словоформа: «коллектора» ← «колле́ктор», если ударная гласная внутри общей основы
+            for base in sorted((b for b in stress if len(b) >= 5 and lw.startswith(b[:-1])), key=len, reverse=True):
+                acc = stress[base]
+                pos = acc.index(ACUTE)
+                if pos <= len(base) - 1 and len(lw) - len(base) <= 3:
+                    return lw[:pos] + ACUTE + lw[pos:]
+            return None
+
         def repl(m):
             w = m.group(0)
-            acc = stress.get(w.lower())
-            if not acc or ACUTE in w:
+            if ACUTE in w:
+                return w
+            acc = accented(w.lower())
+            if not acc:
                 return w
             return acc[0].upper() + acc[1:] if w[0].isupper() else acc
         out = re.sub(r"[А-Яа-яЁё́-]+", repl, out)
