@@ -3,23 +3,25 @@ const STORE_KEY = 'course-progress:' + CHAPTER;
 const TASK_KEY = 'course-tasks:' + CHAPTER;
 const COMPLETE_KEY = 'course-completed-steps:' + CHAPTER;
 const CARD_KEY = 'course-cards:' + CHAPTER;
-const VIEW_KEY = 'course-view:' + CHAPTER;
+const VIEW_KEY = 'course-screen-v2:' + CHAPTER;
 const THEME_KEY = 'course-theme-v2:' + CHAPTER;
 const MODE_KEY = 'course-step-modes:' + CHAPTER;
 const NOTES_KEY = 'course-notes:' + CHAPTER;
-let saved = {};
-let solved = {};
-let reviewed = {};
-let completedSteps = {};
+const READ_KEY = 'course-read:' + CHAPTER;
+const QUIZ_KEY = 'course-questions:' + CHAPTER;
 function loadRecord(key) {
   try { const value = JSON.parse(localStorage.getItem(key) || '{}'); return value && typeof value === 'object' && !Array.isArray(value) ? value : {}; } catch (_) { return {}; }
 }
 const stepModes = loadRecord(MODE_KEY);
 const notes = loadRecord(NOTES_KEY);
-try { saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch (_) {}
-try { solved = JSON.parse(localStorage.getItem(TASK_KEY) || '{}'); } catch (_) {}
-try { reviewed = JSON.parse(localStorage.getItem(CARD_KEY) || '{}'); } catch (_) {}
-try { completedSteps = JSON.parse(localStorage.getItem(COMPLETE_KEY) || '{}'); } catch (_) {}
+const saved = loadRecord(STORE_KEY);
+const solved = loadRecord(TASK_KEY);
+const reviewed = loadRecord(CARD_KEY);
+const completedSteps = loadRecord(COMPLETE_KEY);
+const readSteps = loadRecord(READ_KEY);
+const questionPositions = loadRecord(QUIZ_KEY);
+// Keep lessons completed in earlier versions credited as studied.
+STEPS.forEach(step => { if (completedSteps[step.dataset.stepId]) readSteps[step.dataset.stepId] = true; });
 let current = Math.min(Math.max(Number(saved.step) || 0, 0), Math.max(STEPS.length - 1, 0));
 const esc = (s) => String(s ?? '');
 function persist(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch (_) { return false; } }
@@ -33,46 +35,63 @@ function syncCourseProgress() {
   let completedCount = 0;
   let changed = false;
   const justCompleted = [];
-  const validTypes = ['single', 'multiple', 'order', 'gap', 'calc'];
-  STEPS.forEach(step => {
+  STEPS.forEach((step, index) => {
     const stepId = step.dataset.stepId;
-    const stepTasks = TASKS.filter(task => task.step_id === stepId && validTypes.includes(task.type) && task.id && task.prompt && Object.hasOwn(task, 'answer'));
-    const done = stepTasks.length ? stepTasks.every(task => solved[task.id]) : Boolean(completedSteps[stepId]);
+    const stepTasks = [...step.querySelectorAll('[data-task-id]')];
+    const solvedCount = stepTasks.filter(task => solved[task.dataset.taskId]).length;
+    const read = Boolean(readSteps[stepId]);
+    const done = read && solvedCount === stepTasks.length;
     step.dataset.complete = String(done);
-    if (done) {
-      completedCount += 1;
-      if (!completedSteps[stepId]) {
-        completedSteps[stepId] = true;
-        changed = true;
-        justCompleted.push(stepId);
-      }
+    if (done) completedCount += 1;
+    if (Boolean(completedSteps[stepId]) !== done) {
+      completedSteps[stepId] = done;
+      changed = true;
+      if (done) justCompleted.push(stepId);
     }
     const nav = [...document.querySelectorAll('.step-link')].find(item => item.dataset.stepId === stepId);
     if (nav) {
+      const status = done ? 'Пройден' : read || solvedCount ? 'В процессе' : 'Не начат';
       nav.classList.toggle('is-complete', done);
       nav.querySelector('.step-marker').textContent = done ? '✓' : '○';
-      nav.setAttribute('aria-label', nav.querySelector('.step-name').textContent + (done ? ', пройдено' : ', не пройдено'));
+      nav.querySelector('.lesson-status').textContent = status;
+      nav.setAttribute('aria-label', 'Урок ' + (index + 1) + '. ' + nav.querySelector('.step-name').textContent + ', ' + status.toLowerCase());
     }
     const reward = step.querySelector('[data-step-reward]');
     if (reward) {
-      const solvedCount = stepTasks.filter(task => solved[task.id]).length;
-      reward.textContent = done ? 'Все задания этапа выполнены' : 'Выполнено заданий: ' + solvedCount + ' из ' + stepTasks.length;
-      reward.classList.toggle('is-earned', done);
+      reward.textContent = solvedCount === stepTasks.length ? 'Все задания урока выполнены' : 'Выполнено заданий: ' + solvedCount + ' из ' + stepTasks.length;
+      reward.classList.toggle('is-earned', solvedCount === stepTasks.length);
       const count = step.querySelector('[data-mode-count]');
       if (count) count.textContent = solvedCount + ' / ' + stepTasks.length;
     }
-    const completionButton = step.querySelector('[data-complete-step]');
-    if (completionButton) {
-      completionButton.disabled = done;
-      completionButton.textContent = done ? 'Шаг изучен' : 'Отметить шаг как изученный';
-    }
+    step.querySelector('[data-step-mode="material"]').classList.toggle('is-done', read);
+    step.querySelector('[data-step-mode="result"]').classList.toggle('is-done', done);
+    step.querySelector('[data-reading-state]').textContent = read ? 'Материал отмечен как изученный.' : 'Отметьте материал изученным, когда закончите чтение.';
+    const nextPhase = stepTasks.length ? 'К практике →' : 'Посмотреть итог →';
+    step.querySelector('[data-read-step]').textContent = read ? nextPhase : 'Материал изучен · ' + nextPhase;
+    step.querySelector('[data-result-title]').textContent = done ? 'Урок завершён' : 'Осталось завершить урок';
+    step.querySelector('[data-result-description]').textContent = done
+      ? 'Вы изучили материал' + (stepTasks.length ? ' и выполнили все практические задания.' : '.')
+      : !read ? 'Вернитесь к материалу и отметьте его изученным. Затем завершите практику, если она есть в уроке.' : 'Выполните оставшиеся задания. Можно вернуться к объяснениям и использовать подсказки.';
+    step.querySelector('[data-theory-state]').textContent = read ? '✓ Материал изучен' : '○ Материал ещё не отмечен как изученный';
+    const practiceState = step.querySelector('[data-practice-state]');
+    if (practiceState) practiceState.textContent = (solvedCount === stepTasks.length ? '✓ ' : '○ ') + 'Практика: ' + solvedCount + ' из ' + stepTasks.length;
+    step.querySelector('[data-result-continue]').textContent = done
+      ? index === STEPS.length - 1 ? 'К программе курса →' : 'Следующий урок →'
+      : !read ? 'Вернуться к материалу' : 'Продолжить практику';
+    updateQuestionControls(step);
   });
   document.getElementById('completed-steps').textContent = completedCount + ' / ' + STEPS.length;
   document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
   document.querySelector('.hero-track').setAttribute('aria-valuenow', String(completedCount));
   const resumeButton = document.querySelector('[data-resume]');
-  resumeButton.textContent = STEPS.length && completedCount === STEPS.length ? 'Повторить материал →' : 'Продолжить обучение →';
+  const nextIndex = STEPS.findIndex(step => step.dataset.complete !== 'true');
+  const nextStep = STEPS[nextIndex < 0 ? 0 : nextIndex];
+  const started = completedCount || Object.values(readSteps).some(Boolean) || Object.values(solved).some(Boolean);
+  resumeButton.textContent = nextIndex < 0 ? 'Повторить курс →' : started ? 'Продолжить обучение →' : 'Начать обучение →';
   resumeButton.disabled = !STEPS.length;
+  document.getElementById('resume-label').textContent = nextIndex < 0 ? 'КУРС ПРОЙДЕН' : started ? 'ПРОДОЛЖИТЬ С УРОКА ' + (nextIndex + 1) : 'ПЕРВЫЙ УРОК';
+  document.getElementById('resume-title').textContent = nextStep?.querySelector('h1').textContent || 'В курсе пока нет уроков';
+  document.getElementById('resume-description').textContent = nextIndex < 0 ? 'Вы можете повторить уроки или перейти к карточкам и конспекту.' : nextStep?.querySelector('.step-time')?.textContent || '';
   if (changed) {
     persist(COMPLETE_KEY, completedSteps);
   }
@@ -87,13 +106,12 @@ const themeToggle = document.getElementById('theme-toggle');
 function updateThemeButton() { themeToggle.textContent = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'; themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'); }
 themeToggle.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = theme; try { localStorage.setItem(THEME_KEY, theme); } catch (_) {} updateThemeButton(); });
 updateThemeButton();
-let activeView = 'course';
-try { activeView = localStorage.getItem(VIEW_KEY) || 'course'; } catch (_) {}
-if (!['course', 'cards', 'map', 'summary'].includes(activeView)) activeView = 'course';
+let activeView = 'overview';
+try { activeView = localStorage.getItem(VIEW_KEY) || 'overview'; } catch (_) {}
+if (!['overview', 'course', 'cards', 'map', 'summary'].includes(activeView)) activeView = 'overview';
 function setView(name) {
   activeView = name;
   document.querySelectorAll('.app-view').forEach(view => view.hidden = view.id !== name + '-view');
-  document.getElementById('course-nav').hidden = name !== 'course';
   document.querySelector('.layout').dataset.view = name;
   document.body.dataset.view = name;
   document.querySelectorAll('.view-switcher [data-show-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showView === name)));
@@ -104,25 +122,85 @@ function scrollToLesson() {
   if (!step) return;
   const heading = step.querySelector('h1');
   if (heading) { heading.tabIndex = -1; heading.focus({preventScroll: true}); }
-  step.scrollIntoView({block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  document.getElementById('course-view').scrollIntoView({block: 'start', behavior: 'instant'});
 }
 function setStepMode(step, mode, save = true) {
   const practice = step.querySelector('.practice-column');
-  const selected = mode === 'practice' && practice ? 'practice' : 'material';
+  const selected = mode === 'result' ? 'result' : mode === 'practice' && practice ? 'practice' : 'material';
   step.dataset.mode = selected;
   step.querySelector('.lesson-column').hidden = selected !== 'material';
   if (practice) practice.hidden = selected !== 'practice';
+  step.querySelector('.lesson-results').hidden = selected !== 'result';
   step.querySelectorAll('[data-step-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.stepMode === selected)));
   stepModes[step.dataset.stepId] = selected;
   if (save) persist(MODE_KEY, stepModes);
 }
+function lessonTasks(step) { return [...step.querySelectorAll('[data-task-id]')]; }
+function selectQuestion(step, index, save = true) {
+  const cards = lessonTasks(step);
+  if (!cards.length) return;
+  const position = Math.max(0, Math.min(Number(index) || 0, cards.length - 1));
+  questionPositions[step.dataset.stepId] = position;
+  cards.forEach((card, i) => { card.hidden = i !== position; });
+  updateQuestionControls(step);
+  if (save) {
+    persist(QUIZ_KEY, questionPositions);
+    const counter = step.querySelector('[data-question-counter]');
+    counter.tabIndex = -1;
+    counter.focus({preventScroll: true});
+    counter.scrollIntoView({block: 'start', behavior: 'instant'});
+  }
+}
+function updateQuestionControls(step) {
+  const cards = lessonTasks(step);
+  if (!cards.length) return;
+  const position = Number(questionPositions[step.dataset.stepId]) || 0;
+  step.querySelector('[data-question-counter]').textContent = 'Задание ' + (position + 1) + ' из ' + cards.length;
+  step.querySelectorAll('[data-question]').forEach((button, i) => {
+    const done = Boolean(solved[cards[i].dataset.taskId]);
+    button.setAttribute('aria-pressed', String(position === i));
+    button.setAttribute('aria-label', 'Задание ' + (i + 1) + (done ? ', выполнено' : ''));
+    button.classList.toggle('is-solved', done);
+  });
+  step.querySelector('[data-question-previous]').disabled = position === 0;
+  step.querySelector('[data-question-next]').textContent = position === cards.length - 1 ? 'Посмотреть итог →' : 'Следующее задание →';
+}
+function openLesson(index, mode) {
+  setView('course');
+  setStep(index);
+  if (mode && STEPS[current]) setStepMode(STEPS[current], mode);
+  scrollToLesson();
+}
 STEPS.forEach(step => {
   setStepMode(step, stepModes[step.dataset.stepId], false);
   step.querySelectorAll('[data-step-mode]').forEach(button => button.addEventListener('click', () => setStepMode(step, button.dataset.stepMode)));
-  step.querySelector('[data-open-practice]')?.addEventListener('click', () => {
-    setStepMode(step, 'practice');
-    step.querySelector('[data-step-mode="practice"]').focus({preventScroll: true});
-    step.scrollIntoView({block: 'start'});
+  step.querySelector('[data-read-step]').addEventListener('click', () => {
+    readSteps[step.dataset.stepId] = true;
+    persist(READ_KEY, readSteps);
+    syncCourseProgress();
+    const cards = lessonTasks(step);
+    const missing = cards.findIndex(card => !solved[card.dataset.taskId]);
+    setStepMode(step, missing < 0 ? 'result' : 'practice');
+    if (missing >= 0) selectQuestion(step, missing);
+    scrollToLesson();
+  });
+  step.querySelectorAll('[data-question]').forEach(button => button.addEventListener('click', () => selectQuestion(step, Number(button.dataset.question))));
+  step.querySelector('[data-question-previous]')?.addEventListener('click', () => selectQuestion(step, questionPositions[step.dataset.stepId] - 1));
+  step.querySelector('[data-question-next]')?.addEventListener('click', () => {
+    const position = Number(questionPositions[step.dataset.stepId]) || 0;
+    if (position < lessonTasks(step).length - 1) selectQuestion(step, position + 1);
+    else { setStepMode(step, 'result'); scrollToLesson(); }
+  });
+  step.querySelector('[data-result-continue]').addEventListener('click', () => {
+    if (step.dataset.complete === 'true') {
+      if (current < STEPS.length - 1) openLesson(current + 1, 'material');
+      else { setView('overview'); window.scrollTo({top: 0, behavior: 'instant'}); }
+    } else {
+      setStepMode(step, readSteps[step.dataset.stepId] ? 'practice' : 'material');
+      const missing = lessonTasks(step).findIndex(card => !solved[card.dataset.taskId]);
+      if (missing >= 0) selectQuestion(step, missing);
+      scrollToLesson();
+    }
   });
   const input = step.querySelector('[data-step-note]');
   const status = step.querySelector('.notes-status');
@@ -136,14 +214,11 @@ STEPS.forEach(step => {
 });
 function resumeLearning() {
   const nextIndex = STEPS.findIndex(step => step.dataset.complete !== 'true');
-  setView('course');
-  setStep(nextIndex < 0 ? 0 : nextIndex);
-  if (nextIndex < 0 && STEPS[current]) setStepMode(STEPS[current], 'material');
-  scrollToLesson();
+  openLesson(nextIndex < 0 ? 0 : nextIndex, nextIndex < 0 ? 'material' : undefined);
 }
 document.querySelectorAll('[data-show-view]').forEach(button => button.addEventListener('click', () => {
   if (button.hasAttribute('data-resume')) resumeLearning();
-  else setView(button.dataset.showView);
+  else { setView(button.dataset.showView); window.scrollTo({top: 0, behavior: 'instant'}); }
 }));
 document.addEventListener('click', event => {
   const link = event.target.closest('.task a[href^="#claim-"]');
@@ -170,14 +245,19 @@ function setStep(index) {
   document.getElementById('progress-fill').style.width = percent + '%';
   document.querySelector('.progress').setAttribute('aria-valuenow', String(current + 1));
   document.querySelector('.progress').setAttribute('aria-valuemax', String(STEPS.length));
-  document.getElementById('progress-label').textContent = `${current + 1} из ${STEPS.length} шагов`;
+  document.getElementById('progress-label').textContent = `Урок ${current + 1} из ${STEPS.length}`;
+  document.getElementById('lesson-select').value = String(current);
   document.getElementById('previous').disabled = current === 0;
-  document.getElementById('next').disabled = current === STEPS.length - 1;
+  document.getElementById('next').textContent = current === STEPS.length - 1 ? 'К программе курса →' : 'Следующий урок →';
   persist(STORE_KEY, {step: current});
 }
-document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => { setView('course'); setStep(Number(button.dataset.go)); scrollToLesson(); }));
-document.getElementById('previous').addEventListener('click', () => { setStep(current - 1); scrollToLesson(); });
-document.getElementById('next').addEventListener('click', () => { setStep(current + 1); scrollToLesson(); });
+document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => openLesson(Number(button.dataset.go))));
+document.getElementById('lesson-select').addEventListener('change', event => openLesson(Number(event.target.value)));
+document.getElementById('previous').addEventListener('click', () => openLesson(current - 1));
+document.getElementById('next').addEventListener('click', () => {
+  if (current < STEPS.length - 1) openLesson(current + 1, 'material');
+  else { setView('overview'); window.scrollTo({top: 0, behavior: 'instant'}); }
+});
 document.querySelectorAll('.review-card').forEach(card => {
   const id = card.dataset.reviewId;
   card.querySelectorAll('[data-review]').forEach(button => {
@@ -189,18 +269,11 @@ document.querySelectorAll('.review-card').forEach(card => {
     });
   });
 });
-document.querySelectorAll('[data-complete-step]').forEach(button => button.addEventListener('click', () => {
-  const stepId = button.dataset.completeStep;
-  if (!completedSteps[stepId]) {
-    completedSteps[stepId] = true;
-    persist(COMPLETE_KEY, completedSteps);
-    button.textContent = 'Шаг изучен';
-    button.disabled = true;
-    syncCourseProgress();
-  }
-}));
 document.getElementById('print-summary').addEventListener('click', () => { setView('summary'); window.print(); });
-document.getElementById('reset-progress').addEventListener('click', () => { removeStored(STORE_KEY); removeStored(TASK_KEY); removeStored(CARD_KEY); removeStored(COMPLETE_KEY); removeStored(MODE_KEY); location.reload(); });
+document.getElementById('reset-progress').addEventListener('click', () => {
+  [STORE_KEY, TASK_KEY, CARD_KEY, COMPLETE_KEY, MODE_KEY, READ_KEY, QUIZ_KEY, VIEW_KEY].forEach(removeStored);
+  location.reload();
+});
 function taskElement(task) {
   const card = document.querySelector(`[data-task-id="${CSS.escape(task.id)}"]`);
   if (!card) return;
@@ -309,11 +382,16 @@ function taskElement(task) {
     }
     const newMilestones = syncCourseProgress();
     showResult(correct);
-    if (firstSolve && newMilestones.includes(card.closest('.step').dataset.stepId)) result.textContent += ' Все задания этапа выполнены.';
+    if (firstSolve && newMilestones.includes(card.closest('.step').dataset.stepId)) result.textContent += ' Урок завершён. Можно посмотреть итог.';
     if (correct) restoreAndLockAnswer();
   });
 }
 TASKS.forEach(taskElement);
+STEPS.forEach(step => {
+  const cards = lessonTasks(step);
+  const firstUnsolved = cards.findIndex(card => !solved[card.dataset.taskId]);
+  selectQuestion(step, questionPositions[step.dataset.stepId] ?? Math.max(0, firstUnsolved), false);
+});
 syncCourseProgress();
 setStep(current);
 setView(activeView);

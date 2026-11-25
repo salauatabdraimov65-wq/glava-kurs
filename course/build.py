@@ -69,6 +69,12 @@ def field_paragraph(value: Any, page: Any, *, label: str = "") -> str:
     return title + "".join(paragraphs)
 
 
+def usable_tasks(tasks: list[Any]) -> list[dict[str, Any]]:
+    return [task for task in tasks if isinstance(task, dict)
+            and task.get("type") in {"single", "multiple", "order", "gap", "calc"}
+            and task.get("id") and text_of(task.get("prompt")) and "answer" in task]
+
+
 def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations: list[dict[str, Any]], routes: Any, base: Path) -> str:
     pages = node.get("pages") or []
     page = pages[0] if pages else ""
@@ -82,26 +88,21 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
     if book_title and book_title != heading:
         title_page = f'<span class="page">стр. {html.escape(str(page))}</span>' if page else ""
         blocks.append(f'<div class="book-title">Раздел книги: {html.escape(book_title)} {title_page}</div>')
-    supported_task_types = {"single", "multiple", "order", "gap", "calc"}
-    node_tasks = [
-        task for task in tasks
-        if task.get("step_id") == node.get("id")
-        and task.get("type") in supported_task_types
-        and task.get("id")
-        and text_of(task.get("prompt"))
-        and "answer" in task
-    ]
+    node_tasks = [task for task in usable_tasks(tasks) if task.get("step_id") == node.get("id")]
     step_minutes = estimated_minutes(node, tasks)
     if step_minutes:
         blocks.append(f'<div class="step-time">≈ {step_minutes} мин · чтение и практика</div>')
     step_key = html.escape(str(node.get("id", "")), quote=True)
+    blocks.append('<div class="step-mode-switcher" role="group" aria-label="Этапы урока">')
+    blocks.append(f'<button type="button" data-step-mode="material" aria-pressed="true" aria-controls="lesson-{step_key}"><span class="phase-number">1</span> Материал</button>')
     if node_tasks:
-        blocks.append(
-            '<div class="step-mode-switcher" role="group" aria-label="Режим шага">'
-            f'<button type="button" data-step-mode="material" aria-pressed="true" aria-controls="lesson-{step_key}">Материал</button>'
-            f'<button type="button" data-step-mode="practice" aria-pressed="false" aria-controls="practice-{step_key}">Практика <span class="mode-count" data-mode-count>0 / {len(node_tasks)}</span></button></div>'
-        )
+        blocks.append(f'<button type="button" data-step-mode="practice" aria-pressed="false" aria-controls="practice-{step_key}"><span class="phase-number">2</span> Практика <span class="mode-count" data-mode-count>0 / {len(node_tasks)}</span></button>')
+    blocks.append(f'<button type="button" data-step-mode="result" aria-pressed="false" aria-controls="result-{step_key}"><span class="phase-number">{3 if node_tasks else 2}</span> Итог</button></div>')
     blocks.append(f'<div class="lesson-column" id="lesson-{step_key}">')
+    if text_of(node.get("why_here")):
+        blocks.append('<section class="content-block lesson-purpose"><h2>В этом уроке</h2>')
+        blocks.append(field_paragraph(node["why_here"], page))
+        blocks.append('</section>')
 
     layers = node.get("layers") or {}
     if layers.get("main"):
@@ -240,14 +241,13 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         src = html.escape((Path("..") / str(video_path)).as_posix(), quote=True)
         blocks.append(f'<section class="content-block"><h2>Видео</h2><video controls preload="metadata" src="{src}">Ваш браузер не поддерживает видео.</video></section>')
 
-    if not node_tasks:
-        step_id = html.escape(str(node.get("id", "")), quote=True)
-        blocks.append(f'<div class="step-complete"><button type="button" data-complete-step="{step_id}">Отметить шаг как изученный</button></div>')
-    else:
-        blocks.append('<div class="reading-actions"><button class="button-primary" type="button" data-open-practice>Перейти к практике →</button></div>')
+    next_phase = "К практике →" if node_tasks else "Посмотреть итог →"
+    blocks.append(f'<div class="reading-actions"><span class="reading-state" data-reading-state></span><button class="button-primary" type="button" data-read-step>Материал изучен · {next_phase}</button></div>')
     blocks.append("</div>")
     if node_tasks:
-        blocks.append(f'<aside class="content-block practice practice-column" id="practice-{step_key}" hidden><div class="exercise-kicker">ПРАКТИКА</div><h2>Проверьте понимание</h2><div class="step-reward" data-step-reward></div>')
+        blocks.append(f'<section class="content-block practice practice-column" id="practice-{step_key}" hidden><div class="exercise-kicker">ПРАКТИКА</div><h2>Проверьте понимание</h2><div class="step-reward" data-step-reward></div><div class="quiz-topline"><strong data-question-counter></strong><nav class="quiz-jumps" aria-label="Выбор задания">')
+        blocks.extend(f'<button type="button" data-question="{index}" aria-label="Задание {index + 1}">{index + 1}</button>' for index in range(len(node_tasks)))
+        blocks.append('</nav></div>')
         claim_pages = {str(claim.get("id")): claim.get("page_pdf") for claim in claims if claim.get("id")}
         claim_texts = {str(claim.get("id")): claim for claim in claims if claim.get("id") and text_of(claim.get("text"))}
         for task in node_tasks:
@@ -274,7 +274,15 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
                 hint_content = "".join(hint_parts)
                 hint_markup = f'<div class="hint-box"><button type="button" class="hint-toggle" aria-expanded="false">Подсказка</button><div class="hint-content" hidden>{hint_content}</div></div>'
             blocks.append(f'<article class="task" data-task-id="{html.escape(str(task.get("id", "")), quote=True)}">{source_markup}{hint_markup}</article>')
-        blocks.append("</aside>")
+        blocks.append('<div class="quiz-navigation"><button type="button" data-question-previous>← Предыдущее задание</button><button class="button-primary" type="button" data-question-next>Следующее задание →</button></div></section>')
+    practice_state = '<li data-practice-state></li>' if node_tasks else ''
+    blocks.append(
+        f'<section class="lesson-results content-block" id="result-{step_key}" hidden>'
+        '<div class="exercise-kicker">ИТОГ УРОКА</div><h2 data-result-title>Ваш результат</h2>'
+        '<p data-result-description></p><ul class="completion-checklist"><li data-theory-state></li>'
+        f'{practice_state}</ul><div class="result-actions"><button class="button-primary" type="button" data-result-continue>Продолжить урок →</button>'
+        '<button type="button" data-show-view="overview">К программе курса</button></div></section>'
+    )
     blocks.append(
         '<details class="step-notes no-print"><summary>Мои заметки к шагу</summary><div class="notes-content">'
         f'<label for="notes-{step_key}">Запишите выводы, вопросы или то, что хотите повторить.</label>'
@@ -495,12 +503,13 @@ def ordered_nodes(raw_nodes: list[Any]) -> list[dict[str, Any]]:
 
 def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, illustrations_data: Any, base: Path) -> str:
     nodes = ordered_nodes(layer.get("nodes", []))
-    task_items = tasks_data.get("tasks", []) if isinstance(tasks_data, dict) else []
-    tasks = [task for task in task_items if isinstance(task, dict)]
+    task_items = (tasks_data.get("tasks") or []) if isinstance(tasks_data, dict) else []
+    tasks = usable_tasks(task_items)
     illustrations = illustrations_data.get("illustrations", []) if isinstance(illustrations_data, dict) else []
     if not isinstance(illustrations, list):
         illustrations = []
     ids = [str(node.get("id", "")) for node in nodes]
+    tasks = [task for task in tasks if task.get("step_id") in ids]
     task_map: dict[str, list[dict[str, Any]]] = {step_id: [] for step_id in ids}
     for task in tasks:
         if task.get("step_id") in task_map:
@@ -508,6 +517,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 
     step_markup = []
     nav_markup = []
+    select_options = []
     for index, node in enumerate(nodes):
         step_id = ids[index]
         step_tasks = task_map.get(step_id, [])
@@ -516,22 +526,27 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
             f'{render_node(node, step_tasks, illustrations, routes, base)}</section>'
         )
         label = text_of((node.get("layers") or {}).get("topic")) or str(node.get("title", f"Шаг {index + 1}"))
+        minutes = estimated_minutes(node, step_tasks)
+        lesson_task_count = len(step_tasks)
+        task_word = count_word(lesson_task_count, "задание", "задания", "заданий")
+        meta = " · ".join(item for item in (f"≈ {minutes} мин" if minutes else "", f"{lesson_task_count} {task_word}" if lesson_task_count else "", "Материал и практика" if lesson_task_count else "Материал") if item)
+        select_options.append(f'<option value="{index}">Урок {index + 1}. {html.escape(label)}</option>')
         nav_markup.append(
             f'<button class="step-link" type="button" data-go="{index}" data-step-id="{html.escape(step_id, quote=True)}"><span class="step-number">{index + 1}</span>'
-            f'<span class="step-name">{html.escape(label)}</span><span class="step-marker" aria-hidden="true">○</span></button>'
+            f'<span class="lesson-info"><span class="step-name">{html.escape(label)}</span><span class="lesson-meta">{html.escape(meta)}</span></span>'
+            '<span class="lesson-status">Не начат</span><span class="step-marker" aria-hidden="true">○</span></button>'
         )
 
     cards_markup = render_cards(nodes)
     summary_markup = render_summary(nodes)
     map_content = render_map(nodes)
     chapter_name = html.escape(str(layer.get("chapter", "Курс")))
-    hero_title = text_of(layer.get("title"))
-    if not hero_title and nodes:
-        hero_title = text_of((nodes[0].get("layers") or {}).get("topic")) or str(nodes[0].get("title", ""))
-    hero_title = html.escape(hero_title or str(layer.get("chapter", "Полевой маршрут")))
+    hero_title = html.escape(text_of(layer.get("title")) or "Учебный курс по главе")
     step_count = len(nodes)
     task_count = len(tasks)
-    step_word = count_word(step_count, "этап", "этапа", "этапов")
+    step_word = count_word(step_count, "урок", "урока", "уроков")
+    total_minutes = sum(estimated_minutes(node, tasks) for node in nodes)
+    duration_markup = f'<span>{ui_icon("scroll")} ≈ {total_minutes} мин</span>' if total_minutes else ''
     task_word = count_word(task_count, "задание", "задания", "заданий")
     task_json = json.dumps(tasks, ensure_ascii=False, separators=(",", ":"))
     task_json = task_json.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
@@ -556,33 +571,34 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 <body>
 <div class="ambient-terrain" aria-hidden="true">{terrain_markup}</div>
 <div class="shell">
-  <div class="masthead"><div class="brand"><span class="brand-icon">{ui_icon('layers')}</span> ГЛАВА → КУРС</div><span class="offline-label"><span class="status-dot"></span> Доступно офлайн</span></div>
-  <header class="hero">
+  <div class="masthead"><div class="brand"><span class="brand-icon">{ui_icon('layers')}</span> ГЛАВА → КУРС</div><div class="header-tools"><span class="offline-label"><span class="status-dot"></span> Доступно офлайн</span><div class="theme-controls"><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></div></div>
+  <main id="course-content" class="layout">
+    <nav class="view-switcher" aria-label="Раздел курса">
+      <button type="button" data-show-view="overview" aria-pressed="true">{ui_icon('book')} Обзор курса</button>
+      <button type="button" data-show-view="cards" aria-pressed="false">{ui_icon('cards')} Повторение</button>
+      <button type="button" data-show-view="map" aria-pressed="false">{ui_icon('map')} Карта связей</button>
+      <button type="button" data-show-view="summary" aria-pressed="false">{ui_icon('scroll')} Конспект</button>
+    </nav>
+    <section id="overview-view" class="app-view">
+    <header class="hero">
     <div class="hero-copy">
-      <div class="hero-kicker">УЧЕБНЫЙ МОДУЛЬ</div>
+      <div class="hero-kicker">САМОСТОЯТЕЛЬНОЕ ОБУЧЕНИЕ</div>
       <h1>{hero_title}</h1>
-      <p class="hero-note">Изучите материал главы, разберите объяснения и проверьте понимание на практических заданиях.</p>
-      <div class="hero-stats"><span>{ui_icon('book')} <b>{step_count}</b> {step_word}</span><span>{ui_icon('check')} <b>{task_count}</b> {task_word}</span><span>{ui_icon('scroll')} Ссылки на источник</span></div>
-      <div class="hero-completion"><div><span>Пройдено этапов</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные этапы" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
+      <p class="hero-note">Проходите уроки последовательно: изучите материал, выполните задания и посмотрите итог. Возвращайтесь к сложным темам в любое время.</p>
+      <div class="hero-stats"><span>{ui_icon('book')} <b>{step_count}</b> {step_word}</span><span>{ui_icon('check')} <b>{task_count}</b> {task_word}</span>{duration_markup}</div>
+      <div class="hero-completion"><div><span>Пройдено уроков</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные уроки" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
     </div>
     <div class="strata-scene" aria-hidden="true">{strata_markup}</div>
-  </header>
-  <div class="course-toolbar"><div class="learning-status">{ui_icon('check')}<span>Выполнено заданий: <b id="solved-tasks" aria-live="polite">0 / {task_count}</b></span></div><div class="theme-controls"><button class="button-primary" type="button" data-show-view="course" data-resume>Продолжить обучение →</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></div>
-  <div class="layout">
-    <aside id="course-nav" aria-label="Навигация курса"><div class="route-heading">{ui_icon('book')}<div><div class="nav-kicker">СОДЕРЖАНИЕ МОДУЛЯ</div><strong>Последовательность изучения</strong></div></div><div class="progress" role="progressbar" aria-label="Текущий шаг" aria-valuemin="1"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">Читайте материал, сверяйтесь с источником и закрепляйте его заданиями. Прогресс сохраняется на этом устройстве.</div></aside>
-    <main id="course-content">
-      <nav class="view-switcher" aria-label="Раздел курса">
-        <button type="button" data-show-view="course" aria-pressed="true">{ui_icon('book')} Курс</button>
-        <button type="button" data-show-view="cards" aria-pressed="false">{ui_icon('cards')} Карточки</button>
-        <button type="button" data-show-view="map" aria-pressed="false">{ui_icon('map')} Карта связей</button>
-        <button type="button" data-show-view="summary" aria-pressed="false">{ui_icon('scroll')} Конспект</button>
-      </nav>
-      <section id="course-view" class="app-view">{''.join(step_markup)}<div class="footer-nav"><button id="previous" type="button">← Назад</button><button id="next" type="button">Дальше →</button></div></section>
+    </header>
+    <div class="resume-card"><div><div class="nav-kicker" id="resume-label">СЛЕДУЮЩИЙ УРОК</div><h2 id="resume-title"></h2><p id="resume-description" class="muted"></p></div><button class="button-primary" type="button" data-show-view="course" data-resume>Начать обучение →</button></div>
+    <div class="course-toolbar"><div class="learning-status">{ui_icon('check')}<span>Выполнено заданий: <b id="solved-tasks" aria-live="polite">0 / {task_count}</b></span></div><span class="muted">Материал → Практика → Итог урока</span></div>
+    <section id="course-nav" aria-label="Программа курса"><div class="route-heading">{ui_icon('book')}<div><div class="nav-kicker">ПРОГРАММА КУРСА</div><strong>Уроки в порядке изучения</strong></div></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">Прогресс и личные заметки сохраняются на этом устройстве.</div></section>
+    </section>
+      <section id="course-view" class="app-view" hidden><div class="reader-topbar"><button type="button" data-show-view="overview" aria-label="Вернуться к обзору курса"><span aria-hidden="true">←</span> <span class="reader-back-label">Обзор курса</span></button><label><span class="reader-select-label">Перейти к уроку</span><select id="lesson-select" aria-label="Перейти к уроку">{''.join(select_options)}</select></label></div><div class="reader-progress"><div id="progress-label" class="muted"></div><div class="progress" role="progressbar" aria-label="Текущий урок" aria-valuemin="1"><span id="progress-fill"></span></div></div>{''.join(step_markup)}<div class="footer-nav"><button id="previous" type="button">← Предыдущий урок</button><button id="next" type="button">Следующий урок →</button></div></section>
       <section id="cards-view" class="app-view" hidden><h1>Карточки повторения</h1><div class="cards-grid">{cards_markup}</div></section>
       <section id="map-view" class="app-view" hidden><h1>Карта связей шагов</h1>{map_content}</section>
       <section id="summary-view" class="app-view" hidden><h1>Конспект</h1><p><button id="print-summary" class="no-print" type="button">Распечатать / сохранить в PDF</button></p>{summary_markup}</section>
     </main>
-  </div>
   <footer class="site-footer">Материал главы · Практические задания · Повторение</footer>
 </div>
 <script>
