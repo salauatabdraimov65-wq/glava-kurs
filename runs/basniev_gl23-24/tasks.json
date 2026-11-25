@@ -301,39 +301,6 @@
    "id": "t09"
   },
   {
-   "type": "single",
-   "kind": "recall",
-   "claim_ids": [
-    "basniev.reservoir_material_balance#c16",
-    "basniev.reservoir_material_balance#c17"
-   ],
-   "prompt": "Какова доля извлекаемых запасов, которую обычно добывают при естественном упругом режиме?",
-   "options": [
-    {
-     "id": "a",
-     "text": "2–5%"
-    },
-    {
-     "id": "b",
-     "text": "До 20%"
-    },
-    {
-     "id": "c",
-     "text": "50%"
-    },
-    {
-     "id": "d",
-     "text": "100%"
-    }
-   ],
-   "answer": "a",
-   "tolerance": null,
-   "unit": null,
-   "explanation": "При естественном упругом режиме обычно добывают лишь 2–5% извлекаемых запасов (стр. 477).",
-   "step_id": "basniev.reservoir_material_balance",
-   "id": "t10"
-  },
-  {
    "type": "multiple",
    "kind": "recall",
    "claim_ids": [
@@ -647,53 +614,6 @@
    "explanation": "Размерность коэффициента пьезопроводности — площадь, делённая на время (стр. 481).",
    "step_id": "basniev.pressure_diffusivity",
    "id": "t19"
-  },
-  {
-   "type": "multiple",
-   "kind": "understanding",
-   "claim_ids": [
-    "basniev.pressure_diffusivity#c2",
-    "basniev.pressure_diffusivity#c4",
-    "basniev.pressure_diffusivity#c6"
-   ],
-   "prompt": "Выберите все верные утверждения о коэффициенте пьезопроводности и уравнении давления.",
-   "options": [
-    {
-     "id": "a",
-     "text": "В декартовых координатах временная производная давления равна коэффициенту пьезопроводности, умноженному на сумму вторых пространственных производных давления.",
-     "misconception": null
-    },
-    {
-     "id": "b",
-     "text": "Коэффициент пьезопроводности равен k/(μβ*).",
-     "misconception": null
-    },
-    {
-     "id": "c",
-     "text": "Коэффициент κ характеризует скорость перераспределения пластового давления при неустановившейся фильтрации упругой жидкости в упругой пористой среде.",
-     "misconception": null
-    },
-    {
-     "id": "d",
-     "text": "Коэффициент κ задаёт постоянную скорость распространения давления, как скорость звука.",
-     "misconception": "misc.pressure_sound_speed"
-    },
-    {
-     "id": "e",
-     "text": "Коэффициент пьезопроводности равен μβ*/k.",
-     "misconception": null
-    }
-   ],
-   "answer": [
-    "a",
-    "b",
-    "c"
-   ],
-   "tolerance": null,
-   "unit": null,
-   "explanation": "Все три выбранных утверждения соответствуют записи уравнения, выражению для коэффициента и его физическому смыслу (стр. 480).",
-   "step_id": "basniev.pressure_diffusivity",
-   "id": "t20"
   },
   {
    "type": "order",

@@ -204,25 +204,6 @@
    "id": "t07"
   },
   {
-   "type": "gap",
-   "kind": "recall",
-   "claim_ids": [
-    "kuznetsov.reef_limestone_types#c8",
-    "kuznetsov.reef_limestone_types#c9"
-   ],
-   "prompt": "Крупнообломочные породы особенно развиты на {{1}} склонах рифовых массивов, где образуют предрифовые шлейфы. После цементации обломочные отложения превращаются в известняковые {{2}}.",
-   "options": [],
-   "answer": [
-    "крутых",
-    "брекчии и конгломераты"
-   ],
-   "tolerance": null,
-   "unit": null,
-   "explanation": "На крутых склонах формируются предрифовые шлейфы, а цементированные обломки становятся брекчиями и конгломератами (стр. 202).",
-   "step_id": "kuznetsov.reef_limestone_types",
-   "id": "t08"
-  },
-  {
    "type": "order",
    "kind": "understanding",
    "claim_ids": [
@@ -292,48 +273,6 @@
    "explanation": "Рельеф меняет гидродинамику и освещённость, а они определяют условия жизни организмов и седиментацию (стр. 203).",
    "step_id": "kuznetsov.facies_zoning",
    "id": "t10"
-  },
-  {
-   "type": "multiple",
-   "kind": "recall",
-   "claim_ids": [
-    "kuznetsov.dome_reef_zones#c2",
-    "kuznetsov.dome_reef_zones#c3",
-    "kuznetsov.dome_reef_zones#c4",
-    "kuznetsov.dome_reef_zones#c5"
-   ],
-   "prompt": "Какие утверждения о ядре куполовидного одиночного рифа верны?",
-   "options": [
-    {
-     "id": "a",
-     "text": "В ядре обычно присутствуют биогермные известняки с уплощёнными массивными и стелющимися колониями рифостроящих организмов.",
-     "misconception": null
-    },
-    {
-     "id": "b",
-     "text": "В ядре обычны мелкообломочные детритовые породы, в том числе известняковые песчаники и алевролиты.",
-     "misconception": null
-    },
-    {
-     "id": "c",
-     "text": "Склон рифа представлен ядром, а ядро — предрифовым шлейфом.",
-     "misconception": null
-    },
-    {
-     "id": "d",
-     "text": "Перекристаллизация и доломитизация не влияют на состав пород ядра.",
-     "misconception": null
-    }
-   ],
-   "answer": [
-    "a",
-    "b"
-   ],
-   "tolerance": null,
-   "unit": null,
-   "explanation": "Биогермные и мелкообломочные детритовые породы обычны в ядре, а склон представлен предрифовым шлейфом; вторичные процессы могут изменять породы ядра (стр. 203).",
-   "step_id": "kuznetsov.dome_reef_zones",
-   "id": "t11"
   },
   {
    "type": "gap",
@@ -490,44 +429,6 @@
    "explanation": "К первичным относятся пещеровидные пустоты в каналах, нишах и туннелях, а также возникающие при неполном срастании биогермов и колоний (стр. 205).",
    "step_id": "kuznetsov.primary_reef_pores",
    "id": "t17"
-  },
-  {
-   "type": "single",
-   "kind": "understanding",
-   "claim_ids": [
-    "kuznetsov.secondary_reef_pores#c1",
-    "kuznetsov.secondary_reef_pores#c2",
-    "kuznetsov.secondary_reef_pores#c3"
-   ],
-   "prompt": "Какое утверждение верно описывает изменение пористости рифа?",
-   "options": [
-    {
-     "id": "a",
-     "text": "Первичная пористость сохраняется практически полностью и в чистом виде.",
-     "misconception": "misc.reef_porosity_preserved"
-    },
-    {
-     "id": "b",
-     "text": "Первичная пористость сокращается уже при росте рифа, а большое значение приобретает вторичная пористость.",
-     "misconception": null
-    },
-    {
-     "id": "c",
-     "text": "Вторичная пористость в рифах не имеет существенного значения.",
-     "misconception": null
-    },
-    {
-     "id": "d",
-     "text": "Пористость и проницаемость рифа — одно и то же свойство.",
-     "misconception": "misc.porosity_eq_perm"
-    }
-   ],
-   "answer": "b",
-   "tolerance": null,
-   "unit": null,
-   "explanation": "Первичная пористость сокращается уже при росте рифа, тогда как вторичная, особенно каверновая, имеет большое значение (стр. 205).",
-   "step_id": "kuznetsov.secondary_reef_pores",
-   "id": "t18"
   },
   {
    "type": "multiple",
@@ -1355,43 +1256,6 @@
    "id": "t43"
   },
   {
-   "type": "single",
-   "kind": "recall",
-   "claim_ids": [
-    "kuznetsov.atoll_reef_exploration#c3",
-    "kuznetsov.atoll_reef_exploration#c8"
-   ],
-   "prompt": "Где целесообразно разместить первые скважины, если данные позволяют предполагать атолловидный риф?",
-   "options": [
-    {
-     "id": "a",
-     "text": "В центральной части рифа",
-     "misconception": null
-    },
-    {
-     "id": "b",
-     "text": "На периферии рифа",
-     "misconception": null
-    },
-    {
-     "id": "c",
-     "text": "Только за пределами рифа",
-     "misconception": null
-    },
-    {
-     "id": "d",
-     "text": "В центре и на периферии одновременно, без очередности",
-     "misconception": null
-    }
-   ],
-   "answer": "b",
-   "tolerance": null,
-   "unit": null,
-   "explanation": "Первые скважины рекомендуют размещать на периферии, а бурение в центре перенести на второй этап (стр. 221).",
-   "step_id": "kuznetsov.atoll_reef_exploration",
-   "id": "t44"
-  },
-  {
    "type": "multiple",
    "kind": "recall",
    "claim_ids": [
@@ -1603,25 +1467,6 @@
    "explanation": "В таблице для этих форм указаны многоствольная и кольцевая системы соответственно (стр. 215).",
    "step_id": "kuznetsov.reef_well_patterns",
    "id": "t51"
-  },
-  {
-   "type": "gap",
-   "kind": "understanding",
-   "claim_ids": [
-    "kuznetsov.reef_well_patterns#c3",
-    "kuznetsov.reef_well_patterns#c4"
-   ],
-   "prompt": "С одного основания можно пробурить несколько стволов с отклонениями от забоев на {{1}} м; такой куст скважин может охватить площадь до {{2}}.",
-   "options": [],
-   "answer": [
-    "400–500",
-    "1 км²"
-   ],
-   "tolerance": null,
-   "unit": null,
-   "explanation": "Указанные отклонения и площадь охвата куста приведены для такого способа разведки (стр. 222).",
-   "step_id": "kuznetsov.reef_well_patterns",
-   "id": "t52"
   }
  ]
 }
