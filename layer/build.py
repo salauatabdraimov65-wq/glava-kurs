@@ -22,7 +22,7 @@ from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from glava.chapter import ROOT, Chapter, chapters_config, find_quote, load_chapter, norm
+from glava.chapter import ROOT, Chapter, chapters_config, check_claim, find_quote, load_chapter, norm
 from glava.llm import ask_json, spent_usd
 from layer.units import COVERAGE_KIND, Unit, split_units
 
@@ -85,7 +85,15 @@ def fmt_units(us: list[Unit]) -> str:
 
 
 def locate_quote(ch: Chapter, by_id: dict[str, Unit], unit_id: str, quote: str) -> tuple[str | None, int | None]:
-    """Возвращает (unit_id, page) где цитата реально есть, или (None, None)."""
+    """Возвращает (unit_id, page) где цитата реально есть, или (None, None).
+    Окончательное решение — check_claim, той же функцией потом проверяется слой."""
+    uid, page = _locate(ch, by_id, unit_id, quote)
+    if uid and not check_claim(ch, quote, page)["ok"]:
+        return None, None
+    return uid, page
+
+
+def _locate(ch, by_id, unit_id, quote):
     q = norm(quote or "")
     if len(q) < 8:
         return None, None
@@ -115,6 +123,7 @@ def pass_a(ch: Chapter, units: list[Unit]):
         bad = []
         good = []
         for c in r.get("claims", []):
+            c["quote"] = (c.get("quote") or "").strip().rstrip("-‐‑ ").strip()
             uid, page = locate_quote(ch, by_id, c.get("unit_id", ""), c.get("quote", ""))
             if uid:
                 c["unit_id"], c["page_pdf"] = uid, page
@@ -129,6 +138,7 @@ def pass_a(ch: Chapter, units: list[Unit]):
                 f"Единицы:\n{fmt_units(chunk)}\n\nУтверждения с неверными цитатами:\n{json.dumps(bad, ensure_ascii=False)}",
                 tier="bulk", tag=f"A-fix:{ch.id}")
             for c in fix.get("claims", []):
+                c["quote"] = (c.get("quote") or "").strip().rstrip("-‐‑ ").strip()
                 uid, page = locate_quote(ch, by_id, c.get("unit_id", ""), c.get("quote", ""))
                 if uid:
                     c["unit_id"], c["page_pdf"] = uid, page

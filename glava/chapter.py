@@ -19,7 +19,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PAGE_RE = re.compile(r"<!-- page (\d+) -->")
 # Блок, вставленный моделью при распознавании: "----\n━━━ FORMAT N: ... ━━━ ... ----"
-FIG_NOTE_RE = re.compile(r"\n-{4}\s*\n(━━━ FORMAT.*?)\n-{4}\s*\n", re.S)
+FIG_NOTE_RE = re.compile(r"(?:^|\n)(?:-{4}[ \t]*\n)?[ \t]*(━━━ FORMAT.*?(?:\nKEYWORDS:[^\n]*|(?=\n-{4}[ \t]*(?:\n|$))|\Z))", re.S)
+SEP_RE = re.compile(r"^\s*-{4}\s*$", re.M)
 
 
 def materials_dir() -> Path:
@@ -72,7 +73,8 @@ def split_pages(md_text: str) -> dict[int, str]:
 
 def strip_figure_notes(text: str) -> tuple[str, list[str]]:
     notes = [m.group(1).strip() for m in FIG_NOTE_RE.finditer("\n" + text + "\n")]
-    clean = FIG_NOTE_RE.sub("\n\n", "\n" + text + "\n").strip("\n")
+    clean = FIG_NOTE_RE.sub("\n\n", "\n" + text + "\n")
+    clean = SEP_RE.sub("", clean).strip("\n")
     return clean, notes
 
 

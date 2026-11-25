@@ -31,7 +31,7 @@
    "page_pdf": 90,
    "excerpt": "Глава V",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -41,7 +41,7 @@
    "page_pdf": 90,
    "excerpt": "ПОСТРОЕНИЕ РАЗРЕЗОВ СКВАЖИН. ВЫДЕЛЕНИЕ КОЛЛЕКТОРОВ И ОЦЕНКА ИХ ПРОДУКТИВНОСТИ ПО ДАННЫМ МЕТОДОВ",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -51,7 +51,7 @@
    "page_pdf": 90,
    "excerpt": "Данные геофизических исследований поисковых, разведочных и эксплуатационных скважин на нефть и газ",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -61,7 +61,7 @@
    "page_pdf": 90,
    "excerpt": "Первая из перечисленных задач решается обычно методами качественной интерпретации путем применения признаков",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -71,7 +71,7 @@
    "page_pdf": 90,
    "excerpt": "По данным, полученным в эксплуатационных скважинах, кроме указанных задач, по геофизическим материалам",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -81,7 +81,7 @@
    "page_pdf": 90,
    "excerpt": "§ 17. УСЛОВИЯ ВСКРЫТИЯ РАЗРЕЗОВ СКВАЖИН И ИХ ВЛИЯНИЕ НА КОМПЛЕКС ГЕОФИЗИЧЕСКИХ",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -91,7 +91,7 @@
    "page_pdf": 90,
    "excerpt": "Для исследования скважин в данном районе и в пределах изучаемого геологического объекта",
    "node_ids": [
-    "latyshova.gis_course_goals"
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -101,8 +101,8 @@
    "page_pdf": 90,
    "excerpt": "Состав методов оптимального комплекса зависит от особенностей разреза (терригенный, карбонатный, гидрохимический и",
    "node_ids": [
-    "latyshova.gis_course_goals",
-    "latyshova.mud_and_borehole"
+    "latyshova.drilling_effects",
+    "latyshova.gis_tasks"
    ],
    "reason": null
   },
@@ -112,7 +112,7 @@
    "page_pdf": 90,
    "excerpt": "Глинистый раствор — наиболее широко применяемая в настоящее время промывочная жидкость, поэтому",
    "node_ids": [
-    "latyshova.mud_and_borehole"
+    "latyshova.drilling_effects"
    ],
    "reason": null
   },
@@ -122,7 +122,7 @@
    "page_pdf": 90,
    "excerpt": "К особенностям вскрытия разрезов на глинистом растворе относятся образование в межзерновых коллекторах",
    "node_ids": [
-    "latyshova.mud_and_borehole"
+    "latyshova.drilling_effects"
    ],
    "reason": null
   },
@@ -132,8 +132,8 @@
    "page_pdf": 90,
    "excerpt": "Проявление этих особенностей зависит от параметров раствора: водоотдачи, плотности, минерализации фильтрата. Водоотдача",
    "node_ids": [
-    "latyshova.filtration_and_pressure",
-    "latyshova.mud_and_borehole"
+    "latyshova.drilling_effects",
+    "latyshova.mud_filtration_pressure"
    ],
    "reason": null
   },
@@ -143,7 +143,7 @@
    "page_pdf": 90,
    "excerpt": "Плотность delta_p глинистого раствора определяет величину давления в скважине p и превышение",
    "node_ids": [
-    "latyshova.filtration_and_pressure"
+    "latyshova.mud_filtration_pressure"
    ],
    "reason": null
   },
@@ -153,7 +153,7 @@
    "page_pdf": 91,
    "excerpt": "Следовательно, увеличение delta_p раствора для промысловой геофизики означает примерно то же, что",
    "node_ids": [
-    "latyshova.filtration_and_pressure"
+    "latyshova.mud_filtration_pressure"
    ],
    "reason": null
   },
@@ -183,7 +183,7 @@
    "page_pdf": 91,
    "excerpt": "Техническая вода. Скважины, где большая часть разреза представлена плотными породами, бурятся на",
    "node_ids": [
-    "latyshova.water_based_drilling"
+    "latyshova.water_drilling"
    ],
    "reason": null
   },
@@ -193,7 +193,7 @@
    "page_pdf": 91,
    "excerpt": "Нефильтрующийся раствор. Последние годы при бурении скважин все чаще применяют в качестве",
    "node_ids": [
-    "latyshova.nonfiltering_drilling_fluids"
+    "latyshova.nonfiltering_mud"
    ],
    "reason": null
   },
@@ -203,7 +203,7 @@
    "page_pdf": 91,
    "excerpt": "§ 18. ТИПЫ ИЗУЧАЕМЫХ РАЗРЕЗОВ И КОЛЛЕКТОРОВ",
    "node_ids": [
-    "latyshova.section_and_pore_types"
+    "latyshova.section_pore_types"
    ],
    "reason": null
   },
@@ -213,7 +213,7 @@
    "page_pdf": 91,
    "excerpt": "В качестве основных типов разреза рассматривают терригенный, карбонатный и гидрохимический. Кроме того,",
    "node_ids": [
-    "latyshova.section_and_pore_types"
+    "latyshova.section_pore_types"
    ],
    "reason": null
   },
@@ -223,7 +223,7 @@
    "page_pdf": 91,
    "excerpt": "По морфологии порового пространства коллекторы разделяют на межзерновые, трещинные, кавернозно-трещинные и смешанные",
    "node_ids": [
-    "latyshova.section_and_pore_types"
+    "latyshova.section_pore_types"
    ],
    "reason": null
   },
@@ -233,7 +233,7 @@
    "page_pdf": 91,
    "excerpt": "С геофизической точки зрения в терригенном разрезе среди межзерновых коллекторов выделяют высокопористые",
    "node_ids": [
-    "latyshova.section_and_pore_types"
+    "latyshova.collector_variants"
    ],
    "reason": null
   },
@@ -243,7 +243,7 @@
    "page_pdf": 91,
    "excerpt": "Современный стандартный комплекс геофизических методов, используемых для изучения разрезов скважин при большом",
    "node_ids": [
-    "latyshova.methods_for_properties"
+    "latyshova.method_groups"
    ],
    "reason": null
   },
@@ -253,7 +253,7 @@
    "page_pdf": 92,
    "excerpt": "Метод СП дифференцирует терригенный разрез по относительной глинистости ηг, карбонатный – по",
    "node_ids": [
-    "latyshova.methods_for_properties"
+    "latyshova.method_groups"
    ],
    "reason": null
   },
@@ -263,7 +263,7 @@
    "page_pdf": 92,
    "excerpt": "Гамма-метод дифференцирует терригенный разрез по объемной глинистости kг, карбонатный - по объемному",
    "node_ids": [
-    "latyshova.methods_for_properties"
+    "latyshova.method_groups"
    ],
    "reason": null
   },
@@ -273,7 +273,7 @@
    "page_pdf": 92,
    "excerpt": "Оценку продуктивности можно осуществить фактически по всем методам комплекса, что вытекает из",
    "node_ids": [
-    "latyshova.methods_for_saturation"
+    "latyshova.productivity_methods"
    ],
    "reason": null
   },
@@ -284,7 +284,7 @@
    "excerpt": "Сфера применения каждого из перечисленных методов шире, чем это предусмотрено данной классификацией.",
    "node_ids": [
     "latyshova.combined_method_signals",
-    "latyshova.methods_for_saturation"
+    "latyshova.productivity_methods"
    ],
    "reason": null
   },
@@ -294,7 +294,7 @@
    "page_pdf": 92,
    "excerpt": "Таким образом, для надежного построения литологического разреза по геофизическим данным требуется соблюдение",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -304,7 +304,7 @@
    "page_pdf": 92,
    "excerpt": "Задачи",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -314,7 +314,7 @@
    "page_pdf": 92,
    "excerpt": "86. Диаграммы каких методов геофизических исследований необходимо иметь, чтобы дать заключение о",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -324,7 +324,7 @@
    "page_pdf": 92,
    "excerpt": "§ 19. СОСТАВЛЕНИЕ ЛИТОЛОГИЧЕСКОГО РАЗРЕЗА СКВАЖИНЫ ПО ДАННЫМ КОМПЛЕКСА ОСНОВНЫХ ГЕОФИЗИЧЕСКИХ МЕТОДОВ",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -334,7 +334,7 @@
    "page_pdf": 92,
    "excerpt": "Для построения разрезов скважин используется комплекс диаграмм различных геофизических методов. Построение разреза",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -344,7 +344,7 @@
    "page_pdf": 92,
    "excerpt": "Для определения границ и толщин пластов используются способы, рассмотренные выше, по диаграммам",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -354,7 +354,7 @@
    "page_pdf": 92,
    "excerpt": "При комплексной геофизической интерпретации необходимо учитывать, что существующие методы дают физические признаки",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.build_lithology_column"
    ],
    "reason": null
   },
@@ -364,7 +364,7 @@
    "page_pdf": 92,
    "excerpt": "Для оценки наиболее распространенных осадочных пород можно использовать ориентировочные данные (табл. 21).",
    "node_ids": [
-    "latyshova.build_lithological_column"
+    "latyshova.rock_signs_limits"
    ],
    "reason": null
   },
@@ -382,7 +382,7 @@
    "page_pdf": 93,
    "excerpt": "Основные признаки некоторых осадочных пород и коллекторов по данным геофизических методов (глинистый",
    "node_ids": [
-    "latyshova.clay_and_saturated_reservoirs"
+    "latyshova.rock_table_collectors"
    ],
    "reason": null
   },
@@ -392,8 +392,8 @@
    "page_pdf": 93,
    "excerpt": "Породы и коллекторы Методы сопротивления Метод СП Кавернограмма Микрозонды Гамма-метод Нейтронные методы",
    "node_ids": [
-    "latyshova.carbonate_and_salt_signatures",
-    "latyshova.clay_and_saturated_reservoirs"
+    "latyshova.rock_table_collectors",
+    "latyshova.rock_table_dense"
    ],
    "reason": null
   },
@@ -403,7 +403,7 @@
    "page_pdf": 94,
    "excerpt": "странства установить трудно из-за глубокого проникновения. Могут обладать как межзерновой, так и",
    "node_ids": [
-    "latyshova.carbonate_and_salt_signatures"
+    "latyshova.rock_table_dense"
    ],
    "reason": null
   },
@@ -413,7 +413,7 @@
    "page_pdf": 95,
    "excerpt": "При этом, если содержание глинистого материала велико, то могут резко измениться показания",
    "node_ids": [
-    "latyshova.complex_section_interpretation"
+    "latyshova.rock_signs_limits"
    ],
    "reason": null
   },
@@ -423,7 +423,7 @@
    "page_pdf": 95,
    "excerpt": "На основании табл. 21 приходим к выводу, что в некоторых случаях, когда",
    "node_ids": [
-    "latyshova.complex_section_interpretation"
+    "latyshova.lithology_method_choice"
    ],
    "reason": null
   },
@@ -441,7 +441,7 @@
    "page_pdf": 95,
    "excerpt": "Однако, если в разрезе встречаются как терригенные, так и карбонатные породы с",
    "node_ids": [
-    "latyshova.complex_section_interpretation"
+    "latyshova.lithology_method_choice"
    ],
    "reason": null
   },
@@ -451,7 +451,7 @@
    "page_pdf": 95,
    "excerpt": "При построении разрезов скважин, вскрывающих гидрохимические отложения, большую роль играют методы рассеянного",
    "node_ids": [
-    "latyshova.complex_section_interpretation"
+    "latyshova.lithology_method_choice"
    ],
    "reason": null
   },
@@ -461,7 +461,7 @@
    "page_pdf": 95,
    "excerpt": "Задачи",
    "node_ids": [
-    "latyshova.complex_section_interpretation"
+    "latyshova.lithology_method_choice"
    ],
    "reason": null
   },
@@ -471,7 +471,7 @@
    "page_pdf": 95,
    "excerpt": "90. Построить литологическую колонку на основании диаграмм комплекса методов, приведенных на рис.",
    "node_ids": [
-    "latyshova.complex_section_interpretation"
+    "latyshova.lithology_method_choice"
    ],
    "reason": null
   },
@@ -481,7 +481,7 @@
    "page_pdf": 96,
    "excerpt": "§ 20. ВЫДЕЛЕНИЕ, ОЦЕНКА ХАРАКТЕРА НАСЫЩЕНИЯ И ОПРЕДЕЛЕНИЕ ЭФФЕКТИВНОЙ ТОЛЩИНЫ МЕЖЗЕРНОВЫХ КОЛЛЕКТОРОВ",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.direct_collector_signs"
    ],
    "reason": null
   },
@@ -491,7 +491,7 @@
    "page_pdf": 96,
    "excerpt": "Терригенный разрез",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.direct_collector_signs"
    ],
    "reason": null
   },
@@ -501,7 +501,7 @@
    "page_pdf": 96,
    "excerpt": "Выделение коллектора. Предпосылкой выделения коллектора геофизическими методами [3, 5] является его отличие",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.direct_collector_signs"
    ],
    "reason": null
   },
@@ -511,7 +511,7 @@
    "page_pdf": 96,
    "excerpt": "Прямые признаки указывают на возможность фильтрации в порах коллектора воды, нефти, газа",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.direct_collector_signs"
    ],
    "reason": null
   },
@@ -521,7 +521,8 @@
    "page_pdf": 96,
    "excerpt": "При ухудшении качества глинистого раствора с увеличением его водоотдачи возрастает глинистая корка",
    "node_ids": [
-    "latyshova.missing_reservoir_signs"
+    "latyshova.direct_collector_signs",
+    "latyshova.radial_resistance_gradient"
    ],
    "reason": null
   },
@@ -531,7 +532,7 @@
    "page_pdf": 96,
    "excerpt": "Примеры выделения межзерновых коллекторов при бурении на качественном глинистом растворе приведены на",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.direct_collector_signs"
    ],
    "reason": null
   },
@@ -541,7 +542,7 @@
    "page_pdf": 96,
    "excerpt": "Наличие радиального градиента сопротивления (повышающего или понижающего проникновения фильтрата глинистого раствора) устанавливают",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.radial_resistance_gradient"
    ],
    "reason": null
   },
@@ -551,7 +552,7 @@
    "page_pdf": 96,
    "excerpt": "Радиальное изменение сопротивления четко устанавливают визуально по диаграммам экранированных зондов (микро- и",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.radial_resistance_gradient"
    ],
    "reason": null
   },
@@ -561,7 +562,7 @@
    "page_pdf": 96,
    "excerpt": "Отсутствие заметного градиента сопротивления не является признаком, отрицающим коллектор. Этот случай может",
    "node_ids": [
-    "latyshova.direct_reservoir_signs"
+    "latyshova.radial_resistance_gradient"
    ],
    "reason": null
   },
@@ -571,7 +572,7 @@
    "page_pdf": 96,
    "excerpt": "Когда выделение коллектора на основании отдельных измерений по какой-либо из упомянутых выше",
    "node_ids": [
-    "latyshova.missing_reservoir_signs"
+    "latyshova.dynamic_indirect_signs"
    ],
    "reason": null
   },
@@ -581,7 +582,7 @@
    "page_pdf": 96,
    "excerpt": "Кроме прямых качественных, используются также косвенные количественные признаки коллекторов.",
    "node_ids": [
-    "latyshova.critical_permeability"
+    "latyshova.dynamic_indirect_signs"
    ],
    "reason": null
   },
@@ -591,7 +592,7 @@
    "page_pdf": 96,
    "excerpt": "К ним относятся критические значения проницаемости (kₚₚ), пористости (kₙ), глинистости (Cᵣₓ, kᵣₓ,",
    "node_ids": [
-    "latyshova.critical_permeability"
+    "latyshova.dynamic_indirect_signs"
    ],
    "reason": null
   },
@@ -621,7 +622,7 @@
    "page_pdf": 96,
    "excerpt": "1. По величине минимального рентабельного дебита Q (в м³/сут) определяют коэффициент продуктивности",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.calculate_permeability_limit"
    ],
    "reason": null
   },
@@ -631,7 +632,7 @@
    "page_pdf": 96,
    "excerpt": "η = Qₙ/Δphₙφ,",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.calculate_permeability_limit"
    ],
    "reason": null
   },
@@ -641,7 +642,7 @@
    "page_pdf": 96,
    "excerpt": "где Δp — депрессия в Па, при которой получен дебит Qₙ; h",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.calculate_permeability_limit"
    ],
    "reason": null
   },
@@ -651,7 +652,7 @@
    "page_pdf": 97,
    "excerpt": "2. Зная η, рассчитывают соответствующее значение",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.calculate_permeability_limit"
    ],
    "reason": null
   },
@@ -661,7 +662,7 @@
    "page_pdf": 97,
    "excerpt": "k^ _ text пр = ( mu eta/2 pi) ln(R_ text к",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.calculate_permeability_limit"
    ],
    "reason": null
   },
@@ -671,7 +672,7 @@
    "page_pdf": 97,
    "excerpt": "где rс, Rк - соответственно радиусы скважины и контура питания скважины; μ",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.calculate_permeability_limit"
    ],
    "reason": null
   },
@@ -681,7 +682,7 @@
    "page_pdf": 97,
    "excerpt": "Далее для определения эффективной толщины могут использоваться два пути - либо методы",
    "node_ids": [
-    "latyshova.log_thresholds_and_thickness"
+    "latyshova.effective_thickness_cutoffs"
    ],
    "reason": null
   },
@@ -691,7 +692,7 @@
    "page_pdf": 97,
    "excerpt": "3. При использовании методов пористости требуется иметь корреляционные связи вида ΔJнт =",
    "node_ids": [
-    "latyshova.log_thresholds_and_thickness"
+    "latyshova.effective_thickness_cutoffs"
    ],
    "reason": null
   },
@@ -701,7 +702,7 @@
    "page_pdf": 97,
    "excerpt": "4. Далее, используя упоминавшиеся ранее связи вида ΔJнт = f (kн), ΔТ",
    "node_ids": [
-    "latyshova.log_thresholds_and_thickness"
+    "latyshova.effective_thickness_cutoffs"
    ],
    "reason": null
   },
@@ -711,7 +712,7 @@
    "page_pdf": 97,
    "excerpt": "5. Отложив на диаграммах соответствующих методов ΔJнт , ΔТ , αСП ,",
    "node_ids": [
-    "latyshova.log_thresholds_and_thickness"
+    "latyshova.effective_thickness_cutoffs"
    ],
    "reason": null
   },
@@ -721,7 +722,7 @@
    "page_pdf": 97,
    "excerpt": "Примечание. В терригенном разрезе, где пористость и проницаемость коллекторов зависят от глинистости,",
    "node_ids": [
-    "latyshova.log_thresholds_and_thickness"
+    "latyshova.effective_thickness_cutoffs"
    ],
    "reason": null
   },
@@ -741,7 +742,7 @@
    "page_pdf": 97,
    "excerpt": "Чистые, высокопористые межзерновые коллекторы характеризуются высокими значениями коэффициентов нефте-, газонасыщения. В этом",
    "node_ids": [
-    "latyshova.compare_resistance_porosity"
+    "latyshova.resistance_saturation_limits"
    ],
    "reason": null
   },
@@ -751,7 +752,8 @@
    "page_pdf": 97,
    "excerpt": "В межзерновых коллекторах при больших изменениях пористости, а следовательно, и значений ρвн",
    "node_ids": [
-    "latyshova.compare_resistance_porosity"
+    "latyshova.porosity_resistance_comparison",
+    "latyshova.resistance_saturation_limits"
    ],
    "reason": null
   },
@@ -761,8 +763,7 @@
    "page_pdf": 97,
    "excerpt": "Все три операции основаны на сравнении значений удельного сопротивления пласта с ρвн,",
    "node_ids": [
-    "latyshova.compare_resistance_porosity",
-    "latyshova.saturation_crossplot"
+    "latyshova.porosity_resistance_comparison"
    ],
    "reason": null
   },
@@ -772,7 +773,7 @@
    "page_pdf": 97,
    "excerpt": "Пример сопоставлений первых двух способов приведен на рис.69 [3]. Поле зависимостей ρн",
    "node_ids": [
-    "latyshova.saturation_crossplot"
+    "latyshova.porosity_resistance_comparison"
    ],
    "reason": null
   },
@@ -782,7 +783,7 @@
    "page_pdf": 97,
    "excerpt": "¹ Данный этап иногда минуют, получая корреляционную связь Qн непосредственно с kпр",
    "node_ids": [
-    "latyshova.calculate_permeability_threshold"
+    "latyshova.critical_permeability"
    ],
    "reason": null
   },
@@ -792,7 +793,7 @@
    "page_pdf": 98,
    "excerpt": "Рис.69. Кривые зависимости ρn = f(kn), используемые для оценки продуктивности коллекторов. Шифр",
    "node_ids": [
-    "latyshova.saturation_crossplot"
+    "latyshova.porosity_resistance_comparison"
    ],
    "reason": null
   },
@@ -802,7 +803,7 @@
    "page_pdf": 98,
    "excerpt": "В области коллекторов расположено семейство графиков ρn = f(kn) для различных значений",
    "node_ids": [
-    "latyshova.saturation_crossplot"
+    "latyshova.porosity_resistance_comparison"
    ],
    "reason": null
   },
@@ -812,7 +813,7 @@
    "page_pdf": 98,
    "excerpt": "k_n = (k_n - k_ n,ca ) / (1 - k_ n,ca",
    "node_ids": [
-    "latyshova.saturation_crossplot"
+    "latyshova.porosity_resistance_comparison"
    ],
    "reason": null
   },
@@ -822,7 +823,8 @@
    "page_pdf": 98,
    "excerpt": "изменяющегося от 0 до 1. Значение kn = 0 соответствует предельно нефтегазонасыщенному",
    "node_ids": [
-    "latyshova.saturation_crossplot"
+    "latyshova.porosity_resistance_comparison",
+    "latyshova.saturation_graph_regions"
    ],
    "reason": null
   },
@@ -832,7 +834,7 @@
    "page_pdf": 98,
    "excerpt": "Пример 46. Определить характер насыщения коллектора в разрезе нефтяного месторождения, для которого",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.saturation_graph_regions"
    ],
    "reason": null
   },
@@ -842,7 +844,7 @@
    "page_pdf": 98,
    "excerpt": "Пример 47. Установить, чем представлена порода, имеющая ρn = 10 Ом·м, при",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.saturation_graph_regions"
    ],
    "reason": null
   },
@@ -852,7 +854,7 @@
    "page_pdf": 98,
    "excerpt": "Для ускорения процесса оценки характера насыщения графики рис. 69 могут быть использованы",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.saturation_graph_regions"
    ],
    "reason": null
   },
@@ -862,7 +864,7 @@
    "page_pdf": 98,
    "excerpt": "Методы нормализации или наложения диаграмм, которые основаны на обнаружении тех же эффектов,",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.saturation_graph_regions"
    ],
    "reason": null
   },
@@ -872,7 +874,7 @@
    "page_pdf": 98,
    "excerpt": "Кроме рассмотренного выше способа, для определения характера насыщения можно использовать значения параметра",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.saturation_cutoffs"
    ],
    "reason": null
   },
@@ -882,7 +884,7 @@
    "page_pdf": 99,
    "excerpt": "Различают две разновидности критических значений ( P_ n ) и ( k_",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.saturation_cutoffs"
    ],
    "reason": null
   },
@@ -892,7 +894,7 @@
    "page_pdf": 99,
    "excerpt": "Существуют два способа установления критических значений ( P_ n ) , (",
    "node_ids": [
-    "latyshova.productivity_cutoff_values"
+    "latyshova.derive_saturation_cutoffs"
    ],
    "reason": null
   },
@@ -902,7 +904,7 @@
    "page_pdf": 99,
    "excerpt": "Пример 48. Установить критические параметры для выделения продуктивных коллекторов межзерно-вого типа с",
    "node_ids": [
-    "latyshova.phase_flow_thresholds"
+    "latyshova.derive_saturation_cutoffs"
    ],
    "reason": null
   },
@@ -912,7 +914,8 @@
    "page_pdf": 99,
    "excerpt": "В этом случае необходимо иметь одну зависимость ( P_ n = f(k_",
    "node_ids": [
-    "latyshova.phase_flow_thresholds"
+    "latyshova.derive_saturation_cutoffs",
+    "latyshova.phase_flow_ranges"
    ],
    "reason": null
   },
@@ -922,7 +925,7 @@
    "page_pdf": 99,
    "excerpt": "Рис.70. Зависимости ( k_ mathrm op,n = f(k_n) ) и ( k_",
    "node_ids": [
-    "latyshova.phase_flow_thresholds"
+    "latyshova.phase_flow_ranges"
    ],
    "reason": null
   },
@@ -930,53 +933,29 @@
    "unit_id": "p099.06",
    "kind": "paragraph",
    "page_pdf": 99,
-   "excerpt": "━━━ FORMAT 13: LEGEND / УСЛОВНЫЕ ОБОЗНАЧЕНИЯ ━━━ Под нижней панелью расположены",
-   "node_ids": [],
-   "reason": "Служебное описание нечитаемых условных знаков; содержательной мысли автора о свойствах или интерпретации нет."
+   "excerpt": "Критические значения ( k_ n ^ ) и ( k_ n ^",
+   "node_ids": [
+    "latyshova.phase_flow_ranges"
+   ],
+   "reason": null
   },
   {
    "unit_id": "p099.07",
    "kind": "paragraph",
    "page_pdf": 99,
-   "excerpt": "Литология/физический смысл штриховок не определяется без полной легенды.",
-   "node_ids": [],
-   "reason": "Метакомментарий о невозможности определить смысл штриховок без полной легенды, а не утверждение учебного курса."
+   "excerpt": "Величинам ( k_ n ^ ) , ( k_ n ^ )",
+   "node_ids": [
+    "latyshova.phase_flow_ranges"
+   ],
+   "reason": null
   },
   {
    "unit_id": "p099.08",
    "kind": "paragraph",
    "page_pdf": 99,
-   "excerpt": "KEYWORDS: номограмма, палетка, зона проникновения, сопротивление, R, каротаж, петрофизика, штриховка, график зависимости,",
-   "node_ids": [],
-   "reason": "Список ключевых слов, не содержащий самостоятельного утверждения."
-  },
-  {
-   "unit_id": "p099.09",
-   "kind": "paragraph",
-   "page_pdf": 99,
-   "excerpt": "Критические значения ( k_ n ^ ) и ( k_ n ^",
-   "node_ids": [
-    "latyshova.phase_flow_thresholds"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p099.10",
-   "kind": "paragraph",
-   "page_pdf": 99,
-   "excerpt": "Величинам ( k_ n ^ ) , ( k_ n ^ )",
-   "node_ids": [
-    "latyshova.phase_flow_thresholds"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p099.11",
-   "kind": "paragraph",
-   "page_pdf": 99,
    "excerpt": "Пример 49. Определить критические значения параметров ( k_ n ) и (",
    "node_ids": [
-    "latyshova.phase_flow_thresholds"
+    "latyshova.phase_flow_ranges"
    ],
    "reason": null
   },
@@ -986,7 +965,7 @@
    "page_pdf": 100,
    "excerpt": "Пример 50. Оценить характер насыщения чистого коллектора ( ( alpha_ СП =",
    "node_ids": [
-    "latyshova.phase_flow_thresholds"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -996,7 +975,7 @@
    "page_pdf": 100,
    "excerpt": "Пример 51. Оценить критические значения ( P_ n ) и ( k_",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -1006,7 +985,7 @@
    "page_pdf": 100,
    "excerpt": "В этом случае зависимости ( P_ n =f(k_ n ) ) и",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -1016,7 +995,7 @@
    "page_pdf": 100,
    "excerpt": "Если для оценки характера насыщения чистого коллектора достаточно знать величины ( rho_",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -1025,20 +1004,16 @@
    "kind": "table",
    "page_pdf": 100,
    "excerpt": "Таблица 22",
-   "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Только заголовок таблицы 22; содержимое таблицы приведено в p100.07."
   },
   {
    "unit_id": "p100.06",
    "kind": "paragraph",
    "page_pdf": 100,
    "excerpt": "Данные к примеру 52",
-   "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Только подпись «Данные к примеру 52», без самостоятельного утверждения."
   },
   {
    "unit_id": "p100.07",
@@ -1046,7 +1021,7 @@
    "page_pdf": 100,
    "excerpt": "( a_ CII ) ( k_ n ^ , % ) (",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -1056,7 +1031,7 @@
    "page_pdf": 100,
    "excerpt": "Пример 52. Определить критические значения параметров ( k_ n ) и (",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -1066,7 +1041,7 @@
    "page_pdf": 100,
    "excerpt": "Значения ( k_ n,sp ) и ( P_ n ) установлены для",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_thresholds"
    ],
    "reason": null
   },
@@ -1076,7 +1051,7 @@
    "page_pdf": 100,
    "excerpt": "Пример 53. Установить характер насыщения коллектора, используя зависимости, приведенные на рис. 7,",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1086,7 +1061,7 @@
    "page_pdf": 100,
    "excerpt": "Задачи",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1096,7 +1071,7 @@
    "page_pdf": 100,
    "excerpt": "92. Определить характер насыщения коллекторов, выделяемых на основании комплекса диаграмм, приведенных на",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1106,7 +1081,7 @@
    "page_pdf": 100,
    "excerpt": "93. Определить характер насыщения коллекторов по диаграммам, представленным на рис. 14 и",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1116,7 +1091,7 @@
    "page_pdf": 100,
    "excerpt": "94. Определить характер насыщения коллекторов, выделяемых на основании диаграмм рис. 58 и",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1126,7 +1101,7 @@
    "page_pdf": 100,
    "excerpt": "вод и какую роль она играет при решении поставленной задачи.",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1136,7 +1111,7 @@
    "page_pdf": 100,
    "excerpt": "95. Установить характер насыщения тонкослоистого коллектора, выделяемого на основании диаграмм, приведенных на",
    "node_ids": [
-    "latyshova.clay_dependent_cutoffs"
+    "latyshova.clay_saturation_examples"
    ],
    "reason": null
   },
@@ -1145,10 +1120,8 @@
    "kind": "paragraph",
    "page_pdf": 100,
    "excerpt": "Определение эффективной толщины ( h_ phi ) продуктивного коллектора.",
-   "node_ids": [
-    "latyshova.productive_interval_thickness"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Заголовок раздела, не содержащий самостоятельного утверждения."
   },
   {
    "unit_id": "p100.18",
@@ -1186,7 +1159,7 @@
    "page_pdf": 101,
    "excerpt": "При наличии переходной зоны ВНК выделяют следующим образом: 1) по диаграммам больших",
    "node_ids": [
-    "latyshova.fluid_contact_locations"
+    "latyshova.fluid_contact_position"
    ],
    "reason": null
   },
@@ -1196,7 +1169,7 @@
    "page_pdf": 101,
    "excerpt": "Положение ГНК устанавливают по диаграммам стационарных нейтронных методов, полученным при повторных замерах",
    "node_ids": [
-    "latyshova.fluid_contact_locations"
+    "latyshova.fluid_contact_position"
    ],
    "reason": null
   },
@@ -1205,20 +1178,16 @@
    "kind": "figure",
    "page_pdf": 101,
    "excerpt": "Рис.71. Пример определения газонефтяного контакта по диаграммам НГМ в комплексе с данными",
-   "node_ids": [
-    "latyshova.fluid_contact_locations"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Подпись к рисунку сообщает, что изображён пример определения ГНК; содержательные методы описаны в тексте."
   },
   {
    "unit_id": "p101.05",
    "kind": "paragraph",
    "page_pdf": 101,
    "excerpt": "1 – глины; 2 – коллекторы; 3 – нефть; 4 - газ",
-   "node_ids": [
-    "latyshova.fluid_contact_locations"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Условные обозначения к рисунку, а не самостоятельное утверждение курса."
   },
   {
    "unit_id": "p101.06",
@@ -1226,7 +1195,7 @@
    "page_pdf": 101,
    "excerpt": "Время, необходимое для полного расформирования зоны тем больше, чем меньше проницаемость коллектора",
    "node_ids": [
-    "latyshova.fluid_contact_locations"
+    "latyshova.fluid_contact_position"
    ],
    "reason": null
   },
@@ -1236,8 +1205,7 @@
    "page_pdf": 101,
    "excerpt": "3. В мощном пласте коллектора, однородном по характеру насыщения, но содержащем прослои",
    "node_ids": [
-    "latyshova.exclude_nonreservoir_layers",
-    "latyshova.thin_bed_conductivity"
+    "latyshova.noncollector_interbeds"
    ],
    "reason": null
   },
@@ -1247,7 +1215,7 @@
    "page_pdf": 102,
    "excerpt": "a. Определяют удельное сопротивление пачки ( rho_ n ) по диаграммам БЭЗ",
    "node_ids": [
-    "latyshova.thin_bed_conductivity"
+    "latyshova.thin_bed_resistivity"
    ],
    "reason": null
   },
@@ -1257,7 +1225,7 @@
    "page_pdf": 102,
    "excerpt": "[ 1 / rho_ mathrm n = chi_ mathrm cn / rho_",
    "node_ids": [
-    "latyshova.thin_bed_conductivity"
+    "latyshova.thin_bed_resistivity"
    ],
    "reason": null
   },
@@ -1267,7 +1235,7 @@
    "page_pdf": 102,
    "excerpt": "Далее вычисляют эффективную толщину пачки",
    "node_ids": [
-    "latyshova.thin_bed_conductivity"
+    "latyshova.thin_bed_resistivity"
    ],
    "reason": null
   },
@@ -1277,7 +1245,7 @@
    "page_pdf": 102,
    "excerpt": "[ mathrm h _ mathrm sp Sigma = mathrm h _ mathrm",
    "node_ids": [
-    "latyshova.thin_bed_conductivity"
+    "latyshova.thin_bed_resistivity"
    ],
    "reason": null
   },
@@ -1287,7 +1255,7 @@
    "page_pdf": 102,
    "excerpt": "В качестве ( rho_ cn ) берут обычно удельное сопротивление глин, вмещающих",
    "node_ids": [
-    "latyshova.thin_bed_conductivity"
+    "latyshova.thin_bed_resistivity"
    ],
    "reason": null
   },
@@ -1297,7 +1265,7 @@
    "page_pdf": 102,
    "excerpt": "б. Определяют ( chi_ cn ) по кривым ( alpha_ mathrm CII",
    "node_ids": [
-    "latyshova.sp_chart_for_clay"
+    "latyshova.thin_bed_sp"
    ],
    "reason": null
   },
@@ -1306,26 +1274,26 @@
    "kind": "figure",
    "page_pdf": 102,
    "excerpt": "Рис.72. Кривые зависимости ( alpha_ mathrm CII = f( chi_ mathrm cn",
-   "node_ids": [
-    "latyshova.sp_chart_for_clay"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Подпись к графику с параметрами построения; способ применения кривых изложен в p102.06 и p102.08."
   },
   {
    "unit_id": "p102.08",
    "kind": "paragraph",
    "page_pdf": 102,
-   "excerpt": "---- ━━━ FORMAT 7: NOMOGRAM / ПАЛЕТКА ━━━ Название палетки не подписано",
-   "node_ids": [],
-   "reason": "Указано только, что название палетки не подписано; содержательной мысли для курса нет."
+   "excerpt": "В качестве ( alpha_ CII ) берут отношение среднего значения аномалии СП",
+   "node_ids": [
+    "latyshova.thin_bed_sp"
+   ],
+   "reason": null
   },
   {
    "unit_id": "p102.09",
    "kind": "paragraph",
    "page_pdf": 102,
-   "excerpt": "Оси: - Ось абсцисс: x_гл (обозначено как \"хтл\" — подпись частично неразборчива,",
+   "excerpt": "в. В пачке, где присутствуют тонкие прослои неколлектора двух типов (глинистые и",
    "node_ids": [
-    "latyshova.sp_chart_for_clay"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1333,9 +1301,9 @@
    "unit_id": "p102.10",
    "kind": "paragraph",
    "page_pdf": 102,
-   "excerpt": "Семейство кривых: параметр семейства подписан значениями (сверху вниз по порядку линий-указателей): 20,",
+   "excerpt": "[ 1 / rho_ mathrm nav ^ mathrm sp = chi_ mathrm",
    "node_ids": [
-    "latyshova.sp_chart_for_clay"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1343,97 +1311,29 @@
    "unit_id": "p102.11",
    "kind": "paragraph",
    "page_pdf": 102,
-   "excerpt": "Все кривые исходят из точки на оси ординат при x=0 (значение около",
+   "excerpt": "где ( chi_ cn ) относительное содержание по толщине плотных прослоев в",
    "node_ids": [
-    "latyshova.sp_chart_for_clay"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
   {
    "unit_id": "p102.12",
-   "kind": "paragraph",
+   "kind": "heading",
    "page_pdf": 102,
-   "excerpt": "Порядок процедуры считывания: по оси абсцисс задаётся значение x_гл, далее по кривой,",
+   "excerpt": "Задачи",
    "node_ids": [
-    "latyshova.sp_chart_for_clay"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
   {
    "unit_id": "p102.13",
-   "kind": "paragraph",
-   "page_pdf": 102,
-   "excerpt": "Опорные точки для крайних кривых (сняты с графика, ориентировочно): - Кривая \"20\":",
-   "node_ids": [
-    "latyshova.sp_chart_for_clay"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p102.14",
-   "kind": "paragraph",
-   "page_pdf": 102,
-   "excerpt": "KEYWORDS: αпс, палетка, номограмма, семейство кривых, относительная амплитуда ПС, интерпретационный график",
-   "node_ids": [],
-   "reason": "Это перечень ключевых слов, а не авторское утверждение."
-  },
-  {
-   "unit_id": "p102.15",
-   "kind": "paragraph",
-   "page_pdf": 102,
-   "excerpt": "В качестве ( alpha_ CII ) берут отношение среднего значения аномалии СП",
-   "node_ids": [
-    "latyshova.sp_chart_for_clay"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p102.16",
-   "kind": "paragraph",
-   "page_pdf": 102,
-   "excerpt": "в. В пачке, где присутствуют тонкие прослои неколлектора двух типов (глинистые и",
-   "node_ids": [
-    "latyshova.dense_beds_in_packs"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p102.17",
-   "kind": "paragraph",
-   "page_pdf": 102,
-   "excerpt": "[ 1 / rho_ mathrm nav ^ mathrm sp = chi_ mathrm",
-   "node_ids": [
-    "latyshova.dense_beds_in_packs"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p102.18",
-   "kind": "paragraph",
-   "page_pdf": 102,
-   "excerpt": "где ( chi_ cn ) относительное содержание по толщине плотных прослоев в",
-   "node_ids": [
-    "latyshova.dense_beds_in_packs"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p102.19",
-   "kind": "heading",
-   "page_pdf": 102,
-   "excerpt": "Задачи",
-   "node_ids": [
-    "latyshova.dense_beds_in_packs"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p102.20",
    "kind": "task",
    "page_pdf": 102,
    "excerpt": "96. Привести примеры сложных продуктивных пластов с прослоями неколлекторов всех типов, пользуясь",
    "node_ids": [
-    "latyshova.dense_beds_in_packs"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1443,7 +1343,7 @@
    "page_pdf": 103,
    "excerpt": "эффективную толщину пласта, если общая толщина пачки 28м.",
    "node_ids": [
-    "latyshova.dense_beds_in_packs"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1453,7 +1353,7 @@
    "page_pdf": 104,
    "excerpt": "Рис.73. Диаграммы комплекса геофизических методов по участку разреза хадумского газоносного горизонта: 00'",
    "node_ids": [
-    "latyshova.dense_beds_in_packs"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1463,7 +1363,7 @@
    "page_pdf": 104,
    "excerpt": "100. Определить эффективную толщину 18-метровой толщи продуктивного коллектора, содержащего прослои глин и",
    "node_ids": [
-    "latyshova.dense_beds_in_packs"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1473,7 +1373,7 @@
    "page_pdf": 104,
    "excerpt": "Рис.74. Материалы ГИС и ГДК для выделения в терригенном разрезе продуктивных коллекторов:",
    "node_ids": [
-    "latyshova.dense_beds_in_packs"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1483,7 +1383,7 @@
    "page_pdf": 104,
    "excerpt": "Среднее удельное сопротивление пачки 7,3 Ом·м. По данным керновых определений плотные прослои",
    "node_ids": [
-    "latyshova.dense_beds_in_packs"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1492,10 +1392,8 @@
    "kind": "paragraph",
    "page_pdf": 104,
    "excerpt": "101. OchoBbAcb Ha pe3yIbTaTax peHHeHH npeIbIyIeH 3aJaH, BbUHcJIHTb, KaKa OIIb6a B OIIpeJIeHHN",
-   "node_ids": [
-    "latyshova.dense_beds_in_packs"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "НЕ ПОКРЫТО: утверждения не извлечены"
   },
   {
    "unit_id": "p105.01",
@@ -1503,7 +1401,7 @@
    "page_pdf": 105,
    "excerpt": "103. При граничном значении ( k_ n,гр = 9 % ) ,",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1513,7 +1411,7 @@
    "page_pdf": 105,
    "excerpt": "Рис.75. Диаграммы ГИС для выделения в терригенном разрезе газоносных коллекторов: ( Delta",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.mixed_thin_interbeds"
    ],
    "reason": null
   },
@@ -1523,7 +1421,7 @@
    "page_pdf": 105,
    "excerpt": "Карбонатный разрез",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.carbonate_collector_difficulties"
    ],
    "reason": null
   },
@@ -1533,7 +1431,7 @@
    "page_pdf": 105,
    "excerpt": "Основные принципы выделения и оценки характера насыщения межзерновых карбонатных коллекторов те же,",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.carbonate_collector_difficulties"
    ],
    "reason": null
   },
@@ -1543,99 +1441,17 @@
    "page_pdf": 105,
    "excerpt": "Первая особенность карбонатного разреза обусловливает формирование в карбонатных межзерновых коллекторах более глубокого",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.carbonate_collector_difficulties"
    ],
    "reason": null
   },
   {
    "unit_id": "p105.06",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "---- ━━━ FORMAT 2: WELL LOG / КАРОТАЖНАЯ ДИАГРАММА ━━━",
-   "node_ids": [],
-   "reason": "Маркер формата, не содержательный текст."
-  },
-  {
-   "unit_id": "p105.07",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "Заголовки над треками (слева направо), частично неразборчивы из-за качества скана:",
-   "node_ids": [],
-   "reason": "Только вводная строка о частично неразборчивых заголовках; конкретное содержание описано в следующей единице."
-  },
-  {
-   "unit_id": "p105.08",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "1. Первый трек: подпись \"[нрзб]ый газ\" (предположительно литологическая колонка/газовый показатель), шкала сверху:",
-   "node_ids": [
-    "latyshova.carbonate_reservoir_features"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p105.09",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "Кривые представляют собой непрерывные каротажные записи по глубине (глубина увеличивается вниз), без",
-   "node_ids": [
-    "latyshova.carbonate_reservoir_features"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p105.10",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "Ввиду низкого качества скана точные числовые значения кривых и подписи осей местами",
-   "node_ids": [
-    "latyshova.carbonate_reservoir_features"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p105.11",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "Интервал глубин, единицы измерения глубины и отметки границ пластов на изображении не",
-   "node_ids": [
-    "latyshova.carbonate_reservoir_features"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p105.12",
-   "kind": "table",
-   "page_pdf": 105,
-   "excerpt": "Интервал, м Литология (по колонке) Кривые: поведение Интерпретация (если подписана) --- ---",
-   "node_ids": [
-    "latyshova.carbonate_reservoir_features"
-   ],
-   "reason": null
-  },
-  {
-   "unit_id": "p105.13",
-   "kind": "paragraph",
-   "page_pdf": 105,
-   "excerpt": "KEYWORDS: каротажная диаграмма, ГИС, НГК, ННК, ГК, ядерно-магнитный метод, литологическая колонка, промыслово-геофизические",
-   "node_ids": [],
-   "reason": "Это перечень ключевых слов, а не авторское утверждение."
-  },
-  {
-   "unit_id": "p105.14",
-   "kind": "heading",
-   "page_pdf": 105,
-   "excerpt": "----",
-   "node_ids": [],
-   "reason": "колонтитул, номер страницы или обрывок распознавания"
-  },
-  {
-   "unit_id": "p105.15",
    "kind": "figure",
    "page_pdf": 105,
    "excerpt": "Рис.76. Комплекс диаграмм ГИС по участку скважины карбонатного разреза:",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.carbonate_collector_difficulties"
    ],
    "reason": null
   },
@@ -1645,7 +1461,7 @@
    "page_pdf": 106,
    "excerpt": "rho_ mathrm n = 0,05 mathrm OM cdot mathrm M ; t^",
    "node_ids": [
-    "latyshova.carbonate_reservoir_features"
+    "latyshova.carbonate_collector_difficulties"
    ],
    "reason": null
   },
@@ -1655,7 +1471,7 @@
    "page_pdf": 107,
    "excerpt": "Эти обстоятельства и влияние структуры порового пространства, а также широкий диапазон изменений",
    "node_ids": [
-    "latyshova.normalize_carbonate_logs"
+    "latyshova.carbonate_collector_difficulties"
    ],
    "reason": null
   },
@@ -1665,7 +1481,7 @@
    "page_pdf": 107,
    "excerpt": "В дополнение к рассмотренным методам выделения и изучения коллекторов, которые применимы к",
    "node_ids": [
-    "latyshova.normalize_carbonate_logs"
+    "latyshova.carbonate_curve_normalization"
    ],
    "reason": null
   },
@@ -1675,7 +1491,7 @@
    "page_pdf": 107,
    "excerpt": "С петрофизической точки зрения способ нормализации есть сопоставление значений ( rho_ n",
    "node_ids": [
-    "latyshova.normalize_carbonate_logs"
+    "latyshova.carbonate_curve_normalization"
    ],
    "reason": null
   },
@@ -1685,7 +1501,7 @@
    "page_pdf": 107,
    "excerpt": "Наиболее четкие результаты способ нормализации дает при однородном минеральном составе пород в",
    "node_ids": [
-    "latyshova.normalize_carbonate_logs"
+    "latyshova.carbonate_curve_normalization"
    ],
    "reason": null
   },
@@ -1695,7 +1511,7 @@
    "page_pdf": 107,
    "excerpt": "Пример 54. Выделить интервалы нефтеносного межзернового коллектора в карбонатных отложениях; определить положение",
    "node_ids": [
-    "latyshova.carbonate_normalization_example"
+    "latyshova.carbonate_section_example"
    ],
    "reason": null
   },
@@ -1705,7 +1521,7 @@
    "page_pdf": 107,
    "excerpt": "Используем способ нормализации, сравнивая кривые ( rho_ n ) зонда БК-3 и",
    "node_ids": [
-    "latyshova.carbonate_normalization_example"
+    "latyshova.carbonate_section_example"
    ],
    "reason": null
   },
@@ -1715,7 +1531,7 @@
    "page_pdf": 107,
    "excerpt": "Рис.77. Кривые зависимости ( k_ n,cn = f(k_ n ) ) для",
    "node_ids": [
-    "latyshova.carbonate_porosity_cutoff"
+    "latyshova.carbonate_section_example"
    ],
    "reason": null
   },
@@ -1725,7 +1541,7 @@
    "page_pdf": 107,
    "excerpt": "1 – крупнопористые рифовые отложения (Башкирия); 2 – крупнопористые коллекторы карбона (Башкирия);",
    "node_ids": [
-    "latyshova.carbonate_porosity_cutoff"
+    "latyshova.carbonate_section_example"
    ],
    "reason": null
   },
@@ -1735,7 +1551,7 @@
    "page_pdf": 107,
    "excerpt": "Общая толщина продуктивных отложений составляет 13,5 м. Учитывая в интервале 1069,5 -",
    "node_ids": [
-    "latyshova.carbonate_normalization_example"
+    "latyshova.carbonate_section_example"
    ],
    "reason": null
   },
@@ -1795,7 +1611,7 @@
    "page_pdf": 108,
    "excerpt": "Способы нормализации для выделения продуктивных межзерновых коллекторов и критического k_n^ для выделения",
    "node_ids": [
-    "latyshova.carbonate_porosity_cutoff"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1804,22 +1620,16 @@
    "kind": "table",
    "page_pdf": 108,
    "excerpt": "Таблица 23.",
-   "node_ids": [
-    "latyshova.carbonate_cutoff_examples",
-    "latyshova.carbonate_porosity_cutoff"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Единица содержит только указание номера таблицы, без данных или самостоятельного содержательного утверждения."
   },
   {
    "unit_id": "p108.04",
    "kind": "paragraph",
    "page_pdf": 108,
    "excerpt": "Значения k_n^ для карбонатных межзерновых коллекторов.",
-   "node_ids": [
-    "latyshova.carbonate_cutoff_examples",
-    "latyshova.carbonate_porosity_cutoff"
-   ],
-   "reason": null
+   "node_ids": [],
+   "reason": "Это заголовок таблицы, а не самостоятельная мысль; содержательные значения таблицы извлечены из p108.05."
   },
   {
    "unit_id": "p108.05",
@@ -1827,8 +1637,7 @@
    "page_pdf": 108,
    "excerpt": "Коллектор k_ n_0 ^ % --- --- Рифтовые отложения (Башкирия, пермь) 1",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples",
-    "latyshova.carbonate_porosity_cutoff"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1838,7 +1647,7 @@
    "page_pdf": 108,
    "excerpt": "Задачи",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1848,7 +1657,7 @@
    "page_pdf": 108,
    "excerpt": "104. Выделить коллекторы с межзерновой пористостью по диаграммам комплекса методов, приведенным на",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1858,7 +1667,7 @@
    "page_pdf": 108,
    "excerpt": "105. Дать заключение об эффективной толщине коллекторов, выделяемых на основании комплекса диаграмм,",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1868,7 +1677,7 @@
    "page_pdf": 108,
    "excerpt": "106. Дать заключение о наличии карбонатных коллекторов в разрезах скважин, приведенных на",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1878,7 +1687,7 @@
    "page_pdf": 108,
    "excerpt": "107. На основании диаграмм, приведенных на рис. 76, определить эффективную толщину коллекторов",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },
@@ -1888,7 +1697,7 @@
    "page_pdf": 108,
    "excerpt": "108. Дать заключение, в каком диапазоне меняется нижний предел пористости карбонатных коллекторов,",
    "node_ids": [
-    "latyshova.carbonate_cutoff_examples"
+    "latyshova.regional_porosity_examples"
    ],
    "reason": null
   },

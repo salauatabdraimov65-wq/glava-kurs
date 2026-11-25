@@ -76,7 +76,7 @@ def classify(block: str, headers: set[str], in_tasks: bool) -> str:
     s = block.strip()
     first = s.splitlines()[0]
     bare = s.strip("# *")
-    if (PAGE_NUM_RE.match(s) or len(bare) <= 2 or set(bare) <= set("-—_ ")
+    if (PAGE_NUM_RE.match(s) or len(bare) <= 2 or (len(bare) < 25 and re.fullmatch(r"[\d\s.,;:]+", bare)) or set(bare) <= set("-—_ ")
             or (6 <= len(bare) < 90 and "\n" not in s and bare.upper() in headers and not TASK_HEAD_RE.match(s))):
         return "running_header"   # колонтитул, номер страницы или обрывок распознавания
     if s.startswith("|"):
