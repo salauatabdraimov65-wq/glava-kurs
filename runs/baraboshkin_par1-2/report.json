@@ -1,0 +1,23 @@
+{
+ "chapter": "baraboshkin_par1-2",
+ "nodes": 24,
+ "claims": 171,
+ "tasks": 43,
+ "task_types": {
+  "single": 13,
+  "multiple": 11,
+  "gap": 12,
+  "order": 7
+ },
+ "units_in_scope": 61,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "интерактив": 6,
+  "текст": 3,
+  "шортс": 14,
+  "карточки": 1
+ },
+ "usd": 0.114,
+ "minutes": 0.5
+}

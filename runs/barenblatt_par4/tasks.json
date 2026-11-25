@@ -1,0 +1,1233 @@
+{
+ "chapter": "barenblatt_par4",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.pressure_diffusion_basics#c3"
+   ],
+   "prompt": "С каким классическим уравнением по форме совпадает уравнение пьезопроводности?",
+   "options": [
+    {
+     "id": "a",
+     "text": "С уравнением теплопроводности",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "С уравнением распространения звука",
+     "misconception": "misc.pressure_sound_speed"
+    },
+    {
+     "id": "c",
+     "text": "С уравнением гравитационного притяжения",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Уравнение пьезопроводности по форме совпадает с уравнением теплопроводности (стр. 39).",
+   "step_id": "barenblatt.pressure_diffusion_basics",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.pressure_diffusion_basics#c8",
+    "barenblatt.pressure_diffusion_basics#c9"
+   ],
+   "prompt": "Какие утверждения верны о начальном условии задачи?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Задают начальное распределение давления при t=0.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Начальное давление задаётся функцией координат φ(x,y,z).",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Начальное условие задаёт только расход на скважинах.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Начальное распределение задают при t=1.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Начальное условие задаёт давление при t=0 как функцию координат φ(x,y,z) (стр. 39).",
+   "step_id": "barenblatt.pressure_diffusion_basics",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.linear_flow_laplace#c2"
+   ],
+   "prompt": "При плоскопараллельном одномерном движении скорость направлена вдоль {{1}} и не зависит от {{2}}.",
+   "options": [],
+   "answer": [
+    "x",
+    "y и z"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Это прямо указано для плоскопараллельного одномерного движения (стр. 40).",
+   "step_id": "barenblatt.linear_flow_laplace",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.linear_flow_laplace#c6",
+    "barenblatt.linear_flow_laplace#c7",
+    "barenblatt.linear_flow_laplace#c8",
+    "barenblatt.linear_flow_laplace#c9",
+    "barenblatt.linear_flow_laplace#c10"
+   ],
+   "prompt": "Расположите этапы получения решения для изображения давления в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Изображение давления выражают через гиперболические синусы расстояния до контура питания и длины пласта."
+    },
+    {
+     "id": "b",
+     "text": "Преобразуют давление по времени интегралом с ядром e⁻ᵗσ."
+    },
+    {
+     "id": "c",
+     "text": "Для изображения давления получают отдельную краевую задачу."
+    },
+    {
+     "id": "d",
+     "text": "Записывают ОДУ для изображения давления с заданными значениями на концах."
+    },
+    {
+     "id": "e",
+     "text": "Получают решение краевой задачи для изображения давления."
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "d",
+    "e",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Преобразование задаёт изображение, для него формулируют и решают краевую задачу, после чего записывают решение через гиперболические синусы (стр. 40).",
+   "step_id": "barenblatt.linear_flow_laplace",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.short_time_response#c10",
+    "barenblatt.short_time_response#c11"
+   ],
+   "prompt": "Как применяют принцип суперпозиции и интеграл Дюамеля для произвольного изменения давления на x=0?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Интегрируют производную заданного давления по времени, умноженную на отклик на скачок давления.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Интегрируют само заданное давление, умноженное на его вторую производную по времени.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Используют только отклик на постоянное давление, не учитывая изменение давления во времени.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Заменяют произвольное изменение давления одним скачком с той же длительностью.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формула Дюамеля интегрирует производную заданного давления по времени, умноженную на отклик на скачок (стр. 41).",
+   "step_id": "barenblatt.short_time_response",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.steady_state_timescale#c5",
+    "barenblatt.steady_state_timescale#c6",
+    "barenblatt.steady_state_timescale#c8"
+   ],
+   "prompt": "Какие утверждения о выходе на стационарный режим соответствуют тексту?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Приближение к стационарному линейному распределению происходит экспоненциально.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Характерное время для пласта длиной 300 м при κ порядка 10⁴ см²/с — около 3 ч.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Характерное время установления не зависит от длины пласта.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "При κ порядка 10⁴ см²/с для пласта длиной 10 км характерное время — около 100 лет.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Приближение экспоненциальное, а для длины 300 м указано около 3 ч (стр. 41–42).",
+   "step_id": "barenblatt.steady_state_timescale",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.steady_state_timescale#c5",
+    "barenblatt.steady_state_timescale#c6"
+   ],
+   "prompt": "Характерное время выхода на стационарный режим имеет порядок {{1}}, а приближение к стационарному линейному распределению происходит {{2}}.",
+   "options": [],
+   "answer": [
+    "L²/(κπ²)",
+    "экспоненциально"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Оба пропуска дословно передают порядок характерного времени и характер приближения к стационарному режиму (стр. 41).",
+   "step_id": "barenblatt.steady_state_timescale",
+   "id": "t08"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.radial_flow_model#c7",
+    "barenblatt.radial_flow_model#c8",
+    "barenblatt.radial_flow_model#c10"
+   ],
+   "prompt": "Упорядочьте шаги преобразования радиальной задачи к решению для изображения давления.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Переход к изображениям Лапласа"
+    },
+    {
+     "id": "b",
+     "text": "Получение радиального уравнения Бесселя с ν²=σ/κ"
+    },
+    {
+     "id": "c",
+     "text": "Запись общего решения как линейной комбинации I₀(rν) и K₀(rν)"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "После перехода к изображениям получается уравнение Бесселя, общее решение которого выражается через I₀ и K₀ (стр. 42).",
+   "step_id": "barenblatt.radial_flow_model",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.radial_flow_model#c1"
+   ],
+   "prompt": "Что описывает плоскорадиальная модель?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Осесимметричный нестационарный приток к одиночной скважине в круговом пласте"
+    },
+    {
+     "id": "b",
+     "text": "Стационарный приток к нескольким скважинам в прямоугольном пласте"
+    },
+    {
+     "id": "c",
+     "text": "Одномерное движение флюида по прямой линии к скважине"
+    },
+    {
+     "id": "d",
+     "text": "Течение вокруг скважины без радиальной симметрии"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Плоскорадиальное движение описывает осесимметричный нестационарный приток к одиночной скважине в круговом пласте (стр. 42).",
+   "step_id": "barenblatt.radial_flow_model",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.constant_rate_solution#c6",
+    "barenblatt.constant_rate_solution#c7",
+    "barenblatt.constant_rate_solution#c8"
+   ],
+   "prompt": "Какие утверждения верны для промежуточной асимптотики радиального притока?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Она применима при условии ρ/√(πt)≪1≪R/√(πt).",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Упрощение решения выполняют, используя асимптотики функций Бесселя для малых и больших аргументов.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Условие применимости требует ρ/√(πt)≫1≫R/√(πt).",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Промежуточная асимптотика применима только тогда, когда радиусы скважины и внешней границы равны.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Промежуточная асимптотика задаётся указанным соотношением радиусов и использует асимптотики функций Бесселя для малых и больших аргументов (стр. 43).",
+   "step_id": "barenblatt.constant_rate_solution",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.constant_rate_solution#c7"
+   ],
+   "prompt": "Условие промежуточной асимптотики: {{1}}≪1≪{{2}}.",
+   "options": [],
+   "answer": [
+    "ρ/√(πt)",
+    "R/√(πt)"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В условии промежуточной асимптотики радиус скважины соответствует малому аргументу, а внешняя граница — большому (стр. 43).",
+   "step_id": "barenblatt.constant_rate_solution",
+   "id": "t12"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.radial_pressure_response#c11"
+   ],
+   "prompt": "Что обозначают Q и q в формулах давления?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Q — полный дебит скважины, q — дебит на единицу толщины пласта.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Q — дебит на единицу толщины пласта, q — полный дебит скважины.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Q и q — оба полный дебит скважины.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Q и q — оба дебит на единицу толщины пласта.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Q обозначает полный дебит скважины, а q — дебит на единицу толщины пласта (стр. 43).",
+   "step_id": "barenblatt.radial_pressure_response",
+   "id": "t14"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.pressure_buildup_test#c8",
+    "barenblatt.pressure_buildup_test#c11"
+   ],
+   "prompt": "При известном дебите Q, что можно определить по значениям A и B и что нельзя получить только из отношения π/ρ²?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Гидропроводность kh/μ",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Отношение π/ρ²",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "π и ρ² по отдельности",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Проницаемость, пьезопроводность и расстояния до границ пласта без использования решений задач нестационарной фильтрации",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При известном Q значения A и B позволяют определить kh/μ и π/ρ², но одно это отношение не позволяет найти π и ρ² отдельно (стр. 44).",
+   "step_id": "barenblatt.pressure_buildup_test",
+   "id": "t15"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.pressure_buildup_test#c3",
+    "barenblatt.pressure_buildup_test#c6"
+   ],
+   "prompt": "Как обычно создают нестационарное течение для исследования восстановления давления и когда часто появляется прямолинейный асимптотический участок?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Временно останавливают скважину; участок часто появляется в первые часы",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Постоянно увеличивают дебит; участок обычно появляется только через несколько месяцев",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Не меняют режим работы скважины; участок появляется сразу при любых условиях",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Изменяют только температуру пласта; участок появляется после полного прекращения фильтрации во всём пласте",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Наиболее простой и распространённый способ создать нестационарное течение — временно остановить скважину, а прямолинейный участок часто появляется в первые часы (стр. 44).",
+   "step_id": "barenblatt.pressure_buildup_test",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.interference_test_method#c2"
+   ],
+   "prompt": "В методе гидропродолжения характерный размер — {{1}}, а не {{2}}.",
+   "options": [],
+   "answer": [
+    "расстояние между скважинами",
+    "радиус скважины"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Характерным размером служит точно известное расстояние между скважинами, а не радиус скважины (стр. 44).",
+   "step_id": "barenblatt.interference_test_method",
+   "id": "t17"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.interference_test_method#c7",
+    "barenblatt.interference_test_method#c8",
+    "barenblatt.interference_test_method#c9"
+   ],
+   "prompt": "Расположите действия и соотношения при обработке кривой давления в реагирующей скважине в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Зафиксировать время появления характерной точки."
+    },
+    {
+     "id": "b",
+     "text": "Выбрать характерную точку — касание кривой Δp(t) прямой из начала координат."
+    },
+    {
+     "id": "c",
+     "text": "Для точки касания t=t₁ использовать соотношение r²/(4πt₁)=0,44."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала фиксируют время характерной точки, затем выбирают касание кривой и применяют соотношение для t₁ (стр. 44–45).",
+   "step_id": "barenblatt.interference_test_method",
+   "id": "t18"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.test_model_limits#c3"
+   ],
+   "prompt": "Почему после остановки устья приток в скважину не прекращается мгновенно?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из-за сжимаемости заполняющих скважину жидкостей и газов",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Потому что давление в пласте распространяется с постоянной скоростью",
+     "misconception": "misc.pressure_sound_speed"
+    },
+    {
+     "id": "c",
+     "text": "Потому что обсаженная скважина сама пропускает нефть без перфорации",
+     "misconception": "misc.casing_flows"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Приток продолжается из-за сжимаемости жидкостей и газов в скважине (стр. 45).",
+   "step_id": "barenblatt.test_model_limits",
+   "id": "t19"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.test_model_limits#c7",
+    "barenblatt.test_model_limits#c8",
+    "barenblatt.test_model_limits#c9"
+   ],
+   "prompt": "Какие утверждения о методе обработки кривых восстановления давления из работы [31] верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Это один из наиболее общих методов обработки таких кривых",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Метод непосредственно использует преобразования Лапласа кривых",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Метод применим при произвольном изменении дебита скважин",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Метод всегда определяет характеристики неоднородности пласта",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Метод требует наличия прямолинейного участка p(ln t)",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Метод из работы [31] назван одним из наиболее общих, использует преобразования Лапласа и применим при произвольном изменении дебита (стр. 45).",
+   "step_id": "barenblatt.test_model_limits",
+   "id": "t20"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.laplace_response_function#c5"
+   ],
+   "prompt": "На непроницаемой границе задаётся {{1}}, а на контурах питания — {{2}}.",
+   "options": [],
+   "answer": [
+    "нулевой нормальный градиент",
+    "нулевое преобразованное давление"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Граничные условия на этих границах указаны именно так (стр. 45).",
+   "step_id": "barenblatt.laplace_response_function",
+   "id": "t21"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.laplace_response_function#c6",
+    "barenblatt.laplace_response_function#c8",
+    "barenblatt.laplace_response_function#c10"
+   ],
+   "prompt": "Расположите шаги в порядке: от определения функции U до определения функции ψ.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Определить ψ как отношение преобразованного давления на скважине к преобразованному дебиту."
+    },
+    {
+     "id": "b",
+     "text": "Использовать преобразованный дебит, выраженный через преобразованное давление на скважине и радиальную производную U у стенки скважины."
+    },
+    {
+     "id": "c",
+     "text": "Определить U как отношение преобразованного давления в пласте к преобразованному давлению на скважине."
+    }
+   ],
+   "answer": [
+    "c",
+    "b",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала задают U, затем выражают через неё преобразованный дебит и определяют ψ как отношение давления к дебиту (стр. 45–46).",
+   "step_id": "barenblatt.laplace_response_function",
+   "id": "t22"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.laplace_curve_analysis#c5"
+   ],
+   "prompt": "Какую замену переменной удобно использовать при практическом вычислении преобразований Лапласа?",
+   "options": [
+    {
+     "id": "a",
+     "text": "τ=1/σ, используя P(τ)=∫₀∞p(t)e^(−t/τ)dt",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "τ=σ, используя P(τ)=∫₀∞p(t)e^(−τt)dt",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "τ=1/t, используя P(τ)=∫₀∞p(t)e^(−tτ)dt",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для удобства вводят τ=1/σ и используют указанное преобразование P(τ) (стр. 46).",
+   "step_id": "barenblatt.laplace_curve_analysis",
+   "id": "t23"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.laplace_curve_analysis#c10"
+   ],
+   "prompt": "Сколько значений τ достаточно взять для вычисления интегралов, если Ψ(ln τ) — прямая?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Три-четыре",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Одно",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Десять-двадцать",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Поскольку Ψ(ln τ) — прямая, для вычисления интегралов достаточно трёх-четырёх значений τ (стр. 46).",
+   "step_id": "barenblatt.laplace_curve_analysis",
+   "id": "t24"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.two_zone_response#c6",
+    "barenblatt.two_zone_response#c9"
+   ],
+   "prompt": "Какие утверждения верны для двухзонной модели? Выберите все подходящие варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "При больших τ функция Ψ линейна по ln τ, а коэффициент при ln τ равен μ/(4πk₂h).",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Преобразованная кривая восстановления давления соответствует скважине радиуса ρ* в однородном пласте с параметрами внешней зоны.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При больших τ коэффициент при ln τ равен μ/(4πk₁h).",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Преобразованная кривая соответствует скважине радиуса ρ в однородном пласте с параметрами внутренней зоны.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Верны коэффициент для больших τ и интерпретация преобразованной кривой с радиусом ρ* и параметрами внешней зоны (стр. 46–47).",
+   "step_id": "barenblatt.two_zone_response",
+   "id": "t25"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.approximation_motivation#c8",
+    "barenblatt.approximation_motivation#c9"
+   ],
+   "prompt": "Что в некоторых приближённых методах считают за пределами области влияния?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Течение невозмущённым, с начальными значениями p или u."
+    },
+    {
+     "id": "b",
+     "text": "Течение возмущённым, с неизменным отклонением от начального состояния."
+    },
+    {
+     "id": "c",
+     "text": "Течение полностью прекращённым."
+    },
+    {
+     "id": "d",
+     "text": "Течение с постоянным отклонением от источника, не зависящим от расстояния."
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "За пределами области влияния течение считают невозмущённым и сохраняющим начальные значения p или u (стр. 47).",
+   "step_id": "barenblatt.approximation_motivation",
+   "id": "t26"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.integral_relations_method#c2",
+    "barenblatt.integral_relations_method#c3",
+    "barenblatt.integral_relations_method#c4"
+   ],
+   "prompt": "Какие утверждения верно описывают метод интегральных соотношений?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В области возмущения скважины исходное уравнение заменяют системой интегральных соотношений.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Интегральные соотношения приравнивают взвешенные интегралы временной производной давления и его второй пространственной производной, используя веса f_i(x,t).",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Функции f_i(x,t) должны образовывать полную систему по x на заданном отрезке, а разложение давления по ним приводит к уравнениям для коэффициентов.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Исходное уравнение заменяют системой интегральных соотношений во всей области пласта, а не только в области возмущения скважины.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "В интегральных соотношениях временную производную давления приравнивают к его первой пространственной производной.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В области возмущения уравнение заменяют системой соотношений с весами f_i, а полнота функций позволяет получить уравнения для коэффициентов (стр. 48).",
+   "step_id": "barenblatt.integral_relations_method",
+   "id": "t27"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.integral_relations_method#c4"
+   ],
+   "prompt": "Функции f_i(x,t) должны образовывать {{1}} по x на отрезке [L_1(t),L_2(t)]; разложение p по ним приводит к {{2}} для коэффициентов.",
+   "options": [],
+   "answer": [
+    "полную систему",
+    "уравнения"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указаны полная система функций и уравнения для коэффициентов (стр. 48).",
+   "step_id": "barenblatt.integral_relations_method",
+   "id": "t28"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.polynomial_pressure_approximation#c3",
+    "barenblatt.polynomial_pressure_approximation#c4",
+    "barenblatt.polynomial_pressure_approximation#c5"
+   ],
+   "prompt": "Расположите шаги построения приближённого решения в логическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Искать решение в виде многочлена."
+    },
+    {
+     "id": "b",
+     "text": "Задать аппроксимацию давления на интервале 0≤x≤l, а при x≥l принять начальное давление."
+    },
+    {
+     "id": "c",
+     "text": "Определить неизвестные коэффициенты и l(t) с помощью интегральных соотношений и условий на границах."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала выбирают многочлен, затем задают область его применения и после этого определяют неизвестные по условиям (стр. 48).",
+   "step_id": "barenblatt.polynomial_pressure_approximation",
+   "id": "t29"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.polynomial_pressure_approximation#c6",
+    "barenblatt.polynomial_pressure_approximation#c7"
+   ],
+   "prompt": "Какие условия должны выполняться на границе x=l?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Давление непрерывно и равно P+Gl; выбранные производные давления могут обращаться в нуль."
+    },
+    {
+     "id": "b",
+     "text": "Давление должно быть разрывным, а его производные — постоянными."
+    },
+    {
+     "id": "c",
+     "text": "Давление на границе обязательно равно P, а все производные должны быть положительными."
+    },
+    {
+     "id": "d",
+     "text": "Давление на границе не задаётся, если аппроксимация является многочленом."
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "На x=l давление должно быть непрерывным и равняться P+Gl, а условие гладкости может требовать обнуления производных (стр. 48).",
+   "step_id": "barenblatt.polynomial_pressure_approximation",
+   "id": "t30"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.pressure_moment_equations#c4",
+    "barenblatt.pressure_moment_equations#c5",
+    "barenblatt.pressure_moment_equations#c6"
+   ],
+   "prompt": "Какие утверждения верно описывают интегральные соотношения для моментов давления?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Первое соотношение связывает производную по времени интеграла давления от 0 до l с градиентом давления у x=0.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Производная по времени первого пространственного момента равна κp(0,t).",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При k≥2 производная по времени момента ∫₀ˡpxᵏdx равна κk(k−1), умноженному на момент ∫₀ˡpxᵏ⁻²dx.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "При k≥2 производная момента ∫₀ˡpxᵏdx равна κk, умноженному на момент ∫₀ˡpxᵏ⁻¹dx.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Первое соотношение связывает интеграл давления с градиентом давления у x=l.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Именно эти зависимости указаны для первого интегрального соотношения и моментов давления (стр. 48).",
+   "step_id": "barenblatt.pressure_moment_equations",
+   "id": "t31"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.pressure_moment_equations#c2"
+   ],
+   "prompt": "Какие значения давления заданы в рассматриваемой задаче?",
+   "options": [
+    {
+     "id": "a",
+     "text": "При x=0 давление равно p₁, а начальное давление p₀ равно нулю.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "При x=0 давление равно нулю, а начальное давление p₀ равно p₁.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При x=0 давление равно p₀, а начальное давление p₁ равно нулю.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В задаче при x=0 давление равно p₁, а начальное давление p₀ принимается равным нулю (стр. 48).",
+   "step_id": "barenblatt.pressure_moment_equations",
+   "id": "t32"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.higher_flow_approximations#c3"
+   ],
+   "prompt": "Как в утверждениях задано давление во втором приближении?",
+   "options": [
+    {
+     "id": "a",
+     "text": "p=p₁(1−x/l)², квадрат зоны возмущения равен 12κt",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "p=p₁(1−x/l), квадрат зоны возмущения равен 12κt",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "p=p₁(1−x/l)², квадрат зоны возмущения равен 6κt",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "p=p₁(1−x/l)³, квадрат зоны возмущения равен 12κt",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Во втором приближении указаны p=p₁(1−x/l)² и квадрат зоны возмущения 12κt (стр. 49).",
+   "step_id": "barenblatt.higher_flow_approximations",
+   "id": "t33"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.higher_flow_approximations#c7",
+    "barenblatt.higher_flow_approximations#c9",
+    "barenblatt.higher_flow_approximations#c10"
+   ],
+   "prompt": "Какие утверждения о приближениях и их ограничениях верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Набор (II.122), (II.123) и (II.127) для третьего приближения даёт то же решение, что и второе.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Первые три интегральных соотношения без условия (II.127) дают тот же результат, что и второе приближение.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Построение более высоких приближений затруднено отсутствием обоснованных правил выбора дополнительных условий.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Высокие приближения требуют многочленов высокого порядка, а простые аналитические зависимости удаётся получить уже при втором порядке.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Текст указывает на совпадение решения при наборе условий, трудность выбора дополнительных условий и простые аналитические зависимости уже во втором порядке (стр. 49–50).",
+   "step_id": "barenblatt.higher_flow_approximations",
+   "id": "t34"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.radial_integral_approximation#c6",
+    "barenblatt.radial_integral_approximation#c7",
+    "barenblatt.radial_integral_approximation#c8",
+    "barenblatt.radial_integral_approximation#c9"
+   ],
+   "prompt": "Расположите этапы приближённого решения в порядке их описания.",
+   "options": [
+    {
+     "id": "a",
+     "text": "В нулевом приближении полагают все коэффициенты $P_i$ равными нулю."
+    },
+    {
+     "id": "b",
+     "text": "Нулевое приближение даёт $l=2\\sqrt{\\varkappa t}$ и соответствующее выражение для давления."
+    },
+    {
+     "id": "c",
+     "text": "Первое приближение получают из уравнений и условий непрерывности при $r=l(t)$."
+    },
+    {
+     "id": "d",
+     "text": "Первое приближение даёт $l=\\sqrt{12\\varkappa t}$ и указанное выражение для давления."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала задают нулевое приближение и его решение, затем строят и получают результат первого приближения (стр. 50).",
+   "step_id": "barenblatt.radial_integral_approximation",
+   "id": "t35"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.bounded_radial_reservoir#c3",
+    "barenblatt.bounded_radial_reservoir#c5",
+    "barenblatt.bounded_radial_reservoir#c6"
+   ],
+   "prompt": "Что необходимо сделать для описания давления при времени $t>t_1$?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Учитывать граничное условие на контуре, зафиксировав $l(t)=R$.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Продолжать использовать первое приближение (II.135), не учитывая контур.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Считать давление на контуре переменным и не задавать граничное условие.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Положить $l(t)=0$ и считать давление постоянным по всему пласту.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "После $t_1$ нужно учитывать контурное условие, используя первое приближение (II.131) при $l(t)=R$; стр. 50.",
+   "step_id": "barenblatt.bounded_radial_reservoir",
+   "id": "t36"
+  },
+  {
+   "type": "calc",
+   "kind": "transfer",
+   "claim_ids": [
+    "barenblatt.bounded_radial_reservoir#c2"
+   ],
+   "prompt": "По формуле $t_1=R^2/(12\\varkappa)$ найдите $t_1$, если $R=120\\,\\text{м}$ и $\\varkappa=100\\,\\text{м}^2/\\text{сут}$.",
+   "options": [],
+   "answer": 12.0,
+   "tolerance": 0.6000000000000001,
+   "unit": "сут",
+   "explanation": "Подстановка даёт $t_1=120^2/(12\\cdot100)=12$ суток; стр. 50.",
+   "step_id": "barenblatt.bounded_radial_reservoir",
+   "id": "t37"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "barenblatt.bounded_reservoir_settling#c1",
+    "barenblatt.bounded_reservoir_settling#c2",
+    "barenblatt.bounded_reservoir_settling#c4",
+    "barenblatt.bounded_reservoir_settling#c7"
+   ],
+   "prompt": "Какие утверждения верно описывают приближение к стационарному радиальному течению?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из первого интегрального соотношения выводится уравнение для временной функции P₀(t).",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "При фиксированном радиусе R получается уравнение R²P₀′/6 = −κP₀.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Решение для коэффициента равно q exp[−6κ(t−t₁)/R²].",
+     "misconception": "misc.pressure_sound_speed"
+    },
+    {
+     "id": "d",
+     "text": "Распределение давления экспоненциально удаляется от стационарного состояния.",
+     "misconception": "misc.pressure_sound_speed"
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Первое соотношение даёт уравнение для P₀(t), а при фиксированном R — указанное уравнение; стр. 51.",
+   "step_id": "barenblatt.bounded_reservoir_settling",
+   "id": "t38"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "barenblatt.bounded_reservoir_settling#c3"
+   ],
+   "prompt": "Уравнение решается при условии {{1}} давления около t=t₁: P₀(t₁)={{2}}.",
+   "options": [],
+   "answer": [
+    "непрерывности",
+    "−q"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Условие решения — непрерывность давления с P₀(t₁)=−q; стр. 51.",
+   "step_id": "barenblatt.bounded_reservoir_settling",
+   "id": "t39"
+  }
+ ]
+}

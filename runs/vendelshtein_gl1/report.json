@@ -1,0 +1,22 @@
+{
+ "chapter": "vendelshtein_gl1",
+ "nodes": 36,
+ "claims": 329,
+ "tasks": 70,
+ "task_types": {
+  "single": 23,
+  "multiple": 16,
+  "gap": 17,
+  "order": 14
+ },
+ "units_in_scope": 184,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "шортс": 16,
+  "практикум на данных": 10,
+  "интерактив": 10
+ },
+ "usd": 0.192,
+ "minutes": 1.0
+}

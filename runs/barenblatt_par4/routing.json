@@ -1,0 +1,335 @@
+{
+ "chapter": "barenblatt_par4",
+ "routes": [
+  {
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.linear_flow_laplace",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.short_time_response",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.steady_state_timescale",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.radial_flow_model",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/П; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.constant_rate_solution",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 2,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.radial_pressure_response",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.pressure_buildup_test",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "barenblatt.interference_test_method",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/И; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.test_model_limits",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип Н/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "barenblatt.laplace_response_function",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип Ф/None; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "why": "тип Ф/Пр; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "barenblatt.two_zone_response",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/И; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.approximation_motivation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.integral_relations_method",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.pressure_moment_equations",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.first_flow_approximation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.higher_flow_approximations",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.radial_integral_approximation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  }
+ ]
+}
