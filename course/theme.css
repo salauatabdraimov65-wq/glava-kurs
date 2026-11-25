@@ -143,6 +143,36 @@ h3 { font-size: 1rem; font-weight: 650; margin: 1.3rem 0 .45rem; }
 .progress { width: min(30vw,280px); height: 3px; background: var(--edge); overflow: hidden; }
 .progress span { display: block; height: 100%; width: 0; background: var(--geo-shale); }
 .step { display: block; }
+.format-label { display: inline-block; padding: .15rem .65rem; margin-bottom: .5rem; border: 1px solid var(--edge); border-radius: 4px; color: var(--accent); background: var(--soft); font-size: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.data-practicum fieldset { min-width: 0; margin: 0 0 1rem; padding: 0; border: 0; }
+.data-practicum legend { padding: 0; font-size: 1.15rem; font-weight: 650; }
+.data-features { display: grid; gap: .3rem; margin-bottom: 1rem; }
+.data-feature { display: flex; align-items: flex-start; gap: .8rem; padding: .8rem; min-height: 48px; border-bottom: 1px solid var(--edge); cursor: pointer; }
+.data-feature:has(input:checked) { background: var(--soft); }
+.data-feature input { flex: none; width: 24px; height: 24px; margin: .15rem 0 0; accent-color: var(--accent); }
+.data-feature span { min-width: 0; }
+.interactive-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.decision-result { margin-top: 1rem; padding: 1rem; background: var(--soft); border-left: 3px solid var(--edge); }
+.decision-result.is-correct { border-left-color: var(--accent); }
+.pressure-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1rem 2rem; }
+.pressure-controls label { display: block; min-width: 0; font-weight: 600; }
+.pressure-controls output { display: inline-block; margin-left: .5rem; color: var(--accent); font-variant-numeric: tabular-nums; }
+.pressure-controls input { display: block; width: 100%; min-width: 0; min-height: 44px; margin: .3rem 0; padding: 0; accent-color: var(--accent); touch-action: pan-y; }
+.range-limits { display: flex; justify-content: space-between; gap: .7rem; color: var(--muted); font-size: 1rem; font-weight: 400; }
+.range-limits span:last-child { text-align: right; }
+.pressure-chart { display: block; width: 100%; max-width: 100%; height: 340px; margin-top: 1rem; overflow: hidden; color: var(--muted); background: var(--paper-deep); border-radius: 4px; }
+.pressure-chart text { font: 16px "Segoe UI", system-ui, sans-serif; fill: currentColor; }
+.chart-grid { stroke: var(--edge); stroke-width: 1; }
+.pressure-curve { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linejoin: round; }
+.pressure-area { fill: var(--accent); opacity: .12; }
+.simulation-caption { font-size: 1rem; color: var(--muted); }
+.book-table-scroll { max-width: 100%; min-width: 0; overflow-x: auto; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.book-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 1rem; overflow-wrap: normal; }
+.book-table th,.book-table td { min-width: 100px; padding: .65rem .8rem; border: 1px solid var(--edge); vertical-align: top; text-align: left; }
+.book-table th { background: var(--soft); }
+.book-table .formula { max-width: none; overflow: visible; }
+.table-note { margin: .65rem 0 0; color: var(--muted); font-size: .95rem; }
 .book-title { color: var(--muted); font-size: .95rem; margin: .4rem 0; }
 .step-time { color: var(--muted); font-size: .95rem; margin: .5rem 0 1rem; }
 .step[data-mode="practice"] > .book-title,.step[data-mode="practice"] > .step-time { display: none; }

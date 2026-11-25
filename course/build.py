@@ -9,6 +9,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from course.interactives import render_book_tables, render_decision, render_pressure
+
 
 def read_json(path: Path, default: Any = None) -> Any:
     if not path.is_file():
@@ -44,7 +46,7 @@ def inline_text(value: str) -> str:
         return f'<span class="formula">{formula}</span>'
 
     parts = re.split(r"(\$[^$\n]+\$)", value)
-    return "".join(render_formula(re.match(r"\$(.+)\$", part)) if part.startswith("$") else html.escape(part) for part in parts if part)
+    return "".join(render_formula(match) if (match := re.fullmatch(r"\$([^$\n]+)\$", part)) else html.escape(part) for part in parts if part)
 
 
 def field_paragraph(value: Any, page: Any, *, label: str = "") -> str:
@@ -78,6 +80,7 @@ def usable_tasks(tasks: list[Any]) -> list[dict[str, Any]]:
 def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations: list[dict[str, Any]], routes: Any, base: Path) -> str:
     pages = node.get("pages") or []
     page = pages[0] if pages else ""
+    route = route_for_node(routes, str(node.get("id", "")))
     topic = text_of((node.get("layers") or {}).get("topic"))
     heading = topic or str(node.get("title", "Шаг курса"))
     heading_words = heading.split()
@@ -85,6 +88,9 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         heading = " ".join(heading_words[:7])
     book_title = str(node.get("title", ""))
     blocks = [f'<h1>{html.escape(heading)}</h1>']
+    format_name = text_of(route.get("format"))
+    if format_name:
+        blocks.append(f'<div class="format-label">{html.escape(format_name[:1].upper() + format_name[1:])}</div>')
     if book_title and book_title != heading:
         title_page = f'<span class="page">стр. {html.escape(str(page))}</span>' if page else ""
         blocks.append(f'<div class="book-title">Раздел книги: {html.escape(book_title)} {title_page}</div>')
@@ -109,6 +115,14 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         blocks.append('<section class="content-block"><h2>Суть</h2>')
         blocks.append(field_paragraph(layers.get("main"), page))
         blocks.append("</section>")
+
+    decision = node.get("decision_on_data")
+    decision_interactive = ""
+    if format_name.casefold() == "практикум на данных" and isinstance(decision, dict):
+        decision_interactive = render_decision(decision, str(node.get("id", "")), pages, inline_text, field_paragraph)
+        blocks.append(decision_interactive)
+    if route.get("template") == "pressure_explorer":
+        blocks.append(render_pressure(str(node.get("id", "")), pages))
 
     details: list[str] = []
     for key, label in (("mechanism", "Механизм"), ("practice", "Практика"), ("nuances", "Нюансы")):
@@ -138,8 +152,7 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
                 )
         blocks.append("</section>")
 
-    decision = node.get("decision_on_data")
-    if isinstance(decision, dict):
+    if isinstance(decision, dict) and not decision_interactive:
         values = [*decision.get("features", []), decision.get("rule"), decision.get("conclusion")]
         if decision.get("counterexample"):
             values.append(decision["counterexample"])
@@ -166,6 +179,8 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
         if example.get("figure"):
             blocks.append(field_paragraph(example["figure"], example_page, label="Рисунок"))
         blocks.append("</section>")
+
+    blocks.append(render_book_tables(node.get("book_tables"), pages, inline_text))
 
     terms = [term for term in (node.get("terms_introduced") or []) if str(term).strip()]
     if terms:
@@ -227,7 +242,6 @@ def render_node(node: dict[str, Any], tasks: list[dict[str, Any]], illustrations
             else:
                 blocks.append(f'<figure class="content-block"><img loading="lazy" src="{src}" alt="{alt}"><figcaption>{caption}{suffix} {figure_page}</figcaption></figure>')
 
-    route = route_for_node(routes, str(node.get("id", "")))
     video = route.get("video")
     video_path = route.get("video_path") or route.get("file") or route.get("path")
     if isinstance(video, str):
@@ -552,6 +566,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     task_json = task_json.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     chapter_json = json.dumps(str(layer.get("chapter", "course")), ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     player_js = Path(__file__).with_name("player.js").read_text(encoding="utf-8")
+    interactive_js = Path(__file__).with_name("interactives.js").read_text(encoding="utf-8")
     geology_vars = geology_theme_vars()
     theme_css = Path(__file__).with_name("theme.css").read_text(encoding="utf-8")
     strata_markup = (Path(__file__).parent / "assets" / "strata.svg").read_text(encoding="utf-8")
@@ -606,6 +621,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 <script>
 const TASKS = {task_json};
 const CHAPTER = {chapter_json};
+{interactive_js}
 {player_js}
 </script>
 </body>
