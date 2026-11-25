@@ -29,6 +29,7 @@ from layer.units import COVERAGE_KIND, Unit, split_units
 WORKERS = 8
 CHUNK_WORDS = 1400
 MIN_CLAIMS_PER_NODE = 4
+MIN_TASKS = 18          # ТЗ: не меньше 15 заданий на главу — берём с запасом
 DIFF = json.loads((ROOT / "config" / "difficulty.json").read_text(encoding="utf-8"))
 
 
@@ -361,7 +362,12 @@ def pass_d(ch, nodes, claims_by_tmp, pack):
         has_num = any(re.search(r"\d", c["text"]) for c in cl)
         types = [plan[(2 * k) % len(plan)], plan[(2 * k + 1) % len(plan)]]
         types = [t if t != "calc" or has_num else "gap" for t in types]
-        n = 2 if len(cl) >= 6 else 1
+        # не меньше MIN_TASKS заданий на главу даже при малом числе шагов
+        need = -(-MIN_TASKS // max(1, len(nodes)))
+        n = max(need, 2 if len(cl) >= 6 else 1)
+        n = min(n, 5, max(1, len(cl)))
+        types = (types + [plan[(2 * k + i) % len(plan)] for i in range(2, 6)])[:max(n, 2)]
+        types = [t if t != "calc" or has_num else "gap" for t in types]
         user = (f"Шаг: {node['title']}\nУтверждения:\n" + "\n".join(f'{c["tmp_id"]} (стр.{c["page_pdf"]}): {c["text"]}' for c in cl)
                 + f"\n\nЗаблуждения:\n{misc}")
         r = ask_json(SYS_D.replace("{n}", str(n)).replace("{types}", ", ".join(types[:n])), user, tier="bulk", tag=f"D:{ch.id}")

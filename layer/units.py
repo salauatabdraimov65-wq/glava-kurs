@@ -19,6 +19,7 @@ TABLE_CAPTION_RE = re.compile(r"^\s*(\*\*)?\s*(Таблица|Табл\.|Table)\
 TASK_HEAD_RE = re.compile(r"^\s*#*\s*(Задач[аи]|Упражнени[яе]|Problems?|Exercises?)\s*$", re.I)
 NUMBERED_RE = re.compile(r"^\s*(\d{1,3})\.\s+\S")
 PAGE_NUM_RE = re.compile(r"^\s*\d{1,4}\s*$")
+MAX_UNIT_WORDS = 220   # длиннее — режем по строкам, затем по предложениям
 
 
 @dataclass
@@ -69,7 +70,24 @@ def _blocks(text: str) -> list[str]:
             merged[-1] += "\n" + b
         else:
             merged.append(b)
-    return merged
+    # абзацы, разделённые одиночным переносом, и слишком длинные абзацы — разрезать
+    out = []
+    for b in merged:
+        if b.lstrip().startswith("|") or len(b.split()) <= MAX_UNIT_WORDS:
+            out.append(b); continue
+        lines = [l for l in b.splitlines() if l.strip()]
+        parts = lines if len(lines) > 1 else [b]
+        for part in parts:
+            if len(part.split()) <= MAX_UNIT_WORDS:
+                out.append(part); continue
+            sents, cur = re.split(r"(?<=[.!?…])\s+", part), []
+            for s in sents:
+                cur.append(s)
+                if len(" ".join(cur).split()) >= MAX_UNIT_WORDS // 2:
+                    out.append(" ".join(cur)); cur = []
+            if cur:
+                out.append(" ".join(cur))
+    return out
 
 
 def classify(block: str, headers: set[str], in_tasks: bool) -> str:
