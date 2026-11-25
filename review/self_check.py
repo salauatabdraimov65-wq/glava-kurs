@@ -79,6 +79,7 @@ def main(argv=None):
     ap.add_argument("--chapter-md")
     ap.add_argument("--no-llm", action="store_true")
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--dump")
     a = ap.parse_args(argv)
     run_dir = Path(a.run_dir).resolve()
     pkg = build_package(run_dir)
@@ -88,7 +89,7 @@ def main(argv=None):
     kinds = {t: sum(1 for i in pkg["items"] if i["type"] == t) for t in ("claim", "analogy", "script_line", "scene_fact")}
     print(f"Пакет {pkg_path.name}: {kinds}, сцен {len(pkg['scenes'])}, кадров {len(pkg['frames'])}")
     from . import run
-    args = [str(pkg_path), "-o", str(out)] + (["--chapter-md", a.chapter_md] if a.chapter_md else []) + (["--no-llm"] if a.no_llm else []) + (["--limit", str(a.limit)] if a.limit else [])
+    args = [str(pkg_path), "-o", str(out)] + (["--chapter-md", a.chapter_md] if a.chapter_md else []) + (["--no-llm"] if a.no_llm else []) + (["--limit", str(a.limit)] if a.limit else []) + (["--dump", a.dump] if a.dump else [])
     return run.main(args)
 
 
