@@ -228,7 +228,8 @@
    "frame_class": "B",
    "action": {},
    "is_analogy": false,
-   "pause_s": 3
+   "pause_s": 3,
+   "pause": 3
   },
   {
    "say": "Уже при росте рифа первичные пустоты начинают сокращаться.",
