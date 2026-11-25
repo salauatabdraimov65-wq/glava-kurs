@@ -23,7 +23,7 @@ CACHE = ROOT / "cache" / "llm"
 LEDGER = ROOT / "cache" / "spend.jsonl"
 
 # Цена за 1 млн токенов (вход, выход), USD. Переопределяется в .env: LLM_PRICE_BULK=0.25,2.0
-DEFAULT_PRICE = {"bulk": (0.10, 0.50), "strong": (1.25, 10.0)}
+DEFAULT_PRICE = {"bulk": (0.10, 0.50), "strong": (1.0, 5.0)}
 
 
 class BudgetExceeded(RuntimeError):
