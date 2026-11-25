@@ -1,0 +1,23 @@
+{
+ "chapter": "barenblatt_par4",
+ "nodes": 22,
+ "claims": 206,
+ "tasks": 39,
+ "task_types": {
+  "single": 14,
+  "multiple": 10,
+  "gap": 7,
+  "order": 7,
+  "calc": 1
+ },
+ "units_in_scope": 172,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "интерактив": 19,
+  "шортс": 2,
+  "практикум на данных": 1
+ },
+ "usd": 0.135,
+ "minutes": 0.6
+}

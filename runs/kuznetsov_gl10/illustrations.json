@@ -1,0 +1,572 @@
+{
+ "chapter": "kuznetsov_gl10",
+ "illustrations": [
+  {
+   "id": "ill.reef_importance",
+   "step_id": "kuznetsov.reef_importance",
+   "node_id": "kuznetsov.reef_importance",
+   "file": "illustrations/reef_importance.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 200.",
+   "alt": "Схема механизма: Относительно небольшая площадь и значительная высота залежи → высокая плотность запасов → высокая экономическая эффективность разработки. Повышенный интерес к рифам → расширение понятия «риф» → ошибочное отнесение к рифам других карбонатных отложений",
+   "source": "учебный слой, стр. 200",
+   "claim_ids": [
+    "kuznetsov.reef_importance#c1",
+    "kuznetsov.reef_importance#c2",
+    "kuznetsov.reef_importance#c3",
+    "kuznetsov.reef_importance#c4",
+    "kuznetsov.reef_importance#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.reef_building_types",
+   "step_id": "kuznetsov.reef_building_types",
+   "node_id": "kuznetsov.reef_building_types",
+   "file": "illustrations/reef_building_types.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 200–201.",
+   "alt": "Схема механизма: Биостром примерно соответствует окружающим синхронным отложениям по мощности, поэтому не выражен в рельефе дна. → Биогерм и риф мощнее синхронных отложений; риф растёт быстрее окружающих осадков и возвышается над ними.",
+   "source": "учебный слой, стр. 200, стр. 201",
+   "claim_ids": [
+    "kuznetsov.reef_building_types#c1",
+    "kuznetsov.reef_building_types#c2",
+    "kuznetsov.reef_building_types#c3",
+    "kuznetsov.reef_building_types#c4",
+    "kuznetsov.reef_building_types#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.reef_basin_position",
+   "step_id": "kuznetsov.reef_basin_position",
+   "node_id": "kuznetsov.reef_basin_position",
+   "file": "illustrations/reef_basin_position.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 201–202.",
+   "alt": "Схема механизма: Локальное поднятие дна служит местом формирования одиночного рифа → его поперечное сечение примерно симметрично. Крутой перегиб дна между мелководьем и глубиной служит местом развития вытянутой цепочки рифов",
+   "source": "учебный слой, стр. 201, стр. 202",
+   "claim_ids": [
+    "kuznetsov.reef_basin_position#c1",
+    "kuznetsov.reef_basin_position#c2",
+    "kuznetsov.reef_basin_position#c3",
+    "kuznetsov.reef_basin_position#c4",
+    "kuznetsov.reef_basin_position#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.reef_limestone_types",
+   "step_id": "kuznetsov.reef_limestone_types",
+   "node_id": "kuznetsov.reef_limestone_types",
+   "file": "illustrations/reef_limestone_types.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 202.",
+   "alt": "Схема механизма: Организмы растут на месте и создают волноустойчивую холмовидную структуру; пространство между ними заполняется шламом, спаритом или остаётся пустым. → Обломки пород массива накапливаются, особенно на крутых склонах, а после цементации образуют известняковые брекчии и конгломераты.",
+   "source": "учебный слой, стр. 202",
+   "claim_ids": [
+    "kuznetsov.reef_limestone_types#c1",
+    "kuznetsov.reef_limestone_types#c2",
+    "kuznetsov.reef_limestone_types#c3",
+    "kuznetsov.reef_limestone_types#c4",
+    "kuznetsov.reef_limestone_types#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.facies_zoning",
+   "step_id": "kuznetsov.facies_zoning",
+   "node_id": "kuznetsov.facies_zoning",
+   "file": "illustrations/facies_zoning.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 202–203.",
+   "alt": "Схема механизма: Рельеф включает мелководный или надводный гребень и углублённые склоны. Различия глубины меняют гидродинамику и освещённость → меняются условия обитания организмов и седиментации → возникают разные типы осадков и пород",
+   "source": "учебный слой, стр. 202, стр. 203",
+   "claim_ids": [
+    "kuznetsov.facies_zoning#c1",
+    "kuznetsov.facies_zoning#c2",
+    "kuznetsov.facies_zoning#c3",
+    "kuznetsov.facies_zoning#c4",
+    "kuznetsov.facies_zoning#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.dome_reef_zones",
+   "step_id": "kuznetsov.dome_reef_zones",
+   "node_id": "kuznetsov.dome_reef_zones",
+   "file": "illustrations/dome_reef_zones.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 203.",
+   "alt": "Схема механизма: Вокруг ядра располагаются грубообломочные конгломераты и гравелиты. → Далее они сменяются более тонкими детритовыми и шламовыми породами, затем микротонкозернистыми тёмными и более глинистыми известняками.",
+   "source": "учебный слой, стр. 203",
+   "claim_ids": [
+    "kuznetsov.dome_reef_zones#c1",
+    "kuznetsov.dome_reef_zones#c2",
+    "kuznetsov.dome_reef_zones#c3",
+    "kuznetsov.dome_reef_zones#c4",
+    "kuznetsov.dome_reef_zones#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.atoll_reef_zones",
+   "step_id": "kuznetsov.atoll_reef_zones",
+   "node_id": "kuznetsov.atoll_reef_zones",
+   "file": "illustrations/atoll_reef_zones.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 203–204.",
+   "alt": "Схема механизма: Гребень возвышается над бассейном и лагуной → на его тыльных склонах формируются обломочные известняки. Эти отложения тоньше, чем на предрифовых склонах",
+   "source": "учебный слой, стр. 203, стр. 204",
+   "claim_ids": [
+    "kuznetsov.atoll_reef_zones#c1",
+    "kuznetsov.atoll_reef_zones#c2",
+    "kuznetsov.atoll_reef_zones#c3",
+    "kuznetsov.atoll_reef_zones#c4",
+    "kuznetsov.atoll_reef_zones#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.linear_reef_system",
+   "step_id": "kuznetsov.linear_reef_system",
+   "node_id": "kuznetsov.linear_reef_system",
+   "file": "illustrations/linear_reef_system.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 201–204.",
+   "alt": "Схема механизма: Рифовая система приурочена к уступу дна → её поперечный профиль асимметричен. Это выражается в геоморфологической, структурной, фациальной и литолого-коллекторской асимметрии",
+   "source": "учебный слой, стр. 201, стр. 204",
+   "claim_ids": [
+    "kuznetsov.linear_reef_system#c1",
+    "kuznetsov.linear_reef_system#c2",
+    "kuznetsov.linear_reef_system#c3",
+    "kuznetsov.linear_reef_system#c4",
+    "kuznetsov.linear_reef_system#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.primary_reef_pores",
+   "step_id": "kuznetsov.primary_reef_pores",
+   "node_id": "kuznetsov.primary_reef_pores",
+   "file": "illustrations/primary_reef_pores.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 204–205.",
+   "alt": "Схема механизма: Полости внутри скелетов и промежутки между организмами создают пустоты; их нагромождение или неполное срастание организмов формирует более крупные пустоты.",
+   "source": "учебный слой, стр. 204, стр. 205",
+   "claim_ids": [
+    "kuznetsov.primary_reef_pores#c1",
+    "kuznetsov.primary_reef_pores#c2",
+    "kuznetsov.primary_reef_pores#c3",
+    "kuznetsov.primary_reef_pores#c4",
+    "kuznetsov.primary_reef_pores#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.secondary_reef_pores",
+   "step_id": "kuznetsov.secondary_reef_pores",
+   "node_id": "kuznetsov.secondary_reef_pores",
+   "file": "illustrations/secondary_reef_pores.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 205.",
+   "alt": "Схема механизма: Обрастание водорослями, цементация, заполнение пустот организмами и детритом, а также выпадение карбонатов сокращают первичную пористость. → Высокая первичная проницаемость, массивное строение, отсутствие экранирующих пачек и чистый химический состав способствуют водообмену; растворение и вынос вещества создают каверны. → При перекристаллизации и доломитизации образуется межкристаллическая вторичная пористость.",
+   "source": "учебный слой, стр. 205",
+   "claim_ids": [
+    "kuznetsov.secondary_reef_pores#c1",
+    "kuznetsov.secondary_reef_pores#c2",
+    "kuznetsov.secondary_reef_pores#c3",
+    "kuznetsov.secondary_reef_pores#c4",
+    "kuznetsov.secondary_reef_pores#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.rainbow_reef_classes",
+   "step_id": "kuznetsov.rainbow_reef_classes",
+   "node_id": "kuznetsov.rainbow_reef_classes",
+   "file": "illustrations/rainbow_reef_classes.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 205–206.",
+   "alt": "Схема механизма: Тип и строение рифа связаны с площадным распределением улучшенных свойств; в небольших слабо дифференцированных куполовидных рифах лучшие свойства отмечены в центральных частях.",
+   "source": "учебный слой, стр. 205, стр. 206",
+   "claim_ids": [
+    "kuznetsov.rainbow_reef_classes#c1",
+    "kuznetsov.rainbow_reef_classes#c2",
+    "kuznetsov.rainbow_reef_classes#c3",
+    "kuznetsov.rainbow_reef_classes#c4",
+    "kuznetsov.rainbow_reef_classes#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.rainbow_collector_zones",
+   "step_id": "kuznetsov.rainbow_collector_zones",
+   "node_id": "kuznetsov.rainbow_collector_zones",
+   "file": "illustrations/rainbow_collector_zones.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 207.",
+   "alt": "Схема механизма: Литолого-фациальная зональность и литологический тип связаны с распределением коллекторских свойств → показатели пористости и проницаемости различаются между ядром и крыльями",
+   "source": "учебный слой, стр. 207",
+   "claim_ids": [
+    "kuznetsov.rainbow_collector_zones#c1",
+    "kuznetsov.rainbow_collector_zones#c2",
+    "kuznetsov.rainbow_collector_zones#c3",
+    "kuznetsov.rainbow_collector_zones#c4",
+    "kuznetsov.rainbow_collector_zones#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.rim_collector_quality",
+   "step_id": "kuznetsov.rim_collector_quality",
+   "node_id": "kuznetsov.rim_collector_quality",
+   "file": "illustrations/rim_collector_quality.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 207.",
+   "alt": "Схема механизма: Активное волнение создаёт гребень, пустоты и отсортированные обломки → возникают разные виды пористости. Краевые фации также могут быть более трещиноватыми → проницаемость существенно возрастает",
+   "source": "учебный слой, стр. 207",
+   "claim_ids": [
+    "kuznetsov.rim_collector_quality#c1",
+    "kuznetsov.rim_collector_quality#c2",
+    "kuznetsov.rim_collector_quality#c3",
+    "kuznetsov.rim_collector_quality#c4",
+    "kuznetsov.rim_collector_quality#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.field_collector_comparison",
+   "step_id": "kuznetsov.field_collector_comparison",
+   "node_id": "kuznetsov.field_collector_comparison",
+   "file": "illustrations/field_collector_comparison.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 207–210.",
+   "alt": "Схема: признаки Зона или фация рифа, Возрастная часть рифа, Пористость, Проницаемость; правило: Автор сопоставляет коллекторские показатели по зонам и возрастным частям рифа; в описанных примерах значения различаются.; вывод: Рифовую зону и возрастную часть следует учитывать при сравнении приведённых коллекторских показателей.",
+   "source": "учебный слой, стр. 207, стр. 209, стр. 210",
+   "claim_ids": [
+    "kuznetsov.field_collector_comparison#c1",
+    "kuznetsov.field_collector_comparison#c2",
+    "kuznetsov.field_collector_comparison#c3",
+    "kuznetsov.field_collector_comparison#c4",
+    "kuznetsov.field_collector_comparison#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.vertical_reef_variability",
+   "step_id": "kuznetsov.vertical_reef_variability",
+   "node_id": "kuznetsov.vertical_reef_variability",
+   "file": "illustrations/vertical_reef_variability.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 209–212.",
+   "alt": "Схема: признаки Пористость, Проницаемость; правило: На схеме рифа Шурган коллектором обозначена порода с пористостью более 6 % и проницаемостью более 0,0001 мкм².; вывод: Порода, удовлетворяющая обоим указанным условиям, обозначена как коллектор.",
+   "source": "учебный слой, стр. 209, стр. 211, стр. 212",
+   "claim_ids": [
+    "kuznetsov.vertical_reef_variability#c1",
+    "kuznetsov.vertical_reef_variability#c2",
+    "kuznetsov.vertical_reef_variability#c3",
+    "kuznetsov.vertical_reef_variability#c4",
+    "kuznetsov.vertical_reef_variability#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.layered_reef_collectors",
+   "step_id": "kuznetsov.layered_reef_collectors",
+   "node_id": "kuznetsov.layered_reef_collectors",
+   "file": "illustrations/layered_reef_collectors.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 212–214.",
+   "alt": "Схема: признаки Положение пористых и проницаемых пачек по разрезу, Положение плотных пачек, Пористость и проницаемость, Трещиноватость плотных пачек; правило: Если коллекторские пачки чередуются с породами худших свойств, разрез имеет пластовое или линзовидно-пластовое строение. Трещиноватость плотных пачек может обеспечивать динамическую связь пористых пластов.; вывод: Коллекторские зоны в крупных рифовых массивах обычно расположены слоисто и линзовидно-слоисто.",
+   "source": "учебный слой, стр. 212, стр. 214",
+   "claim_ids": [
+    "kuznetsov.layered_reef_collectors#c1",
+    "kuznetsov.layered_reef_collectors#c2",
+    "kuznetsov.layered_reef_collectors#c3",
+    "kuznetsov.layered_reef_collectors#c4",
+    "kuznetsov.layered_reef_collectors#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.reef_flow_patterns",
+   "step_id": "kuznetsov.reef_flow_patterns",
+   "node_id": "kuznetsov.reef_flow_patterns",
+   "file": "illustrations/reef_flow_patterns.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 214–216.",
+   "alt": "Схема: признаки форма рифа, положение пористо-проницаемых зон, пористость и проницаемость зарифовых отложений; правило: Расположение и свойства коллекторских зон связаны с формой и строением рифа.; вывод: В простых куполовидных рифах лучшие коллекторы приурочены к ядерной части; в плосковершинных и атолловидных — к кольцевой зоне гребня и часто верхней части внешнего склона.",
+   "source": "учебный слой, стр. 214, стр. 216",
+   "claim_ids": [
+    "kuznetsov.reef_flow_patterns#c1",
+    "kuznetsov.reef_flow_patterns#c2",
+    "kuznetsov.reef_flow_patterns#c3",
+    "kuznetsov.reef_flow_patterns#c4",
+    "kuznetsov.reef_flow_patterns#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.reef_seal_formation",
+   "step_id": "kuznetsov.reef_seal_formation",
+   "node_id": "kuznetsov.reef_seal_formation",
+   "file": "illustrations/reef_seal_formation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 216–218.",
+   "alt": "Схема механизма: Повышение уровня моря сопровождается карбонатонакоплением и ростом рифа → регрессия прекращает рифообразование → поздние непроницаемые отложения перекрывают риф и замыкают объем",
+   "source": "учебный слой, стр. 216, стр. 217, стр. 218",
+   "claim_ids": [
+    "kuznetsov.reef_seal_formation#c1",
+    "kuznetsov.reef_seal_formation#c2",
+    "kuznetsov.reef_seal_formation#c3",
+    "kuznetsov.reef_seal_formation#c4",
+    "kuznetsov.reef_seal_formation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.relief_trap_types",
+   "step_id": "kuznetsov.relief_trap_types",
+   "node_id": "kuznetsov.relief_trap_types",
+   "file": "illustrations/relief_trap_types.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 218.",
+   "alt": "Схема механизма: Риф возвышается над окружающими отложениями → при наличии покрышки возникает ловушка. Непроницаемые зарифовые породы добавляют экран → увеличиваются высота и объем литолого-палеогеоморфологической ловушки. Часть рифа ниже уровня непроницаемых толщ остается открытой → флюиды могут удаляться",
+   "source": "учебный слой, стр. 218",
+   "claim_ids": [
+    "kuznetsov.relief_trap_types#c1",
+    "kuznetsov.relief_trap_types#c2",
+    "kuznetsov.relief_trap_types#c3",
+    "kuznetsov.relief_trap_types#c4",
+    "kuznetsov.relief_trap_types#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tectonic_trap_types",
+   "step_id": "kuznetsov.tectonic_trap_types",
+   "node_id": "kuznetsov.tectonic_trap_types",
+   "file": "illustrations/tectonic_trap_types.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 218–219.",
+   "alt": "Схема механизма: Структурообразующие движения воздействуют на сформировавшийся риф → меняются высота и форма ловушки. Региональный наклон смещает ловушку вверх по восстанию → залежи располагаются в одной части рифа. Структурный изгиб особенно увеличивает амплитуду и ёмкость, когда превышение рифа над зарифовыми отложениями мало и литологическое замещение отсутствует",
+   "source": "учебный слой, стр. 218, стр. 219",
+   "claim_ids": [
+    "kuznetsov.tectonic_trap_types#c1",
+    "kuznetsov.tectonic_trap_types#c2",
+    "kuznetsov.tectonic_trap_types#c3",
+    "kuznetsov.tectonic_trap_types#c4",
+    "kuznetsov.tectonic_trap_types#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.reef_accumulation_shapes",
+   "step_id": "kuznetsov.reef_accumulation_shapes",
+   "node_id": "kuznetsov.reef_accumulation_shapes",
+   "file": "illustrations/reef_accumulation_shapes.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 219–220.",
+   "alt": "Схема механизма: Форма рифа, распределение коллекторов и гипсометрия его поверхности влияют на плановую форму залежи и распределение плотности запасов. → Непроницаемые отложения могут экранировать залежь, а последующее формирование тектонической структуры увеличивает амплитуду ловушки и нефтенасыщенную мощность.",
+   "source": "учебный слой, стр. 219, стр. 220",
+   "claim_ids": [
+    "kuznetsov.reef_accumulation_shapes#c1",
+    "kuznetsov.reef_accumulation_shapes#c2",
+    "kuznetsov.reef_accumulation_shapes#c3",
+    "kuznetsov.reef_accumulation_shapes#c4",
+    "kuznetsov.reef_accumulation_shapes#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.dome_reef_exploration",
+   "step_id": "kuznetsov.dome_reef_exploration",
+   "node_id": "kuznetsov.dome_reef_exploration",
+   "file": "illustrations/dome_reef_exploration.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 220.",
+   "alt": "Схема: признаки Предполагаемый тип рифа, Морфология рифа, Предполагаемая центральная, наиболее приподнятая часть, Предполагаемый гребень; правило: Для одиночного куполовидного рифа проектировать скважины в центральной, наиболее приподнятой части; для рифа сложной морфологии — ряд скважин вдоль предполагаемого гребня.; вывод: Прогноз типа и морфологии рифа служит основой стратегии размещения разведочных скважин.",
+   "source": "учебный слой, стр. 220",
+   "claim_ids": [
+    "kuznetsov.dome_reef_exploration#c1",
+    "kuznetsov.dome_reef_exploration#c2",
+    "kuznetsov.dome_reef_exploration#c3",
+    "kuznetsov.dome_reef_exploration#c4",
+    "kuznetsov.dome_reef_exploration#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.atoll_reef_exploration",
+   "step_id": "kuznetsov.atoll_reef_exploration",
+   "node_id": "kuznetsov.atoll_reef_exploration",
+   "file": "illustrations/atoll_reef_exploration.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 220–221.",
+   "alt": "Схема: признаки геологические материалы, геофизические материалы, предполагаемые размеры и форма рифа; правило: Если материалы позволяют предполагать относительно крупный плосковершинный или атолловидный риф, первые скважины размещают на периферии предполагаемой ловушки.; вывод: Бурение в центре переносят на второй этап оценочных работ.",
+   "source": "учебный слой, стр. 220, стр. 221",
+   "claim_ids": [
+    "kuznetsov.atoll_reef_exploration#c1",
+    "kuznetsov.atoll_reef_exploration#c2",
+    "kuznetsov.atoll_reef_exploration#c3",
+    "kuznetsov.atoll_reef_exploration#c4",
+    "kuznetsov.atoll_reef_exploration#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.asymmetric_reef_exploration",
+   "step_id": "kuznetsov.asymmetric_reef_exploration",
+   "node_id": "kuznetsov.asymmetric_reef_exploration",
+   "file": "illustrations/asymmetric_reef_exploration.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 221.",
+   "alt": "Схема: признаки положение участка в современной структуре, положение относительно фронтальной части рифа, признаки улучшенных коллекторских свойств; правило: Первые скважины обычно размещают на наиболее приподнятом участке; допустимо смещение к фронтальным частям.; вывод: Исследовать фронтально-рифовые фации, где могут находиться лучшие коллекторские толщи.",
+   "source": "учебный слой, стр. 221",
+   "claim_ids": [
+    "kuznetsov.asymmetric_reef_exploration#c1",
+    "kuznetsov.asymmetric_reef_exploration#c2",
+    "kuznetsov.asymmetric_reef_exploration#c3",
+    "kuznetsov.asymmetric_reef_exploration#c4",
+    "kuznetsov.asymmetric_reef_exploration#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.critical_closure_direction",
+   "step_id": "kuznetsov.critical_closure_direction",
+   "node_id": "kuznetsov.critical_closure_direction",
+   "file": "illustrations/critical_closure_direction.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 214–221.",
+   "alt": "Схема: признаки положение тыльно-рифовой и предрифовой зон, направление регионального наклона, положение предрифовых фаций относительно рифовых; правило: Обычно критическое направление изучают в тыльно-рифовой зоне; при противоположном наклоне и более высоком положении предрифовых фаций — в предрифовой.; вывод: Выбранная для изучения зона указывает, где искать наиболее слабое замыкание ловушки.",
+   "source": "учебный слой, стр. 214, стр. 221",
+   "claim_ids": [
+    "kuznetsov.critical_closure_direction#c1",
+    "kuznetsov.critical_closure_direction#c2",
+    "kuznetsov.critical_closure_direction#c3",
+    "kuznetsov.critical_closure_direction#c4",
+    "kuznetsov.critical_closure_direction#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.well_spacing_principle",
+   "step_id": "kuznetsov.well_spacing_principle",
+   "node_id": "kuznetsov.well_spacing_principle",
+   "file": "illustrations/well_spacing_principle.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 222.",
+   "alt": "Схема механизма: Мощность и объем залежи уменьшаются от центра к крыльям → равномерная по площади сетка освещает объем неравномерно → концентрация скважин в своде дает больше данных о главной части запасов",
+   "source": "учебный слой, стр. 222",
+   "claim_ids": [
+    "kuznetsov.well_spacing_principle#c1",
+    "kuznetsov.well_spacing_principle#c2",
+    "kuznetsov.well_spacing_principle#c3",
+    "kuznetsov.well_spacing_principle#c4",
+    "kuznetsov.well_spacing_principle#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.reef_well_patterns",
+   "step_id": "kuznetsov.reef_well_patterns",
+   "node_id": "kuznetsov.reef_well_patterns",
+   "file": "illustrations/reef_well_patterns.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 215–222.",
+   "alt": "Схема: признаки Форма рифа, Форма залежи, Размер рифа, Принадлежность залежи ко второй группе; правило: Симметричным конусовидным и подковообразным формам соответствует многоствольная система; плосковершинной и атолловидной — кольцевая; форме с уплощённой вершиной — профильная. Для небольших куполовидных рифов специальная сетка часто нерентабельна.; вывод: Форма залежи помогает выбрать схему разведки и расположение скважин.",
+   "source": "учебный слой, стр. 215, стр. 222",
+   "claim_ids": [
+    "kuznetsov.reef_well_patterns#c1",
+    "kuznetsov.reef_well_patterns#c2",
+    "kuznetsov.reef_well_patterns#c3",
+    "kuznetsov.reef_well_patterns#c4",
+    "kuznetsov.reef_well_patterns#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  }
+ ]
+}

@@ -1,0 +1,509 @@
+{
+ "chapter": "baraboshkin_par1-2",
+ "illustrations": [
+  {
+   "id": "ill.delta_structure",
+   "step_id": "baraboshkin.delta_structure",
+   "node_id": "baraboshkin.delta_structure",
+   "file": "illustrations/delta_structure.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 30–31.",
+   "alt": "Схема механизма: Река приносит обломочный материал к базису эрозии, где возникает конус выноса. → Взаимодействие речных и бассейновых процессов, стока, климата, тектоники, рельефа, волн и приливов определяет геометрию дельты. → Субаэральная часть образует дельтовую равнину; под водой авандельта крутонаклонная и грубообломочная, а продельта пологая и тонкообломочная.",
+   "source": "учебный слой, стр. 30, стр. 31",
+   "claim_ids": [
+    "baraboshkin.delta_structure#c1",
+    "baraboshkin.delta_structure#c2",
+    "baraboshkin.delta_structure#c3",
+    "baraboshkin.delta_structure#c4",
+    "baraboshkin.delta_structure#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.delta_types",
+   "step_id": "baraboshkin.delta_types",
+   "node_id": "baraboshkin.delta_types",
+   "file": "illustrations/delta_types.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 31.",
+   "alt": "Схема механизма: Взаимодействие речных и бассейновых процессов формирует динамику фронта дельты → морфология этой границы отражает взаимодействие",
+   "source": "учебный слой, стр. 31",
+   "claim_ids": [
+    "baraboshkin.delta_types#c1",
+    "baraboshkin.delta_types#c2",
+    "baraboshkin.delta_types#c3",
+    "baraboshkin.delta_types#c4",
+    "baraboshkin.delta_types#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.delta_depots",
+   "step_id": "baraboshkin.delta_depots",
+   "node_id": "baraboshkin.delta_depots",
+   "file": "illustrations/delta_depots.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 31–32.",
+   "alt": "Схема механизма: Осадочное тело дельты ограничено по площади → около устья крупной реки формируется депоцентр. Продвижение и отмирание дельты или её лопастей повторяются → разрезы внутри депоцентра часто имеют циклическое строение. Долговременные колебания поступления осадков, погружения и уровня моря → в крупных долго существующих дельтах могут возникать серии депоцентров",
+   "source": "учебный слой, стр. 31, стр. 32",
+   "claim_ids": [
+    "baraboshkin.delta_depots#c1",
+    "baraboshkin.delta_depots#c2",
+    "baraboshkin.delta_depots#c3",
+    "baraboshkin.delta_depots#c4",
+    "baraboshkin.delta_depots#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.delta_facies",
+   "step_id": "baraboshkin.delta_facies",
+   "node_id": "baraboshkin.delta_facies",
+   "file": "illustrations/delta_facies.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 32.",
+   "alt": "Схема механизма: Фации группируются в парагенезы → парагенезы отражают тип дельты и стадию её развития. Накопление осадков в протоках и между ними формирует ассоциацию дельтовой равнины → она бывает флювиальной или приливной",
+   "source": "учебный слой, стр. 32",
+   "claim_ids": [
+    "baraboshkin.delta_facies#c1",
+    "baraboshkin.delta_facies#c2",
+    "baraboshkin.delta_facies#c3",
+    "baraboshkin.delta_facies#c4",
+    "baraboshkin.delta_facies#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.front_progradation",
+   "step_id": "baraboshkin.front_progradation",
+   "node_id": "baraboshkin.front_progradation",
+   "file": "illustrations/front_progradation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 32–33.",
+   "alt": "Схема механизма: Фронт дельты продвигается → формируется переход от мелкозернистых фаций авандельты или продельты к береговым фациям с преобладанием песчаников. Флювиальные или приливные каналы могут срезать эти разрезы",
+   "source": "учебный слой, стр. 32, стр. 33",
+   "claim_ids": [
+    "baraboshkin.front_progradation#c1",
+    "baraboshkin.front_progradation#c2",
+    "baraboshkin.front_progradation#c3",
+    "baraboshkin.front_progradation#c4",
+    "baraboshkin.front_progradation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.abandonment_facies",
+   "step_id": "baraboshkin.abandonment_facies",
+   "node_id": "baraboshkin.abandonment_facies",
+   "file": "illustrations/abandonment_facies.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 33.",
+   "alt": "Схема механизма: Отмирание всей дельты или отдельной лопасти приводит к накоплению фаций отмирания. → Низкая скорость осадконакопления связана с формированием тонких маркирующих слоёв, которые можно сопоставлять между разрезами.",
+   "source": "учебный слой, стр. 33",
+   "claim_ids": [
+    "baraboshkin.abandonment_facies#c1",
+    "baraboshkin.abandonment_facies#c2",
+    "baraboshkin.abandonment_facies#c3",
+    "baraboshkin.abandonment_facies#c4",
+    "baraboshkin.abandonment_facies#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.bay_fill",
+   "step_id": "baraboshkin.bay_fill",
+   "node_id": "baraboshkin.bay_fill",
+   "file": "illustrations/bay_fill.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 34.",
+   "alt": "Схема механизма: Во время паводков взвесь осаждается по всей внутридельтовой области → формируются аргиллиты и алевролиты в основании разреза. Повторные заполнения отражаются серией разрезов; обычно их верхняя часть содержит песчаники",
+   "source": "учебный слой, стр. 34",
+   "claim_ids": [
+    "baraboshkin.bay_fill#c1",
+    "baraboshkin.bay_fill#c2",
+    "baraboshkin.bay_fill#c3",
+    "baraboshkin.bay_fill#c4",
+    "baraboshkin.bay_fill#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.levees_splays",
+   "step_id": "baraboshkin.levees_splays",
+   "node_id": "baraboshkin.levees_splays",
+   "file": "illustrations/levees_splays.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 35.",
+   "alt": "Схема механизма: Паводок приносит песок и размывает основание слоя; при ослаблении потока оседают более мелкие зерна, затем взвесь образует аргиллиты и алевролиты. → Крупный конус осаждает около метра осадка за один раз, поэтому залив быстро мелеет, может запрудиться и осушиться.",
+   "source": "учебный слой, стр. 35",
+   "claim_ids": [
+    "baraboshkin.levees_splays#c1",
+    "baraboshkin.levees_splays#c2",
+    "baraboshkin.levees_splays#c3",
+    "baraboshkin.levees_splays#c4",
+    "baraboshkin.levees_splays#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.bay_bars",
+   "step_id": "baraboshkin.bay_bars",
+   "node_id": "baraboshkin.bay_bars",
+   "file": "illustrations/bay_bars.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 35.",
+   "alt": "Схема: признаки Укрупнение зерна вверх, Поверхности размыва, Глинистые прослои, Следы временных донных форм; правило: По главе, укрупнение зерна вверх в разрезе устьевого бара отражает усиление влияния течений волочения; признаки заполнения канала промоины включают размывы, глинистые прослои и следы донных форм.; вывод: Совокупность признаков помогает интерпретировать разрезы баров и каналов внутри заливов.",
+   "source": "учебный слой, стр. 35",
+   "claim_ids": [
+    "baraboshkin.bay_bars#c1",
+    "baraboshkin.bay_bars#c2",
+    "baraboshkin.bay_bars#c3",
+    "baraboshkin.bay_bars#c4",
+    "baraboshkin.bay_bars#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.fluvial_channel_example",
+   "step_id": "baraboshkin.fluvial_channel_example",
+   "node_id": "baraboshkin.fluvial_channel_example",
+   "file": "illustrations/fluvial_channel_example.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 36.",
+   "alt": "Схема механизма: Размыв формирует врезы и поверхности эрозии → они указывают на глубинную эрозию русла. Перенос и отложение осадка создают слоистые песчаники и ритмичные элементы; разливы наращивают пойму и могут разъединять русло",
+   "source": "учебный слой, стр. 36",
+   "claim_ids": [
+    "baraboshkin.fluvial_channel_example#c1",
+    "baraboshkin.fluvial_channel_example#c2",
+    "baraboshkin.fluvial_channel_example#c3",
+    "baraboshkin.fluvial_channel_example#c4",
+    "baraboshkin.fluvial_channel_example#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.distributary_deposits",
+   "step_id": "baraboshkin.distributary_deposits",
+   "node_id": "baraboshkin.distributary_deposits",
+   "file": "illustrations/distributary_deposits.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 36–38.",
+   "alt": "Схема механизма: Более постоянная разгрузка формирует разрез, подобный речному руслу; извилистый рукав размывает основание, где могут сохраняться внутриформационные конгломераты. → Перехват рукава, или авульсия, ведёт к его отмиранию; вверх по разрезу размер зерен уменьшается.",
+   "source": "учебный слой, стр. 36, стр. 37, стр. 38",
+   "claim_ids": [
+    "baraboshkin.distributary_deposits#c1",
+    "baraboshkin.distributary_deposits#c2",
+    "baraboshkin.distributary_deposits#c3",
+    "baraboshkin.distributary_deposits#c4",
+    "baraboshkin.distributary_deposits#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.channel_instability",
+   "step_id": "baraboshkin.channel_instability",
+   "node_id": "baraboshkin.channel_instability",
+   "file": "illustrations/channel_instability.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 38–39.",
+   "alt": "Схема механизма: Неустойчивость дельтового рукава → его существование длится меньше, чем существование речного русла. Если поверхность скольжения уходит ниже основания протоки → сползшие осадки могут сохраниться ниже фаций русла",
+   "source": "учебный слой, стр. 38, стр. 39",
+   "claim_ids": [
+    "baraboshkin.channel_instability#c1",
+    "baraboshkin.channel_instability#c2",
+    "baraboshkin.channel_instability#c3",
+    "baraboshkin.channel_instability#c4",
+    "baraboshkin.channel_instability#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.front_lower_section",
+   "step_id": "baraboshkin.front_lower_section",
+   "node_id": "baraboshkin.front_lower_section",
+   "file": "illustrations/front_lower_section.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 39.",
+   "alt": "Схема: признаки Тонкий алевролит со слоистостью ряби, Симметричные знаки ряби с прямыми гребнями, Ровное размытое основание грубозернистого слоя, Переход текстуры от параллельной слоистости к асимметричной ряби; правило: Тонкие алевролиты со слоистостью ряби указывают на переход к условиям выше базиса действия волн. Симметричные знаки ряби с прямыми гребнями свидетельствуют о послепаводковой волновой переработке.; вывод: Описанные признаки позволяют интерпретировать переход условий и волновую переработку после паводка.",
+   "source": "учебный слой, стр. 39",
+   "claim_ids": [
+    "baraboshkin.front_lower_section#c1",
+    "baraboshkin.front_lower_section#c2",
+    "baraboshkin.front_lower_section#c3",
+    "baraboshkin.front_lower_section#c4",
+    "baraboshkin.front_lower_section#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.front_upper_section",
+   "step_id": "baraboshkin.front_upper_section",
+   "node_id": "baraboshkin.front_upper_section",
+   "file": "illustrations/front_upper_section.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 39.",
+   "alt": "Схема: признаки Постепенный переход в основании слоя, Изменение скорости потока вверх по разрезу; правило: Постепенный переход в основании некоторых слоёв свидетельствует об увеличении скорости потока вверх по разрезу.; вывод: Такое строение связано с более плавным развитием паводка.",
+   "source": "учебный слой, стр. 39",
+   "claim_ids": [
+    "baraboshkin.front_upper_section#c1",
+    "baraboshkin.front_upper_section#c2",
+    "baraboshkin.front_upper_section#c3",
+    "baraboshkin.front_upper_section#c4",
+    "baraboshkin.front_upper_section#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.fluvial_abandonment",
+   "step_id": "baraboshkin.fluvial_abandonment",
+   "node_id": "baraboshkin.fluvial_abandonment",
+   "file": "illustrations/fluvial_abandonment.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 39–40.",
+   "alt": "Схема механизма: Снижение скорости осадконакопления сопровождается интенсивной биотурбацией нижней и средней частей фронта. → При отмирании в разных частях дельты формируются разные отложения: песчаники во фронте, тонкий горизонт аргиллитов и алевролитов на равнине, а в её верхней части поверхность осушается.",
+   "source": "учебный слой, стр. 39, стр. 40",
+   "claim_ids": [
+    "baraboshkin.fluvial_abandonment#c1",
+    "baraboshkin.fluvial_abandonment#c2",
+    "baraboshkin.fluvial_abandonment#c3",
+    "baraboshkin.fluvial_abandonment#c4",
+    "baraboshkin.fluvial_abandonment#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.wave_delta_sections",
+   "step_id": "baraboshkin.wave_delta_sections",
+   "node_id": "baraboshkin.wave_delta_sections",
+   "file": "illustrations/wave_delta_sections.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 40.",
+   "alt": "Схема механизма: Пляжево-баровое побережье защищает равнину от сильных штормов → её отложения близки отложениям флювиальной дельты. Штормы могут создавать турбидиты у основания фронта; выше преобладают хорошо сортированные песчаники",
+   "source": "учебный слой, стр. 40",
+   "claim_ids": [
+    "baraboshkin.wave_delta_sections#c1",
+    "baraboshkin.wave_delta_sections#c2",
+    "baraboshkin.wave_delta_sections#c3",
+    "baraboshkin.wave_delta_sections#c4",
+    "baraboshkin.wave_delta_sections#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.wave_delta_coast",
+   "step_id": "baraboshkin.wave_delta_coast",
+   "node_id": "baraboshkin.wave_delta_coast",
+   "file": "illustrations/wave_delta_coast.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 40–41.",
+   "alt": "Схема механизма: Волновые процессы перераспределяют осадок → береговая линия становится правильной, а изобаты идут параллельно ей. Переработка после отмирания дельты → разрезы фронта широко сохраняются неполными, а песчаники рукавов остаются локально",
+   "source": "учебный слой, стр. 40, стр. 41",
+   "claim_ids": [
+    "baraboshkin.wave_delta_coast#c1",
+    "baraboshkin.wave_delta_coast#c2",
+    "baraboshkin.wave_delta_coast#c3",
+    "baraboshkin.wave_delta_coast#c4",
+    "baraboshkin.wave_delta_coast#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tidal_delta_morphology",
+   "step_id": "baraboshkin.tidal_delta_morphology",
+   "node_id": "baraboshkin.tidal_delta_morphology",
+   "file": "illustrations/tidal_delta_morphology.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 41.",
+   "alt": "Схема механизма: Приливное течение подпруживает речной поток у разветвлений рукавов → значительная часть твердого стока осаждается → формируется комплекс внутренних дельт",
+   "source": "учебный слой, стр. 41",
+   "claim_ids": [
+    "baraboshkin.tidal_delta_morphology#c1",
+    "baraboshkin.tidal_delta_morphology#c2",
+    "baraboshkin.tidal_delta_morphology#c3",
+    "baraboshkin.tidal_delta_morphology#c4",
+    "baraboshkin.tidal_delta_morphology#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tidal_example_upper",
+   "step_id": "baraboshkin.tidal_example_upper",
+   "node_id": "baraboshkin.tidal_example_upper",
+   "file": "illustrations/tidal_example_upper.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 42.",
+   "alt": "Схема механизма: Разливы накапливали пойменные осадки; чередование затопления и осушения оставляло признаки обоих процессов. → В русле сильные изменчивые течения переносили песок и образовывали линейные «дюны», а конгломерат оставался в глубоких частях русла.",
+   "source": "учебный слой, стр. 42",
+   "claim_ids": [
+    "baraboshkin.tidal_example_upper#c1",
+    "baraboshkin.tidal_example_upper#c2",
+    "baraboshkin.tidal_example_upper#c3",
+    "baraboshkin.tidal_example_upper#c4",
+    "baraboshkin.tidal_example_upper#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tidal_example_lower",
+   "step_id": "baraboshkin.tidal_example_lower",
+   "node_id": "baraboshkin.tidal_example_lower",
+   "file": "illustrations/tidal_example_lower.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 42.",
+   "alt": "Схема механизма: Приливно-отливное воздействие сопровождает изменчивые течения в руслах → возникают размывы, а песок и алевролит накапливаются отдельными прослоями. В горизонте 5 течения разделяют медленную и движущуюся воду; на днище образуются глинистые и песчаные отмели с «дюнами»",
+   "source": "учебный слой, стр. 42",
+   "claim_ids": [
+    "baraboshkin.tidal_example_lower#c1",
+    "baraboshkin.tidal_example_lower#c2",
+    "baraboshkin.tidal_example_lower#c3",
+    "baraboshkin.tidal_example_lower#c4",
+    "baraboshkin.tidal_example_lower#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tidal_channel_section",
+   "step_id": "baraboshkin.tidal_channel_section",
+   "node_id": "baraboshkin.tidal_channel_section",
+   "file": "illustrations/tidal_channel_section.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 42–43.",
+   "alt": "Схема: признаки Грубый внутриформационный галечник с фрагментами морской фауны, Косая слоистость с уменьшением масштаба вверх, Утонение и увеличение глинистого материала вверх, Обратимые направления палеотечений; правило: Сочетание этих признаков характерно для приливных отложений и приливных рукавов.; вывод: Разрез интерпретируют как приливный рукав или приливные отложения с учётом описанных фаций.",
+   "source": "учебный слой, стр. 42, стр. 43",
+   "claim_ids": [
+    "baraboshkin.tidal_channel_section#c1",
+    "baraboshkin.tidal_channel_section#c2",
+    "baraboshkin.tidal_channel_section#c3",
+    "baraboshkin.tidal_channel_section#c4",
+    "baraboshkin.tidal_channel_section#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.tidal_sand_bodies",
+   "step_id": "baraboshkin.tidal_sand_bodies",
+   "node_id": "baraboshkin.tidal_sand_bodies",
+   "file": "illustrations/tidal_sand_bodies.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 43.",
+   "alt": "Схема механизма: Внутри проток фации последовательно меняются от комплекса проток к устьевым барам, затем к проксимальным и дистальным песчаным грядам. → На дистальных грядах осадка меньше, а приливные течения слабее. → Размеры и форма рукавов вместе с их латеральной миграцией определяют форму и размеры песчаных тел.",
+   "source": "учебный слой, стр. 43",
+   "claim_ids": [
+    "baraboshkin.tidal_sand_bodies#c1",
+    "baraboshkin.tidal_sand_bodies#c2",
+    "baraboshkin.tidal_sand_bodies#c3",
+    "baraboshkin.tidal_sand_bodies#c4",
+    "baraboshkin.tidal_sand_bodies#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tidal_interchannel_areas",
+   "step_id": "baraboshkin.tidal_interchannel_areas",
+   "node_id": "baraboshkin.tidal_interchannel_areas",
+   "file": "illustrations/tidal_interchannel_areas.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 43–44.",
+   "alt": "Схема механизма: Приливные рукава и мелкие каналы расчленяют литорали → формируются мангровые болота с мелкомасштабными разрезами. Заполнение каналов → местами образуются глинистые пробки. В аридном климате → могут возникать отмели и соляные ванны",
+   "source": "учебный слой, стр. 43, стр. 44",
+   "claim_ids": [
+    "baraboshkin.tidal_interchannel_areas#c1",
+    "baraboshkin.tidal_interchannel_areas#c2",
+    "baraboshkin.tidal_interchannel_areas#c3",
+    "baraboshkin.tidal_interchannel_areas#c4",
+    "baraboshkin.tidal_interchannel_areas#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.tidal_front_ridges",
+   "step_id": "baraboshkin.tidal_front_ridges",
+   "node_id": "baraboshkin.tidal_front_ridges",
+   "file": "illustrations/tidal_front_ridges.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 44.",
+   "alt": "Схема механизма: Паводковые и приливно-отливные течения задают направления донных форм в каналах между грядами. → Отмирание дельты этого типа может привести к образованию обширных заболоченных равнин.",
+   "source": "учебный слой, стр. 44",
+   "claim_ids": [
+    "baraboshkin.tidal_front_ridges#c1",
+    "baraboshkin.tidal_front_ridges#c2",
+    "baraboshkin.tidal_front_ridges#c3",
+    "baraboshkin.tidal_front_ridges#c4",
+    "baraboshkin.tidal_front_ridges#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  }
+ ]
+}

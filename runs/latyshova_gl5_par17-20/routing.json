@@ -1,0 +1,635 @@
+{
+ "chapter": "latyshova_gl5_par17-20",
+ "routes": [
+  {
+   "node_id": "latyshova.gis_tasks",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Пр, видеоёмкость 6/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.drilling_effects",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип М/И, видеоёмкость 6/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.mud_filtration_pressure",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип М/И, видеоёмкость 5/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.filtrate_salinity",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/М, видеоёмкость 6/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.water_drilling",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип И/М, видеоёмкость 4/10 → текст"
+  },
+  {
+   "node_id": "latyshova.nonfiltering_mud",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип И/М, видеоёмкость 4/10 → текст"
+  },
+  {
+   "node_id": "latyshova.section_pore_types",
+   "format": "карточки",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Р/П, видеоёмкость 3/10 → карточки"
+  },
+  {
+   "node_id": "latyshova.collector_variants",
+   "format": "карточки",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Р/П, видеоёмкость 2/10 → карточки"
+  },
+  {
+   "node_id": "latyshova.method_groups",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип И/Пр, видеоёмкость 3/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.productivity_methods",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Ф, видеоёмкость 8/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.combined_method_signals",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/М, видеоёмкость 7/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.build_lithology_column",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.rock_signs_limits",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Н/И, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.rock_table_collectors",
+   "format": "карточки",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Р/И, видеоёмкость 4/10 → карточки"
+  },
+  {
+   "node_id": "latyshova.rock_table_dense",
+   "format": "карточки",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Р/И, видеоёмкость 4/10 → карточки"
+  },
+  {
+   "node_id": "latyshova.lithology_method_choice",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/Н, видеоёмкость 4/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.direct_collector_signs",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/М, видеоёмкость 8/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.radial_resistance_gradient",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.dynamic_indirect_signs",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 6/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.critical_permeability",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Н/Ф, видеоёмкость 3/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.calculate_permeability_limit",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_diffusion",
+   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.effective_thickness_cutoffs",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.saturation_parameter",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип И/Ф, видеоёмкость 4/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.resistance_saturation_limits",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Н/И, видеоёмкость 4/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.porosity_resistance_comparison",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Пр, видеоёмкость 5/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.saturation_graph_regions",
+   "format": "карточки",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Р/Н, видеоёмкость 7/10 → карточки"
+  },
+  {
+   "node_id": "latyshova.saturation_cutoffs",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Н/Ф, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.derive_saturation_cutoffs",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/Н, видеоёмкость 7/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.phase_flow_ranges",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_diffusion",
+   "why": "тип Ф/Н, видеоёмкость 6/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.clay_saturation_thresholds",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_diffusion",
+   "why": "тип Ф/Н, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.clay_saturation_examples",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/Р, видеоёмкость 4/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.productive_interval_thickness",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип П/Пр, видеоёмкость 4/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.fluid_contact_position",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 7/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.noncollector_interbeds",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип П/И, видеоёмкость 6/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.thin_bed_resistivity",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_diffusion",
+   "why": "тип Ф/Пр, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.thin_bed_sp",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/И, видеоёмкость 4/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.mixed_thin_interbeds",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_diffusion",
+   "why": "тип Ф/И, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.carbonate_collector_difficulties",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Н, видеоёмкость 7/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.carbonate_curve_normalization",
+   "format": "шортс",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "why": "тип И/Пр, видеоёмкость 6/10 → шортс"
+  },
+  {
+   "node_id": "latyshova.carbonate_section_example",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Пр/Р, видеоёмкость 6/10 → практикум на данных"
+  },
+  {
+   "node_id": "latyshova.carbonate_porosity_cutoff",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Н/И, видеоёмкость 5/10 → интерактив"
+  },
+  {
+   "node_id": "latyshova.regional_porosity_examples",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "why": "тип Н/Р, видеоёмкость 3/10 → интерактив"
+  }
+ ]
+}

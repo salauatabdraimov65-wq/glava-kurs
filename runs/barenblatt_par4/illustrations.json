@@ -1,0 +1,467 @@
+{
+ "chapter": "barenblatt_par4",
+ "illustrations": [
+  {
+   "id": "ill.pressure_diffusion_basics",
+   "step_id": "barenblatt.pressure_diffusion_basics",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "file": "illustrations/pressure_diffusion_basics.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 39.",
+   "alt": "Схема процедуры: 1. Определить область пласта, где ищется давление.; 2. Задать граничные условия на непроницаемых границах, скважинах, галереях или контурах питания.; 3. Задать начальное распределение давления при t = 0.; 4. Решить уравнение пьезопроводности с заданными условиями.",
+   "source": "учебный слой, стр. 39",
+   "claim_ids": [
+    "barenblatt.pressure_diffusion_basics#c1",
+    "barenblatt.pressure_diffusion_basics#c2",
+    "barenblatt.pressure_diffusion_basics#c3",
+    "barenblatt.pressure_diffusion_basics#c4",
+    "barenblatt.pressure_diffusion_basics#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.linear_flow_laplace",
+   "step_id": "barenblatt.linear_flow_laplace",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "file": "illustrations/linear_flow_laplace.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 39–40.",
+   "alt": "Схема процедуры: 1. Вычесть стационарное давление P₀(x), получив разность P=p−P₀.; 2. Задать начальное условие P(x,0)=0 и граничные условия на x=0 и x=L.; 3. Ввести преобразование Лапласа по времени.; 4. Решить краевую задачу для изображения давления P̄.",
+   "source": "учебный слой, стр. 39, стр. 40",
+   "claim_ids": [
+    "barenblatt.linear_flow_laplace#c1",
+    "barenblatt.linear_flow_laplace#c2",
+    "barenblatt.linear_flow_laplace#c3",
+    "barenblatt.linear_flow_laplace#c4",
+    "barenblatt.linear_flow_laplace#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.short_time_response",
+   "step_id": "barenblatt.short_time_response",
+   "node_id": "barenblatt.short_time_response",
+   "file": "illustrations/short_time_response.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 40–41.",
+   "alt": "Схема процедуры: 1. Задать скачок давления p⁰ на границе x=0.; 2. Записать изображение заданного давления как p⁰/σ.; 3. Для малых времён разложить решение в ряд экспонент при 2L√(σ/κ) ≫ 1.; 4. Почленно обратить ряд и получить ряд функций erfc.; 5. При κt ≪ L² оставить член p⁰ erfc[x/(2√(κt))].; 6. Для произвольного граничного давления f(t) применить интеграл Дюамеля.",
+   "source": "учебный слой, стр. 40, стр. 41",
+   "claim_ids": [
+    "barenblatt.short_time_response#c1",
+    "barenblatt.short_time_response#c2",
+    "barenblatt.short_time_response#c3",
+    "barenblatt.short_time_response#c4",
+    "barenblatt.short_time_response#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.steady_state_timescale",
+   "step_id": "barenblatt.steady_state_timescale",
+   "node_id": "barenblatt.steady_state_timescale",
+   "file": "illustrations/steady_state_timescale.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 41–42.",
+   "alt": "Схема процедуры: 1. Определить элементы системы, для которых оценивается установление течения.; 2. Для каждого элемента оценить его характерное время по размеру L и коэффициенту κ.; 3. Отделить элементы, движение в которых можно считать стационарным, от элементов на начальной стадии нестационарного процесса.",
+   "source": "учебный слой, стр. 41, стр. 42",
+   "claim_ids": [
+    "barenblatt.steady_state_timescale#c1",
+    "barenblatt.steady_state_timescale#c2",
+    "barenblatt.steady_state_timescale#c3",
+    "barenblatt.steady_state_timescale#c4",
+    "barenblatt.steady_state_timescale#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.radial_flow_model",
+   "step_id": "barenblatt.radial_flow_model",
+   "node_id": "barenblatt.radial_flow_model",
+   "file": "illustrations/radial_flow_model.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 42.",
+   "alt": "Схема механизма: Радиальная симметрия сводит описание движения к зависимости давления от радиуса и времени. → Линейность позволяет рассматривать отклонение от стационарного давления; преобразование Лапласа переводит радиальное уравнение в уравнение для изображения давления.",
+   "source": "учебный слой, стр. 42",
+   "claim_ids": [
+    "barenblatt.radial_flow_model#c1",
+    "barenblatt.radial_flow_model#c2",
+    "barenblatt.radial_flow_model#c3",
+    "barenblatt.radial_flow_model#c4",
+    "barenblatt.radial_flow_model#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.constant_rate_solution",
+   "step_id": "barenblatt.constant_rate_solution",
+   "node_id": "barenblatt.constant_rate_solution",
+   "file": "illustrations/constant_rate_solution.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 42–43.",
+   "alt": "Схема механизма: Постоянный дебит задаёт радиальный градиент давления у скважины → граничные условия определяют выражение для изображения давления → подходящие отношения радиусов и времени позволяют упростить его асимптотиками функций Бесселя",
+   "source": "учебный слой, стр. 42, стр. 43",
+   "claim_ids": [
+    "barenblatt.constant_rate_solution#c1",
+    "barenblatt.constant_rate_solution#c2",
+    "barenblatt.constant_rate_solution#c3",
+    "barenblatt.constant_rate_solution#c4",
+    "barenblatt.constant_rate_solution#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.radial_pressure_response",
+   "step_id": "barenblatt.radial_pressure_response",
+   "node_id": "barenblatt.radial_pressure_response",
+   "file": "illustrations/radial_pressure_response.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 43.",
+   "alt": "Схема процедуры: 1. Записать преобразование Лапласа давления по формуле (II.105).; 2. Для давления на скважине использовать формулу (II.106).; 3. Перейти к давлению во времени, используя таблицы преобразований Лапласа и связь преобразования функции с преобразованием её производной.; 4. Для давления на скважине применить указанное в главе асимптотическое выражение и формулу (II.108).; 5. Использовать формулы (II.107) и (II.108) для определения параметров пласта по данным о нестационарном притоке.",
+   "source": "учебный слой, стр. 43",
+   "claim_ids": [
+    "barenblatt.radial_pressure_response#c1",
+    "barenblatt.radial_pressure_response#c2",
+    "barenblatt.radial_pressure_response#c3",
+    "barenblatt.radial_pressure_response#c4",
+    "barenblatt.radial_pressure_response#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.pressure_buildup_test",
+   "step_id": "barenblatt.pressure_buildup_test",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "file": "illustrations/pressure_buildup_test.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 43–44.",
+   "alt": "Схема: признаки Наклон A графика p от ln t, Свободный член B, Известный дебит Q; правило: Для прямолинейной асимптоты p = A ln t + B при известном Q параметры A и B позволяют оценить kh/μ и π/ρ².; вывод: Получают оценку гидропроводности пласта и отношения π/ρ².",
+   "source": "учебный слой, стр. 43, стр. 44",
+   "claim_ids": [
+    "barenblatt.pressure_buildup_test#c1",
+    "barenblatt.pressure_buildup_test#c2",
+    "barenblatt.pressure_buildup_test#c3",
+    "barenblatt.pressure_buildup_test#c4",
+    "barenblatt.pressure_buildup_test#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.interference_test_method",
+   "step_id": "barenblatt.interference_test_method",
+   "node_id": "barenblatt.interference_test_method",
+   "file": "illustrations/interference_test_method.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 44–45.",
+   "alt": "Схема процедуры: 1. Изменить дебит возмущающей скважины скачком.; 2. Наблюдать изменение давления в реагирующей скважине, которая не работала при изменении дебита.; 3. Зафиксировать время t₁ касания кривой Δp(t) прямой из начала координат.; 4. Рассчитать пьезопроводность: κ=0,57r²/t₁.",
+   "source": "учебный слой, стр. 44, стр. 45",
+   "claim_ids": [
+    "barenblatt.interference_test_method#c1",
+    "barenblatt.interference_test_method#c2",
+    "barenblatt.interference_test_method#c3",
+    "barenblatt.interference_test_method#c4",
+    "barenblatt.interference_test_method#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.test_model_limits",
+   "step_id": "barenblatt.test_model_limits",
+   "node_id": "barenblatt.test_model_limits",
+   "file": "illustrations/test_model_limits.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 45.",
+   "alt": "Схема: признаки кривая p(ln t), время достижения возмущением границ, время дополнительного притока после остановки; правило: Время выхода на асимптоту не должно превышать время дополнительного притока; при нарушении простая обработка может быть неприменима.; вывод: Прямолинейный участок может отсутствовать, и следует учитывать приток после остановки.",
+   "source": "учебный слой, стр. 45",
+   "claim_ids": [
+    "barenblatt.test_model_limits#c1",
+    "barenblatt.test_model_limits#c2",
+    "barenblatt.test_model_limits#c3",
+    "barenblatt.test_model_limits#c4",
+    "barenblatt.test_model_limits#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.laplace_response_function",
+   "step_id": "barenblatt.laplace_response_function",
+   "node_id": "barenblatt.laplace_response_function",
+   "file": "illustrations/laplace_response_function.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 45–46.",
+   "alt": "Схема: признаки Преобразованное давление на скважине, Преобразованный дебит; правило: ψ(σ) = преобразованное давление на скважине / преобразованный дебит.; вывод: По виду ψ(σ) можно определить некоторые параметры пласта.",
+   "source": "учебный слой, стр. 45, стр. 46",
+   "claim_ids": [
+    "barenblatt.laplace_response_function#c1",
+    "barenblatt.laplace_response_function#c2",
+    "barenblatt.laplace_response_function#c3",
+    "barenblatt.laplace_response_function#c4",
+    "barenblatt.laplace_response_function#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.laplace_curve_analysis",
+   "step_id": "barenblatt.laplace_curve_analysis",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "file": "illustrations/laplace_curve_analysis.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 46.",
+   "alt": "Схема: признаки Наклон Ψ(ln τ), Свободный член Ψ(ln τ); правило: Коэффициенты прямой в формуле (II.115) содержат параметры пласта.; вывод: По коэффициентам можно определить некоторые параметры пласта.",
+   "source": "учебный слой, стр. 46",
+   "claim_ids": [
+    "barenblatt.laplace_curve_analysis#c1",
+    "barenblatt.laplace_curve_analysis#c2",
+    "barenblatt.laplace_curve_analysis#c3",
+    "barenblatt.laplace_curve_analysis#c4",
+    "barenblatt.laplace_curve_analysis#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.two_zone_response",
+   "step_id": "barenblatt.two_zone_response",
+   "node_id": "barenblatt.two_zone_response",
+   "file": "illustrations/two_zone_response.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 46–47.",
+   "alt": "Схема механизма: Причина: скважина окружена зоной с параметрами k₁ и κ₁, отличными от параметров внешнего пласта k₂ и κ₂. → Следствие: при промежуточных временах отклик связан с внутренней зоной, а при больших временах — с внешней; преобразованная кривая соответствует эквивалентному радиусу ρ*.",
+   "source": "учебный слой, стр. 46, стр. 47",
+   "claim_ids": [
+    "barenblatt.two_zone_response#c1",
+    "barenblatt.two_zone_response#c2",
+    "barenblatt.two_zone_response#c3",
+    "barenblatt.two_zone_response#c4",
+    "barenblatt.two_zone_response#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.approximation_motivation",
+   "step_id": "barenblatt.approximation_motivation",
+   "node_id": "barenblatt.approximation_motivation",
+   "file": "illustrations/approximation_motivation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 47.",
+   "alt": "Схема механизма: Параболические уравнения сглаживают начальные возмущения со временем и вдали от источника → основная часть области остаётся близкой к невозмущённому состоянию. Если важны главным образом интегральные характеристики, приближённое решение может быть достаточным",
+   "source": "учебный слой, стр. 47",
+   "claim_ids": [
+    "barenblatt.approximation_motivation#c1",
+    "barenblatt.approximation_motivation#c2",
+    "barenblatt.approximation_motivation#c3",
+    "barenblatt.approximation_motivation#c4",
+    "barenblatt.approximation_motivation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.integral_relations_method",
+   "step_id": "barenblatt.integral_relations_method",
+   "node_id": "barenblatt.integral_relations_method",
+   "file": "illustrations/integral_relations_method.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 48.",
+   "alt": "Схема процедуры: 1. В области возмущения скважины заменить исходное уравнение системой интегральных соотношений.; 2. Выбрать полную систему функций по координате x на текущем отрезке.; 3. Представить давление p(x,t) рядом по выбранным функциям.; 4. Получить из интегральных соотношений систему уравнений для коэффициентов ряда.",
+   "source": "учебный слой, стр. 48",
+   "claim_ids": [
+    "barenblatt.integral_relations_method#c1",
+    "barenblatt.integral_relations_method#c2",
+    "barenblatt.integral_relations_method#c3",
+    "barenblatt.integral_relations_method#c4",
+    "barenblatt.integral_relations_method#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.polynomial_pressure_approximation",
+   "step_id": "barenblatt.polynomial_pressure_approximation",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "file": "illustrations/polynomial_pressure_approximation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 48.",
+   "alt": "Схема процедуры: 1. Задать начальное распределение давления p(x, 0) = P + Gx.; 2. Выбрать многочлен для области 0 ≤ x ≤ l; при x ≥ l принять давление равным начальному.; 3. Составить систему из интегральных соотношений, граничного условия при x = 0 и условий при x = l.; 4. Задать непрерывность давления и выбранные условия гладкости на границе.; 5. Решить систему для коэффициентов Pᵢ(t) и положения границы l(t).",
+   "source": "учебный слой, стр. 48",
+   "claim_ids": [
+    "barenblatt.polynomial_pressure_approximation#c1",
+    "barenblatt.polynomial_pressure_approximation#c2",
+    "barenblatt.polynomial_pressure_approximation#c3",
+    "barenblatt.polynomial_pressure_approximation#c4",
+    "barenblatt.polynomial_pressure_approximation#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.pressure_moment_equations",
+   "step_id": "barenblatt.pressure_moment_equations",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "file": "illustrations/pressure_moment_equations.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 48–49.",
+   "alt": "Схема процедуры: 1. Взять систему (II.118).; 2. Применить интегрирование по частям и теорему о дифференцировании определённого интеграла.; 3. Получить соотношения для нулевого, первого и k-го пространственных моментов.",
+   "source": "учебный слой, стр. 48, стр. 49",
+   "claim_ids": [
+    "barenblatt.pressure_moment_equations#c1",
+    "barenblatt.pressure_moment_equations#c2",
+    "barenblatt.pressure_moment_equations#c3",
+    "barenblatt.pressure_moment_equations#c4",
+    "barenblatt.pressure_moment_equations#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.first_flow_approximation",
+   "step_id": "barenblatt.first_flow_approximation",
+   "node_id": "barenblatt.first_flow_approximation",
+   "file": "illustrations/first_flow_approximation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 49.",
+   "alt": "Схема механизма: По формуле первого приближения l растёт как √t, а скорость у x = 0 пропорциональна 1/√t. → Поэтому с течением времени скорость притока уменьшается.",
+   "source": "учебный слой, стр. 49",
+   "claim_ids": [
+    "barenblatt.first_flow_approximation#c1",
+    "barenblatt.first_flow_approximation#c2",
+    "barenblatt.first_flow_approximation#c3",
+    "barenblatt.first_flow_approximation#c4",
+    "barenblatt.first_flow_approximation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.higher_flow_approximations",
+   "step_id": "barenblatt.higher_flow_approximations",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "file": "illustrations/higher_flow_approximations.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 49–50.",
+   "alt": "Схема процедуры: 1. Для второго приближения взять соотношение (II.122) и условие (II.127).; 2. Получить профиль давления и квадрат зоны возмущения по (II.128).; 3. Вычислить скорость фильтрации при x = 0 по (II.129).; 4. Для третьего приближения сравнить вариант с условием (II.127) и вариант без него.",
+   "source": "учебный слой, стр. 49, стр. 50",
+   "claim_ids": [
+    "barenblatt.higher_flow_approximations#c1",
+    "barenblatt.higher_flow_approximations#c2",
+    "barenblatt.higher_flow_approximations#c3",
+    "barenblatt.higher_flow_approximations#c4",
+    "barenblatt.higher_flow_approximations#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.radial_integral_approximation",
+   "step_id": "barenblatt.radial_integral_approximation",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "file": "illustrations/radial_integral_approximation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 50.",
+   "alt": "Схема процедуры: 1. Задать осесимметричную задачу пуска скважины с дебитом q в бесконечном пласте.; 2. Представить давление логарифмическим членом и многочленом по r/l.; 3. Для нулевого приближения положить P₀, P₁ и остальные коэффициенты равными нулю, затем определить l(t) по (II.132).; 4. Для первого приближения использовать (II.132), (II.133) и условия p = 0, ∂p/∂r = 0 при r = l(t).; 5. Сопоставить полученные приближения с точным решением.",
+   "source": "учебный слой, стр. 50",
+   "claim_ids": [
+    "barenblatt.radial_integral_approximation#c1",
+    "barenblatt.radial_integral_approximation#c2",
+    "barenblatt.radial_integral_approximation#c3",
+    "barenblatt.radial_integral_approximation#c4",
+    "barenblatt.radial_integral_approximation#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.bounded_radial_reservoir",
+   "step_id": "barenblatt.bounded_radial_reservoir",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "file": "illustrations/bounded_radial_reservoir.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 50.",
+   "alt": "Схема процедуры: 1. Рассмотреть время t>t₁.; 2. Взять первое приближение разложения (II.131).; 3. Зафиксировать l(t)=R.; 4. Учесть граничное условие p(R,t)=0.; 5. Записать давление по формуле (II.137).",
+   "source": "учебный слой, стр. 50",
+   "claim_ids": [
+    "barenblatt.bounded_radial_reservoir#c1",
+    "barenblatt.bounded_radial_reservoir#c2",
+    "barenblatt.bounded_radial_reservoir#c3",
+    "barenblatt.bounded_radial_reservoir#c4",
+    "barenblatt.bounded_radial_reservoir#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.bounded_reservoir_settling",
+   "step_id": "barenblatt.bounded_reservoir_settling",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "file": "illustrations/bounded_reservoir_settling.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 51.",
+   "alt": "Схема процедуры: 1. Записать первое интегральное соотношение в форме (II.138).; 2. Использовать условие P₀(t₁) = −q.; 3. Получить решение (II.139) для P₀(t).; 4. Подставить P₀(t) в приближённое распределение давления (II.140).",
+   "source": "учебный слой, стр. 51",
+   "claim_ids": [
+    "barenblatt.bounded_reservoir_settling#c1",
+    "barenblatt.bounded_reservoir_settling#c2",
+    "barenblatt.bounded_reservoir_settling#c3",
+    "barenblatt.bounded_reservoir_settling#c4",
+    "barenblatt.bounded_reservoir_settling#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  }
+ ]
+}
