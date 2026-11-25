@@ -9,6 +9,10 @@ const MODE_KEY = 'course-step-modes:' + CHAPTER;
 const NOTES_KEY = 'course-notes:' + CHAPTER;
 const READ_KEY = 'course-read:' + CHAPTER;
 const QUIZ_KEY = 'course-questions:' + CHAPTER;
+const sidebar = document.getElementById('course-sidebar');
+const sidebarToggle = document.getElementById('sidebar-toggle');
+const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+const drawerMedia = matchMedia('(max-width: 1000px)');
 function loadRecord(key) {
   try { const value = JSON.parse(localStorage.getItem(key) || '{}'); return value && typeof value === 'object' && !Array.isArray(value) ? value : {}; } catch (_) { return {}; }
 }
@@ -48,14 +52,14 @@ function syncCourseProgress() {
       changed = true;
       if (done) justCompleted.push(stepId);
     }
-    const nav = [...document.querySelectorAll('.step-link')].find(item => item.dataset.stepId === stepId);
-    if (nav) {
+    const navigationItems = [...document.querySelectorAll('.step-link')].filter(item => item.dataset.stepId === stepId);
+    navigationItems.forEach(nav => {
       const status = done ? 'Пройден' : read || solvedCount ? 'В процессе' : 'Не начат';
       nav.classList.toggle('is-complete', done);
       nav.querySelector('.step-marker').textContent = done ? '✓' : '○';
       nav.querySelector('.lesson-status').textContent = status;
       nav.setAttribute('aria-label', 'Урок ' + (index + 1) + '. ' + nav.querySelector('.step-name').textContent + ', ' + status.toLowerCase());
-    }
+    });
     const reward = step.querySelector('[data-step-reward]');
     if (reward) {
       reward.textContent = solvedCount === stepTasks.length ? 'Все задания урока выполнены' : 'Выполнено заданий: ' + solvedCount + ' из ' + stepTasks.length;
@@ -81,6 +85,10 @@ function syncCourseProgress() {
     updateQuestionControls(step);
   });
   document.getElementById('completed-steps').textContent = completedCount + ' / ' + STEPS.length;
+  document.getElementById('sidebar-completed').textContent = completedCount + ' / ' + STEPS.length;
+  document.getElementById('header-progress').textContent = 'Пройдено уроков: ' + completedCount + ' / ' + STEPS.length;
+  document.getElementById('sidebar-progress-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
+  document.querySelector('.sidebar-track').setAttribute('aria-valuenow', String(completedCount));
   document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
   document.querySelector('.hero-track').setAttribute('aria-valuenow', String(completedCount));
   const resumeButton = document.querySelector('[data-resume]');
@@ -106,15 +114,58 @@ const themeToggle = document.getElementById('theme-toggle');
 function updateThemeButton() { themeToggle.textContent = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'; themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'); }
 themeToggle.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = theme; try { localStorage.setItem(THEME_KEY, theme); } catch (_) {} updateThemeButton(); });
 updateThemeButton();
+function setDrawer(open, returnFocus = true) {
+  const mobile = drawerMedia.matches;
+  const wasOpen = document.body.classList.contains('nav-open');
+  const wasInside = sidebar.contains(document.activeElement);
+  const visible = mobile && Boolean(open);
+  document.body.classList.toggle('nav-open', visible);
+  sidebarToggle.setAttribute('aria-expanded', String(visible));
+  sidebarToggle.setAttribute('aria-label', visible ? 'Закрыть меню курса' : 'Открыть меню курса');
+  sidebar.inert = mobile && !visible;
+  sidebar.setAttribute('aria-hidden', String(mobile && !visible));
+  sidebarBackdrop.hidden = !visible;
+  document.getElementById('course-content').inert = visible;
+  document.querySelector('.masthead').inert = visible;
+  if (visible) {
+    sidebar.setAttribute('role', 'dialog');
+    sidebar.setAttribute('aria-modal', 'true');
+    document.getElementById('sidebar-close').focus({preventScroll: true});
+  } else {
+    sidebar.removeAttribute('role');
+    sidebar.removeAttribute('aria-modal');
+    if (mobile && returnFocus && (wasOpen || wasInside)) sidebarToggle.focus();
+  }
+}
+sidebarToggle.addEventListener('click', () => setDrawer(!document.body.classList.contains('nav-open')));
+document.getElementById('sidebar-close').addEventListener('click', () => setDrawer(false));
+sidebarBackdrop.addEventListener('click', () => setDrawer(false));
+drawerMedia.addEventListener('change', () => setDrawer(false));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && document.body.classList.contains('nav-open')) {
+    event.preventDefault(); setDrawer(false);
+  }
+});
+sidebar.addEventListener('keydown', event => {
+  if (event.key !== 'Tab' || !document.body.classList.contains('nav-open')) return;
+  const controls = [...sidebar.querySelectorAll('button:not(:disabled),a[href],input,select,textarea')].filter(item => item.getClientRects().length > 0);
+  const first = controls[0], last = controls[controls.length - 1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+});
+setDrawer(false, false);
 let activeView = 'overview';
 try { activeView = localStorage.getItem(VIEW_KEY) || 'overview'; } catch (_) {}
 if (!['overview', 'course', 'cards', 'map', 'summary'].includes(activeView)) activeView = 'overview';
 function setView(name) {
+  setDrawer(false, false);
   activeView = name;
   document.querySelectorAll('.app-view').forEach(view => view.hidden = view.id !== name + '-view');
   document.querySelector('.layout').dataset.view = name;
   document.body.dataset.view = name;
-  document.querySelectorAll('.view-switcher [data-show-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showView === name)));
+  document.querySelectorAll('.sidebar-links [data-show-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showView === name)));
+  const heading = document.getElementById(name + '-view').querySelector(name === 'course' ? '.step:not([hidden]) h1' : 'h1');
+  if (heading) { heading.tabIndex = -1; heading.focus({preventScroll: true}); }
   try { localStorage.setItem(VIEW_KEY, name); } catch (_) {}
 }
 function scrollToLesson() {
@@ -238,21 +289,20 @@ function setStep(index) {
   if (!STEPS.length) return;
   current = Math.min(Math.max(index, 0), STEPS.length - 1);
   STEPS.forEach((step, i) => step.hidden = i !== current);
-  document.querySelectorAll('.step-link').forEach((button, i) => {
-    if (i === current) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current');
+  document.querySelectorAll('.step-link').forEach(button => {
+    if (Number(button.dataset.go) === current) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current');
   });
   const percent = Math.round(((current + 1) / STEPS.length) * 100);
   document.getElementById('progress-fill').style.width = percent + '%';
   document.querySelector('.progress').setAttribute('aria-valuenow', String(current + 1));
   document.querySelector('.progress').setAttribute('aria-valuemax', String(STEPS.length));
   document.getElementById('progress-label').textContent = `Урок ${current + 1} из ${STEPS.length}`;
-  document.getElementById('lesson-select').value = String(current);
+  document.getElementById('reader-title').textContent = STEPS[current].querySelector('h1').textContent;
   document.getElementById('previous').disabled = current === 0;
   document.getElementById('next').textContent = current === STEPS.length - 1 ? 'К программе курса →' : 'Следующий урок →';
   persist(STORE_KEY, {step: current});
 }
 document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => openLesson(Number(button.dataset.go))));
-document.getElementById('lesson-select').addEventListener('change', event => openLesson(Number(event.target.value)));
 document.getElementById('previous').addEventListener('click', () => openLesson(current - 1));
 document.getElementById('next').addEventListener('click', () => {
   if (current < STEPS.length - 1) openLesson(current + 1, 'material');
@@ -285,6 +335,17 @@ function taskElement(task) {
   if (task.by_model === true) { const mark = document.createElement('span'); mark.className = 'badge'; mark.textContent = 'написано моделью'; prompt.append(' ', mark); }
   const taskSource = card.querySelector('[data-task-source]');
   if (taskSource) prompt.append(' ', taskSource);
+  const instructions = document.createElement('div'); instructions.className = 'task-instructions';
+  const instructionText = document.createElement('span');
+  instructionText.textContent = ({single: 'Выберите один ответ', multiple: 'Выберите все подходящие варианты', order: 'Расставьте элементы по порядку', gap: 'Заполните пропуск', calc: 'Введите числовой ответ'})[task.type] || 'Практическое задание';
+  instructions.append(instructionText);
+  const hintBox = card.querySelector('.hint-box');
+  const hintToggle = hintBox?.querySelector('.hint-toggle');
+  const hintContent = hintBox?.querySelector('.hint-content');
+  if (hintToggle) instructions.append(hintToggle);
+  card.append(instructions);
+  if (hintContent) card.append(hintContent);
+  hintBox?.remove();
   card.append(prompt);
   if (task.type === 'calc') {
     const input = document.createElement('input'); input.type = 'number'; input.step = 'any'; input.className = 'gap-input'; input.dataset.calc = 'true'; input.setAttribute('aria-label', 'Числовой ответ'); card.append(input);
@@ -314,13 +375,13 @@ function taskElement(task) {
     card.append(list);
   } else if (task.type !== 'gap' && task.type !== 'calc') {
     const options = document.createElement('div'); options.className = 'options';
-    (task.options || []).forEach(option => { const label = document.createElement('label'); label.className = 'option'; const input = document.createElement('input'); input.type = task.type === 'multiple' ? 'checkbox' : 'radio'; input.name = 'answer-' + task.id; input.value = option.id; const text = document.createElement('span'); text.textContent = option.text; label.append(input, text); options.append(label); });
+    (task.options || []).forEach((option, index) => { const label = document.createElement('label'); label.className = 'option'; const input = document.createElement('input'); input.type = task.type === 'multiple' ? 'checkbox' : 'radio'; input.name = 'answer-' + task.id; input.value = option.id; const key = document.createElement('span'); key.className = 'option-key'; key.setAttribute('aria-hidden', 'true'); key.textContent = index < 26 ? String.fromCharCode(65 + index) : String(index + 1); const text = document.createElement('span'); text.textContent = option.text; label.append(input, key, text); options.append(label); });
     card.append(options);
   }
   const controls = document.createElement('div'); controls.className = 'task-tools'; const check = document.createElement('button'); check.type = 'button'; check.textContent = 'Проверить'; controls.append(check); card.append(controls);
   const result = document.createElement('div'); result.className = 'task-result'; result.hidden = true; result.setAttribute('aria-live', 'polite'); card.append(result);
   card.querySelectorAll('.hint-toggle').forEach(button => button.addEventListener('click', () => {
-    const hint = button.nextElementSibling;
+    const hint = card.querySelector('.hint-content');
     hint.hidden = !hint.hidden;
     button.setAttribute('aria-expanded', String(!hint.hidden));
     button.textContent = hint.hidden ? 'Подсказка' : 'Скрыть подсказку';
