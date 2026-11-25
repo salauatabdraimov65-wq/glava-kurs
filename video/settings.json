@@ -1,0 +1,29 @@
+{
+  "_comment": "Настройки станка spec.json → mp4. Голос меняется здесь или переменными окружения VIDEO_VOICE_ENGINE / VIDEO_EDGE_VOICE / VIDEO_SILERO_SPEAKER, код не трогаем.",
+  "voice": {
+    "engine": "edge",
+    "edge_voice": "ru-RU-DmitryNeural",
+    "edge_rate": "+0%",
+    "edge_use_stress_marks": false,
+    "silero_model": "v4_ru",
+    "silero_speaker": "aidar",
+    "silero_sample_rate": 48000,
+    "silero_words": [],
+    "target_wpm": [110, 150],
+    "auto_rate": true,
+    "pad_before_s": 0.15,
+    "pad_after_s": 0.35,
+    "target_lufs": -16
+  },
+  "render": {
+    "fps": 30,
+    "crf": 16,
+    "ssaa": 2,
+    "tool_move_ease": true,
+    "fade_s": 0.35,
+    "camera": true,
+    "hook_zoom": 1.6,
+    "sfx": true,
+    "sfx_gain_db": -24.0
+  }
+}
