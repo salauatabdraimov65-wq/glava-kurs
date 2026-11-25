@@ -11,7 +11,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
 
-from course.build import geology_theme_vars
+from course.domain_theme import chapter_domain, load_domain
+from course.domain_theme import theme as domain_tokens
 
 
 class MediaSources(HTMLParser):
@@ -42,7 +43,8 @@ def prepare(packages: list[Path]) -> Path:
             function(path)
         shutil.rmtree(output, onexc=remove_readonly)
     output.mkdir(parents=True, exist_ok=True)
-    cards = []
+    cards: list[str] = []
+    tokens = domain_tokens(load_domain(chapter_domain(sources[0][0].name)))
     for package, index in sources:
         chapter_output = output / package.name
         destination = chapter_output / "course" / "index.html"
@@ -64,11 +66,11 @@ def prepare(packages: list[Path]) -> Path:
         title = html.escape(str(layer.get("title") or layer.get("chapter") or package.name))
         count = len(layer.get("nodes") or [])
         href = quote((Path(package.name) / "course" / "index.html").as_posix(), safe="/")
-        cards.append(f'<a class="chapter-card" href="{href}"><span>{count} шагов</span><h2>{title}</h2><b>Открыть курс →</b></a>')
+        cards.append(f'<a class="chapter-card" href="{href}" style="--seg:var(--s{len(cards) % tokens["count"]})"><span>{count} шагов</span><h2>{title}</h2><b>Открыть курс →</b></a>')
 
     catalog = f'''<!doctype html><html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Глава → курс</title>
-<style>:root {{{geology_theme_vars()}}} *{{box-sizing:border-box}} body{{margin:0;background:var(--geo-background);color:var(--geo-text);font:17px/1.6 "Segoe UI",system-ui,sans-serif}} main{{padding:clamp(20px,5vw,72px)}} .kicker{{color:var(--geo-sand);letter-spacing:.12em}} h1{{font-size:clamp(32px,5vw,56px);line-height:1.15;max-width:20ch}} .intro{{max-width:70ch;color:var(--geo-salt)}} .chapters{{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:22px;margin-top:36px}} .chapter-card{{display:flex;flex-direction:column;align-items:flex-start;padding:26px;border:1px solid var(--geo-dense);border-radius:8px;color:inherit;background:var(--geo-panel);text-decoration:none;overflow-wrap:anywhere}} .chapter-card:hover,.chapter-card:focus-visible{{outline:3px solid var(--geo-sand);outline-offset:4px}} .chapter-card span{{color:var(--geo-salt)}} .chapter-card h2{{font-size:24px;line-height:1.3}} .chapter-card b{{margin-top:auto;padding-top:20px;color:var(--geo-sand)}} </style></head>
+<style>{tokens['css']} *{{box-sizing:border-box}} body{{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI",system-ui,sans-serif}} main{{padding:clamp(20px,5vw,72px)}} .kicker{{color:var(--accent-text);letter-spacing:.12em;font-weight:700}} h1{{font-family:Rockwell,"Roboto Slab","American Typewriter",Georgia,serif;font-size:clamp(32px,5vw,56px);line-height:1.1;max-width:20ch}} .intro{{max-width:70ch;color:var(--muted)}} .chapters{{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:26px;margin-top:36px}} .chapter-card{{display:flex;flex-direction:column;align-items:flex-start;padding:26px;border:3px solid var(--ink);border-top:22px solid var(--seg);border-radius:14px;box-shadow:6px 6px 0 var(--ink);color:inherit;background:var(--paper-2);text-decoration:none;overflow-wrap:anywhere}} .chapter-card:hover,.chapter-card:focus-visible{{outline:3px solid var(--accent-text);outline-offset:4px}} .chapter-card span{{color:var(--muted)}} .chapter-card h2{{font-size:24px;line-height:1.3}} .chapter-card b{{margin-top:auto;padding-top:20px;color:var(--accent-text)}} </style></head>
 <body><main><p class="kicker">ГЛАВА → КУРС</p><h1>Выберите главу для изучения</h1>
 <p class="intro">Материал книги, тренировки на данных и задания. Каждый курс сохраняет ваш прогресс на этом устройстве.</p>
 <div class="chapters">{"".join(cards)}</div></main></body></html>'''
