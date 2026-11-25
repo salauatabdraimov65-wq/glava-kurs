@@ -1,0 +1,15 @@
+Кандидатов: 52, сняты обратной проверкой: 0, в ответе: 14 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_basniev_gl23-24/answer.json (53 с)
+  code+bulk+strong   A38    significant analogy_without_limit  Аналогия объявлена точной и универсальной; утверждение о постоянстве в
+  code+bulk+strong   C065   significant overgeneralization     Утверждение «всегда» противоречит авторской оговорке «в ряде случаев».
+  code+bulk+strong   C183   significant measured_vs_inferred   Равенства представлены как результат прямого измерения, тогда как авто
+  code+bulk+strong   C050   significant overgeneralization     Слово «всегда» устраняет оговорку автора «как правило» и исключает опи
+  bulk+strong        C018   critical    sign_flip              При снижении давления упругий запас ошибочно назван возрастающим; у ав
+  code+bulk          C277   critical    other                  Число искажено: указано 0,8% вместо авторских 0,08% при F₀≤0,2 — погре
+  bulk+strong        C048   significant measured_vs_inferred   Автор оценивает важность изучения гидродинамики, но не утверждает, что
+  bulk+strong        C102   significant measured_vs_inferred   Размерность выведена из выражения, а не установлена прямым измерением.
+  bulk+strong        C115   significant measured_vs_inferred   Автомодельность выдана за результат прямого измерения, хотя автор пока
+  bulk+strong        C153   significant measured_vs_inferred   Формула выдана за результат прямого измерения, хотя автор выводит её д
+  bulk+strong        C219   significant measured_vs_inferred   Утверждение ошибочно приписывает прямому измерению результат математич
+  bulk+strong        C245   significant measured_vs_inferred   Формулу, полученную теоретически, представлено как результат прямого и
+  bulk+strong        L01.21 significant measured_vs_inferred   Прямое измерение формы кривых не указано: автор выводит её из формулы.
+  bulk+strong        L01.08 significant measured_vs_inferred   Прямое измерение кривой приписано автору без оснований: глава рассматр

@@ -1,0 +1,18 @@
+Кандидатов: 54, сняты обратной проверкой: 0, в ответе: 17 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_kuznetsov_gl10/answer.json (50 с)
+  code+bulk+strong   C028   critical    sign_flip              Направление изменения доли перевёрнуто: автор пишет об относительном у
+  code+bulk+strong   C217   critical    sign_flip              Положение предрифовых фаций относительно рифовых указано с обратным зн
+  code+bulk+strong   A25    significant analogy_without_limit  Фраза «аналогия точная» и утверждение, что величина постоянна и одинак
+  code+bulk+strong   C227   significant overgeneralization     Слово «всегда» заменяет авторское «часто» и исключает возможные исключ
+  code+bulk+strong   C144   significant overgeneralization     Слово «всегда» ошибочно распространяет лучшие коллекторские свойства н
+  code+bulk+strong   C040   significant measured_vs_inferred   Автор не утверждает, что связь установлена прямым измерением.
+  code+bulk+strong   C172   significant overgeneralization     Утверждение «всегда мало» заменяет авторское «обычно очень невелика» б
+  code+bulk+strong   C173   significant measured_vs_inferred   Утверждение о прямом измерении не подтверждается текстом автора: спосо
+  bulk+strong        C003   critical    wrong_scaling          Высота залежи Карачаганака завышена в 10 раз: указано более 15000 м вм
+  bulk+strong        C089   critical    wrong_scaling          Верхняя граница пористости указана как 80 % вместо 8 %.
+  bulk+strong        C110   critical    wrong_scaling          Верхняя граница кавернозности в ядре ошибочно указана как 394 % вместо
+  bulk+strong        C111   critical    wrong_scaling          Доля эффективной мощности в ядре рифа завышена в десять раз: 676 % вме
+  bulk+strong        L01.10 significant measured_vs_inferred   Фраза приписывает выводу прямое измерение, хотя автор не указывает спо
+  bulk+strong        L01.03 significant missing_caveat         Фраза утверждает сокращение первичных пустот при росте рифа, тогда как
+  bulk+strong        A06    significant lost_condition         Расположение зон вокруг центрального ядра представлено как модель рифа
+  bulk+strong        L01.05 significant measured_vs_inferred   Фраза приписывает вывод прямому измерению, хотя автор не указывает так
+  bulk+strong        C139   significant measured_vs_inferred   Утверждение о прямом измерении отсутствует у автора и необоснованно ха

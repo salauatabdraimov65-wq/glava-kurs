@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import json
-from concurrent.futures import ThreadPoolExecutor
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor, wait
 from pathlib import Path
 
 from glava.chapter import Chapter
@@ -11,15 +13,77 @@ from glava.llm import ask_json
 from .checks import best_page, cand
 
 WORKERS = 8  # как в layer/build.py
+DEADLINE: float | None = None  # абсолютное время (time.time()), после которого новые вызовы модели не начинаются
+TIMED_OUT = False
+STATS = {t: {"ok": 0, "fail": 0, "skip": 0} for t in ("bulk", "strong", "reverse")}
+_LOCK = threading.Lock()
+CATS = {"overgeneralization", "sign_flip", "measured_vs_inferred", "lost_condition", "missing_caveat", "wrong_scaling", "wrong_mechanism",
+        "outdated_as_current", "analogy_without_limit", "frame_error", "other"}
 
 
-def pmap(fn, seq, workers: int = WORKERS):
-    """Порядок результатов тот же, что у seq (как list(ex.map(...)) в layer/build.py); workers<=1 — строго последовательно."""
+def reset():
+    """Сброс счётчиков и дедлайна перед прогоном (важно при нескольких запусках в одном процессе)."""
+    global DEADLINE, TIMED_OUT
+    DEADLINE, TIMED_OUT = None, False
+    for t in STATS.values():
+        t.update(ok=0, fail=0, skip=0)
+
+
+def _count(tier: str, what: str):
+    with _LOCK:
+        STATS[tier][what] += 1
+
+
+def expired() -> bool:
+    return DEADLINE is not None and time.time() > DEADLINE
+
+
+def to_int(x):
+    try:
+        if isinstance(x, bool):
+            return None
+        if isinstance(x, (int, float)):
+            return int(x)
+        if isinstance(x, str) and x.strip().lstrip("-").isdigit():
+            return int(x.strip())
+    except Exception:
+        pass
+    return None
+
+
+def to_float(x, default=0.0) -> float:
+    try:
+        return float(x)
+    except Exception:
+        return default
+
+
+def pmap(fn, seq, workers: int = WORKERS, default=None):
+    """Порядок результатов тот же, что у seq (как list(ex.map(...)) в layer/build.py); workers<=1 — последовательно.
+    Исключение в fn и истёкший дедлайн дают `default`, а не падение; не дождавшиеся потоки не блокируют ответ."""
+    global TIMED_OUT
     seq = list(seq)
+
+    def guard(x):
+        if expired():
+            return default
+        try:
+            return fn(x)
+        except Exception as e:
+            print(f"  ! {type(e).__name__}: {e}")
+            return default
+
     if workers <= 1 or len(seq) <= 1:
-        return [fn(x) for x in seq]
-    with ThreadPoolExecutor(workers) as ex:
-        return list(ex.map(fn, seq))
+        return [guard(x) for x in seq]
+    ex = ThreadPoolExecutor(workers)
+    futs = [ex.submit(guard, x) for x in seq]
+    remaining = None if DEADLINE is None else max(0.0, DEADLINE - time.time()) + 30  # +30 с на уже идущие вызовы
+    done, _ = wait(futs, timeout=remaining)
+    if len(done) < len(futs):
+        TIMED_OUT = True
+    ex.shutdown(wait=False, cancel_futures=True)
+    return [f.result() if f in done else default for f in futs]
+
 
 CATEGORIES = """overgeneralization — сверхобобщение: «всегда/любой/все/никогда/только», где автор даёт условия или оговорки.
 sign_flip — переворот направления или признака: выше↔ниже, рост↔падение, больше↔меньше, положительный↔отрицательный.
@@ -111,6 +175,19 @@ def build_user(it: dict, items: dict, pkg: dict, ch: Chapter) -> str:
     return "\n\n".join(parts)
 
 
+def _remark_from(r, target: str, fallback_page, tier: str, force_cat: str | None = None):
+    """Ответ модели -> кандидат; мусор в полях приводится к допустимому, не-словарь отбрасывается."""
+    if not isinstance(r, dict) or not r.get("has_error"):
+        return None
+    cat = force_cat or (r.get("category") if r.get("category") in CATS else "other")
+    sev = r.get("severity") if r.get("severity") in TIERS else "significant"
+    page = to_int(r.get("page_pdf"))
+    page = page if page is not None else fallback_page
+    q = r.get("quote")
+    return cand(target, cat, str(r.get("problem") or ""), str(r.get("fix") or ""), page, q if isinstance(q, str) else None,
+                min(1.0, max(0.0, to_float(r.get("confidence")))), source=f"llm:{tier}", severity=sev)
+
+
 def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bulk", only: set | None = None, workers: int = WORKERS, effort: str | None = None) -> list[dict]:
     items = {i["id"]: i for i in pkg["items"]}
     todo = pkg["items"][:limit] if limit else pkg["items"]
@@ -118,19 +195,20 @@ def check_with_model(pkg: dict, ch: Chapter, limit: int | None, tier: str = "bul
         todo = [i for i in todo if i["id"] in only]
 
     def one(it):
+        if expired():
+            _count(tier, "skip")
+            return None
         try:
             r = ask_json(SYSTEM, build_user(it, items, pkg, ch), tier=tier, tag=f"review:{tier}:{it['id']}", effort=effort)
-        except Exception as e:  # бюджет, сеть — не валим весь прогон
+        except Exception as e:  # бюджет, сеть, ключ — не валим весь прогон
+            _count(tier, "fail")
             print(f"  ! {it['id']}: {e}")
             return None
-        if not r.get("has_error"):
+        if not isinstance(r, dict):
+            _count(tier, "fail")
             return None
-        cat = r.get("category") or "other"
-        sev = r.get("severity") if r.get("severity") in TIERS else "significant"
-        page = r.get("page_pdf")
-        page = int(page) if isinstance(page, (int, float, str)) and str(page).isdigit() else item_page(it, items, ch)
-        return cand(it["id"], cat, r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
-                    float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev)
+        _count(tier, "ok")
+        return _remark_from(r, it["id"], item_page(it, items, ch), tier)
 
     return [c for c in pmap(one, todo, workers) if c]
 
@@ -165,18 +243,20 @@ def check_frames_with_model(pkg: dict, ch: Chapter, base: Path, tier: str = "str
                 f"Инварианты: {json.dumps(spec.get('invariants'), ensure_ascii=False)}\nПараметры: {json.dumps(spec.get('params'), ensure_ascii=False)[:2500]}\n"
                 f"Допущения: {json.dumps(spec.get('assumptions'), ensure_ascii=False)}\nПреувеличения: {json.dumps(spec.get('exaggerations'), ensure_ascii=False)}\n"
                 f"Факты сцены:\n" + "\n".join("- " + x["text"] for x in facts) + "\n\nТекст автора:\n" + "\n\n".join(pages_ctx(ch, p) for p in claim_pages[:2]))
+        if expired():
+            _count(tier, "skip")
+            return None
         try:
             r = ask_json(FRAME_SYSTEM, user, tier=tier, images=[base / f["file"]], tag=f"review:{tier}:{f['id']}")
         except Exception as e:
+            _count(tier, "fail")
             print(f"  ! {f['id']}: {e}")
             return None
-        if not r.get("has_error"):
+        if not isinstance(r, dict):
+            _count(tier, "fail")
             return None
-        page = r.get("page_pdf")
-        page = int(page) if str(page).isdigit() else (claim_pages[0] if claim_pages else None)
-        sev = r.get("severity") if r.get("severity") in TIERS else "significant"
-        return cand(f["id"], "frame_error", r.get("problem", ""), r.get("fix", ""), page, r.get("quote"),
-                    float(r.get("confidence") or 0), source=f"llm:{tier}", severity=sev)
+        _count(tier, "ok")
+        return _remark_from(r, f["id"], claim_pages[0] if claim_pages else None, tier, force_cat="frame_error")
 
     return [c for c in pmap(one, pkg["frames"], workers) if c]
 
@@ -196,7 +276,9 @@ def reverse_check(pkg: dict, ch: Chapter, target: str, base: Path):
         return False, None, None
     user = build_user(it, items, pkg, ch).replace("Заявленная цитата автора:", "Цитата, приложенная к элементу:")
     r = ask_json(REVERSE_SYSTEM, "Найди подтверждение для элемента.\n\n" + user, tier="strong", tag=f"reverse:{target}")
-    q = r.get("quote")
+    if not isinstance(r, dict):
+        return False, None, None
+    q = r.get("quote") if isinstance(r.get("quote"), str) else None
     if r.get("supported") and r.get("same_conditions") and q:
         pages = find_quote(ch, q)  # цитата действительно дословно есть в главе (проверка кодом)
         if pages:
