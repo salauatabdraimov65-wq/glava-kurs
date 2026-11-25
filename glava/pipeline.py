@@ -7,7 +7,7 @@
     uv run python -m glava.pipeline <chapter_id> --video-node <node_id>  # ролик на назначенный организаторами узел
     uv run python -m glava.pipeline <chapter_id> --no-video              # без рендера ролика (быстро)
 
-Этапы: layer, illustrate, scene, course, video. Каждый этап пишет строку в metrics.csv.
+Этапы: layer, review (самопроверка + исправления), illustrate, scene, course, video. Каждый этап пишет строку в metrics.csv.
 Модули других треков (course, video) подключаются, если они есть в репозитории.
 """
 from __future__ import annotations
@@ -24,7 +24,7 @@ from pathlib import Path
 from glava.chapter import ROOT, chapters_config
 from glava.llm import LEDGER, spent_usd
 
-STAGES = ["layer", "illustrate", "scene", "course", "video"]
+STAGES = ["layer", "review", "illustrate", "scene", "course", "video"]
 
 
 def tokens_since(n_lines: int) -> tuple[int, int]:
@@ -83,6 +83,7 @@ def main():
     ap.add_argument("--only", choices=STAGES)
     ap.add_argument("--video-node"); ap.add_argument("--video-format", choices=["short", "long"])
     ap.add_argument("--no-video", action="store_true")
+    ap.add_argument("--no-review", action="store_true", help="без самопроверки слоя модулем review (быстрее)")
     a = ap.parse_args()
 
     # новая (тестовая) глава — дописываем в конфиг, чтобы все этапы её знали
@@ -114,6 +115,13 @@ def main():
         t0, usd0, led0 = time.time(), spent_usd(), ledger_len()
         if st == "layer":
             run(["layer.build", a.chapter])
+        elif st == "review":
+            # проверка, встроенная в конвейер: наш слой → модуль проверки → исправления применяются к слою
+            if has("review.self_check") and not a.no_review:
+                run(["review.self_check", str(run_dir), "-o", str(run_dir / "review_self.json")])
+                run(["layer.apply_review", str(run_dir)])
+            else:
+                print("(самопроверка пропущена)")
         elif st == "illustrate":
             run(["layer.illustrate", a.chapter])
         elif st == "scene":
