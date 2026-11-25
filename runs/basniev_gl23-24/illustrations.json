@@ -798,6 +798,94 @@
    ],
    "prompt": null,
    "kind": "mechanism"
+  },
+  {
+   "id": "fig.redrawn_23_1",
+   "step_id": "basniev.gallery_rate_and_production",
+   "node_id": "basniev.gallery_rate_and_production",
+   "file": "illustrations/redrawn_23_1.svg",
+   "frame_class": "B",
+   "origin": "redrawn_from_book",
+   "label": "симуляция",
+   "caption": "Кривые показывают распределение давления при постоянном давлении на забое галереи. Со временем область пониженного давления распространяется дальше от галереи. Рис. 23.1 книги, перерисованный расчётом: pg + (pk - pg) * erf(x / (2 * sqrt(kappa * t))); t₁ (t = 0.25); t₂ (t = 1); t₂ (t = 2). Оси в условных единицах.",
+   "alt": "График: Распределение давления в различные моменты времени. По оси x — Координата x, по оси y — Давление p. Кривые: t₁ (t = 0.25); t₂ (t = 1); t₂ (t = 2).",
+   "source": "Перерисовано по рис. 23.1, стр. 484; рассчитано кодом по формуле главы, стр. 484",
+   "claim_ids": [
+    "basniev.gallery_rate_and_production#c1",
+    "basniev.gallery_rate_and_production#c2",
+    "basniev.gallery_rate_and_production#c3",
+    "basniev.gallery_rate_and_production#c4"
+   ],
+   "prompt": null,
+   "formula_quote": "$$p = p_{\\mathrm{r}} + (p_{\\mathrm{k}} - p_{\\mathrm{r}}) \\operatorname{erf}\\left(\\frac{x}{2\\sqrt{\\kappa t}}\\right). \\quad (23.27)$$",
+   "expression": "pg + (pk - pg) * erf(x / (2 * sqrt(kappa * t)))",
+   "by_model": true
+  },
+  {
+   "id": "fig.redrawn_23_3",
+   "step_id": "basniev.exponential_integral_approximation",
+   "node_id": "basniev.exponential_integral_approximation",
+   "file": "illustrations/redrawn_23_3.svg",
+   "frame_class": "B",
+   "origin": "redrawn_from_book",
+   "label": "симуляция",
+   "caption": "График показывает интегральную показательную функцию, используемую в теории упругого режима фильтрации. При увеличении x функция убывает от бесконечности к нулю. Рис. 23.3 книги, перерисованный расчётом: -Ei(-x); −Ei(−x). Оси в условных единицах.",
+   "alt": "График: График интегральной показательной функции. По оси x — Аргумент x, по оси y — Интегральная показательная функция −Ei(−x). Кривые: −Ei(−x).",
+   "source": "Перерисовано по рис. 23.3, стр. 491; рассчитано кодом по формуле главы, стр. 491",
+   "claim_ids": [
+    "basniev.exponential_integral_approximation#c1",
+    "basniev.exponential_integral_approximation#c2",
+    "basniev.exponential_integral_approximation#c3",
+    "basniev.exponential_integral_approximation#c4"
+   ],
+   "prompt": null,
+   "formula_quote": "$$- \\text{Ei} (- x) = \\ln \\frac{1}{x} - \\gamma + \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n \\cdot n!} x^n,$$",
+   "expression": "-Ei(-x)",
+   "by_model": true
+  },
+  {
+   "id": "fig.redrawn_24_1",
+   "step_id": "basniev.psss_linear_fixed_rate",
+   "node_id": "basniev.psss_linear_fixed_rate",
+   "file": "illustrations/redrawn_24_1.svg",
+   "frame_class": "B",
+   "origin": "redrawn_from_book",
+   "label": "симуляция",
+   "caption": "Показано распределение давления в два момента времени при постоянном дебите галереи. По мере расширения возмущённой области давление на галерее снижается; за её границей давление равно начальному. Рис. 24.1 книги, перерисованный расчётом: pk - Q*mu/(k*B*h)*(l - x + abs(l - x))/2; t₁ (l = 0.5); t₂ (l = 1). Оси в условных единицах.",
+   "alt": "График: Распределение давления по методу ПССС. По оси x — Координата вдоль пласта x, по оси y — Давление p. Кривые: t₁ (l = 0.5); t₂ (l = 1).",
+   "source": "Перерисовано по рис. 24.1, стр. 495; рассчитано кодом по формуле главы, стр. 495",
+   "claim_ids": [
+    "basniev.psss_linear_fixed_rate#c1",
+    "basniev.psss_linear_fixed_rate#c2",
+    "basniev.psss_linear_fixed_rate#c3",
+    "basniev.psss_linear_fixed_rate#c4"
+   ],
+   "prompt": null,
+   "formula_quote": "$$p(x, t) = p_к - \\frac{Q\\mu}{kBh} (l(t) - x), \\quad 0 \\leq x \\leq l(t). \\quad (24.1)$$",
+   "expression": "pk - Q*mu/(k*B*h)*(l - x + abs(l - x))/2",
+   "by_model": true
+  },
+  {
+   "id": "fig.redrawn_24_2",
+   "step_id": "basniev.psss_radial_boundary",
+   "node_id": "basniev.psss_radial_boundary",
+   "file": "illustrations/redrawn_24_2.svg",
+   "frame_class": "B",
+   "origin": "redrawn_from_book",
+   "label": "симуляция",
+   "caption": "Кривые показывают распределение давления при постоянном дебите скважины по методу ПССС. Со временем возмущённая область расширяется, а давление у скважины снижается. Рис. 24.2 книги, перерисованный расчётом: pk - Q*mu/(2*pi*k*h)*log(sqrt(rc**2 + 4*kappa*t)/((x + sqrt(rc**2 + 4*kappa*t) - abs(x - sqrt(rc**2 + 4*kappa*t)))/2)); t = 0; t₁ (t = 1); t₂ (t = 4); t₃ (t = 9). Оси в условных единицах.",
+   "alt": "График: Распределение давления в плоскорадиальном потоке. По оси x — Радиус r, по оси y — Давление p. Кривые: t = 0; t₁ (t = 1); t₂ (t = 4); t₃ (t = 9).",
+   "source": "Перерисовано по рис. 24.2, стр. 498; рассчитано кодом по формуле главы, стр. 498",
+   "claim_ids": [
+    "basniev.psss_radial_boundary#c1",
+    "basniev.psss_radial_boundary#c2",
+    "basniev.psss_radial_boundary#c3",
+    "basniev.psss_radial_boundary#c4"
+   ],
+   "prompt": null,
+   "formula_quote": "$$p(r, t) = p_\\kappa - \\frac{Q\\mu}{2\\pi kh} \\ln \\frac{R(t)}{r}. \\quad (24.10)$$",
+   "expression": "pk - Q*mu/(2*pi*k*h)*log(sqrt(rc**2 + 4*kappa*t)/((x + sqrt(rc**2 + 4*kappa*t) - abs(x - sqrt(rc**2 + 4*kappa*t)))/2))",
+   "by_model": true
   }
  ]
 }

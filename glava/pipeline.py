@@ -127,6 +127,7 @@ def main():
                 print("(самопроверка пропущена)")
         elif st == "illustrate":
             run(["layer.illustrate", a.chapter])
+            run(["layer.redraw", a.chapter])   # графики книги, построенные по формулам главы → перерисованы расчётом
         elif st == "scene":
             if a.video_node:
                 node, fmt, tpl = a.video_node, a.video_format or "short", None

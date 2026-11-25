@@ -18,7 +18,7 @@
    "id": "C002",
    "type": "claim",
    "node_id": "barenblatt.pressure_diffusion_basics",
-   "text": "Давление в слабосжимаемой жидкости подчиняется уравнению пьезопроводности, записываемому как уравнение диффузии с коэффициентом κ.",
+   "text": "При нестационарной фильтрации однородной слабосжимаемой жидкости в упруго деформируемом пласте давление подчиняется уравнению пьезопроводности ∂p/∂t = κΔp.",
    "kind": "observation",
    "page_pdf": 39,
    "quote": "\\partial p/\\partial t = \\varkappa (\\partial^2 p/\\partial x^2 + \\partial^2 p/\\partial y^2 + \\partial^2 p/\\partial z^2) \\equiv \\varkappa \\Delta p",
@@ -58,7 +58,7 @@
    "id": "C006",
    "type": "claim",
    "node_id": "barenblatt.pressure_diffusion_basics",
-   "text": "Принятые варианты граничных условий можно объединить в одну общую форму.",
+   "text": "Все обычно принятые варианты граничных условий укладываются в одну общую форму.",
    "kind": "observation",
    "page_pdf": 39,
    "quote": "Все принятые обычно варианты граничных условий укладываются в общую форму",
@@ -117,6 +117,16 @@
   {
    "id": "C012",
    "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "В линейных нестационарных задачах условия задают на непроницаемых границах, скважинах, галереях и контурах питания; давление, напор или расход на скважинах и галереях, вообще говоря, зависят от времени.",
+   "kind": "observation",
+   "page_pdf": 39,
+   "quote": "Граничные условия в задачах линейной нестационарной фильтрации задаются на границах того же типа, что и в задачах напорной стационарной фильтрации: непроницаемых границах, скважинах, галереях, контурах питания.",
+   "orig_id": "barenblatt.pressure_diffusion_basics#c12"
+  },
+  {
+   "id": "C013",
+   "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "В типичных пластах толщина намного меньше горизонтальной протяжённости, поэтому течение можно считать плоскопараллельным.",
    "kind": "observation",
@@ -125,7 +135,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c1"
   },
   {
-   "id": "C013",
+   "id": "C014",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "При плоскопараллельном одномерном движении скорость направлена вдоль x и не зависит от y и z.",
@@ -135,7 +145,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c2"
   },
   {
-   "id": "C014",
+   "id": "C015",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "В одномерном плоскопараллельном случае давление удовлетворяет одномерному уравнению пьезопроводности на отрезке от 0 до L.",
@@ -145,7 +155,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c3"
   },
   {
-   "id": "C015",
+   "id": "C016",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "Если начальное движение стационарно, удобно отсчитывать давление от стационарного P₀(x); разность P имеет нулевое начальное значение.",
@@ -155,7 +165,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c4"
   },
   {
-   "id": "C016",
+   "id": "C017",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "В рассматриваемой постановке на контуре питания давление неизменно, а на сечении x=0 меняется по заданному закону; решение получают преобразованием Лапласа.",
@@ -165,7 +175,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c5"
   },
   {
-   "id": "C017",
+   "id": "C018",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "Преобразование Лапласа давления P по времени определено интегралом от нуля до бесконечности с ядром e⁻ᵗσ.",
@@ -175,7 +185,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c6"
   },
   {
-   "id": "C018",
+   "id": "C019",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "После преобразования Лапласа для изображения давления получают отдельную краевую задачу.",
@@ -185,7 +195,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c7"
   },
   {
-   "id": "C019",
+   "id": "C020",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "Изображение давления удовлетворяет ОДУ d²P̄/dx²−ν²P̄=0, имеет заданные значения на концах, а ν²=σ/κ.",
@@ -195,7 +205,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c8"
   },
   {
-   "id": "C020",
+   "id": "C021",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "Краевая задача для изображения давления имеет решение.",
@@ -205,7 +215,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c9"
   },
   {
-   "id": "C021",
+   "id": "C022",
    "type": "claim",
    "node_id": "barenblatt.linear_flow_laplace",
    "text": "Изображение давления выражается через гиперболические синусы расстояния до контура питания и длины пласта.",
@@ -215,7 +225,7 @@
    "orig_id": "barenblatt.linear_flow_laplace#c10"
   },
   {
-   "id": "C022",
+   "id": "C023",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Для скачка давления на x=0 до постоянного значения p⁰ преобразование Лапласа заданного давления равно p⁰/σ.",
@@ -225,7 +235,7 @@
    "orig_id": "barenblatt.short_time_response#c1"
   },
   {
-   "id": "C023",
+   "id": "C024",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "При скачке давления p⁰ изображение решения получается умножением p⁰/σ на отношение гиперболических синусов.",
@@ -235,7 +245,7 @@
    "orig_id": "barenblatt.short_time_response#c2"
   },
   {
-   "id": "C024",
+   "id": "C025",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Для анализа малых времён рассматривают большие |σ| и при 2L√(σ/κ)≫1 раскладывают выражение по степеням exp(−2L√(σ/κ)).",
@@ -245,7 +255,7 @@
    "orig_id": "barenblatt.short_time_response#c3"
   },
   {
-   "id": "C025",
+   "id": "C026",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "При указанном разложении изображение представляется разностью двух рядов экспонент с расстояниями x+2Ln и 2L(n+1)−x.",
@@ -255,7 +265,7 @@
    "orig_id": "barenblatt.short_time_response#c4"
   },
   {
-   "id": "C026",
+   "id": "C027",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Почленное обращение ряда даёт решение во временной области.",
@@ -265,7 +275,7 @@
    "orig_id": "barenblatt.short_time_response#c5"
   },
   {
-   "id": "C027",
+   "id": "C028",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Решение после обращения выражено рядом дополнительных функций ошибок с аргументами, зависящими от расстояния и √(κt).",
@@ -275,7 +285,7 @@
    "orig_id": "barenblatt.short_time_response#c6"
   },
   {
-   "id": "C028",
+   "id": "C029",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Ряд решения сходится при любых t и x; при L²/(κt)≫1 все члены с erfc можно отбросить, кроме члена с аргументом x/(2√(κt)).",
@@ -285,7 +295,7 @@
    "orig_id": "barenblatt.short_time_response#c7"
   },
   {
-   "id": "C029",
+   "id": "C030",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "При малых временах остаётся решение p⁰ erfc[x/(2√(κt))].",
@@ -295,17 +305,17 @@
    "orig_id": "barenblatt.short_time_response#c8"
   },
   {
-   "id": "C030",
+   "id": "C031",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
-   "text": "Это решение описывает конечный пласт при κt≪L² и бесконечный пласт при L→∞; за заданное время изменение давления распространяется лишь на конечное расстояние, а x и t входят через x/√(κt).",
+   "text": "Решение приближённо описывает конечный пласт при κt≪L² и бесконечный пласт при L→∞; изменение давления заданной конечной величины за заданное время распространяется лишь на конечное расстояние. Переменные x и t входят через x/√(κt).",
    "kind": "inference",
    "page_pdf": 41,
    "quote": "при малых временах $\\varkappa t \\ll L^2$",
    "orig_id": "barenblatt.short_time_response#c9"
   },
   {
-   "id": "C031",
+   "id": "C032",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Для произвольного изменения давления на x=0 линейность позволяет использовать принцип суперпозиции и интеграл Дюамеля.",
@@ -315,7 +325,7 @@
    "orig_id": "barenblatt.short_time_response#c10"
   },
   {
-   "id": "C032",
+   "id": "C033",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "Формула Дюамеля интегрирует производную заданного давления по времени, умноженную на отклик на скачок давления.",
@@ -325,7 +335,7 @@
    "orig_id": "barenblatt.short_time_response#c11"
   },
   {
-   "id": "C033",
+   "id": "C034",
    "type": "claim",
    "node_id": "barenblatt.short_time_response",
    "text": "P₁ — решение для скачкообразного изменения давления на x=0; можно использовать решение для конечного или бесконечного пласта.",
@@ -335,7 +345,7 @@
    "orig_id": "barenblatt.short_time_response#c12"
   },
   {
-   "id": "C034",
+   "id": "C035",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "Для времени t≫L²/κ ряд (II.92) неудобен из-за необходимости суммировать много членов; автор предлагает вторую теорему разложения Лапласа.",
@@ -345,7 +355,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c1"
   },
   {
-   "id": "C035",
+   "id": "C036",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "Теорема применима к регулярной F(σ), стремящейся к нулю при |σ|→∞; вычеты суммируют в порядке неубывания модулей особых точек.",
@@ -355,17 +365,17 @@
    "orig_id": "barenblatt.steady_state_timescale#c2"
   },
   {
-   "id": "C036",
+   "id": "C037",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
-   "text": "По второй теореме разложения временная функция равна сумме вычетов F(σ)e^{σt} в особых точках изображения.",
+   "text": "По второй теореме разложения для регулярной функции F(σ), стремящейся к нулю при |σ| → ∞, временная функция равна сумме вычетов F(σ)e^{σt} во всех особых точках F, взятых в порядке неубывания их модулей.",
    "kind": "observation",
    "page_pdf": 41,
    "quote": "\\Phi(t) = \\sum_k \\text{Res}_{\\sigma_k} [F(\\sigma) e^{\\sigma t}]",
    "orig_id": "barenblatt.steady_state_timescale#c3"
   },
   {
-   "id": "C037",
+   "id": "C038",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "При больших временах решение стремится к линейному стационарному распределению с экспоненциально затухающей поправкой и остатком указанного порядка.",
@@ -375,7 +385,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c4"
   },
   {
-   "id": "C038",
+   "id": "C039",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "Приближение к стационарному линейному распределению происходит экспоненциально.",
@@ -385,7 +395,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c5"
   },
   {
-   "id": "C039",
+   "id": "C040",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "Характерное время выхода на стационарный режим имеет порядок L²/(κπ²).",
@@ -395,7 +405,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c6"
   },
   {
-   "id": "C040",
+   "id": "C041",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "Для фильтрации маловязкой нефти или воды в высокопроницаемых коллекторах κ имеет порядок 10⁴ см²/с.",
@@ -405,7 +415,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c7"
   },
   {
-   "id": "C041",
+   "id": "C042",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "При κ порядка 10⁴ см²/с характерное время составляет около 0,1 с для L=1 м, 3 ч для 300 м, 100 сут для 10 км и 30 лет для 100 км; при высоковязкой нефти и низкой проницаемости κ может быть в 10–100 раз меньше, а времена — соответственно больше.",
@@ -415,7 +425,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c8"
   },
   {
-   "id": "C042",
+   "id": "C043",
    "type": "claim",
    "node_id": "barenblatt.steady_state_timescale",
    "text": "В сложной системе оценка времени установления для каждого элемента позволяет отделить элементы со стационарным течением от тех, где процесс ещё на начальной стадии.",
@@ -425,7 +435,7 @@
    "orig_id": "barenblatt.steady_state_timescale#c9"
   },
   {
-   "id": "C043",
+   "id": "C044",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Плоскорадиальное движение описывает осесимметричный нестационарный приток к одиночной скважине в круговом пласте.",
@@ -435,7 +445,7 @@
    "orig_id": "barenblatt.radial_flow_model#c1"
   },
   {
-   "id": "C044",
+   "id": "C045",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "При радиальной симметрии давление удовлетворяет уравнению пьезопроводности в области ρ≤r≤R.",
@@ -445,7 +455,7 @@
    "orig_id": "barenblatt.radial_flow_model#c2"
   },
   {
-   "id": "C045",
+   "id": "C046",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Для радиальной задачи задаётся начальное условие.",
@@ -455,7 +465,7 @@
    "orig_id": "barenblatt.radial_flow_model#c3"
   },
   {
-   "id": "C046",
+   "id": "C047",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Начальное распределение давления задаётся как p(r,0)=f(r).",
@@ -465,7 +475,7 @@
    "orig_id": "barenblatt.radial_flow_model#c4"
   },
   {
-   "id": "C047",
+   "id": "C048",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Решение должно удовлетворять граничным условиям на радиусах скважины ρ и внешней границы R.",
@@ -475,7 +485,7 @@
    "orig_id": "barenblatt.radial_flow_model#c5"
   },
   {
-   "id": "C048",
+   "id": "C049",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Поскольку уравнение линейно, можно рассматривать отклонение от стационарного распределения C₁ln r+C₂ и считать начальное отклонение нулевым.",
@@ -485,7 +495,7 @@
    "orig_id": "barenblatt.radial_flow_model#c6"
   },
   {
-   "id": "C049",
+   "id": "C050",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Переход к изображениям Лапласа преобразует радиальное уравнение в уравнение для изображения давления.",
@@ -495,7 +505,7 @@
    "orig_id": "barenblatt.radial_flow_model#c7"
   },
   {
-   "id": "C050",
+   "id": "C051",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Изображение давления удовлетворяет радиальному уравнению Бесселя с ν²=σ/κ.",
@@ -505,7 +515,7 @@
    "orig_id": "barenblatt.radial_flow_model#c8"
   },
   {
-   "id": "C051",
+   "id": "C052",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Общее решение преобразованного уравнения можно записать в явном виде.",
@@ -515,7 +525,7 @@
    "orig_id": "barenblatt.radial_flow_model#c9"
   },
   {
-   "id": "C052",
+   "id": "C053",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "Общее решение выражается линейной комбинацией модифицированных функций Бесселя I₀(rν) и K₀(rν).",
@@ -525,7 +535,7 @@
    "orig_id": "barenblatt.radial_flow_model#c10"
   },
   {
-   "id": "C053",
+   "id": "C054",
    "type": "claim",
    "node_id": "barenblatt.radial_flow_model",
    "text": "I₀ и K₀ — модифицированные функции Бесселя нулевого порядка.",
@@ -535,7 +545,7 @@
    "orig_id": "barenblatt.radial_flow_model#c11"
   },
   {
-   "id": "C054",
+   "id": "C055",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "Рассматривается режим постоянного дебита на скважине при всех t>0; это решение используют для определения параметров пласта по наблюдениям нестационарного притока.",
@@ -545,7 +555,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c1"
   },
   {
-   "id": "C055",
+   "id": "C056",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "Постоянный дебит задаётся через радиальный градиент давления: (2πk/μ)r∂p/∂r=−q.",
@@ -555,7 +565,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c2"
   },
   {
-   "id": "C056",
+   "id": "C057",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "На стенке скважины радиальный градиент равен p*/ρ, а на внешней границе давление задано нулём.",
@@ -565,7 +575,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c3"
   },
   {
-   "id": "C057",
+   "id": "C058",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "Подстановка граничных условий в общее решение определяет выражение для изображения давления.",
@@ -575,7 +585,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c4"
   },
   {
-   "id": "C058",
+   "id": "C059",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "Изображение давления при этих граничных условиях выражено через функции Бесселя на радиусах r, ρ и R.",
@@ -585,7 +595,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c5"
   },
   {
-   "id": "C059",
+   "id": "C060",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "При радиусе скважины обычно не более 10 см и расстоянии между скважинами свыше 300 м для типичных исследований применима промежуточная асимптотика.",
@@ -595,7 +605,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c6"
   },
   {
-   "id": "C060",
+   "id": "C061",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "Условие промежуточной асимптотики требует ρ/√(πt)≪1≪R/√(πt).",
@@ -605,7 +615,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c7"
   },
   {
-   "id": "C061",
+   "id": "C062",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "При этих условиях выражение решения упрощают, используя асимптотики функций Бесселя для малых и больших аргументов.",
@@ -615,7 +625,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c8"
   },
   {
-   "id": "C062",
+   "id": "C063",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "При больших z функции I₀ и K₀ имеют указанные экспоненциальные асимптотики, а при z→0 функция K₀(z)≈−ln(γz/2), где γ=e^C.",
@@ -625,7 +635,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c9"
   },
   {
-   "id": "C063",
+   "id": "C064",
    "type": "claim",
    "node_id": "barenblatt.constant_rate_solution",
    "text": "Постоянная Эйлера в обозначениях автора равна 0,7772.",
@@ -635,7 +645,7 @@
    "orig_id": "barenblatt.constant_rate_solution#c10"
   },
   {
-   "id": "C064",
+   "id": "C065",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Из соотношения (II.103) выводится преобразование давления, записанное в следующей формуле.",
@@ -645,17 +655,17 @@
    "orig_id": "barenblatt.radial_pressure_response#c1"
   },
   {
-   "id": "C065",
+   "id": "C066",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
-   "text": "Преобразование Лапласа давления равно −pσ⁻¹K₀(rν).",
+   "text": "При постоянном дебите скважины и в области промежуточной асимптотики преобразование Лапласа давления имеет вид: P̄(r, σ) = −pσ⁻¹K₀(rν).",
    "kind": "observation",
    "page_pdf": 43,
    "quote": "\\bar{P}(r, \\sigma) = -p \\sigma^{-1} K_0(r\\nu)",
    "orig_id": "barenblatt.radial_pressure_response#c2"
   },
   {
-   "id": "C066",
+   "id": "C067",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Далее отдельно рассматривается давление на скважине.",
@@ -665,7 +675,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c3"
   },
   {
-   "id": "C067",
+   "id": "C068",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Преобразование давления на скважине выражается через логарифм γρν и величину p*σ⁻¹.",
@@ -675,7 +685,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c4"
   },
   {
-   "id": "C068",
+   "id": "C069",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Формула (II.105) не зависит от радиуса скважины; поэтому при ρ²/πt ≪ 1 распределение давления не зависит от этого радиуса.",
@@ -685,7 +695,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c5"
   },
   {
-   "id": "C069",
+   "id": "C070",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Используя таблицы преобразований Лапласа и связь преобразования функции с преобразованием её производной, получают формулу давления во времени.",
@@ -695,17 +705,17 @@
    "orig_id": "barenblatt.radial_pressure_response#c6"
   },
   {
-   "id": "C070",
+   "id": "C071",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
-   "text": "Давление во времени задаётся через интегральную экспоненту: p(r,t)=p*/2 Ei(−r²/4πt).",
+   "text": "При постоянном дебите скважины и в области промежуточной асимптотики ρ/√(πt) ≪ 1 ≪ R/√(πt) давление описывается формулой p(r,t) = (p*/2) Ei(−r²/4πt).",
    "kind": "observation",
    "page_pdf": 43,
    "quote": "p(r, t) = 2^{-1} p^* E_i (-r^2/4\\pi t)",
    "orig_id": "barenblatt.radial_pressure_response#c7"
   },
   {
-   "id": "C071",
+   "id": "C072",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Для давления на скважине используется асимптотика Ei(−x)=ln γx при x→∞.",
@@ -715,7 +725,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c8"
   },
   {
-   "id": "C072",
+   "id": "C073",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Асимптотическое давление на скважине выражается логарифмом времени и радиуса; приведены эквивалентные записи через qμ/k и Qμ/(kh).",
@@ -725,7 +735,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c9"
   },
   {
-   "id": "C073",
+   "id": "C074",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Формулы (II.107) и (II.108) часто применяют для определения параметров пласта по данным нестационарного притока.",
@@ -735,7 +745,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c10"
   },
   {
-   "id": "C074",
+   "id": "C075",
    "type": "claim",
    "node_id": "barenblatt.radial_pressure_response",
    "text": "Q — полный дебит скважины, тогда как q — дебит на единицу толщины пласта.",
@@ -745,7 +755,7 @@
    "orig_id": "barenblatt.radial_pressure_response#c11"
   },
   {
-   "id": "C075",
+   "id": "C076",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "При исследовании нестационарного течения режим работы скважин меняют, искусственно создавая нестационарную фильтрацию, и измеряют давление во времени в одной или нескольких скважинах.",
@@ -755,7 +765,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c1"
   },
   {
-   "id": "C076",
+   "id": "C077",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "По изменениям дебита и давления с использованием решений задач нестационарной фильтрации оценивают проницаемость, пьезопроводность и расстояния до границ пласта.",
@@ -765,7 +775,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c2"
   },
   {
-   "id": "C077",
+   "id": "C078",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "Наиболее простой и распространённый способ создать нестационарное течение — временно остановить скважину.",
@@ -775,7 +785,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c3"
   },
   {
-   "id": "C078",
+   "id": "C079",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "Остановку с момента t₀ можно представить как задание постоянного дебита −Q на скважине при t>t₀.",
@@ -785,7 +795,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c4"
   },
   {
-   "id": "C079",
+   "id": "C080",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "После остановки давление на забое описывается формулой (II.108), задающей прямую в координатах p и ln t.",
@@ -795,7 +805,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c5"
   },
   {
-   "id": "C080",
+   "id": "C081",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "На кривой восстановления давления прямолинейный асимптотический участок обычно появляется быстро, часто в первые часы.",
@@ -805,7 +815,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c6"
   },
   {
-   "id": "C081",
+   "id": "C082",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "Если асимптота имеет вид p=A ln t+B, то сопоставление с (II.108) даёт указанные автором выражения для A и B.",
@@ -815,7 +825,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c7"
   },
   {
-   "id": "C082",
+   "id": "C083",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "При известном Q значения A и B позволяют определить гидропроводность kh/μ и отношение π/ρ².",
@@ -825,7 +835,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c8"
   },
   {
-   "id": "C083",
+   "id": "C084",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "Эффективный радиус скважины обычно не равен истинному, поскольку скважина может вскрывать пласт не на всю толщину и не вся её поверхность участвует в фильтрации.",
@@ -835,7 +845,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c9"
   },
   {
-   "id": "C084",
+   "id": "C085",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "Загрязнение призабойной зоны со сниженной проницаемостью или трещины в ней существенно влияют на кажущийся радиус скважины.",
@@ -845,7 +855,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c10"
   },
   {
-   "id": "C085",
+   "id": "C086",
    "type": "claim",
    "node_id": "barenblatt.pressure_buildup_test",
    "text": "По одному известному отношению π/ρ² нельзя отдельно определить π и ρ².",
@@ -855,7 +865,7 @@
    "orig_id": "barenblatt.pressure_buildup_test#c11"
   },
   {
-   "id": "C086",
+   "id": "C087",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "Для оценки пьезопроводности предпочтительно исследовать давление в реагирующей скважине, не работавшей при изменении дебита возмущающей скважины.",
@@ -865,7 +875,7 @@
    "orig_id": "barenblatt.interference_test_method#c1"
   },
   {
-   "id": "C087",
+   "id": "C088",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "В методе гидропродолжения характерный размер — расстояние между скважинами, известное достаточно точно, а не радиус скважины.",
@@ -875,7 +885,7 @@
    "orig_id": "barenblatt.interference_test_method#c2"
   },
   {
-   "id": "C088",
+   "id": "C089",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "При скачкообразном изменении дебита возмущающей скважины для определения пьезопроводности методом гидропродолжения используют формулу (II.107), представленную в следующей записи.",
@@ -885,7 +895,7 @@
    "orig_id": "barenblatt.interference_test_method#c3"
   },
   {
-   "id": "C089",
+   "id": "C090",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "Рисунок 5 показывает кривую восстановления давления.",
@@ -895,7 +905,7 @@
    "orig_id": "barenblatt.interference_test_method#c4"
   },
   {
-   "id": "C090",
+   "id": "C091",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "Изменение давления в реагирующей скважине задаётся формулой через изменение дебита Q, расстояние r и Ei(−r²/4πt).",
@@ -905,7 +915,7 @@
    "orig_id": "barenblatt.interference_test_method#c5"
   },
   {
-   "id": "C091",
+   "id": "C092",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "В формуле (II.109) Δp — изменение давления, Q — изменение дебита, а r — расстояние реагирующей скважины от возмущающей.",
@@ -915,7 +925,7 @@
    "orig_id": "barenblatt.interference_test_method#c6"
   },
   {
-   "id": "C092",
+   "id": "C093",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "Кривую давления в реагирующей скважине обрабатывают, фиксируя время появления характерных точек.",
@@ -925,7 +935,7 @@
    "orig_id": "barenblatt.interference_test_method#c7"
   },
   {
-   "id": "C093",
+   "id": "C094",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "Удобная характерная точка — касание кривой Δp(t) прямой, проведённой из начала координат.",
@@ -935,7 +945,7 @@
    "orig_id": "barenblatt.interference_test_method#c8"
   },
   {
-   "id": "C094",
+   "id": "C095",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "В точке касания t=t₁ выполняется r²/(4πt₁)=0,44, откуда π=0,57r²/t₁.",
@@ -945,7 +955,7 @@
    "orig_id": "barenblatt.interference_test_method#c9"
   },
   {
-   "id": "C095",
+   "id": "C096",
    "type": "claim",
    "node_id": "barenblatt.interference_test_method",
    "text": "Рассмотренные обратные задачи применимы при представлении скважины как мгновенно пущенного источника постоянной интенсивности в бесконечном однородном пласте.",
@@ -955,7 +965,7 @@
    "orig_id": "barenblatt.interference_test_method#c10"
   },
   {
-   "id": "C096",
+   "id": "C097",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Когда возмущение достигает границ пласта, примерно через Θ=R²/π, кривая восстановления давления начинает искажаться.",
@@ -965,7 +975,7 @@
    "orig_id": "barenblatt.test_model_limits#c1"
   },
   {
-   "id": "C097",
+   "id": "C098",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Через достаточно большое время кривая выходит на горизонтальную асимптоту, соответствующую стационарному пластовому давлению.",
@@ -975,7 +985,7 @@
    "orig_id": "barenblatt.test_model_limits#c2"
   },
   {
-   "id": "C098",
+   "id": "C099",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "После остановки устья приток в скважину не прекращается мгновенно из-за сжимаемости заполняющих её жидкостей и газов.",
@@ -985,7 +995,7 @@
    "orig_id": "barenblatt.test_model_limits#c3"
   },
   {
-   "id": "C099",
+   "id": "C100",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Время выхода на асимптоту в координатах Δp и ln t не должно быть больше времени дополнительного притока после остановки.",
@@ -995,7 +1005,7 @@
    "orig_id": "barenblatt.test_model_limits#c4"
   },
   {
-   "id": "C100",
+   "id": "C101",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Особенно у скважин близ границ пласта прямолинейный участок p(ln t) может отсутствовать.",
@@ -1005,7 +1015,7 @@
    "orig_id": "barenblatt.test_model_limits#c5"
   },
   {
-   "id": "C101",
+   "id": "C102",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Предложены способы обработки кривых восстановления давления, учитывающие приток в скважину после остановки.",
@@ -1015,7 +1025,7 @@
    "orig_id": "barenblatt.test_model_limits#c6"
   },
   {
-   "id": "C102",
+   "id": "C103",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Один из наиболее общих методов обработки кривых восстановления давления предложен в работе [31].",
@@ -1025,7 +1035,7 @@
    "orig_id": "barenblatt.test_model_limits#c7"
   },
   {
-   "id": "C103",
+   "id": "C104",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "Метод непосредственно использует преобразования Лапласа кривых и применим при произвольном изменении дебита скважин.",
@@ -1035,7 +1045,7 @@
    "orig_id": "barenblatt.test_model_limits#c8"
   },
   {
-   "id": "C104",
+   "id": "C105",
    "type": "claim",
    "node_id": "barenblatt.test_model_limits",
    "text": "В некоторых случаях метод позволяет определять по кривым восстановления давления характеристики неоднородности пласта.",
@@ -1045,7 +1055,7 @@
    "orig_id": "barenblatt.test_model_limits#c9"
   },
   {
-   "id": "C105",
+   "id": "C106",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Рассматривается пласт произвольной конфигурации, где скважина начинает работать в нестационарном режиме при t=0; измерены p(ρ,t) и дебит q(t), связанный с градиентом давления у скважины.",
@@ -1055,7 +1065,7 @@
    "orig_id": "barenblatt.laplace_response_function#c1"
   },
   {
-   "id": "C106",
+   "id": "C107",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Давление в пласте удовлетворяет уравнению (II.83), а его преобразование Лапласа — уравнению (II.110).",
@@ -1065,7 +1075,7 @@
    "orig_id": "barenblatt.laplace_response_function#c2"
   },
   {
-   "id": "C107",
+   "id": "C108",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Преобразованное давление удовлетворяет уравнению Лапласа с членом σP̄/π в правой части.",
@@ -1075,7 +1085,7 @@
    "orig_id": "barenblatt.laplace_response_function#c3"
   },
   {
-   "id": "C108",
+   "id": "C109",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "В тексте формулы указана метка уравнения (II.110).",
@@ -1085,7 +1095,7 @@
    "orig_id": "barenblatt.laplace_response_function#c4"
   },
   {
-   "id": "C109",
+   "id": "C110",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "На непроницаемой границе задаётся нулевой нормальный градиент, на контурах питания — нулевое преобразованное давление, а на скважине — P̄₁(σ).",
@@ -1095,7 +1105,7 @@
    "orig_id": "barenblatt.laplace_response_function#c5"
   },
   {
-   "id": "C110",
+   "id": "C111",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Функцию U определяют как отношение преобразованного давления в пласте к преобразованному давлению на скважине; она равна единице на скважине.",
@@ -1105,7 +1115,7 @@
    "orig_id": "barenblatt.laplace_response_function#c6"
   },
   {
-   "id": "C111",
+   "id": "C112",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Функция U удовлетворяет уравнению (II.110), однородным условиям на внешних границах и не зависит от режима работы скважины.",
@@ -1115,7 +1125,7 @@
    "orig_id": "barenblatt.laplace_response_function#c7"
   },
   {
-   "id": "C112",
+   "id": "C113",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Преобразованный дебит равен произведению преобразованного давления на скважине, множителя 2π(kh/μ)ρ и радиальной производной U у стенки скважины.",
@@ -1125,7 +1135,7 @@
    "orig_id": "barenblatt.laplace_response_function#c8"
   },
   {
-   "id": "C113",
+   "id": "C114",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Из уравнения (II.111) следует соотношение, введённое в следующей формуле.",
@@ -1135,7 +1145,7 @@
    "orig_id": "barenblatt.laplace_response_function#c9"
   },
   {
-   "id": "C114",
+   "id": "C115",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Функция ψ(σ) определяется как отношение преобразованного давления на скважине к преобразованному дебиту.",
@@ -1145,7 +1155,7 @@
    "orig_id": "barenblatt.laplace_response_function#c10"
   },
   {
-   "id": "C115",
+   "id": "C116",
    "type": "claim",
    "node_id": "barenblatt.laplace_response_function",
    "text": "Функция ψ зависит от U, но не от режима эксплуатации; её вид полностью определяется параметрами пласта.",
@@ -1155,7 +1165,7 @@
    "orig_id": "barenblatt.laplace_response_function#c11"
   },
   {
-   "id": "C116",
+   "id": "C117",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "Если известны p₁(t) и q(t), их преобразования Лапласа можно численно получить и по ним вычислить ψ(σ).",
@@ -1165,7 +1175,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c1"
   },
   {
-   "id": "C117",
+   "id": "C118",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "По виду ψ(σ) можно определить некоторые параметры пласта.",
@@ -1175,7 +1185,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c2"
   },
   {
-   "id": "C118",
+   "id": "C119",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "Для скважины в однородном бесконечном пласте U=K₀(rν)/K₀(ρν), где ν=√(σ/κ).",
@@ -1185,7 +1195,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c3"
   },
   {
-   "id": "C119",
+   "id": "C120",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "В однородном бесконечном пласте ψ(σ) выражается через отношение K₀(ρν)/K₁(ρν) и множители μ и 2πkhρ.",
@@ -1195,7 +1205,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c4"
   },
   {
-   "id": "C120",
+   "id": "C121",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "При практическом вычислении преобразований Лапласа удобно перейти к τ=1/σ и использовать P(τ)=∫₀∞p(t)e^(−t/τ)dt.",
@@ -1205,7 +1215,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c5"
   },
   {
-   "id": "C121",
+   "id": "C122",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "Значения τ не следует выбирать меньше 1–2 минут.",
@@ -1215,27 +1225,27 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c6"
   },
   {
-   "id": "C122",
+   "id": "C123",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
-   "text": "С учётом порядков κ и ρ аргумент ρ√(σ/κ)=ρ/√(κτ) достаточно мал, поэтому допустимы разложения K₀ и K₁ для малых аргументов.",
+   "text": "При τ не менее 1–2 минут и с учётом порядков κ и ρ аргумент ρ√(σ/κ) = ρ/√(κτ) достаточно мал для использования разложений K₀ и K₁ при малых аргументах.",
    "kind": "inference",
    "page_pdf": 46,
    "quote": "значения $\\rho \\sqrt{\\sigma / \\varkappa} = \\rho / \\sqrt{\\varkappa \\tau}$ достаточно малы",
    "orig_id": "barenblatt.laplace_curve_analysis#c7"
   },
   {
-   "id": "C123",
+   "id": "C124",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
-   "text": "При малом аргументе Ψ(τ) линейна по ln τ; её наклон и свободный член содержат параметры пласта k, h, μ, κ и ρ.",
+   "text": "Для скважины в однородном бесконечном пласте при малом ρ/√(κτ) функция Ψ(τ) приближённо линейна по ln τ; её наклон и свободный член содержат параметры k, h, μ, κ и ρ.",
    "kind": "observation",
    "page_pdf": 46,
    "quote": "\\Psi (\\tau) = \\Psi (\\sigma)",
    "orig_id": "barenblatt.laplace_curve_analysis#c8"
   },
   {
-   "id": "C124",
+   "id": "C125",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "Коэффициенты формулы (II.115) определяют по графику Ψ(ln τ) так же, как по графику p(ln t) при мгновенной остановке скважины.",
@@ -1245,7 +1255,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c9"
   },
   {
-   "id": "C125",
+   "id": "C126",
    "type": "claim",
    "node_id": "barenblatt.laplace_curve_analysis",
    "text": "Поскольку Ψ(ln τ) — прямая, для вычисления интегралов достаточно трёх-четырёх значений τ.",
@@ -1255,7 +1265,7 @@
    "orig_id": "barenblatt.laplace_curve_analysis#c10"
   },
   {
-   "id": "C126",
+   "id": "C127",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "Общий подход позволяет методом восстановления давления получать некоторые параметры неоднородного пласта.",
@@ -1265,7 +1275,7 @@
    "orig_id": "barenblatt.two_zone_response#c1"
   },
   {
-   "id": "C127",
+   "id": "C128",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "Рассматривается скважина радиуса ρ в центре круговой зоны радиуса R внутри бесконечного пласта; параметры зоны и внешней области обозначены k₁, κ₁ и k₂, κ₂.",
@@ -1275,7 +1285,7 @@
    "orig_id": "barenblatt.two_zone_response#c2"
   },
   {
-   "id": "C128",
+   "id": "C129",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "Для рассмотренной двухзонной модели Ψ(τ) получают с использованием решения вида (II.101) и асимптотик (II.104).",
@@ -1285,7 +1295,7 @@
    "orig_id": "barenblatt.two_zone_response#c3"
   },
   {
-   "id": "C129",
+   "id": "C130",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "При ρ²/κ₁≪τ≪R²/κ₁ функция Ψ(τ) асимптотически задаётся формулой (II.115) с k=k₁ и κ=κ₁.",
@@ -1295,7 +1305,7 @@
    "orig_id": "barenblatt.two_zone_response#c4"
   },
   {
-   "id": "C130",
+   "id": "C131",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "При τ≫R²/κ₂ функция Ψ(τ) задаётся формулой (II.116).",
@@ -1305,7 +1315,7 @@
    "orig_id": "barenblatt.two_zone_response#c5"
   },
   {
-   "id": "C131",
+   "id": "C132",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "При больших τ формула (II.116) задаёт Ψ как линейную функцию ln τ с коэффициентом μ/(4πk₂h) и указанным автором свободным членом.",
@@ -1315,7 +1325,7 @@
    "orig_id": "barenblatt.two_zone_response#c6"
   },
   {
-   "id": "C132",
+   "id": "C133",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "Эквивалентный радиус скважины для рассматриваемого случая совпадает с радиусом, используемым при стационарном притоке.",
@@ -1325,7 +1335,7 @@
    "orig_id": "barenblatt.two_zone_response#c7"
   },
   {
-   "id": "C133",
+   "id": "C134",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "Эквивалентный радиус задаётся формулой $\\rho^*=R(\\rho/R)^\\gamma=\\rho(\\rho/R)^{\\gamma-1}$, где $\\gamma=k_2/k_1$.",
@@ -1335,7 +1345,7 @@
    "orig_id": "barenblatt.two_zone_response#c8"
   },
   {
-   "id": "C134",
+   "id": "C135",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "Сравнение формул (II.115) и (II.116) показывает, что (II.117) описывает преобразованную кривую восстановления давления для скважины радиуса $\\rho^*$ в однородном пласте с параметрами внешней зоны.",
@@ -1345,7 +1355,7 @@
    "orig_id": "barenblatt.two_zone_response#c9"
   },
   {
-   "id": "C135",
+   "id": "C136",
    "type": "claim",
    "node_id": "barenblatt.two_zone_response",
    "text": "При горизонтальных или вертикальных трещинах эквивалентный радиус по данным нестационарного притока совпадает с радиусом для стационарного течения при тех же условиях.",
@@ -1355,7 +1365,7 @@
    "orig_id": "barenblatt.two_zone_response#c10"
   },
   {
-   "id": "C136",
+   "id": "C137",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Исследование скважины по восстановлению давления позволяет определить загрязнение призабойной зоны и оценить эффективность интенсификации притока.",
@@ -1365,7 +1375,7 @@
    "orig_id": "barenblatt.approximation_motivation#c1"
   },
   {
-   "id": "C137",
+   "id": "C138",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Обработку кривых восстановления давления можно применять для определения расстояния до непроницаемого или проводящего экрана, радиуса трещин и других параметров неоднородности.",
@@ -1375,7 +1385,7 @@
    "orig_id": "barenblatt.approximation_motivation#c2"
   },
   {
-   "id": "C138",
+   "id": "C139",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Точные решения широкого класса задач нестационарной фильтрации в принципе можно получить из теории уравнений математической физики, но они не всегда просты и обозримы.",
@@ -1385,7 +1395,7 @@
    "orig_id": "barenblatt.approximation_motivation#c3"
   },
   {
-   "id": "C139",
+   "id": "C140",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Из-за недостаточной точности исходных данных для природных пластов часто достаточно простых, обозримых приближённых решений.",
@@ -1395,7 +1405,7 @@
    "orig_id": "barenblatt.approximation_motivation#c4"
   },
   {
-   "id": "C140",
+   "id": "C141",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Параболические уравнения сглаживают начальные возмущения со временем и по мере удаления от источника внутрь области.",
@@ -1405,7 +1415,7 @@
    "orig_id": "barenblatt.approximation_motivation#c5"
   },
   {
-   "id": "C141",
+   "id": "C142",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "В ряде практически важных задач решение имеет известные особенности в отдельных точках, например у скважин и галерей, тогда как основная часть области близка к невозмущённому состоянию.",
@@ -1415,7 +1425,7 @@
    "orig_id": "barenblatt.approximation_motivation#c6"
   },
   {
-   "id": "C142",
+   "id": "C143",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Во многих задачах существенны только интегральные характеристики решения.",
@@ -1425,7 +1435,7 @@
    "orig_id": "barenblatt.approximation_motivation#c7"
   },
   {
-   "id": "C143",
+   "id": "C144",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Некоторые приближённые методы вводят область влияния, за пределами которой течение считают невозмущённым и сохраняющим начальные значения $p$ или $u$.",
@@ -1435,7 +1445,7 @@
    "orig_id": "barenblatt.approximation_motivation#c8"
   },
   {
-   "id": "C144",
+   "id": "C145",
    "type": "claim",
    "node_id": "barenblatt.approximation_motivation",
    "text": "Возможность ограничить область возмущения следует из анализа точных решений; по формуле (II.93) отклонение от начального убывает с ростом $x$ как $\\exp(-x^2/4xt)$.",
@@ -1445,7 +1455,7 @@
    "orig_id": "barenblatt.approximation_motivation#c9"
   },
   {
-   "id": "C145",
+   "id": "C146",
    "type": "claim",
    "node_id": "barenblatt.integral_relations_method",
    "text": "Метод интегральных соотношений относится к наиболее общим приближённым методам теории фильтрации.",
@@ -1455,7 +1465,7 @@
    "orig_id": "barenblatt.integral_relations_method#c1"
   },
   {
-   "id": "C146",
+   "id": "C147",
    "type": "claim",
    "node_id": "barenblatt.integral_relations_method",
    "text": "В области возмущения скважины исходное уравнение (II.86) или (II.98) заменяют системой интегральных соотношений.",
@@ -1465,7 +1475,7 @@
    "orig_id": "barenblatt.integral_relations_method#c2"
   },
   {
-   "id": "C147",
+   "id": "C148",
    "type": "claim",
    "node_id": "barenblatt.integral_relations_method",
    "text": "Интегральные соотношения при $i=0,1,\\ldots,n$ приравнивают взвешенные интегралы временной производной давления и его второй пространственной производной, причём весами служат $f_i(x,t)$.",
@@ -1475,7 +1485,7 @@
    "orig_id": "barenblatt.integral_relations_method#c3"
   },
   {
-   "id": "C148",
+   "id": "C149",
    "type": "claim",
    "node_id": "barenblatt.integral_relations_method",
    "text": "Функции $f_i(x,t)$ должны образовывать полную систему по $x$ на отрезке $[L_1(t),L_2(t)]$; разложение $p$ по ним приводит к уравнениям для коэффициентов.",
@@ -1485,7 +1495,7 @@
    "orig_id": "barenblatt.integral_relations_method#c4"
   },
   {
-   "id": "C149",
+   "id": "C150",
    "type": "claim",
    "node_id": "barenblatt.integral_relations_method",
    "text": "Для задачи о возмущении первоначального стационарного движения в пласте автор выбирает простейшую систему функций.",
@@ -1495,7 +1505,7 @@
    "orig_id": "barenblatt.integral_relations_method#c5"
   },
   {
-   "id": "C150",
+   "id": "C151",
    "type": "claim",
    "node_id": "barenblatt.integral_relations_method",
    "text": "В качестве базисных функций берутся последовательные степени координаты: $1,x,x^2,\\ldots$.",
@@ -1505,7 +1515,7 @@
    "orig_id": "barenblatt.integral_relations_method#c6"
   },
   {
-   "id": "C151",
+   "id": "C152",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "В момент $t=0$ отбор жидкости начинается с расходом $kb/\\mu HG$, а начальное давление линейно зависит от координаты.",
@@ -1515,7 +1525,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c1"
   },
   {
-   "id": "C152",
+   "id": "C153",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "Начальное давление задано законом $p(x,0)=P+Gx$.",
@@ -1525,7 +1535,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c2"
   },
   {
-   "id": "C153",
+   "id": "C154",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "Приближённое решение ищется в виде многочлена.",
@@ -1535,7 +1545,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c3"
   },
   {
-   "id": "C154",
+   "id": "C155",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "На интервале $0\\le x\\le l$ давление аппроксимируется многочленом с коэффициентами $P_i(t)$, а при $x\\ge l$ принимается равным начальному давлению.",
@@ -1545,7 +1555,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c4"
   },
   {
-   "id": "C155",
+   "id": "C156",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "В аппроксимации есть $n+2$ неизвестных — $P_i(t)$ и $l(t)$; их определяют интегральными соотношениями, граничным условием при $x=0$ и условиями при $x=l$.",
@@ -1555,7 +1565,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c5"
   },
   {
-   "id": "C156",
+   "id": "C157",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "На границе $x=l$ давление должно быть непрерывным и равняться $P+Gl$, а функция давления должна обладать выбранной степенью гладкости.",
@@ -1565,7 +1575,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c6"
   },
   {
-   "id": "C157",
+   "id": "C158",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "Условие гладкости может требовать обращения в нуль производных давления от первой до $k$-й при $x=l$.",
@@ -1575,7 +1585,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c7"
   },
   {
-   "id": "C158",
+   "id": "C159",
    "type": "claim",
    "node_id": "barenblatt.polynomial_pressure_approximation",
    "text": "Качество приближённого расчёта зависит от выбора числа интегральных соотношений и условий гладкости.",
@@ -1585,7 +1595,7 @@
    "orig_id": "barenblatt.polynomial_pressure_approximation#c8"
   },
   {
-   "id": "C159",
+   "id": "C160",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Далее рассматривается конкретный случай, условия которого заданы в следующей формуле.",
@@ -1595,7 +1605,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c1"
   },
   {
-   "id": "C160",
+   "id": "C161",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "В рассматриваемой задаче при $x=0$ давление равно $p_1$, а начальное давление $p_0$ принимается равным нулю.",
@@ -1605,7 +1615,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c2"
   },
   {
-   "id": "C161",
+   "id": "C162",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Интегрирование по частям и теорема о дифференцировании определённого интеграла позволяют преобразовать систему (II.118).",
@@ -1615,7 +1625,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c3"
   },
   {
-   "id": "C162",
+   "id": "C163",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Первое интегральное соотношение связывает производную по времени интеграла давления от $0$ до $l$ с градиентом давления у $x=0$.",
@@ -1625,7 +1635,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c4"
   },
   {
-   "id": "C163",
+   "id": "C164",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Для первого пространственного момента давления производная интеграла от $0$ до $l$ равна $\\varkappa p(0,t)$.",
@@ -1635,7 +1645,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c5"
   },
   {
-   "id": "C164",
+   "id": "C165",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Для $k\\ge2$ производная по времени момента $\\int_0^{l(t)}px^kdx$ равна $\\varkappa k(k-1)$, умноженному на момент $\\int_0^{l(t)}px^{k-2}dx$.",
@@ -1645,7 +1655,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c6"
   },
   {
-   "id": "C165",
+   "id": "C166",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Рисунок 6 сопоставляет решения задачи о нестационарном притоке к галерее.",
@@ -1655,7 +1665,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c7"
   },
   {
-   "id": "C166",
+   "id": "C167",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "На рисунке 6 обозначены нулевое и первое приближения, а также точное решение.",
@@ -1665,7 +1675,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c8"
   },
   {
-   "id": "C167",
+   "id": "C168",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "Рисунок 7 показывает зависимость безразмерного давления от безразмерной координаты для осесимметричного течения.",
@@ -1675,7 +1685,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c9"
   },
   {
-   "id": "C168",
+   "id": "C169",
    "type": "claim",
    "node_id": "barenblatt.pressure_moment_equations",
    "text": "На рисунке 7 сопоставлены приближённое и точное решения.",
@@ -1685,7 +1695,7 @@
    "orig_id": "barenblatt.pressure_moment_equations#c10"
   },
   {
-   "id": "C169",
+   "id": "C170",
    "type": "claim",
    "node_id": "barenblatt.first_flow_approximation",
    "text": "При $n=1$ используется следствие интегрального соотношения (II.122), приведённое далее.",
@@ -1695,7 +1705,7 @@
    "orig_id": "barenblatt.first_flow_approximation#c1"
   },
   {
-   "id": "C170",
+   "id": "C171",
    "type": "claim",
    "node_id": "barenblatt.first_flow_approximation",
    "text": "При первом приближении $l=2\\sqrt{\\varkappa t}$, а скорость фильтрации у $x=0$ убывает как $1/\\sqrt{t}$.",
@@ -1705,7 +1715,7 @@
    "orig_id": "barenblatt.first_flow_approximation#c2"
   },
   {
-   "id": "C171",
+   "id": "C172",
    "type": "claim",
    "node_id": "barenblatt.first_flow_approximation",
    "text": "Для сравнения приводится точное решение по формуле (II.93).",
@@ -1715,7 +1725,7 @@
    "orig_id": "barenblatt.first_flow_approximation#c3"
   },
   {
-   "id": "C172",
+   "id": "C173",
    "type": "claim",
    "node_id": "barenblatt.first_flow_approximation",
    "text": "Точное значение скорости фильтрации у $x=0$ задаётся формулой (II.126).",
@@ -1725,7 +1735,7 @@
    "orig_id": "barenblatt.first_flow_approximation#c4"
   },
   {
-   "id": "C173",
+   "id": "C174",
    "type": "claim",
    "node_id": "barenblatt.first_flow_approximation",
    "text": "Решение при $n=1$ совпадает с результатом известного метода последовательной смены стационарных состояний.",
@@ -1735,7 +1745,17 @@
    "orig_id": "barenblatt.first_flow_approximation#c5"
   },
   {
-   "id": "C174",
+   "id": "C175",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "При точном решении скорость притока убывает как t⁻¹ᐟ²: u₀(0,t) = k(p₁−p₀)/(μ√(πκt)).",
+   "kind": "observation",
+   "page_pdf": 49,
+   "quote": "u_0(0, t) = k (p_1 - p_0) / \\mu \\sqrt{\\pi \\varkappa t}. \\tag{II.126}",
+   "orig_id": "barenblatt.first_flow_approximation#c6"
+  },
+  {
+   "id": "C176",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Для второго приближения используют соотношение (II.122) и дополнительное условие (II.127).",
@@ -1745,7 +1765,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c1"
   },
   {
-   "id": "C175",
+   "id": "C177",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "В условии (II.127) производная давления по координате на границе $x=l$ равна нулю.",
@@ -1755,7 +1775,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c2"
   },
   {
-   "id": "C176",
+   "id": "C178",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Во втором приближении $p=p_1(1-x/l)^2$, а квадрат зоны возмущения равен $12\\varkappa t$.",
@@ -1765,7 +1785,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c3"
   },
   {
-   "id": "C177",
+   "id": "C179",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Далее вычисляется скорость фильтрации при $x=0$.",
@@ -1775,7 +1795,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c4"
   },
   {
-   "id": "C178",
+   "id": "C180",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Во втором приближении скорость фильтрации у $x=0$ задаётся формулой (II.129).",
@@ -1785,7 +1805,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c5"
   },
   {
-   "id": "C179",
+   "id": "C181",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Скорость из второго приближения близка к точному решению; замена условия (II.127) соотношением (II.122) не меняет форму решения.",
@@ -1795,7 +1815,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c6"
   },
   {
-   "id": "C180",
+   "id": "C182",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Для третьего приближения набор (II.122), (II.123) и (II.127) даёт то же решение, что и второе; первые три интегральных соотношения без условия (II.127) дают иной результат.",
@@ -1805,7 +1825,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c7"
   },
   {
-   "id": "C181",
+   "id": "C183",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "При использовании первых трёх соотношений получается кубический полином с коэффициентами $-0{,}583$, $0{,}107$ и $0{,}0061$ при степенях $\\zeta$, где $\\zeta=x/\\sqrt{\\varkappa t}$.",
@@ -1815,7 +1835,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c8"
   },
   {
-   "id": "C182",
+   "id": "C184",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "На рисунке 6 сопоставлены приближённые решения и точное; построение более высоких приближений затруднено отсутствием обоснованных правил выбора дополнительных условий.",
@@ -1825,7 +1845,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c9"
   },
   {
-   "id": "C183",
+   "id": "C185",
    "type": "claim",
    "node_id": "barenblatt.higher_flow_approximations",
    "text": "Высокие приближения требуют многочленов высокого порядка, а простые аналитические зависимости удаётся получить уже при втором порядке.",
@@ -1835,7 +1855,7 @@
    "orig_id": "barenblatt.higher_flow_approximations#c10"
   },
   {
-   "id": "C184",
+   "id": "C186",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Рассматривается осесимметричный пуск скважины с заданным дебитом $q$ в бесконечном пласте; решение ищут в указанном далее виде.",
@@ -1845,7 +1865,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c1"
   },
   {
-   "id": "C185",
+   "id": "C187",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Давление аппроксимируется логарифмическим членом и многочленом по $r/l$, где $l(t)$ — радиус зоны возмущения.",
@@ -1855,7 +1875,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c2"
   },
   {
-   "id": "C186",
+   "id": "C188",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Для осесимметричной задачи используется система интегральных соотношений, приведённая далее.",
@@ -1865,7 +1885,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c3"
   },
   {
-   "id": "C187",
+   "id": "C189",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Первое осесимметричное соотношение задаёт производную по времени интеграла $rp$ как $-\\varkappa q$.",
@@ -1875,7 +1895,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c4"
   },
   {
-   "id": "C188",
+   "id": "C190",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "При $k\\ge1$ производная момента $\\int_0^{l(t)}r^{k+1}p\\,dr$ равна $\\varkappa k^2$ на интеграл $pr^{k-2}$.",
@@ -1885,7 +1905,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c5"
   },
   {
-   "id": "C189",
+   "id": "C191",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "В нулевом приближении все коэффициенты $P_i$ полагаются равными нулю, поэтому неизвестной остаётся только функция $l(t)$, определяемая уравнением (II.132).",
@@ -1895,7 +1915,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c6"
   },
   {
-   "id": "C190",
+   "id": "C192",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Нулевое приближение даёт $l=2\\sqrt{\\varkappa t}$ и $p_0=q\\ln(r/(2\\sqrt{\\varkappa t}))$.",
@@ -1905,7 +1925,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c7"
   },
   {
-   "id": "C191",
+   "id": "C193",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Первое приближение получают из (II.132), (II.133) и условий непрерывности $p$ и $\\partial p/\\partial r$ при $r=l(t)$, где обе величины равны нулю.",
@@ -1915,7 +1935,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c8"
   },
   {
-   "id": "C192",
+   "id": "C194",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Первое приближение даёт $l=\\sqrt{12\\varkappa t}$ и указанное логарифмическое выражение для давления.",
@@ -1925,7 +1945,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c9"
   },
   {
-   "id": "C193",
+   "id": "C195",
    "type": "claim",
    "node_id": "barenblatt.radial_integral_approximation",
    "text": "Приближения (II.134) и особенно (II.135) довольно хорошо согласуются с точным решением на рисунке 7.",
@@ -1935,7 +1955,7 @@
    "orig_id": "barenblatt.radial_integral_approximation#c10"
   },
   {
-   "id": "C194",
+   "id": "C196",
    "type": "claim",
    "node_id": "barenblatt.bounded_radial_reservoir",
    "text": "Метод интегральных соотношений даёт удовлетворительно точные простые приближения для притока к скважинам в ограниченном пласте; точные решения в виде рядов Фурье—Бесселя плохо сходятся и трудны для обозрения.",
@@ -1945,7 +1965,7 @@
    "orig_id": "barenblatt.bounded_radial_reservoir#c1"
   },
   {
-   "id": "C195",
+   "id": "C197",
    "type": "claim",
    "node_id": "barenblatt.bounded_radial_reservoir",
    "text": "Рассматривается круговой пласт радиуса $R$ с постоянным начальным давлением на контуре и скважиной пренебрежимо малого радиуса в центре; до $t_1=R^2/(12\\varkappa)$ справедливо первое приближение (II.135).",
@@ -1955,7 +1975,7 @@
    "orig_id": "barenblatt.bounded_radial_reservoir#c2"
   },
   {
-   "id": "C196",
+   "id": "C198",
    "type": "claim",
    "node_id": "barenblatt.bounded_radial_reservoir",
    "text": "При $t>t_1$ необходимо учитывать граничное условие на контуре.",
@@ -1965,7 +1985,7 @@
    "orig_id": "barenblatt.bounded_radial_reservoir#c3"
   },
   {
-   "id": "C197",
+   "id": "C199",
    "type": "claim",
    "node_id": "barenblatt.bounded_radial_reservoir",
    "text": "На внешнем контуре пласта давление равно нулю.",
@@ -1975,7 +1995,7 @@
    "orig_id": "barenblatt.bounded_radial_reservoir#c4"
   },
   {
-   "id": "C198",
+   "id": "C200",
    "type": "claim",
    "node_id": "barenblatt.bounded_radial_reservoir",
    "text": "Для времени после $t_1$ берут первое приближение (II.131), фиксируют $l(t)=R$ и учитывают условие на контуре.",
@@ -1985,7 +2005,7 @@
    "orig_id": "barenblatt.bounded_radial_reservoir#c5"
   },
   {
-   "id": "C199",
+   "id": "C201",
    "type": "claim",
    "node_id": "barenblatt.bounded_radial_reservoir",
    "text": "С учётом граничного условия давление представляется как $q\\ln(r/R)+P_0(t)(1-r/R)$.",
@@ -1995,7 +2015,17 @@
    "orig_id": "barenblatt.bounded_radial_reservoir#c6"
   },
   {
-   "id": "C200",
+   "id": "C202",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "В круговом пласте радиуса R первое приближение для бесконечного пласта применимо до достижения зоной возмущения границы: при l=√(12κt) условие l=R даёт t₁=R²/(12κ).",
+   "kind": "inference",
+   "page_pdf": 50,
+   "quote": "Тогда вплоть до момента $t = t_1 = R^2/12\\varkappa t$ в первом приближении справедливо представление (II.135).",
+   "orig_id": "barenblatt.bounded_radial_reservoir#c7"
+  },
+  {
+   "id": "C203",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
    "text": "Из первого интегрального соотношения выводится уравнение для временной функции $P_0(t)$.",
@@ -2005,7 +2035,7 @@
    "orig_id": "barenblatt.bounded_reservoir_settling#c1"
   },
   {
-   "id": "C201",
+   "id": "C204",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
    "text": "Первое соотношение при фиксированном радиусе $R$ приводит к уравнению $R^2P_0'/6=-\\varkappa P_0$.",
@@ -2015,7 +2045,7 @@
    "orig_id": "barenblatt.bounded_reservoir_settling#c2"
   },
   {
-   "id": "C202",
+   "id": "C205",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
    "text": "Уравнение решается при условии непрерывности давления около $t=t_1$, то есть $P_0(t_1)=-q$.",
@@ -2025,7 +2055,7 @@
    "orig_id": "barenblatt.bounded_reservoir_settling#c3"
   },
   {
-   "id": "C203",
+   "id": "C206",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
    "text": "Решение для коэффициента равно $-q\\exp[-6\\varkappa(t-t_1)/R^2]$.",
@@ -2035,7 +2065,7 @@
    "orig_id": "barenblatt.bounded_reservoir_settling#c4"
   },
   {
-   "id": "C204",
+   "id": "C207",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
    "text": "Подстановка найденного $P_0(t)$ даёт приближённое распределение давления.",
@@ -2045,17 +2075,17 @@
    "orig_id": "barenblatt.bounded_reservoir_settling#c5"
   },
   {
-   "id": "C205",
+   "id": "C208",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
-   "text": "После $t_1$ давление задаётся формулой (II.140), содержащей экспоненциально затухающий член.",
+   "text": "После t₁ давление приближённо описывается формулой (II.140), содержащей экспоненциально затухающий член.",
    "kind": "observation",
    "page_pdf": 51,
    "quote": "p(r, t) = q \\ln(r/R) - q(1-r/R) \\exp[-6\\varkappa(t-t_1)/R^2]",
    "orig_id": "barenblatt.bounded_reservoir_settling#c6"
   },
   {
-   "id": "C206",
+   "id": "C209",
    "type": "claim",
    "node_id": "barenblatt.bounded_reservoir_settling",
    "text": "По формуле (II.140) распределение давления экспоненциально стремится к стационарному.",
@@ -2065,11 +2095,1819 @@
    "orig_id": "barenblatt.bounded_reservoir_settling#c7"
   },
   {
+   "id": "T001",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "В упруго деформируемом пласте давление слабосжимаемой жидкости меняется по уравнению пьезопроводности. Чтобы найти распределение давления, задают граничные условия и начальное давление.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T002",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "Изменение давления во времени связано с пространственной неоднородностью давления: ∂p/∂t = κΔp. Форма уравнения совпадает с уравнением теплопроводности, поэтому применима разработанная для него техника решения.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T003",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "Специалист задаёт область пласта, граничное условие и начальное распределение давления. На скважинах или галереях давление, напор либо расход могут зависеть от времени.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T004",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "Рассматривается однородная слабосжимаемая жидкость в упруго деформируемом пласте. Границы могут быть непроницаемыми или сообщаться со скважинами и соседними пластами. Мгновенное изменение давления или расхода моделирует быстрый пуск или закрытие. Единственность решения указана при заданных граничном и начальном условиях.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T005",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "Уравнение: ∂p/∂t = κΔp, где Δp — сумма вторых пространственных производных давления.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T006",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "Общее граничное условие: ap + b∂p/∂n = f(x, y, z, t); a² + b² ≠ 0, b/a ≥ 0.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T007",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_diffusion_basics",
+   "text": "Малые параметры, например отношение радиуса скважины к расстоянию между скважинами, могут существенно упростить решение.",
+   "page_pdf": 39,
+   "pages": [
+    39
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T008",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Если пласт намного тоньше своей горизонтальной протяжённости, течение можно рассматривать как плоскопараллельное. В одномерной постановке давление подчиняется уравнению пьезопроводности, а преобразование Лапласа переводит задачу в уравнение для изображения давления.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T009",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Малая толщина пласта позволяет считать течение плоскопараллельным; скорость направлена вдоль оси x и не зависит от y и z. Преобразование Лапласа по времени превращает уравнение пьезопроводности в обыкновенное дифференциальное уравнение по x с заданными граничными значениями.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T010",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Для начального стационарного движения давление отсчитывают от стационарного распределения P₀(x). Затем задают условия на концах отрезка, преобразуют давление по времени и решают краевую задачу для изображения.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T011",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Постановка относится к плоскопараллельному одномерному движению на отрезке от 0 до L. На контуре питания x=L давление сохраняет начальное значение; на сечении x=0 давление меняется по заданному закону. Для разности P=p−P₀ начальное значение равно нулю.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T012",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Преобразование задано интегралом P̄(x,σ)=∫₀∞e⁻ᵗσP(x,t)dt.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T013",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Изображение удовлетворяет уравнению d²P̄/dx²−ν²P̄=0, где ν²=σ/κ.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T014",
+   "type": "claim",
+   "node_id": "barenblatt.linear_flow_laplace",
+   "text": "Решение: P̄=F(σ) sh[(L−x)ν]/sh(Lν), где F(σ) — изображение заданного закона на x=0.",
+   "page_pdf": 39,
+   "pages": [
+    39,
+    40
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T015",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "После скачка давления на границе в раннее время распределение описывает формула через erfc. Произвольное изменение давления рассчитывают интегралом Дюамеля, используя отклик на скачок.",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T016",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "Скачку давления соответствует изображение p⁰/σ; решение в изображениях раскладывают в ряд экспонент и обращают почленно. При малых временах вклад удалённых границ пренебрежимо мал, поэтому давление зависит от x и t через x/√(κt).",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T017",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "Для скачка давления используют решение конечного или бесконечного пласта. Для произвольной функции давления на границе интегрируют её производную, умноженную на отклик на скачок.",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T018",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "Ряд решения сходится при всех t и x. Упрощение до формулы бесконечного пласта применимо при κt ≪ L²; при L → ∞ она также описывает пласт бесконечной протяжённости.",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T019",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "При больших |σ| и 2L√(σ/κ) ≫ 1 изображение решения раскладывают по степеням exp(−2L√(σ/κ)).",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T020",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "В разложении присутствуют расстояния x+2Ln и 2L(n+1)−x.",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T021",
+   "type": "claim",
+   "node_id": "barenblatt.short_time_response",
+   "text": "Формула Дюамеля: P(x,t)=∫₀ᵗ f′(τ)P₁(x,t−τ)dτ.",
+   "page_pdf": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T022",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "Приближение давления к стационарному линейному распределению происходит экспоненциально. Характерное время установления зависит от длины элемента и коэффициента пьезопроводности: τ ≈ L²/(κπ²).",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T023",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "В решении переходный вклад затухает экспоненциально → со временем давление приближается к линейному стационарному распределению. Увеличение длины L увеличивает характерное время, а увеличение κ уменьшает его.",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T024",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "Специалист оценивает время установления стационарного течения для каждого элемента сложной системы. Затем отделяет элементы, где течение можно считать стационарным, от элементов на начальной стадии нестационарного процесса.",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T025",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "Результат относится к большим временам и линейной теории однородной сжимаемой жидкости. Для высоковязкой нефти и низкой проницаемости κ может быть в 10–100 раз меньше, а характерное время — соответственно больше.",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T026",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "При t ≫ L²/κ ряд (II.92) неудобен для вычислений: приходится суммировать много членов. Автор использует вторую теорему разложения Лапласа.",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T027",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "Теорема применима к регулярной функции F(σ), стремящейся к нулю при |σ| → ∞. Вычеты берут в порядке неубывания модулей особых точек.",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T028",
+   "type": "claim",
+   "node_id": "barenblatt.steady_state_timescale",
+   "text": "Решение имеет вид стационарного линейного распределения, экспоненциальной поправки и остатка указанного порядка.",
+   "page_pdf": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T029",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "Давление при осесимметричном притоке описывается радиальным уравнением пьезопроводности. После преобразования Лапласа его решение выражается через модифицированные функции Бесселя нулевого порядка.",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T030",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "Радиальная симметрия сводит описание движения к зависимости давления от радиуса и времени. Линейность позволяет рассматривать отклонение от стационарного давления; преобразование Лапласа переводит радиальное уравнение в уравнение для изображения давления.",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T031",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "Задают начальное распределение давления и граничные условия на радиусах скважины ρ и внешней границы R. Затем переходят к изображениям Лапласа и записывают общее решение через I₀ и K₀. Граничные условия задают константы решения.",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T032",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "В главе рассматривается одиночная скважина в круговом пласте. Область решения задана как 0 < ρ ≤ r ≤ R ≤ ∞. Начальное распределение можно считать нулевым, если рассматриваются отклонения от стационарного распределения C₁ ln r + C₂.",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T033",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "После преобразования Лапласа радиальное уравнение имеет вид r⁻¹ d[r dP̄/dr]/dr = ν²P̄, где ν² = σ/κ.",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T034",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "Общее решение: P̄(r, σ) = C₁I₀(rν) + C₂K₀(rν).",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T035",
+   "type": "claim",
+   "node_id": "barenblatt.radial_flow_model",
+   "text": "I₀ и K₀ — модифицированные функции Бесселя нулевого порядка от мнимого аргумента.",
+   "page_pdf": 42,
+   "pages": [
+    42
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T036",
+   "type": "claim",
+   "node_id": "barenblatt.constant_rate_solution",
+   "text": "При постоянном дебите давление зависит от радиуса и времени, а граничные условия задают через градиент давления у скважины и давление на внешней границе. Для типичных условий исследования решение упрощают промежуточной асимптотикой.",
+   "page_pdf": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T037",
+   "type": "claim",
+   "node_id": "barenblatt.constant_rate_solution",
+   "text": "Постоянный дебит задаёт радиальный градиент давления у скважины → граничные условия определяют выражение для изображения давления → подходящие отношения радиусов и времени позволяют упростить его асимптотиками функций Бесселя.",
+   "page_pdf": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T038",
+   "type": "claim",
+   "node_id": "barenblatt.constant_rate_solution",
+   "text": "Специалист использует решение для определения параметров пласта по наблюдениям нестационарного притока. При выполнении условий промежуточной асимптотики он упрощает выражение с помощью асимптотик функций Бесселя.",
+   "page_pdf": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T039",
+   "type": "claim",
+   "node_id": "barenblatt.constant_rate_solution",
+   "text": "Промежуточная асимптотика применима при малом радиусе скважины и большом расстоянии до внешней границы, в типичных условиях исследования. Требуется ρ/√(πt) ≪ 1 ≪ R/√(πt).",
+   "page_pdf": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T040",
+   "type": "claim",
+   "node_id": "barenblatt.constant_rate_solution",
+   "text": "При больших аргументах I₀(z) ≈ eᶻ(2πz)⁻¹ᐟ², а K₀(z) ≈ e⁻ᶻ(π/2z)¹ᐟ².",
+   "page_pdf": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T041",
+   "type": "claim",
+   "node_id": "barenblatt.constant_rate_solution",
+   "text": "При z → 0: K₀(z) ≈ −ln(γz/2), где γ = eᶜ, а автор указывает C = 0,7772.",
+   "page_pdf": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T042",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "При постоянном дебите давление описывается формулами, связывающими его с расстоянием до скважины и временем. В указанной области применимости распределение давления не зависит от радиуса скважины.",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T043",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "Из преобразования Лапласа давления получают зависимость через функцию K₀. Затем обратное преобразование даёт давление во времени, а асимптотика Ei — формулу для давления на скважине.",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T044",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "Специалисты применяют формулы (II.107) и (II.108), чтобы определять параметры пласта по данным о нестационарном притоке.",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T045",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "Независимость распределения от радиуса скважины действует при ρ²/πt ≪ 1. Формула для давления на скважине использует асимптотическое выражение Ei(−x)=ln γx при x→∞.",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T046",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "Преобразование давления: P̄(r, σ)=−pσ⁻¹K₀(rν).",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T047",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "Давление во времени: p(r,t)=(p*/2)Ei(−r²/4πt).",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T048",
+   "type": "claim",
+   "node_id": "barenblatt.radial_pressure_response",
+   "text": "Формула на скважине: p(ρ,t)=−qμ/(4πk) ln(γρ²/4πt)=Qμ/(4πkh) ln(2,25πt/ρ²).",
+   "page_pdf": 43,
+   "pages": [
+    43
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T049",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "После остановки скважины давление со временем восстанавливается, а его график помогает оценить свойства пласта. Прямолинейный участок графика давления от логарифма времени даёт параметры для расчёта гидропроводности и отношения π/ρ².",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T050",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "Изменение режима скважины создаёт нестационарную фильтрацию → давление меняется во времени. При остановке задаётся постоянный дебит −Q → давление на забое описывается прямой в координатах p и ln t. Её параметры A и B связаны с параметрами пласта и кажущимся радиусом скважины.",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T051",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "Специалист временно останавливает скважину и измеряет забойное давление во времени. Он строит график p от ln t, определяет прямолинейный участок и параметры A и B. При известном Q по ним оценивает гидропроводность kh/μ и отношение π/ρ².",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T052",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "Прямолинейный асимптотический участок часто появляется в первые часы, но это не гарантировано. Радиус в формуле обычно не равен истинному радиусу скважины. На кажущийся радиус влияют неполное вскрытие пласта, закрытая для фильтрации поверхность, загрязнение призабойной зоны и трещины. По одному отношению π/ρ² нельзя отдельно определить π и ρ². Для оценки пьезопроводности автор предпочитает наблюдать давление в реагирующей скважине; тогда используют известное расстояние между скважинами.",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T053",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "Для асимптоты p = A ln t + B автор приводит A = Qμ/(4πkn) и B = A ln(4π/γρ²).",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T054",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "Сопоставление асимптоты с формулой (II.108) связывает её наклон и свободный член с параметрами пласта.",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T055",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_buildup_test",
+   "text": "В реагирующей скважине характерный размер — расстояние между скважинами, известное точнее радиуса скважины.",
+   "page_pdf": 43,
+   "pages": [
+    43,
+    44
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T056",
+   "type": "claim",
+   "node_id": "barenblatt.interference_test_method",
+   "text": "Пьезопроводность удобнее оценивать по изменению давления в соседней реагирующей скважине. Расстояние между скважинами известно точнее, чем эффективный радиус скважины.",
+   "page_pdf": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T057",
+   "type": "claim",
+   "node_id": "barenblatt.interference_test_method",
+   "text": "Скачок дебита возмущающей скважины вызывает изменение давления в реагирующей скважине. Время характерной точки отклика связано с расстоянием между скважинами и пьезопроводностью: в точке касания выполняется r²/(4κt₁)=0,44, откуда κ=0,57r²/t₁.",
+   "page_pdf": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T058",
+   "type": "claim",
+   "node_id": "barenblatt.interference_test_method",
+   "text": "Специалист фиксирует на кривой давления время появления характерной точки. Удобный вариант — касание кривой Δp(t) прямой из начала координат.",
+   "page_pdf": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T059",
+   "type": "claim",
+   "node_id": "barenblatt.interference_test_method",
+   "text": "Метод предполагает мгновенный запуск источника постоянной интенсивности в бесконечном однородном пласте. Границы пласта и продолжающийся после остановки приток могут исказить кривую; прямолинейного участка иногда нет.",
+   "page_pdf": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T060",
+   "type": "claim",
+   "node_id": "barenblatt.interference_test_method",
+   "text": "При скачке дебита изменение давления описывается формулой Δp = −Qμ/(4πkh) · Ei(−r²/(4κt)).",
+   "page_pdf": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T061",
+   "type": "claim",
+   "node_id": "barenblatt.interference_test_method",
+   "text": "Ei — интегральная показательная функция; она задаёт зависимость отклика давления от времени и расстояния.",
+   "page_pdf": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T062",
+   "type": "claim",
+   "node_id": "barenblatt.test_model_limits",
+   "text": "Прямолинейный участок кривой восстановления давления может отсутствовать из-за границ пласта и продолжающегося притока в скважину. Поэтому для обработки используют методы, учитывающие приток после остановки.",
+   "page_pdf": 45,
+   "pages": [
+    45
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T063",
+   "type": "claim",
+   "node_id": "barenblatt.test_model_limits",
+   "text": "Возмущение достигает границ пласта и искажает кривую; сжимаемость жидкостей и газов в скважине поддерживает приток после остановки. Эти эффекты могут помешать появлению прямолинейного участка p(ln t).",
+   "page_pdf": 45,
+   "pages": [
+    45
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T064",
+   "type": "claim",
+   "node_id": "barenblatt.test_model_limits",
+   "text": "Специалист учитывает приток после остановки и может применять метод на основе преобразований Лапласа. Этот метод допускает произвольное изменение дебита и иногда позволяет оценивать неоднородность пласта.",
+   "page_pdf": 45,
+   "pages": [
+    45
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T065",
+   "type": "claim",
+   "node_id": "barenblatt.test_model_limits",
+   "text": "Простые решения ограничены условиями мгновенного пуска источника постоянной интенсивности в бесконечном однородном пласте. Искажение начинается, когда возмущение достигает границ; указанное время приблизительное. Прямолинейный участок может отсутствовать, особенно у скважин близ границ пласта.",
+   "page_pdf": 45,
+   "pages": [
+    45
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T066",
+   "type": "claim",
+   "node_id": "barenblatt.test_model_limits",
+   "text": "Время достижения возмущением границ указано как Θ = R²/π.",
+   "page_pdf": 45,
+   "pages": [
+    45
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T067",
+   "type": "claim",
+   "node_id": "barenblatt.test_model_limits",
+   "text": "Метод из работы [31] непосредственно использует преобразования Лапласа кривых восстановления давления.",
+   "page_pdf": 45,
+   "pages": [
+    45
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T068",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "Отношение преобразованного давления на скважине к преобразованному дебиту задаёт функцию отклика пласта ψ(σ). Эта функция не зависит от режима эксплуатации, но определяется параметрами пласта.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T069",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "Преобразование Лапласа переводит нестационарные зависимости давления и дебита в зависимости от параметра σ. Давление в пласте представляют как произведение давления на скважине и функции U; связь дебита с радиальной производной U приводит к отношению ψ(σ), не зависящему от режима работы.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T070",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "Специалист получает зависимости давления и дебита, численно преобразует их по Лапласу и вычисляет ψ(σ). Затем по виду этой функции можно определить некоторые параметры пласта.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T071",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "Рассматривается пласт произвольной конфигурации с заданными граничными условиями. Функция U равна единице на скважине и удовлетворяет однородным условиям на внешних границах. Функция ψ зависит от U и параметров пласта, но не от режима эксплуатации.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T072",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "U — отношение преобразованного давления в точке пласта к преобразованному давлению на скважине.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T073",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "Преобразованный дебит связан с радиальной производной U у стенки скважины множителем 2π(kh/μ)ρ.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T074",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_response_function",
+   "text": "В главе уравнение (II.110) записано как ∇²P̄ = σ̄P/π.",
+   "page_pdf": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T075",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "По известным функциям давления p₁(t) и дебита q(t) численно получают их преобразования Лапласа, затем вычисляют ψ(σ). Для однородного бесконечного пласта приближение делает Ψ линейной по ln τ, а коэффициенты этой прямой содержат параметры пласта.",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T076",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "Измеренные давление и дебит → преобразования Лапласа → функция ψ(σ), определяемая параметрами пласта. При малом аргументе функций K₀ и K₁ формула упрощается до прямой Ψ(ln τ) → её наклон и свободный член позволяют определить некоторые параметры.",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T077",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "Специалист численно вычисляет преобразования давления и дебита, находит ψ(σ), переходит к τ и строит график Ψ(ln τ). По коэффициентам прямой определяет параметры пласта.",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T078",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "Пример относится к скважине в однородном бесконечном пласте. Линейное приближение применимо, когда аргумент ρ/√(κτ) достаточно мал. Значения τ не следует брать меньше 1–2 минут.",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T079",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "Для однородного бесконечного пласта U = K₀(rν)/K₀(ρν), где ν = √(σ/κ).",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T080",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "ψ(σ) = μ/(2πkhρ) · K₀(ρν)/K₁(ρν).",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T081",
+   "type": "claim",
+   "node_id": "barenblatt.laplace_curve_analysis",
+   "text": "Ψ(τ) = μ/(4πkh) · ln τ + μ/(4πkh) · ln(4κ/(γ²ρ²)); наклон и свободный член связаны с параметрами пласта.",
+   "page_pdf": 46,
+   "pages": [
+    46
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T082",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "В двухзонном пласте отклик скважины меняется со временем: сначала проявляются свойства внутренней зоны, позднее — внешней. Поздний отклик можно описать как отклик однородного пласта с параметрами внешней зоны и эквивалентным радиусом скважины.",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T083",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "Причина: скважина окружена зоной с параметрами k₁ и κ₁, отличными от параметров внешнего пласта k₂ и κ₂. Следствие: при промежуточных временах отклик связан с внутренней зоной, а при больших временах — с внешней; преобразованная кривая соответствует эквивалентному радиусу ρ*.",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T084",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "Специалист использует метод восстановления давления, чтобы определить некоторые параметры неоднородного пласта. По результатам можно оценить загрязнение призабойной зоны и эффективность интенсификации притока.",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T085",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "Рассматривается скважина радиуса ρ в центре круговой зоны радиуса R внутри бесконечного пласта. Промежуточный режим указан при ρ²/κ₁ ≪ τ ≪ R²/κ₁; поздний — при τ ≫ R²/κ₂. Формула позднего отклика в доступном тексте повреждена, поэтому её свободный член здесь не восстанавливается.",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T086",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "В промежуточном режиме Ψ(τ) задаётся формулой (II.115) при k = k₁ и κ = κ₁.",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T087",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "В позднем режиме Ψ линейно зависит от ln τ; коэффициент равен μ/(4πk₂h).",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T088",
+   "type": "claim",
+   "node_id": "barenblatt.two_zone_response",
+   "text": "Эквивалентный радиус: ρ* = R(ρ/R)^γ = ρ(ρ/R)^(γ−1), где γ = k₂/k₁.",
+   "page_pdf": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T089",
+   "type": "claim",
+   "node_id": "barenblatt.approximation_motivation",
+   "text": "Точные решения не всегда просты и обозримы, а исходные данные природных пластов недостаточно точны. Поэтому часто достаточно простых приближённых решений, сохраняющих важные характеристики задачи.",
+   "page_pdf": 47,
+   "pages": [
+    47
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T090",
+   "type": "claim",
+   "node_id": "barenblatt.approximation_motivation",
+   "text": "Параболические уравнения сглаживают начальные возмущения со временем и вдали от источника → основная часть области остаётся близкой к невозмущённому состоянию. Если важны главным образом интегральные характеристики, приближённое решение может быть достаточным.",
+   "page_pdf": 47,
+   "pages": [
+    47
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T091",
+   "type": "claim",
+   "node_id": "barenblatt.approximation_motivation",
+   "text": "Специалист обрабатывает кривые восстановления давления, чтобы оценить загрязнение призабойной зоны и эффективность интенсификации притока. Метод также применяют для оценки расстояния до экрана и радиуса трещин.",
+   "page_pdf": 47,
+   "pages": [
+    47
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T092",
+   "type": "claim",
+   "node_id": "barenblatt.approximation_motivation",
+   "text": "В отдельных точках, например у скважин и галерей, решение может иметь известные особенности. Понятие области влияния применяют в некоторых приближённых методах; вне неё считают, что сохраняются начальные значения давления p или скорости фильтрации u.",
+   "page_pdf": 47,
+   "pages": [
+    47
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T093",
+   "type": "claim",
+   "node_id": "barenblatt.approximation_motivation",
+   "text": "По формуле (II.93) отклонение от начального состояния убывает с ростом расстояния x как exp(-x²/4xt), согласно тексту главы.",
+   "page_pdf": 47,
+   "pages": [
+    47
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T094",
+   "type": "claim",
+   "node_id": "barenblatt.integral_relations_method",
+   "text": "Метод интегральных соотношений заменяет исходное дифференциальное уравнение системой интегральных соотношений. Давление представляют рядом по выбранным функциям, получая уравнения для коэффициентов.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T095",
+   "type": "claim",
+   "node_id": "barenblatt.integral_relations_method",
+   "text": "В области возмущения скважины интегрируют временную и вторую пространственную производные давления с весами fᵢ(x,t). Их взвешенные интегралы связывают через коэффициент κ; разложение давления по полной системе функций приводит к уравнениям для коэффициентов.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T096",
+   "type": "claim",
+   "node_id": "barenblatt.integral_relations_method",
+   "text": "Для задачи о возмущении первоначального стационарного движения автор выбирает простейшую систему: последовательные степени координаты 1, x, x² и далее.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T097",
+   "type": "claim",
+   "node_id": "barenblatt.integral_relations_method",
+   "text": "Функции fᵢ должны образовывать полную систему по координате x на отрезке [L₁(t), L₂(t)]. Границы отрезка зависят от времени. Метод назван приближённым; дополнительных условий выбора числа функций глава не приводит.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T098",
+   "type": "claim",
+   "node_id": "barenblatt.integral_relations_method",
+   "text": "Соотношение (II.118) приравнивает интеграл ∂p/∂t · fᵢ к κ, умноженному на интеграл ∂²p/∂x² · fᵢ.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T099",
+   "type": "claim",
+   "node_id": "barenblatt.integral_relations_method",
+   "text": "Индекс i принимает значения от 0 до n; степенной базис включает 1, x, x² и последующие степени.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T100",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "Давление внутри зоны возмущения приближают многочленом, а за её границей оставляют начальным. Коэффициенты многочлена и положение границы определяют системой условий.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T101",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "При отборе жидкости давление меняется внутри зоны 0 ≤ x ≤ l. За границей x ≥ l оно принимается равным начальному; на границе обеспечивают непрерывность и выбранную гладкость.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T102",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "Специалист задаёт многочлен для давления внутри зоны. Затем составляет систему из интегральных соотношений, граничного условия при x = 0 и условий при x = l.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T103",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "При x = l давление должно равняться P + Gl. Условия гладкости могут требовать, чтобы производные от первой до k-й обращались в нуль. Качество расчёта зависит от выбора числа интегральных соотношений и условий гладкости.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T104",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "Начальное давление задано законом p(x, 0) = P + Gx.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T105",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "Внутри зоны p(x, t) = P₀(t) + P₁(t)x/l + … + Pₙ(t)xⁿ/lⁿ.",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T106",
+   "type": "claim",
+   "node_id": "barenblatt.polynomial_pressure_approximation",
+   "text": "В аппроксимации n + 2 неизвестных: коэффициенты Pᵢ(t) и граница l(t).",
+   "page_pdf": 48,
+   "pages": [
+    48
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T107",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "Интегральные соотношения связывают изменение во времени интегралов давления с давлением или его производной на границе. Для моментов порядка не ниже второго изменение связано с моментом на два порядка ниже.",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T108",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "Интегрирование по частям и дифференцирование интеграла по времени преобразуют систему (II.118) в соотношения (II.122)–(II.124). Граничные условия задают давление при x=0 и начальное давление.",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T109",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "Автор преобразует систему (II.118), используя интегрирование по частям и теорему о дифференцировании определённого интеграла.",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T110",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "В рассматриваемом случае p(0,t)=p₁, а начальное давление p₀ равно нулю. Соотношение для момента порядка k дано только при k≥2.",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T111",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "Нулевой момент: d/dt ∫₀ˡ p dx = −κ(∂p/∂x) при x=0.",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T112",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "Первый момент: d/dt ∫₀ˡ px dx = κp(0,t).",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T113",
+   "type": "claim",
+   "node_id": "barenblatt.pressure_moment_equations",
+   "text": "При k≥2: d/dt ∫₀ˡ⁽ᵗ⁾ pxᵏ dx = κk(k−1)∫₀ˡ⁽ᵗ⁾ pxᵏ⁻² dx.",
+   "page_pdf": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T114",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "При первом приближении граница движения жидкости находится на расстоянии l = 2√(κt), а скорость у x = 0 убывает со временем. Точное решение даёт другую формулу скорости; при n = 1 приближение совпадает с результатом метода последовательной смены стационарных состояний.",
+   "page_pdf": 49,
+   "pages": [
+    49
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T115",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "По формуле первого приближения l растёт как √t, а скорость у x = 0 пропорциональна 1/√t. Поэтому с течением времени скорость притока уменьшается.",
+   "page_pdf": 49,
+   "pages": [
+    49
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T116",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "Автор вычисляет l и скорость у x = 0 для первого приближения, затем приводит точную скорость по формуле (II.126) для сравнения.",
+   "page_pdf": 49,
+   "pages": [
+    49
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T117",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "Совпадение с методом последовательной смены стационарных состояний указано для решения при n = 1. Точный вывод и область применимости метода в отрывке не раскрыты.",
+   "page_pdf": 49,
+   "pages": [
+    49
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T118",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "Первое приближение: l = 2√(κt), u(0,t) = k(p₁ − p₀)/(2μ√(κt)).",
+   "page_pdf": 49,
+   "pages": [
+    49
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T119",
+   "type": "claim",
+   "node_id": "barenblatt.first_flow_approximation",
+   "text": "Точное значение: u₀(0,t) = k(p₁ − p₀)/(μ√(πκt)).",
+   "page_pdf": 49,
+   "pages": [
+    49
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T120",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Во втором приближении получают простой профиль давления и скорость фильтрации, близкую к точному решению. Более высокие приближения не всегда улучшают результат: выбор дополнительных условий влияет на него.",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T121",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Соотношение (II.122) вместе с условием нулевой производной давления на границе x = l задаёт второе приближение. Оно приводит к профилю p = p₁(1 − x/l)² и l² = 12κt; при расчёте скорости у x = 0 результат близок к точному решению.",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T122",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Для второго приближения используют (II.122) и условие (II.127), затем находят профиль давления и скорость фильтрации при x = 0. Для третьего сравнивают результат с условием (II.127) и без него.",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T123",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Третье приближение с соотношениями (II.122), (II.123) и условием (II.127) совпадает со вторым. Без условия (II.127) получается иной, кубический профиль. Автор отмечает отсутствие обоснованных правил выбора дополнительных условий.",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T124",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Во втором приближении p(x,t) = p₁(1 − x/l)², где l² = 12κt.",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T125",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Скорость у x = 0: u(0,t) = k(p₁ − p₀)/√(3κt).",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T126",
+   "type": "claim",
+   "node_id": "barenblatt.higher_flow_approximations",
+   "text": "Для другого третьего приближения используется ζ = x/√(κt): p = p₁(1 − 0,583ζ + 0,107ζ² + 0,0061ζ³).",
+   "page_pdf": 49,
+   "pages": [
+    49,
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T127",
+   "type": "claim",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "text": "Давление представляют логарифмическим членом и многочленом по отношению радиуса к радиусу возмущения. Последовательные приближения дают формулы для радиуса зоны и давления, которые хорошо согласуются с точным решением на рисунке 7.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T128",
+   "type": "claim",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "text": "Пуск скважины с заданным дебитом вызывает изменение давления в пласте. Интегральные соотношения связывают изменение интегралов давления с дебитом и коэффициентом пьезопроводности; подстановка приближённой формы давления позволяет определить радиус зоны возмущения и само давление.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T129",
+   "type": "claim",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "text": "В нулевом приближении полагают все коэффициенты многочлена равными нулю и определяют l(t) из первого интегрального соотношения. Для первого приближения используют оба соотношения и условия p = 0 и ∂p/∂r = 0 при r = l(t).",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T130",
+   "type": "claim",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "text": "Рассматривается осесимметричная задача пуска скважины с заданным дебитом в бесконечном пласте. Глава приводит результаты без подробных выкладок. Согласование с точным решением отмечено для приближений (II.134) и (II.135), но не дано количественной оценки ошибки.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T131",
+   "type": "claim",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "text": "Искомая форма: p(r,t) = q ln(r/l) + P₀ + P₁(r/l) + … + Pₙ(r/l)ⁿ.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T132",
+   "type": "claim",
+   "node_id": "barenblatt.radial_integral_approximation",
+   "text": "Первое интегральное соотношение: d/dt ∫₀ˡ rp dr = −κq. Для k ≥ 1: d/dt ∫₀ˡ rᵏ⁺¹p dr = κk² ∫₀ˡ prᵏ⁻² dr.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T133",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "После времени t₁ давление на границе пласта нужно учитывать явно. Для круглого пласта автор задаёт решение, удовлетворяющее условию нулевого давления на контуре.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T134",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "До t₁ используют первое приближение без учёта граничного условия; после t₁ возмущение достигает контура, поэтому задают p(R,t)=0. Подстановка радиуса контура вместо l(t) даёт формулу давления с нулевым значением при r=R.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T135",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "Для времени после t₁ берут первое приближение разложения (II.131), полагают l(t)=R и учитывают условие p(R,t)=0. Получают формулу (II.137).",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T136",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "Рассматривается круговой пласт радиуса R с постоянным начальным давлением на контуре, принимаемым за нуль. Скважина находится в центре и имеет пренебрежимо малый радиус. Решение приближённое; метод даёт удовлетворительную точность. Точные решения представлены плохо сходящимися рядами Фурье—Бесселя.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T137",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "Формула после t₁: p(r,t)=q ln(r/R)+P₀(t)(1−r/R).",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T138",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_radial_reservoir",
+   "text": "При r=R оба слагаемых равны нулю, поэтому формула удовлетворяет условию p(R,t)=0.",
+   "page_pdf": 50,
+   "pages": [
+    50
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T139",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "Временной коэффициент давления экспоненциально затухает после момента t₁. Поэтому приближённое распределение давления стремится к стационарному.",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Суть"
+  },
+  {
+   "id": "T140",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "Первое интегральное соотношение даёт уравнение для P₀(t) при фиксированном радиусе R. Условие непрерывности задаёт P₀(t₁) = −q; решение затухает экспоненциально. Подстановка P₀(t) в выражение для давления даёт распределение (II.140).",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Как это работает"
+  },
+  {
+   "id": "T141",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "Решить уравнение (II.138) с условием P₀(t₁) = −q, затем подставить решение в формулу распределения давления.",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Практика"
+  },
+  {
+   "id": "T142",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "Речь идёт о приближённом распределении. В главе указано, что оно экспоненциально стремится к стационарному.",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Нюансы"
+  },
+  {
+   "id": "T143",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "При фиксированном R уравнение (II.138) записано как R²P₀′/6 = −κP₀.",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T144",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "Решение: P₀(t) = −q exp[−6κ(t−t₁)/R²].",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
+   "id": "T145",
+   "type": "claim",
+   "node_id": "barenblatt.bounded_reservoir_settling",
+   "text": "Формула давления: p(r,t) = q ln(r/R) − q(1−r/R) exp[−6κ(t−t₁)/R²].",
+   "page_pdf": 51,
+   "pages": [
+    51
+   ],
+   "quote": null,
+   "layer": "Глубже"
+  },
+  {
    "id": "A01",
    "type": "analogy",
    "node_id": "barenblatt.pressure_diffusion_basics",
-   "text": "Гипотеза: уравнение теплопроводности можно представить как аналог модели распространения значения по пространственной сетке во времени.",
-   "breaks_where": "Аналогия ограничена формой уравнений: глава не утверждает, что давление является теплом или что физические параметры этих процессов совпадают."
+   "text": "Гипотеза: уравнение похоже на модель распространения сигнала по сетке, где локальные значения связаны с соседними.",
+   "breaks_where": "Это только математическая аналогия: глава говорит о давлении жидкости в деформируемом пористом пласте, а не о передаче цифровых сигналов."
   },
   {
    "id": "A02",
@@ -2082,15 +3920,15 @@
    "id": "A03",
    "type": "analogy",
    "node_id": "barenblatt.short_time_response",
-   "text": "Интеграл Дюамеля похож на суммирование ответов линейной системы на последовательные изменения входного сигнала.",
-   "breaks_where": "Это лишь аналогия: глава рассматривает давление в пласте и задаёт конкретное решение через erfc, κ и длину L."
+   "text": "Гипотеза: отклик на скачок можно представить как базовый тестовый ответ, а произвольный вход — как сумму взвешенных сдвинутых ответов.",
+   "breaks_where": "Аналогия не описывает физическую величину κ и условия применимости приближения для конечного пласта."
   },
   {
    "id": "A04",
    "type": "analogy",
    "node_id": "barenblatt.steady_state_timescale",
-   "text": "Гипотеза: это похоже на ожидание стабилизации данных после изменения параметров системы; крупные компоненты могут стабилизироваться дольше.",
-   "breaks_where": "Гипотеза: аналогия ограничена. В главе время установления описывает физическое течение и зависит от L² и κ, а не от вычислительной задержки."
+   "text": "Гипотеза: установление режима можно сравнить с затуханием переходного процесса в динамической системе.",
+   "breaks_where": "Гипотеза: аналогия не задаёт физическую связь τ ≈ L²/(κπ²) и не объясняет, как вязкость и проницаемость влияют на κ."
   },
   {
    "id": "A05",
@@ -2110,8 +3948,8 @@
    "id": "A07",
    "type": "analogy",
    "node_id": "barenblatt.radial_pressure_response",
-   "text": "Гипотеза: преобразование Лапласа похоже на временное преобразование задачи в представление, где её удобнее решать.",
-   "breaks_where": "Гипотеза: аналогия ограничена; глава не сопоставляет преобразование Лапласа с ИТ-инструментами, а давление описывается физическими формулами."
+   "text": "Преобразование Лапласа можно сравнить с переходом к представлению данных, где задачу проще решить.",
+   "breaks_where": "Это лишь аналогия: преобразование Лапласа — математическая операция, а не формат хранения данных."
   },
   {
    "id": "A08",
@@ -2145,8 +3983,8 @@
    "id": "A12",
    "type": "analogy",
    "node_id": "barenblatt.laplace_curve_analysis",
-   "text": "Это похоже на преобразование временного ряда в другое представление, где параметры системы проявляются в коэффициентах простой зависимости.",
-   "breaks_where": "Аналогия не объясняет физический смысл параметров пласта и не подтверждает применимость формул вне однородного бесконечного пласта."
+   "text": "Гипотеза: преобразование похоже на смену представления данных, чтобы зависимость стала удобнее для анализа.",
+   "breaks_where": "Гипотеза: аналогия ограничена. Здесь результат связан с физической моделью пласта и её условиями применимости, а не только с вычислительным представлением данных."
   },
   {
    "id": "A13",
@@ -2215,8 +4053,8 @@
    "id": "A22",
    "type": "analogy",
    "node_id": "barenblatt.bounded_reservoir_settling",
-   "text": "Гипотеза: затухающий член можно сравнить с переходной составляющей в системе, постепенно приближающейся к установившемуся состоянию.",
-   "breaks_where": "Гипотеза: аналогия не объясняет физический смысл давления, κ и радиального течения; глава не предлагает её."
+   "text": "Гипотеза: это похоже на систему, где временная поправка постепенно затухает, оставляя установившееся состояние.",
+   "breaks_where": "Аналогия ограничена: глава задаёт конкретное уравнение давления и экспоненциальное решение, а не общую ИТ-систему."
   }
  ],
  "scenes": [],
