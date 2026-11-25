@@ -85,7 +85,9 @@ def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path
             usd = (r.usage.prompt_tokens * pin + r.usage.completion_tokens * pout) / 1e6
             LEDGER.parent.mkdir(parents=True, exist_ok=True)
             with LEDGER.open("a", encoding="utf-8") as f:
+                # глава и этап — из окружения (их ставит glava.pipeline): по ним glava.metrics строит metrics.csv
                 f.write(json.dumps({"t": time.strftime("%Y-%m-%dT%H:%M:%S"), "model": model, "tag": tag,
+                                    "chapter": os.environ.get("GLAVA_CHAPTER"), "stage": os.environ.get("GLAVA_STAGE"),
                                     "in": r.usage.prompt_tokens, "out": r.usage.completion_tokens,
                                     "usd": round(usd, 5)}, ensure_ascii=False) + "\n")
             CACHE.mkdir(parents=True, exist_ok=True)
