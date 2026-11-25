@@ -14,7 +14,10 @@ from pathlib import Path
 
 from . import tts
 from .passport import build_passport
-from .render import Renderer, build_timeline, encode, mix_audio, sfx_track
+import numpy as np
+
+from .render import Renderer, build_timeline, encode, mix_audio
+from .cine import CineRenderer
 from .spec import load_spec
 from .style import domain_for_chapter, load_settings, load_style
 from .templates import get_template
@@ -41,21 +44,35 @@ def build(spec_path: str | Path, layouts=None, voice: str | None = None,
     tpl = get_template(spec.template)(spec.params, style)
     segs, tl_info = build_timeline(spec, domain, engine=voice)
 
+    # рендереры раньше звука: эффекты привязаны к событиям кадра (движение прибора, рамки, смена сцен)
+    renderers = {}
+    for kind in layouts:
+        use_cine = (kind == "9x16" and settings["render"].get("cine", True) and hasattr(tpl, "cine_world"))
+        renderers[kind] = (CineRenderer(spec, tpl, style, segs, Renderer) if use_cine
+                           else Renderer(spec, tpl, style, kind, segs))
     raw_wav, wav = out_dir / "voice_raw.wav", out_dir / "voice.wav"
     voice_mix = mix_audio(segs)
     tts.write_wav(raw_wav, voice_mix)
-    audio_info = tts.normalize(raw_wav, wav, settings["voice"]["target_lufs"])
-    if settings["render"].get("sfx", True):  # звуковые акценты подмешиваем после нормализации голоса
+    audio_info = tts.normalize(raw_wav, wav, settings["voice"]["target_lufs"])   # громкость одного голоса
+    rs = settings["render"]
+    if rs.get("sfx", True) or rs.get("music", True):
+        from . import sound
         v = tts.decode_to_array(wav)
-        v = v + sfx_track(segs, len(v), settings["render"].get("sfx_gain_db", -24.0))
-        tts.write_wav(wav, v)
-        audio_info["with_sfx_lufs"] = float(tts.loudness(wav).get("input_i", "nan"))
+        total = len(v) / tts.SR
+        fx = sound.design(segs, renderers[layouts[0]], total) if rs.get("sfx", True) else np.zeros(len(v))
+        bed = sound.music(total) if rs.get("music", True) else np.zeros(len(v))
+        tts.write_wav(raw_wav, sound.mix(v, fx, bed, rs.get("music_db", -20.0), rs.get("sfx_db", -8.0)))
+        res = tts.normalize(raw_wav, wav, settings["voice"]["target_lufs"])
+        audio_info.update({"mix_lufs": res.get("after_lufs"),
+                           "music": "тихая подложка, синтез в коде; под речью приглушается" if rs.get("music", True) else None,
+                           "sfx": "эффекты на событиях кадра (смена сцены, рамки, движение прибора, ответ)" if rs.get("sfx", True) else None,
+                           "heard": False})
     raw_wav.unlink(missing_ok=True)
 
     fps, crf = settings["render"]["fps"], settings["render"]["crf"]
     results, passport_frames, key_times, checks, notes = {}, [], [], [], {}
     for kind in layouts:
-        r = Renderer(spec, tpl, style, kind, segs)
+        r = renderers[kind]
         fdir = out_dir / ("frames" if kind == layouts[0] else f"frames_{kind}")
         fdir.mkdir(exist_ok=True)
         for old in fdir.glob("F*.png"):

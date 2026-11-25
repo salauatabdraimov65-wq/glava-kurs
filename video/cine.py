@@ -13,7 +13,7 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 from .draw import SDraw, fit, line_h, text_block, wrap
-from .style import display_font, font, hex_rgb, load_settings, mix
+from .style import display_font, font, hex_rgb, load_settings, mix, mono_font
 from .textclean import visible
 
 
@@ -96,7 +96,7 @@ def tunnel_frame(w: int, h: int, travel: float, colors: list, mud, seed: int = 5
     """Вид вдоль ствола вниз: стенки — породы сцены, ближе к центру темнее; travel — пройденный путь (усл.)."""
     rng = np.random.default_rng(seed)
     tex_h, tex_w = 256, 512
-    tex = fbm(tex_h, tex_w, rng, base=48)
+    tex = 0.6 * fbm(tex_h, tex_w, rng, base=22) + 0.4 * fbm(tex_h, tex_w, rng, base=6, octaves=3)
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
     cx, cy = w / 2, h * cy_frac
     dx, dy = xx - cx, yy - cy
@@ -112,8 +112,8 @@ def tunnel_frame(w: int, h: int, travel: float, colors: list, mud, seed: int = 5
         n = tex[ti, tj]
         band = (np.floor(v * 0.35) % len(cols)).astype(np.int32)
         base = cols[band]
-        ring = 0.75 + 0.35 * np.sin(v * 9 + n * 6)
-        out += base * (0.55 + 0.6 * n)[..., None] * ring[..., None]
+        ring = 0.78 + 0.3 * np.sin(v * 14 + n * 7) + 0.12 * np.sin(ang * 2 * np.pi * 3 + v)
+        out += base * (0.45 + 0.75 * n)[..., None] * ring[..., None]
     out /= samples
     light = np.clip((r / (w * 0.55)) ** 1.1, 0.04, 1.15)
     out *= light[..., None]
@@ -151,13 +151,24 @@ def music_bed(total_s: float, sr: int, accents: list[float], seed: int = 3) -> n
     for ac in accents:
         a = int(max(0, ac - 1.0) * sr)
         b = min(n, int(ac * sr))
+        if b - a < sr // 10:
+            continue
         tt = np.arange(b - a) / sr
         noise = np.convolve(np.random.default_rng(seed).standard_normal(b - a), np.ones(30) / 30, "same")
-        out[a:b] += noise * (tt / max(tt[-1], 1e-6)) ** 2 * 1.2 if len(tt) else 0
+        out[a:b] += noise * (tt / max(tt[-1], 1e-6)) ** 2 * 1.2
     # мягкий фильтр
     k = np.ones(8) / 8
     out = np.convolve(out, k, "same")
     return out / (np.max(np.abs(out)) + 1e-9)
+
+
+def tracked(d, xy, text, fnt, fill, track=4):
+    """Текст с разрядкой (теги, как в референсах)."""
+    x, y = xy
+    for ch in text:
+        d.text((x, y), ch, font=fnt, fill=fill)
+        x += fnt.getlength(ch) + track
+    return x
 
 
 # ---------------------------------------------------------------- рендер шортса
@@ -175,9 +186,9 @@ class CineRenderer:
         self.k = int(rs.get("ssaa", 2))
         self.fade = rs["fade_s"]
         # геометрия мира: интервал глубин занимает середину кадра в общем плане
-        self.y_top, self.y_bot = 640, 1330
+        self.y_top, self.y_bot = 610, 1250
         self.ppm = (self.y_bot - self.y_top) / (template.bottom - template.top)
-        self.zmax = float(rs.get("cine_follow_zoom", 1.9))
+        self.zmax = float(rs.get("cine_follow_zoom", 1.5))
         self.sec_w = int(self.W * 0.6)
         self.track = (int(self.W * 0.62), self.W - self.safe[0] + 20)
         self.world = template.cine_world(self.ppm * self.zmax, self.sec_w * self.zmax, self.H, self.ppm, self)
@@ -324,16 +335,18 @@ class CineRenderer:
         d.rounded_rectangle([cx - 9, cy - 40, cx + 9, cy - 4], radius=8, fill=meas)
         # счётчик глубины
         depth = int(round(self.tpl.top * e))
-        lab = f"{depth:,}".replace(",", " ")
-        f_big = display_font(190)
-        x0, y0 = self.safe[0], self.safe[1] + 150
-        d.text((x0, y0), lab, font=f_big, fill=hex_rgb(st["text"]))
-        d.text((x0 + f_big.getlength(lab) + 14, y0 + 112), "м", font=display_font(70), fill=hex_rgb(st["muted"]))
-        f_tag = font(30, True)
-        d.text((x0 + 4, y0 - 26), "ГЛУБИНА  ·  СХЕМА", font=f_tag, fill=hex_rgb(st["muted"]))
+        groups = f"{depth:,}".split(",")
+        f_big = mono_font(150, True)
+        x0, y0 = self.safe[0], 1010
+        x = x0
+        for gi, g in enumerate(groups):  # разряды с узким зазором (моно-пробел слишком широкий)
+            d.text((x, y0), g, font=f_big, fill=hex_rgb(st["text"]))
+            x += f_big.getlength(g) + (22 if gi < len(groups) - 1 else 0)
+        d.text((x + 14, y0 + 88), "м", font=mono_font(56, False), fill=hex_rgb(st["muted"]))
+        tracked(d, (x0 + 4, y0 - 34), "ГЛУБИНА · СХЕМА", mono_font(26, True), hex_rgb(st["muted"]), 3)
         lith_now = self.tpl.layers[0].get("label", "") if u > 0.85 and self.tpl.layers else "ствол скважины"
-        d.ellipse([x0 + 6, y0 + 232, x0 + 20, y0 + 246], fill=meas if u > 0.85 else hex_rgb(st["muted"]))
-        d.text((x0 + 32, y0 + 220), visible(lith_now, "интро"), font=font(34, True), fill=hex_rgb(st["text"]))
+        d.ellipse([x0 + 6, y0 + 212, x0 + 20, y0 + 226], fill=meas if u > 0.85 else hex_rgb(st["muted"]))
+        d.text((x0 + 32, y0 + 198), visible(lith_now, "интро"), font=font(36, True), fill=hex_rgb(st["text"]))
         if t <= dur:
             return tun
         a = min(1.0, (t - dur) / 0.5)
@@ -361,29 +374,30 @@ class CineRenderer:
         # тег: происхождение кадра · масштаб
         lab = seg.beat.label.upper()
         pc = hex_rgb(st.get("provenance", {}).get(seg.beat.label, st["muted"]))
-        f_tag = font(32, True)
-        d.ellipse([x0, y0 + 10, x0 + 16, y0 + 26], fill=pc)
-        tag = f"{lab}  ·  НЕ В МАСШТАБЕ"
-        d.text((x0 + 28, y0), tag, font=f_tag, fill=mix(muted, text, 0.35))
+        f_tag = mono_font(26, True)
+        d.ellipse([x0, y0 + 9, x0 + 14, y0 + 23], fill=pc)
+        tracked(d, (x0 + 26, y0), f"{lab} · НЕ В МАСШТАБЕ", f_tag, mix(muted, text, 0.4), 3)
         cap = visible(plain(seg.beat.on_screen), "заголовок") if not final else ""
         if final:
             self._final(d, seg, t)
         elif cap:
             same = i > 0 and plain(self.segs[i - 1].beat.on_screen) == plain(seg.beat.on_screen)
             toks = [(w.upper(), h) for w, h in caption_tokens(visible(seg.beat.on_screen, "заголовок"))]
-            f, lines = fit(" ".join(w for w, _ in toks), x1 - x0, 104, 60, 3, fnt_fn=display_font)
-            lh = int(line_h(f) * 0.92)
-            y, n, ti = y0 + 52, 0, 0
+            f, lines = fit(" ".join(w for w, _ in toks), x1 - x0, 118, 64, 3, fnt_fn=display_font)
+            lh = int(line_h(f) * 0.9)
+            y, n, ti = y0 + 46, 0, 0
             bg = hex_rgb(st["background"])
+            prev = self.segs[i - 1].beat.on_screen if i > 0 else ""
             for ln in lines:
                 x = x0
                 for w in ln.split(" "):
                     hl = toks[ti][1] if ti < len(toks) else False
                     ti += 1
-                    u = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.06 * n) / 0.35))
+                    u = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.08 * n) / 0.14))
                     e = 1 - (1 - u) ** 3
-                    col = mix(bg, accent if hl else text, e)
-                    d.text((x, y + (1 - e) * 34), w, font=f, fill=col)
+                    target = accent if hl else text
+                    col = mix(mix(bg, muted, 0.55), target, e)   # из серого в цвет, без движения
+                    d.text((x, y), w, font=f, fill=col)
                     x += f.getlength(w + " ")
                     n += 1
                 y += lh
@@ -396,11 +410,11 @@ class CineRenderer:
             items = [x for x in (self.spec.get("plaque") or []) if not any(kw in x.lower() for kw in kws)]
             pl = visible(" ".join(items).rstrip(" .;:") + ("; " if items else "") + self.scale_note, "плашка")
         fpl, pls = fit(pl, x1 - x0, 30, 26, 2)
-        text_block(d, (x0, self.H - 380 - 150 - len(pls) * line_h(fpl)), pls, fpl, mix(muted, text, 0.15))
+        text_block(d, (x0, 1290), pls, fpl, mix(muted, text, 0.15))
 
     def _legend(self, d, x, y):
         st = self.style
-        f = font(32, True)
+        f = font(30, True)
         vis = [c for c in self.tpl.curves]
         for c in vis:
             col = self.tpl.curve_color(c)
@@ -422,11 +436,11 @@ class CineRenderer:
         bg, text = hex_rgb(st["background"]), hex_rgb(st["text"])
         accent = hex_rgb(st["measurement"]["color"])
         cap = visible(plain(seg.beat.on_screen) or plain(self.spec.get("transfer_question", "")), "вопрос на перенос")
-        f, ls = fit(cap.upper(), x1 - x0, 112, 60, 5, fnt_fn=display_font)
+        f, ls = fit(cap.upper(), x1 - x0, 124, 64, 5, fnt_fn=display_font)
         lh = int(line_h(f) * 0.92)
         h = len(ls) * lh
         y = 860 - h / 2 + (1 - e) * 50
-        d.text((x0, y - 60), "ВОПРОС НА ПЕРЕНОС", font=font(34, True), fill=mix(bg, accent, e))
+        tracked(d, (x0, y - 56), "ВОПРОС НА ПЕРЕНОС", mono_font(28, True), mix(bg, accent, e), 3)
         for ln in ls:
             d.text((x0, y), ln, font=f, fill=mix(bg, text, e))
             y += lh

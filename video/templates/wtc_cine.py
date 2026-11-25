@@ -11,7 +11,7 @@ from PIL import Image, ImageChops, ImageFilter
 
 from ..cine import blur_bands, fbm, motion_blur_y, rock_texture, vignette
 from ..draw import SDraw, dashed_hline, dashed_polyline, line_h, wrap
-from ..style import font, hex_rgb, mix
+from ..style import font, hex_rgb, mix, mono_font
 from ..textclean import visible
 
 
@@ -152,8 +152,8 @@ def cine_compose(self, R, s: dict, t: float, cam) -> Image.Image:
     img = crop.resize((W * k, H * k), Image.BICUBIC)
     # оптика: размытие вне интервала/зоны интереса, смаз при быстром проезде, виньетка
     ys = lambda z: mid_y + (z - cz) * R.ppm * zoom  # noqa: E731
-    top_sharp = max(260, ys(self.top) - 30) if zoom < 1.3 else 300
-    bot_sharp = min(H - 300, ys(self.bottom) + 30) if zoom < 1.3 else H - 420
+    top_sharp = max(R.y_top - 20, ys(self.top) - 30)
+    bot_sharp = min(R.y_bot + 20, ys(self.bottom) + 30)
     img = blur_bands(img, int(top_sharp * k), int(bot_sharp * k), 18 * k)
     img = motion_blur_y(img, min(18, vel / 30 * k * 0.5))
     if R.__dict__.get("_vig") is None:
@@ -161,8 +161,17 @@ def cine_compose(self, R, s: dict, t: float, cam) -> Image.Image:
         R._vig = Image.fromarray((v * 255).astype(np.uint8)).resize((W * k, H * k), Image.BILINEAR).convert("RGB")
     img = ImageChops.multiply(img, R._vig)
     img.info["ssaa"] = k
+    world = img.copy()
     self._cine_overlay(img, R, s, t, cam, ys)
-    return img
+    # данные живут только в «сцене» между заголовком и субтитрами: снаружи — порода в расфокусе
+    if R.__dict__.get("_stage") is None:
+        yy = np.arange(H * k, dtype=np.float32)[:, None] / k
+        feather = 46
+        m = np.clip((yy - (R.y_top - 40)) / feather, 0, 1) * np.clip(((R.y_bot + 70) - yy) / feather, 0, 1)
+        R._stage = Image.fromarray((m * 255).astype(np.uint8).repeat(W * k, axis=1))
+    out = Image.composite(img, world, R._stage)
+    out.info["ssaa"] = k
+    return out
 
 
 def _cine_overlay(self, img, R, s, t, cam, ys):
@@ -186,7 +195,7 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
         img.paste(Image.blend(reg.filter(ImageFilter.GaussianBlur(10 * k)), dark, 0.72), box[:2])
         d.rectangle([tx0, max(0, ya - 30), tx1, min(H, yb + 30)], outline=mix(bg, muted, 0.6), width=2)
     # шкала глубин: шаг так, чтобы подписи не слипались
-    f_t = font(34, True)
+    f_t = mono_font(26, True)
     step = next(sv for sv in (0.5, 1, 2, 5, 10, 20, 50, 100) if sv * R.ppm * zoom >= 95)
     v = np.ceil(self.top / step) * step
     while v <= self.bottom + 1e-9:
@@ -230,7 +239,7 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
     # шкала значений трека — внизу трека
     if self.curves:
         c = self.curves[0]
-        f_s = font(30, True)
+        f_s = mono_font(26, True)
         y = min(H - 430, yb + 36)
         lo = self._fmt(float(c.get("min", 0))).replace("-", "−")
         hi = f"{self._fmt(float(c.get('max', 1))).replace('-', '−')} {visible(c.get('unit', ''), 'единица кривой')}"
@@ -256,7 +265,7 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
     tw = max(16, bhalf * 0.9)
     d.line([(bcx, 0), (bcx, ty - th / 2)], fill=mix(text, muted, 0.3), width=4)
     if s.get("moving"):
-        for r_, a_ in ((tw * 2.6, 0.12), (tw * 1.7, 0.22)):
+        for r_, a_ in ((30, 0.14), (18, 0.26)):
             d.rounded_rectangle([bcx - r_, ty - th / 2 - r_ / 2, bcx + r_, ty + th / 2 + r_ / 2], radius=int(r_),
                                 fill=mix(bg, meas, a_))
     d.rounded_rectangle([bcx - tw / 2, ty - th / 2, bcx + tw / 2, ty + th / 2], radius=int(tw / 2), fill=mix(meas, (0, 0, 0), 0.25))
@@ -279,7 +288,7 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
         d.rectangle([24, y0_, rx, y1_], outline=col, width=4)
         if mk.get("label") and a > 0.5:
             lab = visible(mk["label"], "подпись рамки")
-            d.text((tx1 - f_m.getlength(lab) - 12, y0_ + 6), lab, font=f_m, fill=col, stroke_width=4, stroke_fill=bg)
+            d.text((tx0 + 12, y0_ + 6), lab, font=f_m, fill=col, stroke_width=4, stroke_fill=bg)
     # подсветка слоя
     hl = s.get("highlight")
     if hl and 0 <= hl["idx"] < len(self.layers):
@@ -287,16 +296,18 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
         Lr = self.layers[hl["idx"]]
         d.rectangle([20, ys(Lr["top"]), tx1 + 4, ys(Lr["bottom"])], outline=mix(bg, meas, a), width=6)
     # выноски и значение — пилюли с линией к объекту
-    f_c = font(36, True)
+    f_c = font(34, True)
+    f_v = mono_font(30, True)
 
-    def pill(x, y, label, a, anchor, right=False):
-        tw_ = f_c.getlength(label)
-        hh = line_h(f_c) + 12
+    def pill(x, y, label, a, anchor, right=False, fnt=None):
+        fc = fnt or f_c
+        tw_ = fc.getlength(label)
+        hh = line_h(fc) + 12
         bx = x - tw_ - 26 if right else x
         d.line([((bx + tw_ + 26) if not right else bx, y), anchor], fill=mix(bg, text, a), width=3)
         d.ellipse([anchor[0] - 7, anchor[1] - 7, anchor[0] + 7, anchor[1] + 7], fill=mix(bg, text, a))
         d.rounded_rectangle([bx, y - hh / 2, bx + tw_ + 26, y + hh / 2], radius=int(hh / 2), fill=mix(bg, text, a))
-        d.text((bx + 13, y - hh / 2 + 4), label, font=f_c, fill=bg)
+        d.text((bx + 13, y - hh / 2 + 4), label, font=fc, fill=bg)
 
     placed = []
     for n, c in enumerate(s.get("callouts", [])):
@@ -334,4 +345,4 @@ def _cine_overlay(self, img, R, s, t, cam, ys):
             vs = (f"{v:.0f}" if abs(v) >= 10 else f"{v:.1f}").replace("-", "−").replace(".", ",")
             lab = f"≈ {vs} {visible(c.get('unit', ''), 'единица кривой')}".strip()
             y = yv + 80 if yv + 80 < H - 460 else yv - 80
-            pill(min(xv + 30, tx1 - f_c.getlength(lab) - 30), y, lab, a, (xv, yv))
+            pill(min(xv + 30, tx1 - f_v.getlength(lab) - 30), y, lab, a, (xv, yv), fnt=f_v)
