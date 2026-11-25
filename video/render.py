@@ -18,7 +18,7 @@ from PIL import Image
 from . import tts
 from .draw import SDraw, fit, line_h, rounded_box, text_block, wrap
 from .spec import Spec
-from .style import font, hex_rgb, load_settings, mix
+from .style import display_font, font, hex_rgb, load_settings, mix
 
 GREEK = {"α": "альфа", "β": "бета", "γ": "гамма", "δ": "дельта", "Δ": "дельта", "ε": "эпсилон",
          "η": "эта", "θ": "тета", "κ": "каппа", "ϰ": "каппа", "λ": "лямбда", "μ": "мю", "ν": "ню",
@@ -182,93 +182,97 @@ def subtitle_chunks(seg: Segment, fnt, max_w: float, max_lines: int = 2) -> list
 
 
 # ---------------------------------------------------------------- раскладки
+HL = re.compile(r"\*([^*]+)\*")
+
+
+def caption_tokens(cap: str) -> list[tuple[str, bool]]:
+    """«Коллектор: *аномалия ПС*» → слова с признаком выделения (выделение — инверсией, без нового цвета)."""
+    out, pos = [], 0
+    for m in HL.finditer(cap):
+        out += [(w, False) for w in cap[pos:m.start()].split()]
+        out += [(w, True) for w in m.group(1).split()]
+        pos = m.end()
+    out += [(w, False) for w in cap[pos:].split()]
+    return out
+
+
+def plain(cap: str) -> str:
+    return HL.sub(r"\1", cap or "")
+
+
 class Layout:
-    def __init__(self, kind: str, spec: Spec, style: dict):
+    """Геометрия кадра. 9:16: тег → крупный заголовок → сцена → плашка → субтитры (всё в безопасной зоне).
+    16:9: сцена слева, справа тег, заголовок, плашка; субтитры внизу."""
+
+    def __init__(self, kind: str, spec: Spec, style: dict, beats):
         self.kind = kind
-        self.style = style
         sz = style.get("safe_zone", {"top": 220, "bottom": 380, "side": 70})
         if kind == "9x16":
             self.W, self.H = 1080, 1920
             self.safe = (sz["side"], sz["top"], 1080 - sz["side"], 1920 - sz["bottom"])
         else:
             self.W, self.H = 1920, 1080
-            self.safe = (64, 56, 1920 - 64, 1080 - 56)
+            self.safe = (64, 52, 1920 - 64, 1080 - 48)
         x0, y0, x1, y1 = self.safe
-        self.f_badge = font(40, True)
-        self.f_sub = font(46, True)
-        self.f_cap_size = 58
-        title = spec.get("title", "")
+        self.f_tag = font(36, True)
+        self.f_sub = font(44, True)
         plaque = " ".join(spec.get("plaque") or []) or "схема, не в масштабе"
+        self.tag_h = line_h(self.f_tag) + 14
         if kind == "9x16":
             w = x1 - x0
-            # заголовок по возможности в одну строку — экономим высоту для разреза
-            self.f_title, self.title_lines = fit(title, w, 52, 44, 1, True)
-            if len(self.title_lines) > 1 or self.f_title.getlength(self.title_lines[0]) > w:
-                self.f_title, self.title_lines = fit(title, w, 50, 44, 2, True)
-            self.f_plaque, self.plaque_lines = fit(plaque, w, 40, 36, 2)
-            y = y0 + line_h(self.f_badge) + 26
-            self.title_y = y
-            y += len(self.title_lines) * line_h(self.f_title)
-            self.plaque_y = y
-            y += len(self.plaque_lines) * line_h(self.f_plaque) + 14
-            self.f_cap_size = 54
-            self.sub_h = line_h(self.f_sub) * 2 + 24
+            self.head_x, self.head_w = x0, w
+            self.head_size, self.head_lines = 92, 2
+            self.head_y = y0 + self.tag_h + 18
+            hh = int(line_h(display_font(self.head_size)) * 1.02) * 2
+            self.f_plaque, self.plaque_lines = fit(plaque, w, 38, 34, 2)
+            self.sub_h = line_h(self.f_sub) * 2 + 22
             self.sub_box = (x0, y1 - self.sub_h, x1, y1)
-            self.cap_h = int(line_h(font(self.f_cap_size, True)) * 2 + 26)
-            self.cap_box = (x0, self.sub_box[1] - 14 - self.cap_h, x1, self.sub_box[1] - 14)
-            self.scene_box = (x0, y, x1, self.cap_box[1] - 16)
+            pl_h = len(self.plaque_lines) * line_h(self.f_plaque)
+            self.plaque_y = self.sub_box[1] - 18 - pl_h
+            self.scene_box = (x0, self.head_y + hh + 20, x1, self.plaque_y - 22)
+            self.plaque_x = x0
         else:
-            panel_x = 1220
+            panel_x = 1240
             w = x1 - panel_x
-            self.f_title, self.title_lines = fit(title, w, 56, 44, 3, True)
-            self.f_plaque, self.plaque_lines = fit(plaque, w, 44, 36, 4)
-            y = y0 + line_h(self.f_badge) + 30
-            self.title_y = y
-            y += len(self.title_lines) * line_h(self.f_title) + 8
-            self.plaque_y = y
-            y += len(self.plaque_lines) * line_h(self.f_plaque) + 26
-            self.sub_h = line_h(self.f_sub) * 2 + 28
+            self.head_x, self.head_w = panel_x, w
+            self.head_size, self.head_lines = 100, 4
+            self.head_y = y0 + self.tag_h + 26
+            self.f_plaque, self.plaque_lines = fit(plaque, w, 38, 32, 4)
+            self.sub_h = line_h(self.f_sub) * 2 + 22
             self.sub_box = (x0, y1 - self.sub_h, x1, y1)
-            self.cap_h = int(line_h(font(self.f_cap_size, True)) * 3 + 30)
-            self.cap_box = (panel_x, y, x1, min(y + self.cap_h, self.sub_box[1] - 20))
-            self.scene_box = (x0, y0, panel_x - 50, self.sub_box[1] - 24)
-        self.panel_x = x0 if kind == "9x16" else 1220
+            pl_h = len(self.plaque_lines) * line_h(self.f_plaque)
+            self.plaque_y = self.sub_box[1] - 30 - pl_h
+            self.plaque_x = panel_x
+            self.scene_box = (x0, y0, panel_x - 56, self.sub_box[1] - 30)
+        self.tag_x = self.head_x
 
 
 class Renderer:
     def __init__(self, spec: Spec, template, style: dict, kind: str, segs: list[Segment]):
         self.spec, self.tpl, self.style, self.kind, self.segs = spec, template, style, kind, segs
-        self.L = Layout(kind, spec, style)
+        self.L = Layout(kind, spec, style, [s.beat for s in segs])
         self.T = template.layout(self.L.scene_box, compact=(kind == "9x16"))
-        self.fade = load_settings()["render"]["fade_s"]
+        rs = load_settings()["render"]
+        self.fade = rs["fade_s"]
+        self.k = int(rs.get("ssaa", 2))
+        self.intro_on = rs.get("intro", True) and hasattr(template, "draw_intro")
+        self.intro_dur = min(float(rs.get("intro_s", 2.6)), segs[0].dur * 0.7) if segs else 0
         bg = hex_rgb(style["background"])
-        self.k = int(load_settings()["render"].get("ssaa", 2))
         self.base = Image.new("RGB", (self.L.W * self.k, self.L.H * self.k), bg)
         self.base.info["ssaa"] = self.k
         template.draw_static(self.base, self.T)
-        self._draw_static_text(self.base)
-        # состояния сцены на начало и конец каждой фразы
-        self.starts, self.ends = [], []
+        d = SDraw(self.base)
+        text_block(d, (self.L.plaque_x, self.L.plaque_y), self.L.plaque_lines, self.L.f_plaque,
+                   hex_rgb(style["muted"]))
+        self.starts = []
         s = template.initial_state()
         for seg in segs:
             s0 = template.begin_beat(s, seg.beat.action, seg.start)
-            s1 = template.at(s0, seg.beat.action, 1.0)
             self.starts.append(s0)
-            self.ends.append(s1)
-            s = s1
-        rs = load_settings()["render"]
-        self.cam_on = rs.get("camera", True)
-        self.cam_zoom = float(rs.get("hook_zoom", 1.6))
+            s = template.at(s0, seg.beat.action, 1.0)
         sx0, _, sx1, _ = self.L.sub_box
-        self.subs = [subtitle_chunks(seg, self.L.f_sub, sx1 - sx0 - 48) for seg in segs]
-
-    def _draw_static_text(self, img):
-        d = SDraw(img)
-        st = self.style
-        text, muted = hex_rgb(st["text"]), hex_rgb(st["muted"])
-        x = self.L.panel_x
-        text_block(d, (x, self.L.title_y), self.L.title_lines, self.L.f_title, text)
-        text_block(d, (x, self.L.plaque_y), self.L.plaque_lines, self.L.f_plaque, muted)
+        self.subs = [subtitle_chunks(seg, self.L.f_sub, sx1 - sx0 - 60, max_lines=1) for seg in segs]
+        self.last = len(segs) - 1
 
     def seg_at(self, t: float) -> int:
         for i, s in enumerate(self.segs):
@@ -280,7 +284,8 @@ class Renderer:
         seg = self.segs[i]
         if "tool_to" not in seg.beat.action:
             return self.starts[i]
-        a, b = seg.start + 0.1, seg.start + max(0.4, seg.dur - 0.25)
+        a = seg.start + 0.1 + (self.intro_dur if i == 0 and self.intro_on else 0)
+        b = seg.start + max(a - seg.start + 0.3, seg.dur - 0.25)
         u = (t - a) / (b - a)
         return self.tpl.at(self.starts[i], seg.beat.action, min(max(u, 0.0), 1.0))
 
@@ -288,83 +293,42 @@ class Renderer:
         b = self.segs[i].beat
         return not b.say and b.pause > 0
 
-    def _camera(self, img, i, t, state):
-        """Крючок: камера стартует крупно у прибора и отъезжает на весь разрез (кадр заканчивается полным
-        видом — данные не обрезаны). Пауза на предсказание: сцена приглушается."""
-        cam = self.T.get("camera")
-        if not cam:
+    def _dim(self, img, amount):
+        if amount <= 0:
             return
         k = self.k
-        box = tuple(int(round(v * k)) for v in cam)
-        w, h = box[2] - box[0], box[3] - box[1]
-        hook = self.segs[0]
-        dur = min(2.8, hook.dur)
-        if i == 0 and t < dur and self.cam_on:
-            u = t / dur
-            e = 1 - (1 - u) ** 3
-            z = self.cam_zoom + (1 - self.cam_zoom) * e
-            fx, fy = self.tpl.focus(self.T, state)
-            cx = ((fx - cam[0]) * (1 - e) + (cam[2] - cam[0]) / 2 * e) * k
-            cy = ((fy - cam[1]) * (1 - e) + (cam[3] - cam[1]) / 2 * e) * k
-            cw, ch = w / z, h / z
-            x0 = min(max(cx - cw / 2, 0), w - cw)
-            y0 = min(max(cy - ch / 2, 0), h - ch)
-            region = img.crop(box).crop((x0, y0, x0 + cw, y0 + ch)).resize((w, h), Image.BICUBIC)
-            img.paste(region, box[:2])
-        if self._is_pause(i):
-            seg = self.segs[i]
-            u = min(1.0, (t - seg.start) / 0.3)
-            dark = Image.new("RGB", (w, h), hex_rgb(self.style["background"]))
-            img.paste(Image.blend(img.crop(box), dark, 0.45 * u), box[:2])
+        x0, y0, x1, y1 = self.L.scene_box
+        box = (int(x0 * k), int((y0 - 10) * k), int(x1 * k), int((y1 + 30) * k))
+        dark = Image.new("RGB", (box[2] - box[0], box[3] - box[1]), hex_rgb(self.style["background"]))
+        img.paste(Image.blend(img.crop(box), dark, amount), box[:2])
 
+    # -------------------------------------------------------------- кадр
     def frame(self, t: float) -> Image.Image:
         i = self.seg_at(t)
         seg = self.segs[i]
         img = self.base.copy()
         state = self.state_at(i, t)
         self.tpl.draw_dynamic(img, self.T, state, t, self.fade)
-        self._camera(img, i, t, state)
+        if hasattr(self.tpl, "draw_overlays"):
+            self.tpl.draw_overlays(img, self.T, state, t, self.fade)
+        # крючок: спуск с поверхности к интервалу, затем растворение в разрез
+        if i == 0 and self.intro_on and t < self.intro_dur + 0.45:
+            intro = img.copy()
+            self.tpl.draw_intro(intro, self.T, min(1.0, t / self.intro_dur))
+            a = 0.0 if t < self.intro_dur else (t - self.intro_dur) / 0.45
+            img = Image.blend(intro, img, min(1.0, a))
+            img.info["ssaa"] = self.k
+        if self._is_pause(i):
+            self._dim(img, 0.5 * min(1.0, (t - seg.start) / 0.3))
+        final = i == self.last
+        if final:
+            self._dim(img, 0.62 * min(1.0, (t - seg.start) / 0.4))
         d = SDraw(img)
-        st = self.style
-        bg, text, panel = hex_rgb(st["background"]), hex_rgb(st["text"]), hex_rgb(st["panel"])
-        # метка происхождения
-        lab = seg.beat.label
-        bcol = hex_rgb(st.get("provenance", {}).get(lab, st["muted"]))
-        x, y = self.L.panel_x, self.L.safe[1]
-        tw = self.L.f_badge.getlength(lab.upper())
-        rounded_box(d, (x, y, x + tw + 36, y + line_h(self.L.f_badge) + 14), fill=bcol, radius=14)
-        d.text((x + 18, y + 7), lab.upper(), font=self.L.f_badge, fill=(255, 255, 255))
-        # подпись на экране (on_screen): выезжает снизу и проявляется, если текст сменился
-        cap = seg.beat.on_screen
-        if cap:
-            same = i > 0 and self.segs[i - 1].beat.on_screen == cap
-            u = 1.0 if same else min(1.0, max(0.0, (t - seg.start) / 0.35))
-            a = 1 - (1 - u) ** 3  # ease-out
-            dy = (1 - a) * 28
-            cx0, cy0, cx1, cy1 = self.L.cap_box
-            max_lines = 2 if self.kind == "9x16" else 3
-            f, ls = fit(cap, cx1 - cx0 - 56, self.L.f_cap_size, 44, max_lines, True)
-            h = len(ls) * line_h(f) + 26
-            top = (cy0 if self.kind == "16x9" else cy1 - h) + dy
-            accent = hex_rgb(st["measurement"]["color"])
-            rounded_box(d, (cx0, top, cx1, top + h), fill=mix(bg, panel, a), radius=22)
-            d.rectangle((cx0, top + 14, cx0 + 8, top + h - 14), fill=mix(bg, accent, a))
-            yy, n = top + 10, 0
-            for ln in ls:
-                xx = cx0 + 30
-                for w in ln.split(" "):
-                    wu = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.06 * n) / 0.3))
-                    we = 1 - (1 - wu) ** 3
-                    d.text((xx, yy + (1 - we) * 18), w, font=f, fill=mix(bg, text, we))
-                    xx += f.getlength(w + " ")
-                    n += 1
-                yy += line_h(f)
-            if self._is_pause(i):  # таймер на предсказание: полоса убывает
-                pu = min(1.0, (t - seg.start) / max(0.1, seg.dur))
-                bx1 = cx1 - 14 - (cx1 - cx0 - 44) * pu
-                d.rounded_rectangle((cx0 + 30, top + h - 10, max(cx0 + 31, bx1), top + h - 4), radius=3,
-                                    fill=accent)
-        # субтитры: сказанные слова белые, впереди — приглушённые (видно, где голос)
+        self._tag(d, seg)
+        if final:
+            self._final_card(d, seg, t)
+        else:
+            self._headline(d, i, seg, t)
         for (a0, a1, lines) in self.subs[i]:
             if a0 <= t < a1:
                 self._subtitle(d, lines, a0, a1, seg, t)
@@ -373,23 +337,108 @@ class Renderer:
             img = img.resize((self.L.W, self.L.H), Image.LANCZOS)
         return img
 
+    def _tag(self, d, seg):
+        """Метка происхождения и масштаб — как тег «ПЛАСТ · УВЕЛИЧЕНО» в референсах."""
+        st = self.style
+        lab = seg.beat.label.upper()
+        col = hex_rgb(st.get("provenance", {}).get(seg.beat.label, st["muted"]))
+        x, y = self.L.tag_x, self.L.safe[1]
+        f = self.L.f_tag
+        tw = f.getlength(lab)
+        rounded_box(d, (x, y, x + tw + 30, y + self.L.tag_h), fill=col, radius=10)
+        d.text((x + 15, y + 6), lab, font=f, fill=(255, 255, 255))
+        rest = "  ·  НЕ В МАСШТАБЕ" if self.spec.get("plaque") or self.spec.get("exaggerations") else ""
+        if rest:
+            d.text((x + tw + 30, y + 6), rest, font=f, fill=hex_rgb(st["muted"]))
+
+    def _headline(self, d, i, seg, t):
+        """Крупный заголовок фразы: слова выезжают по одному, выделенные *словами* — в инверсной плашке."""
+        cap = seg.beat.on_screen
+        if not cap:
+            return
+        st = self.style
+        bg, text = hex_rgb(st["background"]), hex_rgb(st["text"])
+        same = i > 0 and self.segs[i - 1].beat.on_screen == cap
+        toks = [(w.upper(), h) for w, h in caption_tokens(cap)]
+        f, lines = fit(" ".join(w for w, _ in toks), self.L.head_w - 30, self.L.head_size, 52, self.L.head_lines,
+                       fnt_fn=display_font)
+        lh = int(line_h(f) * 0.98)
+        y, n, ti = self.L.head_y, 0, 0
+        for ln in lines:
+            words = ln.split(" ")
+            flags = []
+            for _ in words:
+                flags.append(toks[ti][1] if ti < len(toks) else False)
+                ti += 1
+            # подряд идущие выделенные слова — одна плашка; плашка проявляется, текст инвертируется
+            x = self.L.head_x
+            xs = []
+            for w in words:
+                xs.append(x)
+                x += f.getlength(w + " ")
+            j = 0
+            while j < len(words):
+                if flags[j]:
+                    k2 = j
+                    while k2 + 1 < len(words) and flags[k2 + 1]:
+                        k2 += 1
+                    g = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.05 * (n + j) - 0.12) / 0.3))
+                    x_a, x_b = xs[j] - 10, xs[k2] + f.getlength(words[k2]) + 10
+                    d.rounded_rectangle((x_a, y + 4, x_a + (x_b - x_a) * (1 - (1 - g) ** 3), y + lh - 2),
+                                        radius=8, fill=mix(bg, text, g))
+                    j = k2 + 1
+                else:
+                    j += 1
+            for j, w in enumerate(words):
+                u = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.05 * (n + j)) / 0.32))
+                e = 1 - (1 - u) ** 3
+                dy = (1 - e) * 26
+                if flags[j]:
+                    g = 1.0 if same else min(1.0, max(0.0, (t - seg.start - 0.05 * (n + j) - 0.12) / 0.3))
+                    col = mix(mix(bg, text, e), bg, g)
+                else:
+                    col = mix(bg, text, e)
+                d.text((xs[j], y + dy), w, font=f, fill=col)
+            n += len(words)
+            y += lh
+
+    def _final_card(self, d, seg, t):
+        """Вопрос на перенос: сцена приглушена, вопрос крупно поверх неё."""
+        st = self.style
+        bg, text, muted = hex_rgb(st["background"]), hex_rgb(st["text"]), hex_rgb(st["muted"])
+        x0, y0, x1, y1 = self.L.scene_box
+        u = min(1.0, max(0.0, (t - seg.start) / 0.45))
+        e = 1 - (1 - u) ** 3
+        cap = plain(seg.beat.on_screen) or plain(self.spec.get("transfer_question", ""))
+        f, ls = fit(cap.upper(), x1 - x0 - 80, 76, 46, 4, fnt_fn=display_font)
+        lh = int(line_h(f) * 1.04)
+        f_s = font(36, True)
+        h = len(ls) * lh + line_h(f_s) + 70
+        top = (y0 + y1) / 2 - h / 2 + (1 - e) * 40
+        rounded_box(d, (x0, top, x1, top + h), fill=mix(bg, hex_rgb(st["panel"]), e), radius=26)
+        d.text((x0 + 40, top + 26), "ВОПРОС НА ПЕРЕНОС", font=f_s, fill=mix(bg, muted, e))
+        text_block(d, (x0 + 40, top + 36 + line_h(f_s)), ls, f, mix(bg, text, e), spacing=1.04)
+
     def _subtitle(self, d, lines, a0, a1, seg, t):
+        """Субтитры — светлая плашка по ширине текста, тёмный текст; сказанные слова темнее (виден голос)."""
+        st = self.style
+        bg, text, muted = hex_rgb(st["background"]), hex_rgb(st["text"]), hex_rgb(st["muted"])
         sx0, sy0, sx1, sy1 = self.L.sub_box
         f = self.L.f_sub
         lh = line_h(f)
-        h = len(lines) * lh + 20
+        tw = max(f.getlength(ln) for ln in lines)
+        h = len(lines) * lh + 18
+        cx = (sx0 + sx1) / 2
         top = sy1 - h
-        rounded_box(d, (sx0, top, sx1, sy1), fill=(0, 0, 0), radius=16)
+        rounded_box(d, (cx - tw / 2 - 26, top, cx + tw / 2 + 26, sy1), fill=text, radius=18)
         speech_end = min(a1, seg.speech_start + seg.speech_dur)
         total = sum(len(ln) for ln in lines) or 1
         spoken = (t - a0) / max(0.1, speech_end - a0) * total
-        done, y = 0, top + 8
-        white, dim = (255, 255, 255), (150, 156, 165)
+        done, y = 0, top + 7
         for ln in lines:
-            x = sx0 + (sx1 - sx0 - f.getlength(ln)) / 2
+            x = cx - f.getlength(ln) / 2
             for w in ln.split(" "):
-                col = white if done < spoken else dim
-                d.text((x, y), w, font=f, fill=col)
+                d.text((x, y), w, font=f, fill=bg if done < spoken else mix(text, muted, 0.85))
                 x += f.getlength(w + " ")
                 done += len(w) + 1
             y += lh

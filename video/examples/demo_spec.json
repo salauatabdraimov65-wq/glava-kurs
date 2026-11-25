@@ -18,64 +18,249 @@
     "bore_width": 0.18,
     "bore_diameter_m": 0.2,
     "layers": [
-      {"top": 1840, "bottom": 1843, "lith": "shale", "label": "глина",
-       "props": {"sp_fresh": 0, "sp_salt": 0}, "mud_cake": false, "invasion_width": 0},
-      {"top": 1843, "bottom": 1847, "lith": "sand", "label": "песчаник-коллектор",
-       "props": {"sp_fresh": -55, "sp_salt": -6}, "mud_cake": true, "invasion_width": 0.45},
-      {"top": 1847, "bottom": 1849.5, "lith": "shale", "label": "глина",
-       "props": {"sp_fresh": 0, "sp_salt": 0}, "mud_cake": false, "invasion_width": 0},
-      {"top": 1849.5, "bottom": 1852.5, "lith": "sand", "label": "песчаник-коллектор",
-       "props": {"sp_fresh": -45, "sp_salt": -5}, "mud_cake": true, "invasion_width": 0.4},
-      {"top": 1852.5, "bottom": 1856, "lith": "dense", "label": "плотная порода",
-       "props": {"sp_fresh": -8, "sp_salt": -2}, "mud_cake": false, "invasion_width": 0}
+      {
+        "top": 1840,
+        "bottom": 1843,
+        "lith": "shale",
+        "label": "глина",
+        "props": {
+          "sp_fresh": 0,
+          "sp_salt": 0
+        },
+        "mud_cake": false,
+        "invasion_width": 0
+      },
+      {
+        "top": 1843,
+        "bottom": 1847,
+        "lith": "sand",
+        "label": "песчаник-коллектор",
+        "props": {
+          "sp_fresh": -55,
+          "sp_salt": -6
+        },
+        "mud_cake": true,
+        "invasion_width": 0.45
+      },
+      {
+        "top": 1847,
+        "bottom": 1849.5,
+        "lith": "shale",
+        "label": "глина",
+        "props": {
+          "sp_fresh": 0,
+          "sp_salt": 0
+        },
+        "mud_cake": false,
+        "invasion_width": 0
+      },
+      {
+        "top": 1849.5,
+        "bottom": 1852.5,
+        "lith": "sand",
+        "label": "песчаник-коллектор",
+        "props": {
+          "sp_fresh": -45,
+          "sp_salt": -5
+        },
+        "mud_cake": true,
+        "invasion_width": 0.4
+      },
+      {
+        "top": 1852.5,
+        "bottom": 1856,
+        "lith": "dense",
+        "label": "плотная порода",
+        "props": {
+          "sp_fresh": -8,
+          "sp_salt": -2
+        },
+        "mud_cake": false,
+        "invasion_width": 0
+      }
     ],
     "curves": [
-      {"id": "SP_fresh", "key": "SP", "prop": "sp_fresh", "label": "ПС, пресный",
-       "unit": "мВ", "min": -70, "max": 10, "track": 0},
-      {"id": "SP_salt", "key": "SP", "prop": "sp_salt", "label": "ПС, солёный",
-       "unit": "мВ", "min": -70, "max": 10, "track": 0, "dashed": true}
+      {
+        "id": "SP_fresh",
+        "key": "SP",
+        "prop": "sp_fresh",
+        "label": "ПС, пресный",
+        "unit": "мВ",
+        "min": -70,
+        "max": 10,
+        "track": 0
+      },
+      {
+        "id": "SP_salt",
+        "key": "SP",
+        "prop": "sp_salt",
+        "label": "ПС, солёный",
+        "unit": "мВ",
+        "min": -70,
+        "max": 10,
+        "track": 0,
+        "dashed": true
+      }
     ]
   },
   "beats": [
-    {"say": "Одна и та же порода может дать совсем разные кривые. Почему?",
-     "claim_id": "latyshova.mud_controls_logs#c1", "on_screen": "Порода та же. Кривые разные?",
-     "label": "симуляция", "frame_class": "B", "action": {"show_curves": ["SP_fresh"]}, "is_analogy": false},
-    {"say": "Тип бурового раствора во многом решает, насколько можно верить данным каротажа.",
-     "claim_id": "latyshova.mud_controls_logs#c1", "on_screen": "Раствор решает, чему верить",
-     "label": "симуляция", "frame_class": "B", "action": {"show_mud_cake": true}, "is_analogy": false},
-    {"say": "Спускаем зонд ПС в скважину с пресным глинистым раствором.",
-     "claim_id": "latyshova.mud_controls_logs#c2", "on_screen": "Пресный раствор",
-     "label": "симуляция", "frame_class": "B", "action": {"tool_to": 1846, "show_invasion": true}, "is_analogy": false},
-    {"say": "Против коллектора кривая ПС уходит влево. Это отрицательная аномалия.",
-     "claim_id": "latyshova.mud_controls_logs#c2", "on_screen": "Коллектор: аномалия ПС",
-     "label": "симуляция", "frame_class": "B",
-     "action": {"tool_to": 1855.5, "mark": [{"top": 1843, "bottom": 1847, "label": "коллектор"},
-                                             {"top": 1849.5, "bottom": 1852.5, "label": "коллектор"}]},
-     "is_analogy": false},
-    {"say": "А если раствор солёный, почти как пластовая вода? Что станет с аномалией?",
-     "claim_id": "latyshova.mud_controls_logs#c3", "on_screen": "Раствор солёный. Что с ПС?",
-     "label": "симуляция", "frame_class": "B", "action": {}, "is_analogy": false},
-    {"say": "", "pause": 1.5, "on_screen": "Аномалия останется?",
-     "label": "симуляция", "frame_class": "B", "action": {}},
-    {"say": "Пишем ту же скважину, но на солёном растворе.",
-     "claim_id": "latyshova.mud_controls_logs#c3", "on_screen": "Солёный раствор",
-     "label": "симуляция", "frame_class": "B",
-     "action": {"tool_jump": 1840.5, "show_curves": ["SP_fresh", "SP_salt"], "tool_to": 1855.5}, "is_analogy": false},
-    {"say": "Сопротивление фильтрата близко к сопротивлению пластовой воды, и аномалия почти исчезла.",
-     "claim_id": "latyshova.mud_controls_logs#c3", "on_screen": "Аномалия почти исчезла",
-     "label": "симуляция", "frame_class": "B", "action": {}, "is_analogy": false},
-    {"say": "Коллектор на месте, но ПС и микрозонды его почти не выделяют.",
-     "claim_id": "latyshova.mud_controls_logs#c3", "on_screen": "Коллектор есть, кривая молчит",
-     "label": "симуляция", "frame_class": "B", "action": {}, "is_analogy": false},
-    {"say": "Кривая — это отклик прибора в условиях скважины, а не сама порода.",
-     "claim_id": "latyshova.mud_controls_logs#c1", "on_screen": "Кривая — отклик, а не порода",
-     "label": "схема", "frame_class": "B", "action": {}, "is_analogy": false},
-    {"say": "А на нефильтрующемся растворе из электрометрии применим только индукционный зонд.",
-     "claim_id": "latyshova.mud_controls_logs#c4", "on_screen": "Нефильтрующийся раствор: только индукционный зонд",
-     "label": "схема", "frame_class": "B", "action": {}, "is_analogy": false},
-    {"say": "Модель обучили на скважинах с пресным раствором. Что она скажет о скважине на солёном?",
-     "claim_id": "latyshova.mud_controls_logs#c3", "on_screen": "Что модель увидит на солёном растворе?",
-     "label": "схема", "frame_class": "B", "action": {}, "is_analogy": false}
+    {
+      "say": "Одна и та же порода может дать совсем разные кривые. Почему?",
+      "claim_id": "latyshova.mud_controls_logs#c1",
+      "on_screen": "Порода та же. *Кривые разные?*",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+        "show_curves": [
+          "SP_fresh"
+        ]
+      },
+      "is_analogy": false
+    },
+    {
+      "say": "Тип бурового раствора во многом решает, насколько можно верить данным каротажа.",
+      "claim_id": "latyshova.mud_controls_logs#c1",
+      "on_screen": "Раствор решает, *чему верить*",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+        "show_mud_cake": true,
+        "callout": [
+          {
+            "target": "cake",
+            "text": "глинистая корка"
+          }
+        ]
+      },
+      "is_analogy": false
+    },
+    {
+      "say": "Спускаем зонд ПС в скважину с пресным глинистым раствором.",
+      "claim_id": "latyshova.mud_controls_logs#c2",
+      "on_screen": "*Пресный* раствор",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+        "tool_to": 1846,
+        "show_invasion": true,
+        "callout": [
+          {
+            "target": "tool",
+            "text": "зонд ПС"
+          },
+          {
+            "target": "invasion",
+            "text": "фильтрат"
+          }
+        ]
+      },
+      "is_analogy": false
+    },
+    {
+      "say": "Против коллектора кривая ПС уходит влево. Это отрицательная аномалия.",
+      "claim_id": "latyshova.mud_controls_logs#c2",
+      "on_screen": "Коллектор: *аномалия ПС*",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+        "tool_to": 1855.5,
+        "mark": [
+          {
+            "top": 1843,
+            "bottom": 1847,
+            "label": "коллектор"
+          },
+          {
+            "top": 1849.5,
+            "bottom": 1852.5,
+            "label": "коллектор"
+          }
+        ],
+        "readout": "SP_fresh"
+      },
+      "is_analogy": false
+    },
+    {
+      "say": "А если раствор солёный, почти как пластовая вода? Что станет с аномалией?",
+      "claim_id": "latyshova.mud_controls_logs#c3",
+      "on_screen": "Раствор *солёный*. Что с ПС?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false
+    },
+    {
+      "say": "",
+      "pause": 1.5,
+      "on_screen": "Аномалия *останется?*",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {}
+    },
+    {
+      "say": "Пишем ту же скважину, но на солёном растворе.",
+      "claim_id": "latyshova.mud_controls_logs#c3",
+      "on_screen": "*Солёный* раствор",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+        "tool_jump": 1840.5,
+        "show_curves": [
+          "SP_fresh",
+          "SP_salt"
+        ],
+        "tool_to": 1855.5,
+        "readout": "SP_salt"
+      },
+      "is_analogy": false
+    },
+    {
+      "say": "Сопротивление фильтрата близко к сопротивлению пластовой воды, и аномалия почти исчезла.",
+      "claim_id": "latyshova.mud_controls_logs#c3",
+      "on_screen": "Аномалия *почти исчезла*",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+        "readout": "SP_salt"
+      },
+      "is_analogy": false
+    },
+    {
+      "say": "Коллектор на месте, но ПС и микрозонды его почти не выделяют.",
+      "claim_id": "latyshova.mud_controls_logs#c3",
+      "on_screen": "Коллектор есть, *кривая молчит*",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false
+    },
+    {
+      "say": "Кривая — это отклик прибора в условиях скважины, а не сама порода.",
+      "claim_id": "latyshova.mud_controls_logs#c1",
+      "on_screen": "Кривая — *отклик*, а не порода",
+      "label": "схема",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false
+    },
+    {
+      "say": "А на нефильтрующемся растворе из электрометрии применим только индукционный зонд.",
+      "claim_id": "latyshova.mud_controls_logs#c4",
+      "on_screen": "Нефильтрующийся раствор: *только индукционный зонд*",
+      "label": "схема",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false
+    },
+    {
+      "say": "Модель обучили на скважинах с пресным раствором. Что она скажет о скважине на солёном?",
+      "claim_id": "latyshova.mud_controls_logs#c3",
+      "on_screen": "Что модель увидит на солёном растворе?",
+      "label": "схема",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false
+    }
   ],
   "objects": [
     "разрез из пяти слоёв: глина, песчаник-коллектор, глина, песчаник-коллектор, плотная порода",
@@ -102,16 +287,49 @@
   "prediction_question": "Если раствор солёный, как пластовая вода, останется ли аномалия ПС против коллектора?",
   "transfer_question": "Модель обучили на скважинах с пресным раствором. Что она скажет о скважине на солёном?",
   "data_it_bridge": "Тип раствора — скрытый признак условий записи: тот же пласт даёт разную кривую ПС. Гипотеза (не слова главы): модель, обученная на пресном растворе, будет пропускать коллекторы в скважинах на солёном; тип раствора нужен как обязательный атрибут скважины.",
-  "listen_check": ["коллЕктор", "каротАжа", "фильтрАта", "индукциОнный", "нефильтрУющемся"],
+  "listen_check": [
+    "коллЕктор",
+    "каротАжа",
+    "фильтрАта",
+    "индукциОнный",
+    "нефильтрУющемся"
+  ],
   "physics_checklist": {
-    "pc.layers_order": {"answer": "да", "note": "Порядок слоёв не меняется."},
-    "pc.fluids_in_pores": {"answer": "да", "note": "Фильтрат проникает в поры песчаника у стенки ствола."},
-    "pc.causality": {"answer": "да", "note": "Сначала раствор и корка, затем запись кривой."},
-    "pc.views_consistent": {"answer": "да", "note": "Разрез и кривая строятся из одних слоёв."},
-    "pc.tool_mechanism": {"answer": "да", "note": "Зонд записывает отклик, а не «породу»."},
-    "pc.signal_vs_property": {"answer": "да", "note": "Голос разделяет кривую и интерпретацию."},
-    "pc.curve_sync": {"answer": "да", "note": "Конец кривой на глубине зонда."},
-    "pc.exaggeration_named": {"answer": "да", "note": "Плашка «не в масштабе» с числом."},
-    "pc.depth_down": {"answer": "да", "note": "Глубина растёт вниз."}
+    "pc.layers_order": {
+      "answer": "да",
+      "note": "Порядок слоёв не меняется."
+    },
+    "pc.fluids_in_pores": {
+      "answer": "да",
+      "note": "Фильтрат проникает в поры песчаника у стенки ствола."
+    },
+    "pc.causality": {
+      "answer": "да",
+      "note": "Сначала раствор и корка, затем запись кривой."
+    },
+    "pc.views_consistent": {
+      "answer": "да",
+      "note": "Разрез и кривая строятся из одних слоёв."
+    },
+    "pc.tool_mechanism": {
+      "answer": "да",
+      "note": "Зонд записывает отклик, а не «породу»."
+    },
+    "pc.signal_vs_property": {
+      "answer": "да",
+      "note": "Голос разделяет кривую и интерпретацию."
+    },
+    "pc.curve_sync": {
+      "answer": "да",
+      "note": "Конец кривой на глубине зонда."
+    },
+    "pc.exaggeration_named": {
+      "answer": "да",
+      "note": "Плашка «не в масштабе» с числом."
+    },
+    "pc.depth_down": {
+      "answer": "да",
+      "note": "Глубина растёт вниз."
+    }
   }
 }

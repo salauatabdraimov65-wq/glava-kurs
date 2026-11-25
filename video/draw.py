@@ -21,11 +21,11 @@ def wrap(text: str, fnt, max_w: float) -> list[str]:
     return [ln for ln in lines if ln] or [""]
 
 
-def fit(text: str, max_w: float, size: int, min_size: int, max_lines: int, bold=False):
+def fit(text: str, max_w: float, size: int, min_size: int, max_lines: int, bold=False, fnt_fn=None):
     """Шрифт и строки: уменьшаем кегль до min_size, пока текст не влезет в max_lines строк."""
     s = size
     while True:
-        f = font(s, bold)
+        f = fnt_fn(s) if fnt_fn else font(s, bold)
         lines = wrap(text, f, max_w)
         if (len(lines) <= max_lines and all(f.getlength(ln) <= max_w for ln in lines)) or s <= min_size:
             return f, lines[:max_lines] if s <= min_size else lines
@@ -106,7 +106,7 @@ class SDraw:
         if self.k == 1 or not hasattr(fnt, "path"):
             return fnt
         from PIL import ImageFont
-        return _scaled_font(fnt.path, int(round(fnt.size * self.k)))
+        return _scaled_font(fnt.path, int(round(fnt.size * self.k)), getattr(fnt, "_glava_var", None))
 
     def line(self, xy, fill=None, width=1, joint=None):
         self.d.line(self._p(xy), fill=fill, width=max(1, int(round(width * self.k))), joint=joint)
@@ -133,6 +133,9 @@ from functools import lru_cache as _lru
 
 
 @_lru(maxsize=None)
-def _scaled_font(path, size):
+def _scaled_font(path, size, var=None):
     from PIL import ImageFont
-    return ImageFont.truetype(path, size)
+    f = ImageFont.truetype(path, size)
+    if var:
+        f.set_variation_by_name(var)
+    return f

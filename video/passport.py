@@ -46,7 +46,7 @@ def build_passport(spec: Spec, domain: str, segs, key_times, frame_files, timeli
             continue
         script.append({"t_start": round(s.speech_start, 2), "t_end": round(s.speech_start + s.speech_dur, 2),
                        "text": b.say, "claim_id": b.claim_id, "is_analogy": b.is_analogy,
-                       "on_screen": b.on_screen})
+                       "on_screen": re.sub(r"\*([^*]+)\*", r"\1", b.on_screen)})
         if b.claim_id and b.claim_id not in used:
             used.append(b.claim_id)
     sources = []
@@ -62,7 +62,7 @@ def build_passport(spec: Spec, domain: str, segs, key_times, frame_files, timeli
         sources.append(src)
 
     frames = [{"t": round(t, 2), "class": s.beat.frame_class, "label": s.beat.label, "file": f,
-               "on_screen": s.beat.on_screen}
+               "on_screen": re.sub(r"\*([^*]+)\*", r"\1", s.beat.on_screen)}
               for s, t, f in zip(segs, key_times, frame_files)]
 
     # проверка звука

@@ -104,3 +104,26 @@ def font(size: int, bold: bool = False, name: str = "Segoe UI") -> ImageFont.Fre
     if not p:
         return ImageFont.load_default(size)
     return ImageFont.truetype(p, size)
+
+
+@lru_cache(maxsize=None)
+def display_font(size: int) -> ImageFont.FreeTypeFont:
+    """Узкий жирный шрифт для заголовков (как в референсах): Bahnschrift (Windows), Arial Narrow (Mac),
+    иначе обычный жирный."""
+    win = Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts" / "bahnschrift.ttf"
+    if win.exists():
+        f = ImageFont.truetype(str(win), size)
+        for name in (b"Bold Condensed", "Bold Condensed", b"Bold SemiCondensed", "Bold"):
+            try:
+                f.set_variation_by_name(name)
+                f._glava_var = name
+                break
+            except (OSError, ValueError):
+                continue
+        return f
+    for p in (Path("/System/Library/Fonts/Supplemental/Arial Narrow Bold.ttf"),
+              Path.home() / "Library/Fonts/Arial Narrow Bold.ttf",
+              Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts" / "ARIALNB.TTF"):
+        if p.exists():
+            return ImageFont.truetype(str(p), size)
+    return font(size, True)

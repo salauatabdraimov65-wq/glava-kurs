@@ -104,6 +104,7 @@ class WellToolCurve:
             "cake": None, "invasion": None,          # время появления (с), None — скрыто
             "marks": [],
             "curves": {c["id"]: {"visible": True, "rec": None} for c in self.curves},
+            "callouts": [], "readout": None,
         }
 
     def begin_beat(self, state: dict, action: dict, t: float) -> dict:
@@ -126,6 +127,10 @@ class WellToolCurve:
         for cid in action.get("hide_curves", []) or []:
             if cid in s["curves"]:
                 s["curves"][cid]["visible"] = False
+        co = action.get("callout")
+        s["callouts"] = [{**c, "born": t} for c in (co if isinstance(co, list) else [co])] if co else []
+        ro = action.get("readout")
+        s["readout"] = ({"curve": ro if isinstance(ro, str) else None, "born": t} if ro else None)
         if "tool_jump" in action:
             s["tool"] = self._clamp(float(action["tool_jump"]))
         self._record(s, s["tool"], s["tool"])
@@ -255,6 +260,217 @@ class WellToolCurve:
         """Точка интереса для камеры: прибор."""
         return ((L["bore"][0] + L["bore"][1]) / 2, self.y_of(L, s["tool"]))
 
+    def _pattern_name(self, Lr) -> str:
+        """Узор породы: из слоя (params.layers[].pattern) или стайлгайда (lithology.<lith>.pattern)."""
+        return (Lr.get("pattern") or self.style.get("lithology", {}).get(Lr.get("lith"), {}).get("pattern")
+                or "grain")
+
+    def _pattern(self, img, rect, col, name):
+        """Условный узор литологии (как на геологических колонках): точки, штрих, кирпич, линии…"""
+        x0, y0, x1, y1 = rect
+        k = img.info.get("ssaa", 1)
+        w, h = int((x1 - x0) * k), int((y1 - y0) * k)
+        if w < 4 or h < 4 or name == "none":
+            return
+        tile = Image.new("RGB", (w, h), col)
+        tile.info["ssaa"] = k
+        d = SDraw(tile)
+        ink = mix(col, (0, 0, 0), 0.22)
+        W, H = x1 - x0, y1 - y0
+        rng = np.random.default_rng(int(x0 * 7 + y0 * 13) % 2**32)
+        if name in ("dots", "sand"):
+            step = 18
+            for j, yy in enumerate(np.arange(6, H, step)):
+                for xx in np.arange(6 + (j % 2) * step / 2, W, step):
+                    d.ellipse([xx - 2.4, yy - 2.4, xx + 2.4, yy + 2.4], fill=ink)
+        elif name in ("lines", "shale"):
+            for yy in np.arange(8, H, 14):
+                xx = 0
+                while xx < W:
+                    ln = rng.uniform(26, 60)
+                    d.line([(xx, yy), (min(W, xx + ln), yy)], fill=ink, width=2)
+                    xx += ln + rng.uniform(8, 16)
+        elif name in ("brick", "limestone"):
+            for j, yy in enumerate(np.arange(0, H, 22)):
+                d.line([(0, yy), (W, yy)], fill=ink, width=2)
+                for xx in np.arange((j % 2) * 22, W, 44):
+                    d.line([(xx, yy), (xx, yy + 22)], fill=ink, width=2)
+        elif name in ("rhomb", "dolomite"):
+            for j, yy in enumerate(np.arange(0, H, 22)):
+                d.line([(0, yy), (W, yy)], fill=ink, width=2)
+                for xx in np.arange((j % 2) * 22, W, 44):
+                    d.line([(xx, yy), (xx + 11, yy + 22)], fill=ink, width=2)
+        elif name in ("hatch", "dense"):
+            for xx in np.arange(-H, W, 16):
+                d.line([(xx, H), (xx + H, 0)], fill=ink, width=2)
+        elif name == "cross":
+            for yy in np.arange(10, H, 22):
+                for xx in np.arange(10, W, 22):
+                    d.line([(xx - 4, yy), (xx + 4, yy)], fill=ink, width=2)
+                    d.line([(xx, yy - 4), (xx, yy + 4)], fill=ink, width=2)
+        else:  # grain: мелкое зерно, без смысловой нагрузки
+            n = int(W * H / 260)
+            for xx, yy in zip(rng.uniform(0, W, n), rng.uniform(0, H, n)):
+                r = rng.uniform(1.0, 2.2)
+                d.ellipse([xx - r, yy - r, xx + r, yy + r], fill=mix(col, (0, 0, 0), rng.uniform(0.08, 0.2)))
+        img.paste(tile, (int(round(x0 * k)), int(round(y0 * k))))
+
+    def anchor(self, L, s, target) -> tuple[float, float]:
+        """Точка объекта для выноски: tool, bore, cake, invasion, curve:<id>, {depth}, {layer}."""
+        bx0, bx1 = L["bore"]
+        cx = (bx0 + bx1) / 2
+        if isinstance(target, dict):
+            if "depth" in target:
+                z = float(target["depth"])
+                return ((L["sec"][0] + bx0) / 2, self.y_of(L, z))
+            if "layer" in target:
+                Lr = self.layers[int(target["layer"])]
+                return ((L["sec"][0] + bx0) / 2, self.y_of(L, (Lr["top"] + Lr["bottom"]) / 2))
+        if target == "tool":
+            return (cx, self.y_of(L, s["tool"]))
+        if target in ("cake", "invasion"):
+            key = "mud_cake" if target == "cake" else "invasion_width"
+            cand = [Lr for Lr in self.layers if Lr.get(key)]
+            if cand:
+                Lr = min(cand, key=lambda q: abs((q["top"] + q["bottom"]) / 2 - s["tool"]))
+                y = self.y_of(L, (Lr["top"] + Lr["bottom"]) / 2)
+                if target == "cake":
+                    return (bx0 + 3, y)
+                ext = min(float(Lr.get("invasion_width", 0.3)), 1.0) * (L["sec"][1] - bx1) * 0.95
+                return (bx0 - ext * 0.6, y)
+        if isinstance(target, str) and target.startswith("curve"):
+            cid = target.split(":", 1)[1] if ":" in target else self.curves[0]["id"]
+            return self._tip(L, s, cid) or (cx, self.y_of(L, s["tool"]))
+        return (cx, (L["plot"][0] + L["plot"][1]) / 2)
+
+    def _tip(self, L, s, cid):
+        cs = s["curves"].get(cid)
+        if not cs or not cs["visible"] or not cs["rec"]:
+            return None
+        for tr, xr in zip(self.tracks, L["tracks"]):
+            if cid in tr:
+                z = min(max(s["tool"], cs["rec"][0]), cs["rec"][1])
+                return (self.x_of(self._curve(cid), xr, self.value_at(cid, z)), self.y_of(L, z))
+        return None
+
+    def draw_overlays(self, img, L, s, t, fade):
+        """Выноски-«таблетки» с линией к объекту и значение на конце кривой (число — из модели)."""
+        st = self.style
+        d = SDraw(img)
+        bg, text = hex_rgb(st["background"]), hex_rgb(st["text"])
+        f = font(40, True)
+        p0, p1 = L["plot"]
+
+        def pill(x, y, label, a, anchor_pt, right_align=False):
+            tw = f.getlength(label)
+            h = line_h(f) + 14
+            bx = x - tw - 28 if right_align else x
+            box = (bx, y - h / 2, bx + tw + 28, y + h / 2)
+            ax, ay = anchor_pt
+            near_x = box[2] if ax > box[2] else (box[0] if ax < box[0] else ax)
+            d.line([(near_x, y), (ax, ay)], fill=mix(bg, text, a), width=3)
+            d.ellipse([ax - 7, ay - 7, ax + 7, ay + 7], fill=mix(bg, text, a), outline=bg, width=2)
+            d.rounded_rectangle(box, radius=int(h / 2), fill=mix(bg, text, a))
+            d.text((box[0] + 14, y - h / 2 + 5), label, font=f, fill=bg)
+
+        def al(born):
+            return min(1.0, max(0.0, (t - born) / 0.3)) if born is not None else 0.0
+
+        placed = []
+        ph = line_h(f) + 22
+        for n, c in enumerate(s.get("callouts", [])):
+            a = al(c["born"] + 0.15 * n)
+            if a <= 0:
+                continue
+            ax, ay = self.anchor(L, s, c.get("target", "tool"))
+            y = min(max(ay - 90, p0 + 30), p1 - 30)
+            for _ in range(8):
+                clash = [q for q in placed if abs(q - y) < ph]
+                if not clash:
+                    break
+                y = max(clash) + ph if max(clash) + ph < p1 - 30 else min(clash) - ph
+            placed.append(y)
+            if ax > (L["sec"][0] + L["sec"][1]) / 2 or c.get("target") == "tool":
+                x = L["sec"][0] + 8
+                pill(x, y, c["text"], a, (ax, ay))
+            else:
+                pill(L["sec"][1] - 8, y, c["text"], a, (ax, ay), right_align=True)
+        ro = s.get("readout")
+        if ro:
+            a = al(ro["born"])
+            cid = ro["curve"] or next((c["id"] for c in self.curves if s["curves"][c["id"]]["visible"]), None)
+            tip = self._tip(L, s, cid) if cid else None
+            if tip and a > 0:
+                c = self._curve(cid)
+                v = self.value_at(cid, min(max(s["tool"], s["curves"][cid]["rec"][0]), s["curves"][cid]["rec"][1]))
+                vs = (f"{v:.0f}" if abs(v) >= 10 else f"{v:.1f}").replace("-", "−").replace(".", ",")
+                lab = f"≈ {vs} {c.get('unit', '')}".strip()
+                xr = next(x for tr, x in zip(self.tracks, L["tracks"]) if cid in tr)
+                left = tip[0] > (xr[0] + xr[1]) / 2
+                y = tip[1] + 70 if tip[1] + 70 < p1 - 30 else max(tip[1] - 70, p0 + 30)
+                if left:
+                    pill(tip[0] - 40, y, lab, a, tip, right_align=True)
+                else:
+                    pill(tip[0] + 40, y, lab, a, tip)
+
+    def draw_intro(self, img, L, u: float):
+        """Спуск с поверхности к интервалу (скачок масштаба): поверхность с вышкой уходит вверх,
+        мимо пролетают пласты, счётчик глубины растёт до кровли интервала. u ∈ [0, 1]."""
+        st = self.style
+        k = img.info.get("ssaa", 1)
+        x0, y0, x1, y1 = L["box"]
+        y1 += 26
+        W, H = x1 - x0, y1 - y0
+        tile = Image.new("RGB", (int(W * k), int(H * k)), hex_rgb(st["background"]))
+        tile.info["ssaa"] = k
+        d = SDraw(tile)
+        bg, text, muted = hex_rgb(st["background"]), hex_rgb(st["text"]), hex_rgb(st["muted"])
+        e = ease(u)
+        depth_label = f"{int(round(self.top * e)):,} м".replace(",", " ")
+        world_h = H * 4.0
+        off = e * (world_h - H)                      # камера едет вниз по «миру»
+        ground = H * 0.42 - off
+        cx = (L["bore"][0] + L["bore"][1]) / 2 - x0
+        # пласты: цвета литологий этой сцены, повторяются, становятся темнее с глубиной
+        cols = [self.lith_color(Lr.get("lith")) for Lr in self.layers] or [hex_rgb(st["panel"])]
+        y, i = ground, 0
+        rng = np.random.default_rng(3)
+        while y < H:
+            hh = rng.uniform(H * 0.18, H * 0.42)
+            if y + hh > 0:
+                col = mix(cols[i % len(cols)], bg, min(0.55, 0.15 + 0.4 * (y - ground) / world_h))
+                d.rectangle([0, max(0, y), W, min(H, y + hh)], fill=col)
+            y += hh
+            i += 1
+        # ствол и кабель
+        bw = (L["bore"][1] - L["bore"][0])
+        mud = hex_rgb(st.get("fluids", {}).get("mud", {}).get("color", st["muted"]))
+        d.rectangle([cx - bw / 2, max(0, ground), cx + bw / 2, H], fill=mud)
+        d.line([(cx, max(0, ground - 140)), (cx, H)], fill=text, width=3)
+        # поверхность: вышка и каротажный подъёмник силуэтами
+        if ground > -10:
+            gy = ground
+            d.rectangle([0, gy - 4, W, gy + 4], fill=muted)
+            top = gy - min(330, H * 0.5)
+            for sx in (-1, 1):
+                d.line([(cx + sx * 70, gy), (cx + sx * 14, top)], fill=text, width=5)
+            for j in range(1, 6):
+                yy = gy - (gy - top) * j / 6
+                half = 70 - (70 - 14) * j / 6
+                d.line([(cx - half, yy), (cx + half, yy)], fill=muted, width=3)
+                d.line([(cx - half, yy), (cx + half * 0.8, yy - (gy - top) / 6)], fill=muted, width=2)
+            d.rectangle([cx - 26, top - 16, cx + 26, top], fill=text)
+            tx = max(30, cx - 330)
+            d.rounded_rectangle([tx, gy - 92, tx + 170, gy - 14], radius=10, fill=muted)
+            d.rounded_rectangle([tx + 170, gy - 70, tx + 230, gy - 14], radius=8, fill=text)
+            for wx in (tx + 34, tx + 130, tx + 200):
+                d.ellipse([wx - 18, gy - 34, wx + 18, gy + 2], fill=bg, outline=text, width=4)
+            d.line([(tx + 170, gy - 80), (cx, top + 8)], fill=text, width=2)
+        # счётчик глубины
+        f_big = font(110, True)
+        d.text((W / 2, H * 0.5), depth_label, font=f_big, fill=text, anchor="mm", stroke_width=6, stroke_fill=bg)
+        img.paste(tile, (int(round(x0 * k)), int(round(y0 * k))))
+
     # ------------------------------------------------------------ рисование
     def draw_static(self, img: Image.Image, L: dict):
         """Неподвижная часть: шкала глубин, слои, рамки треков, сетка. Рисуется один раз."""
@@ -278,6 +494,7 @@ class WellToolCurve:
             if fl and fl in st.get("fluids", {}):
                 col = mix(col, hex_rgb(st["fluids"][fl]["color"]), 0.28)
             d.rectangle([sx0, ya, sx1, yb], fill=col)
+            self._pattern(img, (sx0, ya, sx1, yb), col, self._pattern_name(Lr))
             d.line([(sx0, ya), (sx1, ya)], fill=mix(col, bg, 0.5), width=2)
         d.rectangle([sx0, p0, sx1, p1], outline=muted, width=2)
         # подписи слоёв слева от ствола
