@@ -1,0 +1,975 @@
+{
+ "candidates": [
+  {
+   "target": "C031",
+   "category": "other",
+   "severity": "minor",
+   "problem": "числа ['1931'] есть на странице, но не в приведённой цитате",
+   "fix": "Привести формулировку к тексту автора: «Dechatre, working for Schlumberger, discovered that the galvanometer wiggled even when no current was being passed through the logging cables down in  the well.»",
+   "page_pdf": 2,
+   "quote": "Dechatre, working for Schlumberger, discovered that the galvanometer wiggled even when no current was being passed through the logging cables down in  the well.",
+   "confidence": 0.35,
+   "source": "code"
+  },
+  {
+   "target": "C039",
+   "category": "other",
+   "severity": "minor",
+   "problem": "в утверждении числа ['19400'], которых нет в тексте автора",
+   "fix": "Привести формулировку к тексту автора: «The solution to this problem was the induction log, developed in the late 1940s.»",
+   "page_pdf": 2,
+   "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+   "confidence": 0.7,
+   "source": "code"
+  },
+  {
+   "target": "C042",
+   "category": "other",
+   "severity": "minor",
+   "problem": "числа ['1970'] есть на странице, но не в приведённой цитате",
+   "fix": "Привести формулировку к тексту автора: «These included combo type logs where resistivity logs and porosity logs were recorded in one pass in the borehole.»",
+   "page_pdf": 2,
+   "quote": "These included combo type logs where resistivity logs and porosity logs were recorded in one pass in the borehole.",
+   "confidence": 0.35,
+   "source": "code"
+  },
+  {
+   "target": "C056",
+   "category": "other",
+   "severity": "minor",
+   "problem": "в утверждении числа ['19900'], которых нет в тексте автора",
+   "fix": "Привести формулировку к тексту автора: «More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology which is now applied in the oil and gas, water and metal exploration industry.»",
+   "page_pdf": 2,
+   "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology which is now applied in the oil and gas, water and metal exploration industry.",
+   "confidence": 0.7,
+   "source": "code"
+  },
+  {
+   "target": "C059",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«all» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «Modern techniques now permit continuous information at the surface.»",
+   "page_pdf": 2,
+   "quote": "Modern techniques now permit continuous information at the surface.",
+   "confidence": 0.4,
+   "source": "code"
+  },
+  {
+   "target": "C073",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«always» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.»",
+   "page_pdf": 7,
+   "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+   "confidence": 0.6,
+   "source": "code"
+  },
+  {
+   "target": "C074",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«only» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «Since the results are not known until returned to surface, any realtime well dynamic changes cannot be monitored real time.»",
+   "page_pdf": 7,
+   "quote": "Since the results are not known until returned to surface, any realtime well dynamic changes cannot be monitored real time.",
+   "confidence": 0.6,
+   "source": "code"
+  },
+  {
+   "target": "C078",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«only» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «Failure during recording is not known until the memory tools are retrieved.»",
+   "page_pdf": 7,
+   "quote": "Failure during recording is not known until the memory tools are retrieved.",
+   "confidence": 0.6,
+   "source": "code"
+  },
+  {
+   "target": "C080",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«always» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «South Texas, US) where there is what is called a \"Commodity\" Oil service sector, where logging often is without the rig infrastructure.»",
+   "page_pdf": 7,
+   "quote": "South Texas, US) where there is what is called a \"Commodity\" Oil service sector, where logging often is without the rig infrastructure.",
+   "confidence": 0.6,
+   "source": "code"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "граница аналогии содержит абсолют «never»",
+   "fix": "Заменить границу аналогии условной формулировкой по тексту главы",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+   "confidence": 0.5,
+   "source": "code"
+  },
+  {
+   "target": "A10",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "граница аналогии содержит абсолют «only»",
+   "fix": "Заменить границу аналогии условной формулировкой по тексту главы",
+   "page_pdf": 7,
+   "quote": "This limits the ability to modify or change the well down hole production conditions accurately during the memory logging by changing the surface production rates.",
+   "confidence": 0.5,
+   "source": "code"
+  },
+  {
+   "target": "L01.10",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«only» в утверждении, а у автора оно ограничено условиями (опора — C005)",
+   "fix": "Привести фразу к тексту автора: «## Wireline logging Different industries, as mining, oil and gas uses wireline logging to obtain a continuous record of a formation's rock properties, also, groundwater consultants.»",
+   "page_pdf": 1,
+   "quote": "## Wireline logging Different industries, as mining, oil and gas uses wireline logging to obtain a continuous record of a formation's rock properties, also, groundwater consultants.",
+   "confidence": 0.54,
+   "source": "code"
+  },
+  {
+   "target": "L01.12",
+   "category": "sign_flip",
+   "severity": "critical",
+   "problem": "в утверждении «direct», у автора противоположное «lower» (опора — C002)",
+   "fix": "Привести фразу к тексту автора: «Real-time data is recorded directly against measured cable depth.»",
+   "page_pdf": 1,
+   "quote": "Real-time data is recorded directly against measured cable depth.",
+   "confidence": 0.59,
+   "source": "code"
+  },
+  {
+   "target": "S01.06",
+   "category": "frame_error",
+   "severity": "significant",
+   "problem": "числа ['19800'] из факта нет в спецификации сцены",
+   "fix": "Привести факт в соответствие со спецификацией сцены",
+   "page_pdf": null,
+   "quote": null,
+   "confidence": 0.3,
+   "source": "code"
+  },
+  {
+   "target": "C001",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Элемент отождествляет well logging с готовой записью, тогда как автор определяет его как практику создания такой записи.",
+   "fix": "Well logging is the practice of making a detailed record (a well log) of the geological formations penetrated by a borehole.",
+   "page_pdf": 1,
+   "quote": "Well logging ... is the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole.",
+   "confidence": 0.97,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C003",
+   "category": "other",
+   "severity": "significant",
+   "problem": "«Well development» заменяет указанный автором этап «completing» и не подтверждается исходным текстом.",
+   "fix": "Some types of geophysical well logs can be done during any phase of a well’s history: drilling, completing, producing, or abandoning.",
+   "page_pdf": 1,
+   "quote": "Some types of geophysical well logs can be done during any phase of a well's history: drilling, completing, producing, or abandoning.",
+   "confidence": 0.88,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C007",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Вместо mud logging указано gas logging; автор говорит о связи wireline logging с mud logging.",
+   "fix": "Wireline logging and mud logging are different methods, but they are closely linked through the integration of data sets.",
+   "page_pdf": 1,
+   "quote": "“wireline logging” and “mud logging” are not the same, yet are closely linked through the integration of the data sets.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» представляет как непосредственно измеренный результат то, что автор описывает как выводимое из измерений и их анализа свойство. Кроме того, автор говорит о formation pressure, а не reservoir pressure.",
+   "fix": "The measurements and their analysis can be used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions.",
+   "page_pdf": 1,
+   "quote": "these and the associated analysis can then be used to infer further properties, such as hydrocarbon saturation and formation pressure",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C027",
+   "category": "other",
+   "severity": "minor",
+   "problem": "В цитате автора сказано “electric well logging”, а в элементе это заменено на “electrical logging”. Это близкие, но не дословно равнозначные формулировки: элемент опускает уточнение, что речь идёт о каротажных работах в скважине.",
+   "fix": "Conrad and Marcel Schlumberger, who founded Schlumberger Limited in 1926, are considered the inventors of electric well logging.",
+   "page_pdf": 2,
+   "quote": "are considered the inventors of electric well logging.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Текст главы сообщает, что Конрад разработал массив Шлюмберже как метод поисков рудных месторождений, но не говорит, что это было непосредственно измерено. Формулировка «It was directly measured» приписывает утверждению неподтверждённый статус наблюдения.",
+   "fix": "Conrad developed the Schlumberger array as a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "page_pdf": 2,
+   "quote": "Conrad developed the Schlumberger array, which was a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C039",
+   "category": "other",
+   "severity": "significant",
+   "problem": "В дате лишний ноль: «late 19400s» вместо «late 1940s».",
+   "fix": "To address this problem, the induction log was developed in the late 1940s.",
+   "page_pdf": 2,
+   "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+   "confidence": 1.0,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Автор сообщает исторические даты появления этих методов, а не то, что их появление было непосредственно измерено. Формулировка «It was directly measured that» неверно представляет тип утверждения.",
+   "fix": "The gamma-ray log, which measures natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "confidence": 0.91,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C050",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Автор относит это утверждение к конкретным логам — гамма-каротажу и WSI neutron log; формулировка распространяет его на nuclear logs в целом.",
+   "fix": "The gamma-ray log and WSI neutron log were important because they could be used in cased wells.",
+   "page_pdf": 2,
+   "quote": "These logs were important because they can be used in cased wells (wells with production casing).",
+   "confidence": 0.86,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Текст автора сообщает об историческом развитии ядерных каротажных методов, но не говорит, что это развитие было непосредственно измерено. Формулировка ошибочно представляет историческое утверждение как результат прямого измерения.",
+   "fix": "Nuclear logs continued to evolve after the war.",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "confidence": 0.98,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C054",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Неверно указано имя: в тексте автора — Nicolaas, а не Nicolas.",
+   "fix": "Nicolaas Bloembergen filed a patent for Schlumberger in 1966.",
+   "page_pdf": 2,
+   "quote": "Nicolaas Bloembergen filed the Schlumberger patent in 1966.",
+   "confidence": 1.0,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C056",
+   "category": "wrong_scaling",
+   "severity": "critical",
+   "problem": "«19900s» неверно указывает десятилетие; автор говорит о 1990-х годах.",
+   "fix": "NUMAR’s engineering developments in the 1990s led to continuous NMR logging technology, now applied in the oil and gas, water, and metal exploration industries.",
+   "page_pdf": 2,
+   "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology",
+   "confidence": 1.0,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C062",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Фраза «determined by the relationship» добавляет, что выбор комбинации определяется соотношением массы и прочности кабеля. Автор лишь говорит, что на протяжённом участке может учитываться такое соотношение; затем указывает, что в таких случаях инструменты можно спускать на трубе или гибкой трубе.",
+   "fix": "For wells deviated or extended beyond the reach of conventional electric wireline cables, the weight-to-strength ratio of the cable may be a consideration; in such cases, memory tools can be conveyed on pipe or coil tubing.",
+   "page_pdf": 7,
+   "quote": "This can involve a combination of weight to strength ratio of the electric cable over this extended reach. In such cases the memory tools can be conveyed on Pipe or Coil Tubing.",
+   "confidence": 0.87,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C064",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Сравнение сформулировано как сравнение датчиков с кабелем; автор сравнивает типы датчиков, используемых в memory logging и на Electric Line.",
+   "fix": "Compared with sensors used on Electric Line, memory logging sensors are limited in type and tend to focus on cased-hole, production-stage applications.",
+   "page_pdf": 7,
+   "quote": "The type of sensors are limited in comparison to those used on Electric Line, and tend to be focussed on the cased hole, production stage of the well.",
+   "confidence": 0.88,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C068",
+   "category": "lost_condition",
+   "severity": "significant",
+   "problem": "В тексте автора говорится о базовых инструментах оценки открытого ствола для «Commodity» рынков на slickline, а не об инструментах для интервала добычи. В контексте главы production stage отдельно связан преимущественно с обсаженным стволом.",
+   "fix": "Other basic open-hole formation-evaluation memory tools are also available for use in “Commodity” markets on slickline.",
+   "page_pdf": 7,
+   "quote": "Other basic open hole formation evaluation memory tools are available for use in \"Commodity\" markets on slickline to reduce costs and operating time.",
+   "confidence": 0.82,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C071",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Автор сообщает, что slickline использует проволоку указанного типа и диаметра, но не утверждает, что это было непосредственно измерено.",
+   "fix": "Slickline uses solid mechanical wire with an outer diameter of 0.072–0.125 inches.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD)",
+   "confidence": 0.9,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C072",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Элемент утверждает, что применение провода было непосредственно измерено. Автор же описывает назначение механического провода в составе Slick Line; это не результат измерения.",
+   "fix": "The Slick Line uses a solid mechanical wire to manipulate or otherwise carry out operations in the well bore completion system.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD), to manipulate or otherwise carry out operations in the well bore completion system.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C073",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Слово “always” делает утверждение безусловным. Автор говорит, что операции с памятью часто проводят на slickline, но также описывает другие способы доставки инструментов.",
+   "fix": "Operations with memory tools are often conducted on slickline instead of mobilizing a full-service Electric Wireline unit.",
+   "page_pdf": 7,
+   "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C074",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Слово “only” чрезмерно обобщает утверждение автора: результаты становятся известны после возврата инструментов на поверхность, но автор не говорит, что это единственный возможный момент или способ их узнать.",
+   "fix": "The results are not known until the memory tools are returned to the surface.",
+   "page_pdf": 7,
+   "quote": "Since the results are not known until returned to surface,",
+   "confidence": 0.88,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C079",
+   "category": "lost_condition",
+   "severity": "significant",
+   "problem": "Фраза теряет оговорку о месте: автор говорит о крупных дорогих offshore-объектах, а «marine facilities» может означать морские сооружения вообще.",
+   "fix": "Data loss can become a major issue at large offshore locations, which are expensive.",
+   "page_pdf": 7,
+   "quote": "This loss of data can be a major issue on large offshore (expensive) locations.",
+   "confidence": 0.88,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C080",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Слово “always” превращает оговорённое наблюдение (“often”) в универсальное утверждение. Автор говорит лишь, что в таких наземных локациях логирование часто проводится без инфраструктуры буровой установки.",
+   "fix": "At onshore sites, for example in South Texas, where the commodity segment of the oilfield services sector operates, logging is often conducted without the infrastructure of a drilling rig.",
+   "page_pdf": 7,
+   "quote": "On land locations (e.g. South Texas, US) where there is what is called a \"Commodity\" Oil service sector, where logging often is without the rig infrastructure.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C081",
+   "category": "sign_flip",
+   "severity": "critical",
+   "problem": "В утверждении перевёрнуто сравнение: автор говорит, что потеря данных на наземных площадках менее проблематична, а элемент — что более проблематична.",
+   "fix": "Under the described land-based conditions, data loss is less problematic, and logging is often repeated without issue.",
+   "page_pdf": 7,
+   "quote": "this is less problematic, and logs are often run again without issue.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "Фраза «The analogy is exact: it never breaks down» необоснованно объявляет аналогию точной и универсальной. Автор говорит, что компьютеризация ускорила обработку данных и расширила возможности их сбора, но не утверждает, что аналогия с обновлением оборудования применима без ограничений.",
+   "fix": "Аналогия уместна для описания того, как компьютеризация ускорила обработку каротажных данных и расширила возможности их сбора; она не означает, что развитие приборов тождественно обновлению вычислительной инфраструктуры во всех отношениях.",
+   "page_pdf": 2,
+   "quote": "Computerization allowed much faster log processing, and dramatically expanded log data-gathering capacity.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "A10",
+   "category": "analogy_without_limit",
+   "severity": "minor",
+   "problem": "«For verification» приписывает возврату данных цель проверки, которой автор не указывает. Автор говорит лишь, что результаты становятся известны после возврата инструментов на поверхность.",
+   "fix": "Hypothesis: memory logging is similar to a device that records data locally and makes it available at the surface only after retrieval. The analogy is limited: the chapter does not describe a data-transmission method or say that retrieval is for verification; it also notes that memory logging limits the ability to modify downhole production conditions accurately during logging.",
+   "page_pdf": 7,
+   "quote": "Since the results are not known until returned to surface",
+   "confidence": 0.91,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that the borehole penetrates geological formations» приписывает прямое измерение факту проникновения скважины в формации. Автор говорит, что журнал фиксирует формации, вскрытые скважиной; способы получения записи могут различаться.",
+   "fix": "Well logging creates a detailed record of the geological formations penetrated by a borehole.",
+   "page_pdf": 1,
+   "quote": "Well logging ... is the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole.",
+   "confidence": 0.94,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.10",
+   "category": "other",
+   "severity": "minor",
+   "problem": "«Is needed» утверждает необходимость логирования для поиска нефти, газа и подземных вод. Автор подтверждает, что каротаж применяется при разведке этих ресурсов, но не говорит, что он необходим.",
+   "fix": "Logging is used not only to explore for oil and gas, but also for groundwater.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration",
+   "confidence": 0.78,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.11",
+   "category": "other",
+   "severity": "significant",
+   "problem": "The line says wireline logging is used in these fields, but the cited passage attributes these applications to well logging generally; it does not specifically extend them to wireline logging.",
+   "fix": "Well logging is also performed as part of environmental, scientific, and geotechnical studies.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies.",
+   "confidence": 0.84,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.12",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза смешивает сам журнал с образцом или его осмотром. У автора журнал — это запись о геологических формациях; он может быть основан на осмотре образцов или на инструментальных измерениях. Кроме того, «directly measured» не подходит к варианту с визуальным осмотром.",
+   "fix": "When groundwater is being studied, the well log records the formations penetrated by the borehole. It may be based on visual inspection of recovered samples or on physical measurements made by instruments in the borehole.",
+   "page_pdf": 1,
+   "quote": "The log may be based either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs).",
+   "confidence": 0.94,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "S01.06",
+   "category": "frame_error",
+   "severity": "critical",
+   "problem": "Верхняя граница слоя указана как 19800 м вместо 1980 м — это противоречит спецификации сцены и радикально меняет его интервал.",
+   "fix": "Layer 1950–1980 m: Sandstone; properties {\"signal\": 30}",
+   "page_pdf": 1,
+   "quote": "a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C001",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Well logging назван записью, хотя у автора это процесс её создания; запись называется well log.",
+   "fix": "Well logging is the practice of making a detailed record of the geological formations penetrated by a borehole.",
+   "page_pdf": 1,
+   "quote": "the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "confidence": 0.9,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C007",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Элемент подменяет mud logging методом gas logging. Автор говорит о связи wireline logging именно с mud logging, не утверждая того же отдельно о gas logging.",
+   "fix": "Wireline logging and mud logging are different methods, but they are closely linked through the integration of data sets.",
+   "page_pdf": 1,
+   "quote": "\"wireline logging\" and \"mud logging\" are not the same, yet are closely linked through the integration of the data sets.",
+   "confidence": 0.93,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» без основания представляет возможность вывода и принятия решений как результат прямого измерения. Автор описывает применение измерений и анализа, а не такое наблюдение.",
+   "fix": "Measurements and their analysis can be used to infer additional properties, such as hydrocarbon saturation and formation pressure, and to make drilling and production decisions.",
+   "page_pdf": 1,
+   "quote": "these and the associated analysis can then be used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions.",
+   "confidence": 0.94,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Исторический факт ошибочно представлен как результат прямого измерения; автор не утверждает этого.",
+   "fix": "Conrad developed the Schlumberger array for prospecting for metal ore deposits, and the brothers adapted this surface technique to subsurface applications.",
+   "page_pdf": 2,
+   "quote": "Conrad developed the Schlumberger array, which was a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C039",
+   "category": "wrong_scaling",
+   "severity": "critical",
+   "problem": "Дата указана ошибочно: late 19400s вместо late 1940s.",
+   "fix": "To address this problem, induction logging was developed in the late 1940s.",
+   "page_pdf": 2,
+   "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Исторические даты введения методов представлены как результат прямого измерения; автор этого не утверждает.",
+   "fix": "Gamma-ray logging, which measures natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Автор сообщает об историческом развитии методов, но не утверждает, что оно было непосредственно измерено.",
+   "fix": "Nuclear logging methods continued to develop after the war.",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C054",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Имя Bloembergen указано неверно: Nicolas вместо Nicolaas.",
+   "fix": "Nicolaas Bloembergen filed the Schlumberger patent in 1966.",
+   "page_pdf": 2,
+   "quote": "Nicolaas Bloembergen filed the Schlumberger patent in 1966.",
+   "confidence": 0.9,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C056",
+   "category": "wrong_scaling",
+   "severity": "significant",
+   "problem": "Указаны 19900-е годы вместо 1990-х.",
+   "fix": "NUMAR's developments in the 1990s led to continuous NMR logging technology, used in oil and gas, water, and metal exploration.",
+   "page_pdf": 2,
+   "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C062",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Элемент утверждает, что используют некую комбинацию, определяемую соотношением массы и прочности кабеля. Автор говорит об этом соотношении как о факторе, связанном с ограниченной досягаемостью кабеля, а не о выборе комбинации.",
+   "fix": "For such wells, the extended reach may involve limitations related to the electric cable’s weight-to-strength ratio. Memory tools can be conveyed on pipe or coiled tubing.",
+   "page_pdf": 7,
+   "quote": "This can involve a combination of weight to strength ratio of the electric cable over this extended reach. In such cases the memory tools can be conveyed on Pipe or Coil Tubing.",
+   "confidence": 0.88,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C068",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Автор не указывает, что эти приборы предназначены для продуктивного интервала. Упоминание стадии добычи относится преимущественно к приборам для обсаженного ствола.",
+   "fix": "Other basic open-hole formation evaluation memory tools are available for use on slickline in commodity markets.",
+   "page_pdf": 7,
+   "quote": "Other basic open hole formation evaluation memory tools are available for use in \"Commodity\" markets on slickline to reduce costs and operating time.",
+   "confidence": 0.83,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C071",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза утверждает, что это было установлено прямым измерением, хотя автор лишь описывает проволоку и её диаметр.",
+   "fix": "A slickline intervention unit uses solid mechanical wire with an outer diameter of 0.072–0.125 inches.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD)",
+   "confidence": 0.97,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C072",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Автор описывает назначение проволоки, но не утверждает, что её использование было непосредственно измерено.",
+   "fix": "A slickline intervention unit uses a solid mechanical wire to manipulate or otherwise carry out operations in the well bore completion system.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD), to manipulate or otherwise carry out operations in the well bore completion system.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C073",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«Always» превращает частую практику в универсальную; автор также допускает спуск приборов на трубах или гибкой насосно-компрессорной трубе.",
+   "fix": "Memory operations are often carried out on slickline in preference to mobilizing a full-service electric wireline unit.",
+   "page_pdf": 7,
+   "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C080",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«Always» превращает авторское «often» в безусловное утверждение.",
+   "fix": "At onshore sites, for example in South Texas, where a commodity oilfield services sector operates, logging is often conducted without drilling-rig infrastructure.",
+   "page_pdf": 7,
+   "quote": "where logging often is without the rig infrastructure",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C081",
+   "category": "sign_flip",
+   "severity": "critical",
+   "problem": "Утверждение переворачивает сравнение: автор считает потерю данных в описанных наземных условиях менее, а не более проблематичной.",
+   "fix": "Under the described land-based conditions, data loss is less problematic, and logging is often repeated without complications.",
+   "page_pdf": 7,
+   "quote": "this is less problematic, and logs are often run again without issue.",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "Граница аналогии объявлена отсутствующей; утверждение о постоянной и одинаковой для любого объекта величине также не обосновано текстом автора.",
+   "fix": "The analogy is limited to the role of technological upgrades in data collection and processing. Logging methods have different physical requirements and are not universally interchangeable.",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Заявление о том, что прохождение скважины через формации было непосредственно измерено, не подтверждается автором. Он определяет каротаж как создание записи о пройденных формациях.",
+   "fix": "Well logging creates a detailed record of the geological formations penetrated by a borehole.",
+   "page_pdf": 1,
+   "quote": "Well logging, also known as borehole logging, is the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole.",
+   "confidence": 0.97,
+   "source": "llm:strong"
+  },
+  {
+   "target": "S01.06",
+   "category": "frame_error",
+   "severity": "critical",
+   "problem": "Нижняя граница слоя указана как 19 800 м вместо 1 980 м: слой выходит за пределы сцены и перекрывает остальные слои.",
+   "fix": "Layer 1950–1980 m: Sandstone; properties {\"signal\": 30}.",
+   "page_pdf": 1,
+   "quote": "a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  }
+ ],
+ "chosen": [
+  {
+   "target": "C073",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«Always» превращает частую практику в универсальную; автор также допускает спуск приборов на трубах или гибкой насосно-компрессорной трубе.",
+   "fix": "Memory operations are often carried out on slickline in preference to mobilizing a full-service electric wireline unit.",
+   "page_pdf": 7,
+   "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+   "confidence": 0.86,
+   "source": "llm:strong",
+   "signals": [
+    "code",
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C080",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«Always» превращает авторское «often» в безусловное утверждение.",
+   "fix": "At onshore sites, for example in South Texas, where a commodity oilfield services sector operates, logging is often conducted without drilling-rig infrastructure.",
+   "page_pdf": 7,
+   "quote": "where logging often is without the rig infrastructure",
+   "confidence": 0.86,
+   "source": "llm:strong",
+   "signals": [
+    "code",
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "Граница аналогии объявлена отсутствующей; утверждение о постоянной и одинаковой для любого объекта величине также не обосновано текстом автора.",
+   "fix": "The analogy is limited to the role of technological upgrades in data collection and processing. Logging methods have different physical requirements and are not universally interchangeable.",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+   "confidence": 0.83,
+   "source": "llm:strong",
+   "signals": [
+    "code",
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C081",
+   "category": "sign_flip",
+   "severity": "critical",
+   "problem": "Утверждение переворачивает сравнение: автор считает потерю данных в описанных наземных условиях менее, а не более проблематичной.",
+   "fix": "Under the described land-based conditions, data loss is less problematic, and logging is often repeated without complications.",
+   "page_pdf": 7,
+   "quote": "this is less problematic, and logs are often run again without issue.",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "S01.06",
+   "category": "frame_error",
+   "severity": "critical",
+   "problem": "Нижняя граница слоя указана как 19 800 м вместо 1 980 м: слой выходит за пределы сцены и перекрывает остальные слои.",
+   "fix": "Layer 1950–1980 m: Sandstone; properties {\"signal\": 30}.",
+   "page_pdf": 1,
+   "quote": "a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C056",
+   "category": "wrong_scaling",
+   "severity": "significant",
+   "problem": "Указаны 19900-е годы вместо 1990-х.",
+   "fix": "NUMAR's developments in the 1990s led to continuous NMR logging technology, used in oil and gas, water, and metal exploration.",
+   "page_pdf": 2,
+   "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Исторический факт ошибочно представлен как результат прямого измерения; автор не утверждает этого.",
+   "fix": "Conrad developed the Schlumberger array for prospecting for metal ore deposits, and the brothers adapted this surface technique to subsurface applications.",
+   "page_pdf": 2,
+   "quote": "Conrad developed the Schlumberger array, which was a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C072",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Автор описывает назначение проволоки, но не утверждает, что её использование было непосредственно измерено.",
+   "fix": "A slickline intervention unit uses a solid mechanical wire to manipulate or otherwise carry out operations in the well bore completion system.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD), to manipulate or otherwise carry out operations in the well bore completion system.",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Автор сообщает об историческом развитии методов, но не утверждает, что оно было непосредственно измерено.",
+   "fix": "Nuclear logging methods continued to develop after the war.",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "confidence": 0.98,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C007",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Элемент подменяет mud logging методом gas logging. Автор говорит о связи wireline logging именно с mud logging, не утверждая того же отдельно о gas logging.",
+   "fix": "Wireline logging and mud logging are different methods, but they are closely linked through the integration of data sets.",
+   "page_pdf": 1,
+   "quote": "\"wireline logging\" and \"mud logging\" are not the same, yet are closely linked through the integration of the data sets.",
+   "confidence": 0.96,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» без основания представляет возможность вывода и принятия решений как результат прямого измерения. Автор описывает применение измерений и анализа, а не такое наблюдение.",
+   "fix": "Measurements and their analysis can be used to infer additional properties, such as hydrocarbon saturation and formation pressure, and to make drilling and production decisions.",
+   "page_pdf": 1,
+   "quote": "these and the associated analysis can then be used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions.",
+   "confidence": 0.96,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Исторические даты введения методов представлены как результат прямого измерения; автор этого не утверждает.",
+   "fix": "Gamma-ray logging, which measures natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "confidence": 0.95,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Заявление о том, что прохождение скважины через формации было непосредственно измерено, не подтверждается автором. Он определяет каротаж как создание записи о пройденных формациях.",
+   "fix": "Well logging creates a detailed record of the geological formations penetrated by a borehole.",
+   "page_pdf": 1,
+   "quote": "Well logging, also known as borehole logging, is the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole.",
+   "confidence": 0.95,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C062",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Элемент утверждает, что используют некую комбинацию, определяемую соотношением массы и прочности кабеля. Автор говорит об этом соотношении как о факторе, связанном с ограниченной досягаемостью кабеля, а не о выборе комбинации.",
+   "fix": "For such wells, the extended reach may involve limitations related to the electric cable’s weight-to-strength ratio. Memory tools can be conveyed on pipe or coiled tubing.",
+   "page_pdf": 7,
+   "quote": "This can involve a combination of weight to strength ratio of the electric cable over this extended reach. In such cases the memory tools can be conveyed on Pipe or Coil Tubing.",
+   "confidence": 0.88,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C039",
+   "category": "other",
+   "severity": "significant",
+   "problem": "В дате лишний ноль: «late 19400s» вместо «late 1940s».",
+   "fix": "To address this problem, the induction log was developed in the late 1940s.",
+   "page_pdf": 2,
+   "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+   "confidence": 0.85,
+   "source": "llm:bulk",
+   "signals": [
+    "code",
+    "llm:bulk"
+   ]
+  },
+  {
+   "target": "A10",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "«For verification» приписывает возврату данных цель проверки, которой автор не указывает. Автор говорит лишь, что результаты становятся известны после возврата инструментов на поверхность.",
+   "fix": "Hypothesis: memory logging is similar to a device that records data locally and makes it available at the surface only after retrieval. The analogy is limited: the chapter does not describe a data-transmission method or say that retrieval is for verification; it also notes that memory logging limits the ability to modify downhole production conditions accurately during logging.",
+   "page_pdf": 7,
+   "quote": "Since the results are not known until returned to surface",
+   "confidence": 0.71,
+   "source": "llm:bulk",
+   "signals": [
+    "code",
+    "llm:bulk"
+   ]
+  },
+  {
+   "target": "C001",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Well logging назван записью, хотя у автора это процесс её создания; запись называется well log.",
+   "fix": "Well logging is the practice of making a detailed record of the geological formations penetrated by a borehole.",
+   "page_pdf": 1,
+   "quote": "the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "confidence": 0.94,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  }
+ ],
+ "dropped_by_reverse": [
+  {
+   "target": "C074",
+   "problem": "Слово “only” чрезмерно обобщает утверждение автора: результаты становятся известны после возврата инструментов на поверхность, но автор не говорит, что это единственный возможный момент или способ их узнать.",
+   "why": "в главе есть дословное подтверждение (стр. 7): Since the results are not known until returned to surface, any realtime well dynamic changes cannot be monitored real time."
+  },
+  {
+   "target": "C054",
+   "problem": "Имя Bloembergen указано неверно: Nicolas вместо Nicolaas.",
+   "why": "в главе есть дословное подтверждение (стр. 2): Nicolaas Bloembergen filed the Schlumberger patent in 1966."
+  }
+ ],
+ "stats": {
+  "bulk": {
+   "ok": 81,
+   "fail": 0,
+   "skip": 0
+  },
+  "strong": {
+   "ok": 31,
+   "fail": 0,
+   "skip": 0
+  },
+  "reverse": {
+   "ok": 0,
+   "fail": 0,
+   "skip": 0
+  }
+ }
+}

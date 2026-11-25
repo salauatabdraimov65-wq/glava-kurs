@@ -1,0 +1,14 @@
+Кандидатов: 50, сняты обратной проверкой: 0, в ответе: 13 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_drill_wiki_ru/answer.json (38 с)
+  code+bulk+strong   C028   critical    sign_flip              Понижение эффективности добычи указано вместо повышения.
+  code+bulk+strong   A06    significant analogy_without_limit  Граница аналогии объявлена отсутствующей, а неуточнённая величина — по
+  code+bulk+strong   C021   significant overgeneralization     «Всегда» сверхобобщает утверждение автора: он пишет, что бурение часто
+  code+bulk+strong   C068   significant overgeneralization     Слово «всегда» заменяет авторскую оговорку «обычно» и чрезмерно обобща
+  bulk+strong        C007   critical    wrong_scaling          Глубина скважин завышена в 10 раз: указано 2400 м вместо 240 м.
+  bulk+strong        C016   critical    wrong_scaling          Глубина завышена в десять раз: указано 30 км вместо 3 км.
+  bulk+strong        C017   critical    wrong_scaling          Глубина завышена в 10 раз: указано 70 км вместо 7 км.
+  bulk+strong        C020   critical    wrong_scaling          Глубина указана как 12 2620 м вместо 12 262 м.
+  bulk+strong        C023   critical    wrong_scaling          Глубина указана как 10 9100 м вместо 10 910 м.
+  bulk+strong        C034   significant measured_vs_inferred   Утверждение о прямом измерении не подтверждено источником: автор описы
+  bulk+strong        L01.05 significant measured_vs_inferred   Фраза необоснованно утверждает, что названия установлены прямым измере
+  bulk+strong        C094   significant measured_vs_inferred   Автор не утверждает, что принадлежность оборудования установлена прямы
+  bulk+strong        L01.13 significant measured_vs_inferred   Утверждение о прямом измерении не подтверждено автором: он указывает н

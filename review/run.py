@@ -196,7 +196,7 @@ def _run(a, cands_sink: list) -> int:
             print("! модель недоступна (ошибка API/бюджет/ключ): ответ по проверкам кодом")
             use_llm = False
     if use_llm:
-        survivors = aggregate(cands, ch, min_signals=min(2, avail))
+        survivors = aggregate(cands, ch, min_signals=min(2, avail), agree=a.agree)
         if not a.no_reverse and avail >= 2:
             frames = {f["id"]: f for f in pkg["frames"]}
             ranked = rank(survivors)
@@ -252,6 +252,7 @@ def main(argv=None) -> int:
     ap.add_argument("--limit", type=int, help="проверять моделью только первые N элементов (отладка)")
     ap.add_argument("--workers", type=int, default=8, help="потоков для вызовов модели (1 = последовательно)")
     ap.add_argument("--deadline-s", type=float, default=DEADLINE_S, help="после этого времени новые вызовы модели не начинаются")
+    ap.add_argument("--agree", choices=("family", "target"), default="family", help="согласие сигналов: в семействе категорий (по умолчанию) или по цели независимо от категории")
     ap.add_argument("--no-reverse", action="store_true", help="не делать обратную проверку «найди подтверждение»")
     ap.add_argument("--dump", help="сохранить всех кандидатов, сигналы и снятые замечания в json")
     a = ap.parse_args(argv)
