@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" preserveAspectRatio="xMidYMid slice" fill="none" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="sand-grain" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path fill="var(--geo-dense)" fill-opacity=".25" d="M4 8h4v4H4zm16 12h8v4h-8z"/>
+      <path fill="var(--geo-salt)" fill-opacity=".35" d="M16 4h4v4h-4zM4 28h8v4H4z"/>
+    </pattern>
+    <pattern id="stone-grain" width="48" height="40" patternUnits="userSpaceOnUse">
+      <path fill="var(--geo-background)" fill-opacity=".2" d="M4 8h16v4H4zm24 16h12v4H28zM8 32h8v4H8z"/>
+      <path fill="var(--geo-salt)" fill-opacity=".15" d="M20 4h12v4H20zM0 24h8v4H0z"/>
+    </pattern>
+    <g id="pixel-cloud" fill="var(--geo-salt)" opacity=".62">
+      <path d="M0 16h16V8h16V0h32v8h16v8h16v16H0z"/>
+      <path fill="var(--geo-text)" opacity=".5" d="M16 8h16V0h32v8h16v8H16z"/>
+    </g>
+    <g id="pixel-tree">
+      <path fill="var(--geo-dense)" d="M24 48h12v48H24z"/>
+      <path fill="var(--geo-background)" fill-opacity=".3" d="M32 52h4v44h-4z"/>
+      <path fill="var(--geo-shale)" d="M24 0h12v12h12v12h12v24h-8v16H8V48H0V24h12V12h12z"/>
+      <path fill="var(--geo-text)" fill-opacity=".15" d="M24 8h8v12H20v12H8v12H4V28h12V16h8z"/>
+      <path fill="var(--geo-background)" fill-opacity=".25" d="M48 24h12v24h-8v16H8v-8h32V44h8z"/>
+    </g>
+    <g id="pixel-crystal">
+      <path fill="var(--geo-limestone)" d="M8 0h8v8h8v24h-8v8H8v-8H0V8h8z"/>
+      <path fill="var(--geo-text)" fill-opacity=".65" d="M8 8h4v24H8z"/>
+      <path fill="var(--geo-background)" fill-opacity=".2" d="M16 8h8v24h-8z"/>
+    </g>
+  </defs>
+  <path fill="var(--world-sky)" d="M0 0h960v360H0z"/>
+  <g class="world-stars" fill="var(--geo-salt)">
+    <path d="M84 28h4v4h-4zm140 24h4v4h-4zM432 20h4v4h-4zm168 44h4v4h-4zm172-40h4v4h-4zm144 44h4v4h-4zM524 96h4v4h-4z"/>
+  </g>
+  <g class="world-sun">
+    <path fill="var(--geo-sand)" fill-opacity=".18" d="M756 16h96v96h-96z"/>
+    <path fill="var(--geo-sand)" d="M772 32h64v64h-64z"/>
+    <path fill="var(--geo-text)" fill-opacity=".45" d="M780 40h48v8h-48z"/>
+  </g>
+  <g class="world-moon">
+    <path fill="var(--geo-salt)" d="M780 32h48v8h8v48h-8v8h-48v-8h-8V40h8z"/>
+    <path fill="var(--world-sky)" d="M804 24h32v48h-8v8h-16v-8h-8z"/>
+  </g>
+  <use href="#pixel-cloud" x="60" y="48"/>
+  <use href="#pixel-cloud" x="336" y="24" opacity=".6"/>
+  <use href="#pixel-cloud" x="652" y="88" opacity=".5"/>
+  <path fill="var(--world-distant)" d="M0 184h64v-24h32v-24h40v-24h48v32h32v24h48v16h64v-48h32v-32h32V88h48v32h40v32h40v24h48v24h56v-32h40v-24h40v-24h48v16h32v32h48v24h48v-24h48v-24h48v56h48v-16h40v176H0z"/>
+  <path fill="var(--world-near)" d="M0 212h40v-24h56v-24h48v24h32v24h48v16h64v-24h48v-24h64v-24h32v24h48v32h48v16h64v-16h40v-24h64v24h48v16h56v-24h40v-24h48v32h32v16h64v-16h40v132H0z"/>
+  <path fill="var(--geo-sand)" d="M0 240h112v-16h96v16h112v16h112v-32h112v16h96v16h112v-32h96v-16h112v152H0z"/>
+  <path fill="url(#sand-grain)" d="M0 240h112v-16h96v16h112v16h112v-32h112v16h96v16h112v-32h96v-16h112v152H0z"/>
+  <path fill="var(--geo-shale)" d="M0 236h112v-16h96v16h112v16h112v-32h112v16h96v16h112v-32h96v-16h112v12H856v16h-96v32H632v-16h-96v-16h-96v32H312v-16H200v-16h-80v16H0z"/>
+  <path fill="var(--geo-text)" fill-opacity=".15" d="M0 236h112v-16h96v4h-92v16H0zm432-16h112v4H436v32h-4zm320 0h96v-16h112v4H852v16h-96v32h-4z"/>
+  <path fill="var(--geo-dense)" d="M0 288h64v16h128v-16h112v32h128v-16h96v-16h128v16h128v-16h176v72H0z"/>
+  <path fill="url(#stone-grain)" d="M0 288h64v16h128v-16h112v32h128v-16h96v-16h128v16h128v-16h176v72H0z"/>
+  <path fill="var(--geo-background)" fill-opacity=".8" d="M336 328h16v-16h48v48h-80v-16h16zM640 328h64v32h-80v-16h16z"/>
+  <use href="#pixel-crystal" transform="translate(348 328) scale(.6)"/>
+  <use href="#pixel-crystal" transform="translate(656 332) scale(.55)"/>
+  <use href="#pixel-tree" x="120" y="128"/>
+  <use href="#pixel-tree" transform="translate(28 164) scale(.75)"/>
+  <use href="#pixel-tree" x="864" y="112"/>
+  <use href="#pixel-tree" transform="translate(792 152) scale(.75)"/>
+  <g fill="var(--geo-shale)">
+    <path d="M232 240v-12h4v8h4v-16h4v20zm368 0v-16h4v8h8v-4h4v12zm152-16v-16h4v8h4v-20h4v28z"/>
+    <path d="M392 256v-12h4v8h4v-8h4v12z"/>
+  </g>
+  <g transform="translate(472 176)">
+    <path fill="var(--geo-background)" fill-opacity=".18" d="M-8 56h64v8H-8z"/>
+    <path fill="var(--geo-sand)" d="M8 0h24v8h8v8H0V8h8z"/>
+    <path fill="var(--geo-reef)" d="M8 16h24v16H8z"/>
+    <path fill="var(--geo-background)" d="M24 20h4v4h-4z"/>
+    <path fill="var(--geo-limestone)" d="M4 32h32v16H4z"/>
+    <path fill="var(--geo-dense)" d="M0 32h8v16H0z"/>
+    <path fill="var(--geo-background)" d="M8 48h8v8H8zm16 0h8v8h-8z"/>
+    <path fill="var(--geo-reef)" d="M36 32h8v8h-8z"/>
+    <path fill="var(--geo-dense)" d="M44 20h4v28h-4z"/>
+    <path fill="var(--geo-salt)" d="M36 16h20v4H36zm-4 4h8v4h-8zm20 0h8v4h-8z"/>
+  </g>
+  <g transform="translate(576 200)">
+    <path fill="var(--geo-dense)" d="M0 0h4v40H0z"/>
+    <path fill="var(--geo-reef)" d="M4 0h24v16H4z"/>
+    <path fill="var(--geo-sand)" d="M8 4h12v4H8z"/>
+  </g>
+  <g transform="translate(264 218)">
+    <path fill="var(--geo-dense)" d="M0 0h28v22H0z"/>
+    <path fill="var(--geo-sand)" d="M0 0h28v4H0zm0 12h28v4H0zm0-12h4v22H0zm24 0h4v22h-4z"/>
+    <path fill="var(--geo-salt)" d="M12 8h4v12h-4z"/>
+  </g>
+</svg>

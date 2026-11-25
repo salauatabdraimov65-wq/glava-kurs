@@ -424,6 +424,29 @@ def geology_theme_vars() -> str:
     return " ".join(f"--geo-{name}:{value};" for name, value in safe_palette.items())
 
 
+def pixel_icon(name: str) -> str:
+    """Small original game-style icons, kept inline for offline use."""
+    paths = {
+        "pickaxe": "M6 1h12v3h3v3h-6V5H9v2H6V4H3V1h3zM12 7h3v3h-3zm-3 3h3v3H9zm-3 3h3v3H6zm-3 3h3v5H1v-3h2z",
+        "book": "M2 3h8v2h4V3h8v16h-8v2h-4v-2H2zm3 3v10h5V6zm9 0v10h5V6z",
+        "gem": "M6 2h12v4h4v10h-4v4h-4v3h-4v-3H6v-4H2V6h4zm3 4v4H6v4h4v4h4v-4h4v-4h-3V6z",
+        "map": "M1 4h6V1h10v3h6v16h-6v3H7v-3H1zm3 3v10h3V7zm6-3v16h4V4zm7 3v10h3V7z",
+        "cards": "M1 1h16v4H5v14H1zm6 6h16v16H7zm3 3v10h10V10z",
+        "scroll": "M5 1h14v3h3v5h-3v10h-3v4H5v-3H2v-5h3zm3 3v13h8V4zm2 3h4v2h-4zm0 5h4v2h-4z",
+        "flag": "M3 1h3v22H3zm3 0h15v12H6zm3 3v6h9V4z",
+    }
+    path = paths.get(name, paths["gem"])
+    return f'<svg class="pixel-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="{path}"/></svg>'
+
+
+def count_word(count: int, one: str, few: str, many: str) -> str:
+    if 11 <= count % 100 <= 14:
+        return many
+    if count % 10 == 1:
+        return one
+    return few if 2 <= count % 10 <= 4 else many
+
+
 def ordered_nodes(raw_nodes: list[Any]) -> list[dict[str, Any]]:
     nodes = [node for node in raw_nodes if isinstance(node, dict) and node.get("id")]
     nodes.sort(key=lambda node: (node.get("order", 10**9), str(node.get("id", ""))))
@@ -494,9 +517,13 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
     hero_title = html.escape(hero_title or str(layer.get("chapter", "Полевой маршрут")))
     step_count = len(nodes)
     task_count = len(tasks)
+    step_word = count_word(step_count, "этап", "этапа", "этапов")
+    task_word = count_word(task_count, "задание", "задания", "заданий")
     task_json = json.dumps(tasks, ensure_ascii=False, separators=(",", ":"))
     task_json = task_json.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
     geology_vars = geology_theme_vars()
+    theme_css = Path(__file__).with_name("theme.css").read_text(encoding="utf-8")
+    world_markup = (Path(__file__).parent / "assets" / "world.svg").read_text(encoding="utf-8")
     return f'''<!doctype html>
 <html lang="ru">
 <head>
@@ -505,161 +532,32 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
   <meta name="color-scheme" content="light dark">
   <title>{chapter_name} — курс</title>
   <style>
-    :root {{ {geology_vars} color-scheme:light dark; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; font-size:17px; line-height:1.6; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --shadow:0 12px 32px rgba(0,0,0,.2); }}
-    :root[data-theme="light"] {{ color-scheme:light; --bg:color-mix(in srgb,var(--geo-salt,#C9D6DF) 36%,white); --paper:color-mix(in srgb,var(--geo-salt,#C9D6DF) 18%,white); --ink:color-mix(in srgb,var(--geo-background,#0F1419) 24%,var(--geo-text,#ECEFF4)); --muted:color-mix(in srgb,var(--geo-background,#0F1419) 58%,var(--geo-muted,#8A96A3)); --line:color-mix(in srgb,var(--geo-dense,#8C7B6B) 25%,white); --accent:color-mix(in srgb,var(--geo-dense,#8C7B6B) 74%,var(--geo-sand,#E8C872)); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 18%,white); --teal:color-mix(in srgb,var(--geo-shale,#6B8E5A) 72%,var(--geo-background,#0F1419)); --warm:color-mix(in srgb,var(--geo-reef,#F0A35E) 72%,var(--geo-background,#0F1419)); --sun:var(--geo-sand,#E8C872); --shadow:0 12px 32px rgba(47,58,43,.12); }}
-    :root[data-theme="dark"] {{ color-scheme:dark; --bg:var(--geo-background,#0F1419); --paper:var(--geo-panel,#1A2129); --ink:var(--geo-text,#ECEFF4); --muted:var(--geo-muted,#8A96A3); --line:color-mix(in srgb,var(--muted) 36%,var(--paper)); --accent:var(--geo-sand,#E8C872); --soft:color-mix(in srgb,var(--geo-limestone,#7FB3D5) 17%,var(--paper)); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-sand,#E8C872); --mission:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--geo-text,#ECEFF4)); --shadow:0 12px 32px rgba(0,0,0,.2); }}
-    * {{ box-sizing:border-box; }} html,body {{ max-width:100%; }} body {{ margin:0; background:repeating-radial-gradient(ellipse at 12% 10%,transparent 0 42px,color-mix(in srgb,var(--geo-shale,#6B8E5A) 7%,transparent) 43px 44px,transparent 45px 74px),radial-gradient(ellipse at 8% 0%,color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,transparent),transparent 26rem),radial-gradient(ellipse at 94% 8%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 15%,transparent),transparent 30rem),var(--bg); background-attachment:fixed; color:var(--ink); }} button,input {{ font:inherit; }}
-    .shell {{ max-width:1280px; margin:auto; padding:1rem; }} header {{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.2rem; border:1px solid var(--line); border-radius:1.35rem; background:linear-gradient(115deg,var(--paper),var(--soft)); box-shadow:var(--shadow); }} header > div:first-child::before {{ content:"⌁"; display:inline-block; margin-right:.5rem; color:var(--teal); font-size:1.65rem; font-weight:800; vertical-align:-.08em; }} header::after {{ content:""; flex:none; width:112px; height:62px; border-radius:60% 60% .5rem .5rem; opacity:.82; clip-path:polygon(0 65%,18% 50%,35% 56%,53% 27%,69% 44%,82% 33%,100% 51%,100% 100%,0 100%); background:repeating-linear-gradient(174deg,var(--geo-sand,#E8C872) 0 8px,var(--geo-shale,#6B8E5A) 8px 15px,var(--geo-limestone,#7FB3D5) 15px 22px,var(--geo-dense,#8C7B6B) 22px 29px); }}
-    h1 {{ font-size:clamp(1.6rem,4vw,2.35rem); line-height:1.2; margin:.3rem 0 .8rem; }} h2 {{ font-size:1.25rem; margin:0 0 .65rem; }} h3 {{ font-size:1rem; margin:.9rem 0 .2rem; color:var(--muted); }}
-    button {{ color:inherit; border:1px solid var(--line); background:var(--paper); border-radius:.8rem; min-height:44px; padding:.55rem .8rem; cursor:pointer; box-shadow:0 2px 6px rgba(30,24,70,.04); transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease; }} button:hover {{ border-color:var(--accent); transform:translateY(-1px); box-shadow:0 5px 12px rgba(104,73,237,.12); }} button:focus-visible,input:focus-visible,summary:focus-visible {{ outline:3px solid var(--accent); outline-offset:2px; }}
-    .layout {{ display:grid; grid-template-columns:260px minmax(0,1fr); gap:1rem; margin-top:1rem; }} .layout[data-view="course"] {{ grid-template-columns:260px minmax(0,1fr); }} .layout[data-view="cards"],.layout[data-view="map"],.layout[data-view="summary"] {{ grid-template-columns:minmax(0,1fr); }} aside,.content-block,.task {{ background:var(--paper); border:1px solid var(--line); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} aside {{ align-self:start; position:sticky; top:1rem; border-top:4px solid var(--teal); }} .step-list {{ display:grid; gap:.4rem; margin-top:.7rem; }}
-    .step {{ display:grid; grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr); align-items:start; gap:1rem; }} .lesson-column {{ min-width:0; }} .practice-column {{ min-width:0; position:sticky; top:1rem; border-top:4px solid var(--warm); }} .exercise-kicker {{ color:var(--warm); font-size:.75rem; font-weight:800; letter-spacing:.12em; }} .hint-box {{ margin:.6rem 0; }} .hint-toggle {{ min-height:38px; color:var(--accent); }} .hint-content {{ margin-top:.5rem; padding:.6rem .75rem; border-radius:.75rem; background:var(--soft); }} .hint-content[hidden] {{ display:none !important; }}
-    .step-link {{ display:flex; gap:.65rem; align-items:center; text-align:left; width:100%; min-height:48px; }} .step-link[aria-current="step"] {{ border-color:var(--accent); background:linear-gradient(110deg,var(--soft),var(--paper)); box-shadow:inset 3px 0 var(--accent); }} .step-number {{ flex:none; display:grid; place-items:center; border-radius:99px; width:1.8rem; height:1.8rem; background:var(--soft); color:var(--accent); font-weight:750; }}
-    .progress {{ height:.65rem; border-radius:99px; overflow:hidden; background:var(--line); margin:.8rem 0 .25rem; }} .progress span {{ display:block; height:100%; background:linear-gradient(90deg,var(--teal),var(--accent),var(--warm)); width:0; transition:width .2s; }} .muted,.book-title {{ color:var(--muted); }} .book-title {{ margin-top:-.45rem; }} .step-time {{ display:inline-block; margin:.1rem 0 1rem; padding:.25rem .7rem; color:var(--teal); background:color-mix(in srgb,var(--teal) 10%,var(--paper)); border-radius:99px; font-size:.9rem; }} .paragraph {{ margin:.35rem 0 .75rem; }} .page {{ display:inline-block; white-space:nowrap; font-size:.78rem; color:var(--accent); background:var(--soft); border-radius:99px; padding:.08rem .45rem; margin-left:.25rem; }} .badge {{ font-size:.78rem; color:var(--accent); background:var(--soft); border:1px solid var(--line); border-radius:99px; padding:.08rem .45rem; }} .hypothesis {{ color:var(--warm); border-color:var(--warm); }} .formula {{ white-space:nowrap; }}
-    .content-block {{ margin:0 0 .85rem; overflow-wrap:anywhere; border-left:4px solid var(--teal); }} .content-block:nth-of-type(3n+1) {{ border-left-color:var(--accent); }} .content-block:nth-of-type(3n+2) {{ border-left-color:var(--warm); }} .content-block:last-child {{ margin-bottom:0; }} .terms {{ display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; padding:0; }} .terms li {{ padding:.25rem .7rem; border:1px solid color-mix(in srgb,var(--accent) 22%,var(--line)); border-radius:99px; background:var(--soft); color:var(--accent); }}
-    blockquote {{ margin:.5rem 0; padding:.6rem .85rem; border-left:3px solid var(--accent); background:var(--soft); }} details.quote {{ margin:.4rem 0 .8rem; }} summary {{ cursor:pointer; min-height:44px; display:flex; align-items:center; color:var(--muted); }} video,img {{ max-width:100%; border-radius:.6rem; }} .task {{ margin:.65rem 0; }} .task-prompt {{ font-weight:650; margin:0 0 .7rem; }} .options {{ display:grid; gap:.4rem; }} .option {{ display:flex; gap:.65rem; align-items:flex-start; border:1px solid var(--line); border-radius:.65rem; padding:.6rem; min-height:48px; }} .option input {{ margin-top:.35rem; width:1.15rem; height:1.15rem; }}
-    .task-tools {{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.7rem; }} .task-result {{ margin-top:.65rem; padding:.7rem; border-radius:.65rem; background:var(--soft); }} .task-result[hidden] {{ display:none; }} .gap-input {{ width:min(100%,16rem); border:1px solid var(--line); border-radius:.45rem; padding:.4rem; background:var(--paper); color:var(--ink); }} .order-item {{ display:flex; gap:.4rem; align-items:center; }} .order-item .drag-handle {{ touch-action:none; cursor:grab; min-width:44px; }} .order-item.dragging {{ opacity:.55; }} .order-item .order-text {{ flex:1; }}
-    .footer-nav {{ display:flex; justify-content:space-between; gap:.75rem; margin:1rem 0 0; }} .footer-nav button {{ min-width:7rem; }}
-    .view-switcher,.theme-controls,.card-actions {{ display:flex; flex-wrap:wrap; gap:.45rem; }} .view-switcher {{ margin:1rem 0 0; padding:.35rem; background:color-mix(in srgb,var(--accent) 8%,var(--paper)); border:1px solid var(--line); border-radius:1rem; }} .view-switcher button[aria-pressed="true"],.card-actions button[aria-pressed="true"] {{ background:linear-gradient(120deg,var(--soft),var(--paper)); border-color:var(--accent); color:var(--accent); font-weight:700; }} .app-view[hidden] {{ display:none !important; }}
-    .cards-grid {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:.75rem; }} .review-card {{ min-width:0; background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--soft) 48%,var(--paper))); border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:1.1rem; padding:1rem; box-shadow:var(--shadow); }} .review-card:nth-child(3n+2) {{ border-top-color:var(--teal); }} .review-card:nth-child(3n) {{ border-top-color:var(--warm); }} .review-card h2 {{ overflow-wrap:anywhere; }} .review-card .book-title {{ margin:.2rem 0 .7rem; }} .card-actions {{ margin-top:.6rem; }} .review-card .card-actions button {{ flex:1 1 auto; }} .task-source {{ margin:.1rem 0 .45rem; }} .xp-chip {{ padding:.35rem .75rem; border-radius:99px; background:linear-gradient(110deg,var(--sun),var(--warm)); color:#352342; font-weight:800; box-shadow:0 3px 12px color-mix(in srgb,var(--warm) 26%,transparent); }}
-    .link-map {{ display:block; width:100%; height:auto; max-height:75vh; color:var(--accent); }} .map-edge {{ fill:none; stroke:currentColor; stroke-width:2.5; }} .map-node {{ fill:var(--soft); stroke:var(--line); stroke-width:2; }} .map-label {{ fill:var(--ink); font:600 17px system-ui,sans-serif; }} .map-number {{ fill:var(--accent); font:700 18px system-ui,sans-serif; }} .edge-label {{ fill:var(--muted); font:12px system-ui,sans-serif; }} .relation-list {{ padding-left:1.4rem; overflow-wrap:anywhere; }} .relation-list li {{ margin:.5rem 0; }}
-    /* Immersive field-guide styling: a dark expedition surface with visible rock strata. */
-    .shell {{ max-width:1440px; padding:1.25rem; }}
-    header.hero {{ position:relative; isolation:isolate; overflow:hidden; min-height:350px; margin-bottom:1.2rem; padding:clamp(1.35rem,4vw,3.5rem); align-items:flex-end; border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 35%,var(--line)); border-radius:1.5rem; background:radial-gradient(ellipse at 72% 4%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 22%,transparent),transparent 32rem),linear-gradient(120deg,#0F1419 5%,#17211e 54%,#1A2129 100%); box-shadow:0 24px 70px rgba(0,0,0,.3); }}
-    header.hero > div {{ position:relative; z-index:1; }}
-    header.hero > div:first-child::before {{ content:none; }}
-    .hero-copy {{ max-width:830px; }}
-    .hero-kicker,.nav-kicker {{ color:var(--geo-sand,#E8C872); font-size:.72rem; font-weight:800; letter-spacing:.16em; }}
-    .status-dot {{ display:inline-block; width:.55rem; height:.55rem; margin-right:.4rem; border-radius:50%; background:var(--geo-shale,#6B8E5A); box-shadow:0 0 14px color-mix(in srgb,var(--geo-shale,#6B8E5A) 75%,transparent); }}
-    .hero h1 {{ max-width:900px; margin:.9rem 0 .4rem; color:#ECEFF4; font-size:clamp(2.2rem,6vw,5.3rem); line-height:1.02; letter-spacing:-.045em; text-shadow:0 3px 24px rgba(0,0,0,.38); }}
-    .hero h1::after {{ width:7rem; height:.32rem; margin-top:.85rem; background:linear-gradient(90deg,var(--geo-sand,#E8C872),var(--geo-shale,#6B8E5A),var(--geo-limestone,#7FB3D5)); }}
-    .hero-note {{ max-width:620px; color:#C2C9C8; font-size:1.08rem; }}
-    .hero-stats {{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.2rem; }}
-    .hero-stats span {{ padding:.4rem .8rem; border:1px solid rgba(236,239,244,.17); border-radius:99px; background:rgba(15,20,25,.64); color:#C2C9C8; font-size:.88rem; }}
-    .hero-stats b {{ color:var(--geo-sand,#E8C872); }}
-    header.hero::after {{ position:absolute; z-index:0; right:-1rem; bottom:0; width:min(45%,560px); height:88%; border-radius:0; opacity:.68; clip-path:polygon(0 60%,12% 49%,25% 53%,39% 23%,53% 41%,65% 19%,78% 37%,90% 24%,100% 31%,100% 100%,0 100%); background:repeating-linear-gradient(176deg,var(--geo-sand,#E8C872) 0 9px,var(--geo-shale,#6B8E5A) 9px 17px,var(--geo-limestone,#7FB3D5) 17px 25px,var(--geo-dense,#8C7B6B) 25px 33px,var(--geo-reef,#F0A35E) 33px 39px); filter:saturate(.9); }}
-    .theme-controls {{ align-items:center; justify-content:flex-end; }}
-    .theme-controls button,.view-switcher button {{ border-color:rgba(236,239,244,.18); background:#202923; color:#ECEFF4; }}
-    .theme-controls button:hover,.view-switcher button:hover {{ background:#2b382f; border-color:var(--geo-sand,#E8C872); }}
-    .xp-chip {{ border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 58%,transparent); background:linear-gradient(130deg,var(--geo-sand,#E8C872),#A6793D); color:#1b201b; }}
-    .layout {{ gap:1.15rem; }}
-    #course-nav {{ overflow:hidden; border:1px solid color-mix(in srgb,var(--geo-shale,#6B8E5A) 48%,var(--line)); border-top:3px solid var(--geo-shale,#6B8E5A); background:linear-gradient(155deg,#1A2129,#19211f); }}
-    .nav-kicker {{ margin-bottom:.2rem; color:var(--geo-shale,#6B8E5A); }}
-    .nav-footnote {{ margin-top:1rem; padding-top:.7rem; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }}
-    .step-list {{ gap:.5rem; }}
-    .step-link {{ border-color:transparent; background:transparent; color:#C7CECC; }}
-    .step-link[aria-current="step"] {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 38%,var(--line)); background:linear-gradient(100deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 24%,#1A2129),#1A2129); color:#F4F1E7; box-shadow:inset 3px 0 var(--geo-sand,#E8C872); }}
-    .step-number {{ border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 45%,var(--line)); background:#27332a; color:var(--geo-sand,#E8C872); }}
-    .content-block,.review-card,.task {{ background:linear-gradient(145deg,#202720,#1A2129 72%); border-color:#384239; box-shadow:0 16px 40px rgba(0,0,0,.18); }}
-    .content-block {{ border-left-color:var(--geo-shale,#6B8E5A); }}
-    .content-block:nth-of-type(3n+1) {{ border-left-color:var(--geo-sand,#E8C872); }}
-    .content-block:nth-of-type(3n+2) {{ border-left-color:var(--geo-limestone,#7FB3D5); }}
-    .content-block h2,.review-card h2 {{ color:#F0EEE5; }}
-    .practice-column {{ border:1px solid color-mix(in srgb,var(--geo-sand,#E8C872) 40%,#384239); border-top:4px solid var(--geo-sand,#E8C872); background:linear-gradient(155deg,#283027,#1A2129 72%); }}
-    .task {{ border-top-color:var(--geo-limestone,#7FB3D5); }}
-    .view-switcher {{ background:#171d1a; border-color:#37443a; }}
-    .view-switcher button[aria-pressed="true"] {{ background:linear-gradient(130deg,#4d683e,#26372b); border-color:var(--geo-shale,#6B8E5A); color:#F1E9CE; }}
-    .review-card {{ border-top-color:var(--geo-sand,#E8C872); }}
-    .review-card:nth-child(3n+2) {{ border-top-color:var(--geo-shale,#6B8E5A); }}
-    .review-card:nth-child(3n) {{ border-top-color:var(--geo-limestone,#7FB3D5); }}
-    .map-node {{ fill:#202b24; stroke:color-mix(in srgb,var(--geo-shale,#6B8E5A) 70%,#1A2129); }}
-    .map-label {{ fill:#ECEFE4; }}
-    .map-number,.link-map {{ color:var(--geo-sand,#E8C872); fill:var(--geo-sand,#E8C872); }}
-    .page,.badge {{ color:#E8DDBA; background:#29352b; border-color:#455440; }}
-    .step-time {{ color:#D9C783; background:#273027; border:1px solid #46503b; }}
-    .terms li {{ color:#DFD5B2; background:#273027; border-color:#46503b; }}
-    blockquote,.hint-content {{ background:#242d27; border-left-color:var(--geo-limestone,#7FB3D5); }}
-    .option {{ border-color:#39433b; background:#1b221e; }}
-    .option:hover {{ background:#29352b; border-color:var(--geo-sand,#E8C872); }}
-    .gap-input {{ border-color:#59614b; background:#141a17; color:#ECEFF4; }}
-    .task-result {{ background:#263228; border-color:var(--geo-shale,#6B8E5A); }}
-    .task-result.correct {{ background:#263d2d; border-color:#75ac65; color:#E7F2DD; }}
-    .muted,.book-title {{ color:#AAB4AB; }}
-    /* Progress details use the same geological surface colors as the course. */
-    .hero-completion {{ max-width:450px; margin-top:1rem; color:var(--muted); }}
-    .hero-completion > div:first-child {{ display:flex; justify-content:space-between; gap:1rem; margin-bottom:.35rem; font-size:.83rem; }}
-    .hero-track {{ height:.55rem; overflow:hidden; border-radius:99px; background:color-mix(in srgb,var(--geo-dense,#8C7B6B) 36%,var(--geo-background,#0F1419)); }}
-    .hero-track span {{ display:block; width:0; height:100%; border-radius:inherit; transition:width .25s ease; }}
-    .step-marker {{ margin-left:auto; color:var(--muted); font-size:1.15rem; }}
-    .step-link.is-complete .step-marker {{ color:var(--geo-shale,#6B8E5A); }}
-    .step-reward {{ margin:.5rem 0 .8rem; padding:.5rem .7rem; border-radius:.7rem; font-size:.85rem; }}
-    .step-complete {{ margin-top:1rem; }}
-    .step-complete button:disabled {{ opacity:1; }}
-    /* One geology palette and a single reading column. */
-    :root,:root[data-theme="dark"] {{ --accent:var(--geo-sand,#E8C872); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-limestone,#7FB3D5); --mission:var(--geo-shale,#6B8E5A); --soft:color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,var(--geo-panel,#1A2129)); }}
-    :root[data-theme="light"] {{ --bg:color-mix(in srgb,var(--geo-dense,#8C7B6B) 24%,var(--geo-salt,#C9D6DF)); --paper:color-mix(in srgb,var(--geo-salt,#C9D6DF) 46%,var(--geo-dense,#8C7B6B)); --ink:var(--geo-background,#0F1419); --muted:color-mix(in srgb,var(--geo-background,#0F1419) 58%,var(--geo-muted,#8A96A3)); --line:color-mix(in srgb,var(--geo-dense,#8C7B6B) 40%,var(--geo-salt,#C9D6DF)); --accent:var(--geo-dense,#8C7B6B); --teal:var(--geo-shale,#6B8E5A); --warm:var(--geo-reef,#F0A35E); --sun:var(--geo-limestone,#7FB3D5); --mission:var(--geo-shale,#6B8E5A); --soft:color-mix(in srgb,var(--geo-shale,#6B8E5A) 13%,var(--paper)); }}
-    body {{ background:radial-gradient(ellipse at 78% 0%,color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,transparent),transparent 40rem),radial-gradient(ellipse at 9% 45%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 10%,transparent),transparent 34rem),repeating-radial-gradient(ellipse at 50% 0%,transparent 0 80px,color-mix(in srgb,var(--geo-dense,#8C7B6B) 8%,transparent) 81px 82px,transparent 83px 142px),var(--bg); }}
-    header.hero {{ background:radial-gradient(ellipse at 75% 12%,color-mix(in srgb,var(--geo-limestone,#7FB3D5) 18%,transparent),transparent 34rem),linear-gradient(125deg,var(--geo-background,#0F1419),color-mix(in srgb,var(--geo-shale,#6B8E5A) 30%,var(--geo-background,#0F1419)) 60%,var(--geo-panel,#1A2129)); border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 38%,var(--line)); }}
-    header.hero::after {{ background:repeating-linear-gradient(176deg,var(--geo-sand,#E8C872) 0 9px,var(--geo-shale,#6B8E5A) 9px 17px,var(--geo-limestone,#7FB3D5) 17px 25px,var(--geo-dense,#8C7B6B) 25px 33px,var(--geo-reef,#F0A35E) 33px 39px); }}
-    .hero-kicker,.nav-kicker {{ color:var(--geo-sand,#E8C872); }}
-    .status-dot {{ background:var(--geo-shale,#6B8E5A); box-shadow:0 0 14px color-mix(in srgb,var(--geo-shale,#6B8E5A) 75%,transparent); }}
-    .hero h1::after,.hero-track span {{ background:linear-gradient(90deg,var(--geo-sand,#E8C872),var(--geo-shale,#6B8E5A),var(--geo-limestone,#7FB3D5)); }}
-    .hero-stats b,.hero-completion b {{ color:var(--geo-sand,#E8C872); }}
-    .theme-controls button,.view-switcher button {{ background:color-mix(in srgb,var(--geo-panel,#1A2129) 78%,var(--geo-shale,#6B8E5A)); border-color:var(--line); color:var(--ink); }}
-    .theme-controls button:hover,.view-switcher button:hover {{ border-color:var(--geo-sand,#E8C872); }}
-    .xp-chip {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 62%,transparent); background:linear-gradient(130deg,var(--geo-sand,#E8C872),var(--geo-reef,#F0A35E)); color:var(--geo-background,#0F1419); }}
-    .layout,.layout[data-view="course"],.layout[data-view="cards"],.layout[data-view="map"],.layout[data-view="summary"] {{ display:block; }}
-    #course-nav {{ position:static; margin-bottom:1rem; border-color:color-mix(in srgb,var(--geo-shale,#6B8E5A) 42%,var(--line)); border-top-color:var(--geo-shale,#6B8E5A); background:linear-gradient(135deg,var(--paper),color-mix(in srgb,var(--geo-shale,#6B8E5A) 12%,var(--paper))); }}
-    .nav-kicker {{ color:var(--geo-shale,#6B8E5A); }}
-    .step-list {{ grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); max-height:none; overflow:visible; }}
-    .step-link {{ color:var(--ink); background:transparent; }}
-    .step-link[aria-current="step"] {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 50%,var(--line)); background:linear-gradient(100deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 23%,var(--paper)),var(--paper)); color:var(--ink); box-shadow:inset 3px 0 var(--geo-sand,#E8C872); }}
-    .step-number {{ border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 52%,var(--line)); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,var(--paper)); color:var(--geo-sand,#E8C872); }}
-    .step {{ display:block; }}
-    .lesson-column {{ width:100%; }}
-    .practice-column {{ position:static; width:100%; margin-top:1rem; border-color:color-mix(in srgb,var(--geo-sand,#E8C872) 34%,var(--line)); border-top:4px solid var(--geo-sand,#E8C872); background:linear-gradient(145deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 15%,var(--paper)),var(--paper)); }}
-    .exercise-kicker {{ color:var(--geo-shale,#6B8E5A); }}
-    .content-block,.review-card,.task {{ background:linear-gradient(145deg,var(--paper),color-mix(in srgb,var(--geo-shale,#6B8E5A) 8%,var(--paper))); border-color:var(--line); }}
-    .content-block {{ border-left-color:var(--geo-shale,#6B8E5A); }}
-    .content-block:nth-of-type(3n+1) {{ border-left-color:var(--geo-sand,#E8C872); }}
-    .content-block:nth-of-type(3n+2) {{ border-left-color:var(--geo-limestone,#7FB3D5); }}
-    .content-block h2,.review-card h2 {{ color:var(--ink); }}
-    .view-switcher {{ background:color-mix(in srgb,var(--geo-dense,#8C7B6B) 16%,var(--paper)); border-color:var(--line); }}
-    .view-switcher button[aria-pressed="true"] {{ background:linear-gradient(130deg,color-mix(in srgb,var(--geo-shale,#6B8E5A) 28%,var(--paper)),var(--paper)); border-color:var(--geo-shale,#6B8E5A); color:var(--ink); }}
-    .review-card {{ border-top-color:var(--geo-sand,#E8C872); }}
-    .review-card:nth-child(3n+2) {{ border-top-color:var(--geo-shale,#6B8E5A); }}
-    .review-card:nth-child(3n) {{ border-top-color:var(--geo-limestone,#7FB3D5); }}
-    .map-node {{ fill:color-mix(in srgb,var(--geo-shale,#6B8E5A) 18%,var(--paper)); stroke:var(--geo-shale,#6B8E5A); }}
-    .map-label {{ fill:var(--ink); }}
-    .map-number,.link-map {{ color:var(--geo-sand,#E8C872); fill:var(--geo-sand,#E8C872); }}
-    .map-edge {{ stroke:var(--geo-limestone,#7FB3D5); }}
-    .page,.badge {{ color:var(--geo-sand,#E8C872); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,var(--paper)); border-color:color-mix(in srgb,var(--geo-shale,#6B8E5A) 48%,var(--line)); }}
-    .step-reward {{ color:var(--muted); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 17%,var(--paper)); }}
-    .step-reward.is-earned {{ color:var(--geo-shale,#6B8E5A); border-color:var(--geo-shale,#6B8E5A); }}
-    .step-complete button {{ border-color:var(--geo-shale,#6B8E5A); background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 22%,var(--paper)); color:var(--ink); }}
-    .step-complete button:disabled {{ background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 13%,var(--paper)); }}
-    .page,.badge {{ color:var(--geo-sand,#E8C872); }}
-    .task-result.correct {{ background:color-mix(in srgb,var(--geo-shale,#6B8E5A) 25%,var(--paper)); border-color:var(--geo-shale,#6B8E5A); color:var(--ink); }}
-    :root[data-theme="light"] header.hero {{ color:#ECEFF4; }}
-    :root[data-theme="light"] header.hero .theme-controls button {{ color:#ECEFF4; }}
-    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header.hero {{ min-height:410px; padding:1.2rem; align-items:flex-start; flex-direction:column; }} header.hero::after {{ right:-1rem; bottom:0; width:78%; height:44%; opacity:.42; }} .hero-copy {{ z-index:1; }} .hero h1 {{ font-size:clamp(2.1rem,11vw,3.2rem); overflow-wrap:anywhere; }} .hero-note {{ font-size:1rem; }} .hero-stats {{ gap:.35rem; }} .hero-stats span {{ font-size:.78rem; padding:.3rem .55rem; }} .theme-controls {{ justify-content:flex-start; }} .theme-controls button {{ min-height:42px; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:none; overflow:visible; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
-    h1 {{ position:relative; }} h1::after {{ content:""; display:block; width:4.5rem; height:.25rem; margin-top:.45rem; border-radius:99px; background:linear-gradient(90deg,var(--accent),var(--teal),var(--sun)); }} .task {{ border-top:3px solid var(--sun); }} .task-result {{ border:1px solid color-mix(in srgb,var(--teal) 32%,var(--line)); }} .task-result.correct {{ border-color:var(--teal); background:color-mix(in srgb,var(--teal) 12%,var(--paper)); }} .option:hover {{ border-color:var(--accent); background:color-mix(in srgb,var(--soft) 65%,var(--paper)); }} .map-node {{ fill:color-mix(in srgb,var(--soft) 82%,var(--sun) 18%); }} .map-edge {{ stroke:var(--teal); }}
-    @media (max-width:700px) {{ .shell {{ padding:.65rem; }} header {{ align-items:flex-start; flex-wrap:wrap; }} header::after {{ width:76px; height:42px; margin-left:auto; }} .theme-controls {{ justify-content:flex-start; }} .layout,.layout[data-view="course"] {{ grid-template-columns:1fr; }} .step {{ grid-template-columns:minmax(0,1fr); }} aside,.practice-column {{ position:static; }} .step-list {{ display:grid; max-height:none; overflow:visible; padding:.15rem .05rem .4rem; }} .step-link {{ width:100%; min-width:0; }} .step-link span:last-child {{ white-space:normal; overflow-wrap:anywhere; }} .view-switcher button {{ flex:1 1 40%; }} .order-item .order-text {{ min-width:0; overflow-wrap:anywhere; }} }}
-    @media (max-width:700px) {{ .hero-completion {{ width:100%; }} .theme-controls {{ position:relative; z-index:2; }} }}
-    @media (prefers-reduced-motion:reduce) {{ *,*::before,*::after {{ scroll-behavior:auto !important; transition:none !important; }} }}
-    @media print {{ body {{ background:#fff; color:#000; }} aside,header,.view-switcher,.footer-nav,.practice,.no-print {{ display:none !important; }} .shell,.layout {{ max-width:none; display:block; margin:0; padding:0; }} .step,.step[hidden] {{ display:block !important; page-break-after:always; }} .content-block,.summary-step {{ border:0; padding:.3rem 0; break-inside:avoid; }} .quote > blockquote {{ display:block; }} .app-view[hidden] {{ display:none !important; }} .app-view:not([hidden]) {{ display:block !important; }} }}
+    :root {{ {geology_vars} }}
+    {theme_css}
   </style>
 </head>
 <body>
 <div class="shell">
+  <div class="masthead"><div class="brand"><span class="brand-icon">{pixel_icon('pickaxe')}</span> ГЛАВА → КУРС</div><span class="offline-label"><span class="status-dot"></span> СОХРАНЯЕТСЯ НА УСТРОЙСТВЕ</span></div>
   <header class="hero">
+    <div class="world-scene" aria-hidden="true">{world_markup}<span class="world-tag">МИР ЗНАНИЙ / РЕЖИМ ИССЛЕДОВАТЕЛЯ</span></div>
     <div class="hero-copy">
-      <div class="hero-kicker"><span class="status-dot"></span> ПОЛЕВОЙ ЖУРНАЛ · ГЕОЛОГИЧЕСКАЯ ЭКСПЕДИЦИЯ</div>
+      <div class="hero-kicker">{pixel_icon('flag')} ВАША НОВАЯ ЭКСПЕДИЦИЯ</div>
       <h1>{hero_title}</h1>
-      <p class="hero-note">Исследуйте слои знаний, сверяйтесь с источниками и закрепляйте открытия практикой.</p>
-      <div class="hero-stats"><span><b>{step_count}</b> этапов</span><span><b>{task_count}</b> упражнений</span><span><b>офлайн</b> режим</span></div>
-      <div class="hero-completion"><div><span>Разведано</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track"><span id="completion-fill"></span></div></div>
+      <p class="hero-note">Открывайте новые слои знаний. Изучайте главу, собирайте опыт и прокладывайте свой маршрут.</p>
+      <div class="hero-stats"><span>{pixel_icon('map')} <b>{step_count}</b> {step_word}</span><span>{pixel_icon('pickaxe')} <b>{task_count}</b> {task_word}</span><span>{pixel_icon('book')} <b>офлайн</b> мир</span></div>
+      <div class="hero-completion"><div><span>Маршрут исследован</span><b id="completed-steps">0 / {step_count}</b></div><div class="hero-track" role="progressbar" aria-label="Пройденные этапы" aria-valuemin="0" aria-valuemax="{step_count}" aria-valuenow="0"><span id="completion-fill"></span></div></div>
     </div>
-    <div class="theme-controls"><span class="xp-chip" id="xp-total" aria-live="polite">0 XP</span><button type="button" data-show-view="course">Продолжить маршрут</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div>
   </header>
+  <div class="game-toolbar"><div class="xp-chip">{pixel_icon('gem')}<span id="xp-total" aria-live="polite">0 XP</span></div><div class="theme-controls"><button class="button-primary" type="button" data-show-view="course" data-resume>Продолжить маршрут →</button><button id="theme-toggle" type="button">Тёмная тема</button><button id="reset-progress" type="button" aria-label="Сбросить прогресс">Сбросить прогресс</button></div></div>
   <div class="layout">
-    <aside id="course-nav" aria-label="Навигация курса"><div class="nav-kicker">МАРШРУТ</div><strong>Ваш путь</strong><div class="progress" role="progressbar" aria-label="Прогресс по шагам"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">Каждый шаг открывает новый пласт материала</div></aside>
+    <aside id="course-nav" aria-label="Навигация курса"><div class="route-heading">{pixel_icon('map')}<div><div class="nav-kicker">КАРТА МИРА</div><strong>Выберите следующий этап</strong></div></div><div class="progress" role="progressbar" aria-label="Текущий шаг" aria-valuemin="1"><span id="progress-fill"></span></div><div id="progress-label" class="muted"></div><nav class="step-list">{''.join(nav_markup)}</nav><div class="nav-footnote">+10 XP за верный ответ · +20 XP за пройденный этап</div></aside>
     <main id="course-content">
       <nav class="view-switcher" aria-label="Раздел курса">
-        <button type="button" data-show-view="course" aria-pressed="true">Шаги</button>
-        <button type="button" data-show-view="cards" aria-pressed="false">Карточки</button>
-        <button type="button" data-show-view="map" aria-pressed="false">Карта связей</button>
-        <button type="button" data-show-view="summary" aria-pressed="false">Конспект</button>
+        <button type="button" data-show-view="course" aria-pressed="true">{pixel_icon('pickaxe')} Шаги</button>
+        <button type="button" data-show-view="cards" aria-pressed="false">{pixel_icon('cards')} Карточки</button>
+        <button type="button" data-show-view="map" aria-pressed="false">{pixel_icon('map')} Карта связей</button>
+        <button type="button" data-show-view="summary" aria-pressed="false">{pixel_icon('scroll')} Конспект</button>
       </nav>
       <section id="course-view" class="app-view">{''.join(step_markup)}<div class="footer-nav"><button id="previous" type="button">← Назад</button><button id="next" type="button">Дальше →</button></div></section>
       <section id="cards-view" class="app-view" hidden><h1>Карточки повторения</h1><div class="cards-grid">{cards_markup}</div></section>
@@ -667,6 +565,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
       <section id="summary-view" class="app-view" hidden><h1>Конспект</h1><p><button id="print-summary" class="no-print" type="button">Распечатать / сохранить в PDF</button></p>{summary_markup}</section>
     </main>
   </div>
+  <footer class="site-footer">{pixel_icon('pickaxe')} ЕЩЁ ОДИН СЛОЙ — ЕЩЁ ОДНО ОТКРЫТИЕ</footer>
 </div>
 <script>
 const TASKS = {task_json};
@@ -733,6 +632,7 @@ function syncCourseProgress() {{
   }});
   document.getElementById('completed-steps').textContent = completedCount + ' / ' + STEPS.length;
   document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
+  document.querySelector('.hero-track').setAttribute('aria-valuenow', String(completedCount));
   if (changed) {{
     try {{ localStorage.setItem(COMPLETE_KEY, JSON.stringify(completedSteps)); localStorage.setItem(XP_KEY, String(xp)); }} catch (_) {{}}
   }}
@@ -741,7 +641,7 @@ function syncCourseProgress() {{
 }}
 let theme = '';
 try {{ theme = localStorage.getItem(THEME_KEY) || ''; }} catch (_) {{}}
-if (!theme) theme = 'dark';
+if (!['light', 'dark'].includes(theme)) theme = 'light';
 document.documentElement.dataset.theme = theme;
 const themeToggle = document.getElementById('theme-toggle');
 function updateThemeButton() {{ themeToggle.textContent = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'; themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'); }}
@@ -759,7 +659,17 @@ function setView(name) {{
   document.querySelectorAll('.view-switcher [data-show-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.showView === name)));
   try {{ localStorage.setItem(VIEW_KEY, name); }} catch (_) {{}}
 }}
-document.querySelectorAll('[data-show-view]').forEach(button => button.addEventListener('click', () => setView(button.dataset.showView)));
+function scrollToLesson() {{
+  const step = STEPS[current];
+  if (!step) return;
+  const heading = step.querySelector('h1');
+  if (heading) {{ heading.tabIndex = -1; heading.focus({{preventScroll: true}}); }}
+  step.scrollIntoView({{block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}});
+}}
+document.querySelectorAll('[data-show-view]').forEach(button => button.addEventListener('click', () => {{
+  setView(button.dataset.showView);
+  if (button.hasAttribute('data-resume')) scrollToLesson();
+}}));
 function setStep(index) {{
   if (!STEPS.length) return;
   current = Math.min(Math.max(index, 0), STEPS.length - 1);
@@ -774,11 +684,11 @@ function setStep(index) {{
   document.getElementById('progress-label').textContent = `${{current + 1}} из ${{STEPS.length}} шагов`;
   document.getElementById('previous').disabled = current === 0;
   document.getElementById('next').disabled = current === STEPS.length - 1;
-  localStorage.setItem(STORE_KEY, JSON.stringify({{step: current}}));
+  persist(STORE_KEY, {{step: current}});
 }}
-document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => {{ setView('course'); setStep(Number(button.dataset.go)); }}));
-document.getElementById('previous').addEventListener('click', () => setStep(current - 1));
-document.getElementById('next').addEventListener('click', () => setStep(current + 1));
+document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => {{ setView('course'); setStep(Number(button.dataset.go)); scrollToLesson(); }}));
+document.getElementById('previous').addEventListener('click', () => {{ setStep(current - 1); scrollToLesson(); }});
+document.getElementById('next').addEventListener('click', () => {{ setStep(current + 1); scrollToLesson(); }});
 document.querySelectorAll('.review-card').forEach(card => {{
   const id = card.dataset.reviewId;
   card.querySelectorAll('[data-review]').forEach(button => {{
