@@ -273,7 +273,8 @@ class Renderer:
 
     def state_at(self, i: int, t: float) -> dict:
         seg = self.segs[i]
-        if "tool_to" not in seg.beat.action:
+        animates = getattr(self.tpl, "animates", lambda a: "tool_to" in a)  # шаблон сам говорит, что анимируется
+        if not animates(seg.beat.action):
             return self.starts[i]
         a = seg.start + 0.1 + (self.intro_dur if i == 0 and self.intro_on else 0)
         b = seg.start + max(a - seg.start + 0.3, seg.dur - 0.25)
