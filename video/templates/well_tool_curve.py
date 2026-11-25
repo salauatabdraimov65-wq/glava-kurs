@@ -26,8 +26,32 @@ from PIL import Image
 
 from ..draw import SDraw, dashed_hline, dashed_polyline, fit, line_h, text_block, wrap
 from ..style import font, hex_rgb, mix
+from ..textclean import visible
 
 NAME = "well_tool_curve"
+
+# Для генератора сценариев (video/specgen.py): когда шаблон подходит и как заполнять params/action.
+SUMMARY = ("Косвенное измерение (тип И): разрез из слоёв, ствол скважины, прибор на кабеле и трек кривой. "
+           "Кривая вычисляется из свойств слоёв с окном прибора и пишется до глубины прибора. Подходит, когда "
+           "суть узла — как прибор/кривая отвечает на свойства пород, флюидов, раствора, проникновения, "
+           "и где показания обманывают.")
+GUIDE = """params:
+  depth_top, depth_bottom (м, правдоподобные глубины, интервал 8–30 м), depth_tick (шаг подписей, м),
+  tool_start (м, обычно чуть ниже depth_top), tool_resolution_m (окно прибора, м, 0.3–1.0),
+  bore_width (доля колонки разреза, 0.12–0.22), bore_diameter_m (реальный диаметр ствола, около 0.2),
+  layers[]: {top, bottom, lith (ключ из lithology стайлгайда), label (подпись по-русски, коротко),
+             props {имя_свойства: число для КАЖДОЙ кривой}, mud_cake (bool), invasion_width (0–1), fluid? (ключ из fluids)}
+             — слои подряд без зазоров и перекрытий, от depth_top до depth_bottom, 3–6 слоёв;
+  curves[]: {id, key (ключ из curves стайлгайда — определяет цвет), prop (имя свойства в props слоёв), label,
+             unit, min, max, track (номер трека; кривые одного трека сравниваются), dashed?, scale? ("log")}
+             — 1–2 кривые; если сравниваются два условия — две кривые в одном треке, вторая dashed.
+action (в beat, всё необязательно):
+  tool_to: глубина — прибор едет туда за фразу и пишет кривую;  tool_jump: глубина — мгновенно (перезапись);
+  mark: {top, bottom, label} или список — рамка интервала (контакт, коллектор);  clear_marks: true;
+  show_mud_cake: true; show_invasion: true;  show_curves: [id...] — какие кривые видны и пишутся;
+  callout: [{target: "tool"|"cake"|"invasion"|"bore"|"curve:<id>"|{"depth": м}|{"layer": индекс}, text}] — выноска 1–3 слова;
+  readout: "<id кривой>" — плашка «≈ значение» на конце кривой (значение считает код).
+Числа свойств условные — перечисли их в assumptions; важно соотношение, которое следует из главы."""
 
 
 def ease(u: float) -> float:
@@ -392,9 +416,9 @@ class WellToolCurve:
             placed.append(y)
             if ax > (L["sec"][0] + L["sec"][1]) / 2 or c.get("target") == "tool":
                 x = L["sec"][0] + 8
-                pill(x, y, c["text"], a, (ax, ay))
+                pill(x, y, visible(c["text"], "выноска"), a, (ax, ay))
             else:
-                pill(L["sec"][1] - 8, y, c["text"], a, (ax, ay), right_align=True)
+                pill(L["sec"][1] - 8, y, visible(c["text"], "выноска"), a, (ax, ay), right_align=True)
         ro = s.get("readout")
         if ro:
             a = al(ro["born"])
@@ -504,9 +528,9 @@ class WellToolCurve:
                 continue
             ya, yb = self.y_of(L, max(Lr["top"], self.top)), self.y_of(L, min(Lr["bottom"], self.bottom))
             h = yb - ya - 8
-            for size in (44, 40, 36, 32):
+            for size in (44, 40, 36, 32, 28, 26):
                 f = font(size, True)
-                ls = wrap(Lr["label"], f, lab_w)
+                ls = wrap(visible(Lr["label"], "подпись слоя"), f, lab_w)
                 if len(ls) * line_h(f) <= h and all(f.getlength(x) <= lab_w for x in ls):
                     break
             else:
@@ -540,7 +564,7 @@ class WellToolCurve:
                 c = self._curve(cid)
                 col = self.curve_color(c)
                 sample = 36
-                fh_, ls = fit(c.get("label", cid), tw_ - sample - 12, 42, 34, 1, True)
+                fh_, ls = fit(visible(c.get("label", cid), "подпись кривой"), tw_ - sample - 12, 42, 34, 1, True)
                 ly = y + line_h(fh_) / 2
                 if c.get("dashed"):
                     dashed_polyline(d, [(xr[0], ly), (xr[0] + sample, ly)], fill=col, width=6, dash=12, gap=8)
@@ -553,7 +577,7 @@ class WellToolCurve:
             fs, ls = fit(sc.replace("-", "−"), tw_, 36, 28, 1)
             yb_ = L["plot"][0] - line_h(fs) - 30
             d.text((xr[0] + 4, yb_), self._fmt(float(c.get('min', 0))).replace("-", "−"), font=fs, fill=muted)
-            mx = f"{self._fmt(float(c.get('max', 1))).replace('-', '−')} {c.get('unit', '')}".strip()
+            mx = f"{self._fmt(float(c.get('max', 1))).replace('-', '−')} {visible(c.get('unit', ''), 'единица кривой')}".strip()
             d.text((xr[1] - 4 - fs.getlength(mx), yb_), mx, font=fs, fill=muted)
         # ствол (буровой раствор)
         mud = hex_rgb(st.get("fluids", {}).get("mud", {}).get("color", st["muted"]))
@@ -652,7 +676,7 @@ class WellToolCurve:
             rx = sx0 - 6 + (right + 12 - sx0) * ease(a)
             d.rectangle([sx0 - 6, ya, rx, yb], outline=col, width=4)
             if mk.get("label"):
-                lab = mk["label"]
+                lab = visible(mk["label"], "подпись рамки")
                 lw = f_m.getlength(lab)
                 lx = right - lw - 14
                 ly = ya + 4 if yb - ya > line_h(f_m) + 8 else ya - line_h(f_m) - 2

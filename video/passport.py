@@ -8,6 +8,7 @@ from pathlib import Path
 from .spec import Spec, claims_index, find_layer, node_from_layer
 from .style import ROOT, domain_dir
 from . import tts
+from . import textclean
 
 
 def _checklist(spec: Spec, domain: str) -> list[dict]:
@@ -92,6 +93,7 @@ def build_passport(spec: Spec, domain: str, segs, key_times, frame_files, timeli
         "sync": "длительность кадра фразы = длительность её аудио; голос начинается через "
                 "0,15 с после смены кадра",
         "digits_in_script": sorted(set(re.findall(r"\d+(?:[.,]\d+)?", said))),
+        "formula_in_script": [s.beat.index + 1 for s in segs if textclean.problems(s.beat.say)],
         "listen_check": listen,
         "phrases": per,
         "silent_phrases": [p["beat"] for p in per if p["engine"] == "none"],
@@ -112,6 +114,8 @@ def build_passport(spec: Spec, domain: str, segs, key_times, frame_files, timeli
         "physics_checklist": _checklist(spec, domain),
         "audio_check": audio_check,
         "scene_check": checks,
+        "visual_text_check": {"rule": "подписи и субтитры без формул и греческих букв (ТЗ)",
+                              "replaced": list(textclean.REPORT)},
         "template": spec.template,
         "warnings": spec.warnings,
     }

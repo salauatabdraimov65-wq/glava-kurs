@@ -18,21 +18,12 @@ from PIL import Image
 from . import tts
 from .draw import SDraw, fit, line_h, rounded_box, text_block, wrap
 from .spec import Spec
+from .textclean import visible
 from .style import display_font, font, hex_rgb, load_settings, mix
 
-GREEK = {"α": "альфа", "β": "бета", "γ": "гамма", "δ": "дельта", "Δ": "дельта", "ε": "эпсилон",
-         "η": "эта", "θ": "тета", "κ": "каппа", "ϰ": "каппа", "λ": "лямбда", "μ": "мю", "ν": "ню",
-         "π": "пи", "ρ": "ро", "σ": "сигма", "τ": "тау", "φ": "фи", "χ": "хи", "ψ": "пси", "ω": "омега",
-         "Ω": "омега", "Σ": "сумма"}
-
-
 def subtitle_text(s: str) -> str:
-    """Субтитры без греческих букв и формул."""
-    s = s.replace(tts.ACUTE, "")
-    for g, name in GREEK.items():
-        s = s.replace(g, name)
-    s = re.sub(r"[=^_*/\\]", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
+    """Субтитры без греческих букв и формул (ТЗ)."""
+    return visible(s.replace(tts.ACUTE, ""), "субтитры")
 
 
 @dataclass
@@ -216,7 +207,7 @@ class Layout:
         x0, y0, x1, y1 = self.safe
         self.f_tag = font(36, True)
         self.f_sub = font(44, True)
-        plaque = " ".join(spec.get("plaque") or []) or "схема, не в масштабе"
+        plaque = visible(" ".join(spec.get("plaque") or []) or "схема, не в масштабе", "плашка")
         self.tag_h = line_h(self.f_tag) + 14
         if kind == "9x16":
             w = x1 - x0
@@ -353,7 +344,7 @@ class Renderer:
 
     def _headline(self, d, i, seg, t):
         """Крупный заголовок фразы: слова выезжают по одному, выделенные *словами* — в инверсной плашке."""
-        cap = seg.beat.on_screen
+        cap = visible(seg.beat.on_screen, "заголовок")
         if not cap:
             return
         st = self.style
@@ -409,7 +400,7 @@ class Renderer:
         x0, y0, x1, y1 = self.L.scene_box
         u = min(1.0, max(0.0, (t - seg.start) / 0.45))
         e = 1 - (1 - u) ** 3
-        cap = plain(seg.beat.on_screen) or plain(self.spec.get("transfer_question", ""))
+        cap = visible(plain(seg.beat.on_screen) or plain(self.spec.get("transfer_question", "")), "вопрос на перенос")
         f, ls = fit(cap.upper(), x1 - x0 - 80, 76, 46, 4, fnt_fn=display_font)
         lh = int(line_h(f) * 1.04)
         f_s = font(36, True)
