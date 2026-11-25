@@ -437,8 +437,8 @@
   },
   {
    "node_id": "basniev.near_well_profiles",
-   "format": "интерактив",
-   "secondary_format": "карточки",
+   "format": "длинное видео",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 2,
     "invisible": 1,
@@ -449,7 +449,8 @@
    "hook_short": false,
    "template": "pressure_explorer",
    "scene_template": "pressure_diffusion",
-   "why": "тип Ф/П; формула/модель — понимание через параметры"
+   "why": "тип Ф/П; формула/модель — понимание через параметры",
+   "video_path": "video/basniev_long_near_well_profiles/video.mp4"
   },
   {
    "node_id": "basniev.psss_core_idea",

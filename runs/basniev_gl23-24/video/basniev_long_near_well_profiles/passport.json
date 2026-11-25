@@ -1,0 +1,772 @@
+{
+  "video_id": "basniev_long_near_well_profiles",
+  "node_id": "basniev.near_well_profiles",
+  "node_card": {
+    "id": "basniev.near_well_profiles",
+    "title": "Профили давления у скважины",
+    "difficulty": {
+      "primary": "Ф",
+      "secondary": "П"
+    },
+    "threshold": false,
+    "pages": [
+      493
+    ],
+    "misconception": {
+      "ref": null,
+      "text": "Шаг не исправляет отдельное заблуждение из предложенного списка.",
+      "by_model": true
+    },
+    "layers": {
+      "topic": {
+        "text": "Профили давления у скважины",
+        "by_model": true
+      },
+      "main": {
+        "text": "Возле скважины градиент давления выражается формулой ∂p/∂r = Q₀μ/(2πkr). При заданном условии он практически не зависит от времени, а давление на забое падает.",
+        "by_model": true
+      },
+      "mechanism": {
+        "text": "Автор дифференцирует формулу (23.53) по радиальной координате r и получает градиент давления. При r² ≤ 0,03·4κt градиент практически не зависит от времени; пьезометрические кривые в этой области логарифмические. Забойное давление падает со временем, но углы наклона касательных θ на забое одинаковы.",
+        "by_model": true
+      },
+      "practice": {
+        "text": "Для точек вблизи забоя специалист использует формулу (23.53), дифференцирует её по r и рассматривает полученный градиент. При указанном условии сравнивает его с формулой для установившейся плоскорадиальной фильтрации несжимаемой жидкости.",
+        "by_model": true
+      },
+      "nuances": {
+        "text": "Условие независимости градиента от времени относится к r² ≤ 0,03·4κt. Одинаковые углы θ относятся к касательным на забое для всех показанных кривых. Подпись к рисунку допускает два варианта для Rк: радиус контура питания или радиус круговой непроницаемой границы пласта.",
+        "by_model": true
+      },
+      "deeper": [
+        {
+          "text": "Формула градиента: ∂p/∂r = Q₀μ/(2πkr).",
+          "by_model": true
+        },
+        {
+          "text": "Условие области практической независимости от времени: r² ≤ 0,03·4κt.",
+          "by_model": true
+        }
+      ]
+    },
+    "layer_file": "runs/basniev_gl23-24/layer.json"
+  },
+  "script": [
+    {
+      "t_start": 0.15,
+      "t_end": 6.03,
+      "text": "Скважина работает с постоянным дебитом. Почему давление на забое всё равно падает?",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": false,
+      "on_screen": "Дебит постоянный"
+    },
+    {
+      "t_start": 6.53,
+      "t_end": 9.66,
+      "text": "Как ты думаешь, изменится ли при этом наклон у скважины?",
+      "claim_id": null,
+      "is_analogy": false,
+      "on_screen": "Наклон изменится?"
+    },
+    {
+      "t_start": 13.16,
+      "t_end": 16.76,
+      "text": "Посмотрим на расчёт после запуска скважины с постоянным дебитом.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "is_analogy": false,
+      "on_screen": "Запуск скважины"
+    },
+    {
+      "t_start": 17.26,
+      "t_end": 21.08,
+      "text": "Дебит — это объём жидкости, который скважина выдаёт за время.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "is_analogy": false,
+      "on_screen": "Объём за время"
+    },
+    {
+      "t_start": 21.58,
+      "t_end": 25.38,
+      "text": "На виде сверху цвет показывает, где давление уже снизилось.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "is_analogy": false,
+      "on_screen": "Снижение давления"
+    },
+    {
+      "t_start": 25.88,
+      "t_end": 29.35,
+      "text": "На профиле ты видишь давление на разных расстояниях от скважины.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "is_analogy": false,
+      "on_screen": "Давление и расстояние"
+    },
+    {
+      "t_start": 29.85,
+      "t_end": 33.26,
+      "text": "Сохраним эту кривую, чтобы сравнить её с более поздней.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "is_analogy": false,
+      "on_screen": "Первый момент"
+    },
+    {
+      "t_start": 33.76,
+      "t_end": 37.7,
+      "text": "Теперь скважина работает дольше, но её дебит остаётся постоянным.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "is_analogy": false,
+      "on_screen": "Позже"
+    },
+    {
+      "t_start": 38.2,
+      "t_end": 41.66,
+      "text": "На виде сверху зона заметного снижения давления стала шире.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "is_analogy": false,
+      "on_screen": "Зона шире"
+    },
+    {
+      "t_start": 42.16,
+      "t_end": 45.22,
+      "text": "На профиле появилась вторая кривая для того же расчёта.",
+      "claim_id": "basniev.near_well_profiles#c3",
+      "is_analogy": false,
+      "on_screen": "Два момента"
+    },
+    {
+      "t_start": 45.72,
+      "t_end": 49.37,
+      "text": "Сравни кривые возле скважины: поздняя проходит ниже ранней.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": false,
+      "on_screen": "Давление ниже"
+    },
+    {
+      "t_start": 49.87,
+      "t_end": 52.98,
+      "text": "Но у самого забоя наклоны кривых почти одинаковы.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": false,
+      "on_screen": "Наклон сохранился"
+    },
+    {
+      "t_start": 53.48,
+      "t_end": 57.37,
+      "text": "Представь дорожку, которую опускают, сохраняя её наклон.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": true,
+      "on_screen": "Дорожка опускается"
+    },
+    {
+      "t_start": 57.87,
+      "t_end": 61.53,
+      "text": "Но это не цельная дорожка: дальше от скважины наклон меняется.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "is_analogy": false,
+      "on_screen": "Аналогия ограничена"
+    },
+    {
+      "t_start": 62.03,
+      "t_end": 65.88,
+      "text": "Сравни оба момента здесь: участки кривых уже не параллельны.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "is_analogy": false,
+      "on_screen": "Дальняя точка"
+    },
+    {
+      "t_start": 66.38,
+      "t_end": 69.8,
+      "text": "Значит, одинаковый наклон нельзя переносить на весь пласт.",
+      "claim_id": "basniev.near_well_profiles#c4",
+      "is_analogy": false,
+      "on_screen": "Не везде"
+    },
+    {
+      "t_start": 70.3,
+      "t_end": 73.32,
+      "text": "Вернёмся ближе к скважине и сравним наклоны там.",
+      "claim_id": "basniev.near_well_profiles#c4",
+      "is_analogy": false,
+      "on_screen": "Ближняя точка"
+    },
+    {
+      "t_start": 73.82,
+      "t_end": 77.73,
+      "text": "Здесь спустя достаточное время наклон почти не зависит от времени.",
+      "claim_id": "basniev.near_well_profiles#c4",
+      "is_analogy": false,
+      "on_screen": "Почти одинаковы"
+    },
+    {
+      "t_start": 78.23,
+      "t_end": 83.09,
+      "text": "Такой наклон называют градиентом давления: он показывает изменение с расстоянием.",
+      "claim_id": "basniev.near_well_profiles#c2",
+      "is_analogy": false,
+      "on_screen": "Градиент давления"
+    },
+    {
+      "t_start": 83.59,
+      "t_end": 87.18,
+      "text": "В этой ближней области кривые имеют логарифмическую форму.",
+      "claim_id": "basniev.near_well_profiles#c5",
+      "is_analogy": false,
+      "on_screen": "Форма кривых"
+    },
+    {
+      "t_start": 87.68,
+      "t_end": 91.15,
+      "text": "А график забойного давления показывает его падение со временем.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": false,
+      "on_screen": "Давление на забое"
+    },
+    {
+      "t_start": 91.65,
+      "t_end": 94.85,
+      "text": "На этом графике время отложено по логарифмической шкале.",
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "is_analogy": false,
+      "on_screen": "Шкала времени"
+    },
+    {
+      "t_start": 95.35,
+      "t_end": 99.25,
+      "text": "Ответ на вопрос: постоянный дебит не удерживает давление на забое.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": false,
+      "on_screen": "Ответ"
+    },
+    {
+      "t_start": 99.75,
+      "t_end": 102.84,
+      "text": "При этом наклон у забоя для показанных кривых одинаков.",
+      "claim_id": "basniev.near_well_profiles#c6",
+      "is_analogy": false,
+      "on_screen": "Два признака"
+    },
+    {
+      "t_start": 103.34,
+      "t_end": 107.26,
+      "text": "А что ты проверишь, прежде чем сравнивать наклоны дальше от скважины?",
+      "claim_id": null,
+      "is_analogy": false,
+      "on_screen": "Проверишь условие?"
+    }
+  ],
+  "sources": [
+    {
+      "claim_id": "basniev.near_well_profiles#c6",
+      "page_pdf": 493,
+      "page_or_dataset": "стр. PDF 493",
+      "quote": "Давление на забое скважины падает с течением времени, углы наклона касательных θ на забое одинаковы для всех кривых"
+    },
+    {
+      "claim_id": "basniev.near_well_profiles#c3",
+      "page_pdf": 493,
+      "page_or_dataset": "стр. PDF 493",
+      "quote": "Пьезометрические кривые при пуске скважины с постоянным дебитом Q₀"
+    },
+    {
+      "claim_id": "basniev.exponential_integral_approximation#c13",
+      "page_pdf": 491,
+      "page_or_dataset": "стр. PDF 491",
+      "quote": "p(r, t) = p_\\kappa - \\frac{Q_0 \\mu}{4 \\pi k h}"
+    },
+    {
+      "claim_id": "basniev.near_well_profiles#c4",
+      "page_pdf": 493,
+      "page_or_dataset": "стр. PDF 493",
+      "quote": "градиент давления для значений r, удовлетворяющих неравенству r² ≤ 0,03 · 4κt, практически не зависит от времени"
+    },
+    {
+      "claim_id": "basniev.near_well_profiles#c2",
+      "page_pdf": 493,
+      "page_or_dataset": "стр. PDF 493",
+      "quote": "\\partial p / \\partial r = Q_0 \\mu / (2 \\pi k r)"
+    },
+    {
+      "claim_id": "basniev.near_well_profiles#c5",
+      "page_pdf": 493,
+      "page_or_dataset": "стр. PDF 493",
+      "quote": "Для указанных значений r пьезометрические кривые представляют собой логарифмические линии"
+    }
+  ],
+  "scene_spec": "runs/basniev_gl23-24/video/basniev_long_near_well_profiles/spec.json",
+  "frames": [
+    {
+      "t": 6.08,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F01.png",
+      "on_screen": "Дебит постоянный"
+    },
+    {
+      "t": 9.71,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F02.png",
+      "on_screen": "Наклон изменится?"
+    },
+    {
+      "t": 12.71,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F03.png",
+      "on_screen": "Твой прогноз?"
+    },
+    {
+      "t": 16.81,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F04.png",
+      "on_screen": "Запуск скважины"
+    },
+    {
+      "t": 21.13,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F05.png",
+      "on_screen": "Объём за время"
+    },
+    {
+      "t": 25.43,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F06.png",
+      "on_screen": "Снижение давления"
+    },
+    {
+      "t": 29.4,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F07.png",
+      "on_screen": "Давление и расстояние"
+    },
+    {
+      "t": 33.31,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F08.png",
+      "on_screen": "Первый момент"
+    },
+    {
+      "t": 37.75,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F09.png",
+      "on_screen": "Позже"
+    },
+    {
+      "t": 41.71,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F10.png",
+      "on_screen": "Зона шире"
+    },
+    {
+      "t": 45.27,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F11.png",
+      "on_screen": "Два момента"
+    },
+    {
+      "t": 49.42,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F12.png",
+      "on_screen": "Давление ниже"
+    },
+    {
+      "t": 53.03,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F13.png",
+      "on_screen": "Наклон сохранился"
+    },
+    {
+      "t": 57.42,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F14.png",
+      "on_screen": "Дорожка опускается"
+    },
+    {
+      "t": 61.58,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F15.png",
+      "on_screen": "Аналогия ограничена"
+    },
+    {
+      "t": 65.93,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F16.png",
+      "on_screen": "Дальняя точка"
+    },
+    {
+      "t": 69.85,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F17.png",
+      "on_screen": "Не везде"
+    },
+    {
+      "t": 73.37,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F18.png",
+      "on_screen": "Ближняя точка"
+    },
+    {
+      "t": 77.78,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F19.png",
+      "on_screen": "Почти одинаковы"
+    },
+    {
+      "t": 83.14,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F20.png",
+      "on_screen": "Градиент давления"
+    },
+    {
+      "t": 87.23,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F21.png",
+      "on_screen": "Форма кривых"
+    },
+    {
+      "t": 91.2,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F22.png",
+      "on_screen": "Давление на забое"
+    },
+    {
+      "t": 94.9,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F23.png",
+      "on_screen": "Шкала времени"
+    },
+    {
+      "t": 99.3,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F24.png",
+      "on_screen": "Ответ"
+    },
+    {
+      "t": 102.89,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F25.png",
+      "on_screen": "Два признака"
+    },
+    {
+      "t": 110.51,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F26.png",
+      "on_screen": "Проверишь условие?"
+    }
+  ],
+  "exaggerations": [
+    "Диаметр условного маркера скважины на карте соответствует 10 м вместо реального диаметра 0,2 м: увеличение в 50 раз."
+  ],
+  "prediction_question": "Изменится ли наклон профиля у забоя, когда давление там упадёт?",
+  "transfer_question": "Что нужно проверить, прежде чем сравнивать наклоны дальше от скважины?",
+  "data_it_bridge": "Входы расчёта — постоянный дебит, свойства пласта, расстояния и время; выходы — две серии давления по расстоянию и серия забойного давления по времени. Сравнивай значения давления и локальные наклоны отдельно. Правило почти неизменного градиента ломается вне указанного условия по расстоянию и времени. Это расчётные кривые: глава не описывает измерения, шум, пропуски или сбои данных.",
+  "physics_checklist": [],
+  "audio_check": {
+    "engines": [
+      "edge"
+    ],
+    "voice": [
+      "ru-RU-DmitryNeural"
+    ],
+    "edge_rate": "+0%",
+    "wpm_overall": 149.2,
+    "max_words_in_phrase": 12,
+    "loudness": {
+      "before_lufs": -19.59,
+      "after_lufs": -16.0,
+      "mix_lufs": -16.01,
+      "music": "тихая подложка, синтез в коде; под речью приглушается",
+      "sfx": "эффекты на событиях кадра (смена сцены, рамки, движение прибора, ответ)",
+      "heard": false
+    },
+    "sync": "длительность кадра фразы = длительность её аудио; голос начинается через 0,15 с после смены кадра",
+    "digits_in_script": [],
+    "formula_in_script": [],
+    "listen_check": [
+      "сква́жина",
+      "де́бит",
+      "крива́я"
+    ],
+    "phrases": [
+      {
+        "beat": 1,
+        "words": 12,
+        "sec": 5.88,
+        "wpm": 122.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Скважина работает с постоянным дебитом. Почему давление на забое всё равно падает?"
+      },
+      {
+        "beat": 2,
+        "words": 10,
+        "sec": 3.14,
+        "wpm": 191.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Как ты думаешь, изменится ли при этом наклон у скважины?"
+      },
+      {
+        "beat": 4,
+        "words": 9,
+        "sec": 3.6,
+        "wpm": 150.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Посмотрим на расчёт после запуска скважины с постоянным дебитом."
+      },
+      {
+        "beat": 5,
+        "words": 10,
+        "sec": 3.82,
+        "wpm": 157.0,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Дебит, это объём жидкости, который скважина выдаёт за время."
+      },
+      {
+        "beat": 6,
+        "words": 9,
+        "sec": 3.8,
+        "wpm": 142.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На виде сверху цвет показывает, где давление уже снизилось."
+      },
+      {
+        "beat": 7,
+        "words": 10,
+        "sec": 3.47,
+        "wpm": 173.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На профиле ты видишь давление на разных расстояниях от скважины."
+      },
+      {
+        "beat": 8,
+        "words": 9,
+        "sec": 3.41,
+        "wpm": 158.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Сохраним эту кривую, чтобы сравнить её с более поздней."
+      },
+      {
+        "beat": 9,
+        "words": 9,
+        "sec": 3.95,
+        "wpm": 136.8,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Теперь скважина работает дольше, но её дебит остаётся постоянным."
+      },
+      {
+        "beat": 10,
+        "words": 9,
+        "sec": 3.46,
+        "wpm": 156.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На виде сверху зона заметного снижения давления стала шире."
+      },
+      {
+        "beat": 11,
+        "words": 9,
+        "sec": 3.05,
+        "wpm": 176.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На профиле появилась вторая кривая для того же расчёта."
+      },
+      {
+        "beat": 12,
+        "words": 8,
+        "sec": 3.65,
+        "wpm": 131.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Сравни кривые возле скважины: поздняя проходит ниже ранней."
+      },
+      {
+        "beat": 13,
+        "words": 8,
+        "sec": 3.11,
+        "wpm": 154.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Но у самого забоя наклоны кривых почти одинаковы."
+      },
+      {
+        "beat": 14,
+        "words": 7,
+        "sec": 3.89,
+        "wpm": 108.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Представь дорожку, которую опускают, сохраняя её наклон."
+      },
+      {
+        "beat": 15,
+        "words": 10,
+        "sec": 3.66,
+        "wpm": 164.0,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Но это не цельная дорожка: дальше от скважины наклон меняется."
+      },
+      {
+        "beat": 16,
+        "words": 9,
+        "sec": 3.85,
+        "wpm": 140.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Сравни оба момента здесь: участки кривых уже не параллельны."
+      },
+      {
+        "beat": 17,
+        "words": 8,
+        "sec": 3.42,
+        "wpm": 140.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Значит, одинаковый наклон нельзя переносить на весь пласт."
+      },
+      {
+        "beat": 18,
+        "words": 8,
+        "sec": 3.02,
+        "wpm": 158.8,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Вернёмся ближе к скважине и сравним наклоны там."
+      },
+      {
+        "beat": 19,
+        "words": 10,
+        "sec": 3.91,
+        "wpm": 153.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Здесь спустя достаточное время наклон почти не зависит от времени."
+      },
+      {
+        "beat": 20,
+        "words": 10,
+        "sec": 4.86,
+        "wpm": 123.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Такой наклон называют градиентом давления: он показывает изменение с расстоянием."
+      },
+      {
+        "beat": 21,
+        "words": 8,
+        "sec": 3.59,
+        "wpm": 133.7,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "В этой ближней области кривые имеют логарифмическую форму."
+      },
+      {
+        "beat": 22,
+        "words": 9,
+        "sec": 3.47,
+        "wpm": 155.7,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "А график забойного давления показывает его падение со временем."
+      },
+      {
+        "beat": 23,
+        "words": 8,
+        "sec": 3.21,
+        "wpm": 149.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На этом графике время отложено по логарифмической шкале."
+      },
+      {
+        "beat": 24,
+        "words": 10,
+        "sec": 3.9,
+        "wpm": 153.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Ответ на вопрос: постоянный дебит не удерживает давление на забое."
+      },
+      {
+        "beat": 25,
+        "words": 9,
+        "sec": 3.09,
+        "wpm": 174.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "При этом наклон у забоя для показанных кривых одинаков."
+      },
+      {
+        "beat": 26,
+        "words": 11,
+        "sec": 3.91,
+        "wpm": 168.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "А что ты проверишь, прежде чем сравнивать наклоны дальше от скважины?"
+      }
+    ],
+    "silent_phrases": []
+  },
+  "scene_check": [
+    {
+      "item": "давление растёт от скважины к границе (поток к скважине)",
+      "ok": true
+    },
+    {
+      "item": "со временем давление в каждой точке не растёт (воронка углубляется)",
+      "ok": true
+    },
+    {
+      "item": "забойное давление падает со временем при постоянном дебите",
+      "ok": true
+    },
+    {
+      "item": "давление вдали от скважины ≈ начальному (возмущение не дошло)",
+      "ok": true
+    },
+    {
+      "item": "кривые посчитаны по формуле главы (E1 — интегральная показательная функция)",
+      "ok": true
+    }
+  ],
+  "visual_text_check": {
+    "rule": "подписи и субтитры без формул и греческих букв (ТЗ)",
+    "replaced": []
+  },
+  "template": "pressure_diffusion",
+  "warnings": [
+    "beat 2: фраза без claim_id — голос не опирается на утверждение",
+    "beat 26: фраза без claim_id — голос не опирается на утверждение"
+  ]
+}
