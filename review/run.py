@@ -13,7 +13,9 @@ import time
 import traceback
 from pathlib import Path
 
-from glava.chapter import load_chapter
+import re
+
+from glava.chapter import check_claim, find_quote, load_chapter
 
 from . import llm_check
 from .checks import best_page, check_frames, check_items
@@ -73,6 +75,37 @@ def load_ch(pkg: dict, pkg_path: Path, chapter_md: str | None):
 
 
 # ---------- выход ----------
+
+def anchor_page(c: dict, pkg: dict, ch) -> int | None:
+    """Страница замечания — страница опорного утверждения, а не соседняя, где тоже можно найти похожее (как в README организаторов:
+    для фактов сцены и кадров верна страница утверждения, которое иллюстрирует ролик)."""
+    cur = llm_check.to_int(c.get("page_pdf"))
+    try:
+        items = {i["id"]: i for i in pkg["items"]}
+        it = items.get(c.get("target"))
+        if not it:
+            return cur
+        if it["type"] == "claim" and it.get("quote") and it.get("page_pdf") is not None and check_claim(ch, it["quote"], it["page_pdf"])["ok"]:
+            return it["page_pdf"]  # цитата утверждения действительно на своей странице
+        if it["type"] == "script_line":
+            ref = items.get(it.get("claim_ref") or "")
+            if ref and ref.get("page_pdf") is not None:
+                return ref["page_pdf"]
+        if it["type"] in ("analogy", "scene_fact", "script_line"):
+            pages = sorted({i["page_pdf"] for i in pkg["items"] if i["type"] == "claim" and i.get("node_id") and i.get("node_id") == it.get("node_id") and i.get("page_pdf") is not None})
+            if pages:
+                if cur in pages:
+                    return cur
+                for p_ in (find_quote(ch, c["quote"]) if c.get("quote") else []):
+                    if p_ in pages:
+                        return p_
+                words = set(re.findall(r"\w{5,}", (_s(c.get("fix")) + " " + _s(c.get("problem")) + " " + _s(it.get("text"))).lower()))
+                return max(pages, key=lambda p_: len(words & set(re.findall(r"\w{5,}", ch.pages.get(p_, "").lower()))))
+    except Exception:
+        pass
+    return cur
+
+
 
 def sanitize(c: dict, ch) -> dict | None:
     """Замечание -> запись, гарантированно подходящая под схему; None — если цели нет."""
@@ -187,6 +220,7 @@ def _run(a, cands_sink: list) -> int:
 
     remarks, seen = [], set()
     for c in chosen:
+        c = dict(c, page_pdf=anchor_page(c, pkg, ch))
         r = sanitize(c, ch)
         if r and r["target"] not in seen:
             seen.add(r["target"])

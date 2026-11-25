@@ -1,0 +1,14 @@
+Кандидатов: 46, сняты обратной проверкой: 0, в ответе: 13 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/review/bench/mixed_latyshova_gl5_par17-20/answer.json (37 с)
+  code+bulk+strong   C015   critical    sign_flip              Направление изменения диаметра скважины перевёрнуто: у автора он увели
+  code+bulk+strong   C111   critical    sign_flip              Направление сравнения показаний СП перевёрнуто: вместо «выше» указано 
+  code+bulk+strong   A28    significant analogy_without_limit  Граница аналогии ошибочно объявлена отсутствующей, а критические значе
+  bulk+strong        C241   critical    wrong_scaling          Для kₙ* указано 370% вместо 37%.
+  bulk+strong        C293   critical    wrong_scaling          Среднее удельное сопротивление завышено в 10 раз: указано 73 вместо 7,
+  bulk+strong        C120   critical    sign_flip              Гамма-показания галита названы очень высокими вместо очень низких.
+  bulk+strong        C135   critical    wrong_scaling          Толщина корки в хороших условиях завышена в 10 раз: указано 10 см вмес
+  bulk+strong        C139   significant lost_condition         Утверждение опускает условие возрастания минерализации бурового раство
+  bulk+strong        C188   significant measured_vs_inferred   Утверждение приписывает построение семейства графиков прямому измерени
+  bulk+strong        S01.10 significant frame_error            Формулировка противоречит сама себе: при ширине ствола 2,2 м и условно
+  bulk+strong        L01.05 significant measured_vs_inferred   Нефтенасыщенный песчаник выдан за результат прямого измерения, хотя ха
+  bulk+strong        C175   significant measured_vs_inferred   Утверждение о прямом измерении не подтверждается автором: коэффициент 
+  bulk+strong        C122   significant measured_vs_inferred   Фраза «прямым измерением установлено» выдаёт признаки пород и зоны про

@@ -174,14 +174,251 @@ def make(chapter_id: str, out: Path, n: int = 90, seed: int = 7, error_share: fl
     return pkg, key
 
 
+# ====================== режим --mixed: все четыре типа элементов в пропорции контрольного пакета ======================
+
+CONTROL_MIX = {"claim": 60, "analogy": 5, "script_line": 10, "scene_fact": 6}  # как в контрольном пакете организаторов
+
+
+def corrupt_text(text: str, quote: str, cat: str):
+    if cat == "measured_vs_inferred":
+        return corrupt_measured(text, quote, "inference")
+    return CORRUPTORS[cat](text, quote)
+
+
+def corrupt_analogy(it: dict, k: int):
+    variants = ["Аналогия точная: здесь она не перестаёт работать, величина постоянна и одинакова для любых объектов.",
+                "Аналогия полностью точная и справедлива всегда, без ограничений на условия применения.",
+                "Это точное соответствие: аналогия работает для любых случаев и границ у неё нет."]
+    return variants[k % len(variants)]
+
+
+def corrupt_fact(it: dict):
+    t = it["text"]
+    if "увеличивается вниз" in t or "растёт вниз" in t:
+        return t.replace("вниз", "вверх", 1), "frame_error", "направление оси глубины перевёрнуто"
+    import re as _re
+    for m in _re.finditer(r"(?<![\w.,])(\d+(?:[.,]\d+)?)(\s?(?:м|мД|%|с|Ом·м|мкм))(?![\w])", t):
+        if float(m.group(1).replace(",", ".")) > 0:
+            return t[:m.start()] + _num(m.group(1)) + m.group(2) + t[m.end():], "frame_error", f"число {m.group(1)} увеличено в 10 раз"
+    return None
+
+
+def make_mixed(chapter_id: str, out: Path, seed: int = 7, share: float = 0.2):
+    from .self_check import build_package
+    run_dir = ROOT / "runs" / chapter_id
+    full = build_package(run_dir)
+    layer = json.loads((run_dir / "layer.json").read_text(encoding="utf-8"))
+    node_pages = {n["id"]: n.get("pages") or [] for n in layer["nodes"]}
+    ch = load_chapter(chapter_id)
+    rnd = random.Random(seed)
+    by = {t: [i for i in full["items"] if i["type"] == t and not i["id"].startswith("T")] for t in CONTROL_MIX}
+    claims_by_id = {c["id"]: c for c in by["claim"]}
+    good_claims = [c for c in by["claim"] if c.get("quote") and c.get("page_pdf") and check_claim(ch, c["quote"], c["page_pdf"])["ok"] and len(c["text"]) > 40]
+    gc = {c["id"]: c for c in good_claims}
+    # строки сценария с опорой на хорошее утверждение; факты и аналогии — по порядку случайно
+    lines = [l for l in by["script_line"] if l.get("claim_ref") in gc]
+    rnd.shuffle(lines)
+    lines = lines[: CONTROL_MIX["script_line"]]
+    facts = by["scene_fact"][:]
+    rnd.shuffle(facts)
+    facts = facts[: CONTROL_MIX["scene_fact"]]
+    anas = [a for a in by["analogy"] if (a.get("breaks_where") or "").strip()]
+    rnd.shuffle(anas)
+    anas = anas[: CONTROL_MIX["analogy"]]
+    need = {l["claim_ref"] for l in lines}
+    rest = [c for c in good_claims if c["id"] not in need]
+    rnd.shuffle(rest)
+    chosen_claims = [gc[i] for i in sorted(need)] + rest[: max(0, CONTROL_MIX["claim"] - len(need))]
+
+    cats = ["sign_flip", "overgeneralization", "lost_condition", "wrong_scaling", "measured_vs_inferred"]
+    errors: dict[str, dict] = {}
+    items_out: dict[str, dict] = {}
+
+    # утверждения: ≈20% (квота по кругу из категорий, где есть подходящие)
+    n_claim_err = round(len(chosen_claims) * share)
+    cand = {c_: [] for c_ in cats}
+    for c in chosen_claims:
+        if c["id"] in need:
+            continue  # опорные для строк сценария не портим: порча только в самой строке
+        for cat in cats:
+            r = corrupt_text(c["text"], c["quote"], cat)
+            if r and r[0] != c["text"]:
+                cand[cat].append((c, cat, r))
+    used = set()
+    while len(errors) < n_claim_err and any(cand.values()):
+        for cat in sorted(cats, key=lambda k: sum(1 for e in errors.values() if e["category"] == k)):
+            while cand[cat] and cand[cat][0][0]["id"] in used:
+                cand[cat].pop(0)
+            if cand[cat] and len(errors) < n_claim_err:
+                c, _, r = cand[cat].pop(0)
+                used.add(c["id"])
+                items_out[c["id"]] = dict(c, text=r[0], kind="observation" if cat == "measured_vs_inferred" else c.get("kind"))
+                errors[c["id"]] = {"target": c["id"], "category": cat, "severity": SEVERITY[cat], "correct": c["text"], "pages": [c["page_pdf"]], "quote": c["quote"], "note": r[1]}
+    # аналогии
+    for k, a in enumerate(anas[: max(1, round(len(anas) * share))]):
+        items_out[a["id"]] = dict(a, breaks_where=corrupt_analogy(a, k))
+        errors[a["id"]] = {"target": a["id"], "category": "analogy_without_limit", "severity": "significant", "correct": a.get("breaks_where", ""),
+                           "pages": node_pages.get(a["node_id"]) or [], "note": "граница аналогии заменена на «точная, для любых»"}
+    # строки сценария
+    n_line_err = max(1, round(len(lines) * share))
+    done = 0
+    for idx, l in enumerate(lines):
+        if done >= n_line_err:
+            break
+        ref = gc[l["claim_ref"]]
+        for cat in cats[idx % len(cats):] + cats[: idx % len(cats)]:
+            r = corrupt_text(l["text"], ref["quote"], cat)
+            if r and r[0] != l["text"]:
+                items_out[l["id"]] = dict(l, text=r[0])
+                errors[l["id"]] = {"target": l["id"], "category": cat, "severity": SEVERITY[cat], "correct": l["text"], "pages": [ref["page_pdf"]], "quote": ref["quote"], "note": r[1]}
+                done += 1
+                break
+    # факты сцены
+    n_fact_err = max(1, round(len(facts) * share))
+    done = 0
+    for f in facts:
+        if done >= n_fact_err:
+            break
+        r = corrupt_fact(f)
+        if r:
+            items_out[f["id"]] = dict(f, text=r[0])
+            errors[f["id"]] = {"target": f["id"], "category": r[1], "severity": "critical" if "вверх" in r[0] else "significant", "correct": f["text"],
+                               "pages": node_pages.get(f.get("node_id")) or [], "note": r[2]}
+            done += 1
+
+    all_items = [items_out.get(i["id"], i) for i in chosen_claims + anas + lines + facts]
+    order = {"claim": 0, "analogy": 1, "script_line": 2, "scene_fact": 3}
+    all_items.sort(key=lambda i: (order[i["type"]], i["id"]))
+    spec_ids = {f["video_id"] for f in facts + lines}
+    pkg = {"package_id": f"bench_mixed_{chapter_id}", "chapter": chapter_id, "chapter_file": Path(ch.meta["md"]).name, "language": "ru", "items": all_items,
+           "scenes": [s_ for s_ in full["scenes"] if s_["video_id"] in spec_ids], "frames": []}
+    key = {"package_id": pkg["package_id"], "errors": list(errors.values()), "tricky_true": []}
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "package.json").write_text(json.dumps(pkg, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out / "key.json").write_text(json.dumps(key, ensure_ascii=False, indent=1), encoding="utf-8")
+    cnt = {t: sum(1 for i in all_items if i["type"] == t) for t in CONTROL_MIX}
+    ecnt = {t: sum(1 for e in errors.values() if next(i for i in all_items if i["id"] == e["target"])["type"] == t) for t in CONTROL_MIX}
+    print(f"{chapter_id} (mixed): элементов {cnt}, ошибок {ecnt} (всего {len(errors)}) → {out}")
+    return pkg, key
+
+
+def type_of(target: str) -> str:
+    return {"C": "утверждения", "A": "аналогии", "L": "строки сценария", "S": "факты сцены", "F": "кадры"}.get(target[:1], "другое")
+
+
+# ====================== режим --subtle: тонкую ошибку вносит модель, код проверяет ======================
+
+SUBTLE_SYSTEM = """Ты вносишь в учебный пересказ ОДНУ тонкую, правдоподобную ошибку заданной категории, чтобы проверить рецензента. Даны точная цитата автора и пересказ.
+Верни JSON: {"original_fragment": "...", "changed_fragment": "..."} — минимальная замена: original_fragment ДОСЛОВНО встречается в пересказе, changed_fragment его заменяет.
+Требования:
+- пересказ после замены должен ПРОТИВОРЕЧИТЬ цитате автора или выходить за неё именно в заданной категории, но звучать естественно и грамматично;
+- не меняй больше одной мысли; не добавляй пометок об ошибке;
+- НЕ используй слова-маркеры: всегда, любой, любая, любые, любого, никогда, все, во всех, только, лишь, целиком, полностью, однозначно, обязательно; для переворота не используй простые антонимы выше/ниже, растёт/падает, больше/меньше — переверни зависимость иначе
+  (причина и следствие, прямая и обратная связь, «не превышает» → «превышает», «убывает по мере» → «нарастает по мере» и т. п.);
+- original_fragment должен присутствовать и в цитате автора (то место, которое ты искажаешь), changed_fragment — нет.
+Категории: sign_flip — переворот направления или признака; overgeneralization — снять границы применимости, не используя слов-маркеров (например «независимо от условий», «в принципе для данного класса объектов»);
+lost_condition — выбросить условие применимости (changed_fragment может быть пустым); wrong_scaling — неверная степень, пропорциональность или порядок величины в числе;
+measured_vs_inferred — вывод выдать за прямое измерение или наоборот, без слов «прямым измерением» (например «экспериментально зафиксировано»)."""
+
+
+def subtle_corrupt(text: str, quote: str, cat: str, kind: str | None):
+    """Тонкая порча моделью + механическая проверка: фрагмент есть в пересказе и в цитате, замена нет в цитате, текст изменился."""
+    from glava.chapter import norm
+    from glava.llm import ask_json
+    r = ask_json(SUBTLE_SYSTEM, f"Категория: {cat}\nЦитата автора: {quote}\nПересказ: {text}", tier="bulk", tag=f"bench:subtle:{cat}")
+    if not isinstance(r, dict):
+        return None
+    o, c = r.get("original_fragment"), r.get("changed_fragment")
+    if not isinstance(o, str) or not isinstance(c, str) or not o.strip() or o not in text or o == c:
+        return None
+    if norm(o) not in norm(quote) or (c.strip() and norm(c) in norm(quote)):
+        return None
+    new = text.replace(o, c, 1)
+    return (new, f"[тонкая] «{o}» → «{c}»") if new != text and len(new) > 20 else None
+
+
+def make_subtle(chapter_id: str, out: Path, n: int = 90, seed: int = 7, error_share: float = 0.2, n_tricky: int = 10):
+    from .llm_check import pmap
+    layer = json.loads((ROOT / "runs" / chapter_id / "layer.json").read_text(encoding="utf-8"))
+    ch = load_chapter(chapter_id)
+    pool = []
+    for node in layer["nodes"]:
+        for c in node.get("claims", []):
+            q, p = c.get("quote") or "", c.get("page_pdf")
+            if len(q) > 40 and p and check_claim(ch, q, p)["ok"] and len(c["text"]) > 40:
+                pool.append({"node": node["id"], **c})
+    rnd = random.Random(seed)
+    rnd.shuffle(pool)
+    n_err = round(n * error_share)
+    cats = ["sign_flip", "overgeneralization", "lost_condition", "wrong_scaling", "measured_vs_inferred"]
+    # по 3–4 попытки на утверждение-кандидата: берём первые, где модель дала валидную порчу
+    plan = [(pool[i], cats[i % len(cats)]) for i in range(min(len(pool), n_err * 4))]
+    results = pmap(lambda pc: subtle_corrupt(pc[0]["text"], pc[0]["quote"], pc[1], pc[0].get("kind")) if (pc[1] != "measured_vs_inferred" or pc[0].get("kind") == "inference") else None,
+                   plan, 8, default=None)
+    errors, used, per = {}, set(), {c: 0 for c in cats}
+    quota = {c: n_err // len(cats) + (1 if i < n_err % len(cats) else 0) for i, c in enumerate(cats)}
+    for (c, cat), r in zip(plan, results):
+        if r and per[cat] < quota[cat] and c["id"] not in used:
+            per[cat] += 1
+            used.add(c["id"])
+            errors[c["id"]] = (c, cat, r[0], r[1])
+    # недобор квоты добираем из любых категорий
+    for (c, cat), r in zip(plan, results):
+        if len(errors) >= n_err:
+            break
+        if r and c["id"] not in used:
+            used.add(c["id"])
+            errors[c["id"]] = (c, cat, r[0], r[1])
+    tricky = []
+    for c in pool:
+        if len(tricky) >= n_tricky:
+            break
+        if c["id"] in used:
+            continue
+        t, q = c["text"].lower(), c["quote"].lower()
+        hit = [a_ for a_ in ABSOLUTES if a_ in t and a_ in q]
+        if hit:
+            tricky.append((c, hit[0].strip()))
+            used.add(c["id"])
+    normal = [c for c in pool if c["id"] not in used][: max(0, n - len(errors) - len(tricky))]
+    entries = [("err", e[0], e) for e in errors.values()] + [("tricky", c, h) for c, h in tricky] + [("ok", c, None) for c in normal]
+    order = {n_["id"]: i for i, n_ in enumerate(layer["nodes"])}
+    entries.sort(key=lambda e: (order[e[1]["node"]], e[1]["id"]))
+    items, key_err, key_tr = [], [], []
+    for i, (kind, c, extra) in enumerate(entries, 1):
+        iid = f"C{i:03d}"
+        text, kk = c["text"], c.get("kind")
+        if kind == "err":
+            _, cat, text, note = extra
+            kk = "observation" if cat == "measured_vs_inferred" else kk
+            key_err.append({"target": iid, "category": cat, "severity": SEVERITY[cat], "correct": c["text"], "pages": [c["page_pdf"]], "quote": c["quote"], "note": note})
+        elif kind == "tricky":
+            key_tr.append({"target": iid, "why_tricky": f"формулировка «{extra}» есть и в тексте автора", "pages": [c["page_pdf"]]})
+        items.append({"id": iid, "type": "claim", "node_id": c["node"], "text": text, "kind": kk, "page_pdf": c["page_pdf"], "quote": c["quote"], "orig_id": c["id"]})
+    pkg = {"package_id": f"bench_subtle_{chapter_id}", "chapter": chapter_id, "chapter_file": Path(ch.meta["md"]).name, "language": "ru", "items": items, "scenes": [], "frames": []}
+    key = {"package_id": pkg["package_id"], "errors": key_err, "tricky_true": key_tr}
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "package.json").write_text(json.dumps(pkg, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out / "key.json").write_text(json.dumps(key, ensure_ascii=False, indent=1), encoding="utf-8")
+    by = {c: sum(1 for e in key_err if e["category"] == c) for c in cats}
+    print(f"{chapter_id} (subtle): пакет {len(items)} утверждений, ошибок {len(key_err)} {by}, «верных, но неожиданных» {len(key_tr)} → {out}")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("chapter_id")
     ap.add_argument("-o", "--out", required=True)
     ap.add_argument("--n", type=int, default=90)
     ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--mixed", action="store_true", help="все типы элементов (утверждения, аналогии, строки сценария, факты сцены) в пропорции контрольного пакета")
+    ap.add_argument("--subtle", action="store_true", help="тонкую ошибку вносит модель (tier bulk через glava/llm.py); код проверяет противоречие цитате")
     a = ap.parse_args(argv)
-    make(a.chapter_id, Path(a.out), a.n, a.seed)
+    if a.mixed:
+        make_mixed(a.chapter_id, Path(a.out), a.seed)
+    elif a.subtle:
+        make_subtle(a.chapter_id, Path(a.out), a.n, a.seed)
+    else:
+        make(a.chapter_id, Path(a.out), a.n, a.seed)
 
 
 if __name__ == "__main__":
