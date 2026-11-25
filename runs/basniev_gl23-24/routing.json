@@ -3,7 +3,7 @@
  "routes": [
   {
    "node_id": "basniev.elastic_flow_mechanism",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -14,11 +14,12 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип М/Ф; видеоёмкость 7/10"
+   "why": "тип М/Ф; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "basniev.elastic_regime_types",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -29,7 +30,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип М/None; видеоёмкость 6/10"
+   "why": "тип М/None; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "basniev.elastic_storage_concept",

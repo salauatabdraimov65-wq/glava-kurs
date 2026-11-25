@@ -1,0 +1,24 @@
+Пакет review_self_package.json: {'claim': 330, 'step_text': 200, 'analogy': 42, 'script_line': 13, 'scene_fact': 16}, сцен 1, кадров 0
+Кандидатов: 259, прошли согласие сигналов: 29, сняты обратной проверкой: 0, в ответе: 20 → /Users/dinmukhammed/Downloads/kmg-materials/glava-kurs/runs/latyshova_gl5_par17-20/review_self.json
+  code+bulk+strong   T155  significant lost_condition         Изменение показаний во времени отнесено к определению ГНК в целом, хот
+  code+bulk+strong   T078  significant lost_condition         Утрачено условие значительного обогащения промывочной жидкости глиной 
+  code+bulk+strong   T108  significant lost_condition         Перекрытие диапазонов представлено как следствие сильного изменения по
+  code+bulk+strong   T111  significant lost_condition         Элемент утверждает, что каждого из двух условий по отдельности достато
+  code+bulk+strong   T199  significant overgeneralization     Неверно утверждается, что глава не описывает других практических дейст
+  bulk+strong        T182  significant other                  Утверждение, что в главе не приведён порядок интерпретации диаграмм, п
+  bulk+strong        T150  significant other                  Утверждение, что текст не приводит границы областей и не объясняет смы
+  bulk+strong        T162  significant lost_condition         Невыделение тонких прослоев обобщено: у автора оно относится к пачке с
+  bulk+strong        T184  significant lost_condition         Опущено условие достаточной глубинности электрического метода для совп
+  bulk+strong        T157  significant lost_condition         Способ с построением графика для переходной зоны представлен без услов
+  bulk+strong        T160  significant lost_condition         Утверждение не ограничивает применение формулы мощным пластом коллекто
+  bulk+strong        A08   significant analogy_without_limit  Граница аналогии ошибочно отрицает описание признаков классификации: а
+  bulk+strong        T017  significant other                  Плотность раствора ошибочно названа равнозначной водоотдаче. Автор соп
+  bulk+strong        T073  significant lost_condition         Опущены условия, что подчинённые карбонатные породы должны быть плотны
+  bulk+strong        T161  significant lost_condition         Условие однородности мощного пласта по характеру насыщения опущено; то
+  bulk+strong        T072  significant overgeneralization     Ясно выраженные свойства пород представлены как достаточное условие дл
+  code+strong        T074  significant overgeneralization     Фрагмент не позволяет утверждать, что во всей главе не перечислены кон
+  code+strong        T151  significant lost_condition         Правило с нижней границей по ВНК или ГВК распространено на любую неодн
+  code+bulk          T014  significant lost_condition         «Низкая водоотдача» подана без условия: автор называет наиболее благоп
+  code+bulk          T015  significant lost_condition         у автора условие/оговорка «как правило», в утверждении её нет
+время_с=237
+finished

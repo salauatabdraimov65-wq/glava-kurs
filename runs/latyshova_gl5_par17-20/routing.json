@@ -3,7 +3,7 @@
  "routes": [
   {
    "node_id": "latyshova.gis_tasks",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 1,
@@ -14,7 +14,8 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Пр; видеоёмкость 6/10"
+   "why": "тип И/Пр; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "latyshova.drilling_effects",
@@ -273,7 +274,7 @@
   },
   {
    "node_id": "latyshova.dynamic_indirect_signs",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -284,7 +285,8 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/Н; видеоёмкость 6/10"
+   "why": "тип И/Н; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "latyshova.critical_permeability",
@@ -558,7 +560,7 @@
   },
   {
    "node_id": "latyshova.carbonate_collector_difficulties",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 1,
@@ -569,7 +571,8 @@
    },
    "hook_short": false,
    "template": "well_tool_curve",
-   "why": "тип И/М; видеоёмкость 7/10"
+   "why": "тип И/М; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "latyshova.carbonate_curve_normalization",

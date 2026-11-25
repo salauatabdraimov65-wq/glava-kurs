@@ -1284,6 +1284,19 @@
      "by_model": false,
      "unit_id": "p478.03",
      "text_by_model": true
+    },
+    {
+     "id": "basniev.reservoir_material_balance#c18",
+     "text": "Как правило, при естественном упругом режиме добывают до 2–5% извлекаемых запасов, но если упругий запас велик, можно отобрать гораздо больше.",
+     "kind": "observation",
+     "page_pdf": 477,
+     "page_print": null,
+     "quote": "Как правило, при естественном упругом режиме добывается незначительная часть извлекаемых запасов (до 2–5%). Однако известны случаи, когда упругий запас настолько велик, что позволяет отобрать гораздо больший",
+     "source_kind": "text",
+     "by_model": false,
+     "unit_id": "p477.16",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
@@ -5218,6 +5231,19 @@
      "by_model": false,
      "unit_id": "p488.07",
      "text_by_model": true
+    },
+    {
+     "id": "basniev.gallery_pressure_limit#c6",
+     "text": "При заданной у галереи постоянной скорости фильтрации w(0,t)=w₁ давление на ней снижается пропорционально √t: pᵣ(t)=pₖ−(2μw₁/(k√π))√(kt); при больших временах условие становится физически нереализуемым.",
+     "kind": "observation",
+     "page_pdf": 488,
+     "page_print": null,
+     "quote": "p_{\\mathrm{r}}(t) = p_{\\mathrm{k}} - \\frac{2\\mu w_1}{k\\sqrt{\\pi}} \\sqrt{kt}",
+     "source_kind": "formula",
+     "by_model": false,
+     "unit_id": "p488.04",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [
@@ -10129,6 +10155,19 @@
      "by_model": false,
      "unit_id": "p499.08",
      "text_by_model": true
+    },
+    {
+     "id": "basniev.psss_radial_pressure_error#c7",
+     "text": "При постоянном дебите депрессия на скважине в момент времени t равна Δp_c = (Qμ/(2πkh))·ln(√(r_c² + 4κt)/r_c).",
+     "kind": "observation",
+     "page_pdf": 499,
+     "page_print": null,
+     "quote": "\\Delta p_c \\equiv p_\\kappa - p_c(t) = \\frac{Q\\mu}{2\\pi kh} \\ln \\frac{\\sqrt{r_c^2 + 4\\kappa t}}{r_c}. \\quad (24.16)",
+     "source_kind": "formula",
+     "by_model": false,
+     "unit_id": "p499.07",
+     "text_by_model": true,
+     "added_by": "idea_recall"
     }
    ],
    "links": [

@@ -33,7 +33,7 @@
   },
   {
    "node_id": "baraboshkin.delta_depots",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -44,7 +44,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип В/П; видеоёмкость 7/10"
+   "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "baraboshkin.delta_facies",
@@ -63,7 +64,7 @@
   },
   {
    "node_id": "baraboshkin.front_progradation",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -74,7 +75,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип В/П; видеоёмкость 7/10"
+   "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "baraboshkin.abandonment_facies",
@@ -108,7 +110,7 @@
   },
   {
    "node_id": "baraboshkin.levees_splays",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 1,
@@ -119,7 +121,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип М/В; видеоёмкость 6/10"
+   "why": "тип М/В; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "baraboshkin.bay_bars",
@@ -168,7 +171,7 @@
   },
   {
    "node_id": "baraboshkin.channel_instability",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -179,7 +182,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип М/П; видеоёмкость 7/10"
+   "why": "тип М/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "baraboshkin.front_lower_section",
@@ -243,7 +247,7 @@
   },
   {
    "node_id": "baraboshkin.wave_delta_coast",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -254,7 +258,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип В/М; видеоёмкость 7/10"
+   "why": "тип В/М; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "baraboshkin.tidal_delta_morphology",

@@ -48,7 +48,7 @@
   },
   {
    "node_id": "kuznetsov.reef_limestone_types",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 0,
@@ -59,7 +59,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип М/Р; видеоёмкость 6/10"
+   "why": "тип М/Р; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "kuznetsov.facies_zoning",
@@ -138,7 +139,7 @@
   },
   {
    "node_id": "kuznetsov.secondary_reef_pores",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -149,7 +150,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип В/М; видеоёмкость 9/10"
+   "why": "тип В/М; видеоёмкость 9/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "kuznetsov.rainbow_reef_classes",
@@ -183,7 +185,7 @@
   },
   {
    "node_id": "kuznetsov.rim_collector_quality",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 0,
@@ -194,7 +196,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип М/П; видеоёмкость 6/10"
+   "why": "тип М/П; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "kuznetsov.field_collector_comparison",
@@ -258,7 +261,7 @@
   },
   {
    "node_id": "kuznetsov.reef_seal_formation",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -269,7 +272,8 @@
    },
    "hook_short": false,
    "template": "section_through_time",
-   "why": "тип В/П; видеоёмкость 7/10"
+   "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "kuznetsov.relief_trap_types",

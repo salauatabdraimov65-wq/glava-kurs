@@ -46,10 +46,36 @@ def route_node(n: dict) -> dict:
             "why": f"тип {prim}/{sec}; {why2}"}
 
 
+def rendered_videos(run) -> dict:
+    """node_id → путь к собранному mp4 (относительно папки главы) и формат ролика."""
+    out = {}
+    for sp in sorted((run / "video").glob("*/spec.json")):
+        spec = json.loads(sp.read_text(encoding="utf-8"))
+        for name in ("video.mp4", "video_16x9.mp4"):
+            mp4 = sp.parent / name
+            if mp4.is_file() and spec.get("node_id"):
+                out[spec["node_id"]] = {"path": mp4.relative_to(run).as_posix(),
+                                        "kind": "длинное видео" if spec.get("aspect") == "16:9" else "шортс"}
+                break
+    return out
+
+
 def route(chapter: str) -> dict:
+    """Формат в курсе — только то, что реально есть: «шортс»/«длинное видео» — если ролик собран, иначе текст со схемой."""
     run = ROOT / "runs" / chapter
     layer = json.loads((run / "layer.json").read_text(encoding="utf-8"))
-    doc = {"chapter": chapter, "routes": [route_node(n) for n in layer["nodes"]]}
+    videos = rendered_videos(run)
+    routes = []
+    for n in layer["nodes"]:
+        r = route_node(n)
+        v = videos.get(n["id"])
+        if v:
+            r.update(format=v["kind"], video_path=v["path"], secondary_format="текст")
+        elif r["format"] == "шортс":
+            r.update(format="текст", video_candidate=True,
+                     why=r["why"] + "; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)")
+        routes.append(r)
+    doc = {"chapter": chapter, "routes": routes}
     (run / "routing.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     from collections import Counter
     print(chapter, dict(Counter(r["format"] for r in doc["routes"])))
