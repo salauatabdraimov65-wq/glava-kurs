@@ -14,6 +14,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип М/Ф; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -30,6 +31,7 @@
    },
    "hook_short": false,
    "template": "section_through_time",
+   "scene_template": "section_through_time",
    "why": "тип М/None; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
    "video_candidate": true
   },
@@ -46,6 +48,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "section_through_time",
    "why": "тип М/Ф; есть правило автора «признаки → вывод»"
   },
   {
@@ -61,6 +64,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -76,6 +80,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; есть правило автора «признаки → вывод»"
   },
   {
@@ -91,6 +96,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -106,6 +112,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -121,6 +128,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -136,6 +144,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -151,6 +160,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -166,6 +176,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -181,6 +192,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -196,6 +208,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -211,6 +224,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -226,6 +240,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -241,6 +256,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -256,6 +272,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; есть правило автора «признаки → вывод»"
   },
   {
@@ -271,6 +288,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -286,6 +304,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
@@ -301,6 +320,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -316,6 +336,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -331,6 +352,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; формула/модель — понимание через параметры"
   },
   {
@@ -346,6 +368,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/None; есть правило автора «признаки → вывод»"
   },
   {
@@ -361,6 +384,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
@@ -376,6 +400,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -391,6 +416,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Ф; формула/модель — понимание через параметры"
   },
   {
@@ -406,6 +432,7 @@
    },
    "hook_short": false,
    "template": null,
+   "scene_template": "pressure_diffusion",
    "why": "тип Н/Ф; текст шага и схема"
   },
   {
@@ -421,6 +448,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/П; формула/модель — понимание через параметры"
   },
   {
@@ -436,6 +464,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/П; формула/модель — понимание через параметры"
   },
   {
@@ -451,6 +480,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -466,6 +496,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -481,6 +512,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -496,6 +528,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -511,6 +544,7 @@
    },
    "hook_short": false,
    "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Н; есть правило автора «признаки → вывод»"
   },
   {
@@ -526,6 +560,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -541,6 +576,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/М; формула/модель — понимание через параметры"
   },
   {
@@ -556,6 +592,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Н; формула/модель — понимание через параметры"
   },
   {
@@ -571,6 +608,7 @@
    },
    "hook_short": false,
    "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
    "why": "тип Ф/Н; формула/модель — понимание через параметры"
   }
  ]
