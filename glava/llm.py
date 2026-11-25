@@ -23,7 +23,7 @@ CACHE = ROOT / "cache" / "llm"
 LEDGER = ROOT / "cache" / "spend.jsonl"
 
 # Цена за 1 млн токенов (вход, выход), USD. Переопределяется в .env: LLM_PRICE_BULK=0.25,2.0
-DEFAULT_PRICE = {"bulk": (0.25, 2.0), "strong": (1.25, 10.0)}
+DEFAULT_PRICE = {"bulk": (0.10, 0.50), "strong": (1.0, 5.0)}
 
 
 class BudgetExceeded(RuntimeError):
@@ -49,10 +49,10 @@ def _model(tier: str) -> str:
 
 
 def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path] | None = None,
-             tag: str = "", max_retries: int = 3) -> dict:
+             tag: str = "", max_retries: int = 3, effort: str | None = None) -> dict:
     model = _model(tier)
     img_bytes = [Path(p).read_bytes() for p in (images or [])]
-    key = hashlib.sha256(json.dumps([model, system, user, [hashlib.sha256(b).hexdigest() for b in img_bytes]],
+    key = hashlib.sha256(json.dumps([model, effort, system, user, [hashlib.sha256(b).hexdigest() for b in img_bytes]],
                                     ensure_ascii=False).encode()).hexdigest()
     cpath = CACHE / f"{key}.json"
     if cpath.exists():
@@ -72,8 +72,12 @@ def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path
     last_err = None
     for attempt in range(max_retries):
         try:
+            kw = {}
+            eff = effort or os.environ.get(f"LLM_EFFORT_{tier.upper()}") or ("low" if tier == "bulk" else "medium")
+            if model.startswith(("gpt-5", "gpt-6", "o")):
+                kw["reasoning_effort"] = eff
             r = client.chat.completions.create(model=model, messages=messages,
-                                               response_format={"type": "json_object"})
+                                               response_format={"type": "json_object"}, **kw)
             data = json.loads(r.choices[0].message.content)
             pin, pout = _price(tier)
             usd = (r.usage.prompt_tokens * pin + r.usage.completion_tokens * pout) / 1e6
