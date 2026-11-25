@@ -1,0 +1,1046 @@
+{
+ "package_id": "bench_mixed_en_smoke",
+ "chapter": "en_smoke",
+ "chapter_file": "well_logging_en.md",
+ "language": "en",
+ "items": [
+  {
+   "id": "C001",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Well logging is a detailed record of the geological formations penetrated by a borehole.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "making a detailed record (a well log) of the geologic formations penetrated by a borehole",
+   "orig_id": "en.logging_basics#c1"
+  },
+  {
+   "id": "C002",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "The log may be based on visual inspection of recovered samples or on physical measurements made by instruments in the borehole.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs)",
+   "orig_id": "en.logging_basics#c2"
+  },
+  {
+   "id": "C003",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Some geophysical well-logging measurements can be performed at any stage in a well’s history: during drilling, well development, production, or abandonment.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "during any phase of a well's history: drilling, completing, producing, or abandoning",
+   "orig_id": "en.logging_basics#c3"
+  },
+  {
+   "id": "C004",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Well logging is used in the exploration for oil and gas, groundwater, mineral resources, and geothermal resources, as well as in environmental, scientific, and geotechnical studies.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies",
+   "orig_id": "en.logging_basics#c4"
+  },
+  {
+   "id": "C005",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Wireline logging is used in mining, the oil and gas industry, and groundwater consulting to obtain a continuous record of rock properties.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "uses wireline logging to obtain a continuous record of a formation's rock properties",
+   "orig_id": "en.logging_basics#c5"
+  },
+  {
+   "id": "C006",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Wireline logging is defined as obtaining and analyzing geophysical data as a function of well depth, with the provision of related services.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "The acquisition and analysis of geophysical data performed as a function of well bore depth, together with the provision of related services.",
+   "orig_id": "en.logging_basics#c6"
+  },
+  {
+   "id": "C007",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Wireline logging and gas logging are different methods, but they are closely linked through the integration of data sets.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "\"wireline logging\" and \"mud logging\" are not the same, yet are closely linked through the integration of the data sets",
+   "orig_id": "en.logging_basics#c7"
+  },
+  {
+   "id": "C008",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "Measurements are referenced to true depth along the hole (TAH).",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "The measurements are made referenced to \"TAH\" - True Along Hole depth",
+   "orig_id": "en.logging_basics#c8"
+  },
+  {
+   "id": "C009",
+   "type": "claim",
+   "node_id": "en.logging_basics",
+   "text": "It was directly measured that measurements and their analysis make it possible to infer additional properties, such as hydrocarbon saturation and reservoir pressure, and make decisions about drilling and production.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions",
+   "orig_id": "en.logging_basics#c9"
+  },
+  {
+   "id": "C010",
+   "type": "claim",
+   "node_id": "en.logging_tools",
+   "text": "A logging tool or tool assembly is lowered into the well on the end of a wireline cable.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "lowering a 'logging tool' - or a string of one or more instruments - on the end of a wireline into an oil well",
+   "orig_id": "en.logging_tools#c1"
+  },
+  {
+   "id": "C011",
+   "type": "claim",
+   "node_id": "en.logging_tools",
+   "text": "Petrophysical properties are recorded using various sensors.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "recording petrophysical properties using a variety of sensors",
+   "orig_id": "en.logging_tools#c2"
+  },
+  {
+   "id": "C012",
+   "type": "claim",
+   "node_id": "en.logging_tools",
+   "text": "It was directly measured that the instruments measure, among other things, natural gamma radiation, electrical and acoustic properties, induced radioactive responses, electromagnetic characteristics, NMR, and pressure.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "measure the natural gamma ray, electrical, acoustic, stimulated radioactive responses, electromagnetic, nuclear magnetic resonance, pressure and other properties",
+   "orig_id": "en.logging_tools#c3"
+  },
+  {
+   "id": "C015",
+   "type": "claim",
+   "node_id": "en.logging_tools",
+   "text": "Logging can be conducted while drilling to obtain information about the formations being penetrated in real time.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "during the drilling process (see Logging While Drilling), to provide real-time information about the formations being penetrated by the borehole",
+   "orig_id": "en.logging_tools#c6"
+  },
+  {
+   "id": "C016",
+   "type": "claim",
+   "node_id": "en.logging_tools",
+   "text": "Logging can also be performed after the well has reached its total depth, recording the entire borehole.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "once the well has reached Total Depth and the whole depth of the borehole can be logged",
+   "orig_id": "en.logging_tools#c7"
+  },
+  {
+   "id": "C017",
+   "type": "claim",
+   "node_id": "en.logging_tools",
+   "text": "Visualization methods include optical, acoustic, and electrical imaging, as well as methods that combine acoustic and electrical techniques in a single logging tool.",
+   "kind": "observation",
+   "page_pdf": 3,
+   "quote": "Methods that draw on both acoustic and electrical imaging techniques using the same logging tool",
+   "orig_id": "en.logging_tools#c8"
+  },
+  {
+   "id": "C020",
+   "type": "claim",
+   "node_id": "en.depth_and_classification",
+   "text": "The depth recorded in memory mode can be corrected in the same way as real-time data, so the achievable TAH accuracy should not differ.",
+   "kind": "inference",
+   "page_pdf": 1,
+   "quote": "so there should be no difference in the attainable TAH accuracy",
+   "orig_id": "en.depth_and_classification#c3"
+  },
+  {
+   "id": "C022",
+   "type": "claim",
+   "node_id": "en.depth_and_classification",
+   "text": "Measurements must be corrected for elastic elongation and temperature.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "corrected for elastic stretch and temperature",
+   "orig_id": "en.depth_and_classification#c5"
+  },
+  {
+   "id": "C023",
+   "type": "claim",
+   "node_id": "en.depth_and_classification",
+   "text": "Wireline logs can be classified by function or by the technology used.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "categorized either by their function or by the technology that they use",
+   "orig_id": "en.depth_and_classification#c6"
+  },
+  {
+   "id": "C025",
+   "type": "claim",
+   "node_id": "en.depth_and_classification",
+   "text": "Logging in a cased well is conducted after the installation of the casing or production string.",
+   "kind": "observation",
+   "page_pdf": 1,
+   "quote": "\"Cased hole logs\" are run after the well is lined with casing or production pipe.",
+   "orig_id": "en.depth_and_classification#c8"
+  },
+  {
+   "id": "C027",
+   "type": "claim",
+   "node_id": "en.electrical_logging_history",
+   "text": "Conrad and Marcel Schlumberger, who founded Schlumberger Limited in 1926, are considered the inventors of electrical logging.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "who founded Schlumberger Limited in 1926, are considered the inventors of electric well logging",
+   "orig_id": "en.electrical_logging_history#c1"
+  },
+  {
+   "id": "C028",
+   "type": "claim",
+   "node_id": "en.electrical_logging_history",
+   "text": "It was directly measured that conrad developed the Schlumberger array for prospecting metallic ores, and the brothers adapted this surface method for underground measurements.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications",
+   "orig_id": "en.electrical_logging_history#c2"
+  },
+  {
+   "id": "C031",
+   "type": "claim",
+   "node_id": "en.electrical_logging_history",
+   "text": "In 1931, Henri Georges Doll and G. Deschâtres noticed that the galvanometer oscillated even without passing current through the cables in the borehole.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "the galvanometer wiggled even when no current was being passed through the logging cables down in  the well",
+   "orig_id": "en.electrical_logging_history#c5"
+  },
+  {
+   "id": "C034",
+   "type": "claim",
+   "node_id": "en.electrical_logging_history",
+   "text": "The joint recording of SP and resistivity made it possible to distinguish permeable oil-bearing formations from impermeable nonproductive formations.",
+   "kind": "inference",
+   "page_pdf": 2,
+   "quote": "By simultaneously recording SP and resistivity, loggers could distinguish between permeable oil-bearing beds and impermeable nonproducing beds.",
+   "orig_id": "en.electrical_logging_history#c8"
+  },
+  {
+   "id": "C036",
+   "type": "claim",
+   "node_id": "en.electrical_logging_history",
+   "text": "Later, the basic dipmeter was improved with the resistivity dipmeter in 1947 and the continuous resistivity dipmeter in 1952.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "enhanced by the resistivity dipmeter (1947) and the continuous resistivity dipmeter (1952)",
+   "orig_id": "en.electrical_logging_history#c10"
+  },
+  {
+   "id": "C038",
+   "type": "claim",
+   "node_id": "en.logging_technology_development",
+   "text": "Conventional electrical logging methods require a conductive aqueous solution, whereas oil-based solutions do not conduct electricity.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+   "orig_id": "en.logging_technology_development#c2"
+  },
+  {
+   "id": "C039",
+   "type": "claim",
+   "node_id": "en.logging_technology_development",
+   "text": "To address this problem, induction logging was developed in the late 19400s.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "The solution to this problem was the induction log, developed in the late 1940s.",
+   "orig_id": "en.logging_technology_development#c3"
+  },
+  {
+   "id": "C041",
+   "type": "claim",
+   "node_id": "en.logging_technology_development",
+   "text": "Computerization accelerated the processing of logging data and sharply expanded the possibilities for collecting them.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Computerization allowed much faster log processing, and dramatically expanded log data-gathering capacity.",
+   "orig_id": "en.logging_technology_development#c5"
+  },
+  {
+   "id": "C042",
+   "type": "claim",
+   "node_id": "en.logging_technology_development",
+   "text": "In the 1970s, combined logs appeared in which resistivity and porosity logging were performed in a single pass through the well.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "combo type logs where resistivity logs and porosity logs were recorded in one pass in the borehole",
+   "orig_id": "en.logging_technology_development#c6"
+  },
+  {
+   "id": "C044",
+   "type": "claim",
+   "node_id": "en.logging_technology_development",
+   "text": "Acoustic logging developed from technologies created during World War II.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Sonic logs grew out of technology developed during World War II.",
+   "orig_id": "en.logging_technology_development#c8"
+  },
+  {
+   "id": "C046",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "Initially, nuclear logging was developed to measure the natural gamma radiation of subsurface formations.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+   "orig_id": "en.nuclear_logging_history#c1"
+  },
+  {
+   "id": "C047",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "Then the industry quickly moved to methods that actively irradiate rocks with nuclear particles.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "the industry quickly moved to logs that actively bombard rocks with nuclear particles",
+   "orig_id": "en.nuclear_logging_history#c2"
+  },
+  {
+   "id": "C048",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "It was directly measured that gamma-ray logging, which measures natural radioactivity, appeared in 1939, and WSI neutron logging in 1941.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "orig_id": "en.nuclear_logging_history#c3"
+  },
+  {
+   "id": "C050",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "Nuclear logs are important because they can be run in cased wells.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "These logs were important because they can be used in cased wells (wells with production casing).",
+   "orig_id": "en.nuclear_logging_history#c5"
+  },
+  {
+   "id": "C051",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "During World War II, the U.S. government granted Schlumberger an almost complete monopoly on open-hole logging, and Lane-Wells a monopoly on cased-hole logging.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "The US Government gave a near wartime monopoly on open-hole logging to Schlumberger, and a monopoly on cased-hole logging to Lane-Wells.",
+   "orig_id": "en.nuclear_logging_history#c6"
+  },
+  {
+   "id": "C052",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "It was directly measured that nuclear logging methods continued to develop after the war.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "orig_id": "en.nuclear_logging_history#c7"
+  },
+  {
+   "id": "C054",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "Nicolas Bloembergen filed a patent for Schlumberger in 1966.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Nicolaas Bloembergen filed the Schlumberger patent in 1966.",
+   "orig_id": "en.nuclear_logging_history#c9"
+  },
+  {
+   "id": "C056",
+   "type": "claim",
+   "node_id": "en.nuclear_logging_history",
+   "text": "NUMAR's developments in the 19900s led to the creation of continuous NMR logging technology, used in the oil and gas industry, water exploration, and ore exploration.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "More recent engineering developments by NUMAR (a subsidiary of Halliburton) in the 1990s has resulted in continuous NMR logging technology",
+   "orig_id": "en.nuclear_logging_history#c11"
+  },
+  {
+   "id": "C057",
+   "type": "claim",
+   "node_id": "en.logging_while_drilling",
+   "text": "Many modern oil and gas wells are drilled directionally.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Many modern oil and gas wells are drilled directionally.",
+   "orig_id": "en.logging_while_drilling#c1"
+  },
+  {
+   "id": "C058",
+   "type": "claim",
+   "node_id": "en.logging_while_drilling",
+   "text": "Initially, when a well deviated from vertical, instruments had to be attached to the drill string somehow.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "loggers had to run their tools somehow attached to the drill pipe if the well was not vertical",
+   "orig_id": "en.logging_while_drilling#c2"
+  },
+  {
+   "id": "C059",
+   "type": "claim",
+   "node_id": "en.logging_while_drilling",
+   "text": "Modern methods allow information to be transmitted continuously to the surface; this is called logging while drilling (LWD) or measurements while drilling (MWD).",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "Modern techniques now permit continuous information at the surface.  This is known as logging while drilling (LWD) or measurement-while-drilling (MWD).",
+   "orig_id": "en.logging_while_drilling#c3"
+  },
+  {
+   "id": "C060",
+   "type": "claim",
+   "node_id": "en.logging_while_drilling",
+   "text": "MWD transmits data from instruments at the bottom of the drill string to surface processors using mud pulses.",
+   "kind": "observation",
+   "page_pdf": 2,
+   "quote": "MWD logs use mud pulse technology to transmit data from the tools on the bottom of the drillstring to the processors at the surface.",
+   "orig_id": "en.logging_while_drilling#c4"
+  },
+  {
+   "id": "C061",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "Instruments can be conveyed into wells with a deviated trajectory or with a reach exceeding that of conventional electric cables.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "The tools can be conveyed into wells where the trajectory is deviated or extended beyond the reach of conventional Electric Wireline cables.",
+   "orig_id": "en.memory_tool_delivery#c1"
+  },
+  {
+   "id": "C062",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "For such wells, they may use a combination determined by the relationship between the mass and strength of the electric cable at a large reach.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "This can involve a combination of weight to strength ratio of the electric cable over this extended reach.",
+   "orig_id": "en.memory_tool_delivery#c2"
+  },
+  {
+   "id": "C063",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "In such cases, memory tools can be conveyed on drill pipes or coiled tubing.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "the memory tools can be conveyed on Pipe or Coil Tubing",
+   "orig_id": "en.memory_tool_delivery#c3"
+  },
+  {
+   "id": "C064",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "Compared with electric-line cable, memory logging sensors are limited in type and are usually intended for cased wells during the production stage.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "The type of sensors are limited in comparison to those used on Electric Line, and tend to be focussed on the cased hole, production stage of the well.",
+   "orig_id": "en.memory_tool_delivery#c4"
+  },
+  {
+   "id": "C065",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "Compact instrument combinations have been developed for evaluating formations in an open hole, with data recorded in memory.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "Although there are now developed some memory \"Open Hole\" compact formation evaluation tool combinations.",
+   "orig_id": "en.memory_tool_delivery#c5"
+  },
+  {
+   "id": "C066",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "Instruments can be lowered inside the drill pipe to protect them from damage while being lowered into the well.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "These tools can be deployed and carried downhole concealed internally in drill pipe to protect them from damage while running in the hole,",
+   "orig_id": "en.memory_tool_delivery#c6"
+  },
+  {
+   "id": "C067",
+   "type": "claim",
+   "node_id": "en.memory_tool_delivery",
+   "text": "At depth, the instruments can be pushed out of the end of the drill pipe to begin logging.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "and then \"Pumped\" out the end at depth to initiate logging.",
+   "orig_id": "en.memory_tool_delivery#c7"
+  },
+  {
+   "id": "C068",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "Other simple open-hole evaluation tools with memory recording that operate on slickline are also available for the production interval.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "Other basic open hole formation evaluation memory tools are available for use in \"Commodity\" markets on slickline",
+   "orig_id": "en.slickline_memory_logging#c1"
+  },
+  {
+   "id": "C069",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "The use of such tools on slickline is intended to reduce the cost and time of operations.",
+   "kind": "inference",
+   "page_pdf": 7,
+   "quote": "on slickline to reduce costs and operating time.",
+   "orig_id": "en.slickline_memory_logging#c2"
+  },
+  {
+   "id": "C070",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "During operations in a cased well, a slickline unit is usually used for well intervention.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "In cased hole operation there is normally a \"Slick Line\" intervention unit.",
+   "orig_id": "en.slickline_memory_logging#c3"
+  },
+  {
+   "id": "C071",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "It was directly measured that slickline uses solid mechanical wire with an outer diameter of 0.072–0.125 inches.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD),",
+   "orig_id": "en.slickline_memory_logging#c4"
+  },
+  {
+   "id": "C072",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "It was directly measured that this wire is used to manipulate the well completion system or perform other operations in it.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "to manipulate or otherwise carry out operations in the well bore completion system.",
+   "orig_id": "en.slickline_memory_logging#c5"
+  },
+  {
+   "id": "C073",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "Operations with memory tools are always conducted on slickline instead of mobilizing a full-scale electric logging unit.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "Memory operations are often carried out on this Slickline conveyance in preference to mobilizing a full service Electric Wireline unit.",
+   "orig_id": "en.slickline_memory_logging#c6"
+  },
+  {
+   "id": "C074",
+   "type": "claim",
+   "node_id": "en.slickline_memory_logging",
+   "text": "The results of memory logging become known only after the instruments return to the surface.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "Since the results are not known until returned to surface,",
+   "orig_id": "en.slickline_memory_logging#c7"
+  },
+  {
+   "id": "C076",
+   "type": "claim",
+   "node_id": "en.memory_logging_risks",
+   "text": "This limits the ability to precisely change downhole production conditions during memory logging by regulating surface flow rates.",
+   "kind": "inference",
+   "page_pdf": 7,
+   "quote": "This limits the ability to modify or change the well down hole production conditions accurately during the memory logging by changing the surface production rates.",
+   "orig_id": "en.memory_logging_risks#c2"
+  },
+  {
+   "id": "C078",
+   "type": "claim",
+   "node_id": "en.memory_logging_risks",
+   "text": "A malfunction during recording is detected only after the memory devices are removed.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "Failure during recording is not known until the memory tools are retrieved.",
+   "orig_id": "en.memory_logging_risks#c4"
+  },
+  {
+   "id": "C079",
+   "type": "claim",
+   "node_id": "en.memory_logging_risks",
+   "text": "Data loss can become a serious problem on large and expensive marine facilities.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "This loss of data can be a major issue on large offshore (expensive) locations.",
+   "orig_id": "en.memory_logging_risks#c5"
+  },
+  {
+   "id": "C080",
+   "type": "claim",
+   "node_id": "en.memory_logging_risks",
+   "text": "At onshore sites, for example in South Texas, where the commodity segment of the oilfield services sector operates, logging is always conducted without the infrastructure of a drilling rig.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "On land locations (e.g. South Texas, US) where there is what is called a \"Commodity\" Oil service sector, where logging often is without the rig infrastructure.",
+   "orig_id": "en.memory_logging_risks#c6"
+  },
+  {
+   "id": "C081",
+   "type": "claim",
+   "node_id": "en.memory_logging_risks",
+   "text": "Under the described land-based conditions, data loss is more problematic, and logging is often repeated without complications.",
+   "kind": "observation",
+   "page_pdf": 7,
+   "quote": "this is less problematic, and logs are often run again without issue.",
+   "orig_id": "en.memory_logging_risks#c7"
+  },
+  {
+   "id": "A03",
+   "type": "analogy",
+   "node_id": "en.depth_and_classification",
+   "text": "This looks like a joining of two data streams by timestamps: one contains measurements, the other the cable position.",
+   "breaks_where": "Unlike digital streams, the measured cable length requires corrections for elastic stretching and temperature."
+  },
+  {
+   "id": "A05",
+   "type": "analogy",
+   "node_id": "en.logging_technology_development",
+   "text": "Hypothesis: the development of instruments resembles the upgrading of equipment and computing infrastructure, which accelerates data collection and processing.",
+   "breaks_where": "The analogy is exact: it never breaks down, and the quantity is constant and identical for any object."
+  },
+  {
+   "id": "A06",
+   "type": "analogy",
+   "node_id": "en.nuclear_logging_history",
+   "text": "History can be viewed as a transition from passive signal monitoring to active intervention and then to a new measurement technology.",
+   "breaks_where": "The analogy does not explain the physics of radioactivity and NMR; the chapter also does not compare the methods as versions of a single system."
+  },
+  {
+   "id": "A08",
+   "type": "analogy",
+   "node_id": "en.memory_tool_delivery",
+   "text": "This seems like the delivery of a computing device to a hard-to-reach place inside a protective container, followed by its activation.",
+   "breaks_where": "The analogy does not describe the physical constraints of cables, pipes, and wells. The chapter also does not claim that the devices perform calculations."
+  },
+  {
+   "id": "A10",
+   "type": "analogy",
+   "node_id": "en.memory_logging_risks",
+   "text": "Hypothesis: memory logging is similar to a device that first records data locally and then transmits it for verification.",
+   "breaks_where": "The analogy is limited: the chapter does not describe a method of data transmission. Well logging is also associated with changes in underground production conditions, not only with recording and transmitting information."
+  },
+  {
+   "id": "L01.01",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "What does well logging record: the rock itself or information about it?",
+   "video_id": "en_short_logging_basics",
+   "t_start": 0.0,
+   "t_end": 3.91,
+   "claim_ref": "C001",
+   "on_screen": "Порода или запись?"
+  },
+  {
+   "id": "L01.03",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "It was directly measured that the borehole penetrates geological formations, and logging creates a detailed record of them.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 8.91,
+   "t_end": 13.26,
+   "claim_ref": "C001",
+   "on_screen": "Формации и запись"
+  },
+  {
+   "id": "L01.04",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "The first path begins with samples brought to the surface.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 13.26,
+   "t_end": 16.74,
+   "claim_ref": "C002",
+   "on_screen": "Образцы на поверхности"
+  },
+  {
+   "id": "L01.05",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "They are visually inspected and a geological log is compiled.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 16.74,
+   "t_end": 19.78,
+   "claim_ref": "C002",
+   "on_screen": "Осмотр и журнал"
+  },
+  {
+   "id": "L01.06",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "Another way is to lower the measuring instrument into the borehole.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 19.78,
+   "t_end": 23.26,
+   "claim_ref": "C003",
+   "on_screen": "Прибор в скважине"
+  },
+  {
+   "id": "L01.08",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "On the right is a schematic curve of measurements along the depth.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 26.3,
+   "t_end": 29.35,
+   "claim_ref": "C003",
+   "on_screen": "Сигнал по глубине"
+  },
+  {
+   "id": "L01.09",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "Answer: a log is a record of an inspection or measurements, not the rock itself.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 29.35,
+   "t_end": 34.57,
+   "claim_ref": "C001",
+   "on_screen": "Запись, не порода"
+  },
+  {
+   "id": "L01.10",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "Logging is needed not only to search for oil and gas, but also for groundwater.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 34.57,
+   "t_end": 40.22,
+   "claim_ref": "C005",
+   "on_screen": "Не только нефть"
+  },
+  {
+   "id": "L01.11",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "It is also used in environmental, scientific, and geotechnical studies.",
+   "video_id": "en_short_logging_basics",
+   "t_start": 40.22,
+   "t_end": 44.13,
+   "claim_ref": "C006",
+   "on_screen": "Другие области применения"
+  },
+  {
+   "id": "L01.12",
+   "type": "script_line",
+   "node_id": "en.logging_basics",
+   "text": "It was directly measured that if groundwater is being studied, what would be the record: a sample or the result of its inspection?",
+   "video_id": "en_short_logging_basics",
+   "t_start": 44.13,
+   "t_end": 49.35,
+   "claim_ref": "C002",
+   "on_screen": "Примените к воде"
+  },
+  {
+   "id": "S01.03",
+   "type": "scene_fact",
+   "node_id": "en.logging_basics",
+   "text": "The curve remains designated as a conventional notation, rather than an image of the rock.",
+   "video_id": "en_short_logging_basics",
+   "spec_path": "invariants[2]"
+  },
+  {
+   "id": "S01.05",
+   "type": "scene_fact",
+   "node_id": "en.logging_basics",
+   "text": "The horizontal magnification of the trunk and the instrument is the same throughout the scene.",
+   "video_id": "en_short_logging_basics",
+   "spec_path": "invariants[4]"
+  },
+  {
+   "id": "S01.06",
+   "type": "scene_fact",
+   "node_id": "en.logging_basics",
+   "text": "Layer 1950–19800 m: Sandstone; properties {\"signal\": 30}",
+   "video_id": "en_short_logging_basics",
+   "spec_path": "params.layers[0]"
+  },
+  {
+   "id": "S01.08",
+   "type": "scene_fact",
+   "node_id": "en.logging_basics",
+   "text": "Layer 2020–2050 m: Limestone; properties {\"signal\": 40}",
+   "video_id": "en_short_logging_basics",
+   "spec_path": "params.layers[2]"
+  },
+  {
+   "id": "S01.10",
+   "type": "scene_fact",
+   "node_id": "en.logging_basics",
+   "text": "The depths, lithologies, and layer boundaries are specified hypothetically; the chapter does not provide a numerical example.",
+   "video_id": "en_short_logging_basics",
+   "spec_path": "assumptions[0]"
+  },
+  {
+   "id": "S01.12",
+   "type": "scene_fact",
+   "node_id": "en.logging_basics",
+   "text": "The GR track was used provisionally as a graphical representation of the signal; numerical values are not intended for lithological interpretation.",
+   "video_id": "en_short_logging_basics",
+   "spec_path": "assumptions[2]"
+  }
+ ],
+ "scenes": [
+  {
+   "video_id": "en_short_logging_basics",
+   "spec": {
+    "title": "Каротаж: порода или запись?",
+    "plaque": [
+     "не в масштабе:",
+     "ширина ствола и прибора увеличена в 20 раз",
+     "ствол показан примерно в 20 раз шире реального (≈0,2 м)"
+    ],
+    "params": {
+     "depth_top": 1950,
+     "depth_bottom": 2050,
+     "depth_tick": 20,
+     "tool_start": 1950,
+     "tool_resolution_m": 1,
+     "bore_width": 4,
+     "layers": [
+      {
+       "top": 1950,
+       "bottom": 1980,
+       "lith": "sand",
+       "label": "Песчаник",
+       "fluid": null,
+       "props": {
+        "signal": 30
+       },
+       "mud_cake": false,
+       "invasion_width": 0
+      },
+      {
+       "top": 1980,
+       "bottom": 2020,
+       "lith": "shale",
+       "label": "Глинистая порода",
+       "fluid": null,
+       "props": {
+        "signal": 80
+       },
+       "mud_cake": false,
+       "invasion_width": 0
+      },
+      {
+       "top": 2020,
+       "bottom": 2050,
+       "lith": "limestone",
+       "label": "Известняк",
+       "fluid": null,
+       "props": {
+        "signal": 40
+       },
+       "mud_cake": false,
+       "invasion_width": 0
+      }
+     ],
+     "curves": [
+      {
+       "key": "GR",
+       "prop": "signal",
+       "label": "Условный сигнал",
+       "unit": "усл. ед.",
+       "min": 0,
+       "max": 100,
+       "log": false
+      }
+     ]
+    },
+    "beats": [
+     {
+      "say": "Что записывает каротаж: саму породу или сведения о ней?",
+      "claim_id": "en.logging_basics#c1",
+      "on_screen": "Порода или запись?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Попробуйте предсказать ответ.",
+      "claim_id": null,
+      "on_screen": "Ваша версия",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 3
+     },
+     {
+      "say": "Скважина вскрывает геологические формации, а каротаж создаёт их подробную запись.",
+      "claim_id": "en.logging_basics#c1",
+      "on_screen": "Формации и запись",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "highlight_layer": 1
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Первый путь начинается с образцов, поднятых на поверхность.",
+      "claim_id": "en.logging_basics#c2",
+      "on_screen": "Образцы на поверхности",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Их визуально осматривают и составляют геологический журнал.",
+      "claim_id": "en.logging_basics#c2",
+      "on_screen": "Осмотр и журнал",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Другой путь — опустить измерительный прибор в скважину.",
+      "claim_id": "en.logging_basics#c3",
+      "on_screen": "Прибор в скважине",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "tool_to": 2050
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Его физические измерения становятся основой геофизического журнала.",
+      "claim_id": "en.logging_basics#c3",
+      "on_screen": "Измерения и журнал",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Справа показана условная кривая измерений вдоль глубины.",
+      "claim_id": "en.logging_basics#c3",
+      "on_screen": "Сигнал по глубине",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Ответ: журнал — это запись осмотра или измерений, а не сама порода.",
+      "claim_id": "en.logging_basics#c1",
+      "on_screen": "Запись, не порода",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Каротаж нужен не только для поиска нефти и газа, но и подземных вод.",
+      "claim_id": "en.logging_basics#c5",
+      "on_screen": "Не только нефть",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Его используют и в экологических, научных и геотехнических исследованиях.",
+      "claim_id": "en.logging_basics#c6",
+      "on_screen": "Другие области применения",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Если изучают подземные воды, что будет записью: образец или результат его осмотра?",
+      "claim_id": "en.logging_basics#c2",
+      "on_screen": "Примените к воде",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     }
+    ],
+    "objects": [
+     "Шкала глубины",
+     "Разрез из трёх условных слоёв",
+     "Ствол скважины",
+     "Прибор на кабеле",
+     "Трек условного сигнала",
+     "Текстовые подписи двух путей получения журнала"
+    ],
+    "invariants": [
+     "Глубина увеличивается вниз; границы слоёв остаются на заданных глубинах.",
+     "Прибор движется внутри ствола.",
+     "Кривая остаётся обозначенной как условная запись, а не изображение породы.",
+     "Образцы и приборные измерения представлены как два разных источника записи.",
+     "Горизонтальное увеличение ствола и прибора одинаково на протяжении сцены."
+    ],
+    "assumptions": [
+     "Условно заданы глубины, литологии и границы слоёв: глава не приводит числового примера.",
+     "Условно значения сигнала и окно усреднения заданы для иллюстрации кривой; это не реальные измерения.",
+     "Условно использован трек GR как графический носитель сигнала; численные значения не предназначены для интерпретации литологии.",
+     "Условно физический диаметр ствола равен 0,2 м, а ширина прибора — 0,1 м; в разрезе они показаны как 4 и 2 м соответственно."
+    ],
+    "exaggerations": [
+     "Ширина ствола и прибора по горизонтали увеличена в 20 раз относительно вертикального масштаба.",
+     "ствол показан примерно в 20 раз шире реального (≈0,2 м)"
+    ],
+    "prediction_question": "Что записывает каротаж: саму породу или сведения о ней?",
+    "transfer_question": "Если изучают подземные воды, что будет записью: образец или результат его осмотра?",
+    "data_it_bridge": "Вход — поднятые образцы для визуального осмотра или физические измерения скважинного прибора; выход — подробная запись формаций. Среди методов перечислена визуализация. Глава не описывает ошибки, ограничения или сбои данных.",
+    "terms_to_check": [
+     "каротаж",
+     "геологический журнал",
+     "геофизический журнал",
+     "геотехнический",
+     "литология"
+    ],
+    "video_id": "en_short_logging_basics",
+    "chapter": "en_smoke",
+    "node_id": "en.logging_basics",
+    "template": "well_tool_curve",
+    "format": "short",
+    "aspect": "9:16",
+    "styleguide": "domain/geology/styleguide.json",
+    "spec_check": {
+     "words": 105,
+     "beats": 12,
+     "beats_with_claim": 11,
+     "problems": []
+    }
+   }
+  }
+ ],
+ "frames": []
+}

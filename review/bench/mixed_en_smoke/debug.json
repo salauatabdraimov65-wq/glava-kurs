@@ -1,0 +1,617 @@
+{
+ "candidates": [
+  {
+   "target": "C031",
+   "category": "other",
+   "severity": "minor",
+   "problem": "числа ['1931'] есть на странице, но не в приведённой цитате",
+   "fix": "Привести формулировку к тексту автора: «Dechatre, working for Schlumberger, discovered that the galvanometer wiggled even when no current was being passed through the logging cables down in  the well.»",
+   "page_pdf": 2,
+   "quote": "Dechatre, working for Schlumberger, discovered that the galvanometer wiggled even when no current was being passed through the logging cables down in  the well.",
+   "confidence": 0.35,
+   "source": "code"
+  },
+  {
+   "target": "C042",
+   "category": "other",
+   "severity": "minor",
+   "problem": "числа ['1970'] есть на странице, но не в приведённой цитате",
+   "fix": "Привести формулировку к тексту автора: «These included combo type logs where resistivity logs and porosity logs were recorded in one pass in the borehole.»",
+   "page_pdf": 2,
+   "quote": "These included combo type logs where resistivity logs and porosity logs were recorded in one pass in the borehole.",
+   "confidence": 0.35,
+   "source": "code"
+  },
+  {
+   "target": "C074",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«только» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «Since the results are not known until returned to surface, any realtime well dynamic changes cannot be monitored real time.»",
+   "page_pdf": 7,
+   "quote": "Since the results are not known until returned to surface, any realtime well dynamic changes cannot be monitored real time.",
+   "confidence": 0.6,
+   "source": "code"
+  },
+  {
+   "target": "C078",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«только» в утверждении, а у автора оно ограничено условиями",
+   "fix": "Привести формулировку к тексту автора: «Failure during recording is not known until the memory tools are retrieved.»",
+   "page_pdf": 7,
+   "quote": "Failure during recording is not known until the memory tools are retrieved.",
+   "confidence": 0.6,
+   "source": "code"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "граница аналогии содержит абсолют «never»",
+   "fix": "Заменить границу аналогии условной формулировкой по тексту главы",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+   "confidence": 0.5,
+   "source": "code"
+  },
+  {
+   "target": "A10",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "граница аналогии содержит абсолют «только»",
+   "fix": "Заменить границу аналогии условной формулировкой по тексту главы",
+   "page_pdf": 7,
+   "quote": "This limits the ability to modify or change the well down hole production conditions accurately during the memory logging by changing the surface production rates.",
+   "confidence": 0.5,
+   "source": "code"
+  },
+  {
+   "target": "L01.10",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "«только» в утверждении, а у автора оно ограничено условиями (опора — C005)",
+   "fix": "Привести фразу к тексту автора: «uses wireline logging to obtain a continuous record of a formation's rock properties»",
+   "page_pdf": 1,
+   "quote": "uses wireline logging to obtain a continuous record of a formation's rock properties",
+   "confidence": 0.54,
+   "source": "code"
+  },
+  {
+   "target": "L01.12",
+   "category": "sign_flip",
+   "severity": "critical",
+   "problem": "в утверждении «direct», у автора противоположное «lower» (опора — C002)",
+   "fix": "Привести фразу к тексту автора: «Real-time data is recorded directly against measured cable depth.»",
+   "page_pdf": 1,
+   "quote": "Real-time data is recorded directly against measured cable depth.",
+   "confidence": 0.59,
+   "source": "code"
+  },
+  {
+   "target": "C001",
+   "category": "other",
+   "severity": "minor",
+   "problem": "Смешаны процесс и его результат: у автора каротаж — это практика создания подробной записи, а не сама запись.",
+   "fix": "Каротаж — это практика создания подробной записи геологических формаций, вскрытых скважиной.",
+   "page_pdf": 1,
+   "quote": "is the practice of making a detailed record (a well log) of the geologic formations penetrated by a borehole.",
+   "confidence": 0.91,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C003",
+   "category": "other",
+   "severity": "minor",
+   "problem": "«Освоение» не является точным переводом completing: здесь имеется в виду этап заканчивания скважины.",
+   "fix": "Некоторые виды геофизических каротажных измерений можно выполнять на любом этапе истории скважины: при бурении, заканчивании, добыче или ликвидации.",
+   "page_pdf": 1,
+   "quote": "Some types of geophysical well logs can be done during any phase of a well's history: drilling, completing, producing, or abandoning.",
+   "confidence": 0.84,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C004",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Автор сообщает, где применяют каротаж, но не говорит, что факт такого применения был непосредственно измерен. Перечень областей применения передан верно.",
+   "fix": "Каротаж применяют в скважинах, пробурённых для поисков нефти и газа, подземных вод, полезных ископаемых и геотермальных ресурсов, а также в рамках экологических, научных и геотехнических исследований.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» представляет вывод дополнительных свойств как непосредственно измеренный факт. Автор говорит, что измерения и связанный с ними анализ используются, чтобы эти свойства вывести.",
+   "fix": "Измерения и связанный с ними анализ могут использоваться для вывода дополнительных свойств, например насыщенности углеводородами и пластового давления, а также для принятия дальнейших решений о бурении и добыче.",
+   "page_pdf": 1,
+   "quote": "these and the associated analysis can then be used to infer further properties, such as hydrocarbon saturation and formation pressure",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» представляет исторические сведения о действиях Конрада и братьев как результат прямого измерения. Автор сообщает эти сведения как исторический факт, но не утверждает, что они были непосредственно измерены.",
+   "fix": "Conrad developed the Schlumberger array as a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "page_pdf": 2,
+   "quote": "Conrad developed the Schlumberger array, which was a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "confidence": 0.98,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C038",
+   "category": "lost_condition",
+   "severity": "minor",
+   "problem": "Автор говорит о проводящем или водном буровом растворе; в элементе эти варианты слиты в «проводящий водный раствор», что сужает формулировку.",
+   "fix": "Обычные электрические каротажные методы требуют проводящего или водного бурового раствора, тогда как растворы на нефтяной основе (OBM) не проводят ток.",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive.",
+   "confidence": 0.87,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C046",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Фраза «It was directly measured that» представляет историческое утверждение о первоначальной цели разработки как непосредственно измеренный результат. Автор сообщает цель разработки, а не измерение этого исторического факта.",
+   "fix": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+   "page_pdf": 2,
+   "quote": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+   "confidence": 0.98,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Исторические даты представлены как непосредственно измеренный результат, тогда как автор сообщает их как даты появления/введения каротажных методов.",
+   "fix": "Исторически: гамма-каротаж, измеряющий естественную радиоактивность, был введён Well Surveys Inc. в 1939 году, а нейтронный каротаж WSI появился в 1941 году.",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Автор сообщает исторический факт, но не утверждает, что продолжение развития ядерных каротажных методов было непосредственно измерено.",
+   "fix": "Ядерные каротажные методы продолжали развиваться и после войны.",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C059",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "«It was directly measured» добавляет утверждение о способе установления факта; автор лишь сообщает, что современные методы обеспечивают непрерывную передачу информации на поверхность.",
+   "fix": "Современные методы позволяют непрерывно получать информацию на поверхности; это называют каротажем во время бурения (LWD) или измерениями во время бурения (MWD).",
+   "page_pdf": 2,
+   "quote": "Modern techniques now permit continuous information at the surface.",
+   "confidence": 0.84,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C063",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Автор описывает способ доставки приборов, но не сообщает, что это было непосредственно измерено.",
+   "fix": "В таких случаях приборы памяти можно доставлять на бурильных трубах или гибких трубах.",
+   "page_pdf": 7,
+   "quote": "In such cases the memory tools can be conveyed on Pipe or Coil Tubing.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C065",
+   "category": "measured_vs_inferred",
+   "severity": "minor",
+   "problem": "Автор сообщает о разработке компактных комбинаций приборов, но не утверждает, что этот факт был непосредственно измерен.",
+   "fix": "Some compact memory “Open Hole” formation-evaluation tool combinations have now been developed.",
+   "page_pdf": 7,
+   "quote": "Although there are now developed some memory \"Open Hole\" compact formation evaluation tool combinations.",
+   "confidence": 0.98,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C071",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Автор сообщает, что slickline использует сплошную механическую проволоку указанного наружного диаметра, но не утверждает, что это было непосредственно измерено. Формулировка «It was directly measured» добавляет отсутствующее в источнике утверждение о способе получения знания.",
+   "fix": "Для slickline используется сплошная механическая проволока наружным диаметром 0,072–0,125 дюйма.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD)",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C072",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» неверно представляет назначение проволоки как результат прямого измерения. Автор говорит, что проволока используется для манипуляций с системой заканчивания или других операций в стволе скважины.",
+   "fix": "Проволока используется для манипуляций с системой заканчивания скважины или для выполнения в ней других операций.",
+   "page_pdf": 7,
+   "quote": "to manipulate or otherwise carry out operations in the well bore completion system.",
+   "confidence": 0.98,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C078",
+   "category": "overgeneralization",
+   "severity": "significant",
+   "problem": "Слово «только» чрезмерно обобщает утверждение: автор говорит, что неисправность при записи становится известна после извлечения приборов памяти, но не утверждает, что её можно обнаружить исключительно тогда.",
+   "fix": "Неисправность во время записи становится известна после извлечения приборов памяти.",
+   "page_pdf": 7,
+   "quote": "Failure during recording is not known until the memory tools are retrieved.",
+   "confidence": 0.91,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "Фраза «The analogy is exact» и утверждение, что она «never breaks down», необоснованно объявляют аналогию точной и универсальной. Автор описывает конкретный эффект компьютеризации, а не тождество развития приборов и обновления вычислительной инфраструктуры.",
+   "fix": "Гипотеза: развитие приборов в некоторой степени напоминает обновление вычислительной инфраструктуры: компьютеризация ускорила обработку каротажных данных и расширила возможности их сбора. Аналогия ограничена этим сходством и не означает, что процессы идентичны или что какая-либо величина постоянна для любого объекта.",
+   "page_pdf": 2,
+   "quote": "Computerization allowed much faster log processing, and dramatically expanded log data-gathering capacity.",
+   "confidence": 0.99,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "«Directly measured» приписывает прямое измерение всему утверждению. Автор уточняет, что запись может основываться либо на визуальном осмотре образцов, либо на физических измерениях приборами.",
+   "fix": "Well logging is the practice of making a detailed record of the geological formations penetrated by a borehole; the record may be based on visual inspection of samples or on physical measurements.",
+   "page_pdf": 1,
+   "quote": "The log may be based either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs).",
+   "confidence": 0.98,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.11",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза приписывает экологические, научные и геотехнические применения именно проволочному каротажу. Автор относит эти области к каротажу скважин в целом, а не конкретно к wireline logging.",
+   "fix": "Каротаж скважин проводят также в рамках экологических, научных и геотехнических исследований.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies.",
+   "confidence": 0.93,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "L01.12",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "«It was directly measured» сводит запись к прямому измерению, хотя автор допускает и геологический журнал, основанный на визуальном осмотре образцов. Кроме того, образец сам по себе не назван записью.",
+   "fix": "A well log may be based on visual inspection of samples brought to the surface or on physical measurements made by instruments in the borehole. For groundwater, is the record the sample itself or the result of examining it?",
+   "page_pdf": 1,
+   "quote": "The log may be based either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs).",
+   "confidence": 0.78,
+   "source": "llm:bulk"
+  },
+  {
+   "target": "C004",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» необоснованно представляет области применения каротажа как результат прямого измерения. Автор лишь описывает практику его применения.",
+   "fix": "Каротаж применяют при поисках нефти и газа, подземных вод, полезных ископаемых и геотермальных ресурсов, а также в экологических, научных и геотехнических исследованиях.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies.",
+   "confidence": 0.98,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» без основания приписывает прямому измерению сам вывод о возможностях анализа. При этом свойства в элементе корректно названы выводимыми.",
+   "fix": "Измерения и их анализ позволяют выводить дополнительные свойства, например насыщенность углеводородами и пластовое давление, и принимать решения о бурении и добыче.",
+   "page_pdf": 1,
+   "quote": "these and the associated analysis can then be used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions",
+   "confidence": 0.84,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Исторический факт ошибочно представлен как результат прямого измерения; автор не говорит о таком измерении.",
+   "fix": "Конрад разработал массив Шлюмберже для поисков металлических руд, а братья приспособили этот поверхностный метод для подземных применений.",
+   "page_pdf": 2,
+   "quote": "Conrad developed the Schlumberger array, which was a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C046",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Историческое утверждение о цели разработки ошибочно представлено как результат прямого измерения.",
+   "fix": "Первоначально ядерный каротаж разрабатывали для измерения естественного гамма-излучения подземных формаций.",
+   "page_pdf": 2,
+   "quote": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» ошибочно представляет исторические даты как результат прямого измерения. Автор просто сообщает даты появления методов.",
+   "fix": "Каротаж гамма-излучения, измеряющий естественную радиоактивность, был введён Well Surveys Inc. в 1939 году, а нейтронный каротаж WSI появился в 1941 году.",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Элемент выдаёт историческое утверждение о развитии методов за результат прямого измерения, хотя автор этого не утверждает.",
+   "fix": "Ядерные каротажные методы продолжали развиваться и после войны.",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C059",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» без основания представляет техническую возможность как результат прямого измерения. Автор такого измерения не описывает.",
+   "fix": "Современные методы позволяют непрерывно получать информацию на поверхности; это называют каротажем во время бурения (LWD) или измерениями во время бурения (MWD).",
+   "page_pdf": 2,
+   "quote": "Modern techniques now permit continuous information at the surface. This is known as logging while drilling (LWD) or measurement-while-drilling (MWD).",
+   "confidence": 0.97,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C063",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Утверждение о прямом измерении не подтверждается автором: он описывает возможность доставки приборов, а не результат измерения.",
+   "fix": "В таких случаях приборы памяти можно доставлять на трубах или гибких трубах.",
+   "page_pdf": 7,
+   "quote": "In such cases the memory tools can be conveyed on Pipe or Coil Tubing.",
+   "confidence": 0.98,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C065",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Разработанность приборов ошибочно представлена как результат прямого измерения. Автор сообщает об их существовании, но не описывает такого измерения.",
+   "fix": "Разработаны компактные комбинации приборов для оценки пластов в открытом стволе с регистрацией данных в памяти.",
+   "page_pdf": 7,
+   "quote": "Although there are now developed some memory \"Open Hole\" compact formation evaluation tool combinations.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C071",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Утверждение о прямом измерении не подтверждено автором: он приводит техническое описание проволоки.",
+   "fix": "A slickline unit uses a solid mechanical wire with an outside diameter of 0.072–0.125 inches.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD), to manipulate or otherwise carry out operations in the well bore completion system.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "C072",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Назначение проволоки выдано за результат прямого измерения. Автор описывает её применение, но не сообщает о таком измерении.",
+   "fix": "Slickline использует сплошную механическую проволоку для манипуляций с системой заканчивания скважины или выполнения в ней других операций.",
+   "page_pdf": 7,
+   "quote": "This uses a solid mechanical wire (0.072 - 0.125 inches in OD), to manipulate or otherwise carry out operations in the well bore completion system.",
+   "confidence": 0.99,
+   "source": "llm:strong"
+  },
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "Граница аналогии ошибочно объявляет её точной и универсальной, а также утверждает постоянство не указанной величины для любых объектов.",
+   "fix": "Аналогия ограничена ускорением сбора и обработки данных: каротажные приборы также различаются по физическим принципам и условиям применения.",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive. The solution to this problem was the induction log, developed in the late 1940s.",
+   "confidence": 1.0,
+   "source": "llm:strong"
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» необоснованно представляет определение каротажа как результат прямого измерения. По автору запись может основываться как на осмотре образцов, так и на приборных измерениях.",
+   "fix": "Каротаж — это подробная запись геологических формаций, вскрытых скважиной.",
+   "page_pdf": 1,
+   "quote": "The log may be based either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs).",
+   "confidence": 0.98,
+   "source": "llm:strong"
+  },
+  {
+   "target": "L01.11",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза относит перечисленные области применения к проволочному каротажу, тогда как автор указывает их для скважинного каротажа в целом.",
+   "fix": "Скважинный каротаж в целом используют также в экологических, научных и геотехнических исследованиях.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies.",
+   "confidence": 0.85,
+   "source": "llm:strong"
+  }
+ ],
+ "chosen": [
+  {
+   "target": "A05",
+   "category": "analogy_without_limit",
+   "severity": "significant",
+   "problem": "Граница аналогии ошибочно объявляет её точной и универсальной, а также утверждает постоянство не указанной величины для любых объектов.",
+   "fix": "Аналогия ограничена ускорением сбора и обработки данных: каротажные приборы также различаются по физическим принципам и условиям применения.",
+   "page_pdf": 2,
+   "quote": "Normal electric logs require a conductive or water-based mud, but OBMs are nonconductive. The solution to this problem was the induction log, developed in the late 1940s.",
+   "confidence": 0.83,
+   "source": "llm:strong",
+   "signals": [
+    "code",
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C048",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» ошибочно представляет исторические даты как результат прямого измерения. Автор просто сообщает даты появления методов.",
+   "fix": "Каротаж гамма-излучения, измеряющий естественную радиоактивность, был введён Well Surveys Inc. в 1939 году, а нейтронный каротаж WSI появился в 1941 году.",
+   "page_pdf": 2,
+   "quote": "The gamma ray log, measuring the natural radioactivity, was introduced by Well Surveys Inc. in 1939, and the WSI neutron log came in 1941.",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C052",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Элемент выдаёт историческое утверждение о развитии методов за результат прямого измерения, хотя автор этого не утверждает.",
+   "fix": "Ядерные каротажные методы продолжали развиваться и после войны.",
+   "page_pdf": 2,
+   "quote": "Nuclear logs continued to evolve after the war.",
+   "confidence": 0.99,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C028",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Исторический факт ошибочно представлен как результат прямого измерения; автор не говорит о таком измерении.",
+   "fix": "Конрад разработал массив Шлюмберже для поисков металлических руд, а братья приспособили этот поверхностный метод для подземных применений.",
+   "page_pdf": 2,
+   "quote": "Conrad developed the Schlumberger array, which was a technique for prospecting for metal ore deposits, and the brothers adapted that surface technique to subsurface applications.",
+   "confidence": 0.98,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C046",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Историческое утверждение о цели разработки ошибочно представлено как результат прямого измерения.",
+   "fix": "Первоначально ядерный каротаж разрабатывали для измерения естественного гамма-излучения подземных формаций.",
+   "page_pdf": 2,
+   "quote": "Nuclear logging was initially developed to measure the natural gamma radiation emitted by underground formations.",
+   "confidence": 0.98,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C063",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Утверждение о прямом измерении не подтверждается автором: он описывает возможность доставки приборов, а не результат измерения.",
+   "fix": "В таких случаях приборы памяти можно доставлять на трубах или гибких трубах.",
+   "page_pdf": 7,
+   "quote": "In such cases the memory tools can be conveyed on Pipe or Coil Tubing.",
+   "confidence": 0.98,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "L01.03",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured» необоснованно представляет определение каротажа как результат прямого измерения. По автору запись может основываться как на осмотре образцов, так и на приборных измерениях.",
+   "fix": "Каротаж — это подробная запись геологических формаций, вскрытых скважиной.",
+   "page_pdf": 1,
+   "quote": "The log may be based either on visual inspection of samples brought to the surface (geological logs) or on physical measurements made by instruments lowered into the hole (geophysical logs).",
+   "confidence": 0.98,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "C009",
+   "category": "measured_vs_inferred",
+   "severity": "significant",
+   "problem": "Фраза «It was directly measured that» без основания приписывает прямому измерению сам вывод о возможностях анализа. При этом свойства в элементе корректно названы выводимыми.",
+   "fix": "Измерения и их анализ позволяют выводить дополнительные свойства, например насыщенность углеводородами и пластовое давление, и принимать решения о бурении и добыче.",
+   "page_pdf": 1,
+   "quote": "these and the associated analysis can then be used to infer further properties, such as hydrocarbon saturation and formation pressure, and to make further drilling and production decisions",
+   "confidence": 0.92,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  },
+  {
+   "target": "L01.11",
+   "category": "other",
+   "severity": "significant",
+   "problem": "Фраза относит перечисленные области применения к проволочному каротажу, тогда как автор указывает их для скважинного каротажа в целом.",
+   "fix": "Скважинный каротаж в целом используют также в экологических, научных и геотехнических исследованиях.",
+   "page_pdf": 1,
+   "quote": "Well logging is performed in boreholes drilled for the oil and gas, groundwater, mineral and geothermal exploration, as well as part of environmental, scientific and geotechnical studies.",
+   "confidence": 0.89,
+   "source": "llm:strong",
+   "signals": [
+    "llm:bulk",
+    "llm:strong"
+   ]
+  }
+ ],
+ "dropped_by_reverse": [
+  {
+   "target": "C078",
+   "problem": "Слово «только» чрезмерно обобщает утверждение: автор говорит, что неисправность при записи становится известна после извлечения приборов памяти, но не утверждает, что её можно обнаружить исключительно тогда.",
+   "why": "в главе есть дословное подтверждение (стр. 7): Failure during recording is not known until the memory tools are retrieved."
+  }
+ ],
+ "stats": {
+  "bulk": {
+   "ok": 81,
+   "fail": 0,
+   "skip": 0
+  },
+  "strong": {
+   "ok": 22,
+   "fail": 0,
+   "skip": 0
+  },
+  "reverse": {
+   "ok": 0,
+   "fail": 0,
+   "skip": 0
+  }
+ }
+}

@@ -1,0 +1,1207 @@
+{
+ "package_id": "bench_mixed_reh_basniev_gl21",
+ "chapter": "reh_basniev_gl21",
+ "chapter_file": "train_basniev.md",
+ "language": "ru",
+ "items": [
+  {
+   "id": "C004",
+   "type": "claim",
+   "node_id": "reh.layered_heterogeneity",
+   "text": "Для расчета элементарных потоков в макронеоднородных пластах можно схематизировать движение и подобрать эквивалентные коэффициенты сопротивления, чтобы применять формулы для однородного пласта.",
+   "kind": "inference",
+   "page_pdf": 443,
+   "quote": "найти такие эквивалентные значения коэффициентов фильтрационного сопротивления",
+   "orig_id": "reh.layered_heterogeneity#c4"
+  },
+  {
+   "id": "C005",
+   "type": "claim",
+   "node_id": "reh.layered_heterogeneity",
+   "text": "В коллекторах углеводородного сырья выделяют основные типы макронеоднородности.",
+   "kind": "observation",
+   "page_pdf": 443,
+   "quote": "выделяют следующие основные типы макронеоднородности",
+   "orig_id": "reh.layered_heterogeneity#c5"
+  },
+  {
+   "id": "C006",
+   "type": "claim",
+   "node_id": "reh.layered_heterogeneity",
+   "text": "При слоистой неоднородности пласт разделен по толщине на слои с однородными внутри, но различными между собой фильтрационными характеристиками.",
+   "kind": "observation",
+   "page_pdf": 443,
+   "quote": "пласт разделяется по толщине на несколько слоев",
+   "orig_id": "reh.layered_heterogeneity#c6"
+  },
+  {
+   "id": "C007",
+   "type": "claim",
+   "node_id": "reh.layered_heterogeneity",
+   "text": "Границы раздела слоев с разной проницаемостью в модели считаются плоскими.",
+   "kind": "assumption",
+   "page_pdf": 443,
+   "quote": "Границы раздела слоев с различными проницаемостями считаются плоскими.",
+   "orig_id": "reh.layered_heterogeneity#c7"
+  },
+  {
+   "id": "C010",
+   "type": "claim",
+   "node_id": "reh.layered_heterogeneity",
+   "text": "Для гидравлически изолированных слоев можно рассчитывать потоки по одномерным схемам.",
+   "kind": "inference",
+   "page_pdf": 444,
+   "quote": "возможен расчет характеристик фильтрационных потоков по одномерным схемам течения",
+   "orig_id": "reh.layered_heterogeneity#c10"
+  },
+  {
+   "id": "C012",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "При зональной неоднородности свойства меняются в плоскости залегания; внутри каждой зоны они в среднем одинаковы, а на границах скачкообразно меняются.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "на границе двух зон фильтрационно-емкостные свойства меняются скачкообразно",
+   "orig_id": "reh.heterogeneity_flow_types#c1"
+  },
+  {
+   "id": "C014",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "При бурении буровой раствор проникает в пласт равномерно, непрерывно ухудшая его фильтрационные свойства по направлению от скважины в глубь пласта.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "фильтрационные свойства ухудшаются непрерывно от скважины в глубь пласта",
+   "orig_id": "reh.heterogeneity_flow_types#c3"
+  },
+  {
+   "id": "C015",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Неоднородность от проникновения бурового раствора можно моделировать как зональную или непрерывную.",
+   "kind": "inference",
+   "page_pdf": 444,
+   "quote": "можно моделировать и как зональную, и как с непрерывной неоднородностью",
+   "orig_id": "reh.heterogeneity_flow_types#c4"
+  },
+  {
+   "id": "C016",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Схематизация потоков позволяет выделить классы течений в неоднородных пластах.",
+   "kind": "inference",
+   "page_pdf": 444,
+   "quote": "в результате схематизации фильтрационных потоков можно выделить",
+   "orig_id": "reh.heterogeneity_flow_types#c5"
+  },
+  {
+   "id": "C017",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Для слоисто-неоднородного пласта рассматриваются прямолинейно-параллельный, плоскорадиальный и радиально-сферический потоки.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "плоскорадиальный и радиально-сферический потоки в слоисто-неоднородном пласте",
+   "orig_id": "reh.heterogeneity_flow_types#c6"
+  },
+  {
+   "id": "C018",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Для зонально-неоднородного пласта рассматриваются прямолинейно-параллельный, плоскорадиальный и радиально-сферический потоки.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "плоскорадиальный и радиально-сферический потоки в зонально-неоднородном пласте",
+   "orig_id": "reh.heterogeneity_flow_types#c7"
+  },
+  {
+   "id": "C019",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Для пластов с непрерывной или случайной проницаемостью рассматриваются прямолинейно-параллельный, плоскорадиальный и радиально-сферический потоки.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "проницаемость является непрерывной или случайной функцией точек области фильтрации",
+   "orig_id": "reh.heterogeneity_flow_types#c8"
+  },
+  {
+   "id": "C021",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Из-за ограниченного объема учебника автор рассматривает только наиболее характерные случаи; методологический подход при этом остается единым.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "рамки учебника не позволяют представить столь детальное рассмотрение",
+   "orig_id": "reh.heterogeneity_flow_types#c10"
+  },
+  {
+   "id": "C022",
+   "type": "claim",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Далее рассматриваются одномерные потоки несжимаемой жидкости и газа в неоднородных пластах по закону Дарси.",
+   "kind": "observation",
+   "page_pdf": 444,
+   "quote": "одномерные потоки несжимаемой жидкости и газа в неоднородных пластах по закону Дарси",
+   "orig_id": "reh.heterogeneity_flow_types#c11"
+  },
+  {
+   "id": "C031",
+   "type": "claim",
+   "node_id": "reh.individual_layer_flow",
+   "text": "При прямолинейно-параллельной фильтрации несжимаемой жидкости и отсутствии перетоков между пропластками давление во всех пропластках одинаково и линейно изменяется от p_k до p_r.",
+   "kind": "observation",
+   "page_pdf": 445,
+   "quote": "p(x) = p_k - \\frac{p_k - p_r}{L} x, \\quad (21.1)",
+   "orig_id": "reh.individual_layer_flow#c1"
+  },
+  {
+   "id": "C032",
+   "type": "claim",
+   "node_id": "reh.individual_layer_flow",
+   "text": "Скорость фильтрации в пропластке i пропорциональна его проницаемости k_i и перепаду давления на единицу длины.",
+   "kind": "observation",
+   "page_pdf": 445,
+   "quote": "w^i = \\frac{k_i}{\\mu} \\frac{p_k - p_r}{L}",
+   "orig_id": "reh.individual_layer_flow#c2"
+  },
+  {
+   "id": "C035",
+   "type": "claim",
+   "node_id": "reh.individual_layer_flow",
+   "text": "При одинаковой депрессии скорость меньше в пропластке с большей проницаемостью, а дебит больше при большем сечении пропластка и большей проницаемости.",
+   "kind": "inference",
+   "page_pdf": 446,
+   "quote": "там, где выше проницаемость, будет больше скорость фильтрации",
+   "orig_id": "reh.individual_layer_flow#c5"
+  },
+  {
+   "id": "C039",
+   "type": "claim",
+   "node_id": "reh.layered_gas_flow",
+   "text": "Массовый расход газа в пропластке i равен его массовому потоку, умноженному на площадь h_iB.",
+   "kind": "observation",
+   "page_pdf": 446,
+   "quote": "Q_m^i = \\frac{k_i}{\\mu} \\frac{P_k - P_r}{L} h_i B",
+   "orig_id": "reh.layered_gas_flow#c4"
+  },
+  {
+   "id": "C044",
+   "type": "claim",
+   "node_id": "reh.parallel_effective_permeability",
+   "text": "Дальнейшие выкладки ведутся в общем виде для жидкости и газа с использованием аналогии их фильтрации.",
+   "kind": "observation",
+   "page_pdf": 446,
+   "quote": "проведем выкладки в общем виде и для жидкости, и для газа",
+   "orig_id": "reh.parallel_effective_permeability#c1"
+  },
+  {
+   "id": "C047",
+   "type": "claim",
+   "node_id": "reh.parallel_effective_permeability",
+   "text": "Для гидродинамических расчетов поток в неоднородном пласте удобно заменять потоком в однородном пласте тех же размеров.",
+   "kind": "inference",
+   "page_pdf": 446,
+   "quote": "удобно заменить формулу для потока флюида в неоднородном пласте",
+   "orig_id": "reh.parallel_effective_permeability#c4"
+  },
+  {
+   "id": "C048",
+   "type": "claim",
+   "node_id": "reh.parallel_effective_permeability",
+   "text": "Эквивалентную среднюю проницаемость определяют из условия равенства дебитов неоднородного и однородного пластов.",
+   "kind": "inference",
+   "page_pdf": 447,
+   "quote": "величину которой можно определить из условия равенства дебитов",
+   "orig_id": "reh.parallel_effective_permeability#c5"
+  },
+  {
+   "id": "C050",
+   "type": "claim",
+   "node_id": "reh.parallel_effective_permeability",
+   "text": "Средняя проницаемость равна сумме произведений проницаемости каждого слоя на его толщину, деленной на общую толщину h.",
+   "kind": "observation",
+   "page_pdf": 447,
+   "quote": "k_{\\text{ср}} = \\sum_{i=1}^n k_i h_i / h",
+   "orig_id": "reh.parallel_effective_permeability#c7"
+  },
+  {
+   "id": "C054",
+   "type": "claim",
+   "node_id": "reh.layered_total_rate",
+   "text": "Дебит несжимаемой жидкости пропорционален ρ_0, перепаду давления и сумме k_i h_i; он обратно пропорционален μL.",
+   "kind": "observation",
+   "page_pdf": 447,
+   "quote": "Q_m = \\frac{B \\rho_0 (p_k - p_r)}{\\mu L}",
+   "orig_id": "reh.layered_total_rate#c3"
+  },
+  {
+   "id": "C059",
+   "type": "claim",
+   "node_id": "reh.layer_travel_time",
+   "text": "Время движения газа до x и полное время зависят от m_i/k_i и разностей кубов и квадратов граничных давлений, как указано в формулах.",
+   "kind": "observation",
+   "page_pdf": 447,
+   "quote": "t_i = \\frac{4 m_i \\mu L^2 (p_k^3 - p_r^3(x))}",
+   "orig_id": "reh.layer_travel_time#c4"
+  },
+  {
+   "id": "C063",
+   "type": "claim",
+   "node_id": "reh.zonal_liquid_flow",
+   "text": "Прямым измерением установлено: давление несжимаемой жидкости линейно убывает от p_k до p_r на длине L.",
+   "kind": "observation",
+   "page_pdf": 448,
+   "quote": "p(x) = p_k - \\frac{p_k - p_r}{L} x",
+   "orig_id": "reh.zonal_liquid_flow#c4"
+  },
+  {
+   "id": "C065",
+   "type": "claim",
+   "node_id": "reh.zonal_liquid_flow",
+   "text": "Дебит несжимаемой жидкости равен скорости фильтрации, умноженной на площадь сечения S.",
+   "kind": "observation",
+   "page_pdf": 448,
+   "quote": "w_x S = Q = \\frac{k}{\\mu}",
+   "orig_id": "reh.zonal_liquid_flow#c6"
+  },
+  {
+   "id": "C068",
+   "type": "claim",
+   "node_id": "reh.zonal_liquid_flow",
+   "text": "Прямым измерением установлено: рассматривается одномерное установившееся течение однородного флюида; в каждой зоне поток прямолинейно-параллельный.",
+   "kind": "observation",
+   "page_pdf": 448,
+   "quote": "В пласте происходит одномерное установившееся фильтрационное течение однородного флюида.",
+   "orig_id": "reh.zonal_liquid_flow#c9"
+  },
+  {
+   "id": "C071",
+   "type": "claim",
+   "node_id": "reh.zonal_pressure_profile",
+   "text": "Внутри зоны i давление линейно убывает от p_i со скоростью, заданной перепадом p_i−p_{i+1} на длине l_i.",
+   "kind": "observation",
+   "page_pdf": 449,
+   "quote": "$$p_i(x) = p_i - \\frac{p_i - p_{i+1}}{l_i} x, \\quad x_i < x < x_{i+1}, \\quad (21.15)$$",
+   "orig_id": "reh.zonal_pressure_profile#c2"
+  },
+  {
+   "id": "C073",
+   "type": "claim",
+   "node_id": "reh.zonal_pressure_profile",
+   "text": "Прямым измерением установлено: объемный дебит зоны равен скорости фильтрации, умноженной на площадь сечения hB.",
+   "kind": "observation",
+   "page_pdf": 449,
+   "quote": "$$Q = \\frac{k_i}{\\mu} \\frac{p_i - p_{i+1}}{l_i} hB. \\quad (21.17)$$",
+   "orig_id": "reh.zonal_pressure_profile#c4"
+  },
+  {
+   "id": "C075",
+   "type": "claim",
+   "node_id": "reh.zonal_pressure_profile",
+   "text": "Градиент давления внутри зоны i постоянен и равен отрицательному перепаду давления, деленному на длину зоны.",
+   "kind": "observation",
+   "page_pdf": 449,
+   "quote": "$$\\frac{dp_i(x)}{dx} = -\\frac{p_i - p_{i+1}}{l_i}, \\quad x_i < x < x_{i+1}.$$",
+   "orig_id": "reh.zonal_pressure_profile#c6"
+  },
+  {
+   "id": "C076",
+   "type": "claim",
+   "node_id": "reh.zonal_pressure_profile",
+   "text": "Градиент давления постоянен внутри каждой зоны, но различается между зонами; поэтому график давления — ломаная из отрезков с разными наклонами.",
+   "kind": "inference",
+   "page_pdf": 449,
+   "quote": "градиент давления в каждой зоне постоянный, но неодинаковых в разных зонах.",
+   "orig_id": "reh.zonal_pressure_profile#c7"
+  },
+  {
+   "id": "C079",
+   "type": "claim",
+   "node_id": "reh.series_flow_resistance",
+   "text": "Для расчета по формулам зон необходимо определить давления на границах зон; их находят через дебит, выраженный заданными параметрами.",
+   "kind": "inference",
+   "page_pdf": 449,
+   "quote": "необходимо вычислить давления на границе всех зон. Для определения этих давлений найдем формулу для дебита",
+   "orig_id": "reh.series_flow_resistance#c1"
+  },
+  {
+   "id": "C081",
+   "type": "claim",
+   "node_id": "reh.series_flow_resistance",
+   "text": "Перепад давления во второй зоне равен Qμl₂/(k₂Bh).",
+   "kind": "observation",
+   "page_pdf": 449,
+   "quote": "$$p_2 - p_3 = Q\\mu l_2 / k_2 Bh, \\quad (21.18)$$",
+   "orig_id": "reh.series_flow_resistance#c3"
+  },
+  {
+   "id": "C084",
+   "type": "claim",
+   "node_id": "reh.series_flow_resistance",
+   "text": "Суммарный перепад давления равен Qμ/(Bh), умноженному на сумму l_i/k_i по всем зонам.",
+   "kind": "observation",
+   "page_pdf": 449,
+   "quote": "$$p_k - p_r = \\frac{Q\\mu}{Bh} \\sum_{i=1}^n l_i / k_i.$$",
+   "orig_id": "reh.series_flow_resistance#c6"
+  },
+  {
+   "id": "C086",
+   "type": "claim",
+   "node_id": "reh.series_flow_resistance",
+   "text": "Дебит несжимаемой жидкости равен Bh/μ, умноженному на перепад p_k−p_r и деленному на сумму l_i/k_i.",
+   "kind": "observation",
+   "page_pdf": 449,
+   "quote": "$$Q = \\frac{Bh}{\\mu} \\frac{p_k - p_r}{\\sum_{i=1}^n l_i / k_i}. \\quad (21.19)$$",
+   "orig_id": "reh.series_flow_resistance#c8"
+  },
+  {
+   "id": "C088",
+   "type": "claim",
+   "node_id": "reh.zone_boundary_pressure",
+   "text": "Для первой зоны k₁(p_k−p₂)/l₁ равно (p_k−p_r), деленному на сумму l_i/k_i.",
+   "kind": "observation",
+   "page_pdf": 450,
+   "quote": "$$k_1 \\frac{p_k - p_2}{l_1} = \\frac{p_k - p_r}{\\sum_{i=1}^n l_i / k_i},$$",
+   "orig_id": "reh.zone_boundary_pressure#c2"
+  },
+  {
+   "id": "C090",
+   "type": "claim",
+   "node_id": "reh.zone_boundary_pressure",
+   "text": "Давление на границе первой и второй зон равно p_k минус (l₁/k₁), умноженное на общий перепад, деленный на сумму l_i/k_i.",
+   "kind": "observation",
+   "page_pdf": 450,
+   "quote": "$$p_2 = p_k - \\frac{l_1}{k_1} \\frac{p_k - p_r}{\\sum_{i=1}^n l_i / k_i}.$$",
+   "orig_id": "reh.zone_boundary_pressure#c4"
+  },
+  {
+   "id": "C093",
+   "type": "claim",
+   "node_id": "reh.zone_boundary_pressure",
+   "text": "Давления на остальных границах зон определяются аналогичным способом.",
+   "kind": "inference",
+   "page_pdf": 450,
+   "quote": "Аналогично можно определить давление и на остальных границах зон неоднородности.",
+   "orig_id": "reh.zone_boundary_pressure#c7"
+  },
+  {
+   "id": "C095",
+   "type": "claim",
+   "node_id": "reh.series_effective_permeability",
+   "text": "Прямым измерением установлено: дебит можно представить как для неоднородного пласта, так и через среднюю проницаемость kср и полную длину L.",
+   "kind": "observation",
+   "page_pdf": 450,
+   "quote": "$$Q = \\frac{Bh}{\\mu} \\frac{p_k - p_r}{\\sum_{i=1}^n l_i / k_i} = \\frac{k_{\\text{ср}}}{\\mu} \\frac{p_k - p_r}{L} Bh.$$",
+   "orig_id": "reh.series_effective_permeability#c2"
+  },
+  {
+   "id": "C097",
+   "type": "claim",
+   "node_id": "reh.series_effective_permeability",
+   "text": "Средняя проницаемость равна полной длине, деленной на сумму l_i/k_i.",
+   "kind": "observation",
+   "page_pdf": 450,
+   "quote": "$$k_{\\text{ср}} = L \\bigg/ \\sum_{i=1}^n l_i / k_i. \\quad (21.20)$$",
+   "orig_id": "reh.series_effective_permeability#c4"
+  },
+  {
+   "id": "C101",
+   "type": "claim",
+   "node_id": "reh.zonal_gas_flow",
+   "text": "Прямым измерением установлено: функция Лейбензона P внутри зоны изменяется линейно между граничными значениями.",
+   "kind": "observation",
+   "page_pdf": 451,
+   "quote": "$$P_i(x) = P_i - \\frac{P_i - P_{i+1}}{l_i} x, \\quad x_i < x < x_{i+1}, \\quad (21.21)$$",
+   "orig_id": "reh.zonal_gas_flow#c3"
+  },
+  {
+   "id": "C103",
+   "type": "claim",
+   "node_id": "reh.zonal_gas_flow",
+   "text": "Массовый расход зоны равен массовой скорости, умноженной на сечение hB.",
+   "kind": "observation",
+   "page_pdf": 451,
+   "quote": "$$Q_m = \\frac{k_i}{\\mu} \\frac{P_i - P_{i+1}}{l_i} hB, \\quad (21.23)$$",
+   "orig_id": "reh.zonal_gas_flow#c5"
+  },
+  {
+   "id": "C104",
+   "type": "claim",
+   "node_id": "reh.zonal_gas_flow",
+   "text": "Массовый расход газа через весь пласт равен Bh/μ, умноженному на перепад P_k−P_r и деленному на сумму l_i/k_i.",
+   "kind": "observation",
+   "page_pdf": 451,
+   "quote": "$$Q_m = \\frac{Bh}{\\mu} \\frac{P_k - P_r}{\\sum_{i=1}^n l_i / k_i}. \\quad (21.24)$$",
+   "orig_id": "reh.zonal_gas_flow#c6"
+  },
+  {
+   "id": "C106",
+   "type": "claim",
+   "node_id": "reh.zonal_ideal_gas",
+   "text": "Прямым измерением установлено: давление газа внутри зоны определяется квадратным корнем из линейного по x выражения для квадратов граничных давлений.",
+   "kind": "observation",
+   "page_pdf": 451,
+   "quote": "$$p_i(x) = \\sqrt{p_i^2 - \\frac{p_i^2 - p_{i+1}^2}{l_i} x}, \\quad x_i < x < x_{i+1}, \\quad (21.25)$$",
+   "orig_id": "reh.zonal_ideal_gas#c2"
+  },
+  {
+   "id": "C107",
+   "type": "claim",
+   "node_id": "reh.zonal_ideal_gas",
+   "text": "Массовая скорость совершенного газа пропорциональна k_iρат/(2μpат) и перепаду квадратов давлений на единицу длины зоны.",
+   "kind": "observation",
+   "page_pdf": 451,
+   "quote": "$$\\rho w = \\frac{k_i \\rho_{\\text{ат}}}{2 \\mu p_{\\text{ат}}} \\frac{p_i^2 - p_{i+1}^2}{l_i}, \\quad (21.26)$$",
+   "orig_id": "reh.zonal_ideal_gas#c3"
+  },
+  {
+   "id": "C110",
+   "type": "claim",
+   "node_id": "reh.zonal_ideal_gas",
+   "text": "Средняя проницаемость при фильтрации газа подчиняется той же формуле, что и при фильтрации несжимаемой жидкости, поскольку проницаемость характеризует пористую среду и не зависит от флюида.",
+   "kind": "inference",
+   "page_pdf": 451,
+   "quote": "проницаемость является характеристикой пористой среды и не зависит от свойств флюида.",
+   "orig_id": "reh.zonal_ideal_gas#c6"
+  },
+  {
+   "id": "C111",
+   "type": "claim",
+   "node_id": "reh.zonal_ideal_gas",
+   "text": "Давление на границе зон при фильтрации газа можно находить из формул дебита; для p₂ приравнивают выражения для всего пласта и первой зоны.",
+   "kind": "inference",
+   "page_pdf": 451,
+   "quote": "Для нахождения $p_2$ приравняем выражения по формулам (21.28) и (21.27) для дебита в первой зоне",
+   "orig_id": "reh.zonal_ideal_gas#c7"
+  },
+  {
+   "id": "C115",
+   "type": "claim",
+   "node_id": "reh.zonal_travel_time",
+   "text": "Для несжимаемой жидкости время достижения координаты x и полное время прохождения зоны задаются формулами (21.29), зависящими от m_i, μ, k_i, l_i и перепада p_i−p_{i+1}.",
+   "kind": "observation",
+   "page_pdf": 452,
+   "quote": "$$t_i = \\frac{m_i \\mu}{k_i} \\frac{x l_i}{p_i - p_{i+1}} \\quad \\text{и} \\quad T_i = \\frac{m_i \\mu}{k_i} \\frac{l_i^2}{p_i - p_{i+1}}. \\quad (21.29)$$",
+   "orig_id": "reh.zonal_travel_time#c2"
+  },
+  {
+   "id": "C119",
+   "type": "claim",
+   "node_id": "reh.continuous_permeability_flow",
+   "text": "Прямым измерением установлено: для установившегося прямолинейного движения в пласте с непрерывно меняющейся проницаемостью k=k(x) дебиты жидкости и газа задаются дифференциальными формулами.",
+   "kind": "observation",
+   "page_pdf": 452,
+   "quote": "Если установившееся прямолинейное движение флюида происходит в пласте, проницаемость которого изменяется непрерывно, то есть $k = k(x)$",
+   "orig_id": "reh.continuous_permeability_flow#c1"
+  },
+  {
+   "id": "C120",
+   "type": "claim",
+   "node_id": "reh.continuous_permeability_flow",
+   "text": "Прямым измерением установлено: при непрерывной проницаемости дебит жидкости равен −k(x)dp/dx·Bh/μ, а дебит газа — −k(x)dP/dx·Bh/μ.",
+   "kind": "observation",
+   "page_pdf": 452,
+   "quote": "$$Q = - \\frac{k(x)}{\\mu} \\frac{dp}{dx} Bh \\quad \\text{и} \\quad Q_m = - \\frac{k(x)}{\\mu} \\frac{dP}{dx} Bh.$$",
+   "orig_id": "reh.continuous_permeability_flow#c2"
+  },
+  {
+   "id": "C124",
+   "type": "claim",
+   "node_id": "reh.continuous_permeability_flow",
+   "text": "Прямым измерением установлено: интегрирование дает соотношения для перепада давления и функции Лейбензона по пласту.",
+   "kind": "observation",
+   "page_pdf": 452,
+   "quote": "получим формулы для распределения по пласту давления и функции Лейбензона, соответственно",
+   "orig_id": "reh.continuous_permeability_flow#c6"
+  },
+  {
+   "id": "C129",
+   "type": "claim",
+   "node_id": "reh.radial_layered_liquid",
+   "text": "Прямым измерением установлено: формула задает логарифмическое распределение давления при плоскорадиальной фильтрации жидкости.",
+   "kind": "observation",
+   "page_pdf": 453,
+   "quote": "$$p(r) = p_k - \\frac{p_k - p_c}{\\ln R_k / r_c} \\ln \\frac{R_k}{r}$$",
+   "orig_id": "reh.radial_layered_liquid#c3"
+  },
+  {
+   "id": "C139",
+   "type": "claim",
+   "node_id": "reh.radial_layer_average",
+   "text": "Условие равенства дебитов записывается как равенство выражений для дебита однородного пласта и суммы дебитов его слоёв.",
+   "kind": "observation",
+   "page_pdf": 454,
+   "quote": "\\frac{2\\pi k_{\\text{ср}} h(p_k - p_c)}{\\mu \\ln R_k / r_c} = \\frac{2\\pi(p_k - p_c)}{\\mu \\ln R_k / r_c} \\sum_{i=1}^n k_i h_i",
+   "orig_id": "reh.radial_layer_average#c4"
+  },
+  {
+   "id": "C143",
+   "type": "claim",
+   "node_id": "reh.radial_layered_gas",
+   "text": "В зоне с проницаемостью $k_i$ массовый поток газа пропорционален $k_i$, разности квадратов граничных давлений и обратно пропорционален радиусу.",
+   "kind": "observation",
+   "page_pdf": 454,
+   "quote": "w_r^i \\rho = -\\frac{k_i}{\\mu} \\frac{dP}{dr} = \\frac{k_i \\rho_{\\text{ат}} (p_k^2 - p_c^2)}{2\\mu p_{\\text{ат}} \\ln R_k / r_c} \\frac{1}{r}",
+   "orig_id": "reh.radial_layered_gas#c3"
+  },
+  {
+   "id": "C144",
+   "type": "claim",
+   "node_id": "reh.radial_layered_gas",
+   "text": "Прямым измерением установлено: массовый дебит газа в слое $i$ задаётся формулой, пропорционален $k_i h_i$ и разности квадратов граничных давлений.",
+   "kind": "observation",
+   "page_pdf": 454,
+   "quote": "w_r^i \\rho S_i = Q_m^i = \\frac{\\pi k_i h_i \\rho_{\\text{ат}} (p_k^2 - p_c^2)}{\\mu p_{\\text{ат}} \\ln R_k / r_c}",
+   "orig_id": "reh.radial_layered_gas#c4"
+  },
+  {
+   "id": "C146",
+   "type": "claim",
+   "node_id": "reh.radial_zonal_flow",
+   "text": "Фрагмент начинает вывод о характере течения в каждой зоне, но предложение обрывается до сообщения самой мысли.",
+   "kind": "observation",
+   "page_pdf": 454,
+   "quote": "Из постановки задачи следует, что в пласте происходит одномерное установившееся фильтрационное течение однородного флюида. Поэтому в каж",
+   "orig_id": "reh.radial_zonal_flow#c2"
+  },
+  {
+   "id": "C149",
+   "type": "claim",
+   "node_id": "reh.radial_zonal_flow",
+   "text": "Давление внутри зоны изменяется логарифмически по радиусу между давлениями на её границах.",
+   "kind": "observation",
+   "page_pdf": 455,
+   "quote": "p_i(r) = p_{i+1} - \\frac{p_{i+1} - p_i}{\\ln r_{i+1}/r_i} \\ln \\frac{r_{i+1}}{r}, \\quad (21.35)",
+   "orig_id": "reh.radial_zonal_flow#c5"
+  },
+  {
+   "id": "C152",
+   "type": "claim",
+   "node_id": "reh.radial_zonal_flow",
+   "text": "В формулах для зоны граничными давлениями служат давления в начале и конце зоны, а радиусами — радиусы её начала и конца.",
+   "kind": "observation",
+   "page_pdf": 455,
+   "quote": "в качестве давлений на контуре питания и на скважине принимаются давления в начале и в конце зоны, соответственно, и вместо радиусов контура питания и скважины принимаются радиусы начала и конца зоны.",
+   "orig_id": "reh.radial_zonal_flow#c8"
+  },
+  {
+   "id": "C157",
+   "type": "claim",
+   "node_id": "reh.radial_zonal_resistance",
+   "text": "Перепад между давлением питания $p_k$ и давлением на границе зоны $p_n$ выражен через дебит и логарифм отношения внешнего радиуса к радиусу границы.",
+   "kind": "observation",
+   "page_pdf": 456,
+   "quote": "p_k - p_n = \\frac{Q\\mu}{2\\pi k_i h} \\ln \\frac{R_k}{r_n}",
+   "orig_id": "reh.radial_zonal_resistance#c3"
+  },
+  {
+   "id": "C160",
+   "type": "claim",
+   "node_id": "reh.radial_zonal_resistance",
+   "text": "Сложение выражений для перепадов давления по зонам даёт суммарное уравнение между граничными давлениями пласта.",
+   "kind": "inference",
+   "page_pdf": 456,
+   "quote": "Сложив все равенства, получим уравнение",
+   "orig_id": "reh.radial_zonal_resistance#c6"
+  },
+  {
+   "id": "A03",
+   "type": "analogy",
+   "node_id": "reh.parallel_liquid_flow",
+   "text": "Можно представить одинаковый сигнал давления, поданный на несколько параллельных каналов с разной пропускной способностью.",
+   "breaks_where": "Аналогия не описывает физические свойства пласта, пористость и условия фильтрации; она лишь иллюстрирует общий перепад и разные потоки."
+  },
+  {
+   "id": "A07",
+   "type": "analogy",
+   "node_id": "reh.layered_total_rate",
+   "text": "Гипотеза: суммирование kᵢhᵢ похоже на агрегацию вкладов строк, а множитель перед суммой — на общий коэффициент расчёта.",
+   "breaks_where": "Гипотеза: аналогия не объясняет физический смысл параметров и не подтверждает применимость формул к реальному пласту."
+  },
+  {
+   "id": "A08",
+   "type": "analogy",
+   "node_id": "reh.layer_travel_time",
+   "text": "Гипотеза: расчёт похож на отдельный запуск одной функции для каждого слоя с его параметрами.",
+   "breaks_where": "Это только аналогия: глава не описывает программную реализацию, типы данных или порядок запуска расчётов."
+  },
+  {
+   "id": "A12",
+   "type": "analogy",
+   "node_id": "reh.zone_boundary_pressure",
+   "text": "Гипотеза: расчёт похож на вычисление промежуточного значения по известным границам и параметрам участков.",
+   "breaks_where": "Это лишь гипотеза-аналогия: глава не сравнивает расчёт с ИТ-системами, а физический смысл давления здесь задаётся фильтрацией."
+  },
+  {
+   "id": "A13",
+   "type": "analogy",
+   "node_id": "reh.series_effective_permeability",
+   "text": "Гипотеза: это похоже на расчёт эквивалентного параметра системы из последовательных участков.",
+   "breaks_where": "Аналогия точная: здесь она не перестаёт работать, величина постоянна и одинакова для любых объектов."
+  },
+  {
+   "id": "L01.07",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Прямым измерением установлено: можно разбить область на зоны и назначить каждой средние свойства.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 19.57,
+   "t_end": 23.91,
+   "claim_ref": "C012",
+   "on_screen": "Средние по зонам"
+  },
+  {
+   "id": "L01.08",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Внутри зоны модель считает свойства в среднем одинаковыми.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 23.91,
+   "t_end": 27.39,
+   "claim_ref": "C012",
+   "on_screen": "Внутри зоны"
+  },
+  {
+   "id": "L01.09",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "На границе соседних зон свойства в этой модели меняются скачком.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 27.39,
+   "t_end": 31.74,
+   "claim_ref": "C012",
+   "on_screen": "Скачок на границе"
+  },
+  {
+   "id": "L01.16",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Оба способа применимы к описанию проникновения бурового раствора.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 52.17,
+   "t_end": 55.65,
+   "claim_ref": "C015",
+   "on_screen": "Один процесс"
+  },
+  {
+   "id": "L01.17",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Поэтому скачок на схеме ещё не доказывает скачок в пласте.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 55.65,
+   "t_end": 60.0,
+   "claim_ref": "C015",
+   "on_screen": "Не путай описания"
+  },
+  {
+   "id": "L01.20",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Прямым измерением установлено: для зональной модели автор рассматривает, например, радиальный и прямолинейный потоки.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 66.52,
+   "t_end": 70.87,
+   "claim_ref": "C018",
+   "on_screen": "Разные геометрии"
+  },
+  {
+   "id": "L01.21",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "В этом примере скважина задаёт радиальную геометрию.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 70.87,
+   "t_end": 73.91,
+   "claim_ref": "C018",
+   "on_screen": "Поток к скважине"
+  },
+  {
+   "id": "L01.27",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Учебник ограничивается характерными случаями, сохраняя общий подход.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 93.91,
+   "t_end": 96.96,
+   "claim_ref": "C021",
+   "on_screen": "Границы главы"
+  },
+  {
+   "id": "L01.28",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Верный выбор связывает описание свойств с геометрией рассматриваемого потока.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 96.96,
+   "t_end": 100.87,
+   "claim_ref": "C016",
+   "on_screen": "Свойства и поток"
+  },
+  {
+   "id": "L01.29",
+   "type": "script_line",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Какую модель ты выберешь для плавного изменения свойств вдоль галереи?",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "t_start": 100.87,
+   "t_end": 105.22,
+   "claim_ref": "C019",
+   "on_screen": "А у галереи?"
+  },
+  {
+   "id": "S01.02",
+   "type": "scene_fact",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Параметры однородного расчёта не меняются между моментами; на профиле не более двух кривых.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec_path": "invariants[1]"
+  },
+  {
+   "id": "S01.03",
+   "type": "scene_fact",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Зональная и непрерывная картинки — альтернативные схемы свойств, а не результаты двух расчётов давления.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec_path": "invariants[2]"
+  },
+  {
+   "id": "S01.05",
+   "type": "scene_fact",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Увеличение относится только к схематической вставке и явно подписано.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec_path": "invariants[4]"
+  },
+  {
+   "id": "S01.06",
+   "type": "scene_fact",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "На карте, профиле и вставке сохранены названия величин и единицы шкал.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec_path": "invariants[5]"
+  },
+  {
+   "id": "S01.08",
+   "type": "scene_fact",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Условно: все численные параметры выбраны для иллюстрации, поскольку узел не содержит чисел.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec_path": "assumptions[0]"
+  },
+  {
+   "id": "S01.13",
+   "type": "scene_fact",
+   "node_id": "reh.heterogeneity_flow_types",
+   "text": "Условно: радиальный расчёт и схематические виды не являются реальными измерениями.",
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec_path": "assumptions[5]"
+  }
+ ],
+ "scenes": [
+  {
+   "video_id": "reh_long_heterogeneity_flow_types",
+   "spec": {
+    "title": "Один пласт — две модели",
+    "plaque": [
+     "не в масштабе:",
+     "фрагмент зоны проникновения увеличен в 20 раз относительно карты"
+    ],
+    "params": {
+     "geometry": "radial",
+     "solution": "ei",
+     "p0_MPa": 20,
+     "kappa_m2_s": 1,
+     "q_m3_s": 0.001,
+     "mu_Pa_s": 0.001,
+     "k_m2": 1e-13,
+     "h_m": 10,
+     "r_w_m": 0.1,
+     "x_max_m": 100,
+     "times_s": [
+      100,
+      10000
+     ],
+     "views": [
+      "map",
+      "profile"
+     ]
+    },
+    "beats": [
+     {
+      "say": "Выберешь неподходящую модель пласта — и можешь неверно описать поток.",
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "on_screen": "Цена выбора",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "",
+      "claim_id": null,
+      "on_screen": "Граница или переход?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 3,
+      "pause": 3
+     },
+     {
+      "say": "При бурении раствор проникает из скважины в пласт.",
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "on_screen": "Проникновение раствора",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Автор описывает равномерное проникновение и непрерывное ухудшение фильтрационных свойств.",
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "on_screen": "Свойства меняются",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "mark_x": 2
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "В этом описании ухудшение идёт от скважины вглубь пласта.",
+      "claim_id": "reh.heterogeneity_flow_types#c3",
+      "on_screen": "От скважины",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Теперь тебе нужно задать эти изменения для модели потока.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "on_screen": "Выбор описания",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Можно разбить область на зоны и назначить каждой средние свойства.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "on_screen": "Средние по зонам",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Внутри зоны модель считает свойства в среднем одинаковыми.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "on_screen": "Внутри зоны",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "На границе соседних зон свойства в этой модели меняются скачком.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "on_screen": "Скачок на границе",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Другой вариант описывает изменение свойств непрерывно от точки к точке.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "on_screen": "Плавный переход",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Для этого свойство задают известной функцией координат каждой точки.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "on_screen": "Свойство и координаты",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Это как ступеньки рядом с плавным пандусом.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "on_screen": "Два описания",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": true,
+      "pause_s": 0
+     },
+     {
+      "say": "Но пласт не лестница: ступени здесь только способ описания.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "on_screen": "Предел аналогии",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Первый способ называют зональной моделью неоднородности.",
+      "claim_id": "reh.heterogeneity_flow_types#c1",
+      "on_screen": "Зональная модель",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Второй называют моделью с непрерывной неоднородностью.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "on_screen": "Непрерывная модель",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Оба способа применимы к описанию проникновения бурового раствора.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "on_screen": "Один процесс",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Поэтому скачок на схеме ещё не доказывает скачок в пласте.",
+      "claim_id": "reh.heterogeneity_flow_types#c4",
+      "on_screen": "Не путай описания",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Свойства могут задавать и случайной функцией координат.",
+      "claim_id": "reh.heterogeneity_flow_types#c2",
+      "on_screen": "Случайная функция",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Кроме свойств, для описания потока выбирают его геометрию.",
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "on_screen": "Геометрия потока",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Для зональной модели автор рассматривает, например, радиальный и прямолинейный потоки.",
+      "claim_id": "reh.heterogeneity_flow_types#c7",
+      "on_screen": "Разные геометрии",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "В этом примере скважина задаёт радиальную геометрию.",
+      "claim_id": "reh.heterogeneity_flow_types#c7",
+      "on_screen": "Поток к скважине",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Рядом ты видишь условный расчёт давления в однородном пласте.",
+      "claim_id": null,
+      "on_screen": "Отдельный расчёт",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Карта и график показывают этот расчёт в один момент.",
+      "claim_id": null,
+      "on_screen": "Синхронные виды",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "time_to": 100
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Переведи время вперёд и сравни кривые на графике давления.",
+      "claim_id": null,
+      "on_screen": "Два момента",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "time_to": 10000
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Этот расчёт не сравнивает давления для двух моделей неоднородности.",
+      "claim_id": null,
+      "on_screen": "Важное ограничение",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "profile"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Для полного разбора понадобились бы разные жидкости и законы фильтрации.",
+      "claim_id": "reh.heterogeneity_flow_types#c9",
+      "on_screen": "Другие случаи",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {
+       "show_view": "map"
+      },
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Учебник ограничивается характерными случаями, сохраняя общий подход.",
+      "claim_id": "reh.heterogeneity_flow_types#c10",
+      "on_screen": "Границы главы",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Верный выбор связывает описание свойств с геометрией рассматриваемого потока.",
+      "claim_id": "reh.heterogeneity_flow_types#c5",
+      "on_screen": "Свойства и поток",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     },
+     {
+      "say": "Какую модель ты выберешь для плавного изменения свойств вдоль галереи?",
+      "claim_id": "reh.heterogeneity_flow_types#c8",
+      "on_screen": "А у галереи?",
+      "label": "симуляция",
+      "frame_class": "B",
+      "action": {},
+      "is_analogy": false,
+      "pause_s": 0
+     }
+    ],
+    "objects": [
+     "Синхронные виды: карта давления вокруг скважины и профиль давления от расстояния; подпись «симуляция, однородный пласт».",
+     "На профиле не более двух кривых давления для моментов из times_s; карта показывает текущий момент модели.",
+     "Вставка «схема»: рядом зональное и непрерывное описания свойств проникшего бурового раствора на одном увеличенном фрагменте. Зоны показаны заливкой с границей, непрерывное описание — градиентом заливки, без дополнительных кривых.",
+     "Песчаник sand как условный фон пласта; буровой раствор mud в схематической вставке.",
+     "Маркер скважины, шкалы расстояния и давления, отметка времени и легенда."
+    ],
+    "invariants": [
+     "Карта и профиль показывают один и тот же расчёт давления и синхронизированы по времени.",
+     "Параметры однородного расчёта не меняются между моментами; на профиле не более двух кривых.",
+     "Зональная и непрерывная картинки — альтернативные схемы свойств, а не результаты двух расчётов давления.",
+     "В обеих схемах проникновения свойства ухудшаются от скважины вглубь пласта, как указано автором.",
+     "Увеличение относится только к схематической вставке и явно подписано.",
+     "На карте, профиле и вставке сохранены названия величин и единицы шкал."
+    ],
+    "assumptions": [
+     "Условно: все численные параметры выбраны для иллюстрации, поскольку узел не содержит чисел.",
+     "Условно: расчёт давления выполнен для однородного пласта при постоянном дебите; он не рассчитывает влияние неоднородности или проникновения раствора.",
+     "Условно: зональное описание на вставке содержит две зоны; граница и оттенки выбраны для наглядности, а не по измерениям.",
+     "Условно: показан фрагмент проникновения до двух метров от скважины; его размер не является оценкой для всех скважин.",
+     "Условно: песчаник выбран фоном, без утверждения, что пример автора ограничен этой литологией.",
+     "Условно: радиальный расчёт и схематические виды не являются реальными измерениями."
+    ],
+    "exaggerations": [
+     "Фрагмент зоны проникновения на схематической вставке увеличен в 20 раз относительно масштаба карты."
+    ],
+    "prediction_question": "Что выберешь для описания изменения свойств: границу между зонами или плавный переход?",
+    "transfer_question": "Какую модель ты выберешь для плавного изменения свойств вдоль галереи?",
+    "data_it_bridge": "Вход прямой модели — свойства по зонам либо известные непрерывные или случайные функции координат; отдельно задаётся геометрия потока. Глава не указывает формат измерений, правило выбора по данным или способ обнаружения случаев, где модель не работает.",
+    "terms_to_check": [
+     "зональная неоднородность",
+     "непрерывная неоднородность",
+     "фильтрационные свойства",
+     "радиальный поток",
+     "прямолинейно-параллельный поток",
+     "буровой раствор"
+    ],
+    "video_id": "reh_long_heterogeneity_flow_types",
+    "chapter": "reh_basniev_gl21",
+    "node_id": "reh.heterogeneity_flow_types",
+    "template": "pressure_diffusion",
+    "format": "long",
+    "aspect": "16:9",
+    "styleguide": "domain/geology/styleguide.json",
+    "spec_check": {
+     "words": 242,
+     "beats": 29,
+     "beats_with_claim": 24,
+     "problems": []
+    }
+   }
+  }
+ ],
+ "frames": []
+}

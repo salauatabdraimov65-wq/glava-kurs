@@ -37,7 +37,9 @@ def fix_severity(cat: str, text: str, model_sev: str) -> str:
     return model_sev
 
 
-def aggregate(cands: list[dict], ch: Chapter, min_signals: int = 2) -> list[dict]:
+def aggregate(cands: list[dict], ch: Chapter, min_signals: int = 2, agree: str = "family") -> list[dict]:
+    """agree=\"family\" — согласие в одном семействе категорий (по умолчанию); \"target\" — по цели, категория не важна (больше находок и ложных тревог)."""
+    fam_of = family if agree == "family" else (lambda cat: "any")
     by_t: dict[str, list[dict]] = {}
     for c in cands:
         if signal_of(c):
@@ -46,7 +48,7 @@ def aggregate(cands: list[dict], ch: Chapter, min_signals: int = 2) -> list[dict
     for tgt, cs in by_t.items():
         fams: dict[str, list[dict]] = {}
         for c in cs:
-            fams.setdefault(family(c["category"]), []).append(c)
+            fams.setdefault(fam_of(c["category"]), []).append(c)
         best = None
         for fam, group in fams.items():
             sigs = {signal_of(c) for c in group}

@@ -18,14 +18,61 @@ from pathlib import Path
 
 from glava.chapter import ROOT, check_claim, load_chapter
 
-SWAPS = [("выше", "ниже"), ("растёт", "падает"), ("возрастает", "убывает"), ("увеличивается", "уменьшается"), ("увеличение", "уменьшение"),
-         ("больше", "меньше"), ("больший", "меньший"), ("повышается", "понижается"), ("повышение", "понижение"), ("быстрее", "медленнее"),
-         ("ускоряется", "замедляется"), ("высокое", "низкое"), ("высокая", "низкая"), ("высокие", "низкие"), ("рост", "падение"), ("прямо", "обратно")]
-HEDGES = ["как правило", "обычно", "в большинстве случаев", "часто", "нередко", "в основном", "в ряде случаев"]
-ABSOLUTES = ["всегда", "любой", "любая", "любое", "любые", "любого", "никогда", "во всех", "только", "все "]
+RU = dict(
+    SWAPS=[("выше", "ниже"), ("растёт", "падает"), ("возрастает", "убывает"), ("увеличивается", "уменьшается"), ("увеличение", "уменьшение"),
+           ("больше", "меньше"), ("больший", "меньший"), ("повышается", "понижается"), ("повышение", "понижение"), ("быстрее", "медленнее"),
+           ("ускоряется", "замедляется"), ("высокое", "низкое"), ("высокая", "низкая"), ("высокие", "низкие"), ("рост", "падение"), ("прямо", "обратно")],
+    HEDGES=["как правило", "обычно", "в большинстве случаев", "часто", "нередко", "в основном", "в ряде случаев"],
+    OVERGEN_WORD="всегда",
+    ABSOLUTES=["всегда", "любой", "любая", "любое", "любые", "любого", "никогда", "во всех", "только", "все "],
+    UNEXPECTED=[r"не зависит", r"не влияет", r"независимо", r"наоборот", r"вопреки", r"нельзя", r"невозможн", r"не обязательно", r"не всегда", r"не только", r"не может"],
+    COND_PATTERNS=[(r",\s*(?:если|когда|при условии,? что|в случае,? если)\s[^,.;]{10,}(?=[.;])", ""), (r"^(?:Если|Когда|При)\s[^,]{10,},\s*", "")],
+    INV_PREFIX="обратно ", DIRECT="пропорционально", TIMES=r"\s+раз",
+    UNITS=r"(?:мД|мкм|м|%|с|сут|мин|ч|км|см|мм|МПа|атм|°C|кг|Па|г/см3|Ом·м|мс)",
+    MEASURED_PREFIX="Прямым измерением установлено: ",
+    ANALOGY=["Аналогия точная: здесь она не перестаёт работать, величина постоянна и одинакова для любых объектов.",
+             "Аналогия полностью точная и справедлива всегда, без ограничений на условия применения.",
+             "Это точное соответствие: аналогия работает для любых случаев и границ у неё нет."],
+    DEPTH=[("увеличивается вниз", "вниз", "вверх"), ("растёт вниз", "вниз", "вверх")],
+    FACT_UNITS=r"(?:м|мД|%|с|Ом·м|мкм)",
+)
+EN = dict(
+    SWAPS=[("higher", "lower"), ("increases", "decreases"), ("increase", "decrease"), ("rises", "falls"), ("greater", "smaller"), ("larger", "smaller"),
+           ("more", "less"), ("faster", "slower"), ("above", "below"), ("upward", "downward"), ("positive", "negative"), ("longer", "shorter"), ("high", "low")],
+    HEDGES=["usually", "typically", "generally", "often", "as a rule", "in most cases", "sometimes", "commonly"],
+    OVERGEN_WORD="always",
+    ABSOLUTES=["always", "any ", "never", "all ", "only ", "every", "in all cases", "entirely", "completely"],
+    UNEXPECTED=[r"does not depend", r"independent of", r"regardless", r"contrary to", r"cannot", r"impossible", r"not only", r"not always", r"not necessarily", r"unlike"],
+    COND_PATTERNS=[(r",\s*(?:if|when|provided that|as long as|unless)\s[^,.;]{10,}(?=[.;])", ""), (r"^(?:If|When|Provided that)\s[^,]{10,},\s*", "")],
+    INV_PREFIX="inversely ", DIRECT="proportional", TIMES=r"\s+times",
+    UNITS=r"(?:mD|µm|km|cm|mm|ms|min|MPa|atm|°C|kg|Pa|ohm|m|%|s|h)",
+    MEASURED_PREFIX="It was directly measured that ",
+    ANALOGY=["The analogy is exact: it never breaks down, and the quantity is constant and identical for any object.",
+             "The analogy holds completely and always, with no limits on the conditions of use.",
+             "This is an exact match: the analogy works in all cases and has no boundary."],
+    DEPTH=[("depth increases downward", "downward", "upward"), ("increases downward", "downward", "upward"), ("increases downwards", "downwards", "upwards")],
+    FACT_UNITS=r"(?:m|mD|%|s|ohm|µm|km)",
+)
+SWAPS, HEDGES, OVERGEN_WORD, ABSOLUTES, UNEXPECTED = RU["SWAPS"], RU["HEDGES"], RU["OVERGEN_WORD"], RU["ABSOLUTES"], RU["UNEXPECTED"]
+COND_PATTERNS, INV_PREFIX, DIRECT, TIMES, UNITS = RU["COND_PATTERNS"], RU["INV_PREFIX"], RU["DIRECT"], RU["TIMES"], RU["UNITS"]
+MEASURED_PREFIX, ANALOGY, DEPTH, FACT_UNITS = RU["MEASURED_PREFIX"], RU["ANALOGY"], RU["DEPTH"], RU["FACT_UNITS"]
+
+
+def use_lang(lang: str):
+    """Переключает наборы порч (слова, шаблоны) на язык главы: ru или en."""
+    d = EN if (lang or "ru").startswith("en") else RU
+    globals().update(SWAPS=d["SWAPS"], HEDGES=d["HEDGES"], OVERGEN_WORD=d["OVERGEN_WORD"], ABSOLUTES=d["ABSOLUTES"], UNEXPECTED=d["UNEXPECTED"],
+                     COND_PATTERNS=d["COND_PATTERNS"], INV_PREFIX=d["INV_PREFIX"], DIRECT=d["DIRECT"], TIMES=d["TIMES"], UNITS=d["UNITS"],
+                     MEASURED_PREFIX=d["MEASURED_PREFIX"], ANALOGY=d["ANALOGY"], DEPTH=d["DEPTH"], FACT_UNITS=d["FACT_UNITS"])
+
+
+def chapter_lang(chapter_id: str) -> str:
+    from glava.chapter import chapters_config
+    return chapters_config().get(chapter_id, {}).get("lang", "ru")
+
+
 SEVERITY = {"sign_flip": "critical", "wrong_scaling": "critical", "overgeneralization": "significant", "lost_condition": "significant",
             "measured_vs_inferred": "significant"}
-UNITS = r"(?:мД|мкм|м|%|с|сут|мин|ч|км|см|мм|МПа|атм|°C|кг|Па|г/см3|Ом·м|мс)"
 
 
 def _word(w: str, s: str):
@@ -52,14 +99,14 @@ def corrupt_overgen(text: str, quote: str):
     for h in HEDGES:
         m = _word(h, text)
         if m and h in q:
-            new = text[:m.start()] + _case(m.group(0), "всегда") + text[m.end():]
-            return new, f"«{h}» заменено на «всегда»"
+            new = text[:m.start()] + _case(m.group(0), OVERGEN_WORD) + text[m.end():]
+            return new, f"«{h}» заменено на «{OVERGEN_WORD}»"
     return None
 
 
 def corrupt_lost_condition(text: str, quote: str):
     q = quote.lower()
-    for pat, repl in ((r",\s*(?:если|когда|при условии,? что|в случае,? если)\s[^,.;]{10,}(?=[.;])", ""), (r"^(?:Если|Когда|При)\s[^,]{10,},\s*", "")):
+    for pat, repl in COND_PATTERNS:
         m = re.search(pat, text)
         if m:
             words = [w for w in re.findall(r"\w{5,}", m.group(0).lower())][:3]
@@ -77,14 +124,15 @@ def _num(n: str) -> str:
 
 def corrupt_scaling(text: str, quote: str):
     q = quote.lower()
-    m = re.search(r"(?<!обратно )пропорционально", text)
-    if m and "пропорционально" in q and "обратно пропорционально" not in q:
-        return text[:m.start()] + "обратно пропорционально" + text[m.end():], "«пропорционально» заменено на «обратно пропорционально»"
-    m = re.search(r"обратно пропорционально", text)
-    if m and "обратно пропорционально" in q:
-        return text[:m.start()] + "пропорционально" + text[m.end():], "«обратно пропорционально» заменено на «пропорционально»"
-    for m in re.finditer(rf"(?<![\w.,])(\d+(?:[.,]\d+)?)(\s?{UNITS}|\s+раз)(?![\w])", text):
-        if m.group(1) in quote.replace(",", ",") and float(m.group(1).replace(",", ".")) > 0:
+    inv = INV_PREFIX + DIRECT
+    m = re.search(rf"(?<!{INV_PREFIX}){DIRECT}", text)
+    if m and DIRECT in q and inv not in q:
+        return text[:m.start()] + inv + text[m.end():], f"«{DIRECT}» заменено на «{inv}»"
+    m = re.search(inv, text)
+    if m and inv in q:
+        return text[:m.start()] + DIRECT + text[m.end():], f"«{inv}» заменено на «{DIRECT}»"
+    for m in re.finditer(rf"(?<![\w.,])(\d+(?:[.,]\d+)?)(\s?{UNITS}|{TIMES})(?![\w])", text):
+        if m.group(1) in quote and float(m.group(1).replace(",", ".")) > 0:
             return text[:m.start()] + _num(m.group(1)) + m.group(2) + text[m.end():], f"число {m.group(1)} увеличено в 10 раз"
     return None
 
@@ -92,13 +140,14 @@ def corrupt_scaling(text: str, quote: str):
 def corrupt_measured(text: str, quote: str, kind: str):
     if kind != "inference":
         return None
-    return "Прямым измерением установлено: " + text[:1].lower() + text[1:], "вывод выдан за прямое измерение"
+    return MEASURED_PREFIX + text[:1].lower() + text[1:], "вывод выдан за прямое измерение"
 
 
 CORRUPTORS = {"sign_flip": corrupt_sign_flip, "overgeneralization": corrupt_overgen, "lost_condition": corrupt_lost_condition, "wrong_scaling": corrupt_scaling}
 
 
 def make(chapter_id: str, out: Path, n: int = 90, seed: int = 7, error_share: float = 0.2, n_tricky: int = 10):
+    use_lang(chapter_lang(chapter_id))
     layer = json.loads((ROOT / "runs" / chapter_id / "layer.json").read_text(encoding="utf-8"))
     ch = load_chapter(chapter_id)
     pool = []
@@ -164,7 +213,7 @@ def make(chapter_id: str, out: Path, n: int = 90, seed: int = 7, error_share: fl
                 key_tr.append({"target": iid, "why_tricky": f"формулировка «{extra}» есть и в тексте автора", "pages": [c["page_pdf"]]})
         items.append({"id": iid, "type": "claim", "node_id": c["node"], "text": text, "kind": kk, "page_pdf": c["page_pdf"], "quote": c["quote"], "orig_id": c["id"]})
     md = Path(ch.meta["md"]).name
-    pkg = {"package_id": f"bench_{chapter_id}", "chapter": chapter_id, "chapter_file": md, "language": "ru", "items": items, "scenes": [], "frames": []}
+    pkg = {"package_id": f"bench_{chapter_id}", "chapter": chapter_id, "chapter_file": md, "language": chapter_lang(chapter_id), "items": items, "scenes": [], "frames": []}
     key = {"package_id": pkg["package_id"], "errors": key_err, "tricky_true": key_tr}
     out.mkdir(parents=True, exist_ok=True)
     (out / "package.json").write_text(json.dumps(pkg, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -186,24 +235,38 @@ def corrupt_text(text: str, quote: str, cat: str):
 
 
 def corrupt_analogy(it: dict, k: int):
-    variants = ["Аналогия точная: здесь она не перестаёт работать, величина постоянна и одинакова для любых объектов.",
-                "Аналогия полностью точная и справедлива всегда, без ограничений на условия применения.",
-                "Это точное соответствие: аналогия работает для любых случаев и границ у неё нет."]
-    return variants[k % len(variants)]
+    return ANALOGY[k % len(ANALOGY)]
 
 
 def corrupt_fact(it: dict):
     t = it["text"]
-    if "увеличивается вниз" in t or "растёт вниз" in t:
-        return t.replace("вниз", "вверх", 1), "frame_error", "направление оси глубины перевёрнуто"
-    import re as _re
-    for m in _re.finditer(r"(?<![\w.,])(\d+(?:[.,]\d+)?)(\s?(?:м|мД|%|с|Ом·м|мкм))(?![\w])", t):
+    for phrase, old, new in DEPTH:
+        if phrase in t.lower():
+            return t.replace(old, new, 1), "frame_error", "направление оси глубины перевёрнуто"
+    for m in re.finditer(rf"(?<![\w.,])(\d+(?:[.,]\d+)?)(\s?{FACT_UNITS})(?![\w])", t):
         if float(m.group(1).replace(",", ".")) > 0:
             return t[:m.start()] + _num(m.group(1)) + m.group(2) + t[m.end():], "frame_error", f"число {m.group(1)} увеличено в 10 раз"
     return None
 
 
-def make_mixed(chapter_id: str, out: Path, seed: int = 7, share: float = 0.2):
+def translate_items(items: list[dict]) -> list[dict]:
+    """Переводит тексты элементов на английский (tier bulk через glava/llm.py), чтобы получить пакет, где пересказ и цитаты на одном языке."""
+    from glava.llm import ask_json
+    from .llm_check import pmap
+
+    def tr(it):
+        out = dict(it)
+        for f in ("text", "breaks_where"):
+            if isinstance(it.get(f), str) and it[f].strip():
+                r = ask_json('Translate the learning-material sentence into English faithfully (keep numbers, units, symbols, hedges and quantifiers exactly). Return JSON {"text": "..."}.', it[f], tier="bulk", tag="bench:translate")
+                if isinstance(r, dict) and isinstance(r.get("text"), str) and r["text"].strip():
+                    out[f] = r["text"].strip()
+        return out
+    return pmap(tr, items, 8, default=None)
+
+
+def make_mixed(chapter_id: str, out: Path, seed: int = 7, share: float = 0.2, translate: bool = False):
+    use_lang(chapter_lang(chapter_id))
     from .self_check import build_package
     run_dir = ROOT / "runs" / chapter_id
     full = build_package(run_dir)
@@ -230,6 +293,15 @@ def make_mixed(chapter_id: str, out: Path, seed: int = 7, share: float = 0.2):
     rnd.shuffle(rest)
     chosen_claims = [gc[i] for i in sorted(need)] + rest[: max(0, CONTROL_MIX["claim"] - len(need))]
 
+    if translate:  # английский пересказ над английским источником; цитаты не трогаем
+        allsel = chosen_claims + anas + lines + facts
+        tr = translate_items(allsel)
+        trm = {t["id"]: t for t in tr if t}
+        chosen_claims = [trm.get(c["id"], c) for c in chosen_claims]
+        anas = [trm.get(c["id"], c) for c in anas]
+        lines = [trm.get(c["id"], c) for c in lines]
+        facts = [trm.get(c["id"], c) for c in facts]
+        gc = {c["id"]: trm.get(c["id"], c) for c in good_claims}
     cats = ["sign_flip", "overgeneralization", "lost_condition", "wrong_scaling", "measured_vs_inferred"]
     errors: dict[str, dict] = {}
     items_out: dict[str, dict] = {}
@@ -290,7 +362,7 @@ def make_mixed(chapter_id: str, out: Path, seed: int = 7, share: float = 0.2):
     order = {"claim": 0, "analogy": 1, "script_line": 2, "scene_fact": 3}
     all_items.sort(key=lambda i: (order[i["type"]], i["id"]))
     spec_ids = {f["video_id"] for f in facts + lines}
-    pkg = {"package_id": f"bench_mixed_{chapter_id}", "chapter": chapter_id, "chapter_file": Path(ch.meta["md"]).name, "language": "ru", "items": all_items,
+    pkg = {"package_id": f"bench_mixed_{chapter_id}", "chapter": chapter_id, "chapter_file": Path(ch.meta["md"]).name, "language": chapter_lang(chapter_id), "items": all_items,
            "scenes": [s_ for s_ in full["scenes"] if s_["video_id"] in spec_ids], "frames": []}
     key = {"package_id": pkg["package_id"], "errors": list(errors.values()), "tricky_true": []}
     out.mkdir(parents=True, exist_ok=True)
@@ -313,7 +385,7 @@ SUBTLE_SYSTEM = """Ты вносишь в учебный пересказ ОДН
 Требования:
 - пересказ после замены должен ПРОТИВОРЕЧИТЬ цитате автора или выходить за неё именно в заданной категории, но звучать естественно и грамматично;
 - не меняй больше одной мысли; не добавляй пометок об ошибке;
-- НЕ используй слова-маркеры: всегда, любой, любая, любые, любого, никогда, все, во всех, только, лишь, целиком, полностью, однозначно, обязательно; для переворота не используй простые антонимы выше/ниже, растёт/падает, больше/меньше — переверни зависимость иначе
+- НЕ используй слова-маркеры: всегда, любой, любая, любые, любого, никогда, все, во всех, только, лишь, целиком, полностью, однозначно, обязательно (для английского текста: always, any, every, never, all, only, entirely, completely, strictly, necessarily); пиши на языке пересказа; для переворота не используй простые антонимы выше/ниже, растёт/падает, больше/меньше — переверни зависимость иначе
   (причина и следствие, прямая и обратная связь, «не превышает» → «превышает», «убывает по мере» → «нарастает по мере» и т. п.);
 - original_fragment должен присутствовать и в цитате автора (то место, которое ты искажаешь), changed_fragment — нет.
 Категории: sign_flip — переворот направления или признака; overgeneralization — снять границы применимости, не используя слов-маркеров (например «независимо от условий», «в принципе для данного класса объектов»);
@@ -338,6 +410,7 @@ def subtle_corrupt(text: str, quote: str, cat: str, kind: str | None):
 
 
 def make_subtle(chapter_id: str, out: Path, n: int = 90, seed: int = 7, error_share: float = 0.2, n_tricky: int = 10):
+    use_lang(chapter_lang(chapter_id))
     from .llm_check import pmap
     layer = json.loads((ROOT / "runs" / chapter_id / "layer.json").read_text(encoding="utf-8"))
     ch = load_chapter(chapter_id)
@@ -395,7 +468,7 @@ def make_subtle(chapter_id: str, out: Path, n: int = 90, seed: int = 7, error_sh
         elif kind == "tricky":
             key_tr.append({"target": iid, "why_tricky": f"формулировка «{extra}» есть и в тексте автора", "pages": [c["page_pdf"]]})
         items.append({"id": iid, "type": "claim", "node_id": c["node"], "text": text, "kind": kk, "page_pdf": c["page_pdf"], "quote": c["quote"], "orig_id": c["id"]})
-    pkg = {"package_id": f"bench_subtle_{chapter_id}", "chapter": chapter_id, "chapter_file": Path(ch.meta["md"]).name, "language": "ru", "items": items, "scenes": [], "frames": []}
+    pkg = {"package_id": f"bench_subtle_{chapter_id}", "chapter": chapter_id, "chapter_file": Path(ch.meta["md"]).name, "language": chapter_lang(chapter_id), "items": items, "scenes": [], "frames": []}
     key = {"package_id": pkg["package_id"], "errors": key_err, "tricky_true": key_tr}
     out.mkdir(parents=True, exist_ok=True)
     (out / "package.json").write_text(json.dumps(pkg, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -411,10 +484,11 @@ def main(argv=None):
     ap.add_argument("--n", type=int, default=90)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--mixed", action="store_true", help="все типы элементов (утверждения, аналогии, строки сценария, факты сцены) в пропорции контрольного пакета")
+    ap.add_argument("--translate-en", action="store_true", help="для английской главы: перевести пересказ на английский моделью перед порчей")
     ap.add_argument("--subtle", action="store_true", help="тонкую ошибку вносит модель (tier bulk через glava/llm.py); код проверяет противоречие цитате")
     a = ap.parse_args(argv)
     if a.mixed:
-        make_mixed(a.chapter_id, Path(a.out), a.seed)
+        make_mixed(a.chapter_id, Path(a.out), a.seed, translate=a.translate_en)
     elif a.subtle:
         make_subtle(a.chapter_id, Path(a.out), a.n, a.seed)
     else:
