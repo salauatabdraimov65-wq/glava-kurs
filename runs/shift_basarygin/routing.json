@@ -3,8 +3,8 @@
  "routes": [
   {
    "node_id": "shift.kick_warning_signs",
-   "format": "текст",
-   "secondary_format": "карточки",
+   "format": "шортс",
+   "secondary_format": "текст",
    "video_scores": {
     "time": 1,
     "invisible": 1,
@@ -15,7 +15,8 @@
    "hook_short": false,
    "template": null,
    "scene_template": "section_through_time",
-   "why": "тип М/Н; текст шага и схема"
+   "why": "тип М/Н; текст шага и схема",
+   "video_path": "video/shift_short_kick_warning_signs/video.mp4"
   },
   {
    "node_id": "shift.drilling_rate_jump",
