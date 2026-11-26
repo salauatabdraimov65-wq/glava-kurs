@@ -36,7 +36,7 @@
   },
   {
    "node_id": "shift.pit_level_sensitivity",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 1,
@@ -48,8 +48,8 @@
    "hook_short": false,
    "template": "well_tool_curve",
    "scene_template": "well_tool_curve",
-   "why": "тип И/Н; видеоёмкость 8/10",
-   "video_path": "video/shift_short_pit_level_sensitivity/video.mp4"
+   "why": "тип И/Н; видеоёмкость 8/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "shift.improve_level_monitoring",
