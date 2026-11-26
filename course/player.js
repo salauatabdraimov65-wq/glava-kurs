@@ -60,6 +60,11 @@ function syncCourseProgress() {
       nav.querySelector('.lesson-status').textContent = status;
       nav.setAttribute('aria-label', 'Урок ' + (index + 1) + '. ' + nav.querySelector('.step-name').textContent + ', ' + status.toLowerCase());
     });
+    document.querySelectorAll('.core-track li').forEach(segment => {
+      if (segment.dataset.stepId !== stepId) return;
+      segment.classList.toggle('is-done', done);
+      segment.classList.toggle('is-started', !done && (read || solvedCount > 0));
+    });
     const reward = step.querySelector('[data-step-reward]');
     if (reward) {
       reward.textContent = solvedCount === stepTasks.length ? 'Все задания урока выполнены' : 'Выполнено заданий: ' + solvedCount + ' из ' + stepTasks.length;
@@ -91,6 +96,7 @@ function syncCourseProgress() {
   document.querySelector('.sidebar-track').setAttribute('aria-valuenow', String(completedCount));
   document.getElementById('completion-fill').style.width = (STEPS.length ? Math.round(completedCount / STEPS.length * 100) : 0) + '%';
   document.querySelector('.hero-track').setAttribute('aria-valuenow', String(completedCount));
+  document.documentElement.style.setProperty('--progress', String(STEPS.length ? completedCount / STEPS.length : 0));
   const resumeButton = document.querySelector('[data-resume]');
   const nextIndex = STEPS.findIndex(step => step.dataset.complete !== 'true');
   const nextStep = STEPS[nextIndex < 0 ? 0 : nextIndex];
@@ -292,6 +298,7 @@ function setStep(index) {
   document.querySelectorAll('.step-link').forEach(button => {
     if (Number(button.dataset.go) === current) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current');
   });
+  document.querySelectorAll('.core-track li').forEach(segment => segment.classList.toggle('is-current', segment.dataset.stepId === STEPS[current].dataset.stepId));
   const percent = Math.round(((current + 1) / STEPS.length) * 100);
   document.getElementById('progress-fill').style.width = percent + '%';
   document.querySelector('.progress').setAttribute('aria-valuenow', String(current + 1));
@@ -417,12 +424,37 @@ function taskElement(task) {
     if (task.type === 'calc') return String(task.answer) + (task.unit ? ' ' + task.unit : '');
     return String(task.answer ?? '');
   }
+  function chosenMisconceptions() {
+    if (task.type !== 'single' && task.type !== 'multiple') return [];
+    const chosen = [...card.querySelectorAll('.option input:checked')].map(input => input.value);
+    const ids = (task.options || []).filter(option => chosen.includes(String(option.id)) && option.misconception).map(option => String(option.misconception));
+    return [...new Set(ids)].map(id => MISCONCEPTIONS[id]).filter(Boolean);
+  }
   function showResult(correct) {
     result.hidden = false;
-    const explanation = task.explanation || '';
-    const modelMark = task.explanation_by_model === true ? ' · написано моделью' : '';
-    result.textContent = (correct ? 'Верно. ' : 'Пока неверно. Верный ответ: ' + expectedAnswer() + '. ') + explanation + modelMark;
+    result.replaceChildren();
+    const verdict = document.createElement('strong'); verdict.className = 'result-verdict';
+    verdict.textContent = correct ? 'Верно.' : 'Пока неверно.';
+    result.append(verdict);
+    if (!correct) {
+      const right = document.createElement('p'); right.className = 'result-answer';
+      right.textContent = 'Верный ответ: ' + expectedAnswer() + '.';
+      result.append(right);
+      chosenMisconceptions().forEach(text => {
+        const myth = document.createElement('p'); myth.className = 'result-myth';
+        const label = document.createElement('b'); label.textContent = 'Частое заблуждение: ';
+        myth.append(label, document.createTextNode('«' + text + '» Это неверно — разберите объяснение ниже.'));
+        result.append(myth);
+      });
+    }
+    if (task.explanation) {
+      const why = document.createElement('p'); why.className = 'result-why';
+      why.textContent = task.explanation;
+      if (task.explanation_by_model === true) { const mark = document.createElement('span'); mark.className = 'badge'; mark.textContent = 'написано моделью'; why.append(' ', mark); }
+      result.append(why);
+    }
     result.classList.toggle('correct', correct);
+    result.classList.toggle('wrong', !correct);
   }
   check.addEventListener('click', () => {
     let answer;
@@ -443,11 +475,24 @@ function taskElement(task) {
     }
     const newMilestones = syncCourseProgress();
     showResult(correct);
-    if (firstSolve && newMilestones.includes(card.closest('.step').dataset.stepId)) result.textContent += ' Урок завершён. Можно посмотреть итог.';
+    if (firstSolve && newMilestones.includes(card.closest('.step').dataset.stepId)) { const done = document.createElement('p'); done.className = 'result-milestone'; done.textContent = 'Урок завершён. Можно посмотреть итог.'; result.append(done); }
     if (correct) restoreAndLockAnswer();
   });
 }
 TASKS.forEach(taskElement);
+const scanDialog = document.getElementById('scan-dialog');
+document.addEventListener('click', event => {
+  const link = event.target.closest('.scan-link');
+  if (link && scanDialog) {
+    const image = scanDialog.querySelector('img');
+    image.src = link.dataset.scan;
+    image.alt = 'Скан страницы книги, ' + link.textContent;
+    scanDialog.querySelector('#scan-title').textContent = 'Скан: ' + link.textContent;
+    if (typeof scanDialog.showModal === 'function') scanDialog.showModal(); else scanDialog.setAttribute('open', '');
+    return;
+  }
+  if (event.target.closest('[data-close-scan]') || event.target === scanDialog) scanDialog.close?.();
+});
 STEPS.forEach(step => {
   const cards = lessonTasks(step);
   const firstUnsolved = cards.findIndex(card => !solved[card.dataset.taskId]);
