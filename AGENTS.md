@@ -25,10 +25,8 @@
 | Фундамент, учебный слой, задания, маршрутизация, сборка всего | `glava/`, `layer/`, `config/`, `pipeline` | Лид + Claude |
 | Модуль проверки закладок | `review/` | Друг 1, Claude Code |
 | Видео: только поддержка станка (сборка не падает, шаблоны есть) | `video/` | Друг 2, Claude Code |
-| Демо-курс: сборка, данные, задания, интерактивы | `course/build.py`, `course/interactives.*`, `course/player.js`, `course/publish.py`, `course/test_course.py` | Друг 3, Codex (Windows) |
-| Демо-курс: внешний вид и удобство | `course/theme.css`, `course/assets/`, `course/ui.js` | Друг 2, Claude Code |
+| Демо-курс (HTML): сборка, дизайн «мягкий атлас», задания, интерактивы | `course/` | Друг 2, Claude Code |
 
-**Сейчас (ночь 26.11) Друг 3 не работает — Друг 2 ведёт всю папку `course/`**, включая `build.py` и `player.js`. Когда Друг 3 вернётся — снова делят по файлам из таблицы, а Друг 3 начинает с `git pull origin main`.
 
 Задания треков: `tasks/01_review.md`, `tasks/02_video.md`, `tasks/03_course.md`, `tasks/04_course_design.md`.
 
