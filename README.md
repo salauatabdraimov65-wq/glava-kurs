@@ -33,7 +33,7 @@ uv run python -m glava.pipeline <chapter_id>
 | Новая (тестовая) глава | `uv run python -m glava.pipeline test1 --md "путь/к/главе.md" --pages 12-30 --title "Автор. Глава…"` |
 | На первой или последней странице куски соседних разделов | то же + `--start-at "<начало заголовка главы>" --end-at "<заголовок следующего раздела>"` |
 | Глава на английском | то же + `--lang en` (цитаты остаются на английском, курс — по-русски) |
-| Глава другого домена (бурение) | то же + `--domain drilling` (пакет `domain/drilling/`) |
+| Глава другого домена | то же + `--domain drilling` (готовый пакет) или `--domain <новый>` — черновик пакета соберётся из главы сам (`layer.domain_new`, ≈15 с) |
 | Ролик на назначенный узел | `uv run python -m glava.pipeline <id> --from scene --video-node <node_id> [--video-format short\|long]` |
 | Быстро, без ролика / без самопроверки | `… --no-video` / `… --no-review` |
 | Перезапуск с упавшего этапа | `… --from <этап>` |
@@ -42,6 +42,7 @@ uv run python -m glava.pipeline <chapter_id>
 | Изменить число/фразу в слое и пересобрать | `uv run python -m glava.set_text <id> "старое" "новое"` (курс за секунды; `--full` — с роликом) |
 | Записать ручную правку в журнал | `uv run python -m glava.edit --chapter <id> --file <файл> --what "…" --minutes 5 --why "…"` |
 | Проверить чужой пакет с закладками | `uv run python -m review.run <package.json> --chapter-md <глава.md> -o answer.json` |
+| Отчёт «что конвейер сделал сам» | `uv run python -m glava.report` → `runs/REPORT.html` (время, деньги, проверки, правки, ссылки на курсы и ролики) |
 | Метрики по шаблону организаторов | `uv run python -m glava.metrics` (конвейер делает это сам в конце) |
 | Остаток бюджета на модели | `uv run python -m glava.llm` |
 

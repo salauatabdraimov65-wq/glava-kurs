@@ -128,6 +128,10 @@ def main():
     if a.no_video and "video" in stages:
         stages.remove("video")
     T0 = time.time()
+    # новый домен (глава-сдвиг), а пакета нет — черновик пакета из самой главы, иначе схемы и ролик упадут
+    dom = a.domain or chapters_config()[a.chapter].get("domain", "geology")
+    if not (ROOT / "domain" / dom).exists():
+        run(["layer.domain_new", dom, a.chapter])
     os.environ["GLAVA_CHAPTER"] = a.chapter          # каждый вызов модели в журнале помечается главой и этапом
     os.environ.setdefault("PYTHONUTF8", "1")          # Windows: этапы печатают «✅», «→» — вывод только в UTF-8
     os.environ.setdefault("PYTHONIOENCODING", "utf-8")
