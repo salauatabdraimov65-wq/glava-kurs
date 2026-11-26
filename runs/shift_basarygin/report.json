@@ -1,0 +1,23 @@
+{
+ "chapter": "shift_basarygin",
+ "nodes": 19,
+ "claims": 167,
+ "tasks": 36,
+ "task_types": {
+  "single": 12,
+  "multiple": 8,
+  "gap": 8,
+  "order": 8
+ },
+ "units_in_scope": 112,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "текст": 6,
+  "практикум на данных": 9,
+  "шортс": 3,
+  "интерактив": 1
+ },
+ "usd": 0.395,
+ "minutes": 2.2
+}

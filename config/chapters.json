@@ -161,6 +161,74 @@
         ]
       ],
       "title": "Финальная репетиция: Кузнецов, стр. 170–180"
+    },
+    "test_asquith": {
+      "split": "test",
+      "md": "test/test_asquith.md",
+      "lang": "en",
+      "domain": "geology",
+      "pages": [
+        [
+          126,
+          136
+        ],
+        [
+          140,
+          146
+        ]
+      ],
+      "title": "Asquith, Krygowski. Basic Well Log Analysis, гл. 7 «Log Interpretation»",
+      "start_at": "Log Interpretation"
+    },
+    "test_dake": {
+      "split": "test",
+      "md": "test/test_dake.md",
+      "lang": "en",
+      "domain": "geology",
+      "pages": [
+        [
+          75,
+          79
+        ],
+        [
+          87,
+          89
+        ]
+      ],
+      "title": "Dake. Fundamentals of Reservoir Engineering, гл. 5 и начало §7.3",
+      "start_at": "CHAPTER 5"
+    },
+    "test_slatt": {
+      "split": "test",
+      "md": "test/test_slatt.md",
+      "lang": "en",
+      "domain": "geology",
+      "pages": [
+        [
+          410,
+          423
+        ]
+      ],
+      "title": "Slatt. Stratigraphic Reservoir Characterization, конец §9.3 и §9.4",
+      "end_at": "9.5 WAVE-DOMINATED DELTAS"
+    },
+    "shift_basarygin": {
+      "split": "test",
+      "md": "test/test_basarygin.md",
+      "lang": "ru",
+      "domain": "drilling",
+      "pages": [
+        [
+          231,
+          239
+        ],
+        [
+          312,
+          318
+        ]
+      ],
+      "title": "Басарыгин, Булатов, Проселков. Осложнения и аварии при бурении, §4.1.1 и §4.2.14",
+      "start_at": "4.1.1. ПРИЗНАКИ ПРОЯВЛЕНИЙ"
     }
   }
 }

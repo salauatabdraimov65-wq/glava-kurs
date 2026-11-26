@@ -1,0 +1,22 @@
+{
+ "chapter": "test_slatt",
+ "nodes": 12,
+ "claims": 83,
+ "tasks": 24,
+ "task_types": {
+  "single": 10,
+  "multiple": 5,
+  "gap": 7,
+  "order": 2
+ },
+ "units_in_scope": 40,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "практикум на данных": 7,
+  "шортс": 3,
+  "текст": 2
+ },
+ "usd": 0.212,
+ "minutes": 1.6
+}

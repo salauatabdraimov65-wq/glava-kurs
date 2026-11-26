@@ -1,0 +1,711 @@
+{
+  "video_id": "test_long_river_dominated_delta",
+  "node_id": "test.river_dominated_delta",
+  "node_card": {
+    "id": "test.river_dominated_delta",
+    "title": "Как река строит дельту",
+    "difficulty": {
+      "primary": "В",
+      "secondary": "М"
+    },
+    "threshold": true,
+    "pages": [
+      411,
+      413,
+      414
+    ],
+    "misconception": {
+      "ref": null,
+      "text": "Шаг не рассматривает заблуждения из списка.",
+      "by_model": true
+    },
+    "layers": {
+      "topic": {
+        "text": "Речной перенос в дельте",
+        "by_model": true
+      },
+      "main": {
+        "text": "Дельта Миссисипи — типичный пример дельты с преобладанием речного переноса. Она продвигается в море, пока хватает пространства для накопления осадков.",
+        "by_model": true
+      },
+      "mechanism": {
+        "text": "Защищённый берег не испытывает сильного воздействия волн и течений, поэтому осадки у берега не перерабатываются и не рассеиваются вдоль берега. Проградация и вертикальная аккреция уменьшают глубину воды; река смещается к более глубоким участкам дна, вызывая переключение русел.",
+        "by_model": true
+      },
+      "practice": {
+        "text": "Рассматривают распределение фаций: песчаные коллекторские фации связаны с дельтовыми каналами и устьевыми барами. Межрукавные заливы, болота и лагуны разделяют песчаные фации и образуют глинистые барьеры.",
+        "by_model": true
+      },
+      "nuances": {
+        "text": "Продвижение дельты в море возможно при достаточном пространстве для накопления осадков. Такие дельты могут иметь несколько периодов переключения русел и лопастей.",
+        "by_model": true
+      },
+      "deeper": [
+        {
+          "text": "Поверхности, соответствующие отдельным моментам геологического времени, пересекают границы осадочных фаций.",
+          "by_model": true
+        },
+        {
+          "text": "Устьевые бары — отложения в устьях рукавов дельты.",
+          "by_model": true
+        }
+      ]
+    },
+    "layer_file": "runs/test_slatt/layer.json"
+  },
+  "script": [
+    {
+      "t_start": 0.15,
+      "t_end": 3.32,
+      "text": "Ты ищешь песок, а река уже выбрала другое русло.",
+      "claim_id": "test.river_dominated_delta#c9",
+      "is_analogy": false,
+      "on_screen": "Русло меняется"
+    },
+    {
+      "t_start": 6.82,
+      "t_end": 10.62,
+      "text": "Посмотри на побережье, защищённое от сильных волн и течений.",
+      "claim_id": "test.river_dominated_delta#c2",
+      "is_analogy": false,
+      "on_screen": "Защищённый берег"
+    },
+    {
+      "t_start": 11.12,
+      "t_end": 14.17,
+      "text": "Река приносит сюда осадки и оставляет их у берега.",
+      "claim_id": "test.river_dominated_delta#c2",
+      "is_analogy": false,
+      "on_screen": "Речной перенос"
+    },
+    {
+      "t_start": 14.67,
+      "t_end": 18.21,
+      "text": "Сильные волны не перерабатывают их и не разносят вдоль берега.",
+      "claim_id": "test.river_dominated_delta#c2",
+      "is_analogy": false,
+      "on_screen": "Осадки остаются"
+    },
+    {
+      "t_start": 18.71,
+      "t_end": 21.82,
+      "text": "Такую картину хорошо показывает дельта реки Миссисипи.",
+      "claim_id": "test.river_dominated_delta#c1",
+      "is_analogy": false,
+      "on_screen": "Пример Миссисипи"
+    },
+    {
+      "t_start": 22.32,
+      "t_end": 26.18,
+      "text": "Здесь главный переносчик осадков — именно река, а не волны.",
+      "claim_id": "test.river_dominated_delta#c1",
+      "is_analogy": false,
+      "on_screen": "Главная роль реки"
+    },
+    {
+      "t_start": 26.68,
+      "t_end": 30.29,
+      "text": "Если под водой есть место для осадков, берег продвигается.",
+      "claim_id": "test.river_dominated_delta#c3",
+      "is_analogy": false,
+      "on_screen": "Место для осадков"
+    },
+    {
+      "t_start": 30.79,
+      "t_end": 34.53,
+      "text": "Сравни два момента: новая песчаная лопасть заметно выросла.",
+      "claim_id": "test.river_dominated_delta#c3",
+      "is_analogy": false,
+      "on_screen": "Рост лопасти"
+    },
+    {
+      "t_start": 35.03,
+      "t_end": 39.09,
+      "text": "Её отложения занимают пространство между морской поверхностью и дном.",
+      "claim_id": "test.river_dominated_delta#c3",
+      "is_analogy": false,
+      "on_screen": "Пространство занято"
+    },
+    {
+      "t_start": 39.59,
+      "t_end": 42.86,
+      "text": "Представь, что подсыпаешь песок в воду у края ванны.",
+      "claim_id": "test.river_dominated_delta#c3",
+      "is_analogy": true,
+      "on_screen": "Образ: ванна"
+    },
+    {
+      "t_start": 43.36,
+      "t_end": 46.44,
+      "text": "Но в природе река переносит осадки и меняет русла.",
+      "claim_id": "test.river_dominated_delta#c5",
+      "is_analogy": false,
+      "on_screen": "Граница аналогии"
+    },
+    {
+      "t_start": 46.94,
+      "t_end": 50.9,
+      "text": "Дельта растёт в сторону моря и одновременно накапливается по высоте.",
+      "claim_id": "test.river_dominated_delta#c5",
+      "is_analogy": false,
+      "on_screen": "Два направления роста"
+    },
+    {
+      "t_start": 51.4,
+      "t_end": 55.21,
+      "text": "Постепенно вода над нарастающими отложениями становится всё мельче.",
+      "claim_id": "test.river_dominated_delta#c5",
+      "is_analogy": false,
+      "on_screen": "Вода мелеет"
+    },
+    {
+      "t_start": 55.71,
+      "t_end": 59.48,
+      "text": "Затем питающая река смещается к более глубоким участкам дна.",
+      "claim_id": "test.river_dominated_delta#c5",
+      "is_analogy": false,
+      "on_screen": "Поиск глубины"
+    },
+    {
+      "t_start": 59.98,
+      "t_end": 63.55,
+      "text": "На схеме стрелка условно показывает это переключение русла.",
+      "claim_id": "test.river_dominated_delta#c9",
+      "is_analogy": false,
+      "on_screen": "Новое направление"
+    },
+    {
+      "t_start": 64.05,
+      "t_end": 67.21,
+      "text": "Песок теперь накапливается у другого участка дельты.",
+      "claim_id": "test.river_dominated_delta#c9",
+      "is_analogy": false,
+      "on_screen": "Другая лопасть"
+    },
+    {
+      "t_start": 67.71,
+      "t_end": 71.87,
+      "text": "Такое переключение может происходить многократно, а не только однажды.",
+      "claim_id": "test.river_dominated_delta#c6",
+      "is_analogy": false,
+      "on_screen": "Повторные переключения"
+    },
+    {
+      "t_start": 72.37,
+      "t_end": 76.67,
+      "text": "У Миссисипи за последние четыре тысячи шестьсот лет их было не меньше восьми.",
+      "claim_id": "test.river_dominated_delta#c6",
+      "is_analogy": false,
+      "on_screen": "История Миссисипи"
+    },
+    {
+      "t_start": 77.17,
+      "t_end": 81.22,
+      "text": "Эти лопасти — условное сравнение, а не карта всех переключений.",
+      "claim_id": "test.river_dominated_delta#c10",
+      "is_analogy": false,
+      "on_screen": "Не карта"
+    },
+    {
+      "t_start": 81.72,
+      "t_end": 86.16,
+      "text": "Песчаные отложения русел и устьев могут образовывать коллекторские фации.",
+      "claim_id": "test.river_dominated_delta#c7",
+      "is_analogy": false,
+      "on_screen": "Песок русел"
+    },
+    {
+      "t_start": 86.66,
+      "t_end": 90.35,
+      "text": "Поэтому ответ на вопрос: новый песок ищи у нового русла.",
+      "claim_id": "test.river_dominated_delta#c7",
+      "is_analogy": false,
+      "on_screen": "Ответ: у русла"
+    },
+    {
+      "t_start": 90.85,
+      "t_end": 94.29,
+      "text": "А если вода снова обмелеет, куда может сместиться река?",
+      "claim_id": "test.river_dominated_delta#c5",
+      "is_analogy": false,
+      "on_screen": "Что будет дальше?"
+    }
+  ],
+  "sources": [
+    {
+      "claim_id": "test.river_dominated_delta#c9",
+      "page_pdf": 413,
+      "page_or_dataset": "стр. PDF 413",
+      "quote": "delta distributary channel switching from a common apex to different orientations and locations on the delta."
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c2",
+      "page_pdf": 411,
+      "page_or_dataset": "стр. PDF 411",
+      "quote": "Strong waves and currents do not impinge upon its protected shoreline, so sediment deposited at and near the shore zone is not reworked or dispersed laterally"
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c1",
+      "page_pdf": 411,
+      "page_or_dataset": "стр. PDF 411",
+      "quote": "The Mississippi River Delta (Fig. 9.13) has long been considered the “type” river-dominated delta"
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c3",
+      "page_pdf": 411,
+      "page_or_dataset": "стр. PDF 411",
+      "quote": "With time and sufficient accommodation space between the sea surface and seafloor to accept sediment, such a delta will prograde seaward"
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c5",
+      "page_pdf": 411,
+      "page_or_dataset": "стр. PDF 411",
+      "quote": "progradation and vertical aggradation lead to a progressive shallowing of the water depth, to the point at which the main river(s) feeding sediment to its delta will shift toward deeper water"
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c6",
+      "page_pdf": 411,
+      "page_or_dataset": "стр. PDF 411",
+      "quote": "During the past 4600 years, there have been no fewer than eight periods of channel and lobe switching on the Mississippi River Delta"
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c10",
+      "page_pdf": 413,
+      "page_or_dataset": "стр. PDF 413",
+      "quote": "Growth patterns of the Mississippi River Delta's lobes during the past 4600 years."
+    },
+    {
+      "claim_id": "test.river_dominated_delta#c7",
+      "page_pdf": 411,
+      "page_or_dataset": "стр. PDF 411",
+      "quote": "Sandy reservoir facies are deposits of distributary channels and distributary mouth-bars."
+    }
+  ],
+  "scene_spec": "runs/test_slatt/video/test_long_river_dominated_delta/spec.json",
+  "frames": [
+    {
+      "t": 3.37,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F01.png",
+      "on_screen": "Русло меняется"
+    },
+    {
+      "t": 6.37,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F02.png",
+      "on_screen": "Где новый песок?"
+    },
+    {
+      "t": 10.67,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F03.png",
+      "on_screen": "Защищённый берег"
+    },
+    {
+      "t": 14.22,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F04.png",
+      "on_screen": "Речной перенос"
+    },
+    {
+      "t": 18.26,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F05.png",
+      "on_screen": "Осадки остаются"
+    },
+    {
+      "t": 21.87,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F06.png",
+      "on_screen": "Пример Миссисипи"
+    },
+    {
+      "t": 26.23,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F07.png",
+      "on_screen": "Главная роль реки"
+    },
+    {
+      "t": 30.34,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F08.png",
+      "on_screen": "Место для осадков"
+    },
+    {
+      "t": 34.58,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F09.png",
+      "on_screen": "Рост лопасти"
+    },
+    {
+      "t": 39.14,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F10.png",
+      "on_screen": "Пространство занято"
+    },
+    {
+      "t": 42.91,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F11.png",
+      "on_screen": "Образ: ванна"
+    },
+    {
+      "t": 46.49,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F12.png",
+      "on_screen": "Граница аналогии"
+    },
+    {
+      "t": 50.95,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F13.png",
+      "on_screen": "Два направления роста"
+    },
+    {
+      "t": 55.26,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F14.png",
+      "on_screen": "Вода мелеет"
+    },
+    {
+      "t": 59.53,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F15.png",
+      "on_screen": "Поиск глубины"
+    },
+    {
+      "t": 63.6,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F16.png",
+      "on_screen": "Новое направление"
+    },
+    {
+      "t": 67.26,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F17.png",
+      "on_screen": "Другая лопасть"
+    },
+    {
+      "t": 71.92,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F18.png",
+      "on_screen": "Повторные переключения"
+    },
+    {
+      "t": 76.72,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F19.png",
+      "on_screen": "История Миссисипи"
+    },
+    {
+      "t": 81.27,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F20.png",
+      "on_screen": "Не карта"
+    },
+    {
+      "t": 86.21,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F21.png",
+      "on_screen": "Песок русел"
+    },
+    {
+      "t": 90.4,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F22.png",
+      "on_screen": "Ответ: у русла"
+    },
+    {
+      "t": 98.54,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F23.png",
+      "on_screen": "Что будет дальше?"
+    }
+  ],
+  "exaggerations": [
+    "вертикаль растянута ≈ в 7 раз (раскладка 16:9)"
+  ],
+  "prediction_question": "Где будет накапливаться новый песок, если река сменит русло?",
+  "transfer_question": "Если вода над новой лопастью снова обмелеет, куда может сместиться река?",
+  "data_it_bridge": "Глава описывает распределение фаций и обстановок, но не задаёт цифровой формат данных. Гипотеза: если в цифровом представлении неверно задать положение русел или фаций, оно не совпадёт с описанной картиной. Глава не устанавливает конкретную ошибку данных.",
+  "physics_checklist": [],
+  "audio_check": {
+    "engines": [
+      "edge"
+    ],
+    "voice": [
+      "ru-RU-DmitryNeural"
+    ],
+    "edge_rate": "+0%",
+    "wpm_overall": 148.8,
+    "max_words_in_phrase": 13,
+    "loudness": {
+      "before_lufs": -19.46,
+      "after_lufs": -16.01,
+      "mix_lufs": -16.0,
+      "music": "тихая подложка, синтез в коде; под речью приглушается",
+      "sfx": "эффекты на событиях кадра (смена сцены, рамки, движение прибора, ответ)",
+      "heard": false
+    },
+    "sync": "длительность кадра фразы = длительность её аудио; голос начинается через 0,15 с после смены кадра",
+    "digits_in_script": [],
+    "formula_in_script": [],
+    "listen_check": [
+      "ру́сло",
+      "де́льта",
+      "колле́кторские"
+    ],
+    "phrases": [
+      {
+        "beat": 1,
+        "words": 9,
+        "sec": 3.17,
+        "wpm": 170.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Ты ищешь песок, а река уже выбрала другое русло."
+      },
+      {
+        "beat": 3,
+        "words": 9,
+        "sec": 3.81,
+        "wpm": 141.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Посмотри на побережье, защищённое от сильных волн и течений."
+      },
+      {
+        "beat": 4,
+        "words": 9,
+        "sec": 3.04,
+        "wpm": 177.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Река приносит сюда осадки и оставляет их у берега."
+      },
+      {
+        "beat": 5,
+        "words": 10,
+        "sec": 3.54,
+        "wpm": 169.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Сильные волны не перерабатывают их и не разносят вдоль берега."
+      },
+      {
+        "beat": 6,
+        "words": 7,
+        "sec": 3.11,
+        "wpm": 134.8,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Такую картину хорошо показывает дельта реки Миссисипи."
+      },
+      {
+        "beat": 7,
+        "words": 10,
+        "sec": 3.86,
+        "wpm": 155.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Здесь главный переносчик осадков, именно река, а не волны."
+      },
+      {
+        "beat": 8,
+        "words": 9,
+        "sec": 3.61,
+        "wpm": 149.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Если под водой есть место для осадков, берег продвигается."
+      },
+      {
+        "beat": 9,
+        "words": 8,
+        "sec": 3.74,
+        "wpm": 128.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Сравни два момента: новая песчаная лопасть заметно выросла."
+      },
+      {
+        "beat": 10,
+        "words": 9,
+        "sec": 4.05,
+        "wpm": 133.2,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Её отложения занимают пространство между морской поверхностью и дном."
+      },
+      {
+        "beat": 11,
+        "words": 9,
+        "sec": 3.28,
+        "wpm": 164.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Представь, что подсыпаешь песок в воду у края ванны."
+      },
+      {
+        "beat": 12,
+        "words": 9,
+        "sec": 3.08,
+        "wpm": 175.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Но в природе река переносит осадки и меняет русла."
+      },
+      {
+        "beat": 13,
+        "words": 10,
+        "sec": 3.96,
+        "wpm": 151.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Дельта растёт в сторону моря и одновременно накапливается по высоте."
+      },
+      {
+        "beat": 14,
+        "words": 8,
+        "sec": 3.81,
+        "wpm": 125.9,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Постепенно вода над нарастающими отложениями становится всё мельче."
+      },
+      {
+        "beat": 15,
+        "words": 9,
+        "sec": 3.77,
+        "wpm": 143.2,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Затем питающая река смещается к более глубоким участкам дна."
+      },
+      {
+        "beat": 16,
+        "words": 8,
+        "sec": 3.56,
+        "wpm": 134.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "На схеме стрелка условно показывает это переключение русла."
+      },
+      {
+        "beat": 17,
+        "words": 7,
+        "sec": 3.17,
+        "wpm": 132.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Песок теперь накапливается у другого участка дельты."
+      },
+      {
+        "beat": 18,
+        "words": 9,
+        "sec": 4.15,
+        "wpm": 130.0,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Такое переключение может происходить многократно, а не только однажды."
+      },
+      {
+        "beat": 19,
+        "words": 13,
+        "sec": 4.3,
+        "wpm": 181.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "У Миссисипи за последние четыре тысячи шестьсот лет их было не меньше восьми."
+      },
+      {
+        "beat": 20,
+        "words": 10,
+        "sec": 4.05,
+        "wpm": 148.0,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Эти лопасти, условное сравнение, а не карта всех переключений."
+      },
+      {
+        "beat": 21,
+        "words": 9,
+        "sec": 4.43,
+        "wpm": 121.8,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Песчаные отложения русел и устьев могут образовывать коллекторские фации."
+      },
+      {
+        "beat": 22,
+        "words": 10,
+        "sec": 3.69,
+        "wpm": 162.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Поэтому ответ на вопрос: новый песок ищи у нового русла."
+      },
+      {
+        "beat": 23,
+        "words": 9,
+        "sec": 3.44,
+        "wpm": 157.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "А если вода снова обмелеет, куда может сместиться река?"
+      }
+    ],
+    "silent_phrases": []
+  },
+  "scene_check": [
+    {
+      "item": "у каждого тела контур из 3+ точек, ключевые кадры по времени",
+      "ok": true
+    },
+    {
+      "item": "время модели в пределах time_steps",
+      "ok": true
+    },
+    {
+      "item": "тела внутри разреза (x, z)",
+      "ok": true
+    },
+    {
+      "item": "форма тел между кадрами интерполируется, а не рисуется руками",
+      "ok": true
+    },
+    {
+      "item": "вертикальное преувеличение ×4 подписано на плашке",
+      "ok": true
+    }
+  ],
+  "visual_text_check": {
+    "rule": "подписи и субтитры без формул и греческих букв (ТЗ)",
+    "replaced": []
+  },
+  "template": "section_through_time",
+  "warnings": []
+}

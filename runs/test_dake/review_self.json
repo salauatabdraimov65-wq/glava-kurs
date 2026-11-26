@@ -1,0 +1,203 @@
+{
+  "package_id": "self_test_dake",
+  "remarks": [
+    {
+      "target": "C063",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Условие применимости потеряно: приблизительно постоянная временная производная давления относится к полустабилизированному режиму, когда эффект внешней границы уже ощущается и граница непроницаема, а не к любому случаю постоянного расхода.",
+      "fix": "В полустабилизированном режиме, когда эффект непроницаемой внешней границы уже ощущается, при постоянном расходе давление в ячейке падает так, что его временная производная приблизительно постоянна для всех r и t.",
+      "page_pdf": 77,
+      "quote": "This condition is applicable to a reservoir which has been producing for a sufficient period of time so that the effect of the outer boundary has been felt."
+    },
+    {
+      "target": "T058",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Два названных условия позволяют отбросить первые два слагаемых, но для линеаризации автор дополнительно требует постоянной сжимаемости и условия cp ≪ 1.",
+      "fix": "Постоянная вязкость и малый градиент давления позволяют исключить первые два слагаемых. Для линеаризации также предполагается, что сжимаемость постоянна и cp ≪ 1.",
+      "page_pdf": 79,
+      "quote": "Making one final assumption, that the compressibility is constant ... the basic equation has been effectively linearized. ... this simple linearization by deletion ... can only be applied when the product cp ≪ 1"
+    },
+    {
+      "target": "T060",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Утверждение, что глава не описывает условия применимости допущений за пределами данного случая, противоречит тексту: автор указывает условие cp ≪ 1 и обсуждает системы с более высокой сжимаемостью.",
+      "fix": "Рассматривается жидкость, практически соответствующая недонасыщенной нефти. Упрощение использует постоянство вязкости и малость градиента давления; сжимаемость должна быть малой и постоянной, причём cp ≪ 1. Для систем с более высокой сжимаемостью требуется иной способ линеаризации.",
+      "page_pdf": 79,
+      "quote": "this simple linearization by deletion must be treated with caution and can only be applied when the product cp ≪ 1"
+    },
+    {
+      "target": "T115",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Формула дана без условия применимости: автор указывает, что это приближение верно при x < 0.01.",
+      "fix": "При x < 0.01: ei(x) ≈ −ln x − 0.5772.",
+      "page_pdf": 88,
+      "quote": "if x < 0.01, ei (x) can be approximated as"
+    },
+    {
+      "target": "T117",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "у автора условие/оговорка «usually», в утверждении её нет",
+      "fix": "Привести формулировку к тексту автора: «From this curve it can be seen that if x < 0.01, ei (x) can be approximated as  $$ei(x) \\approx - \\ln x - 0.5772 \\tag{7.8}$$»",
+      "page_pdf": 88,
+      "quote": "From this curve it can be seen that if x < 0.01, ei (x) can be approximated as  $$ei(x) \\approx - \\ln x - 0.5772 \\tag{7.8}$$"
+    },
+    {
+      "target": "T051",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что стационарное состояние рассматривается после переходного периода, а точная компенсация отбора притоком принимается как допущение.",
+      "fix": "После переходного периода при постоянном отборе предполагается, что приток через полностью открытую внешнюю границу точно компенсирует отбор; давление на границе постоянно, а давление внутри не меняется со временем.",
+      "page_pdf": 78,
+      "quote": "The steady state condition applies, after the transient period, to a well draining a cell which has a completely open outer boundary. It is assumed that, for a constant rate of production, fluid withdrawal from the cell will be exactly balanced by fluid entry across the open boundary"
+    },
+    {
+      "target": "T054",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Условие представлено без оговорки: автор задаёт его для установившегося режима после переходного периода и при полностью открытой внешней границе ячейки.",
+      "fix": "Для установившегося режима после переходного периода, если внешняя граница ячейки полностью открыта: p = pₑ = const при r = rₑ.",
+      "page_pdf": 78,
+      "quote": "The steady state condition applies, after the transient period, to a well draining a cell which has a completely open outer boundary."
+    },
+    {
+      "target": "T046",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Расчёт среднего давления по дебитам представлен без условий его применимости: квазистационарного режима и малого изменения сжимаемости.",
+      "fix": "В квазистационарном режиме при малом изменении сжимаемости среднее пластовое давление рассчитывают по средним давлениям областей дренирования, взвешенным по их дебитам. Дебиты регулярно измеряют; поровые объёмы областей дренирования на практике определить труднее.",
+      "page_pdf": 77,
+      "quote": "Equation (5.9) implies that since dp/dt is constant for the reservoir then, if the variation in the compressibility is small"
+    },
+    {
+      "target": "T041",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Пропущено условие постоянного дебита скважины, при котором производная давления по времени приблизительно постоянна.",
+      "fix": "Условие применимо после достаточно длительной добычи, когда влияние внешней границы уже ощущается. При постоянном дебите скважины производная давления по времени приблизительно постоянна для всех r и t. Для вывода уравнения притока газа это условие применяется, несмотря на непостоянство сжимаемости газа.",
+      "page_pdf": 77,
+      "quote": "if the well is producing at a constant flow rate then the cell pressure will decline in such a way that ∂p/∂t ≈ constant, for all r and t."
+    },
+    {
+      "target": "T047",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Независимость областей дренирования представлена как общее свойство полуустановившегося режима, хотя автор указывает её для пласта, разрабатываемого на режиме истощения.",
+      "fix": "В пласте, разрабатываемом на режиме истощения, при полуустановившемся режиме каждая скважина независимо дренирует область внутри своей непроницаемой границы. Скорость изменения давления должна быть приблизительно постоянной по всему пласту. При малом изменении сжимаемости дебит пропорционален объёму дренирования.",
+      "page_pdf": 77,
+      "quote": "when applied to a depletion type reservoir ... each well will drain from within its own no-flow boundary quite independently of the other wells."
+    },
+    {
+      "target": "C068",
+      "category": "wrong_scaling",
+      "severity": "critical",
+      "problem": "Пористость учтена дважды: объём пор уже включает коэффициент пористости. Кроме того, формула приведена без условий её применения.",
+      "fix": "При полуустановившемся режиме, постоянном дебите и отсутствии притока через внешнюю границу dp/dt = −q/(cVпор) = −q/(cπrₑ²hφ).",
+      "page_pdf": 77,
+      "quote": "\\frac{dp}{dt} = - \\frac{q}{cV} \\tag{5.9} … \\frac{dp}{dt} = - \\frac{q}{c \\pi r_e^2 h \\phi} \\tag{5.10}"
+    },
+    {
+      "target": "C079",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указаны условия, при которых усреднение по дебитам заменяет усреднение по объёмам.",
+      "fix": "При полустационарном истощении пласта, когда dp/dt приблизительно одинаково во всём пласте и вариация сжимаемости мала, среднее давление можно вычислить как средневзвешенное давлений в областях дренирования, используя их дебиты как веса.",
+      "page_pdf": 78,
+      "quote": "Equation (5.9) implies that since dp/dt is constant for the reservoir then, if the variation in the compressibility is small"
+    },
+    {
+      "target": "C170",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указана область применимости приближения.",
+      "fix": "При x < 0,01: ei(x) ≈ −ln(γx), где γ = 1,781.",
+      "page_pdf": 89,
+      "quote": "$$ei(x) \\approx - \\ln (\\gamma x)$$ $$\\text{for } x < 0.01$$"
+    },
+    {
+      "target": "T017",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Утверждение, что глава не описывает дополнительных условий или ограничений, противоречит тексту: автор указывает, что речь идёт о полностью насыщенном одним флюидом пласте, а применимость и ограничения линеаризации различаются для жидкостей и реального газа. Кроме того, далее перечисляются условия решения.",
+      "fix": "Вывод относится к радиальному горизонтальному течению однофазного флюида в пористой среде; рассматриваемая форма линеаризации применима к жидкостям с малой постоянной сжимаемостью, а для реального газа описан более строгий метод. Условия решения зависят от начальных и граничных условий.",
+      "page_pdf": 76,
+      "quote": "This is the basic, partial differential equation for the radial flow of any single phase fluid in a porous medium."
+    },
+    {
+      "target": "C080",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Возможность замены объёмного усреднения усреднением по дебитам обусловлена не только регулярностью их измерения: нужны полуустановившийся режим и малое изменение сжимаемости.",
+      "fix": "При полуустановившемся режиме и малом изменении сжимаемости среднее пластовое давление можно рассчитать как среднее давлений зон дренирования, взвешенное по дебитам. Дебиты регулярно измеряют на протяжении разработки, тогда как объёмы дренирования определить труднее.",
+      "page_pdf": 78,
+      "quote": "Equation (5.9) implies that since dp/dt is constant for the reservoir then, if the variation in the compressibility is small"
+    },
+    {
+      "target": "T085",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Постоянства свойств жидкости недостаточно: автор также требует малой сжимаемости. Для решения линейного источника важна и применимость к начальному переходному периоду.",
+      "fix": "Решение линейного источника описывает давление при заданных начальном состоянии, внешней границе и условии у скважины. Оно применимо в начальный переходный период при постоянном дебите, однородном изотропном пласте, радиальном потоке, постоянной вязкости и малой постоянной сжимаемости жидкости.",
+      "page_pdf": 87,
+      "quote": "the fluid itself must have a constant viscosity and a small and constant compressibility"
+    },
+    {
+      "target": "C087",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Постоянная работа систем подменяет указанное автором условие — работу с постоянными дебитами. Непрерывная работа сама по себе этого не означает.",
+      "fix": "Полуустановившийся и установившийся режимы могут не реализоваться полностью, но их определяющие условия часто приближённо выполняются в промысловых условиях, поскольку добычные и нагнетательные системы обычно рассчитаны на работу с постоянными дебитами.",
+      "page_pdf": 78,
+      "quote": "both production and injection facilities are usually designed to operate at constant rates"
+    },
+    {
+      "target": "T044",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано условие, при котором веса по объёмам пор можно заменить дебитами: автор оговаривает, что вариация сжимаемости должна быть небольшой.",
+      "fix": "При полустабилизированном режиме среднее давление пласта рассчитывают как средневзвешенное давлений в дренируемых областях; если изменение сжимаемости невелико, веса по объёмам пор можно заменить дебитами скважин.",
+      "page_pdf": 78,
+      "quote": "if the variation in the compressibility is small $q_i \\propto V_i$"
+    },
+    {
+      "target": "T043",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Формула представлена как применимая к радиальной ячейке вообще, без условий полуустановившегося режима.",
+      "fix": "Для дренирования радиальной ячейки в полуустановившемся режиме при постоянном дебите и непроницаемой внешней границе dp/dt = −q/(cπrₑ²hφ).",
+      "page_pdf": 77,
+      "quote": "if the well is producing at a constant flow rate then the cell pressure will decline in such a way that … ∂p/∂t ≈ constant, for all r and t."
+    },
+    {
+      "target": "T122",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Формула дана без условия применимости: автор выводит её как приближение при x = φμcr_w²/(4kt) < 0.01.",
+      "fix": "Для забойного давления при x = φμcr_w²/(4kt) < 0.01 давление приближённо равно p_wf = p_i − (qμ/(4πkh)) ln(4kt/(γφμcr_w²)); скин-фактор не включён.",
+      "page_pdf": 89,
+      "quote": "Equation (7.6) can then be approximated as"
+    },
+    {
+      "target": "T045",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Утверждение о собственной границе отсутствия перетока обобщено на любой полуустановившийся режим; автор формулирует его для пласта, разрабатываемого в режиме истощения.",
+      "fix": "В пласте, разрабатываемом в режиме истощения, при полуустановившемся течении каждая скважина дренирует область внутри собственной границы отсутствия перетока. Если скорость изменения давления приблизительно постоянна по пласту, а сжимаемость меняется мало, дебит пропорционален поровому объёму дренирования. Поэтому среднее с весами по поровым объёмам можно выразить через дебиты.",
+      "page_pdf": 77,
+      "quote": "when applied to a depletion type reservoir ... each well will drain from within its own no-flow boundary quite independently of the other wells."
+    },
+    {
+      "target": "T052",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Условие ослаблено: автор говорит о полностью открытой внешней границе, а в элементе сказано лишь, что она открыта.",
+      "fix": "Установившийся режим применим после переходного периода для скважины, дренирующей ячейку с полностью открытой внешней границей; при постоянном отборе приток через эту границу компенсирует отбор. Режим уместен при поддержании давления естественным водопритоком или закачкой вытесняющей жидкости.",
+      "page_pdf": 78,
+      "quote": "The steady state condition applies, after the transient period, to a well draining a cell which has a completely open outer boundary."
+    }
+  ]
+}

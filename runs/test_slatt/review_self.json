@@ -1,0 +1,23 @@
+{
+  "package_id": "self_test_slatt",
+  "remarks": [
+    {
+      "target": "T010",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Утверждение о продвижении дельты в море опускает условие достаточного пространства для накопления осадков между поверхностью моря и дном.",
+      "fix": "При наличии достаточного пространства для накопления осадков дельта со временем продвигается в море.",
+      "page_pdf": 411,
+      "quote": "With time and sufficient accommodation space between the sea surface and seafloor to accept sediment, such a delta will prograde seaward"
+    },
+    {
+      "target": "C020",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Утверждение обобщено на дельты без условия, указанного автором: речь идёт о дельте с речным преобладанием и защищённой береговой линией, где сильные волны и течения не перераспределяют осадки.",
+      "fix": "Со временем при достаточном пространстве для накопления осадков такая дельта с речным преобладанием продвигается в сторону моря вместе со своими зонами.",
+      "page_pdf": 411,
+      "quote": "Strong waves and currents do not impinge upon its protected shoreline, so sediment deposited at and near the shore zone is not reworked or dispersed laterally (Figs. 9.4 and 9.7). With time and sufficient accommodation space between the sea surface and seafloor to accept sediment, such a delta will prograde seaward (Fig. 9.9), as will the delta zones (Fig. 9.7)."
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+ "title": "Как сравнить пласты, не видя породу?",
+ "plaque": [
+  "Не в масштабе:"
+ ],
+ "params": {
+  "depth_top": 1500,
+  "depth_bottom": 1520,
+  "depth_tick": 5,
+  "tool_start": 1501,
+  "tool_resolution_m": 0.5,
+  "bore_width": 0.18,
+  "bore_diameter_m": 0.2,
+  "layers": [
+   {
+    "top": 1500,
+    "bottom": 1505,
+    "lith": "shale",
+    "label": "Глина",
+    "props": {
+     "resistivity": 3,
+     "porosity_estimate": 12
+    },
+    "mud_cake": false,
+    "invasion_width": 0
+   },
+   {
+    "top": 1505,
+    "bottom": 1510,
+    "lith": "sand",
+    "label": "Песчаник А",
+    "props": {
+     "resistivity": 4,
+     "porosity_estimate": 25
+    },
+    "mud_cake": false,
+    "invasion_width": 0
+   },
+   {
+    "top": 1510,
+    "bottom": 1515,
+    "lith": "sand",
+    "label": "Песчаник Б",
+    "props": {
+     "resistivity": 40,
+     "porosity_estimate": 20
+    },
+    "mud_cake": false,
+    "invasion_width": 0
+   },
+   {
+    "top": 1515,
+    "bottom": 1520,
+    "lith": "shale",
+    "label": "Глина",
+    "props": {
+     "resistivity": 3,
+     "porosity_estimate": 12
+    },
+    "mud_cake": false,
+    "invasion_width": 0
+   }
+  ],
+  "curves": [
+   {
+    "id": "res",
+    "key": "RES",
+    "prop": "resistivity",
+    "label": "Сопротивление",
+    "unit": "Ом·м",
+    "min": 1,
+    "max": 100,
+    "track": 1,
+    "scale": "log"
+   },
+   {
+    "id": "por",
+    "key": "NEUTRON",
+    "prop": "porosity_estimate",
+    "label": "Оценка пористости",
+    "unit": "%",
+    "min": 0,
+    "max": 40,
+    "track": 2
+   }
+  ]
+ },
+ "beats": [
+  {
+   "say": "Без сравнения данных ты можешь упустить перспективный пласт.",
+   "claim_id": "test.saturation_crossplots_intro#c4",
+   "on_screen": "Как сравнить?",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "mark": [
+     {
+      "top": 1505,
+      "bottom": 1510,
+      "label": "А"
+     },
+     {
+      "top": 1510,
+      "bottom": 1515,
+      "label": "Б"
+     }
+    ]
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "",
+   "claim_id": null,
+   "on_screen": "Что сравнить?",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 3,
+   "pause": 3
+  },
+  {
+   "say": "Прибор проходит скважину, а данные записываются по глубине.",
+   "claim_id": "test.saturation_crossplots_intro#c1",
+   "on_screen": "Данные скважины",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "clear_marks": true,
+    "show_curves": [
+     "res",
+     "por"
+    ],
+    "tool_to": 1519.5,
+    "callout": [
+     {
+      "target": "tool",
+      "text": "Прибор"
+     }
+    ]
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Для сравнения используют сопротивление и оценку пористости породы.",
+   "claim_id": "test.saturation_crossplots_intro#c1",
+   "on_screen": "Пара величин",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "callout": [
+     {
+      "target": "curve:res",
+      "text": "Сопротивление"
+     },
+     {
+      "target": "curve:por",
+      "text": "Пористость"
+     }
+    ]
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Пары значений наносят точками на график с двумя осями.",
+   "claim_id": "test.saturation_crossplots_intro#c1",
+   "on_screen": "Точки на графике",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "mark": [
+     {
+      "top": 1505,
+      "bottom": 1510,
+      "label": "А"
+     },
+     {
+      "top": 1510,
+      "bottom": 1515,
+      "label": "Б"
+     }
+    ]
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Это как таблица, в которой пары складываются в рисунок.",
+   "claim_id": "test.saturation_crossplots_intro#c6",
+   "on_screen": "Увидеть закономерность",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": true,
+   "pause_s": 0
+  },
+  {
+   "say": "Но рисунок не показывает породу напрямую: это данные приборов.",
+   "claim_id": "test.saturation_crossplots_intro#c1",
+   "on_screen": "Не сама порода",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "callout": [
+     {
+      "target": "tool",
+      "text": "Измерение"
+     }
+    ]
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Такой график называют кроссплотом насыщенности, или кроссплотом сопротивления и пористости.",
+   "claim_id": "test.saturation_crossplots_intro#c1",
+   "on_screen": "*Кроссплот*",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "По нему получают водонасыщенность: долю порового пространства, занятую водой.",
+   "claim_id": "test.saturation_crossplots_intro#c1",
+   "on_screen": "Доля воды",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Графики Пикетта и Хингла решают уравнение насыщенности Арчи графически.",
+   "claim_id": "test.saturation_crossplots_intro#c2",
+   "on_screen": "Пикетт и Хингл",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Их придумали до компьютеров, чтобы облегчить интерпретацию данных скважины.",
+   "claim_id": "test.saturation_crossplots_intro#c3",
+   "on_screen": "До компьютеров",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Позже такие графики снова оценили: человек хорошо замечает закономерности.",
+   "claim_id": "test.saturation_crossplots_intro#c6",
+   "on_screen": "Распознать рисунок",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Вот зачем они нужны: сравнивать потенциально продуктивные зоны между собой.",
+   "claim_id": "test.saturation_crossplots_intro#c4",
+   "on_screen": "Сравнить зоны",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "mark": [
+     {
+      "top": 1505,
+      "bottom": 1510,
+      "label": "А"
+     },
+     {
+      "top": 1510,
+      "bottom": 1515,
+      "label": "Б"
+     }
+    ]
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "На самом деле ствол намного уже, чем кажется в разрезе.",
+   "claim_id": null,
+   "on_screen": "Истинный масштаб",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "show_true_scale": true
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "А какие пары данных ты сравнил бы для другой задачи?",
+   "claim_id": null,
+   "on_screen": "Твоя задача",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {},
+   "is_analogy": false,
+   "pause_s": 2,
+   "pause": 2
+  }
+ ],
+ "objects": [
+  "Разрез из четырёх слоёв",
+  "Ствол скважины и прибор на кабеле",
+  "Два трека каротажных кривых с общей глубиной",
+  "Рамки интервалов песчаников А и Б",
+  "Вставка истинного масштаба ствола"
+ ],
+ "invariants": [
+  "Глубина растёт вниз; слои идут подряд без зазоров.",
+  "Кривые пишутся только до глубины прибора и усредняются в его окне.",
+  "Сопротивление и оценка пористости показаны в разных треках с общей шкалой глубин.",
+  "Состав и границы слоёв не меняются между фразами.",
+  "Ствол в основном разрезе изображён шире истинного масштаба.",
+  "Значение водонасыщенности не выводится как результат расчёта."
+ ],
+ "assumptions": [
+  "Условно все глубины, мощности слоёв и значения свойств заданы для иллюстрации: глава чисел не приводит.",
+  "Условно сопротивления слоёв сверху вниз равны 3, 4, 40 и 3 Ом·м; оценки пористости — 12, 25, 20 и 12 процентов.",
+  "Условно кривая с ключом NEUTRON показывает уже подготовленную оценку пористости, а не полный процесс её получения из измерения.",
+  "Условно проникновение фильтрата и глинистая корка не моделируются.",
+  "Условно сравниваются два интервала песчаника; их продуктивность и водонасыщенность не установлены.",
+  "Условно шаблон показывает исходные кривые по глубине, но не строит график x-y и не вычисляет водонасыщенность; эти шаги объясняются голосом.",
+  "Условно кратность расширения ствола зависит от компоновки и вычисляется кодом; её нельзя определить только по заданной доле ширины."
+ ],
+ "exaggerations": [],
+ "prediction_question": "Что сравнить, чтобы сопоставить два пласта?",
+ "transfer_question": "Какие пары данных ты сравнил бы для другой задачи?",
+ "data_it_bridge": "Вход — пары каротажных значений на общей глубине; на графике x-y их используют для получения водонасыщенности. Этот шаблон показывает входные кривые, но не строит кроссплот и не рассчитывает выход. Глава не описывает случаи сбоя методов или их интерпретации.",
+ "terms_to_check": [
+  "каротаж",
+  "кроссплот",
+  "водонасыщенность",
+  "пористость",
+  "Пикетт",
+  "Хингл",
+  "Арчи"
+ ],
+ "video_id": "test_short_saturation_crossplots_in",
+ "chapter": "test_asquith",
+ "node_id": "test.saturation_crossplots_intro",
+ "template": "well_tool_curve",
+ "format": "short",
+ "aspect": "9:16",
+ "styleguide": "domain/geology/styleguide.json",
+ "spec_check": {
+  "words": 127,
+  "beats": 15,
+  "beats_with_claim": 12,
+  "problems": []
+ }
+}

@@ -1,0 +1,257 @@
+{
+ "chapter": "test_slatt",
+ "illustrations": [
+  {
+   "id": "ill.time_and_rock_correlation",
+   "step_id": "test.time_and_rock_correlation",
+   "node_id": "test.time_and_rock_correlation",
+   "file": "illustrations/time_and_rock_correlation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 410–412.",
+   "alt": "Схема: признаки Непрерывность песков при литостратиграфической корреляции, Глинистые и гетеролитовые интервалы при хроностратиграфической корреляции; правило: Сравнивать корреляции по литофациям и по геологическому времени.; вывод: Если хроностратиграфическая корреляция показывает разделяющие пески интервалы, пески между скважинами могут быть не сообщены.",
+   "source": "учебный слой, стр. 410, стр. 411, стр. 412",
+   "claim_ids": [
+    "test.time_and_rock_correlation#c1",
+    "test.time_and_rock_correlation#c2",
+    "test.time_and_rock_correlation#c3",
+    "test.time_and_rock_correlation#c4",
+    "test.time_and_rock_correlation#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.delta_controls",
+   "step_id": "test.delta_controls",
+   "node_id": "test.delta_controls",
+   "file": "illustrations/delta_controls.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 410.",
+   "alt": "Схема механизма: Раннее падение уровня моря вызывает врезание долин, затем береговая линия отступает в сторону моря и понижается. → Переключение русел также меняет эволюцию дельтовой системы; по Overeem et al. → (2005), его влияние может быть сильнее влияния изменения уровня моря.",
+   "source": "учебный слой, стр. 410",
+   "claim_ids": [
+    "test.delta_controls#c1",
+    "test.delta_controls#c2",
+    "test.delta_controls#c3",
+    "test.delta_controls#c4",
+    "test.delta_controls#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.river_dominated_delta",
+   "step_id": "test.river_dominated_delta",
+   "node_id": "test.river_dominated_delta",
+   "file": "illustrations/river_dominated_delta.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 411–414.",
+   "alt": "Схема механизма: Защищённый берег не испытывает сильного воздействия волн и течений, поэтому осадки у берега не перерабатываются и не рассеиваются вдоль берега. → Проградация и вертикальная аккреция уменьшают глубину воды; река смещается к более глубоким участкам дна, вызывая переключение русел.",
+   "source": "учебный слой, стр. 411, стр. 413, стр. 414",
+   "claim_ids": [
+    "test.river_dominated_delta#c1",
+    "test.river_dominated_delta#c2",
+    "test.river_dominated_delta#c3",
+    "test.river_dominated_delta#c4",
+    "test.river_dominated_delta#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.recognizing_delta_facies",
+   "step_id": "test.recognizing_delta_facies",
+   "node_id": "test.recognizing_delta_facies",
+   "file": "illustrations/recognizing_delta_facies.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 413–415.",
+   "alt": "Схема: признаки Взаиморасположение фаций, Укрупнение зерен вверх по разрезу, Сочетание осадочных структур, Каротажное утонение и уменьшение зернистости вдали от оси канала; правило: Распознавать фации по совместному рассмотрению взаиморасположения, укрупнения зерен вверх и осадочных структур; в скважинах учитывать керн и каротажный отклик.; вывод: Лучше отсортированные и более проницаемые пески седьмой литофации интерпретированы геологами как отложения паводковых выносов осадка из дельтовых каналов.",
+   "source": "учебный слой, стр. 413, стр. 415",
+   "claim_ids": [
+    "test.recognizing_delta_facies#c1",
+    "test.recognizing_delta_facies#c2",
+    "test.recognizing_delta_facies#c3",
+    "test.recognizing_delta_facies#c4",
+    "test.recognizing_delta_facies#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.mouth_bar_variability",
+   "step_id": "test.mouth_bar_variability",
+   "node_id": "test.mouth_bar_variability",
+   "file": "illustrations/mouth_bar_variability.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 415–417.",
+   "alt": "Схема: признаки положение у апекса или проксимального края, расстояние от источника наносов, зернистость и сортировка, положение ниже точки ветвления; правило: У апексов и вдоль проксимальных краёв концентрируются более крупные, лучше отсортированные и более проницаемые пески. Дальше от источника при более слабом потоке откладываются более тонкие, хуже отсортированные пески и аргиллиты.; вывод: Положение и условия потока связаны с распределением зернистости, сортировки и проницаемости.",
+   "source": "учебный слой, стр. 415, стр. 416, стр. 417",
+   "claim_ids": [
+    "test.mouth_bar_variability#c1",
+    "test.mouth_bar_variability#c2",
+    "test.mouth_bar_variability#c3",
+    "test.mouth_bar_variability#c4",
+    "test.mouth_bar_variability#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.romeo_delta_history",
+   "step_id": "test.romeo_delta_history",
+   "node_id": "test.romeo_delta_history",
+   "file": "illustrations/romeo_delta_history.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 416–420.",
+   "alt": "Схема: признаки Литостратиграфические признаки песчаных и глинистых интервалов, Последовательностные или временные признаки корреляции; правило: По главе, схема корреляции по последовательностям или времени лучше согласовала корреляции скважин с историей добычи, чем сопоставление только по литостратиграфическим признакам.; вывод: Для этой дельтовой толщи последовательностная или временная корреляция дала более подходящее сопоставление скважин.",
+   "source": "учебный слой, стр. 416, стр. 417, стр. 420",
+   "claim_ids": [
+    "test.romeo_delta_history#c1",
+    "test.romeo_delta_history#c2",
+    "test.romeo_delta_history#c3",
+    "test.romeo_delta_history#c4",
+    "test.romeo_delta_history#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.romeo_correlation_models",
+   "step_id": "test.romeo_correlation_models",
+   "node_id": "test.romeo_correlation_models",
+   "file": "illustrations/romeo_correlation_models.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 417–418.",
+   "alt": "Схема механизма: Речной перенос создаёт латеральные и вертикальные изменения фаций — типов осадочных отложений — и неоднородность коллектора. → Пологие песчаные тела не распознавали, поэтому корреляция только по литологии давала неверные сопоставления; схема по последовательностям выявила даунлап и клиновидное строение.",
+   "source": "учебный слой, стр. 417, стр. 418",
+   "claim_ids": [
+    "test.romeo_correlation_models#c1",
+    "test.romeo_correlation_models#c2",
+    "test.romeo_correlation_models#c3",
+    "test.romeo_correlation_models#c4",
+    "test.romeo_correlation_models#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.shale_flow_barriers",
+   "step_id": "test.shale_flow_barriers",
+   "node_id": "test.shale_flow_barriers",
+   "file": "illustrations/shale_flow_barriers.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 417–421.",
+   "alt": "Схема: признаки Непрерывность сланца, Наличие сланца между соседними резервуарными пластами, Размыв или выклинивание сланца; правило: Непрерывный сланец создаёт вертикальный барьер потоку и помогает направлять заводнение.; вывод: Распределение сланцев важно учитывать при управлении движением флюидов и разработкой.",
+   "source": "учебный слой, стр. 417, стр. 418, стр. 420",
+   "claim_ids": [
+    "test.shale_flow_barriers#c1",
+    "test.shale_flow_barriers#c2",
+    "test.shale_flow_barriers#c3",
+    "test.shale_flow_barriers#c4",
+    "test.shale_flow_barriers#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.sidetrack_oil_target",
+   "step_id": "test.sidetrack_oil_target",
+   "node_id": "test.sidetrack_oil_target",
+   "file": "illustrations/sidetrack_oil_target.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 418–419.",
+   "alt": "Схема: признаки Сланец на глубине 8950 футов, картированный как непроницаемый, Подстилающий дельтовый песчаник; правило: По главе, такой сланец указывает на возможность ловушки нефти в подстилающем дельтовом песчанике.; вывод: Можно рассматривать песчаник как возможную цель для бокового ствола.",
+   "source": "учебный слой, стр. 418, стр. 419",
+   "claim_ids": [
+    "test.sidetrack_oil_target#c1",
+    "test.sidetrack_oil_target#c2",
+    "test.sidetrack_oil_target#c3",
+    "test.sidetrack_oil_target#c4",
+    "test.sidetrack_oil_target#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.horizontal_well_placement",
+   "step_id": "test.horizontal_well_placement",
+   "node_id": "test.horizontal_well_placement",
+   "file": "illustrations/horizontal_well_placement.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 417–422.",
+   "alt": "Схема механизма: Непрерывный сланец залива служит экраном → горизонтальную скважину можно разместить под ним, вдали от вышележащей газовой шапки. Знание бокового распределения проницаемости устьевых баров → синусоидальная траектория контактирует с большим числом высокопроницаемых литофаций",
+   "source": "учебный слой, стр. 417, стр. 419, стр. 422",
+   "claim_ids": [
+    "test.horizontal_well_placement#c1",
+    "test.horizontal_well_placement#c2",
+    "test.horizontal_well_placement#c3",
+    "test.horizontal_well_placement#c4",
+    "test.horizontal_well_placement#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.water_control_design",
+   "step_id": "test.water_control_design",
+   "node_id": "test.water_control_design",
+   "file": "illustrations/water_control_design.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 418–422.",
+   "alt": "Схема: признаки Положение сланца на каротажной диаграмме, Интервалы песчаников, Расположение перфораций, Добыча нефти и воды; правило: Ограничение перфораций выбранными дельтовыми песчаниками избегает конкуренции с более проницаемыми вышележащими флювиальными песчаниками; непрерывный сланец может служить барьером.; вывод: В описанном примере 09-35A добыча нефти немного увеличилась, а добыча воды резко снизилась.",
+   "source": "учебный слой, стр. 418, стр. 421, стр. 422",
+   "claim_ids": [
+    "test.water_control_design#c1",
+    "test.water_control_design#c2",
+    "test.water_control_design#c3",
+    "test.water_control_design#c4",
+    "test.water_control_design#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.kuparuk_sand_bodies",
+   "step_id": "test.kuparuk_sand_bodies",
+   "node_id": "test.kuparuk_sand_bodies",
+   "file": "illustrations/kuparuk_sand_bodies.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 422–423.",
+   "alt": "Схема механизма: При разработке блок A считали латерально непрерывным песчаником. → Корреляция по последовательностной стратиграфии выявила отдельные песчаные тела; между ними находятся высокочастотные трансгрессивные морские сланцы. → Проградация — последовательное продвижение осадочного тела в сторону моря.",
+   "source": "учебный слой, стр. 422, стр. 423",
+   "claim_ids": [
+    "test.kuparuk_sand_bodies#c1",
+    "test.kuparuk_sand_bodies#c2",
+    "test.kuparuk_sand_bodies#c3",
+    "test.kuparuk_sand_bodies#c4",
+    "test.kuparuk_sand_bodies#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  }
+ ]
+}

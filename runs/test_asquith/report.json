@@ -1,0 +1,25 @@
+{
+ "chapter": "test_asquith",
+ "nodes": 39,
+ "claims": 395,
+ "tasks": 77,
+ "task_types": {
+  "single": 24,
+  "multiple": 17,
+  "gap": 21,
+  "order": 14,
+  "calc": 1
+ },
+ "units_in_scope": 346,
+ "uncovered": 5,
+ "coverage_pct": 98.6,
+ "formats": {
+  "практикум на данных": 32,
+  "шортс": 2,
+  "интерактив": 2,
+  "карточки": 1,
+  "текст": 2
+ },
+ "usd": 0.589,
+ "minutes": 3.0
+}
