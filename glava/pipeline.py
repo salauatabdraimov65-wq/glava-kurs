@@ -119,6 +119,8 @@ def main():
         stages.remove("video")
     T0 = time.time()
     os.environ["GLAVA_CHAPTER"] = a.chapter          # каждый вызов модели в журнале помечается главой и этапом
+    os.environ.setdefault("PYTHONUTF8", "1")          # Windows: этапы печатают «✅», «→» — вывод только в UTF-8
+    os.environ.setdefault("PYTHONIOENCODING", "utf-8")
     for st in stages:
         os.environ["GLAVA_STAGE"] = st
         t0, usd0, led0 = time.time(), spent_usd(), ledger_len()
