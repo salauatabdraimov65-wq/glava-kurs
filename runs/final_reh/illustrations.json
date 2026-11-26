@@ -1,0 +1,234 @@
+{
+ "chapter": "final_reh",
+ "illustrations": [
+  {
+   "id": "ill.channel_sand_reservoirs",
+   "step_id": "final.channel_sand_reservoirs",
+   "node_id": "final.channel_sand_reservoirs",
+   "file": "illustrations/channel_sand_reservoirs.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 170–171.",
+   "alt": "Схема: признаки постоянное направленное или волновое движение воды, хорошая сортировка обломочного материала; правило: По главе, постоянное движение воды способствует хорошей сортировке, которая связана с высокими коллекторскими свойствами пород.; вывод: Для приведённых примеров коллекторские свойства выражены показателями пористости и проницаемости.",
+   "source": "учебный слой, стр. 170, стр. 171",
+   "claim_ids": [
+    "final.channel_sand_reservoirs#c1",
+    "final.channel_sand_reservoirs#c2",
+    "final.channel_sand_reservoirs#c3",
+    "final.channel_sand_reservoirs#c4",
+    "final.channel_sand_reservoirs#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.shallow_marine_reservoirs",
+   "step_id": "final.shallow_marine_reservoirs",
+   "node_id": "final.shallow_marine_reservoirs",
+   "file": "illustrations/shallow_marine_reservoirs.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 171–172.",
+   "alt": "Схема механизма: Обломочный материал поступает с суши → значительная его часть осаждается на мелководных шельфах → такие отложения часто содержат мощные песчаные пласты и пачки. Шельфы, как правило, велики → осадки широко распространяются; неодинаковые условия осадконакопления → образуются разные типы резервуаров",
+   "source": "учебный слой, стр. 171, стр. 172",
+   "claim_ids": [
+    "final.shallow_marine_reservoirs#c1",
+    "final.shallow_marine_reservoirs#c2",
+    "final.shallow_marine_reservoirs#c3",
+    "final.shallow_marine_reservoirs#c4"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.volga_ural_devonian",
+   "step_id": "final.volga_ural_devonian",
+   "node_id": "final.volga_ural_devonian",
+   "file": "illustrations/volga_ural_devonian.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 172.",
+   "alt": "Схема механизма: Источник осадочного материала — сама платформа; это определяет состав и структурные характеристики отложений. → По мере удаления от берега к юго-востоку возрастает количество и мощность карбонатных пластов, а песчаники сокращаются.",
+   "source": "учебный слой, стр. 172",
+   "claim_ids": [
+    "final.volga_ural_devonian#c1",
+    "final.volga_ural_devonian#c2",
+    "final.volga_ural_devonian#c3",
+    "final.volga_ural_devonian#c4",
+    "final.volga_ural_devonian#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.devonian_layers_properties",
+   "step_id": "final.devonian_layers_properties",
+   "node_id": "final.devonian_layers_properties",
+   "file": "illustrations/devonian_layers_properties.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 172–173.",
+   "alt": "Схема механизма: Разные фациальные условия образования и последующие вторичные изменения → различия коллекторских свойств песчаников",
+   "source": "учебный слой, стр. 172, стр. 173",
+   "claim_ids": [
+    "final.devonian_layers_properties#c1",
+    "final.devonian_layers_properties#c2",
+    "final.devonian_layers_properties#c3",
+    "final.devonian_layers_properties#c4",
+    "final.devonian_layers_properties#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.romashkino_layer_connectivity",
+   "step_id": "final.romashkino_layer_connectivity",
+   "node_id": "final.romashkino_layer_connectivity",
+   "file": "illustrations/romashkino_layer_connectivity.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 173–175.",
+   "alt": "Схема механизма: Песчаные прослои с коллекторскими свойствами чередуются с крайне низкопроницаемыми пропластками → резервуар становится многослойным. Если нижние пласты соединяются с D-II → возникает единая гидродинамическая система, а залежи оказываются связанными",
+   "source": "учебный слой, стр. 173, стр. 174, стр. 175",
+   "claim_ids": [
+    "final.romashkino_layer_connectivity#c1",
+    "final.romashkino_layer_connectivity#c2",
+    "final.romashkino_layer_connectivity#c3",
+    "final.romashkino_layer_connectivity#c4",
+    "final.romashkino_layer_connectivity#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.novo_elkhovskoe_reservoir",
+   "step_id": "final.novo_elkhovskoe_reservoir",
+   "node_id": "final.novo_elkhovskoe_reservoir",
+   "file": "illustrations/novo_elkhovskoe_reservoir.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 174–176.",
+   "alt": "Схема механизма: Изменчивость и нередкое замещение песчаников глинисто-алевролитовыми породами → части пласта различаются по мощности и распространению. Соединение пластов, а на севере и D-I с D-0 → единая гидродинамическая система и общий водонефтяной контакт для связанных частей",
+   "source": "учебный слой, стр. 174, стр. 176",
+   "claim_ids": [
+    "final.novo_elkhovskoe_reservoir#c1",
+    "final.novo_elkhovskoe_reservoir#c2",
+    "final.novo_elkhovskoe_reservoir#c3",
+    "final.novo_elkhovskoe_reservoir#c4",
+    "final.novo_elkhovskoe_reservoir#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.cretaceous_shelf_reservoirs",
+   "step_id": "final.cretaceous_shelf_reservoirs",
+   "node_id": "final.cretaceous_shelf_reservoirs",
+   "file": "illustrations/cretaceous_shelf_reservoirs.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 174–177.",
+   "alt": "Схема: признаки Пористость, Проницаемость; правило: Автор связывает значения пористости до 30–35 % и проницаемости до 1500·10⁻¹⁵ м² с дебитами газа до 1,0–1,5 млн м³/сут.; вывод: Такие коллекторские свойства могут обеспечивать указанные дебиты газа.",
+   "source": "учебный слой, стр. 174, стр. 177",
+   "claim_ids": [
+    "final.cretaceous_shelf_reservoirs#c1",
+    "final.cretaceous_shelf_reservoirs#c2",
+    "final.cretaceous_shelf_reservoirs#c3",
+    "final.cretaceous_shelf_reservoirs#c4",
+    "final.cretaceous_shelf_reservoirs#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.gazli_connected_layers",
+   "step_id": "final.gazli_connected_layers",
+   "node_id": "final.gazli_connected_layers",
+   "file": "illustrations/gazli_connected_layers.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 177.",
+   "alt": "Схема механизма: Глинистые пласты небольшой мощности не изолируют песчаные пачки → пласты динамически связаны и формируют единый резервуар. Более надежные нижележащие глинистые пачки экранируют пласты → под ними формируются самостоятельные залежи",
+   "source": "учебный слой, стр. 177",
+   "claim_ids": [
+    "final.gazli_connected_layers#c1",
+    "final.gazli_connected_layers#c2",
+    "final.gazli_connected_layers#c3",
+    "final.gazli_connected_layers#c4"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.carbonate_cycle_structure",
+   "step_id": "final.carbonate_cycle_structure",
+   "node_id": "final.carbonate_cycle_structure",
+   "file": "illustrations/carbonate_cycle_structure.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 178.",
+   "alt": "Схема механизма: Начало трансгрессии связано с литоральными и сублиторальными фациями → формируются нижние микрозернистые, часто глинистые доломиты. Средняя часть соответствует мелководно-морским фациям → появляются граноморфные известняки. Регрессивный этап соответствует литоральным и супралиторальным фациям → верхние элементы обычно представлены микрозернистыми, часто микробиальными доломитами, нередко с сульфатами",
+   "source": "учебный слой, стр. 178",
+   "claim_ids": [
+    "final.carbonate_cycle_structure#c1",
+    "final.carbonate_cycle_structure#c2",
+    "final.carbonate_cycle_structure#c3",
+    "final.carbonate_cycle_structure#c4",
+    "final.carbonate_cycle_structure#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.carbonate_layer_connectivity",
+   "step_id": "final.carbonate_layer_connectivity",
+   "node_id": "final.carbonate_layer_connectivity",
+   "file": "illustrations/carbonate_layer_connectivity.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 179–180.",
+   "alt": "Схема механизма: Низкая матричная проницаемость ограничивает перенос флюида через породу, но тонкие трещины создают пути связи. → Поэтому продуктивные пласты гидродинамически связаны, а их залежи могут иметь единый контакт.",
+   "source": "учебный слой, стр. 179, стр. 180",
+   "claim_ids": [
+    "final.carbonate_layer_connectivity#c1",
+    "final.carbonate_layer_connectivity#c2",
+    "final.carbonate_layer_connectivity#c3",
+    "final.carbonate_layer_connectivity#c4",
+    "final.carbonate_layer_connectivity#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.carbonate_lateral_changes",
+   "step_id": "final.carbonate_lateral_changes",
+   "node_id": "final.carbonate_lateral_changes",
+   "file": "illustrations/carbonate_lateral_changes.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 179.",
+   "alt": "Схема механизма: Различия палеогеографических условий → разные условия накопления осадков: глубоководные бассейны имели нормальную морскую солёность, а мелководный бассейн формации был частично изолирован и часто осушался → менялись состав отложений и количество организмов",
+   "source": "учебный слой, стр. 179",
+   "claim_ids": [
+    "final.carbonate_lateral_changes#c1",
+    "final.carbonate_lateral_changes#c2",
+    "final.carbonate_lateral_changes#c3",
+    "final.carbonate_lateral_changes#c4",
+    "final.carbonate_lateral_changes#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  }
+ ]
+}

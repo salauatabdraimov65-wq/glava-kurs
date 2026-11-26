@@ -1,0 +1,22 @@
+{
+ "chapter": "final_reh",
+ "nodes": 11,
+ "claims": 80,
+ "tasks": 22,
+ "task_types": {
+  "single": 9,
+  "multiple": 5,
+  "gap": 5,
+  "order": 3
+ },
+ "units_in_scope": 53,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "практикум на данных": 1,
+  "текст": 8,
+  "шортс": 2
+ },
+ "usd": 0.048,
+ "minutes": 1.5
+}

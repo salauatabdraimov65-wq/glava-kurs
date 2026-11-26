@@ -1,0 +1,183 @@
+{
+ "chapter": "final_reh",
+ "routes": [
+  {
+   "node_id": "final.channel_sand_reservoirs",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/None; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "final.shallow_marine_reservoirs",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип В/П; текст шага и схема"
+  },
+  {
+   "node_id": "final.volga_ural_devonian",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/В; текст шага и схема"
+  },
+  {
+   "node_id": "final.devonian_layers_properties",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип В/П; текст шага и схема"
+  },
+  {
+   "node_id": "final.romashkino_layer_connectivity",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/М; текст шага и схема"
+  },
+  {
+   "node_id": "final.novo_elkhovskoe_reservoir",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/М; текст шага и схема"
+  },
+  {
+   "node_id": "final.cretaceous_shelf_reservoirs",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип П/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "final.gazli_connected_layers",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/П; текст шага и схема"
+  },
+  {
+   "node_id": "final.carbonate_cycle_structure",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип В/Р; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "final.carbonate_layer_connectivity",
+   "format": "шортс",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/П; видеоёмкость 7/10",
+   "video_path": "video/final_short_carbonate_layer_connecti/video.mp4"
+  },
+  {
+   "node_id": "final.carbonate_lateral_changes",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/М; текст шага и схема"
+  }
+ ]
+}

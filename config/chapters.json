@@ -148,6 +148,19 @@
         ]
       ],
       "title": "Репетиция сдвига домена: бурение (русская Википедия, CC BY-SA)"
+    },
+    "final_reh": {
+      "split": "rehearsal",
+      "md": "/Users/salauat/Desktop/kmg-new/books md/train_kuznetsov.md",
+      "lang": "ru",
+      "domain": "geology",
+      "pages": [
+        [
+          170,
+          180
+        ]
+      ],
+      "title": "Финальная репетиция: Кузнецов, стр. 170–180"
     }
   }
 }

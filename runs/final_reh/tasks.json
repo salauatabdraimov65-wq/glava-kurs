@@ -1,0 +1,752 @@
+{
+ "chapter": "final_reh",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.channel_sand_reservoirs#c2"
+   ],
+   "prompt": "Что способствует хорошей сортировке обломочного материала и высоким коллекторским свойствам пород?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Постоянное направленное и волновое движение вод",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только наличие высокой пористости, независимо от движения вод",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "c",
+     "text": "Отложение обломочного материала в неподвижной воде",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Образование подземных пустот, в которых накапливается нефть",
+     "misconception": "misc.oil_lake"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Постоянное направленное и волновое движение вод обеспечивает сортировку и высокие коллекторские свойства пород (стр. 170).",
+   "step_id": "final.channel_sand_reservoirs",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "final.channel_sand_reservoirs#c3",
+    "final.channel_sand_reservoirs#c5"
+   ],
+   "prompt": "Какие утверждения о пористости и проницаемости песчаников месторождений верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В продуктивных песчаниках Мухановского месторождения пористость составляет 20–25 %.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Проницаемость песчаников Мухановского месторождения достигает (3000–3500)·10⁻¹⁵ м².",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "В бобриковских песчаниках Покровского месторождения средняя пористость составляет 27–29 %.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Средняя проницаемость бобриковских песчаников Покровского месторождения составляет 834·10⁻¹⁵ м².",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Пористость и проницаемость — это одно и то же свойство породы.",
+     "misconception": "misc.porosity_eq_perm"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для Мухановского месторождения указаны пористость 20–25 % и проницаемость до (3000–3500)·10⁻¹⁵ м², а для Покровского средняя проницаемость — 834·10⁻¹⁵ м² (стр. 170–171).",
+   "step_id": "final.channel_sand_reservoirs",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "final.shallow_marine_reservoirs#c3"
+   ],
+   "prompt": "Поскольку шельфы, как правило, велики, осадки на них имеют {{1}} распространение.",
+   "options": [],
+   "answer": [
+    "широкое площадное"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Большой размер шельфов связан с широким площадным распространением осадков (стр. 172).",
+   "step_id": "final.shallow_marine_reservoirs",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.shallow_marine_reservoirs#c2"
+   ],
+   "prompt": "Расположите этапы образования мощных песчаных пластов на шельфе в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Обломочный материал осаждается на шельфе",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Обломочный материал поступает с суши",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Образуется мощный песчаный пласт или пачка",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Поступивший с суши материал осаждается на мелководном шельфе, способствуя образованию мощных песчаных пластов и пачек (стр. 171).",
+   "step_id": "final.shallow_marine_reservoirs",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "final.volga_ural_devonian#c3"
+   ],
+   "prompt": "Где залегает девонский комплекс Волго-Уральской области и где проходит его верхняя граница?",
+   "options": [
+    {
+     "id": "a",
+     "text": "На кристаллическом фундаменте либо на разных горизонтах рифея-венда; верхняя граница проходит по кровле кыновского — подошве доманикового горизонта.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только на кристаллическом фундаменте; верхняя граница проходит по кровле доманикового горизонта.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "На разных горизонтах рифея-венда; верхняя граница проходит по подошве кыновского горизонта.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "На доманиковом горизонте; верхняя граница проходит по кровле рифея-венда.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Комплекс залегает на кристаллическом фундаменте либо на разных горизонтах рифея-венда, а его верхняя граница проходит по кровле кыновского — подошве доманикового горизонта (стр. 172).",
+   "step_id": "final.volga_ural_devonian",
+   "id": "t05"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.volga_ural_devonian#c6"
+   ],
+   "prompt": "Как изменяется состав формации к юго-востоку от берега?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Количество и мощность карбонатных пластов растут, а доля и мощности песчаников сокращаются.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Количество и мощность карбонатных пластов сокращаются, а доля и мощности песчаников растут.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "И карбонатные пласты, и песчаники становятся многочисленнее и мощнее.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "И карбонатные пласты, и песчаники сокращаются по доле и мощности.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "К юго-востоку от берега карбонатных пластов становится больше и они мощнее, тогда как доля и мощности песчаников сокращаются (стр. 172).",
+   "step_id": "final.volga_ural_devonian",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "final.devonian_layers_properties#c7",
+    "final.devonian_layers_properties#c8"
+   ],
+   "prompt": "Какие утверждения верно описывают песчаники и их коллекторские свойства?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Песчаники преимущественно мелкозернистые, реже среднезернистые, хорошо отсортированные.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Песчаники преимущественно крупнозернистые и плохо отсортированные.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Средняя пористость составляет 17–25 %, а проницаемость — около 500·10⁻¹⁵ м².",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Пористость и проницаемость всегда изменяются одинаково, поскольку это одно свойство.",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "e",
+     "text": "Песчаники состоят исключительно из обломков известняка.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Песчаники преимущественно мелкозернистые, а их средняя пористость и проницаемость указаны как 17–25 % и около 500·10⁻¹⁵ м² (стр. 173).",
+   "step_id": "final.devonian_layers_properties",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "final.devonian_layers_properties#c4"
+   ],
+   "prompt": "Песчаные пласты индексируются от {{1}} в пашийском горизонте до {{2}} в эйфельском ярусе.",
+   "options": [],
+   "answer": [
+    "D-I",
+    "D-V"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указана индексация от D-I до D-V (стр. 172).",
+   "step_id": "final.devonian_layers_properties",
+   "id": "t08"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "final.romashkino_layer_connectivity#c6"
+   ],
+   "prompt": "Как устроен резервуар в разрезе Ромашкинского месторождения?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Это многослойный резервуар с кондиционными пластами и крайне низкопроницаемыми разделяющими пропластками",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Это единая пустота без разделяющих пород",
+     "misconception": "misc.reservoir_void"
+    },
+    {
+     "id": "c",
+     "text": "Это один сплошной песчаный пласт без прослоев",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Это подземное озеро, не связанное с породами",
+     "misconception": "misc.oil_lake"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В разрезе выделены пять песчаных прослоев, а резервуар описан как многослойный и разделённый низкопроницаемыми пропластками (стр. 174).",
+   "step_id": "final.romashkino_layer_connectivity",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.romashkino_layer_connectivity#c7"
+   ],
+   "prompt": "Что происходит на некоторых участках с нижними пластами?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Они соединяются с нижележащим D-II и образуют единую гидродинамическую систему",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Они всегда отделены от D-II непроницаемым слоем",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Они соединяются с вышележащим пластом D-I",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Они превращаются в подземную пустоту",
+     "misconception": "misc.reservoir_void"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "На некоторых участках нижние пласты соединяются с нижележащим D-II, образуя единую гидродинамическую систему (стр. 174).",
+   "step_id": "final.romashkino_layer_connectivity",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "final.novo_elkhovskoe_reservoir#c2",
+    "final.novo_elkhovskoe_reservoir#c3",
+    "final.novo_elkhovskoe_reservoir#c5"
+   ],
+   "prompt": "Какие утверждения верно описывают строение и разработку пласта D-I?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пласт D-I разделяется на пять невыдержанных по мощности пластов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Отдельные пласты часто соединяются друг с другом в разных сочетаниях.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Все пять пластов выдержаны по мощности и нигде не замещаются другими породами.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Сложное строение резервуара и залежи облегчает разработку.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Пласт D-I разделяется на пять невыдержанных пластов, которые часто соединяются в разных сочетаниях; сложное строение затрудняет разработку (стр. 174).",
+   "step_id": "final.novo_elkhovskoe_reservoir",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "final.novo_elkhovskoe_reservoir#c2"
+   ],
+   "prompt": "Пласт D-I мощностью 30–50 м разделяется на {{1}} невыдержанных по мощности пластов, которые нередко замещаются {{2}}.",
+   "options": [],
+   "answer": [
+    "пять",
+    "глинисто-алевролитовыми породами"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указаны пять пластов и их возможное замещение глинисто-алевролитовыми породами (стр. 174).",
+   "step_id": "final.novo_elkhovskoe_reservoir",
+   "id": "t12"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "final.cretaceous_shelf_reservoirs#c2"
+   ],
+   "prompt": "Каков указанный возраст формации?",
+   "options": [
+    {
+     "id": "a",
+     "text": "От баррема до сенона, на западе ограничена нижним туроном",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только от нижнего турона до сенона",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "От баррема до нижнего турона по всей площади",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "От юры до сенона",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формация имеет возраст от баррема до сенона, а на западе ограничена нижним туроном (стр. 174).",
+   "step_id": "final.cretaceous_shelf_reservoirs",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.cretaceous_shelf_reservoirs#c3"
+   ],
+   "prompt": "Как описан состав и строение формации?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Песчано-глинистые отложения с редкими прослоями раковинных известняков; песчано-алевролитовые и глинистые пласты многократно переслаиваются",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Преимущественно массивные известняки с редкими песчаными прослоями",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Однородная толща глин без песчаных пластов",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Песчаные пустоты, заполненные углеводородами, с редкими глинистыми перегородками",
+     "misconception": "misc.reservoir_void"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формация сложена песчано-глинистыми отложениями с редкими раковинными известняками и переслаиванием песчано-алевролитовых и глинистых пачек (стр. 174).",
+   "step_id": "final.cretaceous_shelf_reservoirs",
+   "id": "t14"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "final.gazli_connected_layers#c3"
+   ],
+   "prompt": "Какие пористость и проницаемость указаны для песчаников IX горизонта месторождения Газли?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пористость 26–32 %, проницаемость (600–700)·10⁻¹⁵ м²",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Пористость 600–700 %, проницаемость (26–32)·10⁻¹⁵ м²",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "c",
+     "text": "Пористость 26–32 %, проницаемость (60–70)·10⁻¹⁵ м²",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Пористость 6–12 %, проницаемость (600–700)·10⁻¹⁵ м²",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для песчаников IX горизонта указаны пористость 26–32 % и проницаемость (600–700)·10⁻¹⁵ м² (стр. 177).",
+   "step_id": "final.gazli_connected_layers",
+   "id": "t15"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.gazli_connected_layers#c2",
+    "final.gazli_connected_layers#c4"
+   ],
+   "prompt": "Какие утверждения верны о строении и связанности пластов Газлинского месторождения?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Песчаные пласты IX горизонта сеномана — пример динамически связанных пластов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Глинистые пласты небольшой мощности экранируют IX горизонт, разделяя его на изолированные залежи.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "IX горизонт представляет единый многослойный резервуар, поскольку тонкие глинистые пласты его не экранируют.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Нижележащие глинистые пачки менее надёжны, чем тонкие глины внутри IX горизонта.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Самостоятельные залежи формируются над нижележащими глинистыми пачками.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Пласты IX горизонта динамически связаны и образуют единый многослойный резервуар, а нижележащие глинистые пачки надёжнее (стр. 177).",
+   "step_id": "final.gazli_connected_layers",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "final.carbonate_cycle_structure#c4"
+   ],
+   "prompt": "Карбонатные отложения имеют {{1}} строение; отдельные доломитовые циклиты обычно {{2}}.",
+   "options": [],
+   "answer": [
+    "циклическое",
+    "трёхчленны"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Цикличность и трёхчленность циклитов указаны на стр. 178.",
+   "step_id": "final.carbonate_cycle_structure",
+   "id": "t17"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.carbonate_cycle_structure#c5",
+    "final.carbonate_cycle_structure#c6",
+    "final.carbonate_cycle_structure#c7"
+   ],
+   "prompt": "Расположите элементы карбонатного циклита снизу вверх.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Верхние элементы — микрозернистые, часто микробиальные доломиты литоральных и супралиторальных фаций регрессивного этапа.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Нижние элементы — микрозернистые, в разной степени глинистые доломиты литоральных и сублиторальных фаций начала трансгрессии.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Средние элементы — граноморфные известняки мелководно-морских фаций.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Снизу вверх следуют нижние, средние и верхние элементы циклита, как описано на стр. 178.",
+   "step_id": "final.carbonate_cycle_structure",
+   "id": "t18"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.carbonate_layer_connectivity#c6",
+    "final.carbonate_layer_connectivity#c7"
+   ],
+   "prompt": "Что формируется благодаря гидродинамической связи продуктивных пластов?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Многопластовый резервуар с единым водонефтяным или газоводяным контактом",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Подземное озеро, в котором нефть находится отдельно от пород",
+     "misconception": "misc.oil_lake"
+    },
+    {
+     "id": "c",
+     "text": "Один пласт-пустота без пористой породы",
+     "misconception": "misc.reservoir_void"
+    },
+    {
+     "id": "d",
+     "text": "Отдельные резервуары без гидродинамической связи",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Тонкая трещиноватость связывает продуктивные пласты, образуя многопластовый резервуар с единым контактом (стр. 179).",
+   "step_id": "final.carbonate_layer_connectivity",
+   "id": "t19"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "final.carbonate_layer_connectivity#c4",
+    "final.carbonate_layer_connectivity#c5",
+    "final.carbonate_layer_connectivity#c6"
+   ],
+   "prompt": "Какие утверждения верны для разрезов подобных формаций?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В разрезе чередуются пласты-коллекторы и пласты-полуколлекторы.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Эффективная мощность может составлять максимум 40–60 % общей мощности.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Породы-полуколлекторы гидродинамически связывают продуктивные пласты благодаря минимальной матричной проницаемости и тонкой трещиноватости.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Эффективная мощность всегда равна общей мощности разреза.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Полуколлекторы — это пустоты, из которых пласты состоят целиком.",
+     "misconception": "misc.reservoir_void"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В таких разрезах чередуются коллекторы и полуколлекторы, эффективная мощность ограничена 40–60 %, а трещиноватость связывает продуктивные пласты (стр. 179).",
+   "step_id": "final.carbonate_layer_connectivity",
+   "id": "t20"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "final.carbonate_lateral_changes#c4"
+   ],
+   "prompt": "К северо-западу возрастают количества {{1}} и микрозернистых известняков, появляются {{2}}, а разрез становится сульфатно-доломитовым.",
+   "options": [],
+   "answer": [
+    "доломитов",
+    "сульфатные прослои"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "К северо-западу увеличивается количество доломитов и появляются сульфатные прослои (стр. 179).",
+   "step_id": "final.carbonate_lateral_changes",
+   "id": "t21"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "final.carbonate_lateral_changes#c3",
+    "final.carbonate_lateral_changes#c4",
+    "final.carbonate_lateral_changes#c5"
+   ],
+   "prompt": "Расположите изменения карбонатной формации по мере продвижения от юго-востока к северо-западу.",
+   "options": [
+    {
+     "id": "a",
+     "text": "У юго-восточной окраины преобладают разные типы известняков, встречаются прослои известняковых брекчий и конгломератов.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "К северо-западу возрастает количество доломитов и микрозернистых известняков, появляются сульфатные прослои.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Далее к северо-западу сокращаются органогенные известняки, фауна и органогенный детрит.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "От юго-восточной окраины к северо-западу возрастают доломиты и сульфатные прослои, а органогенные известняки и фауна сокращаются (стр. 179).",
+   "step_id": "final.carbonate_lateral_changes",
+   "id": "t22"
+  }
+ ]
+}
