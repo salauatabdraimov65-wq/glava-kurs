@@ -174,6 +174,10 @@ def main():
             specs = sorted((run_dir / "video").glob("*/spec.json"))
             if has("video.build") and specs:
                 for sp in specs:
+                    mp4s = list(sp.parent.glob("video*.mp4"))
+                    if mp4s and min(m.stat().st_mtime for m in mp4s) >= sp.stat().st_mtime:
+                        print(f"(ролик {sp.parent.name} уже собран по этому сценарию — пропуск)")
+                        continue   # второй ролик на тесте не перерендеривает первый
                     aspect = json.loads(sp.read_text(encoding="utf-8")).get("aspect", "9:16")
                     run(["video.build", str(sp), "--layout", "16x9" if aspect == "16:9" else "9x16"], soft=True)
             else:

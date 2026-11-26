@@ -38,6 +38,8 @@ uv run python -m glava.pipeline <chapter_id>
 | Быстро, без ролика / без самопроверки | `… --no-video` / `… --no-review` |
 | Перезапуск с упавшего этапа | `… --from <этап>` |
 | **Пересборка после правки факта** | поправить `runs/<id>/layer.json` → `uv run python -m glava.pipeline <id> --from illustrate` (схемы, графики, сценарий, ролик, курс). Для глав из репозитория **ключ OpenAI не нужен**: готовые ответы модели лежат в `llm_cache/`; без ключа сценарий ролика не переписывается, ролик пересобирается по прежнему сценарию |
+| Найти шаг по теме ролика | `uv run python -m glava.find <id> "тема"` — подскажет готовую команду для ролика |
+| Изменить число/фразу в слое и пересобрать | `uv run python -m glava.set_text <id> "старое" "новое"` (курс за секунды; `--full` — с роликом) |
 | Записать ручную правку в журнал | `uv run python -m glava.edit --chapter <id> --file <файл> --what "…" --minutes 5 --why "…"` |
 | Проверить чужой пакет с закладками | `uv run python -m review.run <package.json> --chapter-md <глава.md> -o answer.json` |
 | Метрики по шаблону организаторов | `uv run python -m glava.metrics` (конвейер делает это сам в конце) |
