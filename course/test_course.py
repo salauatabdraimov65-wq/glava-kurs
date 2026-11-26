@@ -31,6 +31,7 @@ class CourseBlocksTest(unittest.TestCase):
             self.assertIn('data-art="hills"', page)
             self.assertIn("--accent:#246378", page)
             self.assertNotIn("--art-hero:", page)
+            self.assertNotIn('class="hero-illustration"', page)
 
     def test_map_wraps_long_titles_without_losing_or_inserting_markup(self) -> None:
         title = "Незнакомое очень длинное название шага для узкого экрана <script>"
@@ -53,13 +54,14 @@ class CourseBlocksTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             folder = Path(temporary)
             (folder / "art").mkdir()
-            for name in ("hills.svg", "unused.svg"):
+            for name in ("cover.svg", "hills.svg", "unused.svg"):
                 (folder / "art" / name).write_text('<svg xmlns="http://www.w3.org/2000/svg"/>', encoding="utf-8")
-            css, names = art_css(str(folder), slots=("hills", "hills-mobile"))
-            self.assertEqual(names, ["hills"])
+            css, names = art_css(str(folder), slots=("cover", "hills"))
+            self.assertEqual(names, ["cover", "hills"])
             self.assertNotIn("--art-unused:", css)
             page = html_page({"nodes": [{"id": "new", "title": "Тема"}]}, {}, {}, {}, folder, domain=str(folder))
-            self.assertIn('data-art="hills"', page)
+            self.assertIn('data-art="cover hills"', page)
+            self.assertIn('class="hero-illustration"', page)
             self.assertNotIn("--art-unused:", page)
             self.assertNotIn('class="strata-scene"', page)
             self.assertNotIn('class="section-svg"', page)

@@ -630,7 +630,9 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 
     domain_data = load_domain(chapter_domain(str(layer.get("chapter", "")), domain))
     tokens = domain_tokens(domain_data)
-    art_style, art_names = art_css(domain_data["folder"], slots=("hills", "hills-mobile"))
+    art_style, art_names = art_css(domain_data["folder"], slots=("cover", "hills"))
+    overview_art = ('<div class="hero-illustration" aria-hidden="true"></div>'
+                    if "cover" in art_names else "")
     _SCANS.clear()
     _SCANS.update(find_scans(base))
     videos = find_videos(base)
@@ -740,6 +742,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
   <main id="course-content" class="layout">
     <section id="overview-view" class="app-view">
     <header class="hero">
+      {overview_art}
       <div class="hero-copy">
         <div class="hero-kicker"><span class="kicker-rule" aria-hidden="true"></span>Курс по главе книги</div>
         <h1>{hero_title}</h1>

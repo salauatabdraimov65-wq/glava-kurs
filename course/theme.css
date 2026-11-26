@@ -655,7 +655,14 @@ button { min-width: 44px; }
 .app-view, .step, .hero-copy, .practice-column, .lesson-results { min-width: 0; }
 .prequestion-text, .task-prompt, .claim, .summary-step, .review-card, .completion-checklist { overflow-wrap: anywhere; }
 
-/* Декоративный пейзаж со встроенной в файл меткой. Полоса не обрезается и не затемняется. */
+/* Атмосферная акварель обзора; блок добавляется только при наличии картинки. */
+.hero-illustration {
+  min-width: 0;
+  height: clamp(200px, 27vw, 330px);
+  background: var(--art-cover) center 55% / cover no-repeat;
+}
+:root[data-theme="dark"] .hero-illustration { filter: brightness(.85); }
+/* Пейзаж шага сохранён; плашка снята по явной просьбе пользователя. */
 html[data-art~="hills"] .step-plate { padding-top: 0; background: var(--paper); }
 html[data-art~="hills"] .step-plate::before {
   content: "";
@@ -665,11 +672,6 @@ html[data-art~="hills"] .step-plate::before {
   background: var(--art-hills) center / 100% 100% no-repeat;
 }
 html[data-art~="hills"] .plate-band { display: none; }
-@media (max-width: 760px) {
-  html[data-art~="hills-mobile"] .step-plate::before {
-    background-image: var(--art-hills-mobile);
-  }
-}
 @media (max-width: 1000px) {
   /* Меню должно перекрывать текст непрозрачной бумагой. */
   :root:not([data-theme="dark"]) .course-sidebar { background: var(--paper); }
@@ -711,3 +713,7 @@ html[data-art~="hills"] .plate-band { display: none; }
 /* Оси графиков и индексы формул сохраняют читаемый размер на телефоне. */
 .pressure-chart text { font: 17px var(--font-ui); }
 sub, sup { font-size: 1rem; }
+@media (max-width: 760px) {
+  .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .hero .stat { padding: .2rem .6rem .2rem 0; border-right: 0; }
+}
