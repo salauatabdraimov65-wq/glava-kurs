@@ -659,10 +659,10 @@ button { min-width: 44px; }
 .hero-illustration {
   min-width: 0;
   height: clamp(200px, 27vw, 330px);
-  background: var(--art-cover) center 55% / cover no-repeat;
+  background: var(--art-cover) right bottom / cover no-repeat;
 }
-:root[data-theme="dark"] .hero-illustration { filter: brightness(.85); }
-/* Пейзаж шага сохранён; плашка снята по явной просьбе пользователя. */
+/* Изображение не затемняется: вписанная подпись остаётся контрастной в обеих темах. */
+/* Впечатанная подпись в стиле рисунка, без рамки и жёсткой плашки. */
 html[data-art~="hills"] .step-plate { padding-top: 0; background: var(--paper); }
 html[data-art~="hills"] .step-plate::before {
   content: "";
@@ -716,4 +716,9 @@ sub, sup { font-size: 1rem; }
 @media (max-width: 760px) {
   .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
   .hero .stat { padding: .2rem .6rem .2rem 0; border-right: 0; }
+}
+
+@media (max-width: 760px) {
+  html[data-art~="cover-mobile"] .hero-illustration { background-image: var(--art-cover-mobile); }
+  html[data-art~="hills-mobile"] .step-plate::before { background-image: var(--art-hills-mobile); }
 }
