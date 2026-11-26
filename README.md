@@ -37,7 +37,7 @@ uv run python -m glava.pipeline <chapter_id>
 | Ролик на назначенный узел | `uv run python -m glava.pipeline <id> --from scene --video-node <node_id> [--video-format short\|long]` |
 | Быстро, без ролика / без самопроверки | `… --no-video` / `… --no-review` |
 | Перезапуск с упавшего этапа | `… --from <этап>` |
-| **Пересборка после правки факта** | поправить `runs/<id>/layer.json` → `uv run python -m glava.pipeline <id> --from illustrate` (схемы, графики, сценарий, ролик, курс) |
+| **Пересборка после правки факта** | поправить `runs/<id>/layer.json` → `uv run python -m glava.pipeline <id> --from illustrate` (схемы, графики, сценарий, ролик, курс). Для глав из репозитория **ключ OpenAI не нужен**: готовые ответы модели лежат в `llm_cache/`; без ключа сценарий ролика не переписывается, ролик пересобирается по прежнему сценарию |
 | Записать ручную правку в журнал | `uv run python -m glava.edit --chapter <id> --file <файл> --what "…" --minutes 5 --why "…"` |
 | Проверить чужой пакет с закладками | `uv run python -m review.run <package.json> --chapter-md <глава.md> -o answer.json` |
 | Метрики по шаблону организаторов | `uv run python -m glava.metrics` (конвейер делает это сам в конце) |
@@ -123,6 +123,7 @@ config/       главы (chapters.json), типы трудности
 schemas/      схемы организаторов
 samples/      образец слоя, репетиционные тексты
 runs/<id>/    результат по главе: layer, coverage, routing, tasks, illustrations, course/, video/
+llm_cache/    ответы модели для глав из репозитория (только чтение) — пересборка без ключа
 MANIFEST.md   модели, инструменты, что уходит наружу
 manual_edits.csv  журнал ручных правок (совпадает с историей коммитов)
 metrics.csv   строка на главу и этап: токены, деньги, узлы, секунды видео, человеко-минуты

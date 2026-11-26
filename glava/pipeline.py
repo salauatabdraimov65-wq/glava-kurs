@@ -66,6 +66,16 @@ def run(cmd: list[str], soft: bool = False) -> bool:
     return True
 
 
+def existing_video(run_dir: Path):
+    """Ролик у главы уже есть (пересборка после правки) — держимся за его узел, формат, шаблон и id,
+    чтобы правка факта пересобирала тот же ролик, а не выбирала новый."""
+    for sp in sorted((run_dir / "video").glob("*/spec.json")):
+        spec = json.loads(sp.read_text(encoding="utf-8"))
+        if spec.get("node_id") and spec.get("template"):
+            return spec["node_id"], spec.get("format") or "short", spec["template"], spec.get("video_id") or sp.parent.name
+    return None
+
+
 def pick_video_node(run_dir: Path) -> tuple[str, str, str]:
     """Узел с наибольшей видеоёмкостью среди тех, у кого есть шаблон сцены."""
     from layer.scenes import TEMPLATES   # только шаблоны СЦЕН (интерактивы курса — не ролики)
@@ -140,14 +150,19 @@ def main():
             run(["layer.illustrate", a.chapter])
             run(["layer.redraw", a.chapter])   # графики книги, построенные по формулам главы → перерисованы расчётом
         elif st == "scene":
+            vid = None
             if a.video_node:
                 node, fmt, tpl = a.video_node, a.video_format or "short", None
+            elif existing_video(run_dir):
+                node, fmt, tpl, vid = existing_video(run_dir)
             else:
                 node, fmt, tpl = pick_video_node(run_dir)
                 fmt = a.video_format or fmt
             cmd = ["layer.scenes", a.chapter, node, "--format", fmt]
             if tpl:
                 cmd += ["--template", tpl]
+            if vid:
+                cmd += ["--video-id", vid]
             run(cmd, soft=True)
         elif st == "course":
             if has("course.build"):
