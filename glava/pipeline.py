@@ -51,6 +51,22 @@ def metric(chapter, stage, t0, usd0, led0, nodes=0, video_s=0):
     print(f"── {stage}: {time.time() - t0:.0f} с, ${spent_usd() - usd0:.3f}", flush=True)
 
 
+def portable_md(md: str) -> str:
+    """Путь к md главы — относительно папки материалов или проекта (как у обучающих глав), чтобы конфиг
+    работал на другом компьютере (жюри); иначе — абсолютный."""
+    p = Path(md)
+    if not p.exists():
+        return md
+    p = p.resolve()
+    from glava.chapter import materials_dir
+    for base in (ROOT, materials_dir()):
+        try:
+            return p.relative_to(base.resolve()).as_posix()
+        except ValueError:
+            continue
+    return str(p)
+
+
 def has(module: str) -> bool:
     return (ROOT / module.replace(".", "/")).with_suffix(".py").exists()
 
@@ -108,7 +124,7 @@ def main():
         cfg_path = ROOT / "config" / "chapters.json"
         cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
         entry = cfg["chapters"].get(a.chapter, {})
-        entry.update({"split": entry.get("split", "test"), "md": str(Path(a.md).resolve()) if Path(a.md).exists() else a.md,
+        entry.update({"split": entry.get("split", "test"), "md": portable_md(a.md),
                       "lang": a.lang or entry.get("lang", "ru"), "domain": a.domain or entry.get("domain", "geology")})
         if a.pages:
             entry["pages"] = [[int(x) for x in r.split("-")] for r in a.pages.split(",")]
@@ -118,8 +134,14 @@ def main():
             entry["start_at"] = a.start_at
         if a.end_at:
             entry["end_at"] = a.end_at
-        cfg["chapters"][a.chapter] = entry
-        cfg_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding="utf-8")
+        # главы теста гоняют параллельно в разных окнах: запись — с перечитыванием, чтобы не затереть чужую главу
+        for _ in range(5):
+            cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+            cfg["chapters"][a.chapter] = entry
+            cfg_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding="utf-8")
+            time.sleep(0.3)
+            if json.loads(cfg_path.read_text(encoding="utf-8"))["chapters"].get(a.chapter) == entry:
+                break
     if a.chapter not in chapters_config():
         sys.exit(f"Глава {a.chapter} не найдена в config/chapters.json — укажите --md и --pages")
 

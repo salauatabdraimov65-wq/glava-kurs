@@ -1,6 +1,7 @@
 """Найти шаг курса по теме ролика (темы объявляют на тесте) — без модели, мгновенно.
 
     uv run python -m glava.find <chapter_id> "тема ролика"
+    uv run python -m glava.find --test "тема ролика"        # по всем главам теста сразу
 
 Ищет слова темы в названии шага, разделе книги и утверждениях; показывает лучшие шаги с типом трудности,
 шаблоном сцены и готовой командой для ролика.
@@ -42,12 +43,19 @@ def find(chapter: str, topic: str, top: int = 5) -> list[dict]:
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         sys.exit(__doc__)
-    ch, topic = sys.argv[1], " ".join(sys.argv[2:])
-    res = find(ch, topic)
+    if sys.argv[1] == "--test":   # тема может относиться к любой главе теста — ищем по всем (split=test)
+        from glava.chapter import chapters_config
+        chs = [c for c, m in chapters_config().items() if m.get("split") == "test" and (ROOT / "runs" / c / "layer.json").exists()]
+    else:
+        chs = [sys.argv[1]]
+    if not chs:
+        sys.exit("Глав теста (split=test) с готовым слоем пока нет — сначала прогоните главы.")
+    topic = " ".join(sys.argv[2:])
+    res = sorted(((c, r) for c in chs for r in find(c, topic)), key=lambda cr: -cr[1]["score"])[:6]
     if not res:
         print("Совпадений нет — попробуйте другие слова темы (термин из главы).")
-    for i, r in enumerate(res, 1):
-        print(f"{i}. {r['node_id']}  «{r['title']}»  тип {r['type']}, стр. {r['pages']}, совпадение {r['score']}")
+    for i, (ch, r) in enumerate(res, 1):
+        print(f"{i}. [{ch}] {r['node_id']}  «{r['title']}»  тип {r['type']}, стр. {r['pages']}, совпадение {r['score']}")
         if i == 1:
             print(f"   ролик: uv run python -m glava.pipeline {ch} --from scene --video-node {r['node_id']} "
                   f"--video-format {r['format']}")
