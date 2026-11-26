@@ -1,0 +1,153 @@
+{
+  "date": "2026-11-26",
+  "views": [
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "cover": 1,
+      "art": "cover hills"
+    }
+  ],
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "tz_compliant": false,
+  "tz_deviation": "The mandatory AI illustration label was removed on explicit user request; both decorative images remain AI-generated."
+}
