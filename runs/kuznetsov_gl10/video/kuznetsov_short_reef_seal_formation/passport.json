@@ -1,0 +1,413 @@
+{
+  "video_id": "kuznetsov_short_reef_seal_formation",
+  "node_id": "kuznetsov.reef_seal_formation",
+  "node_card": {
+    "id": "kuznetsov.reef_seal_formation",
+    "title": "Как риф становится ловушкой",
+    "difficulty": {
+      "primary": "В",
+      "secondary": "П"
+    },
+    "threshold": true,
+    "pages": [
+      216,
+      217,
+      218
+    ],
+    "misconception": {
+      "ref": null,
+      "text": "Ловушка не возникает только из-за наличия рифа: важны перекрывающие непроницаемые породы и отношения рифа с соседними отложениями.",
+      "by_model": true
+    },
+    "layers": {
+      "topic": {
+        "text": "Формирование рифовой ловушки",
+        "by_model": true
+      },
+      "main": {
+        "text": "Рифовая ловушка возникает, когда непроницаемые породы после рифообразования замыкают объем вокруг рифа. Ее тип зависит от рельефа, соседних отложений и последующих тектонических движений.",
+        "by_model": true
+      },
+      "mechanism": {
+        "text": "Повышение уровня моря сопровождается карбонатонакоплением и ростом рифа → регрессия прекращает рифообразование → поздние непроницаемые отложения перекрывают риф и замыкают объем.",
+        "by_model": true
+      },
+      "practice": {
+        "text": "Специалист различает типы ловушек по рельефу, отношениям рифа с одновозрастными отложениями, литологическому замещению и последующим тектоническим движениям.",
+        "by_model": true
+      },
+      "nuances": {
+        "text": "При влажном климате регрессивные серии обычно глинистые или песчано-глинистые, с глинами в основании. В аридном климате обычно формируются эвапориты. Между рифовыми карбонатами и солями могут залегать доломиты-ложные покрышки.",
+        "by_model": true
+      },
+      "deeper": []
+    },
+    "layer_file": "runs/kuznetsov_gl10/layer.json"
+  },
+  "script": [
+    {
+      "t_start": 0.15,
+      "t_end": 3.09,
+      "text": "Ты нашёл риф, но ловушки для нефти может не быть.",
+      "claim_id": "kuznetsov.reef_seal_formation#c5",
+      "is_analogy": false,
+      "on_screen": "Риф без ловушки?"
+    },
+    {
+      "t_start": 6.59,
+      "t_end": 10.43,
+      "text": "Вернёмся к началу: уровень моря поднимается, и риф растёт.",
+      "claim_id": "kuznetsov.reef_seal_formation#c2",
+      "is_analogy": false,
+      "on_screen": "Рост рифа"
+    },
+    {
+      "t_start": 10.93,
+      "t_end": 15.07,
+      "text": "Накапливаются карбонатные породы, и риф становится больше прежнего.",
+      "claim_id": "kuznetsov.reef_seal_formation#c2",
+      "is_analogy": false,
+      "on_screen": "Карбонатные породы"
+    },
+    {
+      "t_start": 15.57,
+      "t_end": 19.24,
+      "text": "Затем море отступает, и образование рифа прекращается.",
+      "claim_id": "kuznetsov.reef_seal_formation#c2",
+      "is_analogy": false,
+      "on_screen": "Море отступает"
+    },
+    {
+      "t_start": 19.74,
+      "t_end": 23.78,
+      "text": "Позже непроницаемые отложения могут перекрыть уже сформированный риф.",
+      "claim_id": "kuznetsov.reef_seal_formation#c1",
+      "is_analogy": false,
+      "on_screen": "Позднее перекрытие"
+    },
+    {
+      "t_start": 24.28,
+      "t_end": 28.66,
+      "text": "Во влажном климате такими отложениями обычно становятся глинистые толщи.",
+      "claim_id": "kuznetsov.reef_seal_formation#c3",
+      "is_analogy": false,
+      "on_screen": "Влажный климат"
+    },
+    {
+      "t_start": 29.16,
+      "t_end": 33.19,
+      "text": "Глина здесь как крышка; но настоящая покрышка — толща породы.",
+      "claim_id": "kuznetsov.reef_seal_formation#c1",
+      "is_analogy": true,
+      "on_screen": "Не буквальная крышка"
+    },
+    {
+      "t_start": 33.69,
+      "t_end": 36.78,
+      "text": "В этой схеме перекрытие замыкает объём вокруг рифа.",
+      "claim_id": "kuznetsov.reef_seal_formation#c5",
+      "is_analogy": false,
+      "on_screen": "Замкнутый объём"
+    },
+    {
+      "t_start": 37.28,
+      "t_end": 41.38,
+      "text": "Так возникает ловушка; её тип зависит и от соседних отложений.",
+      "claim_id": "kuznetsov.reef_seal_formation#c5",
+      "is_analogy": false,
+      "on_screen": "Отношения пород"
+    },
+    {
+      "t_start": 41.88,
+      "t_end": 45.62,
+      "text": "Вот ответ: сам риф ещё не гарантирует замкнутую ловушку.",
+      "claim_id": "kuznetsov.reef_seal_formation#c5",
+      "is_analogy": false,
+      "on_screen": "Важна покрышка"
+    },
+    {
+      "t_start": 46.12,
+      "t_end": 49.23,
+      "text": "А если рядом с другим рифом отложения проницаемы?",
+      "claim_id": "kuznetsov.reef_seal_formation#c5",
+      "is_analogy": false,
+      "on_screen": "Замкнётся ли объём?"
+    }
+  ],
+  "sources": [
+    {
+      "claim_id": "kuznetsov.reef_seal_formation#c5",
+      "page_pdf": 216,
+      "page_or_dataset": "стр. PDF 216",
+      "quote": "Отложение непроницаемых пород вслед за рифообразованием обусловливает формирование замкнутого объема, т.е. ловушки"
+    },
+    {
+      "claim_id": "kuznetsov.reef_seal_formation#c2",
+      "page_pdf": 216,
+      "page_or_dataset": "стр. PDF 216",
+      "quote": "Сам рост рифов происходит в эпохи трансгрессий, или, точнее, в более общей форме, повышения уровня моря."
+    },
+    {
+      "claim_id": "kuznetsov.reef_seal_formation#c1",
+      "page_pdf": 216,
+      "page_or_dataset": "стр. PDF 216",
+      "quote": "часто обусловливают перекрытие рифов после их формирования непроницаемыми толщами-флюидоупорами."
+    },
+    {
+      "claim_id": "kuznetsov.reef_seal_formation#c3",
+      "page_pdf": 216,
+      "page_or_dataset": "стр. PDF 216",
+      "quote": "а регрессивные серии обычно представлены непроницаемыми породами."
+    }
+  ],
+  "scene_spec": "runs/kuznetsov_gl10/video/kuznetsov_short_reef_seal_formation/spec.json",
+  "frames": [
+    {
+      "t": 3.14,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F01.png",
+      "on_screen": "Риф без ловушки?"
+    },
+    {
+      "t": 6.14,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F02.png",
+      "on_screen": "Чего не хватает?"
+    },
+    {
+      "t": 10.48,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F03.png",
+      "on_screen": "Рост рифа"
+    },
+    {
+      "t": 15.12,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F04.png",
+      "on_screen": "Карбонатные породы"
+    },
+    {
+      "t": 19.29,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F05.png",
+      "on_screen": "Море отступает"
+    },
+    {
+      "t": 23.83,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F06.png",
+      "on_screen": "Позднее перекрытие"
+    },
+    {
+      "t": 28.71,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F07.png",
+      "on_screen": "Влажный климат"
+    },
+    {
+      "t": 33.24,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F08.png",
+      "on_screen": "Не буквальная крышка"
+    },
+    {
+      "t": 36.83,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F09.png",
+      "on_screen": "Замкнутый объём"
+    },
+    {
+      "t": 41.43,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F10.png",
+      "on_screen": "Отношения пород"
+    },
+    {
+      "t": 45.67,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F11.png",
+      "on_screen": "Важна покрышка"
+    },
+    {
+      "t": 50.48,
+      "class": "B",
+      "label": "симуляция",
+      "file": "frames/F12.png",
+      "on_screen": "Замкнётся ли объём?"
+    }
+  ],
+  "exaggerations": [
+    "горизонталь растянута ≈ в 1,6 раза (раскладка 9:16)"
+  ],
+  "prediction_question": "Чего не хватает рифу, чтобы возникла ловушка?",
+  "transfer_question": "Замкнётся ли объём, если рядом с другим рифом отложения проницаемы?",
+  "data_it_bridge": "В геологической схеме риф, проницаемые соседние отложения и непроницаемые покрышки представлены разными объектами. Глава не приводит конкретных измерений или числовых критериев, по которым распознать их в данных; поэтому по этой схеме нельзя автоматически подтвердить ловушку.",
+  "physics_checklist": [],
+  "audio_check": {
+    "engines": [
+      "edge"
+    ],
+    "voice": [
+      "ru-RU-DmitryNeural"
+    ],
+    "edge_rate": "+0%",
+    "wpm_overall": 140.2,
+    "max_words_in_phrase": 10,
+    "loudness": {
+      "before_lufs": -19.64,
+      "after_lufs": -16.04,
+      "mix_lufs": -16.06,
+      "music": "тихая подложка, синтез в коде; под речью приглушается",
+      "sfx": "эффекты на событиях кадра (смена сцены, рамки, движение прибора, ответ)",
+      "heard": false
+    },
+    "sync": "длительность кадра фразы = длительность её аудио; голос начинается через 0,15 с после смены кадра",
+    "digits_in_script": [],
+    "formula_in_script": [],
+    "listen_check": [
+      "покры́шка",
+      "лову́шка"
+    ],
+    "phrases": [
+      {
+        "beat": 1,
+        "words": 10,
+        "sec": 2.94,
+        "wpm": 204.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Ты нашёл риф, но ловушки для нефти может не быть."
+      },
+      {
+        "beat": 3,
+        "words": 9,
+        "sec": 3.85,
+        "wpm": 140.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Вернёмся к началу: уровень моря поднимается, и риф растёт."
+      },
+      {
+        "beat": 4,
+        "words": 8,
+        "sec": 4.13,
+        "wpm": 116.1,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Накапливаются карбонатные породы, и риф становится больше прежнего."
+      },
+      {
+        "beat": 5,
+        "words": 7,
+        "sec": 3.68,
+        "wpm": 114.3,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Затем море отступает, и образование рифа прекращается."
+      },
+      {
+        "beat": 6,
+        "words": 8,
+        "sec": 4.04,
+        "wpm": 118.8,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Позже непроницаемые отложения могут перекрыть уже сформированный риф."
+      },
+      {
+        "beat": 7,
+        "words": 9,
+        "sec": 4.37,
+        "wpm": 123.5,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Во влажном климате такими отложениями обычно становятся глинистые толщи."
+      },
+      {
+        "beat": 8,
+        "words": 10,
+        "sec": 4.04,
+        "wpm": 148.6,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Глина здесь как крышка; но настоящая покрышка, толща породы."
+      },
+      {
+        "beat": 9,
+        "words": 8,
+        "sec": 3.09,
+        "wpm": 155.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "В этой схеме перекрытие замыкает объём вокруг рифа."
+      },
+      {
+        "beat": 10,
+        "words": 10,
+        "sec": 4.1,
+        "wpm": 146.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Так возникает ловушка; её тип зависит и от соседних отложений."
+      },
+      {
+        "beat": 11,
+        "words": 9,
+        "sec": 3.74,
+        "wpm": 144.4,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "Вот ответ: сам риф ещё не гарантирует замкнутую ловушку."
+      },
+      {
+        "beat": 12,
+        "words": 8,
+        "sec": 3.11,
+        "wpm": 154.2,
+        "engine": "edge",
+        "fallback": false,
+        "spoken": "А если рядом с другим рифом отложения проницаемы?"
+      }
+    ],
+    "silent_phrases": []
+  },
+  "scene_check": [
+    {
+      "item": "у каждого тела контур из 3+ точек, ключевые кадры по времени",
+      "ok": true
+    },
+    {
+      "item": "время модели в пределах time_steps",
+      "ok": true
+    },
+    {
+      "item": "тела внутри разреза (x, z)",
+      "ok": true
+    },
+    {
+      "item": "форма тел между кадрами интерполируется, а не рисуется руками",
+      "ok": true
+    },
+    {
+      "item": "вертикальное преувеличение ×1 подписано на плашке",
+      "ok": true
+    }
+  ],
+  "visual_text_check": {
+    "rule": "подписи и субтитры без формул и греческих букв (ТЗ)",
+    "replaced": []
+  },
+  "template": "section_through_time",
+  "warnings": []
+}

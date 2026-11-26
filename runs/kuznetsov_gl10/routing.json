@@ -148,7 +148,7 @@
   },
   {
    "node_id": "kuznetsov.secondary_reef_pores",
-   "format": "шортс",
+   "format": "текст",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -160,8 +160,8 @@
    "hook_short": false,
    "template": "section_through_time",
    "scene_template": "section_through_time",
-   "why": "тип В/М; видеоёмкость 9/10",
-   "video_path": "video/kuznetsov_short_secondary_reef_pores/video.mp4"
+   "why": "тип В/М; видеоёмкость 9/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
   },
   {
    "node_id": "kuznetsov.rainbow_reef_classes",
@@ -278,7 +278,7 @@
   },
   {
    "node_id": "kuznetsov.reef_seal_formation",
-   "format": "текст",
+   "format": "шортс",
    "secondary_format": "текст",
    "video_scores": {
     "time": 2,
@@ -290,8 +290,8 @@
    "hook_short": false,
    "template": "section_through_time",
    "scene_template": "section_through_time",
-   "why": "тип В/П; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
-   "video_candidate": true
+   "why": "тип В/П; видеоёмкость 7/10",
+   "video_path": "video/kuznetsov_short_reef_seal_formation/video.mp4"
   },
   {
    "node_id": "kuznetsov.relief_trap_types",
