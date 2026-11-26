@@ -655,6 +655,68 @@
    "pause_s": 0
   },
   {
+   "say": "У выхода каждого распределительного канала в море вырастает устьевой бар.",
+   "claim_id": "test.recognizing_delta_facies#c8",
+   "on_screen": "Устьевой бар",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "highlight_body": "new_lobe",
+    "mark_x": 1400
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Ближе всего к устью оседает самый крупный и хорошо отсортированный песок.",
+   "claim_id": "test.mouth_bar_variability#c1",
+   "on_screen": "У устья — крупнее",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "highlight_body": "new_lobe"
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Дальше от источника ложатся более тонкие пески и глины.",
+   "claim_id": "test.mouth_bar_variability#c2",
+   "on_screen": "Дальше — тоньше",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "clear_marks": true
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Дельта наступает на море, и крупный песок у устья ложится поверх тонких осадков.",
+   "claim_id": "test.river_dominated_delta#c3",
+   "on_screen": "Наступление на море",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "time_to": 4600,
+    "highlight_body": "new_lobe"
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
+   "say": "Поэтому вверх по разрезу зерно становится грубее — по этому признаку дельтовые фации и узнают.",
+   "claim_id": "test.recognizing_delta_facies#c1",
+   "on_screen": "Грубее вверх",
+   "label": "симуляция",
+   "frame_class": "B",
+   "action": {
+    "highlight_body": "new_lobe"
+   },
+   "is_analogy": false,
+   "pause_s": 0
+  },
+  {
    "say": "Поэтому ответ на вопрос: новый песок ищи у нового русла.",
    "claim_id": "test.river_dominated_delta#c7",
    "on_screen": "Ответ: у русла",
