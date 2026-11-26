@@ -1,0 +1,266 @@
+{
+  "date": "2026-11-26",
+  "views": [
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 669.4456362392494,
+        "top": 291.6862539093041,
+        "right": 874.2500244331509,
+        "bottom": 313.2812744331509,
+        "fontPixels": 23.684861219702892,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 664.3287606250001,
+        "top": 184.87586,
+        "right": 875.3770425000001,
+        "bottom": 207.15006,
+        "fontPixels": 24.50162,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 669.4456362392494,
+        "top": 291.6862539093041,
+        "right": 874.2500244331509,
+        "bottom": 313.2812744331509,
+        "fontPixels": 23.684861219702892,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 1280,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 664.3287606250001,
+        "top": 184.87586,
+        "right": 875.3770425000001,
+        "bottom": 207.15006,
+        "fontPixels": 24.50162,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 207,
+        "top": 176.375,
+        "right": 352.125,
+        "bottom": 192.125,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 208.125,
+        "top": 67.5,
+        "right": 353.25,
+        "bottom": 83.25,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 207,
+        "top": 176.375,
+        "right": 352.125,
+        "bottom": 192.125,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "latyshova_gl5_par17-20",
+      "width": 390,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 208.125,
+        "top": 67.5,
+        "right": 353.25,
+        "bottom": 83.25,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 669.4456362392494,
+        "top": 291.6862539093041,
+        "right": 874.2500244331509,
+        "bottom": 313.2812744331509,
+        "fontPixels": 23.684861219702892,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 664.3287606250001,
+        "top": 184.87586,
+        "right": 875.3770425000001,
+        "bottom": 207.15006,
+        "fontPixels": 24.50162,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 669.4456362392494,
+        "top": 291.6862539093041,
+        "right": 874.2500244331509,
+        "bottom": 313.2812744331509,
+        "fontPixels": 23.684861219702892,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 1280,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 664.3287606250001,
+        "top": 184.87586,
+        "right": 875.3770425000001,
+        "bottom": 207.15006,
+        "fontPixels": 24.50162,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 207,
+        "top": 176.375,
+        "right": 352.125,
+        "bottom": 192.125,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "light",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 208.125,
+        "top": 67.5,
+        "right": 353.25,
+        "bottom": 83.25,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "view": "overview",
+      "overflow": 0,
+      "label": {
+        "left": 207,
+        "top": 176.375,
+        "right": 352.125,
+        "bottom": 192.125,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    },
+    {
+      "chapter": "kuznetsov_gl10",
+      "width": 390,
+      "theme": "dark",
+      "view": "step",
+      "overflow": 0,
+      "label": {
+        "left": 208.125,
+        "top": 67.5,
+        "right": 353.25,
+        "bottom": 83.25,
+        "fontPixels": 16.875,
+        "visible": true
+      },
+      "art": "cover-mobile cover hills-mobile hills"
+    }
+  ],
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "ai_labels_embedded": true,
+  "tz_label_requirement_met": true,
+  "full_tz_audit": false
+}
