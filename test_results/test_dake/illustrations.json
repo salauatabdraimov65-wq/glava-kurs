@@ -1,0 +1,425 @@
+{
+ "chapter": "test_dake",
+ "illustrations": [
+  {
+   "id": "ill.radial_flow_overview",
+   "step_id": "test.radial_flow_overview",
+   "node_id": "test.radial_flow_overview",
+   "file": "illustrations/radial_flow_overview.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 75.",
+   "alt": "Схема механизма: Градиент давления по радиусу связан с изменением давления во времени через свойства среды и флюида. → Поскольку коэффициенты уравнения зависят от давления, уравнение нелинейно; для аналитических решений его линеаризуют.",
+   "source": "учебный слой, стр. 75",
+   "claim_ids": [
+    "test.radial_flow_overview#c1",
+    "test.radial_flow_overview#c2",
+    "test.radial_flow_overview#c3",
+    "test.radial_flow_overview#c4",
+    "test.radial_flow_overview#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.radial_mass_balance",
+   "step_id": "test.radial_mass_balance",
+   "node_id": "test.radial_mass_balance",
+   "file": "illustrations/radial_mass_balance.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 75–76.",
+   "alt": "Схема механизма: Разность массовых потоков на радиусах r и r+dr равна изменению массы внутри элемента во времени. → Объём элемента равен 2πrhφdr; разложение потока по радиусу и сокращение dr дают уравнение (5.2).",
+   "source": "учебный слой, стр. 75, стр. 76",
+   "claim_ids": [
+    "test.radial_mass_balance#c1",
+    "test.radial_mass_balance#c2",
+    "test.radial_mass_balance#c3",
+    "test.radial_mass_balance#c4",
+    "test.radial_mass_balance#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.darcy_and_compressibility",
+   "step_id": "test.darcy_and_compressibility",
+   "node_id": "test.darcy_and_compressibility",
+   "file": "illustrations/darcy_and_compressibility.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 76.",
+   "alt": "Схема процедуры: 1. Подставить закон Дарси для радиального горизонтального течения в уравнение баланса массы.; 2. Сократить общие множители и получить уравнение (5.3).; 3. Выразить сжимаемость через плотность, используя ρ = m/V.; 4. Заменить производную плотности по времени выражением cρ∂p/∂t.",
+   "source": "учебный слой, стр. 76",
+   "claim_ids": [
+    "test.darcy_and_compressibility#c1",
+    "test.darcy_and_compressibility#c2",
+    "test.darcy_and_compressibility#c3",
+    "test.darcy_and_compressibility#c4",
+    "test.darcy_and_compressibility#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.nonlinear_flow_equation",
+   "step_id": "test.nonlinear_flow_equation",
+   "node_id": "test.nonlinear_flow_equation",
+   "file": "illustrations/nonlinear_flow_equation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 76.",
+   "alt": "Схема механизма: Плотность, сжимаемость и вязкость неявно зависят от давления → зависят от давления коэффициенты kρ/μ и φcρ → уравнение нелинейно. Поэтому простые аналитические решения требуют предварительной линеаризации, убирающей зависимость коэффициентов от давления",
+   "source": "учебный слой, стр. 76",
+   "claim_ids": [
+    "test.nonlinear_flow_equation#c1",
+    "test.nonlinear_flow_equation#c2",
+    "test.nonlinear_flow_equation#c3",
+    "test.nonlinear_flow_equation#c4",
+    "test.nonlinear_flow_equation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.flow_boundary_conditions",
+   "step_id": "test.flow_boundary_conditions",
+   "node_id": "test.flow_boundary_conditions",
+   "file": "illustrations/flow_boundary_conditions.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 76.",
+   "alt": "Схема механизма: Заданные начальные и граничные условия определяют решение уравнения; разные условия и моменты после начала добычи соответствуют разным режимам.",
+   "source": "учебный слой, стр. 76",
+   "claim_ids": [
+    "test.flow_boundary_conditions#c1",
+    "test.flow_boundary_conditions#c2",
+    "test.flow_boundary_conditions#c3",
+    "test.flow_boundary_conditions#c4",
+    "test.flow_boundary_conditions#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.transient_flow_regime",
+   "step_id": "test.transient_flow_regime",
+   "node_id": "test.transient_flow_regime",
+   "file": "illustrations/transient_flow_regime.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 77.",
+   "alt": "Схема механизма: Изменение дебита при радиусе скважины создаёт возмущение давления → отклик распространяется по пласту. Пока внешняя граница не влияет на отклик, пласт математически считают бесконечным. Давление и его временная производная зависят от положения и времени",
+   "source": "учебный слой, стр. 77",
+   "claim_ids": [
+    "test.transient_flow_regime#c1",
+    "test.transient_flow_regime#c2",
+    "test.transient_flow_regime#c3",
+    "test.transient_flow_regime#c4",
+    "test.transient_flow_regime#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.pseudosteady_flow_regime",
+   "step_id": "test.pseudosteady_flow_regime",
+   "node_id": "test.pseudosteady_flow_regime",
+   "file": "illustrations/pseudosteady_flow_regime.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 77.",
+   "alt": "Схема: признаки нулевой радиальный градиент давления при r = rₑ, постоянный расход q, приблизительно постоянная временная производная давления; правило: При длительной добыче, постоянном расходе и отсутствии притока через внешнюю границу применять dp/dt = −q/(cπrₑ²hφ).; вывод: Давление в радиальной ячейке падает; скорость падения задаётся расходом, сжимаемостью и объёмом ячейки.",
+   "source": "учебный слой, стр. 77",
+   "claim_ids": [
+    "test.pseudosteady_flow_regime#c1",
+    "test.pseudosteady_flow_regime#c2",
+    "test.pseudosteady_flow_regime#c3",
+    "test.pseudosteady_flow_regime#c4",
+    "test.pseudosteady_flow_regime#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.drainage_weighted_pressure",
+   "step_id": "test.drainage_weighted_pressure",
+   "node_id": "test.drainage_weighted_pressure",
+   "file": "illustrations/drainage_weighted_pressure.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 77–78.",
+   "alt": "Схема: признаки Среднее давление области дренирования, Дебит соответствующей скважины; правило: Если режим полуустановившийся, dp/dt приблизительно одинаково по пласту, а изменение сжимаемости мало, использовать дебиты как веса.; вывод: Рассчитать среднее пластовое давление как сумму произведений давлений областей на дебиты, делённую на сумму дебитов.",
+   "source": "учебный слой, стр. 77, стр. 78",
+   "claim_ids": [
+    "test.drainage_weighted_pressure#c1",
+    "test.drainage_weighted_pressure#c2",
+    "test.drainage_weighted_pressure#c3",
+    "test.drainage_weighted_pressure#c4",
+    "test.drainage_weighted_pressure#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.steady_flow_regime",
+   "step_id": "test.steady_flow_regime",
+   "node_id": "test.steady_flow_regime",
+   "file": "illustrations/steady_flow_regime.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 78.",
+   "alt": "Схема механизма: Постоянный дебит отбора → равный приток через открытую внешнюю границу → давление на границе остаётся постоянным. После переходного периода распределение давления стабилизируется, поэтому его изменение со временем равно нулю при всех радиусах",
+   "source": "учебный слой, стр. 78",
+   "claim_ids": [
+    "test.steady_flow_regime#c1",
+    "test.steady_flow_regime#c2",
+    "test.steady_flow_regime#c3",
+    "test.steady_flow_regime#c4",
+    "test.steady_flow_regime#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.liquid_equation_simplification",
+   "step_id": "test.liquid_equation_simplification",
+   "node_id": "test.liquid_equation_simplification",
+   "file": "illustrations/liquid_equation_simplification.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 78–79.",
+   "alt": "Схема процедуры: 1. Раскрыть левую часть уравнения (5.1) по правилу цепочки.; 2. Продifferенцировать уравнение (5.4) по радиусу.; 3. Подставить полученное соотношение в уравнение (5.16).; 4. Принять вязкость постоянной и отбросить слагаемые порядка квадрата градиента давления.; 5. Записать результат в форме (5.19) или (5.20).",
+   "source": "учебный слой, стр. 78, стр. 79",
+   "claim_ids": [
+    "test.liquid_equation_simplification#c1",
+    "test.liquid_equation_simplification#c2",
+    "test.liquid_equation_simplification#c3",
+    "test.liquid_equation_simplification#c4",
+    "test.liquid_equation_simplification#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.linearization_validity_limits",
+   "step_id": "test.linearization_validity_limits",
+   "node_id": "test.linearization_validity_limits",
+   "file": "illustrations/linearization_validity_limits.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 79.",
+   "alt": "Схема механизма: Постоянная сжимаемость делает коэффициент φμc/k постоянным, поэтому основное уравнение фактически становится линейным. → Но при отбрасывании членов произведение из уравнения (5.21) должно удовлетворять условию применимости: для приведённого примера оно равно 0,04. → При большей общей сжимаемости простая линеаризация ненадёжна; для реального газа произведение cp может быть равно единице.",
+   "source": "учебный слой, стр. 79",
+   "claim_ids": [
+    "test.linearization_validity_limits#c1",
+    "test.linearization_validity_limits#c2",
+    "test.linearization_validity_limits#c3",
+    "test.linearization_validity_limits#c4",
+    "test.linearization_validity_limits#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.porosity_and_diffusion",
+   "step_id": "test.porosity_and_diffusion",
+   "node_id": "test.porosity_and_diffusion",
+   "file": "illustrations/porosity_and_diffusion.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 79.",
+   "alt": "Схема механизма: При выводе уравнения среду считали насыщенной одной жидкостью, поэтому использовали абсолютную пористость. → Если учитывать связанную воду, произведение φc можно представить через эффективную углеводородную пористость и соответствующую сжимаемость; итоговое произведение не меняется. → В радиальном уравнении течения появляется коэффициент k/(φμc), который автор называет константой диффузии.",
+   "source": "учебный слой, стр. 79",
+   "claim_ids": [
+    "test.porosity_and_diffusion#c1",
+    "test.porosity_and_diffusion#c2",
+    "test.porosity_and_diffusion#c3",
+    "test.porosity_and_diffusion#c4",
+    "test.porosity_and_diffusion#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.line_source_overview",
+   "step_id": "test.line_source_overview",
+   "node_id": "test.line_source_overview",
+   "file": "illustrations/line_source_overview.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 87.",
+   "alt": "Схема механизма: Сначала отклик у скважины и влияние границы дренирования взаимно не ощущаются, поэтому пласт выглядит бесконечным. → Со временем влияние границы становится заметным; при непроницаемой границе оно зависит от формы области и положения скважины. → В стабилизированном режиме скорость изменения забойного давления постоянна.",
+   "source": "учебный слой, стр. 87",
+   "claim_ids": [
+    "test.line_source_overview#c1",
+    "test.line_source_overview#c2",
+    "test.line_source_overview#c3",
+    "test.line_source_overview#c4",
+    "test.line_source_overview#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.line_source_conditions",
+   "step_id": "test.line_source_conditions",
+   "node_id": "test.line_source_conditions",
+   "file": "illustrations/line_source_conditions.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 87.",
+   "alt": "Схема механизма: До добычи давление во всём объёме дренирования равно начальному равновесному давлению p_i. → После начала добычи давление меняется у скважины, но бесконечная внешняя граница остаётся при p_i; внутреннее условие связывает градиент давления у скважины с дебитом, вязкостью, проницаемостью и толщиной пласта. → Радиальное уравнение диффузии связывает пространственное изменение давления с его изменением во времени.",
+   "source": "учебный слой, стр. 87",
+   "claim_ids": [
+    "test.line_source_conditions#c1",
+    "test.line_source_conditions#c2",
+    "test.line_source_conditions#c3",
+    "test.line_source_conditions#c4",
+    "test.line_source_conditions#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.boltzmann_variable_solution",
+   "step_id": "test.boltzmann_variable_solution",
+   "node_id": "test.boltzmann_variable_solution",
+   "file": "illustrations/boltzmann_variable_solution.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 87–88.",
+   "alt": "Схема процедуры: 1. Заменить переменные выражением s = φμcr²/(4kt).; 2. Вычислить производные s по радиусу и времени.; 3. Записать уравнение для давления через s.; 4. Обозначить p′ = dp/ds и проинтегрировать уравнение для p′.",
+   "source": "учебный слой, стр. 87, стр. 88",
+   "claim_ids": [
+    "test.boltzmann_variable_solution#c1",
+    "test.boltzmann_variable_solution#c2",
+    "test.boltzmann_variable_solution#c3",
+    "test.boltzmann_variable_solution#c4",
+    "test.boltzmann_variable_solution#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.source_boundary_constant",
+   "step_id": "test.source_boundary_constant",
+   "node_id": "test.source_boundary_constant",
+   "file": "illustrations/source_boundary_constant.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 88.",
+   "alt": "Схема процедуры: 1. Записать граничное условие линейного источника.; 2. Использовать полученное равенство qμ/(4πkh) = C₂e⁻ˢ.; 3. Перейти к пределу r → 0, а значит, s → 0.; 4. Получить C₂ = qμ/(4πkh).",
+   "source": "учебный слой, стр. 88",
+   "claim_ids": [
+    "test.source_boundary_constant#c1",
+    "test.source_boundary_constant#c2",
+    "test.source_boundary_constant#c3",
+    "test.source_boundary_constant#c4",
+    "test.source_boundary_constant#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.pressure_integral_solution",
+   "step_id": "test.pressure_integral_solution",
+   "node_id": "test.pressure_integral_solution",
+   "file": "illustrations/pressure_integral_solution.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 88.",
+   "alt": "Схема процедуры: 1. Задать начальное состояние: t = 0, s → ∞, p = pᵢ.; 2. Задать текущее состояние: s = x и давление p.; 3. Вычислить x = φμcr²/(4kt).; 4. Вычислить интеграл от x до бесконечности функции e⁻ˢ/s.; 5. Подставить интеграл в выражение для давления.",
+   "source": "учебный слой, стр. 88",
+   "claim_ids": [
+    "test.pressure_integral_solution#c1",
+    "test.pressure_integral_solution#c2",
+    "test.pressure_integral_solution#c3",
+    "test.pressure_integral_solution#c4",
+    "test.pressure_integral_solution#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.exponential_integral_approximation",
+   "step_id": "test.exponential_integral_approximation",
+   "node_id": "test.exponential_integral_approximation",
+   "file": "illustrations/exponential_integral_approximation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 88–89.",
+   "alt": "Схема механизма: ei(x) — площадь под графиком от x до бесконечности: при малом x площадь велика, при большом — мала. → Для x < 0,01 зависимость приближённо выражается логарифмом: сначала ei(x) ≈ −ln x − 0,5772, затем с γ = e^0,5772 её записывают как −ln(γx).",
+   "source": "учебный слой, стр. 88, стр. 89",
+   "claim_ids": [
+    "test.exponential_integral_approximation#c1",
+    "test.exponential_integral_approximation#c2",
+    "test.exponential_integral_approximation#c3",
+    "test.exponential_integral_approximation#c4",
+    "test.exponential_integral_approximation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.wellbore_pressure_skin",
+   "step_id": "test.wellbore_pressure_skin",
+   "node_id": "test.wellbore_pressure_skin",
+   "file": "illustrations/wellbore_pressure_skin.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 89.",
+   "alt": "Схема процедуры: 1. Для измерений в стволе принять r = r_w.; 2. Рассчитать x = φμcr_w²/(4kt) и проверить, что он обычно меньше 0,01.; 3. Использовать логарифмическое приближение для расчёта p_wf.; 4. Если учитывается механический скин-фактор, добавить 2S в скобки.",
+   "source": "учебный слой, стр. 89",
+   "claim_ids": [
+    "test.wellbore_pressure_skin#c1",
+    "test.wellbore_pressure_skin#c2",
+    "test.wellbore_pressure_skin#c3",
+    "test.wellbore_pressure_skin#c4",
+    "test.wellbore_pressure_skin#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.interwell_pressure_response",
+   "step_id": "test.interwell_pressure_response",
+   "node_id": "test.interwell_pressure_response",
+   "file": "illustrations/interwell_pressure_response.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 89.",
+   "alt": "Схема: признаки Расстояние r, Регистрация перехода давления в удалённой скважине; правило: Если r велико, приближение (7.9) неприменимо; используют полную форму уравнения (7.6).; вывод: Переходное давление рассчитывают по полной формуле.",
+   "source": "учебный слой, стр. 89",
+   "claim_ids": [
+    "test.interwell_pressure_response#c1",
+    "test.interwell_pressure_response#c2",
+    "test.interwell_pressure_response#c3",
+    "test.interwell_pressure_response#c4",
+    "test.interwell_pressure_response#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  }
+ ]
+}

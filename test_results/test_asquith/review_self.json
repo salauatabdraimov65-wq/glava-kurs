@@ -1,0 +1,257 @@
+{
+  "package_id": "self_test_asquith",
+  "remarks": [
+    {
+      "target": "T185",
+      "category": "missing_caveat",
+      "severity": "significant",
+      "problem": "Сопоставление с соседними скважинами представлено как обязательный шаг, хотя автор рекомендует его лишь при возможности. Кроме того, речь идёт о добывающих скважинах.",
+      "fix": "Формулы проницаемости по каротажу применимы только при неснижаемой водонасыщенности. Геолог проверяет постоянство BVW и, если возможно, сопоставляет оценки с данными соседних добывающих скважин того же пласта.",
+      "page_pdf": 134,
+      "quote": "the permeability values, if possible, should be compared with values of nearby producing wells from the same formation."
+    },
+    {
+      "target": "T130",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что табличные коэффициенты и соответствующие подписи водонасыщенности применимы при n = 2,0. В тексте элемента перед этим предлагается оценить n, поэтому таблица может быть ошибочно применена при другом его значении.",
+      "fix": "Специалист считывает Rt точки и Ro водоносной линии при одинаковой пористости, оценивает n и вычисляет Sw. Для построения линий при n = 2,0 он выбирает пористость, часто 0,10, умножает Ro на табличные коэффициенты и наносит точки при той же пористости. Через эти точки проводит линии, параллельные водоносной, и подписывает их водонасыщенностью.",
+      "page_pdf": 133,
+      "quote": "Note that the lines are for a saturation exponent (n) of 2.0."
+    },
+    {
+      "target": "T123",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Прямолинейность и искривление линии представлены без условия наличия диапазона пористостей в водоносных интервалах.",
+      "fix": "При наличии качественных данных с диапазоном пористостей точки водоносных интервалов на графике Пикетта образуют прямую, если матричное значение выбрано правильно; если оно завышено или занижено, линия искривляется.",
+      "page_pdf": 133,
+      "quote": "If there is a range of porosities in the zones defining the water-bearing line on the Pickett plot, and if the matrix value is chosen correctly, the line is straight."
+    },
+    {
+      "target": "T124",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано необходимое условие: качественные данные водоносной зоны должны охватывать диапазон пористостей.",
+      "fix": "При наличии качественных данных водоносной зоны с разбросом пористостей матричное значение можно подобрать пробами и ошибками, изменяя его до выпрямления водоносной линии.",
+      "page_pdf": 133,
+      "quote": "Thus, with a spread of good data in the water-bearing zone, the proper matrix value can be chosen by trial and error by modifying the matrix value until the water-bearing line is straight and not curved."
+    },
+    {
+      "target": "T069",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что формула с квадратным корнем приведена при допущении n = 2.",
+      "fix": "При n = 2 водонасыщенность Арчи можно рассчитать как Sw = √(Rwa minimum / Rwa zone). Чем больше Rwa зоны относительно минимума, тем меньше расчётная водонасыщенность.",
+      "page_pdf": 130,
+      "quote": "where the cementation exponent ($n$) in the equation above is assumed to be 2."
+    },
+    {
+      "target": "T135",
+      "category": "wrong_scaling",
+      "severity": "critical",
+      "problem": "Линейно от пористости зависит не само сопротивление, а преобразованная величина (a/Rt)^(1/m).",
+      "fix": "Уравнение Арчи преобразуют так, чтобы величина (a/Rt)^(1/m) линейно зависела от пористости при фиксированной водонасыщенности. Углеводороды повышают сопротивление, поэтому точки смещаются вниз от водоносной линии; величина смещения зависит от Sw.",
+      "page_pdf": 133,
+      "quote": "While porosity is plotted on a linear scale, the resistivity is plotted on a very nonlinear scale."
+    },
+    {
+      "target": "T196",
+      "category": "other",
+      "severity": "significant",
+      "problem": "В главе приведена формула не только для C, но и для W. Кроме того, сопротивление пласта требуется для зоны с неснижаемой водонасыщенностью.",
+      "fix": "Для формулы Коутса и Дюмануара нужны сопротивление пластовой воды при пластовой температуре, сопротивление пласта в зоне с неснижаемой водонасыщенностью, плотность углеводородов и пористость. Сначала вычисляют константы C и W; в главе приведены формулы для обеих.",
+      "page_pdf": 136,
+      "quote": "W = \\left\\{(3.75 - \\phi) + \\left[ \\frac{(\\log(R_{w} / R_{t \\text{ irr}}) + 2.2)^{2}}{2.0} \\right] \\right\\}^{\\frac{1}{2}}"
+    },
+    {
+      "target": "T016",
+      "category": "other",
+      "severity": "significant",
+      "problem": "Текст главы не обрывается перед перечислением дополнительных условий: они приведены на странице 127.",
+      "fix": "Геолог должен также определить, достаточно ли низка водонасыщенность для безводной эксплуатации, подвижны ли углеводороды, проницаема ли зона и имеется ли промышленный объём извлекаемых запасов.",
+      "page_pdf": 127,
+      "quote": "A geologist must also determine if: ... the hydrocarbons are moveable ... the zone is permeable"
+    },
+    {
+      "target": "C079",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Уравнение Шлюмберже 1977 года предлагается не вообще для более точной оценки водонасыщенности, а при конкретном условии: если водонасыщенность по Archie меньше водонасыщенности по ratio method (с указанными автором оговорками о профиле вторжения и пористости).",
+      "fix": "Если $S_{wa} < S_{wr}$, то в описанном автором случае более точное значение водонасыщенности ненарушенной зоны можно оценить по уравнению Шлюмберже (1977): $(S_w)_{COR}=S_{wa}\\times(S_{wa}/S_{wr})^{0.25}$.",
+      "page_pdf": 128,
+      "quote": "In this case, a more accurate value for water saturation can be estimated using the following equation (from Schlumberger, 1977):"
+    },
+    {
+      "target": "C198",
+      "category": "missing_caveat",
+      "severity": "significant",
+      "problem": "Формулировка подаёт 0,05 как точное и безусловное значение, хотя автор оговаривает, что значения BVW для карбонатов — лишь общий ориентир.",
+      "fix": "Для меловых карбонатов в таблице указано BVW 0,05; значения BVW для карбонатов следует использовать только как очень общий ориентир для разных типов пористости.",
+      "page_pdf": 131,
+      "quote": "The bulk volume water values for carbonates should be used only as a very general guide to different types of porosity."
+    },
+    {
+      "target": "C219",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Линейная форма приведена для водоносной зоны при S_w = 1; это условие пропущено. Кроме того, слово «logarithmic» перенесено на следующую строку, а не оборвано.",
+      "fix": "Для водоносной зоны при S_w = 1 зависимость log(R_t) от log(φ) имеет линейную форму y = b + mx. Слово «logarithmic» продолжается после переноса строки.",
+      "page_pdf": 132,
+      "quote": "If the zone is water-bearing, $S_w = 1$, $\\log(S_w) = 0$, and the equation reduces to:"
+    },
+    {
+      "target": "C346",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Формула приведена без условия её применимости и без указания, что это один из методов оценки проницаемости.",
+      "fix": "По методу Тимура проницаемость оценивают как K = (93φ²·² / Swirr)² для пласта при неснижаемой водонасыщенности.",
+      "page_pdf": 135,
+      "quote": "Log-derived permeability formulas are only valid for estimating permeability in formations at irreducible water saturation"
+    },
+    {
+      "target": "C099",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Формула выведена для водоносных зон, но в элементе это условие не указано, поэтому утверждение звучит как универсальное.",
+      "fix": "В водоносных зонах SP равен минус K, умноженному на логарифм отношения Rxo/Ro.",
+      "page_pdf": 129,
+      "quote": "In water-bearing zones:"
+    },
+    {
+      "target": "C003",
+      "category": "other",
+      "severity": "significant",
+      "problem": "Автор сравнивает коллекторы и неколлекторы на каротажной диаграмме, а не число продуктивных и непродуктивных пластов. Коллектор может быть и водонасыщенным.",
+      "fix": "Поскольку на каротажной диаграмме крайне редко преобладают коллекторы, при незнакомом районе или его широком обследовании полезна сканирующая методика разделения коллекторов и неколлекторов; она может подсказать потенциальные продуктивные и водонасыщенные зоны.",
+      "page_pdf": 126,
+      "quote": "It is an exceedingly rare log that contains more reservoir than nonreservoir"
+    },
+    {
+      "target": "T004",
+      "category": "other",
+      "severity": "significant",
+      "problem": "Автор сравнивает коллекторы с неколлекторами, а не число продуктивных пластов с числом непродуктивных. Водонасыщенная зона тоже может быть коллектором.",
+      "fix": "На каротажной диаграмме крайне редко коллекторские интервалы преобладают над неколлекторскими.",
+      "page_pdf": 126,
+      "quote": "It is an exceedingly rare log that contains more reservoir than nonreservoir"
+    },
+    {
+      "target": "C013",
+      "category": "missing_caveat",
+      "severity": "significant",
+      "problem": "Тенденция выделения коллекторов по сопротивлению представлена как безусловное правило.",
+      "fix": "В терригенных породах каротаж сопротивления — основной метод первичного просмотра: коллекторы обычно окружены глинами, сопротивление которых постепенно меняется с глубиной, а сопротивление коллекторов вследствие различий во флюидонасыщении имеет тенденцию выделяться на этом фоне.",
+      "page_pdf": 140,
+      "quote": "Differences in the fluid content of the reservoirs tend to produce reservoir resistivities that stand out against the relatively constant resistivity of the surrounding shales."
+    },
+    {
+      "target": "T188",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Фраза без оговорок обобщает сравнение на любые оценки проницаемости по каротажу. Автор ограничивает применимость формул условиями остаточной водонасыщенности, а сравнение с соседними скважинами той же формации рекомендует проводить, если возможно.",
+      "fix": "Формулы каротажной оценки проницаемости применимы только при остаточной водонасыщенности. Если возможно, результаты следует сопоставлять с соседними скважинами той же формации; при сравнении нескольких скважин геолог не использует абсолютное значение каротажной проницаемости.",
+      "page_pdf": 134,
+      "quote": "Log-derived permeability formulas are only valid for estimating permeability in formations at irreducible water saturation"
+    },
+    {
+      "target": "T076",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "При расчёте кривой пропущено условие: уравнение Арчи применяется в форме для водонасыщенной зоны, то есть при предположении Sw = 1.",
+      "fix": "Специалист рассчитывает кривую пористости по уравнению Арчи, предполагая Sw = 1 и используя сопротивление невскрытой зоны. Затем сравнивает значения и положение кривой в пористых и проницаемых зонах. При необходимости сопоставляет её с пористостью по акустическому, плотностному или нейтронному каротажу, чтобы оценить водонасыщенность.",
+      "page_pdf": 130,
+      "quote": "Calculate the porosity from Archie's equation (assuming $S_w = 1.0$), using the uninvaded zone resistivity measurement."
+    },
+    {
+      "target": "T064",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано условие, что минимальное значение Rwa ищут в пористой и проницаемой зоне; без него правило применено шире, чем у автора.",
+      "fix": "Специалист сравнивает Rwa в разных зонах или на разных глубинах одной зоны, если подозревается водонефтяной контакт. Минимальное Rwa в пористой и проницаемой зоне принимают за оценку Rw, предполагая, что эта зона водоносная.",
+      "page_pdf": 129,
+      "quote": "Look for the lowest value of Rwa in a porous and permeable zone"
+    },
+    {
+      "target": "T080",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что пористость рассчитывают по водонасыщенной форме уравнения Арчи, принимая Sw = 1; в процедуре также используется сопротивление неизменённой зоны.",
+      "fix": "Специалист рассчитывает проводимостную пористость по уравнению Арчи, принимая Sw = 1 и используя сопротивление неизменённой зоны. Кривую традиционно сопоставляют с кривой SP; также её можно сравнивать с кривой пористости.",
+      "page_pdf": 130,
+      "quote": "This technique calculates a porosity from Archie's equation, using the form of the equation for water-bearing zones ($S_w = 1$)."
+    },
+    {
+      "target": "T078",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что занижение пористости при наличии углеводородов относится к расчёту с предположением полной водонасыщенности S_w = 1. Из текста элемента может следовать, что пористость занижается и при расчёте с фактической водонасыщенностью.",
+      "fix": "Уравнение Арчи позволяет рассчитать пористость по сопротивлению, водонасыщенности и параметрам уравнения. Если рассчитывать её с предположением S_w = 1, то в породе, содержащей углеводороды, результат будет ниже фактической пористости.",
+      "page_pdf": 130,
+      "quote": "This technique calculates a porosity from Archie's equation, using the form of the equation for water-bearing zones (S_w = 1). […] When the formation contains hydrocarbons, R_t is greater than R_o, and the calculated porosity is less than the actual formation porosity."
+    },
+    {
+      "target": "T066",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "В определениях пропущено, что речь идёт о невозмущённой зоне пласта.",
+      "fix": "Ro — удельное электрическое сопротивление невозмущённой зоны водоносного пласта; Rt — удельное электрическое сопротивление пласта в невозмущённой зоне в общем случае.",
+      "page_pdf": 129,
+      "quote": "Ro is the resistivity in the undisturbed, water-bearing zone"
+    },
+    {
+      "target": "T072",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Формула приведена без оговорки, что показатель n принят равным 2.",
+      "fix": "При n = 2: Sw = √(Rwa minimum / Rwa zone).",
+      "page_pdf": 130,
+      "quote": "where the cementation exponent ($n$) in the equation above is assumed to be 2."
+    },
+    {
+      "target": "T129",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что Ro для расчёта Sw нужно считывать при той же пористости, что и у рассматриваемой точки.",
+      "fix": "Сопротивление точки Rt сравнивают с сопротивлением водоносной линии Ro при той же пористости и рассчитывают Sw = (Ro/Rt)^(1/n). Для построения линий насыщения Ro при выбранной пористости умножают на соответствующие множители и через полученные точки проводят линии, параллельные водоносной.",
+      "page_pdf": 133,
+      "quote": "reading the resistivity of the point (Rt) and the resistivity of the water-bearing line (Ro) at the same porosity value as the point"
+    },
+    {
+      "target": "T073",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "у автора условие/оговорка «usually», в утверждении её нет",
+      "fix": "Привести формулировку к тексту автора: «A shortcut to the saturation calculation, used as a scanning aid, is:  - ($R_{wa\\ zone}/R_{wa\\ minimum}$) = 3 yields $S_w = 0.58$; - ($R_{wa\\ zone}/R_{wa\\ minimum}$) = 4 yields $S_w = 0.50$; - ($R_{wa\\ zone}/R_{wa\\ minimum}$) = 5 yields $S_w = 0.45$.»",
+      "page_pdf": 130,
+      "quote": "A shortcut to the saturation calculation, used as a scanning aid, is:  - ($R_{wa\\ zone}/R_{wa\\ minimum}$) = 3 yields $S_w = 0.58$; - ($R_{wa\\ zone}/R_{wa\\ minimum}$) = 4 yields $S_w = 0.50$; - ($R_{wa\\ zone}/R_{wa\\ minimum}$) = 5 yields $S_w = 0.45$."
+    },
+    {
+      "target": "T059",
+      "category": "lost_condition",
+      "severity": "significant",
+      "problem": "Не указано, что при сравнении зон предполагается одинаковое сопротивление пластовой воды Rw. Различия Rwa могут быть связаны с различиями Rw, а не только с углеводородами.",
+      "fix": "По измерениям пористости и сопротивления невскрытой зоны рассчитывают Rwa. При предполагаемом одинаковом Rw в сравниваемых зонах значения Rwa выше минимума в пористой и проницаемой зоне могут указывать на присутствие углеводородов.",
+      "page_pdf": 129,
+      "quote": "The Rw values in the zones that are compared are assumed to be the same."
+    },
+    {
+      "target": "T024",
+      "category": "other",
+      "severity": "minor",
+      "problem": "Указан неверный символ: автор заменяет R_w, а не Rᵥ. Кроме того, замены относятся к формуле для промытой зоны.",
+      "fix": "В формуле Арчи для промытой зоны Rₘf заменяет R_w, а Rₓₒ заменяет Rₜ.",
+      "page_pdf": 127,
+      "quote": "mud filtrate resistivity ($R_{mf}$) in place of formation water resistivity ($R_w$) and flushed zone resistivity ($R_{xo}$) in place of uninvaded zone resistivity ($R_t$)."
+    },
+    {
+      "target": "T198",
+      "category": "other",
+      "severity": "minor",
+      "problem": "Утверждение об отсутствии формулы для W неверно: она приведена на следующей странице представленного фрагмента.",
+      "fix": "Для расчёта собирают Rw при пластовой температуре, Rt irr при неснижаемой водонасыщенности, плотность углеводородов ρh и пористость φ. Затем вычисляют константы C и W по формулам автора.",
+      "page_pdf": 136,
+      "quote": "W = \\left\\{(3.75 - \\phi) + \\left[ \\frac{(\\log(R_{w} / R_{t \\text{ irr}}) + 2.2)^{2}}{2.0} \\right] \\right\\}^{\\frac{1}{2}}"
+    }
+  ]
+}

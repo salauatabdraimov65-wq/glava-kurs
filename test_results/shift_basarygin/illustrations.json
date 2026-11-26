@@ -1,0 +1,404 @@
+{
+ "chapter": "shift_basarygin",
+ "illustrations": [
+  {
+   "id": "ill.kick_warning_signs",
+   "step_id": "shift.kick_warning_signs",
+   "node_id": "shift.kick_warning_signs",
+   "file": "illustrations/kick_warning_signs.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 231–232.",
+   "alt": "Схема механизма: Пластовый флюид поступает в ствол скважины → меняются характеристики циркуляционного потока или свойства выходящего раствора → на поверхности возникают признаки возможного проявления",
+   "source": "учебный слой, стр. 231, стр. 232",
+   "claim_ids": [
+    "shift.kick_warning_signs#c1",
+    "shift.kick_warning_signs#c2",
+    "shift.kick_warning_signs#c3",
+    "shift.kick_warning_signs#c4",
+    "shift.kick_warning_signs#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.drilling_rate_jump",
+   "step_id": "shift.drilling_rate_jump",
+   "node_id": "shift.drilling_rate_jump",
+   "file": "illustrations/drilling_rate_jump.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 232–233.",
+   "alt": "Схема: признаки Устойчивый самопроизвольный рост механической скорости, Резкое увеличение механической скорости, Рост скорости более чем в 2 раза, Глубина скважины; правило: Скачок проходки следует считать признаком возможного проявления; рост более чем вдвое в зарубежной практике считают одним из признаков вскрытия пласта высокого давления.; вывод: Скачок может указывать на быстрое возрастание аномальности давления на забое и возможность проявления.",
+   "source": "учебный слой, стр. 232, стр. 233",
+   "claim_ids": [
+    "shift.drilling_rate_jump#c1",
+    "shift.drilling_rate_jump#c2",
+    "shift.drilling_rate_jump#c3",
+    "shift.drilling_rate_jump#c4",
+    "shift.drilling_rate_jump#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.pit_level_sensitivity",
+   "step_id": "shift.pit_level_sensitivity",
+   "node_id": "shift.pit_level_sensitivity",
+   "file": "illustrations/pit_level_sensitivity.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 232–233.",
+   "alt": "Схема механизма: Приток увеличивает объем раствора в приемных емкостях, поэтому уровень повышается. → Минимальный фиксируемый объем равен произведению абсолютной погрешности датчика уровнемера на площадь поверхности жидкости: ΔVmin = εS.",
+   "source": "учебный слой, стр. 232, стр. 233",
+   "claim_ids": [
+    "shift.pit_level_sensitivity#c1",
+    "shift.pit_level_sensitivity#c2",
+    "shift.pit_level_sensitivity#c3",
+    "shift.pit_level_sensitivity#c4",
+    "shift.pit_level_sensitivity#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.improve_level_monitoring",
+   "step_id": "shift.improve_level_monitoring",
+   "node_id": "shift.improve_level_monitoring",
+   "file": "illustrations/improve_level_monitoring.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 233–234.",
+   "alt": "Схема процедуры: 1. Изолировать приемную емкость, через которую ведется циркуляция, от других.; 2. Уменьшить поверхность приемной емкости установкой перегородки.; 3. После возобновления круговой циркуляции установить исходный уровень раствора.; 4. Скорректировать исходный уровень с учетом добавок, утяжеления, осадков, потерь при очистке и испарения.; 5. Переключать насосы и емкости, перераспределять раствор только с ведома бурильщика.; 6. При бурении отложений, содержащих сероводород, остановить бурение на время работ.",
+   "source": "учебный слой, стр. 233, стр. 234",
+   "claim_ids": [
+    "shift.improve_level_monitoring#c1",
+    "shift.improve_level_monitoring#c2",
+    "shift.improve_level_monitoring#c3",
+    "shift.improve_level_monitoring#c4",
+    "shift.improve_level_monitoring#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.flow_rate_monitoring",
+   "step_id": "shift.flow_rate_monitoring",
+   "node_id": "shift.flow_rate_monitoring",
+   "file": "illustrations/flow_rate_monitoring.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 234–235.",
+   "alt": "Схема: признаки Расход раствора на выходе, Исходный расход, Уровень приемных емкостей; правило: Индикатор обнаруживает начавшееся проявление при превышении исходного выходного расхода на 10% и более; показания сопоставляют с уровнем емкостей.; вывод: Рост выходного расхода указывает на возможное начинающееся проявление.",
+   "source": "учебный слой, стр. 234, стр. 235",
+   "claim_ids": [
+    "shift.flow_rate_monitoring#c1",
+    "shift.flow_rate_monitoring#c2",
+    "shift.flow_rate_monitoring#c3",
+    "shift.flow_rate_monitoring#c4",
+    "shift.flow_rate_monitoring#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.gas_entry_causes",
+   "step_id": "shift.gas_entry_causes",
+   "node_id": "shift.gas_entry_causes",
+   "file": "illustrations/gas_entry_causes.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 235.",
+   "alt": "Схема: признаки Содержание газа выше фонового, Газирование раствора во время промывки после прекращения бурения, Повышение газосодержания забойных пачек при прекращении циркуляции; правило: Продолжающееся газирование при промывке после остановки бурения и рост газосодержания забойных пачек при остановке циркуляции указывают на поступление газа из окружающих пород из-за недостатка противодавления.; вывод: Выявить причину газирования; одно присутствие газа не требует немедленного утяжеления бурового раствора.",
+   "source": "учебный слой, стр. 235",
+   "claim_ids": [
+    "shift.gas_entry_causes#c1",
+    "shift.gas_entry_causes#c2",
+    "shift.gas_entry_causes#c3",
+    "shift.gas_entry_causes#c4",
+    "shift.gas_entry_causes#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.gas_zone_drilling",
+   "step_id": "shift.gas_zone_drilling",
+   "node_id": "shift.gas_zone_drilling",
+   "file": "illustrations/gas_zone_drilling.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 235–236.",
+   "alt": "Схема: признаки Устойчивый рост газосодержания раствора при углублении в переходную зону, Остановка или продолжение бурения, Наличие циркуляции; правило: При устойчивом росте газосодержания применяют ступенчатое утяжеление раствора; при остановке бурения поступление газа в циркулирующий раствор прекращается.; вывод: Рост газосодержания требует учитывать возможность встречи с высокопродуктивным локальным скоплением газа.",
+   "source": "учебный слой, стр. 235, стр. 236",
+   "claim_ids": [
+    "shift.gas_zone_drilling#c1",
+    "shift.gas_zone_drilling#c2",
+    "shift.gas_zone_drilling#c3",
+    "shift.gas_zone_drilling#c4",
+    "shift.gas_zone_drilling#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.gas_after_trips",
+   "step_id": "shift.gas_after_trips",
+   "node_id": "shift.gas_after_trips",
+   "file": "illustrations/gas_after_trips.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 236.",
+   "alt": "Схема процедуры: 1. При поступлении газа в буровой раствор постоянно контролировать его содержание.; 2. Использовать для контроля станцию контроля за бурением или газокаротажную станцию.; 3. Учитывать концентрацию газа и её изменения при выборе дальнейшей технологии бурения.; 4. Если давление в бурильных трубах снизилось и раствор расплескивается, вымывать газовую пачку при закрытом устье через регулируемый дроссель.",
+   "source": "учебный слой, стр. 236",
+   "claim_ids": [
+    "shift.gas_after_trips#c1",
+    "shift.gas_after_trips#c2",
+    "shift.gas_after_trips#c3",
+    "shift.gas_after_trips#c4",
+    "shift.gas_after_trips#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.gas_content_calculation",
+   "step_id": "shift.gas_content_calculation",
+   "node_id": "shift.gas_content_calculation",
+   "file": "illustrations/gas_content_calculation.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 236–237.",
+   "alt": "Схема механизма: Плотность газированного раствора ниже плотности негазированного → по их отношению и подаче насосов рассчитывают атмосферный дебит газа. Деление дебита газа на подачу насосов даёт содержание газа в единице объёма раствора, приведённое к нормальным условиям. Газ снижает плотность у устья, но обычно не вызывает существенного падения забойного давления → газирование рассматривают как признак условий для поступления газа",
+   "source": "учебный слой, стр. 236, стр. 237",
+   "claim_ids": [
+    "shift.gas_content_calculation#c1",
+    "shift.gas_content_calculation#c2",
+    "shift.gas_content_calculation#c3",
+    "shift.gas_content_calculation#c4",
+    "shift.gas_content_calculation#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.pump_pressure_changes",
+   "step_id": "shift.pump_pressure_changes",
+   "node_id": "shift.pump_pressure_changes",
+   "file": "illustrations/pump_pressure_changes.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 237–238.",
+   "alt": "Схема: признаки плотность поступившего флюида относительно плотности бурового раствора, высота газового столба, давление на насосах, давление в бурильных трубах; правило: Менее плотный флюид обычно нарушает прежний баланс и снижает давление на насосах; при высоких пластовом давлении и продуктивности давление в бурильных трубах может повыситься.; вывод: Изменение давления связано с поступлением и движением флюида, но само снижение не определяет интенсивность проявления.",
+   "source": "учебный слой, стр. 237, стр. 238",
+   "claim_ids": [
+    "shift.pump_pressure_changes#c1",
+    "shift.pump_pressure_changes#c2",
+    "shift.pump_pressure_changes#c3",
+    "shift.pump_pressure_changes#c4",
+    "shift.pump_pressure_changes#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.trip_fill_monitoring",
+   "step_id": "shift.trip_fill_monitoring",
+   "node_id": "shift.trip_fill_monitoring",
+   "file": "illustrations/trip_fill_monitoring.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 238.",
+   "alt": "Схема: признаки Объем доливаемого раствора, Контрольный объем, Объем извлеченного металла труб, Объем пленки раствора на трубах; правило: При подъеме сравнивать доливаемый объем с объемом извлеченного металла и пленки раствора на трубах; уменьшение относительно контрольного более чем на 1 м³ не допускается.; вывод: Уменьшение доливаемого объема может указывать на начавшееся проявление.",
+   "source": "учебный слой, стр. 238",
+   "claim_ids": [
+    "shift.trip_fill_monitoring#c1",
+    "shift.trip_fill_monitoring#c2",
+    "shift.trip_fill_monitoring#c3",
+    "shift.trip_fill_monitoring#c4",
+    "shift.trip_fill_monitoring#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.displacement_mud_properties",
+   "step_id": "shift.displacement_mud_properties",
+   "node_id": "shift.displacement_mud_properties",
+   "file": "illustrations/displacement_mud_properties.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 239.",
+   "alt": "Схема: признаки Объем вытесненного раствора относительно расчетного, Продолжающийся перелив, Плотность раствора, Водоотдача; правило: Превышение расчетного объема вместе с продолжающимся переливом свидетельствует о поступлении пластового флюида. По свойствам раствора надежнее судить при одновременном изменении нескольких показателей.; вывод: Наблюдаются признаки поступления пластового флюида; свойства раствора следует оценивать с учетом задержки поступления информации.",
+   "source": "учебный слой, стр. 239",
+   "claim_ids": [
+    "shift.displacement_mud_properties#c1",
+    "shift.displacement_mud_properties#c2",
+    "shift.displacement_mud_properties#c3",
+    "shift.displacement_mud_properties#c4",
+    "shift.displacement_mud_properties#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.wellhead_control_equipment",
+   "step_id": "shift.wellhead_control_equipment",
+   "node_id": "shift.wellhead_control_equipment",
+   "file": "illustrations/wellhead_control_equipment.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Как это работает: цепочка «причина → следствие». Схема по утверждениям узла, стр. 312.",
+   "alt": "Схема механизма: Резьбовые соединения стандартных обсадных труб недостаточно герметичны → возможны межколонные проявления и грифонообразование. Дополнительная обсадная колонна укрепляет устьевую часть, а несколько превенторов и связанные линии позволяют контролировать скважину",
+   "source": "учебный слой, стр. 312",
+   "claim_ids": [
+    "shift.wellhead_control_equipment#c1",
+    "shift.wellhead_control_equipment#c2",
+    "shift.wellhead_control_equipment#c3",
+    "shift.wellhead_control_equipment#c4",
+    "shift.wellhead_control_equipment#c5"
+   ],
+   "prompt": null,
+   "kind": "mechanism"
+  },
+  {
+   "id": "ill.shut_in_and_kill",
+   "step_id": "shift.shut_in_and_kill",
+   "node_id": "shift.shut_in_and_kill",
+   "file": "illustrations/shut_in_and_kill.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 312–314.",
+   "alt": "Схема процедуры: 1. При сигнале о проявлении прекратить бурение или испытание.; 2. Поднять рабочую трубу на высоту, достаточную для установки безопасного клапана.; 3. Расположить под уплотнениями превенторов трубу, а не муфту.; 4. Отключить буровые насосы и проверить скважину на самоприток.; 5. Если начинается перелив, срочно перекрыть скважину.; 6. Затем заглушить скважину, удалив приточную жидкость.",
+   "source": "учебный слой, стр. 312, стр. 314",
+   "claim_ids": [
+    "shift.shut_in_and_kill#c1",
+    "shift.shut_in_and_kill#c2",
+    "shift.shut_in_and_kill#c3",
+    "shift.shut_in_and_kill#c4",
+    "shift.shut_in_and_kill#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.shut_in_methods",
+   "step_id": "shift.shut_in_methods",
+   "node_id": "shift.shut_in_methods",
+   "file": "illustrations/shut_in_methods.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 315.",
+   "alt": "Схема процедуры: 1. Быстрое перекрытие: закрыть задвижку 10 штуцерной линии, закрыть трубный превентор 6, затем открыть задвижку 10, оставив штуцерную линию закрытой.; 2. Мягкое перекрытие: закрыть задвижку 10, открыть клапаны 7 и 4. При обнаружении проявления открыть задвижку 10 и направить поток через штуцер 5 и штуцерный манифольд 2 в циркуляционную систему.; 3. После направления потока закрыть плашки трубного превентора 6, медленно перекрыть скважину клапаном штуцера 5, затем закрыть клапан 4.",
+   "source": "учебный слой, стр. 315",
+   "claim_ids": [
+    "shift.shut_in_methods#c1",
+    "shift.shut_in_methods#c2",
+    "shift.shut_in_methods#c3",
+    "shift.shut_in_methods#c4",
+    "shift.shut_in_methods#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.trip_shut_in",
+   "step_id": "shift.trip_shut_in",
+   "node_id": "shift.trip_shut_in",
+   "file": "illustrations/trip_shut_in.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 315–316.",
+   "alt": "Схема процедуры: 1. Остановить подъём или спуск колонны.; 2. Разместить верхний замок бурильной трубы над столом ротора и подвесить колонну на клиньях.; 3. Установить на колонну открытый безопасный клапан.; 4. Закрыть безопасный клапан и превентор с трубными плашками.; 5. Приподнять квадрат над столом ротора и открыть безопасный клапан.; 6. Зарегистрировать давления перекрытия бурильной колонны в кольцевом пространстве скважины и приток раствора в амбар.; 7. Удалить поступившие из пласта жидкость или газ и закачать более тяжёлый раствор, вытесняя первоначальный.",
+   "source": "учебный слой, стр. 315, стр. 316",
+   "claim_ids": [
+    "shift.trip_shut_in#c1",
+    "shift.trip_shut_in#c2",
+    "shift.trip_shut_in#c3",
+    "shift.trip_shut_in#c4",
+    "shift.trip_shut_in#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.drillers_kill_method",
+   "step_id": "shift.drillers_kill_method",
+   "node_id": "shift.drillers_kill_method",
+   "file": "illustrations/drillers_kill_method.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 316–317.",
+   "alt": "Схема процедуры: 1. После закрытия скважины зарегистрировать и определить необходимые параметры.; 2. Включить насос и открыть штуцер 5.; 3. Настроить штуцер, чтобы кольцевое давление соответствовало давлению закрытой скважины плюс давление для коэффициента безопасности.; 4. При циркуляции поддерживать заданную скорость и постоянное давление согласно этапу.; 5. После выхода разговорной пачки раствора прекратить циркуляцию и выдержать скважину для стабилизации давления.; 6. Проверить равенство давлений в бурильных трубах и кольцевом пространстве при закрытой скважине.; 7. Открыть штуцер и включи",
+   "source": "учебный слой, стр. 316, стр. 317",
+   "claim_ids": [
+    "shift.drillers_kill_method#c1",
+    "shift.drillers_kill_method#c2",
+    "shift.drillers_kill_method#c3",
+    "shift.drillers_kill_method#c4",
+    "shift.drillers_kill_method#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  },
+  {
+   "id": "ill.wait_and_weight",
+   "step_id": "shift.wait_and_weight",
+   "node_id": "shift.wait_and_weight",
+   "file": "illustrations/wait_and_weight.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Решение на данных: признаки → правило → вывод. Схема по утверждениям узла, стр. 317–318.",
+   "alt": "Схема: признаки Избыточное давление в бурильных трубах, Избыточное давление в кольцевом пространстве; правило: Если в обоих пространствах нет избыточного давления, скважина заглушена.; вывод: Если давление в бурильных трубах сохраняется, глушение повторяют из-за возможного второго выброса.",
+   "source": "учебный слой, стр. 317, стр. 318",
+   "claim_ids": [
+    "shift.wait_and_weight#c1",
+    "shift.wait_and_weight#c2",
+    "shift.wait_and_weight#c3",
+    "shift.wait_and_weight#c4",
+    "shift.wait_and_weight#c5"
+   ],
+   "prompt": null,
+   "kind": "decision"
+  },
+  {
+   "id": "ill.other_kill_methods",
+   "step_id": "shift.other_kill_methods",
+   "node_id": "shift.other_kill_methods",
+   "file": "illustrations/other_kill_methods.svg",
+   "frame_class": "B",
+   "origin": "code_from_model",
+   "label": "схема",
+   "caption": "Порядок действий специалиста. Схема по утверждениям узла, стр. 318.",
+   "alt": "Схема процедуры: 1. Пока скважина не перекрыта и раствор циркулирует, производить его утяжеление.; 2. Перекрыть скважину.; 3. Зарегистрировать давление в бурильных трубах при закрытой скважине, давление в обсадной колонне и приток раствора в амбар.; 4. Рассчитать первоначальное конечное давление циркуляции и определить необходимую плотность.",
+   "source": "учебный слой, стр. 318",
+   "claim_ids": [
+    "shift.other_kill_methods#c1",
+    "shift.other_kill_methods#c2",
+    "shift.other_kill_methods#c3",
+    "shift.other_kill_methods#c4",
+    "shift.other_kill_methods#c5"
+   ],
+   "prompt": null,
+   "kind": "procedure"
+  }
+ ]
+}

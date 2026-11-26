@@ -1,0 +1,2420 @@
+{
+ "chapter": "test_asquith",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.interpretation_and_decisions#c2"
+   ],
+   "prompt": "Что следует учитывать геологу до решения о спуске обсадной колонны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Только интерпретацию каротажа",
+     "misconception": "misc.log_is_rock"
+    },
+    {
+     "id": "b",
+     "text": "Каротаж и другие относящиеся к делу данные, включая испытания пластов, проявления в образцах, анализ mud log и ближайшую добычу",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Только ближайшую добычу",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Только пористость, поскольку она равна проницаемости",
+     "misconception": "misc.porosity_eq_perm"
+    }
+   ],
+   "answer": "b",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Интерпретацию каротажа следует сопоставлять с другими относящимися к делу данными перед решением о спуске обсадной колонны (стр. 126).",
+   "step_id": "test.interpretation_and_decisions",
+   "id": "t01"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.reservoir_scanning_paths#c2"
+   ],
+   "prompt": "В обломочных породах основным разведочным измерением служит {{1}}: резервуары обычно окружены глинами с {{2}} меняющимся сопротивлением.",
+   "options": [],
+   "answer": [
+    "сопротивление",
+    "медленно"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В обломочных породах сопротивление резервуаров сравнивают с сопротивлением окружающих глин, которое меняется медленно (стр. 126).",
+   "step_id": "test.reservoir_scanning_paths",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.reservoir_scanning_paths#c12",
+    "test.reservoir_scanning_paths#c13"
+   ],
+   "prompt": "Расположите этапы работы с данными в порядке, указанном в описании блок-схемы.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Рассчитать пористость и объём глины по исходным данным",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Использовать исходные каротажи и прочую информацию о стволе скважины",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Получить из исходных данных информацию, используемую для расчётов",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала используют исходные данные, из них получают информацию, а по исходным данным рассчитывают пористость и объём глины (стр. 140).",
+   "step_id": "test.reservoir_scanning_paths",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.archie_water_saturation#c4"
+   ],
+   "prompt": "Что обозначает R_w в формуле Арчи?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Сопротивление пластовой воды при пластовой температуре",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Истинное сопротивление пласта, скорректированное на инвазию",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Пористость необработанной зоны",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "d",
+     "text": "Показатель насыщения",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "R_w — сопротивление пластовой воды при пластовой температуре (стр. 126).",
+   "step_id": "test.archie_water_saturation",
+   "id": "t05"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.archie_water_saturation#c10"
+   ],
+   "prompt": "Какое утверждение верно о водонасыщенности по Арчи и оценке продуктивного потенциала?",
+   "options": [
+    {
+     "id": "a",
+     "text": "S_w — фундаментальная величина для оценки по каротажу, но одной её недостаточно для полной оценки продуктивного потенциала зоны",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Одного значения S_w достаточно, чтобы полностью оценить продуктивный потенциал зоны",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "S_w напрямую показывает, что пласт является пустотой, а не породой с порами",
+     "misconception": "misc.reservoir_void"
+    },
+    {
+     "id": "d",
+     "text": "S_w всегда означает, что в зоне присутствует нефть",
+     "misconception": "misc.high_res_oil"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "По Арчи S_w фундаментальна для оценки по каротажу, но сама по себе не даёт полной оценки продуктивного потенциала (стр. 127).",
+   "step_id": "test.archie_water_saturation",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.flushed_zone_saturation#c2",
+    "test.flushed_zone_saturation#c5",
+    "test.flushed_zone_saturation#c6",
+    "test.flushed_zone_saturation#c7"
+   ],
+   "prompt": "Какие утверждения верно описывают оценку водонасыщенности промытой зоны и используемые величины?",
+   "options": [
+    {
+     "id": "a",
+     "text": "При расчёте по формуле Арчи R_w заменяют на R_mf, а R_t — на R_xo.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "R_mf — сопротивление фильтрата бурового раствора при пластовой температуре.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "R_xo — мелкое сопротивление, измеряемое очень мелкоисследующим прибором.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "R_xo обозначает пористость промытой зоны.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "При расчёте S_xo пористость не учитывается.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формула Арчи для промытой зоны использует замены R_w на R_mf и R_t на R_xo; R_mf относится к фильтрату при пластовой температуре, а R_xo — к мелкому сопротивлению (стр. 127).",
+   "step_id": "test.flushed_zone_saturation",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.flushed_zone_saturation#c11"
+   ],
+   "prompt": "Если {{1}} намного больше {{2}}, вероятно, вторгшиеся буровые флюиды вытеснили углеводороды из зоны около скважины.",
+   "options": [],
+   "answer": [
+    "S_xo",
+    "S_w"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Такое соотношение водонасыщенности промытой зоны и водонасыщенности пласта может указывать на подвижность углеводородов (стр. 127).",
+   "step_id": "test.flushed_zone_saturation",
+   "id": "t08"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.resistivity_ratio_method#c1",
+    "test.resistivity_ratio_method#c2",
+    "test.resistivity_ratio_method#c5",
+    "test.resistivity_ratio_method#c6",
+    "test.resistivity_ratio_method#c7",
+    "test.resistivity_ratio_method#c8"
+   ],
+   "prompt": "Расположите шаги применения метода отношений в логическом порядке:",
+   "options": [
+    {
+     "id": "a",
+     "text": "Измерить мелкое и истинное сопротивления пласта, а также сопротивления фильтрата и пластовой воды."
+    },
+    {
+     "id": "b",
+     "text": "Составить отношение R_xo/R_t к R_mf/R_w."
+    },
+    {
+     "id": "c",
+     "text": "Получить квадрат отношения водонасыщенностей (S_w/S_xo)²."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала используют соответствующие сопротивления, затем составляют их отношение и связывают его с (S_w/S_xo)² (стр. 127).",
+   "step_id": "test.resistivity_ratio_method",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.resistivity_ratio_method#c1",
+    "test.resistivity_ratio_method#c2",
+    "test.resistivity_ratio_method#c9"
+   ],
+   "prompt": "Почему методом отношений можно определить индекс подвижных углеводородов и водонасыщенность без знания пористости?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Потому что при делении S_w на S_xo одинаковый коэффициент формации сокращается.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Потому что высокое сопротивление всегда означает наличие нефти.",
+     "misconception": "misc.high_res_oil"
+    },
+    {
+     "id": "c",
+     "text": "Потому что пористость и проницаемость — одно и то же, поэтому достаточно знать одну из них.",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "d",
+     "text": "Потому что каротажная кривая непосредственно показывает породу и её пористость.",
+     "misconception": "misc.log_is_rock"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При делении одинаковый коэффициент формации F сокращается, поэтому пористость для метода не требуется (стр. 127).",
+   "step_id": "test.resistivity_ratio_method",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "test.mobile_hydrocarbon_index#c3",
+    "test.mobile_hydrocarbon_index#c4",
+    "test.mobile_hydrocarbon_index#c7"
+   ],
+   "prompt": "Какие утверждения верны для метода отношений?",
+   "options": [
+    {
+     "id": "a",
+     "text": "R_xo — мелкое сопротивление, которое можно измерять микролатерологом.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "R_t — сопротивление фильтрата бурового раствора при пластовой температуре.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "R_t — истинное сопротивление пласта, которое может быть получено по глубокому каротажу с поправкой на инвазию.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "R_xo — истинное сопротивление пласта, скорректированное на инвазию.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Показатель насыщения n принимают равным 2,0.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "e"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "R_xo соответствует мелкому сопротивлению, R_t — истинному сопротивлению пласта, а n принимают равным 2,0 (стр. 127).",
+   "step_id": "test.mobile_hydrocarbon_index",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.mobile_hydrocarbon_index#c5",
+    "test.mobile_hydrocarbon_index#c6"
+   ],
+   "prompt": "R_mf — сопротивление {{1}} при пластовой температуре; R_w — сопротивление {{2}} при пластовой температуре.",
+   "options": [],
+   "answer": [
+    "фильтрата бурового раствора",
+    "пластовой воды"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "R_mf обозначает сопротивление фильтрата бурового раствора, а R_w — сопротивление пластовой воды (стр. 127).",
+   "step_id": "test.mobile_hydrocarbon_index",
+   "id": "t12"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.ratio_water_saturation#c1",
+    "test.ratio_water_saturation#c2",
+    "test.ratio_water_saturation#c5"
+   ],
+   "prompt": "Расположите шаги определения водонасыщенности методом отношений в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Подставить зависимость S_xo=√S_w в уравнение индекса подвижных углеводородов и решить его относительно S_wr.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Учесть, что при умеренной инвазии и средней остаточной нефтенасыщенности S_xo=√S_w.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Определить S_xo — водонасыщенность промытой зоны.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "c",
+    "b",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала необходимо знать S_xo, затем применить зависимость S_xo=√S_w и подставить её в уравнение для решения относительно S_wr (стр. 128).",
+   "step_id": "test.ratio_water_saturation",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.ratio_water_saturation#c6",
+    "test.ratio_water_saturation#c7"
+   ],
+   "prompt": "Какой показатель степени используется в формуле S_wr по методу отношений?",
+   "options": [
+    {
+     "id": "a",
+     "text": "5/8, то есть 0,625",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "8/5, то есть 1,6",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "1/2, то есть 0,5",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "5/4, то есть 1,25",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В формуле S_wr используется показатель 5/8, равный 0,625 (стр. 128).",
+   "step_id": "test.ratio_water_saturation",
+   "id": "t14"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.compare_saturation_estimates#c3",
+    "test.compare_saturation_estimates#c4",
+    "test.compare_saturation_estimates#c11"
+   ],
+   "prompt": "Какие утверждения верно описывают случай, когда $S_{wa}$ не равно $S_{wr}$? Выберите все подходящие варианты.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Если $S_{wa}>S_{wr}$, отношение $R_{xo}/R_t$ слишком мало.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Если $S_{wa}>S_{wr}$, отношение $R_{xo}/R_t$ завышено.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Если $S_{wa}<S_{wr}$, завышенное $R_{xo}$ или заниженное $R_t$ могут привести к завышению $R_{xo}/R_t$.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Если $S_{wa}<S_{wr}$, коллектор может быть карбонатным, с молдической пористостью и низкой проницаемостью.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Если $S_{wa}<S_{wr}$, $R_{xo}/R_t$ обязательно занижено.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При $S_{wa}>S_{wr}$ отношение $R_{xo}/R_t$ слишком мало, а при $S_{wa}<S_{wr}$ оно завышено; в последнем случае возможен и указанный тип карбонатного коллектора (стр. 128).",
+   "step_id": "test.compare_saturation_estimates",
+   "id": "t15"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.compare_saturation_estimates#c7"
+   ],
+   "prompt": "Скорректированная водонасыщенность равна {{1}}, умноженному на отношение $S_{wa}/S_{wr}$ в степени {{2}}.",
+   "options": [],
+   "answer": [
+    "$S_{wa}$",
+    "0,25"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении скорректированная водонасыщенность задана как $S_{wa}$, умноженное на $(S_{wa}/S_{wr})^{0,25}$ (стр. 128).",
+   "step_id": "test.compare_saturation_estimates",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.quick_ratio_scan#c7",
+    "test.quick_ratio_scan#c8"
+   ],
+   "prompt": "В водоносном интервале кривая $R_{xo}/R_t$ {{1}}; в углеводородоносном интервале она {{2}}.",
+   "options": [],
+   "answer": [
+    "следует за SP",
+    "отклоняется от SP"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В водоносном интервале кривая следует за SP, а в углеводородоносном отклоняется от неё (стр. 128).",
+   "step_id": "test.quick_ratio_scan",
+   "id": "t17"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.ratio_sp_response#c8"
+   ],
+   "prompt": "Какое утверждение верно для отношения сопротивлений в водоносном интервале?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Отношение Rxo/Rt связано с откликом SP постоянной величиной; в общем случае вместо Ro используют Rt.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Отношение Rt/Rxo связано с откликом SP постоянной величиной; в общем случае вместо Rt используют Ro.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Отношение Rxo/Rt связано с откликом SP только в углеводородоносных интервалах.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Отношение сопротивлений не связано с откликом SP.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В водоносных интервалах Rxo/Ro связано с SP постоянной величиной, а для общего случая вместо Ro используют Rt (стр. 129).",
+   "step_id": "test.ratio_sp_response",
+   "id": "t18"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "test.ratio_sp_response#c10",
+    "test.ratio_sp_response#c11",
+    "test.ratio_sp_response#c12"
+   ],
+   "prompt": "Какие утверждения о применении отношения Rxo/Rt верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В углеводородоносном интервале Rxo/Rt уменьшается из-за роста Rt и отклоняется от SP.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Для Rxo обычно используют мелкое измерение, а для Rt — глубокое измерение.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "На практике измерения обычно используют без поправок за среду, особенно если отношение рассчитывают и отображают в составе каротажной работы.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В углеводородоносном интервале Rxo/Rt растёт из-за роста Rt и продолжает параллельно следовать SP.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Для Rxo обычно используют глубокое измерение, а для Rt — мелкое.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В углеводородоносном интервале отношение уменьшается и отклоняется от SP; Rxo берут из мелкого измерения, Rt — из глубокого, обычно без поправок за среду (стр. 129).",
+   "step_id": "test.ratio_sp_response",
+   "id": "t19"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.apparent_water_resistivity#c2"
+   ],
+   "prompt": "Предполагается, что {{1}} ближе всего к истинному {{2}}.",
+   "options": [],
+   "answer": [
+    "минимальное значение $R_{wa}$",
+    "$R_w$"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Минимальное значение $R_{wa}$ считается наиболее близким к истинному $R_w$ (стр. 129).",
+   "step_id": "test.apparent_water_resistivity",
+   "id": "t20"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.apparent_water_resistivity#c4",
+    "test.apparent_water_resistivity#c5"
+   ],
+   "prompt": "Расположите этапы поиска зон методом $R_{wa}$ в верном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Рассчитать $R_{wa}$ по измерениям пористости и сопротивления невскрытой зоны.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Найти минимальное $R_{wa}$ в пористой и проницаемой зоне.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Сравнить найденный минимум со значениями $R_{wa}$ в других зонах.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала рассчитывают $R_{wa}$, затем находят минимум в пористой и проницаемой зоне и сравнивают его с другими зонами (стр. 129).",
+   "step_id": "test.apparent_water_resistivity",
+   "id": "t21"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.rwa_physical_basis#c6",
+    "test.rwa_physical_basis#c8"
+   ],
+   "prompt": "Почему кажущееся сопротивление воды $R_{wa}$ в зоне с углеводородами больше сопротивления воды $R_w$?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Потому что в такой зоне $R_t>R_o$, а $R_{wa}$ вычисляют по $R_t$.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Потому что в такой зоне $R_t<R_o$.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Потому что в такой зоне пористость равна нулю.",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "d",
+     "text": "Потому что высокое сопротивление всегда означает нефть.",
+     "misconception": "misc.high_res_oil"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В углеводородной зоне $R_t>R_o$, поэтому вычисленное по $R_t$ значение $R_{wa}$ превышает $R_w$ (стр. 129).",
+   "step_id": "test.rwa_physical_basis",
+   "id": "t22"
+  },
+  {
+   "type": "single",
+   "kind": "transfer",
+   "claim_ids": [
+    "test.rwa_physical_basis#c9",
+    "test.rwa_physical_basis#c10"
+   ],
+   "prompt": "Как следует трактовать минимум $R_{wa}$ среди сравниваемых зон, если зону с этим минимумом принимают за водоносную?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Использовать минимум как оценку $R_w$ для сравниваемых зон; если зона с минимумом всё же содержит углеводороды, остальные зоны содержат их ещё больше, чем предполагалось.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Считать минимум точным измерением содержания углеводородов во всех зонах.",
+     "misconception": "misc.model_knows"
+    },
+    {
+     "id": "c",
+     "text": "Отвергнуть минимум, поскольку любое высокое сопротивление обязательно означает нефть.",
+     "misconception": "misc.high_res_oil"
+    },
+    {
+     "id": "d",
+     "text": "Считать, что остальные зоны обязательно водоносные, даже если зона с минимумом содержит углеводороды.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Минимум $R_{wa}$ служит оценкой $R_w$, а если минимальная зона нефтенасыщена, остальные содержат ещё больше углеводородов, чем предполагалось (стр. 129–130).",
+   "step_id": "test.rwa_physical_basis",
+   "id": "t23"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "test.rwa_saturation_estimates#c3",
+    "test.rwa_saturation_estimates#c4"
+   ],
+   "prompt": "Какие утверждения о получении пористости верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пористость обычно получают по акустическому или плотностному каротажу, используя подходящие параметры матрицы и флюида для ожидаемых пород.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Если доступен кроссплот нейтронного и плотностного каротажа, для наиболее точной оценки пористости следует использовать его.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Пористость обычно получают по глубинному индукционному каротажу или глубинному латерологу.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Кроссплот нейтронного и плотностного каротажа следует использовать только тогда, когда акустический и плотностный каротажи недоступны.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Обычно пористость оценивают по акустическому или плотностному каротажу, а при доступном кроссплоте нейтронного и плотностного каротажа используют его для наиболее точной оценки (стр. 130).",
+   "step_id": "test.rwa_saturation_estimates",
+   "id": "t24"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.rwa_saturation_estimates#c6"
+   ],
+   "prompt": "Водонасыщенность равна {{1}} из отношения {{2}} к $R_{wa}$ рассматриваемой зоны.",
+   "options": [],
+   "answer": [
+    "квадратному корню",
+    "минимального $R_{wa}$"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Водонасыщенность вычисляют как квадратный корень из отношения минимального $R_{wa}$ к $R_{wa}$ рассматриваемой зоны (стр. 130).",
+   "step_id": "test.rwa_saturation_estimates",
+   "id": "t25"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.conductivity_porosity_scan#c4",
+    "test.conductivity_porosity_scan#c5",
+    "test.conductivity_porosity_scan#c8",
+    "test.conductivity_porosity_scan#c9"
+   ],
+   "prompt": "Расположите шаги экспресс-поиска по порядку: от расчёта пористости до интерпретации результата.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Сравнить значения кривой и её относительное положение в пористых и проницаемых зонах"
+    },
+    {
+     "id": "b",
+     "text": "Рассчитать пористость по Арчи при допущении Sw=1, используя сопротивление невскрытой зоны"
+    },
+    {
+     "id": "c",
+     "text": "Определить, соответствует ли кривая водоносной или углеводородосодержащей зоне"
+    }
+   ],
+   "answer": [
+    "b",
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала рассчитывают пористость, затем сравнивают кривую и интерпретируют её значения: высокие характерны для водоносных, низкие — для углеводородосодержащих зон (стр. 130).",
+   "step_id": "test.conductivity_porosity_scan",
+   "id": "t26"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.conductivity_porosity_scan#c10",
+    "test.conductivity_porosity_scan#c11"
+   ],
+   "prompt": "Что происходит при неверном выборе Rw?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Расчётная пористость может измениться, но сравнение значений кривой между зонами не изменится",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Расчётная пористость не изменится, но сравнение значений кривой между зонами изменится",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Не изменятся ни расчётная пористость, ни сравнение значений кривой между зонами",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Расчётная пористость и сравнение значений кривой между зонами обязательно изменятся",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Неверный Rw меняет рассчитанную пористость и может исказить её сравнение с истинной, но не меняет сравнение кривой между зонами (стр. 130).",
+   "step_id": "test.conductivity_porosity_scan",
+   "id": "t27"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.conductivity_porosity_model#c5",
+    "test.conductivity_porosity_model#c6",
+    "test.conductivity_porosity_model#c8"
+   ],
+   "prompt": "Какие утверждения верно описывают интерпретацию пористости, рассчитанной по проводимости?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В водонасыщенной формации Rt становится равным Ro, поэтому вычисленная пористость близка к фактической, если параметры уравнения близки к реальным.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "При наличии углеводородов Rt выше Ro, а вычисленная по уравнению пористость ниже фактической.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Снижение пористости, полученной по проводимости, относительно наложенной кривой пористости указывает на углеводороды.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Высокое сопротивление всегда доказывает наличие углеводородов.",
+     "misconception": "misc.high_res_oil"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Все три верных утверждения соответствуют описанию водонасыщенного и углеводородсодержащего случаев и сопоставлению кривых (стр. 130).",
+   "step_id": "test.conductivity_porosity_model",
+   "id": "t28"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.conductivity_porosity_model#c4"
+   ],
+   "prompt": "При $S_w=1$ пористость равна {{1}}.",
+   "options": [],
+   "answer": [
+    "$(aR_w/R_t)^{1/m}$"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При водонасыщенности $S_w=1$ уравнение пористости упрощается до этой формулы (стр. 130).",
+   "step_id": "test.conductivity_porosity_model",
+   "id": "t29"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.wet_resistivity_curve#c2",
+    "test.wet_resistivity_curve#c3"
+   ],
+   "prompt": "Расположите действия при использовании кривой мокрого сопротивления в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Рассчитать Ro по пористости и оценке Rw"
+    },
+    {
+     "id": "b",
+     "text": "Построить Ro в том же масштабе, что и кривые сопротивления"
+    },
+    {
+     "id": "c",
+     "text": "Сравнить Ro с глубоким измерением сопротивления"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала Ro рассчитывают по пористости и Rw, затем строят в соответствующем масштабе и сравнивают с глубоким сопротивлением (стр. 131).",
+   "step_id": "test.wet_resistivity_curve",
+   "id": "t30"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.wet_resistivity_curve#c5"
+   ],
+   "prompt": "Как должны соотноситься Ro и глубокое сопротивление в водоносной зоне?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Они должны накладываться друг на друга",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Глубокое сопротивление должно быть выше Ro",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Ro должно быть выше глубокого сопротивления",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Их не сравнивают между собой",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В водоносных зонах Ro и глубокое сопротивление должны накладываться друг на друга (стр. 131).",
+   "step_id": "test.wet_resistivity_curve",
+   "id": "t31"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.bulk_volume_water#c2"
+   ],
+   "prompt": "Объёмная доля воды равна произведению {{1}} на {{2}}.",
+   "options": [],
+   "answer": [
+    "водонасыщенности",
+    "пористость"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "BVW равна произведению водонасыщенности на пористость (стр. 131).",
+   "step_id": "test.bulk_volume_water",
+   "id": "t32"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.bulk_volume_water#c6",
+    "test.bulk_volume_water#c7",
+    "test.bulk_volume_water#c8"
+   ],
+   "prompt": "Какие утверждения верны при интерпретации объёмной доли воды BVW?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Для интерпретации рассматривают значения BVW, рассчитанные на нескольких глубинах формации.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Постоянные или почти постоянные значения BVW указывают на остаточную водонасыщенность; при ней вода удерживается капиллярным давлением и не перемещается.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Значительные вариации BVW характерны для формации, не находящейся при остаточной водонасыщенности.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Постоянная BVW означает, что вода свободно перемещается и добыча углеводородов обязательно будет идти с водой.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Для интерпретации достаточно рассчитать BVW только на одной глубине формации.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для интерпретации сравнивают значения на нескольких глубинах: постоянная BVW связана с остаточной водонасыщенностью, а значительные вариации — с её отсутствием (стр. 131).",
+   "step_id": "test.bulk_volume_water",
+   "id": "t33"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.buckles_plot_examples#c1",
+    "test.buckles_plot_examples#c3"
+   ],
+   "prompt": "На графике Баклса точки с одинаковым BVW образуют {{1}}, а пористость сопоставляется с {{2}}.",
+   "options": [],
+   "answer": [
+    "гиперболы",
+    "водонасыщенностью"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Одинаковые значения BVW образуют гиперболы, а график сопоставляет пористость с водонасыщенностью (стр. 131, 141).",
+   "step_id": "test.buckles_plot_examples",
+   "id": "t34"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.buckles_plot_examples#c10",
+    "test.buckles_plot_examples#c11",
+    "test.buckles_plot_examples#c12"
+   ],
+   "prompt": "Расположите примеры от наибольшей доли нефти в добыче к наименьшей.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пример 7.3a: 96% нефти"
+    },
+    {
+     "id": "b",
+     "text": "Пример 7.3b: 68% нефти"
+    },
+    {
+     "id": "c",
+     "text": "Пример 7.3c: только вода, нефти нет"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Доля нефти снижается от 96% в примере 7.3a до 68% в 7.3b и до нуля в 7.3c (стр. 141).",
+   "step_id": "test.buckles_plot_examples",
+   "id": "t35"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.bvw_rock_types#c1"
+   ],
+   "prompt": "Что происходит с BVW при уменьшении размера зёрен согласно утверждению о капиллярном давлении?",
+   "options": [
+    {
+     "id": "a",
+     "text": "BVW растёт, поскольку формация удерживает больше воды.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "BVW уменьшается, поскольку формация удерживает меньше воды.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "BVW не меняется, поскольку размер зёрен влияет только на проницаемость.",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "d",
+     "text": "BVW растёт только в кавернозных карбонатах.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При уменьшении размера зёрен капиллярное давление позволяет формации удерживать больше воды, поэтому BVW растёт (стр. 131).",
+   "step_id": "test.bvw_rock_types",
+   "id": "t36"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.saturation_crossplots_intro#c1"
+   ],
+   "prompt": "Кроссплоты насыщенности — графики каротажных данных {{1}}, по которым получают интересующие величины, в данном случае — {{2}}.",
+   "options": [],
+   "answer": [
+    "x-y",
+    "Sw"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "По кроссплотам каротажных данных x-y получают Sw (стр. 132).",
+   "step_id": "test.saturation_crossplots_intro",
+   "id": "t38"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.saturation_crossplots_intro#c3",
+    "test.saturation_crossplots_intro#c5",
+    "test.saturation_crossplots_intro#c6",
+    "test.saturation_crossplots_intro#c7"
+   ],
+   "prompt": "Расположите этапы использования методов Пикетта и Хингла в хронологическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Их использование снизилось с распространением ранних преимущественно неграфических программ."
+    },
+    {
+     "id": "b",
+     "text": "Методы создали до появления компьютеров, чтобы облегчить интерпретацию каротажа."
+    },
+    {
+     "id": "c",
+     "text": "Использование снова возросло благодаря способности задействовать распознавание человеком закономерностей."
+    },
+    {
+     "id": "d",
+     "text": "Методы стали считать необходимыми компонентами полнофункциональных компьютерных систем интерпретации каротажа."
+    }
+   ],
+   "answer": [
+    "b",
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала методы создали до компьютеров, затем их использование снизилось, снова возросло и стало необходимой частью полнофункциональных систем (стр. 132).",
+   "step_id": "test.saturation_crossplots_intro",
+   "id": "t39"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.pickett_log_model#c3",
+    "test.pickett_log_model#c4",
+    "test.pickett_log_model#c5"
+   ],
+   "prompt": "Какие параметры может помочь определить метод Пикетта?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Сопротивление пластовой воды Rw, коэффициент цементации m и матричные параметры Δtma и ρma",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только пористость и проницаемость",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "c",
+     "text": "Только тип флюида по значению сопротивления",
+     "misconception": "misc.high_res_oil"
+    },
+    {
+     "id": "d",
+     "text": "Скорость распространения пластового давления",
+     "misconception": "misc.pressure_sound_speed"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Перечисленные параметры, которые помогает определять метод Пикетта, включают Rw, m, Δtma и ρma (стр. 132).",
+   "step_id": "test.pickett_log_model",
+   "id": "t40"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.pickett_water_line#c8",
+    "test.pickett_water_line#c9",
+    "test.pickett_water_line#c10",
+    "test.pickett_water_line#c11"
+   ],
+   "prompt": "Какие утверждения о водоносных и углеводородсодержащих точках на графике Пикетта верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Водоносные точки с разной пористостью образуют прямую с наклоном −1/m.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Линия водоносных точек называется линией водоносной зоны, или Ro.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Углеводородсодержащие точки смещаются вправо от линии водоносной зоны, причём смещение зависит от Sw.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Линии постоянного Sw пересекают линию водоносной зоны под прямым углом.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Любая точка с высоким сопротивлением обязательно относится к углеводородсодержащей зоне.",
+     "misconception": "misc.high_res_oil"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Водоносные точки задают линию Ro, а углеводородсодержащие смещаются от неё вправо; линии постоянного Sw параллельны ей (стр. 132).",
+   "step_id": "test.pickett_water_line",
+   "id": "t42"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.pickett_water_line#c6"
+   ],
+   "prompt": "В принятой системе координат уравнение имеет вид: log(φ)=log(aRw) {{1}} {{2}}.",
+   "options": [],
+   "answer": [
+    "−(1/m)log(Rt)",
+    "−n log(Sw)"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В принятой системе координат уравнение включает слагаемые −(1/m)log(Rt) и −n log(Sw) (стр. 132).",
+   "step_id": "test.pickett_water_line",
+   "id": "t43"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.pickett_matrix_parameters#c7"
+   ],
+   "prompt": "Расположите шаги подбора матричного значения в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Нанести разности плотностей или времен пробега вместо рассчитанной пористости."
+    },
+    {
+     "id": "b",
+     "text": "Проверить водоносные интервалы, охватывающие диапазон пористостей."
+    },
+    {
+     "id": "c",
+     "text": "Подобрать матричное значение пробами и ошибками так, чтобы водоносная линия стала прямой."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Разности можно наносить вместо пористости, а матричное значение подбирают по прямой водоносной линии (стр. 133).",
+   "step_id": "test.pickett_matrix_parameters",
+   "id": "t44"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.pickett_matrix_parameters#c3",
+    "test.pickett_matrix_parameters#c4"
+   ],
+   "prompt": "Что обозначают ρb и ρma соответственно?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Объемную плотность пласта по каротажу и плотность матрицы пласта.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Плотность матрицы пласта и объемную плотность пласта по каротажу.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Время пробега акустической волны в пласте и время пробега в матрице.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Плотность флюида в пласте и плотность воды.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "ρb означает объемную плотность пласта по каротажу, а ρma — плотность его матрицы (стр. 132).",
+   "step_id": "test.pickett_matrix_parameters",
+   "id": "t45"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.pickett_saturation_lines#c3",
+    "test.pickett_saturation_lines#c5",
+    "test.pickett_saturation_lines#c6"
+   ],
+   "prompt": "Какие утверждения о построении линий водонасыщенности на Pickett-графике верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Считывают Rt точки и Ro водоносной линии при одинаковой пористости, оценивают n и выполняют расчет.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Выбирают пористость, считывают Ro, умножают его на табличные коэффициенты и наносят точки при той же пористости.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Линии водонасыщенности проводят параллельно водоносной линии; табличные коэффициенты соответствуют n=2,0.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Для построения линий достаточно считать Rt точки: Ro водоносной линии и пористость учитывать не нужно.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Таблица 7.2 содержит коэффициенты только для графика Pickett, а не для графика Hingle.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Расчет использует Rt и Ro при одинаковой пористости, а линии строят по табличным коэффициентам параллельно водоносной линии; таблица относится к графикам Pickett и Hingle (стр. 133).",
+   "step_id": "test.pickett_saturation_lines",
+   "id": "t46"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.pickett_saturation_lines#c7"
+   ],
+   "prompt": "При n=2,0 множителям 1,56; 2,04; 2,78; 4; 6,25; 11,11 и 25 соответствуют Sw 0,80; 0,70; 0,60; 0,50; 0,40; {{1}} и {{2}} соответственно.",
+   "options": [],
+   "answer": [
+    "0,30",
+    "0,20"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указано, что множителям 11,11 и 25 соответствуют Sw 0,30 и 0,20 (стр. 133).",
+   "step_id": "test.pickett_saturation_lines",
+   "id": "t47"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.hingle_plot_geometry#c4",
+    "test.hingle_plot_geometry#c6",
+    "test.hingle_plot_geometry#c8"
+   ],
+   "prompt": "Расположите этапы интерпретации Hingle-графика в логическом порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Нанести пористость по линейной шкале, а сопротивление — по сильно нелинейной."
+    },
+    {
+     "id": "b",
+     "text": "Определить прямую, на которой лежат водоносные точки."
+    },
+    {
+     "id": "c",
+     "text": "Распознать углеводородоносные точки ниже линии 100% водонасыщенности."
+    },
+    {
+     "id": "d",
+     "text": "Оценить Sw по вертикальному расстоянию до линии, если n известен или оценен."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала задают шкалы, затем находят водоносную линию и интерпретируют смещение углеводородоносных точек для оценки Sw (стр. 133–134).",
+   "step_id": "test.hingle_plot_geometry",
+   "id": "t48"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.hingle_plot_geometry#c7"
+   ],
+   "prompt": "Что соответствует пересечению водоносной линии с осью x?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Нулевой пористости; при оси плотности или времени пробега — предсказанному матричному значению.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Максимальной пористости и минимальному сопротивлению.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Положению водонефтяного контакта.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Обязательному наличию углеводородов.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Пересечение водоносной линии с осью x означает нулевую пористость, а при шкале плотности или времени пробега предсказывает матричное значение (стр. 134).",
+   "step_id": "test.hingle_plot_geometry",
+   "id": "t49"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.hingle_plot_calculations#c3"
+   ],
+   "prompt": "Rw рассчитывают как {{1}}, умноженное на пористость в степени m и деленное на {{2}}.",
+   "options": [],
+   "answer": [
+    "Ro",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формула расчёта Rw приведена в утверждении c234 (стр. 134).",
+   "step_id": "test.hingle_plot_calculations",
+   "id": "t50"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.hingle_plot_calculations#c1",
+    "test.hingle_plot_calculations#c2",
+    "test.hingle_plot_calculations#c5",
+    "test.hingle_plot_calculations#c7"
+   ],
+   "prompt": "Какие утверждения о расчётах и работе с Hingle-графиком верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Для расчёта считывают Rt точки и Ro водоносной линии при той же пористости, оценивают n и выполняют вычисление.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Rw можно оценить по любой точке водоносной линии, считав Ro и пористость и выбрав a и m по сетке.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Таблицу 7.2 можно использовать для построения линий насыщенности на Hingle-графике.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Выбор кроссплота в рутинном анализе всегда определяется только значениями матрицы, а не предпочтениями или опытом.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Для вычисления Rw обязательно нужны Rt точки вне водоносной линии.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Утверждения c230, c233 и c237 описывают эти способы расчёта и построения, а выбор кроссплота может зависеть от предпочтений или опыта (стр. 134).",
+   "step_id": "test.hingle_plot_calculations",
+   "id": "t51"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.crossplot_method_comparison#c3"
+   ],
+   "prompt": "Если {{1}} известен или оценен, Rw определяется по пересечению водоносной линии с пористостью {{2}}.",
+   "options": [],
+   "answer": [
+    "коэффициент извилистости a",
+    "100%"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Коэффициент извилистости позволяет определить Rw по пересечению линии при пористости 100% (стр. 135).",
+   "step_id": "test.crossplot_method_comparison",
+   "id": "t52"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.crossplot_method_comparison#c8"
+   ],
+   "prompt": "На графике Хингла ρma или Δtma определяются по пересечению водоносной линии с {{1}}, то есть {{2}}.",
+   "options": [],
+   "answer": [
+    "нулевой проводимостью",
+    "бесконечным сопротивлением"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для графика Хингла матричные значения определяются при нулевой проводимости, соответствующей бесконечному сопротивлению (стр. 135).",
+   "step_id": "test.crossplot_method_comparison",
+   "id": "t53"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.morrow_example_data#c9"
+   ],
+   "prompt": "Какие значения указаны для зоны 8 на глубине 4536 ft?",
+   "options": [
+    {
+     "id": "a",
+     "text": "ρb = 2.30 г/см³, φD = 0.212, Rt = 40 Ом·м",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "ρb = 2.30 г/см³, φD = 0.212, Rt = 0.9 Ом·м",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "ρb = 2.38 г/см³, φD = 0.163, Rt = 1.7 Ом·м",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "ρb = 2.44 г/см³, φD = 0.127, Rt = 2.1 Ом·м",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для зоны 8 на глубине 4536 ft в таблице указаны ρb = 2.30 г/см³, φD = 0.212 и Rt = 40 Ом·м (стр. 135).",
+   "step_id": "test.morrow_example_data",
+   "id": "t54"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.morrow_example_data#c12",
+    "test.morrow_example_data#c13"
+   ],
+   "prompt": "Выберите верные утверждения о графике Пикетта и данных примера.",
+   "options": [
+    {
+     "id": "a",
+     "text": "График Пикетта — кросс-плот сопротивления и пористости, показывающий водоносные и углеводородоносные зоны скважины.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Данные примера взяты из песчаника Morrow в округе Симаррон, Оклахома.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "График Пикетта напрямую изображает подземные озёра нефти.",
+     "misconception": "misc.oil_lake"
+    },
+    {
+     "id": "d",
+     "text": "Высокое сопротивление всегда означает наличие нефти.",
+     "misconception": "misc.high_res_oil"
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "График Пикетта связывает сопротивление с пористостью, а данные примера относятся к песчанику Morrow в округе Симаррон (стр. 142).",
+   "step_id": "test.morrow_example_data",
+   "id": "t55"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.pickett_example_water#c3"
+   ],
+   "prompt": "В формуле расчёта сопротивление воды определяется как произведение Ra на {{1}} в степени m, делённое на {{2}}.",
+   "options": [],
+   "answer": [
+    "пористость",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Формула использует пористость в степени m и деление на a (стр. 142).",
+   "step_id": "test.pickett_example_water",
+   "id": "t56"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.pickett_example_water#c6",
+    "test.pickett_example_water#c9",
+    "test.pickett_example_water#c11"
+   ],
+   "prompt": "Расположите шаги расчёта Rw в порядке выполнения.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Подставить значения в уравнение для расчёта сопротивления воды.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Считать Ra с водоносной линии при выбранной пористости; в примере Ra = 4,6 Ом·м.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Получить результат Rw = 0,046 Ом·м при пластовой температуре.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "b",
+    "a",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала считывают Ra, затем подставляют значения в уравнение и получают Rw (стр. 142).",
+   "step_id": "test.pickett_example_water",
+   "id": "t57"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.pickett_example_saturation#c2"
+   ],
+   "prompt": "Каково пересечение с осью y для линии водонасыщенности 50% в примере при Ra = 4,6 и множителе 4?",
+   "options": [
+    {
+     "id": "a",
+     "text": "18,4",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "8,6",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "4,6",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "50",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Пересечение получают умножением Ra на табличный множитель: 4,6 × 4 = 18,4 (стр. 142).",
+   "step_id": "test.pickett_example_saturation",
+   "id": "t58"
+  },
+  {
+   "type": "calc",
+   "kind": "transfer",
+   "claim_ids": [
+    "test.pickett_example_saturation#c4",
+    "test.pickett_example_saturation#c6",
+    "test.pickett_example_saturation#c7"
+   ],
+   "prompt": "Вычислите водонасыщенность точки с сопротивлением 40 Ом·м, используя Ra = 0,8 Ом·м и n = 2,0. Формула: Sw = (Ra/Rr)^(1/n).",
+   "options": [],
+   "answer": 0.14,
+   "tolerance": 0.01,
+   "unit": "доля",
+   "explanation": "По формуле Sw = (0,8/40)^(1/2) ≈ 0,14 (стр. 142).",
+   "step_id": "test.pickett_example_saturation",
+   "id": "t59"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "test.hingle_example_water#c4",
+    "test.hingle_example_water#c5",
+    "test.hingle_example_water#c9"
+   ],
+   "prompt": "Какие утверждения соответствуют примеру графика Хингла?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Для песчаников выбрана сетка Хингла с a = 1,0 и m = 2,0.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Водоносная линия пересекает ось y при 2,65 г/см³ — плотности матрицы пласта.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При пористости 10% значение Ra, считанное с водоносной линии, равно 4,1 Ом·м.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Водоносная линия пересекает ось y при 2,485 г/см³ — плотности матрицы пласта.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В примере указаны сетка a = 1,0 и m = 2,0, пересечение при 2,65 г/см³ и Ra = 4,1 Ом·м при пористости 10% (стр. 145).",
+   "step_id": "test.hingle_example_water",
+   "id": "t60"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.hingle_example_water#c8"
+   ],
+   "prompt": "В формуле Rw равен {{1}}, умноженному на {{2}} и делённому на a.",
+   "options": [],
+   "answer": [
+    "Rc",
+    "пористость в степени m"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В формуле Rw равен Rc, умноженному на пористость в степени m и делённому на a (стр. 145).",
+   "step_id": "test.hingle_example_water",
+   "id": "t61"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.hingle_example_saturation#c5",
+    "test.hingle_example_saturation#c6",
+    "test.hingle_example_saturation#c7"
+   ],
+   "prompt": "Расположите шаги расчёта водонасыщенности в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Взять R_a по водоносной линии при той же пористости, что и у рассматриваемой точки.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Разделить R_a на R_s.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Извлечь из отношения корень степени n.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала выбирают R_a при той же пористости, затем находят отношение R_a к R_s и извлекают корень степени n (стр. 145).",
+   "step_id": "test.hingle_example_saturation",
+   "id": "t62"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.hingle_example_saturation#c7",
+    "test.hingle_example_saturation#c8"
+   ],
+   "prompt": "Какова расчётная водонасыщенность точки с сопротивлением 40 Ом·м при R_a = 0,83 Ом·м и n = 2,0?",
+   "options": [
+    {
+     "id": "a",
+     "text": "0,144",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "0,83",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "2,0",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "40",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "При указанных значениях расчётная водонасыщенность равна 0,144 (стр. 145).",
+   "step_id": "test.hingle_example_saturation",
+   "id": "t63"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.permeability_applicability#c2",
+    "test.permeability_applicability#c3",
+    "test.permeability_applicability#c4"
+   ],
+   "prompt": "Какие утверждения верны при сравнении проницаемости, полученной по каротажу?",
+   "options": [
+    {
+     "id": "a",
+     "text": "По возможности её сравнивают со значениями из соседних скважин, добывающих из того же пласта.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Продуктивность можно оценивать, сопоставляя пласт с соседними скважинами как с хорошей, так и с плохой историей добычи.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "При сравнении нескольких скважин абсолютное значение проницаемости по каротажу не используют.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Для сравнения подходят только соседние скважины с хорошей историей добычи.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Верны первые три утверждения: при сравнении используют соседние скважины и относительные значения, а не абсолютную проницаемость (стр. 134).",
+   "step_id": "test.permeability_applicability",
+   "id": "t64"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.permeability_applicability#c6",
+    "test.permeability_applicability#c7"
+   ],
+   "prompt": "Определение неснижаемой водонасыщенности основано на значениях объемного содержания воды BVW = Sw × φ; {{1}} значения объемного содержания воды указывают, что зона находится при неснижаемой водонасыщенности.",
+   "options": [],
+   "answer": [
+    "Постоянные"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Постоянные значения BVW указывают на неснижаемую водонасыщенность (стр. 134).",
+   "step_id": "test.permeability_applicability",
+   "id": "t65"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.simple_permeability_formulas#c3"
+   ],
+   "prompt": "Как рассчитывается проницаемость для сухого газа?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Как квадрат выражения 79φ³/Swirr",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Как квадрат выражения 250φ³/Swirr",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Как квадрат отношения 93φ²·² к Swirr",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Как квадрат выражения 79φ²/Swirr",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Для сухого газа используется квадрат выражения 79φ³/Swirr (стр. 135).",
+   "step_id": "test.simple_permeability_formulas",
+   "id": "t66"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.simple_permeability_formulas#c6"
+   ],
+   "prompt": "Что обозначает Swirr?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Водонасыщенность Sw зоны при неснижаемой водонасыщенности",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Пористость зоны",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Проницаемость в миллидарси",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Водонасыщенность при максимальном насыщении водой",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Swirr — это водонасыщенность Sw зоны при неснижаемой водонасыщенности (стр. 135).",
+   "step_id": "test.simple_permeability_formulas",
+   "id": "t67"
+  },
+  {
+   "type": "multiple",
+   "kind": "recall",
+   "claim_ids": [
+    "test.coates_inputs_constant#c3",
+    "test.coates_inputs_constant#c4",
+    "test.coates_inputs_constant#c5"
+   ],
+   "prompt": "Выберите верные утверждения о величинах, используемых при расчёте по формуле Коутса и Дюмануара.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Rw — удельное сопротивление пластовой воды при пластовой температуре.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Rt irr — истинное удельное сопротивление пласта при неснижаемой водонасыщенности.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "ρh — плотность углеводородов в г/см³.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Rw — плотность углеводородов в г/см³.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Rt irr — удельное сопротивление пластовой воды при пластовой температуре.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Rw, Rt irr и ρh имеют указанные значения (стр. 135–136).",
+   "step_id": "test.coates_inputs_constant",
+   "id": "t68"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.coates_inputs_constant#c7",
+    "test.coates_inputs_constant#c8"
+   ],
+   "prompt": "Что делают первым этапом применения формулы Коутса и Дюмануара?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Вычисляют две константы C и W.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Сразу рассчитывают проницаемость, не вычисляя констант.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Вычисляют только пористость φ.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Подставляют плотность углеводородов вместо обеих констант.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Первый этап — вычисление констант C и W, причём C рассчитывают по заданной формуле (стр. 136).",
+   "step_id": "test.coates_inputs_constant",
+   "id": "t69"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.coates_permeability_calculation#c3",
+    "test.coates_permeability_calculation#c4"
+   ],
+   "prompt": "φ обозначает {{1}}, а Rw — {{2}}.",
+   "options": [],
+   "answer": [
+    "пористость",
+    "удельное сопротивление пластовой воды при пластовой температуре"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "φ — пористость, а Rw — удельное сопротивление пластовой воды при пластовой температуре (стр. 136).",
+   "step_id": "test.coates_permeability_calculation",
+   "id": "t70"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.coates_permeability_calculation#c1",
+    "test.coates_permeability_calculation#c6",
+    "test.coates_permeability_calculation#c7"
+   ],
+   "prompt": "Расположите шаги расчёта проницаемости в правильном порядке.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Рассчитать W по выражению с φ и отношением Rw/Rt irr."
+    },
+    {
+     "id": "b",
+     "text": "Определить константы C и W."
+    },
+    {
+     "id": "c",
+     "text": "Использовать формулу Коутса и Дюмануара для расчёта K."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала рассчитывают W, затем определяют константы C и W, после чего используют их для расчёта K (стр. 136).",
+   "step_id": "test.coates_permeability_calculation",
+   "id": "t71"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.permeability_chart_example#c4",
+    "test.permeability_chart_example#c5",
+    "test.permeability_chart_example#c6"
+   ],
+   "prompt": "Как на диаграмме находят точку, соответствующую значениям пористости и неснижаемой водонасыщенности?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пористость находят на нижней горизонтальной шкале, а S_wi — на левой вертикальной; значения проводят внутрь до пересечения.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Пористость находят на левой вертикальной шкале, а S_wi — на нижней горизонтальной; значения проводят до пересечения.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Оба значения находят на нижней горизонтальной шкале и складывают.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Находят только S_wi на левой шкале, поскольку пористость для диаграммы не нужна.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Пористость считывают по нижней шкале, S_wi — по левой, а их линии проводят до пересечения (стр. 146).",
+   "step_id": "test.permeability_chart_example",
+   "id": "t72"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.permeability_chart_example#c9",
+    "test.permeability_chart_example#c10",
+    "test.permeability_chart_example#c11",
+    "test.permeability_chart_example#c12"
+   ],
+   "prompt": "Какие утверждения верны об использовании диаграммы в зонах с неснижаемой водонасыщенностью?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Диаграмма пригодна для оценки проницаемости только в таких зонах.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В таких зонах значения объемного содержания воды довольно постоянны.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Данные разных интервалов образуют согласованный рисунок на одной гиперболической кривой или параллельно ей.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Данные из зон, не находящихся при неснижаемой водонасыщенности, образуют тот же согласованный рисунок.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Диаграмма применяется в зонах неснижаемой водонасыщенности, где объемное содержание воды довольно постоянно, а данные согласуются с гиперболической кривой или параллельны ей (стр. 146).",
+   "step_id": "test.permeability_chart_example",
+   "id": "t73"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.shaly_sand_models#c3"
+   ],
+   "prompt": "Сланец и глина — разные материалы; глинистые пески обычно представляют собой {{1}}, а не просто {{2}}.",
+   "options": [],
+   "answer": [
+    "пески с глинами",
+    "пески со сланцем"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении сказано, что глинистые пески — это пески с глинами, а не просто пески со сланцем (стр. 136).",
+   "step_id": "test.shaly_sand_models",
+   "id": "t74"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.shaly_sand_models#c7",
+    "test.shaly_sand_models#c8",
+    "test.shaly_sand_models#c9"
+   ],
+   "prompt": "Расположите события в хронологическом порядке:",
+   "options": [
+    {
+     "id": "a",
+     "text": "Двухводная модель становится популярнее благодаря более точному соответствию откликам глинистых песков."
+    },
+    {
+     "id": "b",
+     "text": "Работы Waxman и Smits, а также Waxman и Thomas помогают понять физические причины отклика и разработать модели."
+    },
+    {
+     "id": "c",
+     "text": "Clavier и соавторы предлагают двухводную модель для определения водонасыщенности."
+    }
+   ],
+   "answer": [
+    "b",
+    "c",
+    "a"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала были работы Waxman и Smits и Waxman и Thomas, затем Clavier и соавторы предложили двухводную модель, которая позднее стала популярнее (стр. 136).",
+   "step_id": "test.shaly_sand_models",
+   "id": "t75"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.clay_interpretation_errors#c4"
+   ],
+   "prompt": "Какое наиболее значимое влияние сланца на интерпретацию, согласно Hilchie (1978)?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Увеличение контраста сопротивления между нефтью или газом и водой",
+     "misconception": "misc.high_res_oil"
+    },
+    {
+     "id": "b",
+     "text": "Уменьшение контраста сопротивления между нефтью или газом и водой",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Полное устранение сопротивления воды",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Изменение пористости без влияния на сопротивление",
+     "misconception": null
+    }
+   ],
+   "answer": "b",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сланец наиболее значительно уменьшает контраст сопротивления между углеводородами и водой (стр. 136).",
+   "step_id": "test.clay_interpretation_errors",
+   "id": "t76"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.clay_interpretation_errors#c6"
+   ],
+   "prompt": "Какое содержание сланца, по Hilchie (1978), должно быть превышено для значимого влияния на рассчитанную по каротажу водонасыщенность?",
+   "options": [
+    {
+     "id": "a",
+     "text": "1–5%",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "10–15%",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "25–30%",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Более 50%",
+     "misconception": null
+    }
+   ],
+   "answer": "b",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Значимое влияние сланца на полученную по каротажу водонасыщенность возможно при содержании выше 10–15% (стр. 136).",
+   "step_id": "test.clay_interpretation_errors",
+   "id": "t77"
+  }
+ ]
+}

@@ -1,0 +1,782 @@
+{
+ "chapter": "test_slatt",
+ "tasks": [
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.time_and_rock_correlation#c7"
+   ],
+   "prompt": "Как различается изображение песков при литостратиграфической и хроностратиграфической корреляции?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В обеих схемах пески выглядят непрерывными.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "На литостратиграфической корреляции пески выглядят непрерывными, а на хроностратиграфической их разделяют гетеролиты и сланцы.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "На литостратиграфической корреляции пески разделены, а на хроностратиграфической выглядят непрерывными.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "На обеих схемах пески разделены только глинистыми интервалами.",
+     "misconception": null
+    }
+   ],
+   "answer": "b",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Литостратиграфическая корреляция показывает пески непрерывными, тогда как хроностратиграфическая выявляет разделяющие их гетеролиты и сланцы (стр. 410).",
+   "step_id": "test.time_and_rock_correlation",
+   "id": "t01"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.time_and_rock_correlation#c1",
+    "test.time_and_rock_correlation#c5",
+    "test.time_and_rock_correlation#c6",
+    "test.time_and_rock_correlation#c9"
+   ],
+   "prompt": "Какие утверждения о временных линиях и хроностратиграфических корреляциях верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Временные линии могут пересекать литостратиграфические границы и границы литофаций.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Хроностратиграфические корреляции показывают возможность латеральных разрывов внутри литостратиграфических интервалов.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Пронумерованные временные линии на схеме дельты Меконга обозначают геологический возраст в тысячах лет и показывают проградацию дельты.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Временные линии всегда совпадают с границами литофаций.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Хроностратиграфические корреляции доказывают непрерывность всех песков между скважинами.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Временные линии пересекают литостратиграфические границы и границы литофаций, а хроностратиграфия выявляет латеральные разрывы и показывает проградацию дельты (стр. 410, 412).",
+   "step_id": "test.time_and_rock_correlation",
+   "id": "t02"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.delta_controls#c1"
+   ],
+   "prompt": "На развитие дельт, помимо колебаний уровня моря, влияет {{1}} {{2}}.",
+   "options": [],
+   "answer": [
+    "переключение",
+    "дельтовых рукавов"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Переключение дельтовых рукавов также влияет на развитие дельт (стр. 410).",
+   "step_id": "test.delta_controls",
+   "id": "t03"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.delta_controls#c4"
+   ],
+   "prompt": "Расположите события в порядке, указанном в утверждении о раннем падении уровня моря.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Раннее падение уровня моря"
+    },
+    {
+     "id": "b",
+     "text": "Врезание долин"
+    },
+    {
+     "id": "c",
+     "text": "Отступание береговой линии в сторону моря"
+    },
+    {
+     "id": "d",
+     "text": "Понижение береговой линии"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Раннее падение уровня моря вызывает врезание долин, отступание береговой линии в сторону моря и ее понижение (стр. 410).",
+   "step_id": "test.delta_controls",
+   "id": "t04"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.river_dominated_delta#c1"
+   ],
+   "prompt": "Какой тип переноса доминирует в типичной дельте Миссисипи?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Речной перенос",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Волновой перенос",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Приливной перенос",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Дельта Миссисипи считается типичной дельтой с доминированием речного переноса (стр. 411).",
+   "step_id": "test.river_dominated_delta",
+   "id": "t05"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.river_dominated_delta#c7",
+    "test.river_dominated_delta#c8"
+   ],
+   "prompt": "Что разделяет песчаные коллекторские фации дельты и может образовывать глинистые барьеры в подземных коллекторах?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Межрукавные заливы, болота и лагуны",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Дельтовые каналы и устьевые бары",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Зоны переключения русел и лопастей",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Поверхности, пересекающие границы осадочных фаций",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Межрукавные заливы, болота и лагуны разделяют песчаные фации и образуют глинистые барьеры (стр. 411).",
+   "step_id": "test.river_dominated_delta",
+   "id": "t06"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.recognizing_delta_facies#c1",
+    "test.recognizing_delta_facies#c2"
+   ],
+   "prompt": "Какие признаки помогают распознать дельтовые фации?",
+   "options": [
+    {
+     "id": "a",
+     "text": "В обнажениях — взаиморасположение фаций, укрупнение зерен вверх по разрезу и сочетание осадочных структур.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В скважинах — признаки в керне и каротажных диаграммах; вдали от оси канала видны латеральное утонение и уменьшение зернистости.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "В скважинах каротажный отклик вдали от оси канала показывает латеральное утолщение и увеличение зернистости.",
+     "misconception": "misc.log_is_rock"
+    },
+    {
+     "id": "d",
+     "text": "В обнажениях фации определяют только по цвету породы, а не по ее взаиморасположению или структурам.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Оба набора признаков прямо описаны для обнажений и скважин (стр. 413).",
+   "step_id": "test.recognizing_delta_facies",
+   "id": "t07"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.recognizing_delta_facies#c5"
+   ],
+   "prompt": "В керне выделили семь песчаных литофаций; все они умеренно или хорошо отсортированы и состоят из {{1}} или {{2}} песка.",
+   "options": [],
+   "answer": [
+    "мелкого",
+    "очень мелкого"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "В утверждении указано, что литофации состоят из мелкого или очень мелкого песка (стр. 415).",
+   "step_id": "test.recognizing_delta_facies",
+   "id": "t08"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.mouth_bar_variability#c1",
+    "test.mouth_bar_variability#c2",
+    "test.mouth_bar_variability#c6"
+   ],
+   "prompt": "Где накапливались более крупные, лучше отсортированные и более проницаемые пески устьевых баров?",
+   "options": [
+    {
+     "id": "a",
+     "text": "У апексов и вдоль краев проксимальных частей баров",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Только в наиболее дистальных частях баров",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Равномерно по всему бару",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Дальше от источника, где режим потока был ниже",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Крупный, хорошо отсортированный материал концентрировался у апексов и вдоль краев проксимальных частей баров (стр. 415, 417).",
+   "step_id": "test.mouth_bar_variability",
+   "id": "t09"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.mouth_bar_variability#c4",
+    "test.mouth_bar_variability#c5"
+   ],
+   "prompt": "Какое утверждение верно о строении залежи, сформированной устьевыми барами?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Повторное ветвление каналов при проградации сформировало широкую залежь, но внутри одного бара возможны разрывы фаций и проницаемости",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Повторное ветвление создало однородный пласт без разрывов фаций и проницаемости",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Каждый бар образовался без ветвления каналов и полностью изолирован от остальных",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Широкая залежь сформировалась только за счёт отложения тонких песков вдали от источника",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Повторное ветвление сформировало широкую залежь из многочисленных баров, хотя внутри отдельного бара возможны разрывы фаций и проницаемости (стр. 416).",
+   "step_id": "test.mouth_bar_variability",
+   "id": "t10"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.romeo_delta_history#c2",
+    "test.romeo_delta_history#c3",
+    "test.romeo_delta_history#c5",
+    "test.romeo_delta_history#c6",
+    "test.romeo_delta_history#c7"
+   ],
+   "prompt": "Выберите верные утверждения о строении и осадконакоплении толщи Romeo.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Нижняя толща Romeo Zone состоит преимущественно из дельтовых фронтальных и продельтовых отложений.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Продуктивные дельтовые фации представлены песчаниками дельтовых каналов и устьевых баров.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Флювиальные каналы были разделены латерально илистыми поймами.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Флювиальные каналы вниз по течению сливались в один канал, не формируя дельтовую равнину.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Речной перенос обеспечил однородность коллектора по вертикали и латерали.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Это соответствует описанию дельтовых отложений, продуктивных фаций и разделения каналов поймами (стр. 416–417).",
+   "step_id": "test.romeo_delta_history",
+   "id": "t11"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.romeo_delta_history#c5",
+    "test.romeo_delta_history#c6"
+   ],
+   "prompt": "Флювиальные каналы были разделены латерально {{1}}; вниз по течению они ветвились, формируя {{2}}.",
+   "options": [],
+   "answer": [
+    "илистыми поймами",
+    "дельтовую равнину"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Илистые поймы разделяли каналы, а их ветвление вниз по течению формировало дельтовую равнину (стр. 417).",
+   "step_id": "test.romeo_delta_history",
+   "id": "t12"
+  },
+  {
+   "type": "order",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.romeo_correlation_models#c1",
+    "test.romeo_correlation_models#c3",
+    "test.romeo_correlation_models#c2"
+   ],
+   "prompt": "Расположите этапы изменения корреляции Romeo в порядке, описанном в утверждениях.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пласты коррелировали по литостратиграфическим признакам."
+    },
+    {
+     "id": "b",
+     "text": "В последовательностно-стратиграфической схеме распознали пологое падение песчаников-коллекторов."
+    },
+    {
+     "id": "c",
+     "text": "Корреляция по последовательностям или геологическому времени лучше согласовала скважины с историей добычи."
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сначала использовали литостратиграфическую корреляцию, затем распознали пологое падение, что помогло улучшить согласование с историей добычи (стр. 417).",
+   "step_id": "test.romeo_correlation_models",
+   "id": "t13"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.romeo_correlation_models#c3"
+   ],
+   "prompt": "Почему прежняя корреляция скважин Romeo могла быть неправильной?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Пологое падение песчаников-коллекторов не распознавали до интерпретации в последовательностно-стратиграфической схеме."
+    },
+    {
+     "id": "b",
+     "text": "Считали, что пласт — это пустота, а не порода с порами.",
+     "misconception": "misc.reservoir_void"
+    },
+    {
+     "id": "c",
+     "text": "Предполагали, что нефть лежит в подземном озере или пещерах.",
+     "misconception": "misc.oil_lake"
+    },
+    {
+     "id": "d",
+     "text": "Считали, что высокая амплитуда на сейсмике всегда означает углеводороды.",
+     "misconception": "misc.amplitude_hc"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "До последовательностно-стратиграфической интерпретации пологое падение песчаников-коллекторов не распознавали, что вело к неправильным корреляциям (стр. 417).",
+   "step_id": "test.romeo_correlation_models",
+   "id": "t14"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.shale_flow_barriers#c4"
+   ],
+   "prompt": "Непрерывные сланцы создают {{1}} барьеры потоку и помогают направлять {{2}}.",
+   "options": [],
+   "answer": [
+    "вертикальные",
+    "заводнение"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Непрерывные сланцы создают вертикальные барьеры и помогают направлять заводнение (стр. 418).",
+   "step_id": "test.shale_flow_barriers",
+   "id": "t15"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.shale_flow_barriers#c3",
+    "test.shale_flow_barriers#c5",
+    "test.shale_flow_barriers#c7"
+   ],
+   "prompt": "Какие утверждения о сланцах в Прудо-Бей верны?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Одни сланцы распространены дальше расстояния между скважинами, а другие менее непрерывны из-за размыва или выклинивания.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "В восточной части месторождения все три стратиграфически раздельных сланца повсеместно непрерывны.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "В восточной части месторождения сланцы местами отсутствуют из-за ненакопления или размыва, а местами разделяют соседние резервуарные пласты.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "В горизонтальной скважине сланцы в фациях дистрибутивного русла и устьевого бара разделяют песчаники на блоки и защищают от проникновения газовой шапки.",
+     "misconception": null
+    },
+    {
+     "id": "e",
+     "text": "Сланцы повсюду образуют сплошной барьер, который не допускает движения флюидов между пластами.",
+     "misconception": null
+    }
+   ],
+   "answer": [
+    "a",
+    "c",
+    "d"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сланцы различаются по непрерывности, могут местами отсутствовать или разделять пласты, а в горизонтальной скважине защищают блоки песчаника от газовой шапки (стр. 418, 420–421).",
+   "step_id": "test.shale_flow_barriers",
+   "id": "t16"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.sidetrack_oil_target#c3"
+   ],
+   "prompt": "Сланец на глубине 8950 футов был картирован как {{1}}; это указывало на возможную ловушку нефти в подстилающем {{2}}.",
+   "options": [],
+   "answer": [
+    "непроницаемый",
+    "дельтовом песчанике"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сланец был картирован как непроницаемый, указывая на возможную ловушку в дельтовом песчанике (стр. 418).",
+   "step_id": "test.sidetrack_oil_target",
+   "id": "t17"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.sidetrack_oil_target#c5"
+   ],
+   "prompt": "Горизонтальный боковой ствол, пробуренный в песчаник, обеспечил новую добычу около {{1}} баррелей нефти в сутки.",
+   "options": [],
+   "answer": [
+    "400"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Боковой ствол обеспечил новую добычу около 400 баррелей нефти в сутки (стр. 419).",
+   "step_id": "test.sidetrack_oil_target",
+   "id": "t18"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.horizontal_well_placement#c3"
+   ],
+   "prompt": "Зачем скважину 11-30 пробурили под глинистой породой залива?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Чтобы глинистая порода служила экраном от вышележащей газовой шапки",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Чтобы напрямую измерить проницаемость глинистой породы",
+     "misconception": "misc.porosity_eq_perm"
+    },
+    {
+     "id": "c",
+     "text": "Чтобы ствол проходил через подземную пустоту под нефтяным озером",
+     "misconception": "misc.oil_lake"
+    },
+    {
+     "id": "d",
+     "text": "Чтобы буровая вышка оставалась над добывающей скважиной",
+     "misconception": "misc.rig_stays"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Глинистая порода залива служила экраном от вышележащей газовой шапки (стр. 419).",
+   "step_id": "test.horizontal_well_placement",
+   "id": "t19"
+  },
+  {
+   "type": "multiple",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.horizontal_well_placement#c3",
+    "test.horizontal_well_placement#c4",
+    "test.horizontal_well_placement#c7",
+    "test.horizontal_well_placement#c2"
+   ],
+   "prompt": "Выберите верные утверждения о скважине 11-30 и горизонтальных траекториях.",
+   "options": [
+    {
+     "id": "a",
+     "text": "Скважину 11-30 пробурили под глинистой породой залива, служившей экраном от газовой шапки.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Из 894-футового горизонтального участка 475 футов признали эффективной нефтенасыщенной толщей.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Добыча скважины стабилизировалась на уровне 1600 баррелей нефти в сутки при низком газовом факторе.",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Обычная скважина контактирует с большим числом высокопроницаемых литофаций, чем синусоидальная горизонтальная траектория.",
+     "misconception": "misc.porosity_eq_perm"
+    }
+   ],
+   "answer": [
+    "a",
+    "b",
+    "c"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Утверждения о размещении, эффективной нефтенасыщенной толще и добыче приведены на стр. 419 и 422; сравнение траекторий дано на стр. 417.",
+   "step_id": "test.horizontal_well_placement",
+   "id": "t20"
+  },
+  {
+   "type": "gap",
+   "kind": "recall",
+   "claim_ids": [
+    "test.water_control_design#c3"
+   ],
+   "prompt": "Сланец на глубине 8936 футов (2725 м) должен был служить {{1}} от поступления воды сверху.",
+   "options": [],
+   "answer": [
+    "барьером"
+   ],
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Сланцу отводилась роль барьера от поступления воды сверху (стр. 421).",
+   "step_id": "test.water_control_design",
+   "id": "t21"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.water_control_design#c4"
+   ],
+   "prompt": "Что произошло с добычей в скважине 09-35A согласно графику?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Дебит нефти немного увеличился, а добыча воды резко снизилась.",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Добыча нефти резко снизилась, а добыча воды немного увеличилась.",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Дебиты нефти и воды резко увеличились.",
+     "misconception": null
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "У 09-35A дебит нефти немного увеличился, тогда как добыча воды резко снизилась (стр. 421).",
+   "step_id": "test.water_control_design",
+   "id": "t22"
+  },
+  {
+   "type": "single",
+   "kind": "recall",
+   "claim_ids": [
+    "test.kuparuk_sand_bodies#c2"
+   ],
+   "prompt": "Из каких интервалов ведётся добыча на месторождении Kuparuk River?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Из блоков A и C",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Из шести отдельных песчаных тел A1–A6",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Только из блока A",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Из подземного озера",
+     "misconception": "misc.oil_lake"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Добыча ведётся из двух интервалов, названных блоками A и C (стр. 422).",
+   "step_id": "test.kuparuk_sand_bodies",
+   "id": "t23"
+  },
+  {
+   "type": "single",
+   "kind": "understanding",
+   "claim_ids": [
+    "test.kuparuk_sand_bodies#c4",
+    "test.kuparuk_sand_bodies#c5"
+   ],
+   "prompt": "Какой вывод о блоке A согласуется с корреляцией по последовательностной стратиграфии и схемой его строения?",
+   "options": [
+    {
+     "id": "a",
+     "text": "Блок A состоит из шести отдельных песчаных тел, которые проградировали; на схеме показана последовательность A1–A6",
+     "misconception": null
+    },
+    {
+     "id": "b",
+     "text": "Блок A представляет собой одно латерально непрерывное песчаное тело",
+     "misconception": null
+    },
+    {
+     "id": "c",
+     "text": "Блок A состоит из песчаных тел, разделённых высокочастотными трансгрессивными морскими сланцами",
+     "misconception": null
+    },
+    {
+     "id": "d",
+     "text": "Гамма-каротаж напрямую измеряет глинистость и тем самым показывает нефть",
+     "misconception": "misc.gr_measures_clay"
+    }
+   ],
+   "answer": "a",
+   "tolerance": null,
+   "unit": null,
+   "explanation": "Корреляция выявила шесть отдельных проградировавших песчаных тел, а схема показывает последовательность A1–A6 (стр. 422–423).",
+   "step_id": "test.kuparuk_sand_bodies",
+   "id": "t24"
+  }
+ ]
+}

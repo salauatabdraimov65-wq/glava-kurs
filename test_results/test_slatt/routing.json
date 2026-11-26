@@ -1,0 +1,199 @@
+{
+ "chapter": "test_slatt",
+ "routes": [
+  {
+   "node_id": "test.time_and_rock_correlation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип В/П; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.delta_controls",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип В/М; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "test.river_dominated_delta",
+   "format": "длинное видео",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип В/М; видеоёмкость 7/10",
+   "video_path": "video/test_long_river_dominated_delta/video.mp4"
+  },
+  {
+   "node_id": "test.recognizing_delta_facies",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип Р/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.mouth_bar_variability",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/П; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.romeo_delta_history",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип В/П; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.romeo_correlation_models",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/Н; текст шага и схема"
+  },
+  {
+   "node_id": "test.shale_flow_barriers",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип П/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.sidetrack_oil_target",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип П/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.horizontal_well_placement",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/М; текст шага и схема"
+  },
+  {
+   "node_id": "test.water_control_design",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/П; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.kuparuk_sand_bodies",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип П/В; текст шага и схема"
+  }
+ ]
+}

@@ -1,0 +1,630 @@
+{
+ "chapter": "test_asquith",
+ "routes": [
+  {
+   "node_id": "test.interpretation_and_decisions",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; текст шага и схема"
+  },
+  {
+   "node_id": "test.reservoir_scanning_paths",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.archie_water_saturation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.flushed_zone_saturation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.resistivity_ratio_method",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.mobile_hydrocarbon_index",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.ratio_water_saturation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.compare_saturation_estimates",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Н/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.quick_ratio_scan",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.ratio_sp_response",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.apparent_water_resistivity",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.rwa_physical_basis",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.rwa_saturation_estimates",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.conductivity_porosity_scan",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.conductivity_porosity_model",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.wet_resistivity_curve",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.bulk_volume_water",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.buckles_plot_examples",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.bvw_rock_types",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.saturation_crossplots_intro",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Ф; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "test.pickett_log_model",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.pickett_water_line",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.pickett_matrix_parameters",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.pickett_saturation_lines",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.hingle_plot_geometry",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.hingle_plot_calculations",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/Ф; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.crossplot_method_comparison",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.morrow_example_data",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; текст шага и схема"
+  },
+  {
+   "node_id": "test.pickett_example_water",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.pickett_example_saturation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.hingle_example_water",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.hingle_example_saturation",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.permeability_applicability",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Н/Пр; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.simple_permeability_formulas",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.coates_inputs_constant",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.coates_permeability_calculation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 1
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.permeability_chart_example",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.shaly_sand_models",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/И; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.clay_interpretation_errors",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
+  }
+ ]
+}

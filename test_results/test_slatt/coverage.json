@@ -1,0 +1,626 @@
+{
+ "chapter": "test_slatt",
+ "rows": [
+  {
+   "unit_id": "p410.01",
+   "kind": "heading",
+   "page_pdf": 410,
+   "excerpt": "Chapter 9 Deltaic Deposits and Reservoirs",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p410.02",
+   "kind": "heading",
+   "page_pdf": 410,
+   "excerpt": "409",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p410.03",
+   "kind": "paragraph",
+   "page_pdf": 410,
+   "excerpt": "It is important for proper subsurface correlations to understand that clinoforms, which",
+   "node_ids": [
+    "test.time_and_rock_correlation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p410.04",
+   "kind": "paragraph",
+   "page_pdf": 410,
+   "excerpt": "A similar example is presented for the modern Mekong River Delta in",
+   "node_ids": [
+    "test.time_and_rock_correlation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p410.05",
+   "kind": "paragraph",
+   "page_pdf": 410,
+   "excerpt": "In addition to sea-level fluctuations, deltas are subject to “delta distributary switching",
+   "node_ids": [
+    "test.delta_controls"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p410.06",
+   "kind": "paragraph",
+   "page_pdf": 410,
+   "excerpt": "Deltas can also form during a relative fall in sea level; these",
+   "node_ids": [
+    "test.delta_controls"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p410.07",
+   "kind": "figure",
+   "page_pdf": 410,
+   "excerpt": "FIGURE 9.10 Lithostratigraphic (upper) and chronostratigraphic (lower) correlation across two wells in",
+   "node_ids": [
+    "test.time_and_rock_correlation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p411.01",
+   "kind": "heading",
+   "page_pdf": 411,
+   "excerpt": "410",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p411.02",
+   "kind": "heading",
+   "page_pdf": 411,
+   "excerpt": "Stratigraphic Reservoir Characterization for Petroleum Geologists",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p411.03",
+   "kind": "heading",
+   "page_pdf": 411,
+   "excerpt": "9.4 RIVER-DOMINATED DELTA DEPOSITS AND RESERVOIRS",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p411.04",
+   "kind": "heading",
+   "page_pdf": 411,
+   "excerpt": "9.4.1 Processes and Deposits",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p411.05",
+   "kind": "paragraph",
+   "page_pdf": 411,
+   "excerpt": "The Mississippi River Delta (Fig. 9.13) has long been considered the “type”",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p411.06",
+   "kind": "paragraph",
+   "page_pdf": 411,
+   "excerpt": "The main facies of a river-dominated delta, and their distribution in space,",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p411.07",
+   "kind": "figure",
+   "page_pdf": 411,
+   "excerpt": "FIGURE 9.11 (a) Map view of Mekong River Delta. Upper delta plain",
+   "node_ids": [
+    "test.time_and_rock_correlation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p412.01",
+   "kind": "heading",
+   "page_pdf": 412,
+   "excerpt": "Chapter 9 Deltaic Deposits and Reservoirs",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p412.02",
+   "kind": "heading",
+   "page_pdf": 412,
+   "excerpt": "411",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p412.03",
+   "kind": "figure",
+   "page_pdf": 412,
+   "excerpt": "FIGURE 9.11—cont'd (b) Lithostratigraphic correlation of wells based upon paleoenvironmental interpretation. Numbered",
+   "node_ids": [
+    "test.time_and_rock_correlation"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p413.01",
+   "kind": "heading",
+   "page_pdf": 413,
+   "excerpt": "412",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p413.02",
+   "kind": "heading",
+   "page_pdf": 413,
+   "excerpt": "Stratigraphic Reservoir Characterization for Petroleum Geologists",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p413.03",
+   "kind": "figure",
+   "page_pdf": 413,
+   "excerpt": "FIGURE 9.12 Model of delta distributary channel switching from a common apex",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p413.04",
+   "kind": "figure",
+   "page_pdf": 413,
+   "excerpt": "FIGURE 9.13 Growth patterns of the Mississippi River Delta's lobes during the",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p413.05",
+   "kind": "paragraph",
+   "page_pdf": 413,
+   "excerpt": "facies can be recognized in outcrop by facies relationships and by a",
+   "node_ids": [
+    "test.recognizing_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p414.01",
+   "kind": "figure",
+   "page_pdf": 414,
+   "excerpt": "FIGURE 9.14 Schematic illustration of the distribution of facies and environments in",
+   "node_ids": [
+    "test.river_dominated_delta"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p415.01",
+   "kind": "heading",
+   "page_pdf": 415,
+   "excerpt": "414",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p415.02",
+   "kind": "heading",
+   "page_pdf": 415,
+   "excerpt": "Stratigraphic Reservoir Characterization for Petroleum Geologists",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p415.03",
+   "kind": "figure",
+   "page_pdf": 415,
+   "excerpt": "FIGURE 9.15 (a) Pennsylvanian-age distributary-channel sandstone. (b) Schematic facies cross-sections of a",
+   "node_ids": [
+    "test.recognizing_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p415.04",
+   "kind": "paragraph",
+   "page_pdf": 415,
+   "excerpt": "In Prudhoe Bay field, formative processes of distributary mouth bars were evaluated",
+   "node_ids": [
+    "test.mouth_bar_variability",
+    "test.recognizing_delta_facies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p416.01",
+   "kind": "heading",
+   "page_pdf": 416,
+   "excerpt": "Chapter 9 Deltaic Deposits and Reservoirs",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p416.02",
+   "kind": "heading",
+   "page_pdf": 416,
+   "excerpt": "415",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p416.03",
+   "kind": "figure",
+   "page_pdf": 416,
+   "excerpt": "FIGURE 9.16 Schematic paleogeographic reconstruction of Romeo facies associations, as they existed",
+   "node_ids": [
+    "test.mouth_bar_variability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p416.04",
+   "kind": "paragraph",
+   "page_pdf": 416,
+   "excerpt": "Over a long period of time, repeated bifurcation of distributary mouth channels",
+   "node_ids": [
+    "test.mouth_bar_variability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p416.05",
+   "kind": "heading",
+   "page_pdf": 416,
+   "excerpt": "9.4.2 Reservoir Example: Prudhoe Bay Field",
+   "node_ids": [
+    "test.romeo_delta_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p416.06",
+   "kind": "paragraph",
+   "page_pdf": 416,
+   "excerpt": "General geology of Prudhoe Bay field, Alaska, in the river-dominated deltaic deposits",
+   "node_ids": [
+    "test.romeo_delta_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p417.01",
+   "kind": "heading",
+   "page_pdf": 417,
+   "excerpt": "416",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p417.02",
+   "kind": "heading",
+   "page_pdf": 417,
+   "excerpt": "Stratigraphic Reservoir Characterization for Petroleum Geologists",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p417.03",
+   "kind": "figure",
+   "page_pdf": 417,
+   "excerpt": "FIGURE 9.17 Typical sediment distribution pattern and distributary-mouth-bar cross-section. Distributary-mouth channels typically",
+   "node_ids": [
+    "test.mouth_bar_variability"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p417.04",
+   "kind": "paragraph",
+   "page_pdf": 417,
+   "excerpt": "fluvial channels were separated laterally by muddy floodplains. In the down-current direction,",
+   "node_ids": [
+    "test.romeo_delta_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p417.05",
+   "kind": "paragraph",
+   "page_pdf": 417,
+   "excerpt": "River-dominated deposition resulted in significant lateral and vertical facies changes, which caused",
+   "node_ids": [
+    "test.romeo_correlation_models",
+    "test.romeo_delta_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p417.06",
+   "kind": "paragraph",
+   "page_pdf": 417,
+   "excerpt": "Insights gained into the formation of distributary mouth bars have led to",
+   "node_ids": [
+    "test.horizontal_well_placement"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p417.07",
+   "kind": "paragraph",
+   "page_pdf": 417,
+   "excerpt": "Shales also were found to be particularly important to production and fluid",
+   "node_ids": [
+    "test.shale_flow_barriers"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p418.01",
+   "kind": "heading",
+   "page_pdf": 418,
+   "excerpt": "Chapter 9 Deltaic Deposits and Reservoirs",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p418.02",
+   "kind": "heading",
+   "page_pdf": 418,
+   "excerpt": "417",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p418.03",
+   "kind": "figure",
+   "page_pdf": 418,
+   "excerpt": "FIGURE 9.18 Comparison of prestudy lithostratigraphic correlations (upper cross-section) and poststudy sequence",
+   "node_ids": [
+    "test.romeo_correlation_models"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p418.04",
+   "kind": "paragraph",
+   "page_pdf": 418,
+   "excerpt": "areas larger than that of the well spacing, but other shales are",
+   "node_ids": [
+    "test.shale_flow_barriers",
+    "test.sidetrack_oil_target",
+    "test.water_control_design"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p419.01",
+   "kind": "heading",
+   "page_pdf": 419,
+   "excerpt": "418",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p419.02",
+   "kind": "heading",
+   "page_pdf": 419,
+   "excerpt": "Stratigraphic Reservoir Characterization for Petroleum Geologists",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p419.03",
+   "kind": "figure",
+   "page_pdf": 419,
+   "excerpt": "FIGURE 9.19 Typical stacking pattern and gamma-ray response of Romeo lithofacies and",
+   "node_ids": [
+    "test.sidetrack_oil_target"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p419.04",
+   "kind": "paragraph",
+   "page_pdf": 419,
+   "excerpt": "well was drilled as an unconventional completion into the sandstone, and it",
+   "node_ids": [
+    "test.sidetrack_oil_target"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p419.05",
+   "kind": "paragraph",
+   "page_pdf": 419,
+   "excerpt": "A second example of the value of understanding shale continuity is presented",
+   "node_ids": [
+    "test.horizontal_well_placement"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p420.01",
+   "kind": "figure",
+   "page_pdf": 420,
+   "excerpt": "FIGURE 9.20 Part of a north–south wire line log correlation across the",
+   "node_ids": [
+    "test.romeo_delta_history"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p420.02",
+   "kind": "figure",
+   "page_pdf": 420,
+   "excerpt": "FIGURE 9.21 Generalized distribution of three stratigraphically distinct shales in the eastern",
+   "node_ids": [
+    "test.shale_flow_barriers"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p421.01",
+   "kind": "figure",
+   "page_pdf": 421,
+   "excerpt": "FIGURE 9.22 Horizontal well drilled within distributary-channel and mouth-bar facies separated by",
+   "node_ids": [
+    "test.shale_flow_barriers"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p421.02",
+   "kind": "figure",
+   "page_pdf": 421,
+   "excerpt": "FIGURE 9.23 Wire line logs for the original well 09-35, and a",
+   "node_ids": [
+    "test.water_control_design"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p422.01",
+   "kind": "heading",
+   "page_pdf": 422,
+   "excerpt": "Chapter 9 Deltaic Deposits and Reservoirs",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p422.02",
+   "kind": "heading",
+   "page_pdf": 422,
+   "excerpt": "421",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p422.03",
+   "kind": "figure",
+   "page_pdf": 422,
+   "excerpt": "FIGURE 9.24 Schematic cross-section illustrating facies association interpretations between wells 11-28 and",
+   "node_ids": [
+    "test.horizontal_well_placement"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p422.04",
+   "kind": "paragraph",
+   "page_pdf": 422,
+   "excerpt": "stabilized at 1600 BOPD, with a low gas/oil ratio (Tye et al.,",
+   "node_ids": [
+    "test.horizontal_well_placement",
+    "test.water_control_design"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p422.05",
+   "kind": "heading",
+   "page_pdf": 422,
+   "excerpt": "9.4.3 Kuparuk River Field, Alaska USA",
+   "node_ids": [
+    "test.kuparuk_sand_bodies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p422.06",
+   "kind": "paragraph",
+   "page_pdf": 422,
+   "excerpt": "A similar example is provided by the Cretaceous Kuparuk River field on",
+   "node_ids": [
+    "test.kuparuk_sand_bodies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p423.01",
+   "kind": "heading",
+   "page_pdf": 423,
+   "excerpt": "422",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p423.02",
+   "kind": "heading",
+   "page_pdf": 423,
+   "excerpt": "Stratigraphic Reservoir Characterization for Petroleum Geologists",
+   "node_ids": [],
+   "reason": "колонтитул, номер страницы или обрывок распознавания"
+  },
+  {
+   "unit_id": "p423.03",
+   "kind": "figure",
+   "page_pdf": 423,
+   "excerpt": "FIGURE 9.25 Kuparuk River unit A showing a typical gamma-ray log with",
+   "node_ids": [
+    "test.kuparuk_sand_bodies"
+   ],
+   "reason": null
+  },
+  {
+   "unit_id": "p423.04",
+   "kind": "heading",
+   "page_pdf": 423,
+   "excerpt": "9.5 WAVE-DOMINATED DELTAS",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p423.05",
+   "kind": "heading",
+   "page_pdf": 423,
+   "excerpt": "9.5.1 Processes and Deposits",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p423.06",
+   "kind": "paragraph",
+   "page_pdf": 423,
+   "excerpt": "Along a coast that is unprotected from waves and ocean currents, sediment",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p423.07",
+   "kind": "paragraph",
+   "page_pdf": 423,
+   "excerpt": "The end result is a fan-shaped or arcuate body of sand, such",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  },
+  {
+   "unit_id": "p423.08",
+   "kind": "paragraph",
+   "page_pdf": 423,
+   "excerpt": "In addition to becoming coarser-grained and sandier from base to top, the",
+   "node_ids": [],
+   "reason": "вне главы: соседний раздел на той же странице"
+  }
+ ]
+}

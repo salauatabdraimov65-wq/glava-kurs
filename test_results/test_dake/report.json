@@ -1,0 +1,23 @@
+{
+ "chapter": "test_dake",
+ "nodes": 20,
+ "claims": 180,
+ "tasks": 39,
+ "task_types": {
+  "single": 14,
+  "multiple": 9,
+  "gap": 9,
+  "order": 7
+ },
+ "units_in_scope": 179,
+ "uncovered": 0,
+ "coverage_pct": 100.0,
+ "formats": {
+  "интерактив": 13,
+  "текст": 2,
+  "шортс": 3,
+  "практикум на данных": 2
+ },
+ "usd": 0.314,
+ "minutes": 2.1
+}

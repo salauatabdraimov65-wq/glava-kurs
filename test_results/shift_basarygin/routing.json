@@ -1,0 +1,314 @@
+{
+ "chapter": "shift_basarygin",
+ "routes": [
+  {
+   "node_id": "shift.kick_warning_signs",
+   "format": "шортс",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; текст шага и схема",
+   "video_path": "video/shift_short_kick_warning_signs/video.mp4"
+  },
+  {
+   "node_id": "shift.drilling_rate_jump",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.pit_level_sensitivity",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "well_tool_curve",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/Н; видеоёмкость 8/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "shift.improve_level_monitoring",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/Пр; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "shift.flow_rate_monitoring",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/И; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.gas_entry_causes",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.gas_zone_drilling",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.gas_after_trips",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 1,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; видеоёмкость 7/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "shift.gas_content_calculation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "shift.pump_pressure_changes",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.trip_fill_monitoring",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип И/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.displacement_mud_properties",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 2,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "section_through_time",
+   "why": "тип М/Н; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.wellhead_control_equipment",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "section_through_time",
+   "why": "тип М/П; текст шага и схема"
+  },
+  {
+   "node_id": "shift.shut_in_and_kill",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/Пр; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "shift.shut_in_methods",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/М; текст шага и схема"
+  },
+  {
+   "node_id": "shift.trip_shut_in",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/М; текст шага и схема"
+  },
+  {
+   "node_id": "shift.drillers_kill_method",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/М; текст шага и схема"
+  },
+  {
+   "node_id": "shift.wait_and_weight",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "shift.other_kill_methods",
+   "format": "текст",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": null,
+   "scene_template": "well_tool_curve",
+   "why": "тип Пр/М; текст шага и схема"
+  }
+ ]
+}

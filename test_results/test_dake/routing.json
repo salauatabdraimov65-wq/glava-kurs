@@ -1,0 +1,326 @@
+{
+ "chapter": "test_dake",
+ "routes": [
+  {
+   "node_id": "test.radial_flow_overview",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.radial_mass_balance",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.darcy_and_compressibility",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.nonlinear_flow_equation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.flow_boundary_conditions",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.transient_flow_regime",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.pseudosteady_flow_regime",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.drainage_weighted_pressure",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; есть правило автора «признаки → вывод»"
+  },
+  {
+   "node_id": "test.steady_flow_regime",
+   "format": "текст",
+   "secondary_format": "текст",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "section_through_time",
+   "scene_template": "section_through_time",
+   "why": "тип М/Ф; видеоёмкость 6/10; кандидат в ролик (ролик не собран — шаг закрывают текст и схема)",
+   "video_candidate": true
+  },
+  {
+   "node_id": "test.liquid_equation_simplification",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.linearization_validity_limits",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 2,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Н; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.porosity_and_diffusion",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.line_source_overview",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 2,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/М; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.line_source_conditions",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.boltzmann_variable_solution",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.source_boundary_constant",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.pressure_integral_solution",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 0,
+    "counterintuitive": 0,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.exponential_integral_approximation",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 0,
+    "invisible": 1,
+    "scale": 0,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.wellbore_pressure_skin",
+   "format": "интерактив",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 0,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "pressure_explorer",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/None; формула/модель — понимание через параметры"
+  },
+  {
+   "node_id": "test.interwell_pressure_response",
+   "format": "практикум на данных",
+   "secondary_format": "карточки",
+   "video_scores": {
+    "time": 1,
+    "invisible": 1,
+    "scale": 1,
+    "counterintuitive": 1,
+    "cause_effect": 2
+   },
+   "hook_short": false,
+   "template": "decision_practicum",
+   "scene_template": "pressure_diffusion",
+   "why": "тип Ф/Пр; есть правило автора «признаки → вывод»"
+  }
+ ]
+}
