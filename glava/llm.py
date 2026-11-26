@@ -13,6 +13,7 @@ import base64
 import hashlib
 import json
 import os
+import sys
 import time
 from pathlib import Path
 
@@ -65,7 +66,10 @@ def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path
         raise BudgetExceeded(f"Потрачено {spent_usd():.2f} из {budget} USD — стоп")
 
     from openai import OpenAI
-    client = OpenAI()
+    # предел ожидания одного запроса: зависший запрос не должен держать конвейер (по умолчанию клиент ждёт до 10 мин
+    # и сам повторяет) — повторы делаем сами, с паузой и сообщением в консоль
+    timeout = float(os.environ.get(f"LLM_TIMEOUT_{tier.upper()}") or (150 if tier == "bulk" else 300))
+    client = OpenAI(timeout=timeout, max_retries=0)
     content = [{"type": "text", "text": user}]
     for b in img_bytes:
         content.append({"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(b).decode()}})
@@ -95,9 +99,11 @@ def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path
             return data
         except (json.JSONDecodeError, KeyError) as e:
             last_err = e
-        except Exception as e:  # сеть, лимиты
+        except Exception as e:  # сеть, лимиты, предел ожидания
             last_err = e
-            time.sleep(2 * (attempt + 1))
+            print(f"⚠ модель: {type(e).__name__} ({str(e)[:80]}) — повтор {attempt + 2}/{max_retries} [{tag}]",
+                  file=sys.stderr, flush=True)
+            time.sleep(3 * (attempt + 1))
     raise RuntimeError(f"LLM не ответил корректным JSON: {last_err}")
 
 
