@@ -630,7 +630,7 @@ def html_page(layer: dict[str, Any], tasks_data: dict[str, Any], routes: Any, il
 
     domain_data = load_domain(chapter_domain(str(layer.get("chapter", "")), domain))
     tokens = domain_tokens(domain_data)
-    art_style, art_names = art_css(domain_data["folder"], slots=("cover", "hills"))
+    art_style, art_names = art_css(domain_data["folder"], slots=("cover", "cover-mobile", "hills", "hills-mobile"))
     overview_art = ('<div class="hero-illustration" aria-hidden="true"></div>'
                     if "cover" in art_names else "")
     _SCANS.clear()

@@ -7,14 +7,53 @@
     1279,
     720
   ],
-  "bytes": 139350,
+  "bytes": 147370,
   "quality": 84,
   "prompt": "Create an atmospheric watercolor illustration for the OVERVIEW of an educational course about earth sciences and field exploration. Match a soft field-atlas style: delicate watercolor washes on warm ivory cream paper with very subtle grain, fine pencil/pen contours, muted ochre, sandy beige, soft amber, distant grey-blue mountains, pale drifting clouds. Wide landscape composition, 16:9. Show ONLY the Earth's visible surface: broad rolling steppe/meadow in the foreground, mountain silhouettes and open sky, and a very small distant drilling derrick and a small pumpjack as contextual silhouettes on the horizon, viewed from far away. Quiet spacious elegant illustration, equipment subordinate to the landscape. Everything underground is completely invisible. STRICTLY NO cross-section, cutaway, subsurface diagram, strata/layers shown in a slice, borehole, exposed underground, fossils, ammonites, core samples, thin sections, graphs, curves, labels, captions, text, letters, numbers, readable screens, logos or watermark. This is an ambient landscape, not a scientific diagram and not a claim about any chapter. Use the entire frame for the artwork with soft edges and airy paper-colored areas; no frame or inset.",
   "usage": "General atmospheric surface landscape for the course overview. Not chapter evidence.",
   "label": {
-    "embedded": false,
-    "removed_on_explicit_user_request": true,
-    "tz_deviation": true,
-    "note": "The hackathon specification requires the AI illustration label. The user explicitly requested its removal."
-  }
+    "text": "иллюстрация ИИ",
+    "embedded": true,
+    "tz_deviation": false,
+    "method": "Pillow ImageDraw: small sepia italic signature, no frame or solid badge",
+    "font": "Georgia Italic",
+    "color": "#57432F",
+    "corner": "bottom right",
+    "feathered_watercolor_wash": true
+  },
+  "variants": [
+    {
+      "file": "cover.webp",
+      "size": [
+        1279,
+        720
+      ],
+      "bytes": 147370,
+      "quality": 88,
+      "font_pixels": 34,
+      "text_box": [
+        961,
+        665,
+        1255,
+        696
+      ]
+    },
+    {
+      "file": "cover-mobile.webp",
+      "size": [
+        640,
+        360
+      ],
+      "bytes": 46966,
+      "quality": 88,
+      "font_pixels": 30,
+      "text_box": [
+        368,
+        318,
+        626,
+        346
+      ]
+    }
+  ],
+  "caption": "Степной пейзаж, горы, облака и оборудование вдали."
 }

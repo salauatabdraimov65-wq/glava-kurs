@@ -9,10 +9,14 @@
   ],
   "prompt": "Create a subtle watercolor banner illustration for an educational field atlas. Very wide landscape aspect ratio 4:1 (e.g. 1600 x 400). Pale distant mountains and soft clouds, delicate pen contour lines, warm cream paper grain. Muted ochre, burnt orange, grey-blue and sandy tones, tiny amber accents. Low contrast, lots of breathing room. Mountains and clouds only in the upper half, fading down into completely clean blank cream paper across the bottom half, suitable for overlaid lesson title text. No text, no letters, no labels, no border, no people.",
   "label": {
-    "embedded": false,
-    "removed_on_explicit_user_request": true,
-    "tz_deviation": true,
-    "note": "The hackathon specification requires the AI illustration label. The user explicitly requested its removal."
+    "text": "иллюстрация ИИ",
+    "embedded": true,
+    "tz_deviation": false,
+    "method": "Pillow ImageDraw: small sepia italic signature, no frame or solid badge",
+    "font": "Georgia Italic",
+    "color": "#57432F",
+    "corner": "bottom right",
+    "feathered_watercolor_wash": false
   },
   "variants": [
     {
@@ -21,8 +25,34 @@
         1600,
         400
       ],
-      "bytes": 42806
+      "bytes": 54592,
+      "quality": 88,
+      "font_pixels": 44,
+      "text_box": [
+        1193,
+        332,
+        1572,
+        372
+      ]
+    },
+    {
+      "file": "hills-mobile.webp",
+      "size": [
+        640,
+        160
+      ],
+      "bytes": 15844,
+      "quality": 88,
+      "font_pixels": 30,
+      "text_box": [
+        370,
+        120,
+        628,
+        148
+      ]
     }
   ],
-  "usage": "Decorative surface landscape only; no scientific claim, cutaway, data, or subsurface interpretation."
+  "usage": "Decorative surface landscape only; no scientific claim, cutaway, data, or subsurface interpretation.",
+  "bytes": 54592,
+  "caption": "Пейзаж гор и облаков на светлой бумаге."
 }
