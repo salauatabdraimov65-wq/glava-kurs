@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 43, "quote": "p(ρ, t) = -qμ (4πk)⁻¹ ln(γρ²/4πt) = Qμ (4πkh)⁻¹ ln(2,25πt/ρ²)", "confidence": 0.0}}

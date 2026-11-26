@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"tasks": [{"type": "gap", "kind": "recall", "claim_ids": ["c66"], "prompt": "Исправленную интенсивность вычисляют как {{1}} = (I − Inm)/v + {{2}}.", "options": [], "answer": ["I∞", "Inm"], "tolerance": null, "unit": null, "explanation": "При отсчёте от нулевой или условной нулевой линии используют эту формулу (стр. 64)."}]}}

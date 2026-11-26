@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Средний перепад давления равен Qμ/(4πkh).", "page_pdf": 498, "quote": "Δp = pκ − p̄ = (pκ − pc)/(2 ln(R(t)/rc)) = Qμ/(4πkh).", "confidence": 0.0}}

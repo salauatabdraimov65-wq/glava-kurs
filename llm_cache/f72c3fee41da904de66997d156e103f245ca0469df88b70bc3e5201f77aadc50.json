@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 45, "quote": "Давление в пласте $p(x, y, z, t)$ удовлетворяет уравнению (II.83), а его преобразование по Лапласу $\\bar{P}(x, y, z, \\sigma)$ — уравнению (II.110).", "confidence": 0.0}}

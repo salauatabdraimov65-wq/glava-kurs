@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 491, "quote": "При изменении аргумента $x$ от 0 до $\\infty$ функция $- \\text{Ei} (- x)$ быстро убывает от $\\infty$ до 0.", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 499, "quote": "Депрессия в момент времени $t$: $\\Delta p_c \\equiv p_\\kappa - p_c(t) = \\frac{Q\\mu}{2\\pi kh} \\ln \\frac{\\sqrt{r_c^2 + 4\\kappa t}}{r_c}$.", "confidence": 0.0}}

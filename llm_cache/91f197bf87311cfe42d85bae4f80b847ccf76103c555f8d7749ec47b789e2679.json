@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "При подсчете запасов чаще используют критерии Pₙ,кр и kₙ,кр.", "page_pdf": 99, "quote": "При подсчете запасов чаще используют критерии P_{n,кр} и k_{n,кр}.", "confidence": 0.0}}

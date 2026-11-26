@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 45, "quote": "Пусть в результате измерений известны зависимости $p(\\rho, t)$ и $\\frac{2\\pi kh}{\\mu} \\rho \\left. \\frac{\\partial p}{\\partial r} \\right|_{r=\\rho} = q(t)$.", "confidence": 0.0}}

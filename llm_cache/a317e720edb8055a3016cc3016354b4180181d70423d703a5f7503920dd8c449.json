@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Давление: p(r) = pₖ − [(pₖ − p꜀)/ln(Rₖ/r꜀)] ln(Rₖ/r).", "page_pdf": 453, "quote": "p(r) = p_k - \\frac{p_k - p_c}{\\ln R_k / r_c} \\ln \\frac{R_k}{r}", "confidence": 0.0}}

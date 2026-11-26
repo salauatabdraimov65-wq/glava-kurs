@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 40, "quote": "считая $2L \\sqrt{\\frac{\\sigma}{\\varkappa}} \\gg 1$, разложим это выражение в ряд по степеням $\\exp(-2L \\sqrt{\\sigma/\\varkappa})$", "confidence": 0.0}}

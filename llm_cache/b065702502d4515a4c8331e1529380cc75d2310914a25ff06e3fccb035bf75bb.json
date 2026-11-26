@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "Ошибки нет.", "fix": "Исправление не требуется.", "page_pdf": 485, "quote": "Накопленная к моменту t добыча (объем добытой нефти) Vдоб определяется по формуле Vдоб = ∫₀ᵗ Q(t)dt", "confidence": 0.0}}

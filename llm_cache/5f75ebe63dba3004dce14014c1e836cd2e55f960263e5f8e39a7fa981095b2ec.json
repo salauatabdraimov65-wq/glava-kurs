@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 489, "quote": "\\frac{dv}{d\\xi} + \\left( \\frac{1}{\\xi} + 2\\xi \\right) v = 0", "confidence": 0.0}}

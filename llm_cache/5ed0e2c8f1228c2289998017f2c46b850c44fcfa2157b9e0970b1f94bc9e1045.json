@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 446, "quote": "p(x) = \\sqrt{p_k^2 - \\frac{p_k^2 - p_r^2}{L} x}, \\quad (21.7)", "confidence": 0.0}}

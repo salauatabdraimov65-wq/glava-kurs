@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 498, "quote": "\\Delta p = p_\\kappa - \\bar{p} = \\frac{p_\\kappa - p_c}{2 \\ln(R(t)/r_c)} = \\frac{Q\\mu}{4\\pi kh}.", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"found": true, "text": "Интегральный поток равен вертикальному интегралу скорости: q = ∫ от z₀ до z₀ + h от u dz. Баланс m hₜ + div₂ q = 0 точен и не требует допущения о пологости движения.", "quote": "\\boldsymbol{q} = \\int_{z_0}^{z_0+h} \\boldsymbol{u} dz, \\quad (11.77)", "kind": "observation", "source_kind": "formula"}}

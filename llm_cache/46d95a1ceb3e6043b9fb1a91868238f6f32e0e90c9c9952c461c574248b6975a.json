@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 447, "quote": "t_i = \\frac{m_i \\mu}{k_i} \\frac{Lx}{p_k - p_r} \\quad \\text{и} \\quad T_i = \\frac{m_i \\mu}{k_i} \\frac{L^2}{p_k - p_r}.", "confidence": 0.0}}

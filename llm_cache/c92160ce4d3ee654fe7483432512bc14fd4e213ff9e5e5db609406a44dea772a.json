@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": true, "category": "frame_error", "severity": "critical", "problem": "Метка происхождения «реальные данные» не соответствует кадру: он явно обозначен как «СИМУЛЯЦИЯ» и содержит условные значения и преувеличения.", "fix": "Указать метку происхождения «симуляция».", "page_pdf": null, "quote": null, "confidence": 1}}

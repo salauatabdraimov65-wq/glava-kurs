@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 41, "quote": "P(x, t) = \\int_0^t (df(\\tau)/d\\tau) P_1(x, t - \\tau) d\\tau", "confidence": 0.0}}

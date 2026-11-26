@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 44, "quote": "Условие ее остановки с момента $t_0$ можно рассматривать как задание на скважине при $t > t_0$ постоянного дебита — $Q$.", "confidence": 0.0}}

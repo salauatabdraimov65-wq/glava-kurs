@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Далее вычисляется скорость фильтрации при x=0.", "page_pdf": 49, "quote": "Для скорости фильтрации при $x = 0$ получим", "confidence": 0.0}}

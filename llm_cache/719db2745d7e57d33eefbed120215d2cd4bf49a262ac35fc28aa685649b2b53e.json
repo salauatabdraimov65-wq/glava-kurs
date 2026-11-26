@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Потенцируя равенство \u001b[0mln ξ = −u² + ln C₁, находят ξ = C₁e⁻ᵘ².", "page_pdf": 483, "quote": "потенцируя которое, найдем\n\n$$\\xi = \\frac{dP}{du} = C_1 e^{-u^2}$$", "confidence": 0.0}}

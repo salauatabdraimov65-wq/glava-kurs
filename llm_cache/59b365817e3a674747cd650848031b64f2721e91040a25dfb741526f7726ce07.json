@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Точное значение скорости фильтрации при x = 0 задаётся формулой (II.126).", "page_pdf": 49, "quote": "Напомним, что при точном решении по формуле (II.93) получим", "confidence": 0.0}}

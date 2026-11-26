@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Перепад давления выражен через дебит, параметры зоны и отношение её граничных радиусов.", "page_pdf": 456, "quote": "p_1 - p_c = \\frac{Q\\mu}{2\\pi k_i h} \\ln \\frac{r_1}{r_c}", "confidence": 0.0}}

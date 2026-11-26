@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": null, "fix": null, "page_pdf": 40, "quote": "L \\{P(x, t)\\} = \\bar{P}(x, \\sigma) = \\int_0^\\infty e^{-t\\sigma} P(x, t) dt.", "confidence": 0.0}}

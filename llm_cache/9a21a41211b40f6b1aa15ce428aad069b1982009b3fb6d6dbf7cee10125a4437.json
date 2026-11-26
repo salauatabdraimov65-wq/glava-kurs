@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 40, "quote": "в сечении $x=0$ давление мгновенно принимает фиксированное значение $P=p^0 \\neq 0$. Тогда $F(\\sigma) = p^0/\\sigma$.", "confidence": 0.0}}

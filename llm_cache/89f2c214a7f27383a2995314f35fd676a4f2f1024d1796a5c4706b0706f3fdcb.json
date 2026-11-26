@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 48, "quote": "Возьмем простейшую систему функций — последовательные степени пространственной переменной\n\n$$1, x, x^2, \\dots, x^n, \\dots$$", "confidence": 0.0}}

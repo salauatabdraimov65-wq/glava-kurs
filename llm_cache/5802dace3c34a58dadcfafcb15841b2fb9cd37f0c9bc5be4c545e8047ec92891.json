@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 486, "quote": "В результате получим: «\\(\\frac{k}{\\mu} \\frac{\\partial^2 p}{\\partial x \\partial t} = \\frac{k}{\\mu} \\kappa \\frac{\\partial^3 p}{\\partial x^3}\\)»", "confidence": 0.0}}

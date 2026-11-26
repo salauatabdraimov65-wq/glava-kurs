@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Без изменений: в аппроксимации действительно n + 2 неизвестных — Pᵢ(t) и l(t).", "page_pdf": 48, "quote": "В таком виде задача имеет n + 2 неизвестных: P_i(t) и l(t).", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Изменение упругого запаса равно (mβж+βс)V₀Δp.", "page_pdf": 476, "quote": "ΔVз = (m βж + βс) V₀ Δp", "confidence": 0.0}}

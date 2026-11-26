@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 23, "quote": "a = k_xy / D_xx; ... D_x = [Σ(x_i − M_x)]² / n", "confidence": 0.0}}

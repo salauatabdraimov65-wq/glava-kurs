@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 48, "quote": "\\frac{d}{dt} \\int_0^l p dx = -\\varkappa \\left( \\frac{\\partial p}{\\partial x} \\right)_{x=0}", "confidence": 0.0}}

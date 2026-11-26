@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 487, "quote": "Чтобы найти распределение давления в потоке, необходимо проинтегрировать уравнение (23.35) по x при фиксированном времени t.", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 49, "quote": "p(x, t) = p_1 (1 - x/l)^2, \\quad l^2 = 12 \\varkappa t.", "confidence": 0.0}}

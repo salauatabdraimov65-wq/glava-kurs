@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 486, "quote": "начальное и граничное условия для w имеют вид: w(x, 0) = 0, w(0, t) = w₁.", "confidence": 0.0}}

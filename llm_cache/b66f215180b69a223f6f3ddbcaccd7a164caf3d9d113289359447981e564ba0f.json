@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Дебит галереи определяется соотношением (24.9).", "page_pdf": 497, "quote": "а дебит галереи – соотношением $Q(t) = \\frac{k(p_\\kappa - p_\\tau)}{\\mu 2\\sqrt{\\kappa t}} Bh$.", "confidence": 0.0}}

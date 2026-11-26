@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 488, "quote": "p_{\\mathrm{r}}(t) = p_{\\mathrm{k}} - \\frac{2\\mu w_1}{k\\sqrt{\\pi}} \\sqrt{kt}", "confidence": 0.0}}

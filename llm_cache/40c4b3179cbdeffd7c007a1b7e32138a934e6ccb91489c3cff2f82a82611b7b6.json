@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 446, "quote": "Q_m = \\frac{B(P_k - P_r)}{\\mu L} \\sum_{i=1}^n k_i h_i.", "confidence": 0.0}}

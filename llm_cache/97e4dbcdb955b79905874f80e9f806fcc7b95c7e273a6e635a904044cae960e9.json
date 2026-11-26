@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 445, "quote": "w_x = -\\frac{k}{\\mu} \\frac{dp}{dx} = -\\frac{k}{\\mu} C_1 = \\frac{k}{\\mu} \\frac{p_k - p_r}{L}", "confidence": 0.0}}

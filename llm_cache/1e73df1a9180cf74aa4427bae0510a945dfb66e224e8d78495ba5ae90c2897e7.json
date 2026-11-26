@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 491, "quote": "При малых значениях $x$ суммой ряда можно пренебречь, тогда $- \\text{Ei} (- x) = \\ln \\frac{1}{x} - 0,5772$.", "confidence": 0.0}}

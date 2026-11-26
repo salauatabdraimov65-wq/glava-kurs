@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 482, "quote": "сведем задачу к нахождению безразмерного давления P, зависящего только от u (автомодельной переменной), P = f(u).", "confidence": 0.0}}

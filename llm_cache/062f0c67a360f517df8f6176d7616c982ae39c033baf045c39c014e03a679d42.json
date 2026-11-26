@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "Ошибки нет; в тексте автора линейна функция Лейбензона.", "fix": "Для ясности: функция Лейбензона линейна внутри каждой зоны между её граничными значениями.", "page_pdf": 451, "quote": "P_i(x) = P_i - \\frac{P_i - P_{i+1}}{l_i} x", "confidence": 0.0}}

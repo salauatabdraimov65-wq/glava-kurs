@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 24, "quote": "на корреляционном графике проводят две прямые y = ax + b ± 2σ. После этого на график наносят точки (x_i, y_i) для остальных пластов разреза.", "confidence": 0.0}}

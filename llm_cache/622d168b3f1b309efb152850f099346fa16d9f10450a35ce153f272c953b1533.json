@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 492, "quote": "Строго говоря, основная формула теории упругого режима (23.52) справедлива лишь для случая точечного стока (при $r_c = 0$) в неограниченном пласте ($R_k = \\infty$).", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 449, "quote": "после сложения равенств (21.18), получим $$p_k - p_r = \\frac{Q\\mu}{Bh} \\sum_{i=1}^n l_i / k_i.$$", "confidence": 0.0}}

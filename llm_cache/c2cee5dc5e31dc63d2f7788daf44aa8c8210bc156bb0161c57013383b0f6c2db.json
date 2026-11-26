@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": null, "fix": null, "page_pdf": 44, "quote": "\\Delta p = p(r, t) - p(r, 0) = - Q\\mu (4\\pi kh)^{-1} \\text{Ei} (- r^2/4\\pi t)", "confidence": 0.0}}

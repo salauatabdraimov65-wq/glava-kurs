@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 482, "quote": "Приняв за новую переменную безразмерную величину $u = x/(2\\sqrt{\\kappa t})$, сведем задачу к нахождению безразмерного давления $P$, зависящего только от $u$.", "confidence": 0.0}}

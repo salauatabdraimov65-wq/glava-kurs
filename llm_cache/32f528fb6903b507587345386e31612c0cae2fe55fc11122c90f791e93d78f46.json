@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 447, "quote": "для газа $$Q_m = \\frac{B \\rho_{\\text{ат}} (p_k^2 - p_r^2)}{2 \\mu p_{\\text{ат}} L} \\sum_{i=1}^n k_i h_i. \\quad (21.14)$$", "confidence": 0.0}}

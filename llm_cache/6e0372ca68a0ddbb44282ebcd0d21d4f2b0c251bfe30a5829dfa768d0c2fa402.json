@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 486, "quote": "w(x, t) = w_1 \\left[ 1 - \\operatorname{erf} \\left( \\frac{x}{2\\sqrt{\\kappa t}} \\right) \\right]", "confidence": 0.0}}

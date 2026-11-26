@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 43, "quote": "I₀(z) ≈ eᶻ (2πz)⁻¹ᐟ², K₀(z) ≈ e⁻ᶻ (π/2z)¹ᐟ², z → ∞", "confidence": 0.0}}

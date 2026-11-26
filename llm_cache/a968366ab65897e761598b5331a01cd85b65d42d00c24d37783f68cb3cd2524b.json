@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 43, "quote": "K₀(z) ≈ −ln(γz/2) γ = eᶜ z → 0, где C = 0,7772 — постоянная Эйлера.", "confidence": 0.0}}

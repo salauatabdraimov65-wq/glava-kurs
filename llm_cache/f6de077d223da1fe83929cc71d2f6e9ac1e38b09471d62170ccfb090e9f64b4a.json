@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 490, "quote": "p(r, t) = p_\\kappa - \\frac{Q_0 \\mu}{2\\pi k h} \\int_{r^2/(4\\kappa t)}^{\\infty} \\frac{e^{-u}}{u} du.", "confidence": 0.0}}

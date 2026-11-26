@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 490, "quote": "P(ξ) = -C₁ ∫ξ∞ (e^(−ξ²)/ξ) dξ + 1.", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 42, "quote": "в силу линейности уравнения (II.98) можно подразумевать под p только отклонения от стационарного распределения давления p = C₁ ln r + C₂, т. е. считать начальное распределение f(r) ≡ 0.", "confidence": 0.0}}

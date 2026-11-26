@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 499, "quote": "относительная погрешность уменьшается с течением времени и составляет, по вычислениям, 10,6%, если $f_0 = \\kappa t / r_c^2 = 100$; 7,5%, если $f_0 = 10^3$; 5,7%, если $f_0 = 10^4$.", "confidence": 0.0}}

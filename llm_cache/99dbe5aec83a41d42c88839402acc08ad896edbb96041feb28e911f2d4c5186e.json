@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 483, "quote": "1 = C_1 \\int_0^\\infty e^{-u^2} du. Из интегрального исчисления известно, что \\int_0^\\infty e^{-u^2} du = \\sqrt{\\pi}/2, поэтому предыдущее соотношение дает C_1 = 2/\\sqrt{\\pi}", "confidence": 0.0}}

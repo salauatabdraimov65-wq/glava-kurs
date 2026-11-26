@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 487, "quote": "Выполнив интегрирование, получаем\n\n$$p(x, t) - p(0, t) = \\frac{\\mu}{k} w_1 x - \\frac{\\mu}{k} \\frac{2}{\\sqrt{\\pi}} w_1 \\int_0^x \\left( \\int_0^{x/2\\sqrt{\\kappa t}} e^{-u^2} du \\right) dx. \\quad (23.36)$$", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 451, "quote": "$$\\rho w = \\frac{k_i \\rho_{\\text{ат}}}{2 \\mu p_{\\text{ат}}} \\frac{p_i^2 - p_{i+1}^2}{l_i}, \\quad (21.26)$$", "confidence": 0.0}}

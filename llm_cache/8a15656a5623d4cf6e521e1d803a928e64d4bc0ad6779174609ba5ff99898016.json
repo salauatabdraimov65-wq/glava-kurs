@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 485, "quote": "дебит галереи убывает с течением времени, как $1/\\sqrt{t}$, и при $t \\to \\infty$ стремится к нулю. В момент времени $t = 0$ формула (23.30) дает бесконечное значение дебита", "confidence": 0.0}}

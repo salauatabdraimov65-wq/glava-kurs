@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 489, "quote": "Последнее условие запишем в виде \\(\\left(r\\frac{\\partial p}{\\partial r}\\right)_{r=0}=\\frac{Q_0\\mu}{2\\pi kh}\\).", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 456, "quote": "Сложив все равенства, получим уравнение \\(p_k - p_c = \\frac{Q\\mu}{2\\pi h} \\sum_{i=1}^n \\frac{\\ln r_{i+1}/r_i}{k_i}\\)", "confidence": 0.0}}

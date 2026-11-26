@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Функция ψ(σ) определяется как отношение преобразованного давления на скважине к преобразованному дебиту.", "page_pdf": 46, "quote": "отношение ψ (σ) = P̄₁ (σ) / Q̄ (σ)", "confidence": 0.0}}

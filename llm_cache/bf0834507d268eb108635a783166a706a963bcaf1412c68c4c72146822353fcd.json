@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 40, "quote": "Для $\\bar{P}$ получим задачу $d^2 \\bar{P} / dx^2 - \\nu^2 \\bar{P} = 0$; $\\nu^2 = \\sigma/\\varkappa$.", "confidence": 0.0}}

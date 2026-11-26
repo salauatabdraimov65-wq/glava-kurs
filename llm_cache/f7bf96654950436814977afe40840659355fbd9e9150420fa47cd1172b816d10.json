@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": true, "category": "frame_error", "severity": "critical", "problem": "Метка происхождения указана как «реальные данные», но на рисованном кадре стоит «СИМУЛЯЦИЯ»; глубины и значения сопротивления условные.", "fix": "Указать метку происхождения «симуляция».", "page_pdf": null, "quote": null, "confidence": 1.0}}

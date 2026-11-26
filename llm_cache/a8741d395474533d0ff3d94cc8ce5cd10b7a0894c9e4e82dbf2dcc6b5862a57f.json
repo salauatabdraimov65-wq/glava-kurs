@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 48, "quote": "Если p(x, t), представить в виде разложения в ряд по функциям f_i(x, t), то из (II.118) получим систему уравнений для коэффициентов этого ряда.", "confidence": 0.0}}

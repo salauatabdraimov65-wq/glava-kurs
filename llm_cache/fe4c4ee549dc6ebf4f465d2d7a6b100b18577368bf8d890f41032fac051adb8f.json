@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Формулировка соответствует тексту автора.", "page_pdf": 48, "quote": "\\frac{d}{dt} \\int_0^{l(t)} p x^k dx = \\varkappa k(k-1) \\int_0^{l(t)} p x^{k-2} dx, \\quad k \\geqslant 2.", "confidence": 0.0}}

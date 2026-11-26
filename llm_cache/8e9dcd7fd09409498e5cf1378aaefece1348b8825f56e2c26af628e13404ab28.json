@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"found": true, "text": "Зная η, рассчитывают критическую проницаемость по формуле k*пр = (μη/2π)ln(Rк/rс).", "quote": "Зная η, рассчитывают соответствующее значение $$k^*_{\\text{пр}} = (\\mu\\eta/2\\pi)\\ln(R_\\text{к}/r_\\text{с}),$$", "kind": "observation", "source_kind": "formula"}}

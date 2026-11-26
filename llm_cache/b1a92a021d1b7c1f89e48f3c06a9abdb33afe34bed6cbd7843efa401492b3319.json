@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 48, "quote": "При $x = l$ должны выполняться условия непрерывности давления $p(l, t) = P + Gl$ и некоторой степени гладкости функции $p(x, t)$", "confidence": 0.0}}

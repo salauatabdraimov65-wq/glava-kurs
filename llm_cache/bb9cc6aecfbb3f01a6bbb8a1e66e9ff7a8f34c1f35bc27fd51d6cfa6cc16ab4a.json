@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "При z → 0: K₀(z) ≈ −ln(γz/2), где γ = eᶜ, а C = 0,7772.", "page_pdf": 43, "quote": "K₀(z) ≈ −ln(γ z/2)  γ = e^C  z → 0, где C = 0,7772 — постоянная Эйлера.", "confidence": 0.0}}

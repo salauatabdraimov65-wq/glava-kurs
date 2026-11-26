@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 483, "quote": "P = \\frac{2}{\\sqrt{\\pi}} \\int_0^{\\frac{x}{2\\sqrt{\\pi}}} e^{-u^2} du. \\quad (23.26)", "confidence": 0.0}}

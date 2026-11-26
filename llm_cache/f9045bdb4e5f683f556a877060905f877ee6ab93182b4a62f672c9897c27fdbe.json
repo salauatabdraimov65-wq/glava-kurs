@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 497, "quote": "\\Delta p = p_\\kappa - \\bar{p} = p_\\kappa - \\frac{p_\\kappa + p_\\tau}{2} = \\frac{p_\\kappa - p_\\tau}{2}", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 479, "quote": "\\rho = \\rho_0[1 + \\beta_\\infty(p - p_0)], \\quad m = m_0 + \\beta_c(p - p_0)", "confidence": 0.0}}

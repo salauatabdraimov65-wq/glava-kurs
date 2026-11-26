@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 498, "quote": "Q = \\frac{2\\pi kh(p_\\kappa - p_c(t))}{\\mu \\ln(R(t)/r_c)}. (24.11)", "confidence": 0.0}}

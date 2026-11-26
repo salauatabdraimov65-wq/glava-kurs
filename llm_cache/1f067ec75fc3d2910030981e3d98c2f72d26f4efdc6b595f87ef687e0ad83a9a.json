@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Изменение упругого запаса равно произведению коэффициента упругоемкости пласта, объема пласта и изменения давления.", "page_pdf": 476, "quote": "ΔVз = β* V0 Δp, (23.4)", "confidence": 0.0}}

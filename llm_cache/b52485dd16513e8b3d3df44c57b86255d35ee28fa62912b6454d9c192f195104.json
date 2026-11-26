@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Однофазное течение воды соответствует \\(k_n^{**} < k_n \\leq 1\\).", "page_pdf": 99, "quote": "однофазного течения воды  \\( k_{n}^{**} < k_{n} \\leq 1 \\)", "confidence": 0.0}}

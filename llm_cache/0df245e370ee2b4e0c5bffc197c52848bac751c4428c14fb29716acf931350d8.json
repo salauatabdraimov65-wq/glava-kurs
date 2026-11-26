@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Давление во времени: p(r,t)=(p*/2)Ei(−r²/4πt).", "page_pdf": 43, "quote": "p(r, t) = 2^{-1} p^* E_i (-r^2/4\\pi t).", "confidence": 0.0}}

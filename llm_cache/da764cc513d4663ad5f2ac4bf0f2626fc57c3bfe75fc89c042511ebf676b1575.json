@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 51, "quote": "Решение имеет вид $P_0(t) = -q \\exp[-6\\varkappa(t-t_1)/R^2]$.", "confidence": 0.0}}

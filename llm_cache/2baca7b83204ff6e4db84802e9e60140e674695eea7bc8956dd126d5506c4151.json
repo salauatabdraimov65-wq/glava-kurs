@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"supported": false, "quote": null, "page_pdf": null, "same_conditions": false, "reason": "Автор оговаривает, что уравнение применимо только для слабосжимаемой упругой жидкости при β_*(p − p₀) ≪ 1; в элементе это условие отсутствует."}}

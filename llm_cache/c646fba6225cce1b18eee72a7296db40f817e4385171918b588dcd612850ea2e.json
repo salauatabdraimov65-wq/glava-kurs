@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"found": true, "text": "При постоянном дебите депрессия на скважине в момент времени t равна Δp_c = (Qμ/(2πkh))·ln(√(r_c² + 4κt)/r_c).", "quote": "\\Delta p_c \\equiv p_\\kappa - p_c(t) = \\frac{Q\\mu}{2\\pi kh} \\ln \\frac{\\sqrt{r_c^2 + 4\\kappa t}}{r_c}. \\quad (24.16)", "kind": "observation", "source_kind": "formula"}}

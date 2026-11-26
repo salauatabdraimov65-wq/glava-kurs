@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "Ошибки нет.", "fix": "Скорость фильтрации связана с градиентом давления законом движения, записанным в системе.", "page_pdf": 478, "quote": "\\bar{w} = -\\frac{k}{\\mu}(\\text{grad } p + \\rho\\bar{f})", "confidence": 0.0}}

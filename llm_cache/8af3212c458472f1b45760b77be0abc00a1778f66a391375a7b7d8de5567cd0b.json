@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Значения τ не следует брать меньше 1–2 мин.", "page_pdf": 46, "quote": "Значения τ не следует брать меньше 1—2 мин.", "confidence": 0.0}}

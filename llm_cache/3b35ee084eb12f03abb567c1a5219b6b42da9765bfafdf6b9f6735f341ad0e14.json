@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 498, "quote": "Средневзвешенное пластовое давление \\bar{p} ... определяется по формуле ... \\bar{p} = p_\\kappa - \\frac{p_\\kappa - p_c}{2 \\ln(R(t)/r_c)}", "confidence": 0.0}}

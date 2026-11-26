@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Дебит в зоне задаётся формулой через её проницаемость, толщину и перепад давления между границами зоны.", "page_pdf": 455, "quote": "w_r^i S = Q = \\frac{2\\pi k_i h(p_{i+1} - p_i)}{\\mu \\ln r_{i+1}/r_i}", "confidence": 0.0}}

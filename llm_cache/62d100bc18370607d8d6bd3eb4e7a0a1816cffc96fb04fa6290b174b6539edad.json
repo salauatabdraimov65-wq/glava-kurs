@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"supported": false, "quote": null, "page_pdf": null, "same_conditions": false, "reason": "Вывод автора учитывает предыдущее условие: значения τ не следует брать меньше 1–2 минут. В элементе это условие отсутствует."}}

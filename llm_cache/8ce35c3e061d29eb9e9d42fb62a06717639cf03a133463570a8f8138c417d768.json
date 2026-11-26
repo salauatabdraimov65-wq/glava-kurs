@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 43, "quote": "I₀(z) ≈ eᶻ(2πz)⁻¹ᐟ², K₀(z) ≈ e⁻ᶻ(π/2z)¹ᐟ² при z → ∞; K₀(z) ≈ −ln(γz/2) при z → 0", "confidence": 0.0}}

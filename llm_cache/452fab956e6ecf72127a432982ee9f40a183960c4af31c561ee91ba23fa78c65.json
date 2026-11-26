@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 455, "quote": "w_r^i = \\frac{k_i(p_{i+1} - p_i)}{\\mu \\ln r_{i+1}/r_i} \\frac{1}{r}", "confidence": 0.0}}

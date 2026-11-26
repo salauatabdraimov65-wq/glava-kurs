@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"found": true, "text": "При точном решении скорость притока убывает как t⁻¹ᐟ²: u₀(0,t) = k(p₁−p₀)/(μ√(πκt)).", "quote": "u_0(0, t) = k (p_1 - p_0) / \\mu \\sqrt{\\pi \\varkappa t}. \\tag{II.126}", "kind": "observation", "source_kind": "formula"}}

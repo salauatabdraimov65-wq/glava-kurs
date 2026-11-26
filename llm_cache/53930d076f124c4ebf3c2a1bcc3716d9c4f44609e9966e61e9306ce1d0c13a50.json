@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 492, "quote": "w = \\frac{Q_0}{2\\pi rh} e^{-r^2/4\\kappa t}. Из последней формулы следует, что стационарная скорость $w_{\\text{стац}} = Q_0/(2\\pi rh)$", "confidence": 0.0}}

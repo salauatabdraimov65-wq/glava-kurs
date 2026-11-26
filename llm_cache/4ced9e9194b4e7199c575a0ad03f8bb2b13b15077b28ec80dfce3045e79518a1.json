@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 46, "quote": "Когда функции $p_1(t)$ и $q(t)$ известны, нетрудно численно получить зависимости $\\bar{P}_1(\\sigma)$ и $\\bar{Q}(\\sigma)$, а отсюда — $\\psi(\\sigma)$.", "confidence": 0.0}}

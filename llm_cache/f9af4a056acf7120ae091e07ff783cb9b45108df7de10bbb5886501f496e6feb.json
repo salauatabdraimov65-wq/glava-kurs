@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 40, "quote": "P(x, t) = P^0 \\sum_{n=0}^\\infty \\{\\operatorname{erfc}[(2Ln+x)/2\\sqrt{\\varkappa t}] - \\operatorname{erfc}[(2L(n+1)-x)/2\\sqrt{\\varkappa t}]\\}.", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 482, "quote": "∂P/∂x = (dP/du)·1/(2√(κt)); ∂P/∂t = (dP/du)(−u/(2t)).", "confidence": 0.0}}

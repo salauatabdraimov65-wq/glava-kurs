@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 50, "quote": "получим первое приближение в виде $l = \\sqrt{12\\varkappa t}, \\quad p = q \\ln (r/\\sqrt{12\\varkappa t}) - q + qr/\\sqrt{12\\varkappa t}$.", "confidence": 0.0}}

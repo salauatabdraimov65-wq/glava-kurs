@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 50, "quote": "Система интегральных соотношений имеет вид: «\\frac{d}{dt} \\int_0^{l(t)} r p (r, t) dr = -\\varkappa q» (II.132).", "confidence": 0.0}}

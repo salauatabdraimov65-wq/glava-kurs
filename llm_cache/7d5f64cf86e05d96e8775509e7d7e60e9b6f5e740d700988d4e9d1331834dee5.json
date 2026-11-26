@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 39, "quote": "$(ap + b\\partial p/\\partial n) = f(x, y, z, t), a^2 + b^2 \\neq 0; b/a \\geqslant 0.$", "confidence": 0.0}}

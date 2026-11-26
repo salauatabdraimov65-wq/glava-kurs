@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "В радиальной зоне давление логарифмически зависит от отношения радиуса границы возмущённой области к расстоянию до скважины.", "page_pdf": 498, "quote": "p(r, t) = p_κ - \\frac{Q\\mu}{2\\pi kh} \\ln \\frac{R(t)}{r}.", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Преобразование задаёт условия: при ξ → ∞, P(ξ) = 1; при ξ = 0, (ξ dP/dξ) = Q₀μ/(2πkhpκ).", "page_pdf": 489, "quote": "P(ξ) = 1 \\quad \\text{при } \\xi \\to \\infty", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 48, "quote": "p(x, t) = p(x, 0) \\quad (x \\geqslant l). При $x = l$ должны выполняться условия непрерывности давления", "confidence": 0.0}}

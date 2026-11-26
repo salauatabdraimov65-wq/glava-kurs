@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 447, "quote": "откуда\n\n$$k_{\\text{ср}} = \\sum_{i=1}^n k_i h_i / h, \\quad h = \\sum_{i=1}^n h_i. \\quad (21.12)$$", "confidence": 0.0}}

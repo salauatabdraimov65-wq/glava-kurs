@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"supported": false, "quote": null, "page_pdf": null, "same_conditions": false, "reason": "Автор ограничивает применимость уравнения слабосжимаемой упругой жидкостью при β_*(p − p₀) << 1; в элементе это условие отсутствует."}}

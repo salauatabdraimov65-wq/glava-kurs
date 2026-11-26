@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 51, "quote": "Таким образом, будем иметь приближенное выражение для распределения давления\n\n$$p(r, t) = q \\ln(r/R) - q(1-r/R) \\exp[-6\\varkappa(t-t_1)/R^2]. \\quad \\text{(II.140)}$$", "confidence": 0.0}}

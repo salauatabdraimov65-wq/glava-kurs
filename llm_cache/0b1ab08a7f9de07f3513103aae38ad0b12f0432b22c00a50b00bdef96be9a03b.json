@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Граница применимости проверяется отдельно для каждого расстояния и момента времени.", "page_pdf": 493, "quote": "для значений r, удовлетворяющих неравенству r² ≤ 0,03 · 4κt", "confidence": 0.0}}

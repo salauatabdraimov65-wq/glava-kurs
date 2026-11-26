@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"supported": false, "quote": null, "page_pdf": null, "same_conditions": false, "reason": "Формула приведена для скважины в однородном бесконечном пласте. Кроме того, наклон содержит k, h и μ, но не κ и ρ."}}

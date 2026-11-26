@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Внутри зоны 0 ≤ x ≤ l: p(x, t) = P₀(t) + P₁(t)x/l + … + Pₙ(t)xⁿ/lⁿ.", "page_pdf": 48, "quote": "p(x, t) = P_0(t) + P_1(t) x/l + \\dots + P_n(t) x^n/l^n \\quad (0 \\leqslant x \\leqslant l)", "confidence": 0.0}}

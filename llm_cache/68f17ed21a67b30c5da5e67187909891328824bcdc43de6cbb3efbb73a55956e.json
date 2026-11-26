@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 486, "quote": "то уравнение (23.32) можно переписать в виде $$\\frac{\\partial w(x, t)}{\\partial t} = \\kappa \\frac{\\partial^2 w(x, t)}{\\partial x^2}. \\quad (23.33)$$", "confidence": 0.0}}

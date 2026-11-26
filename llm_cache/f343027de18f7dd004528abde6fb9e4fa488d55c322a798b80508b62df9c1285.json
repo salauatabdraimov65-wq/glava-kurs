@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 49, "quote": "Если же использовать первые три интегральных соотношения без условия (II.127), то получим … p(x, t) = p_1 (1 - 0,583ζ + 0,107ζ^2 + 0,0061ζ^3), ζ = x / √(κt).", "confidence": 0.0}}

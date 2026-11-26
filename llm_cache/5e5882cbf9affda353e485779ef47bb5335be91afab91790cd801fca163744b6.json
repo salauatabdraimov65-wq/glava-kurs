@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 48, "quote": "∫_{L₁(t)}^{L₂(t)} ∂p / ∂t fᵢ(x, t) dx = κ ∫_{L₁(t)}^{L₂(t)} ∂²p / ∂x² fᵢ(x, t) dx", "confidence": 0.0}}

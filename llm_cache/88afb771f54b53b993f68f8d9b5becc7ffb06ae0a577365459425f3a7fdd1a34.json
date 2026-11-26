@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Характерное время выхода на стационарный режим имеет порядок L²/(κπ²).", "page_pdf": 41, "quote": "характерное время выхода на стационарный режим имеет порядок $$\\tau \\approx L^2 \\varkappa^{-1} \\pi^{-2}.$$", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 450, "quote": "Используя равенство (21.19), определим теперь среднюю проницаемость неоднородного пласта\n\n$$Q = \\frac{Bh}{\\mu} \\frac{p_k - p_r}{\\sum_{i=1}^n l_i / k_i} = \\frac{k_{\\text{ср}}}{\\mu} \\frac{p_k - p_r}{L} Bh.$$", "confidence": 0.0}}

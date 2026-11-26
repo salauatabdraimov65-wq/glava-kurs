@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Скорость фильтрации: wᵢ = (kᵢ/μ) · (pк − pр)/L.", "page_pdf": 445, "quote": "w^i = \\frac{k_i}{\\mu} \\frac{p_k - p_r}{L}, \\quad (21.2)", "confidence": 0.0}}

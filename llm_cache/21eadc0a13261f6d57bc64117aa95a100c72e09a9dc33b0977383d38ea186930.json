@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Условие на бесконечности даёт $1=C_1\\int_0^\\infty e^{-u^2}du$.", "page_pdf": 483, "quote": "$1 = C_1 \\int_0^\\infty e^{-u^2} du.$", "confidence": 0.0}}

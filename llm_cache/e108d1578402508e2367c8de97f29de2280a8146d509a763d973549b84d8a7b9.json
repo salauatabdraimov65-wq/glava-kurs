@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 49, "quote": "Для скорости фильтрации при $x = 0$ получим: $u(0, t) = k (p_1 - p_0) / \\sqrt{3 \\varkappa t}$ (II.129).", "confidence": 0.0}}

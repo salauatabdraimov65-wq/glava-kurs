@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 485, "quote": "\\int_0^t \\frac{dt}{\\sqrt{t}}", "confidence": 0.0}}

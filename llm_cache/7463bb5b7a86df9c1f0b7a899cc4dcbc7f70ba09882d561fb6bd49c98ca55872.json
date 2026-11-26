@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 50, "quote": "\\frac{d}{dt} \\int_0^{l(t)} r^{k+1} p (r, t) dr = \\varkappa k^2 \\int_0^{l(t)} p (r, t) r^{k-2} dr \\quad (k \\geqslant 1)", "confidence": 0.0}}

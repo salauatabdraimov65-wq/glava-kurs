@@ -1,0 +1,1 @@
+{"model": "gpt-6.1-terra", "data": {"has_error": true, "category": "wrong_scaling", "severity": "critical", "problem": "В множителе пропущено преобразованное давление на стенке скважины P̄₁(σ).", "fix": "Преобразованный дебит равен Q̄(σ) = 2π(kh/μ)ρP̄₁(σ)(∂U/∂r)|r=ρ.", "page_pdf": 46, "quote": "= 2 π (k h / μ) ρ P̄₁(σ) (∂U / ∂r)_{r = ρ}.", "confidence": 0.98}}

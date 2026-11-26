@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 454, "quote": "Q_m^i = \\frac{\\pi k_i h_i \\rho_{\\text{ат}} (p_k^2 - p_c^2)}{\\mu p_{\\text{ат}} \\ln R_k / r_c}", "confidence": 0.0}}

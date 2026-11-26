@@ -21,6 +21,9 @@ from glava.chapter import ROOT, materials_dir
 
 materials_dir()  # подгружает .env
 CACHE = ROOT / "cache" / "llm"
+# ответы модели, сохранённые в репозитории (только чтение): пересборка обучающих и контрольных глав
+# после правки факта идёт без ключа OpenAI — конвейер берёт уже полученные ответы
+REPLAY = ROOT / "llm_cache"
 LEDGER = ROOT / "cache" / "spend.jsonl"
 
 # Цена за 1 млн токенов (вход, выход), USD. Переопределяется в .env: LLM_PRICE_BULK=0.25,2.0
@@ -58,8 +61,13 @@ def ask_json(system: str, user: str, tier: str = "bulk", images: list[str | Path
     key = hashlib.sha256(json.dumps([model, effort, system, user, [hashlib.sha256(b).hexdigest() for b in img_bytes]],
                                     ensure_ascii=False).encode()).hexdigest()
     cpath = CACHE / f"{key}.json"
-    if cpath.exists():
-        return json.loads(cpath.read_text(encoding="utf-8"))["data"]
+    for p in (cpath, REPLAY / f"{key}.json"):
+        if p.exists():
+            return json.loads(p.read_text(encoding="utf-8"))["data"]
+    if not os.environ.get("OPENAI_API_KEY"):
+        raise RuntimeError(f"Нужен новый ответ модели ({tag or tier}), а в .env нет OPENAI_API_KEY. "
+                           "Готовые ответы для глав из репозитория лежат в llm_cache/; для новой главы или правки, "
+                           "меняющей запрос к модели, впишите ключ в .env.")
 
     budget = float(os.environ.get("LLM_BUDGET_USD", "25"))
     if spent_usd() >= budget:

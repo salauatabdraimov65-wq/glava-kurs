@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 451, "quote": "$$p_i(x) = \\sqrt{p_i^2 - \\frac{p_i^2 - p_{i+1}^2}{l_i} x}, \\quad x_i < x < x_{i+1}$$", "confidence": 0.0}}

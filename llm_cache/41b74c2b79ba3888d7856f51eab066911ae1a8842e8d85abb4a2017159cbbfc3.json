@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "Интегрирование по частям дает выражение через интеграл Гаусса и экспоненту e^(−x²/(4κt)).", "page_pdf": 487, "quote": "Последнее слагаемое в (23.36) интегрируется по частям", "confidence": 0.0}}

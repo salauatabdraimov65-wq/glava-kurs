@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 488, "quote": "это произведение стремится к нулю. Учитывая также, что e^{-x^2/4kt} \\to 0 при x \\to \\infty", "confidence": 0.0}}

@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 480, "quote": "откуда после дифференцирования выражения по времени $t$ находим $\\frac{\\partial(m\\rho)}{\\partial t} = \\rho_0\\beta^* \\frac{\\partial p}{\\partial t}$.", "confidence": 0.0}}

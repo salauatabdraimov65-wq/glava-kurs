@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "В рассматриваемой модели проницаемость и вязкость постоянны.", "page_pdf": 479, "quote": "при $k = \\text{const}$, $\\mu = \\text{const}$", "confidence": 0.0}}

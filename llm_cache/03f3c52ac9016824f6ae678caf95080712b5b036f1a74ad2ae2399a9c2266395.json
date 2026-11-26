@@ -1,0 +1,1 @@
+{"model": "gpt-6-luna", "data": {"has_error": false, "category": null, "severity": null, "problem": "", "fix": "", "page_pdf": 45, "quote": "а его преобразование по Лапласу \\bar{P}(x, y, z, \\sigma) — уравнению\n\n\\nabla^2 \\bar{P} = \\bar{\\sigma} P / \\pi.", "confidence": 0.0}}
